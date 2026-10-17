@@ -1,0 +1,2083 @@
+<div class="screen" id="screen-raqui">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Raquianestesia</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="raq-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('raq','fundamentos',this)">Fundamentos</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','farma',this)">Farmacologia</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','indicacoes',this)">Indicações</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','tecnica',this)">Técnica</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','avaliacao',this)">Avaliação</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','complicacoes',this)">Complicações</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','populacoes',this)">Populações</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','casos',this)">Casos</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','peridural',this)">Peridural</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('raq','checklist',this)">Checklist</button>
+  </div>
+
+  <!-- TAB 1 — FUNDAMENTOS Conceito + Anatomia + Fisiologia + Classificações -->
+  <div class="tab-panel active" id="raq-fundamentos">
+
+    <!-- CONCEITO -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> O Que é Raquianestesia?
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal">
+          Técnica de anestesia neuroaxial em que o anestésico local é injetado <strong>diretamente no espaço subaracnoide</strong>, dentro do líquor (LCR), geralmente entre <strong>L3–L4 ou L4–L5</strong>.
+        </div>
+        <p style="margin:12px 0 8px">O resultado é um bloqueio <strong>reversível</strong> de três tipos de fibras nervosas, em sequência:</p>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Fibra Bloqueada</th><th>Efeito Clínico</th><th>Velocidade</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tv">Simpática</span> — vasos, glândulas</td><td>Vasodilatação → ↓ PA, bradicardia</td><td>Mais rápido</td></tr>
+            <tr><td><span class="tag ty">Sensitiva</span> — dor, temperatura</td><td>Analgesia / anestesia</td><td>Médio</td></tr>
+            <tr><td><span class="tag tb">Motora</span> — músculos</td><td>Fraqueza / paralisia de MMII</td><td>Mais lento</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-blue" style="margin-top:14px">
+          <strong>Risco de neuropatia permanente pós-bloqueio central:</strong> &lt; 4:10.000 — extremamente raro na prática contemporânea com técnica adequada.
+        </div>
+      </div>
+    </div>
+
+    <!-- PRINCIPAIS USOS NO BRASIL -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Principais Usos no Brasil
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="alert a-teal"><strong>OBSTETRÍCIA</strong><br>Cesárea — indicação mais frequente no SUS</div>
+          <div class="alert a-blue"><strong>ORTOPEDIA</strong><br>Quadril, fêmur, joelho, tíbia, tornozelo, pé</div>
+          <div class="alert a-green"><strong>UROLOGIA</strong><br>RTU de próstata, cistoscopia, orquiectomia</div>
+          <div class="alert a-gold"><strong>CIR. GERAL</strong><br>Hérnia inguinal, hemorroidectomia, procedimentos anais</div>
+          <div class="alert a-violet"><strong>GINECOLOGIA</strong><br>Histerectomia vaginal, conização, curetagem</div>
+          <div class="alert a-orange"><strong>OUTROS</strong><br>Cirurgia de coluna lombar, procedimentos perineais</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANATOMIA APLICADA -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Anatomia Aplicada — Trajeto da Agulha
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal" style="margin-bottom:14px">
+          <strong>Mnemônico:</strong> PELE → SUB → SUPRA → INTER → AMARELO → EPIDURAL → DURA → ARACNOIDE → LCR
+        </div>
+
+        <!-- SVG: Corte sagital mostrando as camadas -->
+
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-y">1</span><div><strong>Pele</strong> — primeira barreira, anestesia local aqui reduz dor</div></div>
+          <div class="proto-step"><span class="sn sn-y">2</span><div><strong>Tecido subcutâneo</strong> — gordura e fáscia superficial</div></div>
+          <div class="proto-step"><span class="sn sn-b">3</span><div><strong>Ligamento supraespinhoso</strong> — conecta ápices dos processos espinhosos, resistência firme</div></div>
+          <div class="proto-step"><span class="sn sn-b">4</span><div><strong>Ligamento interespinhoso</strong> — entre processos espinhosos adjacentes, mais friável</div></div>
+          <div class="proto-step"><span class="sn sn-y">5</span><div><strong>Ligamento amarelo (flavum)</strong> — resistência característica intensa → "trava" antes do espaço epidural</div></div>
+          <div class="proto-step"><span class="sn sn-t">6</span><div><strong>Espaço epidural</strong> — fino (2–5 mm na lombar), atravessado rapidamente pela agulha espinal</div></div>
+          <div class="proto-step"><span class="sn">7</span><div><strong>Dura-máter + Aracnoide</strong> — duas membranas em conjunto → perfuração gera "clique" ou "pop" tátil</div></div>
+          <div class="proto-step"><span class="sn sn-t">8</span><div><strong>Espaço subaracnoide (LCR)</strong> → <strong>ALVO FINAL</strong> — retorno de LCR claro confirma posição</div></div>
+        </div>
+
+        <div class="sh sh-teal">Referências Anatômicas Essenciais</div>
+        <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+          <thead><tr><th>Estrutura</th><th>Localização</th><th>Relevância Clínica</th></tr></thead>
+          <tbody>
+            <tr><td>Cone medular</td><td>Termina em L1–L2 no adulto</td><td>Puncionar SEMPRE em L3–L4 ou L4–L5 para evitar lesão</td></tr>
+            <tr><td>Linha de Tuffier</td><td>Une as cristas ilíacas → passa em ~L4</td><td>Principal referência para identificar nível de punção</td></tr>
+            <tr><td>Cauda equina</td><td>Abaixo de L2</td><td>Raízes nervosas "flutuam" no LCR — risco de lesão muito menor</td></tr>
+            <tr><td>Espaço epidural lombar</td><td>2–5 mm de espessura</td><td>Atravessado rapidamente; menor resistência que o ligamento amarelo</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-red" style="margin-top:10px">
+          <strong>Em obesos, escoliose grave ou landmarks difíceis:</strong> ultrassom pré-punção aumenta segurança e reduz número de tentativas.
+        </div>
+      </div>
+    </div>
+
+    <!-- FISIOLOGIA DO BLOQUEIO -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">04</span> Fisiologia do Bloqueio — O Que Acontece no Neuraxe
+      </div>
+      <div class="card-body">
+        <p style="margin-bottom:12px">O anestésico local deposita-se no LCR e difunde para as raízes nervosas à medida que ascende. O bloqueio se instala em <strong>gradiente de altura</strong> — simpático primeiro, sensitivo depois, motor por último:</p>
+
+        <!-- SVG: Diagrama em cascata dos três bloqueios -->
+        <div style="text-align:center;margin:14px 0">
+          <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;width:100%;border-radius:8px;background:#0D1B2A">
+            <text x="230" y="20" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#38B6E0" font-weight="700">GRADIENTE DE BLOQUEIO NEUROAXIAL</text>
+
+            <!-- Simpático -->
+            <rect x="20" y="35" width="420" height="40" rx="6" fill="#E8A020" opacity="0.18"/>
+            <rect x="20" y="35" width="180" height="40" rx="6" fill="#E8A020" opacity="0.5"/>
+            <text x="30" y="52" font-family="JetBrains Mono,monospace" font-size="10" fill="#E8A020" font-weight="700">SIMPÁTICO</text>
+            <text x="30" y="67" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">2 dermátomos ACIMA do sensitivo</text>
+            <text x="310" y="60" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#E8A020">Vasodilatação → ↓ PA → bradicardia</text>
+
+            <!-- Sensitivo -->
+            <rect x="20" y="85" width="420" height="40" rx="6" fill="#38B6E0" opacity="0.18"/>
+            <rect x="20" y="85" width="300" height="40" rx="6" fill="#38B6E0" opacity="0.4"/>
+            <text x="30" y="102" font-family="JetBrains Mono,monospace" font-size="10" fill="#38B6E0" font-weight="700">SENSITIVO</text>
+            <text x="30" y="117" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">Nível de referência (alvo)</text>
+            <text x="370" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#38B6E0">Analgesia / anestesia</text>
+
+            <!-- Motor -->
+            <rect x="20" y="135" width="420" height="40" rx="6" fill="#1A7A4A" opacity="0.18"/>
+            <rect x="20" y="135" width="400" height="40" rx="6" fill="#1A7A4A" opacity="0.35"/>
+            <text x="30" y="152" font-family="JetBrains Mono,monospace" font-size="10" fill="#4ADE80" font-weight="700">MOTOR</text>
+            <text x="30" y="167" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">2 dermátomos ABAIXO do sensitivo</text>
+            <text x="340" y="159" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4ADE80">Fraqueza / paralisia MMII</text>
+
+            <!-- Seta tempo -->
+            <text x="430" y="195" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="9" fill="#5A6880">↑ Mais alto / mais rápido</text>
+          </svg>
+        </div>
+
+        <div class="alert a-teal" style="margin-top:12px">
+          <strong>Exemplo prático:</strong> Se o nível sensitivo alvo é <strong>T10</strong> → o bloqueio simpático chegará provavelmente a <strong>T8</strong> e o bloqueio motor a <strong>T12</strong>.
+        </div>
+        <div class="alert a-gold" style="margin-top:8px">
+          <strong>Implicação clínica:</strong> O bloqueio simpático sempre supera o sensitivo → hipotensão pode ocorrer mesmo antes da anestesia ser completa. Monitorizar PA a cada 2–3 minutos nos primeiros 20–30 minutos.
+        </div>
+      </div>
+    </div>
+
+    <!-- CLASSIFICAÇÕES -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">05</span> Classificações da Raquianestesia
+      </div>
+      <div class="card-body">
+        <div class="sh sh-teal">Por Altura do Bloqueio Sensitivo</div>
+        <div class="tbl-wrap wide"><table class="tbl" style="margin-top:8px">
+          <thead><tr><th>Tipo</th><th>Nível Sensitivo</th><th>Indicações</th><th>Risco Hemodinâmico</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="tag tr">RAQUI ALTA</span></td>
+              <td><strong>T4–T6</strong></td>
+              <td>Cesárea, cirurgias abdominais infraumbilicais extensas</td>
+              <td><span class="tag tr">MAIOR</span> — hipotensão + bradicardia</td>
+            </tr>
+            <tr>
+              <td><span class="tag ty">RAQUI MÉDIA</span></td>
+              <td><strong>T8–T10</strong></td>
+              <td>Hérnia inguinal, ginecológicas simples, RTU prostática</td>
+              <td><span class="tag ty">MODERADO</span></td>
+            </tr>
+            <tr>
+              <td><span class="tag tg">RAQUI BAIXA</span></td>
+              <td><strong>T12–L1</strong></td>
+              <td>Cirurgias distais de MMII, períneo superficial</td>
+              <td><span class="tag tg">MENOR</span> — impacto mínimo</td>
+            </tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-teal" style="margin-top:16px">Por Baricidade da Solução</div>
+        <p style="margin:10px 0 8px;font-size:13px">A <strong>baricidade</strong> é a densidade do anestésico em relação ao LCR (densidade do LCR ≈ 1.003–1.009 g/mL). Ela determina como a droga se dispersa pelo espaço subaracnoide conforme a posição:</p>
+
+        <!-- SVG: Diagrama de baricidade -->
+        <div style="text-align:center;margin:14px 0">
+          <svg viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;width:100%;border-radius:8px;background:#0D1B2A">
+            <text x="230" y="18" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#38B6E0" font-weight="700">DISPERSÃO CONFORME BARICIDADE</text>
+
+            <!-- Coluna esquemática -->
+            <!-- Hiperbárica -->
+            <g transform="translate(30,30)">
+              <rect x="0" y="0" width="100" height="130" rx="8" fill="#1B5E96" opacity="0.3" stroke="#1B5E96" stroke-width="1"/>
+              <text x="50" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#38B6E0" font-weight="700">HIPERBÁRICA</text>
+              <text x="50" y="26" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">+ glicose 8%</text>
+              <!-- Drug pool no fundo -->
+              <rect x="10" y="90" width="80" height="30" rx="4" fill="#E8A020" opacity="0.7"/>
+              <text x="50" y="108" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#0D1B2A" font-weight="700">Desce ↓</text>
+              <text x="50" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#0D1B2A">gravidade</text>
+              <text x="50" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#F4F6FA">A mais usada</text>
+              <text x="50" y="155" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#F4F6FA">no Brasil</text>
+            </g>
+
+            <!-- Isobárica -->
+            <g transform="translate(180,30)">
+              <rect x="0" y="0" width="100" height="130" rx="8" fill="#1A7A4A" opacity="0.3" stroke="#1A7A4A" stroke-width="1"/>
+              <text x="50" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#4ADE80" font-weight="700">ISOBÁRICA</text>
+              <text x="50" y="26" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">sem glicose</text>
+              <!-- Drug no meio -->
+              <rect x="15" y="50" width="70" height="30" rx="4" fill="#1A7A4A" opacity="0.7"/>
+              <text x="50" y="68" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#F4F6FA" font-weight="700">Fica ≈</text>
+              <text x="50" y="78" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#F4F6FA">no nível</text>
+              <text x="50" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#F4F6FA">Dispersão</text>
+              <text x="50" y="155" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#F4F6FA">imprevisível</text>
+            </g>
+
+            <!-- Hipobárica -->
+            <g transform="translate(330,30)">
+              <rect x="0" y="0" width="100" height="130" rx="8" fill="#7C3AED" opacity="0.3" stroke="#7C3AED" stroke-width="1"/>
+              <text x="50" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#A78BFA" font-weight="700">HIPOBÁRICA</text>
+              <text x="50" y="26" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">+ água dest.</text>
+              <!-- Drug no topo -->
+              <rect x="10" y="10" width="80" height="30" rx="4" fill="#7C3AED" opacity="0.7"/>
+              <text x="50" y="28" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#F4F6FA" font-weight="700">Sobe ↑</text>
+              <text x="50" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#F4F6FA">gravidade</text>
+              <text x="50" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#F4F6FA">Jack-knife,</text>
+              <text x="50" y="155" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#F4F6FA">bloqueio unilat.</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="g2" style="margin-top:12px">
+          <div class="alert a-gold">
+            <strong>Hiperbárica (+ glicose 8%)</strong><br>
+            Droga "desce" pela gravidade. Trendelenburg → sobe cefálico. Proclive → desce caudal. <strong>A mais usada no Brasil</strong> (bupivacaína "pesada" 0,5%).
+          </div>
+          <div class="alert a-violet">
+            <strong>Hipobárica (+ água destilada)</strong><br>
+            Droga "sobe". Indicada para posição sentada, jack-knife, bloqueio perianal. Menos hipotensão.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /raq-fundamentos -->
+
+
+  <!-- TAB 2 — FARMACOLOGIA Anestésicos locais + Adjuvantes + Cálculo de doses -->
+  <div class="tab-panel" id="raq-farma">
+
+    <!-- MECANISMO -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> Mecanismo de Ação dos Anestésicos Locais
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal">
+          Bloqueio <strong>reversível</strong> de canais de sódio voltagem-dependentes → impedem despolarização neuronal → interrompem condução do impulso nervoso (sensitivo, motor e simpático).
+        </div>
+        <div class="alert a-gold" style="margin-top:10px">
+          <strong>A DOSE TOTAL EM mg determina:</strong> altura do bloqueio + duração + grau de hipotensão e riscos hemodinâmicos. Não é só o volume!
+        </div>
+      </div>
+    </div>
+
+    <!-- TABELA MESTRA ALs -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Tabela Mestra — Anestésicos Locais Intratecais
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap xwide"><table class="tbl">
+          <thead>
+            <tr>
+              <th style="white-space:nowrap">Fármaco</th><th>Conc.</th><th>Dose Típica</th><th>Volume</th><th>Duração</th><th>Observação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(14,116,144,0.08)">
+              <td><strong>Bupivacaína 0,5% hiperbárica</strong></td>
+              <td>5 mg/mL</td>
+              <td>7,5–15 mg</td>
+              <td>1,5–3,0 mL</td>
+              <td>90–180 min</td>
+              <td><span class="tag tg">Padrão-ouro Brasil</span></td>
+            </tr>
+            <tr>
+              <td><strong>Levobupivacaína 0,5%</strong></td>
+              <td>5 mg/mL</td>
+              <td>7,5–12,5 mg</td>
+              <td>1,5–2,5 mL</td>
+              <td>90–150 min</td>
+              <td>Menos cardiotóxica</td>
+            </tr>
+            <tr>
+              <td><strong>Ropivacaína 0,5–0,75%</strong></td>
+              <td>5–7,5 mg/mL</td>
+              <td>15–20 mg</td>
+              <td>3–4 mL</td>
+              <td>60–120 min</td>
+              <td>Recuperação motora rápida</td>
+            </tr>
+            <tr style="background:rgba(192,57,43,0.06)">
+              <td><strong>Lidocaína 2–5%</strong></td>
+              <td>20–50 mg/mL</td>
+              <td>50–75 mg</td>
+              <td>2,5–3,7 mL</td>
+              <td>40–90 min</td>
+              <td><span class="tag tr">Risco TNS + cauda equina</span></td>
+            </tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-teal" style="margin-top:16px">Bupivacaína 0,5% Hiperbárica — Doses por Cenário Clínico</div>
+        <div class="g3" style="margin-top:10px">
+          <div class="alert a-green">
+            <strong>DOSE BAIXA</strong><br><span class="tag tg">7–8 mg</span> = 1,4–1,6 mL<br><br>
+            ✓ Idosos e cardiopatas<br>
+            ✓ Ambulatorial curta<br>
+            ✓ Objetivo: mínima hipotensão
+          </div>
+          <div class="alert a-blue">
+            <strong>DOSE MÉDIA</strong><br><span class="tag tb">9–12 mg</span> = 1,8–2,4 mL<br><br>
+            ✓ Padrão infraumbilical<br>
+            ✓ Adultos ASA I–II<br>
+            ✓ Ortopedia MMII, hérnia
+          </div>
+          <div class="alert a-gold">
+            <strong>DOSE ALTA</strong><br><span class="tag ty">13–15 mg</span> = 2,6–3,0 mL<br><br>
+            ✓ Bloqueio alto (T4–T6)<br>
+            ✓ Cesárea, abdome baixo extenso<br>
+            ✓ Boa reserva hemodinâmica
+          </div>
+        </div>
+        <div class="alert a-red" style="margin-top:10px">
+          <strong>Idoso / Cardiopata / ASA III–IV:</strong> reduzir dose em 20–30% em relação ao adulto jovem.<br>
+          <strong>Obeso:</strong> NÃO aumentar dose — o volume de LCR é menor, a dispersão é maior.
+        </div>
+      </div>
+    </div>
+
+    <!-- ADJUVANTES -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Adjuvantes Intratecais
+      </div>
+      <div class="card-body">
+        <p style="margin-bottom:12px;font-size:13px">Os adjuvantes atuam em receptores espinhais específicos, modulando a nocicepção sem aumentar significativamente o bloqueio motor. Permitem reduzir a dose de anestésico local e prolongar a analgesia pós-operatória.</p>
+
+        <div class="sh sh-teal">Opioides Intratecais</div>
+
+        <!-- FENTANIL -->
+        <div class="drug-card" style="margin-top:10px">
+          <div class="drug-hdr" style="background:var(--teal)" onclick="toggleDrug(this)"><div class="drug-hdr-inner"><div class="drug-name">Fentanil Intratecal</div><div class="drug-class">Opioide lipofílico · 10–25 mcg · Duração 2–4h</div></div><span class="drug-arrow">›</span></div>
+          <div class="drug-body">
+            <div class="alert a-teal" style="margin-bottom:10px">Lipofílico → início rápido (minutos), distribuição segmentada, duração 2–4 h</div>
+            <div class="tbl-wrap"><table class="tbl">
+              <tbody>
+                <tr><td>Dose habitual</td><td><strong>10–25 mcg</strong> (mais comum: 15–20 mcg)</td></tr>
+                <tr><td>Apresentação</td><td>Ampola 50 mcg/mL (= 0,05 mg/mL)</td></tr>
+                <tr><td>Efeitos adversos</td><td>Prurido (30–60%), náusea, sedação leve</td></tr>
+                <tr><td>Vantagem</td><td>Melhora qualidade do bloqueio + analgesia intraoperatória</td></tr>
+              </tbody>
+            </table></div>
+            <div class="sh sh-blue" style="margin-top:12px">Conversão Rápida (fentanil 50 mcg/mL)</div>
+            <div class="dr dr-b"><span class="dn">10 mcg</span><span class="dc">→ 0,2 mL</span><span class="dv">0,2 mL</span></div>
+            <div class="dr dr-b"><span class="dn">15 mcg</span><span class="dc">→ 0,3 mL</span><span class="dv">0,3 mL</span></div>
+            <div class="dr dr-b"><span class="dn">20 mcg</span><span class="dc">→ 0,4 mL</span><span class="dv">0,4 mL</span></div>
+            <div class="dr dr-b"><span class="dn">25 mcg</span><span class="dc">→ 0,5 mL</span><span class="dv">0,5 mL</span></div>
+          </div>
+        </div>
+
+        <!-- MORFINA -->
+        <div class="drug-card" style="margin-top:8px">
+          <div class="drug-hdr" style="background:var(--red)" onclick="toggleDrug(this)"><div class="drug-hdr-inner"><div class="drug-name">Morfina Intratecal ⚠</div><div class="drug-class">Opioide hidrofílico · 50–150 mcg · Analgesia 18–24h · Depressão resp. tardia</div></div><span class="drug-arrow">›</span></div>
+          <div class="drug-body">
+            <div class="alert a-red">
+              ⚠ <strong>ATENÇÃO OBRIGATÓRIA:</strong> Morfina intratecal provoca depressão respiratória TARDIA (8–24 h após injeção). Monitorar FR e SpO2 por 12–24 h. Naloxona disponível à beira-leito. Avisar equipe de enfermagem.
+            </div>
+            <div class="tbl-wrap"><table class="tbl" style="margin-top:10px">
+              <tbody>
+                <tr><td>Farmacocinética</td><td>Hidrofílica → permanece no LCR → analgesia prolongada 18–24 h</td></tr>
+                <tr><td>Dose habitual</td><td><strong>50–150 mcg</strong> (comum: 80–100 mcg)</td></tr>
+                <tr><td>Apresentações</td><td>1 mg/mL ou 10 mg/mL (diluir esta última!)</td></tr>
+                <tr><td>Indicação principal</td><td>Cesárea, grandes cirurgias ortopédicas</td></tr>
+              </tbody>
+            </table></div>
+            <div class="alert a-gold" style="margin-top:10px">
+              <strong>Complicações morfina IT:</strong> Prurido intenso (30–100%), náusea/vômito, retenção urinária, sedação, depressão respiratória tardia. Não administrar opioide sistêmico adicional nas primeiras horas.
+            </div>
+            <div class="sh sh-red" style="margin-top:12px">Conversão Rápida (morfina 1 mg/mL)</div>
+            <div class="dr dr-r"><span class="dn">80 mcg (0,08 mg)</span><span class="dc">→ 0,08 mL</span><span class="dv">0,08 mL</span></div>
+            <div class="dr dr-r"><span class="dn">100 mcg (0,1 mg)</span><span class="dc">→ 0,10 mL</span><span class="dv">0,10 mL</span></div>
+            <div class="dr dr-r"><span class="dn">150 mcg (0,15 mg)</span><span class="dc">→ 0,15 mL</span><span class="dv">0,15 mL</span></div>
+          </div>
+        </div>
+
+        <!-- SUFENTANIL / CLONIDINA -->
+        <div class="drug-card" style="margin-top:8px">
+          <div class="drug-hdr" style="background:var(--violet)" onclick="toggleDrug(this)"><div class="drug-hdr-inner"><div class="drug-name">Sufentanil + α₂-Agonistas</div><div class="drug-class">Sufentanil 5–10 mcg · Clonidina 15–45 mcg · Dexmedetomidina 3–10 mcg</div></div><span class="drug-arrow">›</span></div>
+          <div class="drug-body">
+            <div class="tbl-wrap wide"><table class="tbl">
+              <thead><tr><th style="white-space:nowrap">Droga</th><th>Dose IT</th><th>Efeito Principal</th><th>Cuidado</th></tr></thead>
+              <tbody>
+                <tr><td>Sufentanil</td><td>5–10 mcg</td><td>Analgesia 4–6 h (mais lipofílico que fentanil)</td><td>Prurido, sedação</td></tr>
+                <tr><td>Clonidina</td><td>15–45 mcg</td><td>Prolonga bloqueio sensitivo e motor; reduz opioide</td><td>Hipotensão, bradicardia</td></tr>
+                <tr><td>Dexmedetomidina</td><td>3–10 mcg</td><td>Similar à clonidina, uso crescente</td><td>Bradicardia</td></tr>
+                <tr><td>Adrenalina</td><td>0,1–0,2 mg</td><td>Vasoconstrição local, prolonga AL</td><td>Uso restrito</td></tr>
+              </tbody>
+            </table></div>
+            <div class="alert a-blue" style="margin-top:10px">
+              <strong>Clonidina + AL:</strong> reduz requerimento de opioide, menos prurido e náusea vs. opioides isolados. Útil em pacientes com intolerância a opioides.
+            </div>
+          </div>
+        </div>
+
+        <!-- CÁLCULO DE DOSES -->
+        <div class="sh sh-teal" style="margin-top:18px">Cálculo de Doses e Diluições</div>
+        <div class="alert a-teal" style="margin-top:10px">
+          <strong>Fórmula Universal (memorize!):</strong><br>
+          <code style="font-family:'JetBrains Mono',monospace;font-size:15px;color:#0E7490">mL = Dose desejada (mg) ÷ Concentração (mg/mL)</code>
+        </div>
+
+        <div class="sh sh-blue" style="margin-top:14px">Tabela de Conversão — Bupivacaína 0,5% (5 mg/mL)</div>
+        <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+          <thead><tr><th>Dose (mg)</th><th>Cálculo</th><th>Volume</th></tr></thead>
+          <tbody>
+            <tr><td>7,5 mg</td><td>7,5 ÷ 5</td><td><strong>1,5 mL</strong></td></tr>
+            <tr><td>8,0 mg</td><td>8,0 ÷ 5</td><td><strong>1,6 mL</strong></td></tr>
+            <tr><td>10,0 mg</td><td>10,0 ÷ 5</td><td><strong>2,0 mL</strong></td></tr>
+            <tr><td>12,0 mg</td><td>12,0 ÷ 5</td><td><strong>2,4 mL</strong></td></tr>
+            <tr><td>12,5 mg</td><td>12,5 ÷ 5</td><td><strong>2,5 mL</strong></td></tr>
+            <tr><td>15,0 mg</td><td>15,0 ÷ 5</td><td><strong>3,0 mL</strong></td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-violet" style="margin-top:14px">Diluições para Soluções Hipobáricas (com água destilada estéril)</div>
+        <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+          <thead><tr><th>Receita</th><th>Concentração Final</th><th>Volume Total</th></tr></thead>
+          <tbody>
+            <tr><td>2 mL bupi 0,5% + 3 mL H₂O</td><td>0,2% (2 mg/mL)</td><td>5 mL</td></tr>
+            <tr><td>1,5 mL bupi + 3,5 mL H₂O</td><td>0,15% (1,5 mg/mL)</td><td>5 mL</td></tr>
+            <tr><td>1 mL bupi + 4 mL H₂O</td><td>0,1% (1 mg/mL)</td><td>5 mL</td></tr>
+            <tr><td>1,5 mL lido 2% + 3,5 mL H₂O</td><td>0,6% (6 mg/mL)</td><td>5 mL</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-gold" style="margin-top:8px">
+          ⚠ Misturas manuais têm variabilidade. Técnica rigorosa é essencial. Usar seringas calibradas e contar os volumes cuidadosamente.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /raq-farma -->
+
+
+  <!-- TAB 3 — INDICAÇÕES Indicações por especialidade + CIs + Anticoagulação -->
+  <div class="tab-panel" id="raq-indicacoes">
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> Indicações por Especialidade e Nível Alvo
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl">
+          <thead>
+            <tr><th>Especialidade</th><th>Cirurgias</th><th>Nível Alvo</th></tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(14,116,144,0.08)">
+              <td><span class="tag tb">Obstetrícia</span></td>
+              <td>Cesárea (mais frequente no SUS)</td>
+              <td><strong>T4–T6</strong></td>
+            </tr>
+            <tr>
+              <td><span class="tag ty">Ortopedia</span></td>
+              <td>Quadril, fêmur, joelho, tíbia, tornozelo, pé</td>
+              <td><strong>T8–T12</strong></td>
+            </tr>
+            <tr>
+              <td><span class="tag tg">Urologia</span></td>
+              <td>RTU próstata, cistoscopia, orquiectomia</td>
+              <td><strong>T10</strong></td>
+            </tr>
+            <tr>
+              <td><span class="tag tv">Cirurgia Geral</span></td>
+              <td>Hérnia inguinal, hemorroidectomia, procedimentos anais</td>
+              <td><strong>T8–T10</strong></td>
+            </tr>
+            <tr>
+              <td><span class="tag to">Ginecologia</span></td>
+              <td>Histerectomia vaginal, conização, curetagem</td>
+              <td><strong>T10</strong></td>
+            </tr>
+            <tr>
+              <td><span class="tag tr">Coluna</span></td>
+              <td>Laminectomia, discectomia lombar (puncionar 1 nível acima)</td>
+              <td><strong>T6–T8</strong></td>
+            </tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-blue" style="margin-top:10px">
+          <strong>Vantagens da raqui vs. anestesia geral:</strong> Menos NVPO | Melhor analgesia pós-op (opioides IT) | Sem intubação | Menor tempo de recuperação | Menor custo | Ideal para ASA III–IV em cirurgias de MMII.
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTRAINDICAÇÕES -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Contraindicações
+      </div>
+      <div class="card-body">
+        <div class="sh sh-red">Absolutas</div>
+        <ul class="ck-list" style="margin-top:8px">
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Recusa do paciente (após orientação adequada)</span></li>
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Infecção ativa no local de punção</span></li>
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Sepse bacteriana não controlada</span></li>
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Coagulopatia grave: plaquetas &lt; 70.000 ou INR &gt; 1,5</span></li>
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Hipertensão intracraniana (HTIC)</span></li>
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Hipovolemia grave não corrigida</span></li>
+        </ul>
+
+        <div class="sh sh-gold" style="margin-top:14px">Relativas — Avaliar Risco-Benefício</div>
+        <ul class="ck-list" style="margin-top:8px">
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Neuropatia progressiva preexistente</span></li>
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Estenose grave de canal vertebral</span></li>
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Cirurgia prévia de coluna com hardware metálico</span></li>
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Estenose aórtica severa (risco de colapso com hipotensão súbita)</span></li>
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Tatuagem extensa sobre o ponto de punção</span></li>
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Escoliose grave (técnica paramediana pode ser necessária)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ANTICOAGULAÇÃO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">03</span> Anticoagulação — Janelas de Segurança
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>REGRA GERAL: NA DÚVIDA, NÃO PUNCIONAR.</strong> Hematoma neuraxial é emergência neurocirúrgica com janela de 8 horas para preservar função.
+        </div>
+        <div class="tbl-wrap"><table class="tbl" style="margin-top:12px">
+          <thead>
+            <tr><th style="white-space:nowrap">Droga</th><th>Última dose → Punção</th><th>Punção → Próxima dose</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>HNF SC profilática</td><td>4–6 h</td><td>1 h</td></tr>
+            <tr><td>HNF SC terapêutica</td><td>12 h</td><td>1 h</td></tr>
+            <tr><td>HNF IV (infusão)</td><td>4–6 h + TTPA normal</td><td>1 h</td></tr>
+            <tr><td>HBPM profilática</td><td>12 h</td><td>4 h</td></tr>
+            <tr><td>HBPM terapêutica</td><td><strong>24 h</strong></td><td>4 h</td></tr>
+            <tr style="background:rgba(192,57,43,0.08)"><td>Rivaroxabana</td><td><strong>48–72 h</strong></td><td>6 h</td></tr>
+            <tr style="background:rgba(192,57,43,0.08)"><td>Apixabana</td><td><strong>48–72 h</strong></td><td>6 h</td></tr>
+            <tr style="background:rgba(192,57,43,0.08)"><td>Dabigatrana</td><td><strong>72–96 h</strong></td><td>6 h</td></tr>
+            <tr><td>Varfarina</td><td>INR &lt; 1,5</td><td>INR no alvo terapêutico</td></tr>
+            <tr style="background:rgba(26,122,74,0.08)"><td>AAS isolado</td><td><span class="tag tg">NÃO SUSPENDER</span></td><td>—</td></tr>
+            <tr><td>Clopidogrel</td><td>7 dias</td><td>6 h</td></tr>
+            <tr><td>Prasugrel</td><td>7–10 dias</td><td>6 h</td></tr>
+            <tr><td>Ticagrelor</td><td>5 dias</td><td>6 h</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-red" style="margin-top:16px">Exames Mínimos Quando Pertinente</div>
+        <div class="g2" style="margin-top:8px">
+          <div class="alert a-blue">
+            <strong>Plaquetas:</strong> &gt; 80.000/mm³<br>
+            (mínimo absoluto: 70.000)
+          </div>
+          <div class="alert a-blue">
+            <strong>INR:</strong> &lt; 1,4–1,5<br>
+            (em uso de varfarina)
+          </div>
+          <div class="alert a-blue">
+            <strong>TTPA:</strong> normal<br>
+            (em uso de HNF IV)
+          </div>
+          <div class="alert a-blue">
+            <strong>Função renal:</strong> verificar<br>
+            (ajuste em uso de DOACs)
+          </div>
+        </div>
+
+        <div class="sh sh-red" style="margin-top:16px">⚠ Vigilância Pós-Raqui — Hematoma Neuraxial</div>
+        <div class="alert a-red" style="margin-top:8px">
+          <strong>Sinais de alerta (alertar equipe de enfermagem e paciente):</strong><br>
+          • Dor lombar intensa e PROGRESSIVA após alta do bloqueio<br>
+          • Fraqueza ou paralisia que não regride — ou que reaparece<br>
+          • Disfunção esfincteriana: retenção urinária, incontinência fecal<br><br>
+          <strong>Conduta:</strong> RM de urgência → descompressão cirúrgica em &lt; 8 horas do início dos sintomas para preservar função neurológica!
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /raq-indicacoes -->
+
+
+  <!-- TAB 4 — TÉCNICA 7 etapas completas -->
+  <div class="tab-panel" id="raq-tecnica">
+
+    <!-- ETAPA 1 -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">ETAPA 1</span> Avaliação e Preparo Pré-Operatório
+      </div>
+      <div class="card-body">
+        <ul class="ck-list">
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Anamnese completa: neuropatias, cirurgias de coluna, deformidades, bloqueios prévios</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Anticoagulantes/antiagregantes: droga, dose, ÚLTIMA administração</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Alergias documentadas</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Exame físico: coluna lombar (lordose, escoliose, cirurgia prévia, tattoo)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Avaliar via aérea: SEMPRE (risco de conversão para anestesia geral existe!)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Exames: hemograma + plaquetas + coagulograma quando indicados</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Consentimento informado assinado: explicar procedimento, riscos e alternativas</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Jejum: sólidos 8h | leite 6h | líquidos claros 2h</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ETAPA 2 -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">ETAPA 2</span> Montagem de Material (Mesa Estéril)
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div>
+            <div class="sh sh-teal">Agulhas Espinais</div>
+            <div class="tbl-wrap wide"><table class="tbl" style="margin-top:6px">
+              <thead><tr><th>Tipo</th><th>Calibre</th><th>Ponta</th><th>CPPD</th></tr></thead>
+              <tbody>
+                <tr><td>Quincke</td><td>27G–29G</td><td>Cortante</td><td>~1–3%</td></tr>
+                <tr><td><strong>Whitacre</strong></td><td>25G–27G</td><td>Lápis (pencil point)</td><td><strong>&lt;1%</strong> ← preferida</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div>
+            <div class="sh sh-blue">Outros Materiais</div>
+            <ul style="font-size:13px;line-height:1.9;padding-left:16px;margin-top:6px">
+              <li>Introdutor 20G (agulhas finas)</li>
+              <li>Seringas 1 mL, 3 mL, 5 mL</li>
+              <li>Lidocaína 1% (pele — sem VC)</li>
+              <li>Bupivacaína 0,5% hiperbárica</li>
+              <li>Fentanil 50 mcg/mL / Morfina 1 mg/mL</li>
+              <li>Clorexidina alcoólica 2% ou PVPI</li>
+              <li>Campos estéreis fenestrados</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alert a-red" style="margin-top:12px">
+          <strong>Vasopressores prontos FORA do campo estéril:</strong><br>
+          • Efedrina diluída para 5 mg/mL ou 10 mg/2 mL<br>
+          • Fenilefrina: ampola 10 mg/mL → diluir para 100 mcg/mL<br>
+          • Atropina 0,5 mg IV (pronto para uso)
+        </div>
+      </div>
+    </div>
+
+    <!-- ETAPA 3 -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">ETAPA 3</span> Monitorização e Acesso Venoso
+      </div>
+      <div class="card-body">
+        <ul class="ck-list">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">PA não invasiva a cada 2–3 min nos primeiros 20–30 min</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">FC e ECG contínuos</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">SpO2 contínua</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">FR (vigilância — especialmente com morfina IT)</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Acesso venoso: Jelco 18G ou 16G (preferir 16G em cesáreas)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Pré-hidratação co-loading: SF 0,9% ou Ringer Lactato 500–1000 mL antes/durante bloqueio</span></li>
+        </ul>
+        <div class="alert a-blue" style="margin-top:10px">
+          <strong>Co-loading vs. pré-loading:</strong> A pré-hidratação com cristaloide administrada SIMULTANEAMENTE ao bloqueio (co-loading) é mais eficaz que o pré-loading em reduzir hipotensão. Ajustar volume em cardiopatas e insuficientes renais.
+        </div>
+      </div>
+    </div>
+
+    <!-- ETAPA 4 -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">ETAPA 4</span> Posicionamento do Paciente
+      </div>
+      <div class="card-body">
+
+        <!-- SVG: Posições -->
+        <div style="text-align:center;margin:12px 0">
+          <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;width:100%;border-radius:8px;background:#0D1B2A">
+            <text x="230" y="18" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#38B6E0" font-weight="700">POSICIONAMENTO PARA PUNÇÃO LOMBAR</text>
+
+            <!-- Posição sentada - lado esquerdo -->
+            <g transform="translate(20,30)">
+              <text x="95" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#38B6E0" font-weight="700">SENTADO</text>
+              <!-- Corpo curvado -->
+              <ellipse cx="95" cy="60" rx="30" ry="20" fill="#2979C8" opacity="0.5"/> <!-- cabeça -->
+              <path d="M80,75 Q60,110 70,145 Q80,155 95,155 Q110,155 120,145 Q130,110 110,75" fill="#1B5E96" opacity="0.6"/>
+              <!-- coluna curvada -->
+              <path d="M95,78 Q80,100 83,140" stroke="#E8A020" stroke-width="3" fill="none" stroke-dasharray="3,2"/>
+              <!-- perna -->
+              <rect x="70" y="145" width="50" height="15" rx="5" fill="#1B5E96" opacity="0.5"/>
+              <text x="95" y="180" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">"Gato arrepiado"</text>
+              <text x="95" y="192" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">Joelho → abdome</text>
+              <!-- seta agulha -->
+              <line x1="150" y1="115" x2="90" y2="115" stroke="#C0392B" stroke-width="2" marker-end="url(#arr)"/>
+              <text x="185" y="115" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#C0392B">Agulha →</text>
+            </g>
+
+            <!-- Separador -->
+            <line x1="240" y1="25" x2="240" y2="185" stroke="#1B5E96" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="240" y="105" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#5A6880" transform="rotate(-90,240,105)">ou</text>
+
+            <!-- Decúbito lateral - lado direito -->
+            <g transform="translate(255,30)">
+              <text x="95" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#38B6E0" font-weight="700">DECÚBITO LATERAL</text>
+              <!-- corpo deitado -->
+              <ellipse cx="50" cy="75" rx="20" ry="15" fill="#2979C8" opacity="0.5"/>
+              <path d="M65,75 Q120,65 155,80 Q155,105 120,110 Q80,115 65,90" fill="#1B5E96" opacity="0.6"/>
+              <!-- joelhos fletidos -->
+              <path d="M155,80 Q165,95 155,110" stroke="#1B5E96" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <path d="M155,108 Q148,125 140,130" stroke="#1B5E96" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <!-- coluna -->
+              <path d="M68,77 Q110,72 150,80" stroke="#E8A020" stroke-width="3" fill="none" stroke-dasharray="3,2"/>
+              <!-- seta agulha de cima -->
+              <line x1="95" y1="45" x2="95" y2="72" stroke="#C0392B" stroke-width="2" marker-end="url(#arr)"/>
+              <text x="95" y="40" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#C0392B">Agulha ↓</text>
+              <text x="95" y="170" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">Gestante: DL esquerdo</text>
+              <text x="95" y="182" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">Bloqueio unilateral</text>
+            </g>
+
+            <!-- Marker def -->
+            <defs>
+              <marker id="arr" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="#C0392B"/>
+              </marker>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)">🪑 Posição SENTADA — detalhes</div>
+          <div class="acc-body">
+            <div class="proto-steps">
+              <div class="proto-step"><span class="sn sn-t">1</span><div>Paciente sentado na borda da mesa, pés apoiados em banco</div></div>
+              <div class="proto-step"><span class="sn sn-t">2</span><div>Queixo no peito, ombros relaxados e curvados para frente</div></div>
+              <div class="proto-step"><span class="sn sn-t">3</span><div>Abraçar travesseiro ou dobrar os braços sobre o colo</div></div>
+              <div class="proto-step"><span class="sn sn-t">4</span><div>Costas arqueadas ao máximo — "posição de gato arrepiado" — abre os espaços interespinhosos</div></div>
+            </div>
+            <div class="alert a-gold">Vantagem: melhor palpação dos processos espinhosos. Atenção: risco de reação vagal — monitorar PA continuamente.</div>
+          </div>
+        </div>
+
+        <div class="acc" style="margin-top:8px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">🛏 Decúbito Lateral — detalhes</div>
+          <div class="acc-body">
+            <div class="proto-steps">
+              <div class="proto-step"><span class="sn sn-b">1</span><div>Paciente em DL (geralmente esquerdo na gestante → deslocamento uterino)</div></div>
+              <div class="proto-step"><span class="sn sn-b">2</span><div>Joelhos fletidos em direção ao abdome</div></div>
+              <div class="proto-step"><span class="sn sn-b">3</span><div>Queixo fletido ao peito</div></div>
+              <div class="proto-step"><span class="sn sn-b">4</span><div>Coluna paralela à borda da mesa</div></div>
+              <div class="proto-step"><span class="sn sn-b">5</span><div>Ombros e quadris perpendiculares ao chão</div></div>
+            </div>
+            <div class="alert a-blue">Vantagem: tolerado em pacientes instáveis ou com dificuldade em sentar. Permite bloqueio unilateral com solução hiperbárica (paciente permanece no lado afetado).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETAPA 5 -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">ETAPA 5</span> Assepsia — Protocolo Obrigatório
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:12px">
+          <strong>Justificativa:</strong> A contaminação do espaço subaracnoide pode causar meningite bacteriana, abscesso epidural e aracnoidite — complicações devastadoras e evitáveis.
+        </div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-t">1</span><div>Lavagem cirúrgica das mãos (ou álcool gel se protocolo permitir)</div></div>
+          <div class="proto-step"><span class="sn sn-t">2</span><div>Paramentação: gorro + <strong>MÁSCARA CIRÚRGICA</strong> (obrigatória no rosto do anestesiologista!) + avental estéril + luvas estéreis</div></div>
+          <div class="proto-step"><span class="sn sn-t">3</span><div>Antissepsia ampla do dorso: 3 aplicações de clorexidina alcoólica 2% (ou PVPI — aguardar 2 min). Amplitude: cristas ilíacas até lombar alta</div></div>
+          <div class="proto-step"><span class="sn sn-t">4</span><div>Campo estéril fenestrado cobrindo amplamente o dorso</div></div>
+        </div>
+        <div class="alert a-gold" style="margin-top:10px">
+          <strong>Máscara cirúrgica:</strong> Streptococcus salivarius da orofaringe do anestesiologista foi identificado como causa de meningite pós-raqui. É a razão pela qual a máscara é OBRIGATÓRIA — não opcional.
+        </div>
+      </div>
+    </div>
+
+    <!-- ETAPA 6 -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">ETAPA 6</span> Identificação do Nível e Punção Espinal
+      </div>
+      <div class="card-body">
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-t">P1</span>
+            <div>
+              <strong>Identificação do interspácio:</strong><br>
+              Palpar cristas ilíacas com polegar e indicador → Linha de Tuffier = L4 → L3–L4 (1 acima) ou L4–L5 (abaixo). Se difícil: ultrassom para marcar o nível.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">P2</span>
+            <div>
+              <strong>Anestesia local da pele:</strong><br>
+              Lidocaína 1% sem VC: 1–2 mL SC no ponto de entrada → botão dérmico + infiltração subcutânea. Opcional mas aumenta conforto do paciente.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">P3</span>
+            <div>
+              <strong>Inserção do introdutor 20G:</strong><br>
+              Perpendicular à pele (ou leve angulação cefálica 10–15°).<br>
+              • <strong>Técnica mediana:</strong> na linha média entre os processos espinhosos<br>
+              • <strong>Técnica paramediana:</strong> 1–1,5 cm lateral à linha média (útil em calcificações, idosos, obesos)
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-y">P4</span>
+            <div>
+              <strong>Introdução da agulha espinal:</strong><br>
+              Avançar sentindo as resistências em sequência:<br>
+              Lig. supraespinhoso → Lig. interespinhoso → <strong>Lig. amarelo (resistência intensa)</strong> → <strong>"CLIQUE" ou "POP"</strong> = perfuração da dura-máter + aracnoide
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-t">P5</span>
+            <div>
+              <strong>Confirmação do espaço subaracnoide:</strong><br>
+              Retirar estilete → aguardar LCR: deve ser <strong>CLARO, LIVRE e CONTÍNUO</strong>.<br>
+              Se não vier: girar 90° → aguardar 10–15 s → avançar 1–2 mm.<br>
+              Se LCR sanguinolento: aguardar clareamento. Se não clarear em 30–60 s: retirar e puncionar outro nível.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn">P6</span>
+            <div>
+              <strong>Injeção do anestésico:</strong><br>
+              1. Checar droga e dose <strong>DUAS VEZES</strong><br>
+              2. Conectar seringa → aspirar levemente (confirmar LCR)<br>
+              3. Injetar <strong>LENTAMENTE</strong> (20–30 segundos para 3 mL)<br>
+              4. Sem resistência à injeção<br>
+              5. SEM dor irradiada intensa ou parestesia (se houver: PARAR imediatamente, redirecionar)<br>
+              6. Aspirar ao meio da injeção para confirmar posição<br>
+              7. Completar injeção
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-t">P7</span>
+            <div>
+              <strong>Retirada e registro:</strong><br>
+              Retirar agulha com movimento único + introdutor → pressionar com gaze 30–60 s.<br>
+              Registrar: hora, nível, droga(s), dose(s), volume(s), aspecto do LCR, número de tentativas, intercorrências.
+            </div>
+          </div>
+        </div>
+        <div class="alert a-red" style="margin-top:12px">
+          <strong>Parestesia durante injeção:</strong> PARAR IMEDIATAMENTE. Risco de injeção intrafascicular com lesão neural direta. Redirecionar antes de reinjetar.
+        </div>
+      </div>
+    </div>
+
+    <!-- ETAPA 7 -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">ETAPA 7</span> Posicionamento Após Injeção (Baricidade)
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="alert a-gold">
+            <strong>HIPERBÁRICA:</strong><br>
+            Deitar em DDH imediatamente (bloqueio bilateral).<br>
+            Para nível alto (cesárea T4): manter DDH 5–10 min → Trendelenburg leve se insuficiente.<br>
+            Cesárea: inclinar lateralmente para esquerda (deslocamento uterino).
+          </div>
+          <div class="alert a-violet">
+            <strong>HIPOBÁRICA:</strong><br>
+            Manter posição sentada ou jack-knife se objetivo for bloqueio perianal/sacral.<br>
+            Droga sobe — gravidade define distribuição.
+          </div>
+        </div>
+        <div class="alert a-teal" style="margin-top:10px">
+          <strong>Importante:</strong> Com hiperbárica, a distribuição ainda está ocorrendo nos primeiros 5–15 minutos após a injeção. Não mova o paciente desnecessariamente. Confirme o nível sensitivo antes de autorizar posição cirúrgica definitiva.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /raq-tecnica -->
+
+
+  <!-- TAB 5 — AVALIAÇÃO Testes sensitivos + Bromage + Tempo + Falha -->
+  <div class="tab-panel" id="raq-avaliacao">
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> Como Testar o Bloqueio Sensitivo
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal">
+          <strong>Método padrão:</strong> Algodão embebido em álcool isopropílico — comparar sensação de "frio" no membro inferior com o tórax (referência). Perda do frio = dermátomo bloqueado.
+        </div>
+        <div class="alert a-blue" style="margin-top:8px">
+          <strong>Alternativa:</strong> Picada leve com agulha ou palito — comparar discriminação de dor.
+        </div>
+
+        <div class="sh sh-teal" style="margin-top:14px">Dermátomos Chave — Decorar!</div>
+
+        <!-- SVG: Corpo humano com dermátomos -->
+        <div style="text-align:center;margin:14px 0">
+          <svg viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;width:100%;border-radius:8px;background:#0D1B2A">
+            <text x="230" y="18" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#38B6E0" font-weight="700">DERMÁTOMOS ESSENCIAIS — RAQUIANESTESIA</text>
+
+            <!-- Corpo (silhueta frontal simplificada) -->
+            <!-- Cabeça -->
+            <ellipse cx="140" cy="55" rx="22" ry="26" fill="#374151" opacity="0.8"/>
+            <!-- Pescoço -->
+            <rect x="130" y="78" width="20" height="18" rx="3" fill="#374151" opacity="0.8"/>
+            <!-- Tronco -->
+            <rect x="105" y="94" width="70" height="120" rx="8" fill="#1F2937" opacity="0.9"/>
+            <!-- MMSS -->
+            <rect x="75" y="96" width="28" height="90" rx="10" fill="#374151" opacity="0.7"/>
+            <rect x="177" y="96" width="28" height="90" rx="10" fill="#374151" opacity="0.7"/>
+            <!-- MMII -->
+            <rect x="108" y="212" width="30" height="110" rx="8" fill="#374151" opacity="0.7"/>
+            <rect x="142" y="212" width="30" height="110" rx="8" fill="#374151" opacity="0.7"/>
+
+            <!-- Linhas dermátomos no tronco -->
+            <!-- T4 - mamilos -->
+            <line x1="100" y1="115" x2="180" y2="115" stroke="#C0392B" stroke-width="2" stroke-dasharray="4,2"/>
+            <text x="195" y="119" font-family="JetBrains Mono,monospace" font-size="10" fill="#C0392B" font-weight="700">T4 — Mamilos (CESÁREA)</text>
+            <!-- T6 - xifoide -->
+            <line x1="100" y1="140" x2="180" y2="140" stroke="#E8A020" stroke-width="2" stroke-dasharray="4,2"/>
+            <text x="195" y="144" font-family="JetBrains Mono,monospace" font-size="10" fill="#E8A020">T6 — Processo xifoide</text>
+            <!-- T8 -->
+            <line x1="100" y1="163" x2="180" y2="163" stroke="#38B6E0" stroke-width="2" stroke-dasharray="4,2"/>
+            <text x="195" y="167" font-family="JetBrains Mono,monospace" font-size="10" fill="#38B6E0">T8 — Margem costal</text>
+            <!-- T10 - umbigo -->
+            <line x1="100" y1="185" x2="180" y2="185" stroke="#4ADE80" stroke-width="2" stroke-dasharray="4,2"/>
+            <text x="195" y="189" font-family="JetBrains Mono,monospace" font-size="10" fill="#4ADE80">T10 — Umbigo</text>
+            <!-- T12 - virilha -->
+            <line x1="100" y1="208" x2="180" y2="208" stroke="#A78BFA" stroke-width="2" stroke-dasharray="4,2"/>
+            <text x="195" y="212" font-family="JetBrains Mono,monospace" font-size="10" fill="#A78BFA">T12 — Virilha</text>
+            <!-- L1 -->
+            <line x1="100" y1="225" x2="180" y2="225" stroke="#F97316" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <text x="195" y="229" font-family="JetBrains Mono,monospace" font-size="10" fill="#F97316">L1 — Inguinal baixo</text>
+            <!-- S2-S4 no períneo -->
+            <ellipse cx="140" cy="255" rx="18" ry="10" fill="#BE185D" opacity="0.5"/>
+            <text x="195" y="258" font-family="JetBrains Mono,monospace" font-size="10" fill="#BE185D">S2–S4 — Períneo / anal</text>
+
+            <!-- Legenda especialidades -->
+            <rect x="20" y="285" width="12" height="12" rx="2" fill="#C0392B"/>
+            <text x="36" y="295" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">T4 = Cesárea</text>
+            <rect x="115" y="285" width="12" height="12" rx="2" fill="#4ADE80"/>
+            <text x="131" y="295" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">T10 = Urologia/Hérnia</text>
+            <rect x="255" y="285" width="12" height="12" rx="2" fill="#38B6E0"/>
+            <text x="271" y="295" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">T8 = Hérnia inguinal alta</text>
+
+            <!-- Seta indicando teste -->
+            <path d="M55,130 L100,130" stroke="#F4F6FA" stroke-width="1.5" marker-end="url(#arr2)"/>
+            <text x="10" y="125" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">Testar</text>
+            <text x="10" y="135" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">aqui →</text>
+            <defs>
+              <marker id="arr2" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
+                <polygon points="0 0, 6 2.5, 0 5" fill="#F4F6FA"/>
+              </marker>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Dermátomo</th><th>Referência Anatômica</th><th>Indicação Cirúrgica</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(192,57,43,0.08)"><td><strong>T4</strong></td><td>Linha dos mamilos</td><td><span class="tag tr">Cesárea</span></td></tr>
+            <tr><td><strong>T6</strong></td><td>Processo xifoide</td><td>Cirurgia abdominal baixa</td></tr>
+            <tr><td><strong>T8</strong></td><td>Margem costal inferior</td><td>Hérnia inguinal alta</td></tr>
+            <tr style="background:rgba(26,122,74,0.08)"><td><strong>T10</strong></td><td>Umbigo</td><td>Urologia, hérnia inguinal, MMII</td></tr>
+            <tr><td><strong>T12</strong></td><td>Virilha / prega inguinal</td><td>Pé, tornozelo, períneo</td></tr>
+            <tr><td><strong>L1</strong></td><td>Região inguinal baixa</td><td>Genitália externa</td></tr>
+            <tr><td><strong>S2–S4</strong></td><td>Períneo</td><td>Hemorroidectomia, cirurgias anais</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- BROMAGE -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Escala de Bromage — Bloqueio Motor
+      </div>
+      <div class="card-body">
+
+        <!-- SVG: Bromage visual -->
+        <div style="text-align:center;margin:10px 0">
+          <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;width:100%;border-radius:8px;background:#0D1B2A">
+            <text x="230" y="18" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#38B6E0" font-weight="700">ESCALA DE BROMAGE — BLOQUEIO MOTOR</text>
+
+            <!-- Grau 0 -->
+            <g transform="translate(15,30)">
+              <rect x="0" y="0" width="95" height="150" rx="6" fill="#1A7A4A" opacity="0.2" stroke="#1A7A4A" stroke-width="1"/>
+              <text x="47" y="16" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#4ADE80" font-weight="700">GRAU 0</text>
+              <!-- perna flexionada normalmente -->
+              <line x1="47" y1="25" x2="47" y2="90" stroke="#4ADE80" stroke-width="3" stroke-linecap="round"/>
+              <line x1="47" y1="90" x2="20" y2="130" stroke="#4ADE80" stroke-width="3" stroke-linecap="round"/>
+              <line x1="20" y1="130" x2="10" y2="148" stroke="#4ADE80" stroke-width="3" stroke-linecap="round"/>
+              <text x="47" y="165" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">Sem bloqueio</text>
+              <text x="47" y="177" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">Movimento completo</text>
+            </g>
+
+            <!-- Grau 1 -->
+            <g transform="translate(120,30)">
+              <rect x="0" y="0" width="95" height="150" rx="6" fill="#E8A020" opacity="0.2" stroke="#E8A020" stroke-width="1"/>
+              <text x="47" y="16" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#E8A020" font-weight="700">GRAU 1</text>
+              <!-- Joelho rígido -->
+              <line x1="47" y1="25" x2="47" y2="90" stroke="#E8A020" stroke-width="3" stroke-linecap="round"/>
+              <line x1="47" y1="90" x2="47" y2="140" stroke="#E8A020" stroke-width="3" stroke-linecap="round"/> <!-- joelho não dobra -->
+              <line x1="47" y1="140" x2="30" y2="148" stroke="#E8A020" stroke-width="3" stroke-linecap="round"/> <!-- tornozelo ainda mexe -->
+              <text x="47" y="163" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">Não flexiona joelho</text>
+              <text x="47" y="175" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">Tornozelo livre</text>
+            </g>
+
+            <!-- Grau 2 -->
+            <g transform="translate(225,30)">
+              <rect x="0" y="0" width="95" height="150" rx="6" fill="#D4580A" opacity="0.2" stroke="#D4580A" stroke-width="1"/>
+              <text x="47" y="16" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#F97316" font-weight="700">GRAU 2</text>
+              <!-- Tudo rígido, só pé mexe -->
+              <line x1="47" y1="25" x2="47" y2="140" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="47" cy="148" r="6" fill="#F97316" opacity="0.6"/> <!-- pé -->
+              <text x="47" y="165" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">Sem joelho/tornozelo</text>
+              <text x="47" y="177" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">Mexe o pé</text>
+            </g>
+
+            <!-- Grau 3 -->
+            <g transform="translate(330,30)">
+              <rect x="0" y="0" width="95" height="150" rx="6" fill="#C0392B" opacity="0.2" stroke="#C0392B" stroke-width="1"/>
+              <text x="47" y="16" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#C0392B" font-weight="700">GRAU 3</text>
+              <!-- Completamente imóvel -->
+              <line x1="47" y1="25" x2="47" y2="150" stroke="#C0392B" stroke-width="3" stroke-linecap="round"/>
+              <text x="47" y="165" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#F4F6FA">Sem movimento</text>
+              <text x="47" y="177" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#5A6880">Bloqueio completo</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="alert a-teal" style="margin-top:10px">
+          <strong>Para cirurgia plena:</strong> geralmente necessário Bromage 2–3. Para procedimentos perineais superficiais, Bromage 1–2 pode ser suficiente. Confirmar antes de liberar para incisão.
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMPO E FALHA -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Tempo de Instalação e Raqui Falha
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="alert a-teal">
+            <strong>Bloqueio sensitivo:</strong> 5–15 min<br>
+            <strong>Bloqueio motor:</strong> 10–20 min<br><br>
+            Confirmar SEMPRE antes de liberar para incisão!
+          </div>
+          <div class="alert a-blue">
+            <strong>Duração típica (bupivacaína 0,5% hiperbárica):</strong><br>
+            Sensitivo: 2–4 h<br>
+            Motor: 3–6 h<br>
+            Analgesia (com morfina IT): 18–24 h
+          </div>
+        </div>
+
+        <div class="sh sh-red" style="margin-top:14px">Raqui Falha / Bloqueio Inadequado</div>
+        <div class="acc" style="margin-top:8px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Causas de falha</div>
+          <div class="acc-body">
+            <ul style="font-size:13px;line-height:2;padding-left:16px">
+              <li>Agulha fora do espaço subaracnoide (espaço epidural ou subdural)</li>
+              <li>Dose ou volume insuficiente</li>
+              <li>Baricidade inadequada para a posição do paciente</li>
+              <li>Distribuição atípica (anatômica ou técnica)</li>
+              <li>Aguardou pouco tempo antes de testar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Conduta na raqui falha</div>
+          <div class="acc-body">
+            <div class="proto-steps">
+              <div class="proto-step"><span class="sn sn-t">1</span><div>Aguardar tempo adequado: pelo menos 20 minutos antes de concluir falha</div></div>
+              <div class="proto-step"><span class="sn sn-b">2</span><div>Complementar com sedação/analgesia IV se bloqueio parcial e cirurgia tolerável</div></div>
+              <div class="proto-step"><span class="sn">3</span><div>Converter para anestesia geral se bloqueio insuficiente para a cirurgia</div></div>
+            </div>
+            <div class="alert a-red" style="margin-top:8px">
+              <strong>NÃO repetir dose intratecal sem critério rigoroso</strong> — risco de raquianestesia total por efeito cumulativo das doses.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /raq-avaliacao -->
+
+
+  <!-- TAB 6 — COMPLICAÇÕES -->
+  <div class="tab-panel" id="raq-complicacoes">
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">00</span> Tabela Resumo — Complicações Rápidas
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Complicação</th><th>Reconhecimento</th><th>Conduta Imediata</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(192,57,43,0.08)"><td><strong>Hipotensão</strong></td><td>PA ↓ &gt; 20–30%</td><td>Trendelenburg + cristal + fenilefrina ou efedrina</td></tr>
+            <tr><td><strong>Bradicardia grave</strong></td><td>FC &lt; 40</td><td>Atropina 0,5–1 mg IV</td></tr>
+            <tr style="background:rgba(192,57,43,0.12)"><td><strong>Raqui alta/total</strong></td><td>Fraqueza MMSS, apneia</td><td>O₂ + IOT + vasopressor + suporte CV</td></tr>
+            <tr><td><strong>CPPD</strong></td><td>Cefaleia postural</td><td>Hidratação + cafeína → blood patch se refratária</td></tr>
+            <tr style="background:rgba(192,57,43,0.08)"><td><strong>Hematoma neuraxial</strong></td><td>Dor lombar + déficit neurológico</td><td>RM urgência + descompressão &lt; 8 h</td></tr>
+            <tr><td><strong>LAST</strong></td><td>Convulsão + arritmia</td><td>O₂ + benzodiazepínico + Intralipid 20%</td></tr>
+            <tr><td><strong>Prurido (opioides IT)</strong></td><td>Coceira difusa / face</td><td>Ondansetrona 4–8 mg IV</td></tr>
+            <tr style="background:rgba(192,57,43,0.08)"><td><strong>Depress. resp. tardia</strong></td><td>FR baixa / SpO₂ ↓ após 8–24 h</td><td>Naloxona 100–400 mcg IV + O₂ + monitorização</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- HIPOTENSÃO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">12.1</span> Hipotensão — Complicação Mais Comum (20–50%)
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>Definição:</strong> PAS &lt; 90 mmHg OU queda ≥ 20–30% do valor basal
+        </div>
+        <div class="alert a-blue" style="margin-top:8px">
+          <strong>Mecanismo:</strong> Bloqueio simpático → vasodilatação arteriolar e venosa → ↓ retorno venoso → ↓ débito cardíaco → ↓ PA
+        </div>
+        <div class="sh sh-red" style="margin-top:12px">Protocolo de Tratamento</div>
+        <div class="proto-steps" style="margin-top:8px">
+          <div class="proto-step"><span class="sn sn-t">1</span><div>Elevar MMII — posição Trendelenburg leve</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div>Bolus de cristaloide: SF 250–500 mL rápido</div></div>
+          <div class="proto-step"><span class="sn">3</span><div>
+            Vasopressor: <strong>FC &gt; 80</strong> → Fenilefrina 50–100 mcg IV (α1-agonista puro)<br>
+            <strong>FC &lt; 60</strong> → Efedrina 5–10 mg IV (α + β-agonista)
+          </div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div>Reavaliar em 2–3 min; repetir se necessário</div></div>
+          <div class="proto-step"><span class="sn">5</span><div>Hipotensão refratária: infusão contínua → Fenilefrina 25–50 mcg/min ou Noradrenalina 0,05–0,2 mcg/kg/min</div></div>
+        </div>
+        <div class="g2" style="margin-top:12px">
+          <div class="alert a-teal">
+            <strong>CESÁREA:</strong> Fenilefrina é 1ª escolha — preserva pH fetal e fluxo uteroplacentário.
+          </div>
+          <div class="alert a-red">
+            <strong>BRADICARDIA GRAVE</strong> (FC &lt; 40 + hipotensão): Atropina 0,5–1 mg IV imediato.
+          </div>
+        </div>
+        <div class="sh sh-blue" style="margin-top:12px">Prevenção</div>
+        <ul style="font-size:13px;line-height:1.9;padding-left:16px;margin-top:6px">
+          <li>Co-loading de cristaloide antes/durante o bloqueio</li>
+          <li>Fenilefrina profilática em infusão (cesárea): 25–50 mcg/min</li>
+          <li>Não usar doses excessivas de anestésico local</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RAQUI TOTAL -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">12.2</span> Bloqueio Alto / Raquianestesia Total
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>Definição:</strong> Anestésico local ascende até neuraxe cervical/bulbar → paralisia respiratória + colapso cardiovascular.
+        </div>
+        <div class="sh sh-red" style="margin-top:12px">Sinais de Alerta (em ordem de instalação)</div>
+        <div class="proto-steps" style="margin-top:8px">
+          <div class="proto-step"><span class="sn sn-y">1</span><div>Fraqueza ou paralisia de membros SUPERIORES</div></div>
+          <div class="proto-step"><span class="sn sn-y">2</span><div>Dificuldade para respirar — "não consigo respirar"</div></div>
+          <div class="proto-step"><span class="sn sn-y">3</span><div>Rouquidão (paralisia de cordas vocais)</div></div>
+          <div class="proto-step"><span class="sn">4</span><div>Agitação súbita, ansiedade, turvação visual</div></div>
+          <div class="proto-step"><span class="sn">5</span><div>Inconsciência, apneia</div></div>
+          <div class="proto-step"><span class="sn">6</span><div>Hipotensão grave + bradicardia intensa → colapso cardiovascular</div></div>
+        </div>
+        <div class="sh sh-red" style="margin-top:12px">🚨 Conduta Imediata</div>
+        <div class="alert a-red" style="margin-top:8px">
+          <strong>1. CHAMAR AJUDA IMEDIATAMENTE</strong><br>
+          2. O₂ 100% com máscara + bolsa-valva<br>
+          3. Ventilação assistida com pressão positiva<br>
+          4. IOT se apneia ou inconsciência<br>
+          5. Vasopressor em infusão contínua (noradrenalina ou fenilefrina)<br>
+          6. Epinefrina IV se colapso cardiovascular: 0,1 mg IV<br>
+          7. Manter posição supina<br>
+          8. CALMA: o bloqueio <strong>regride espontaneamente em 30–90 min</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- CPPD -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">12.3</span> Cefaleia Pós-Punção Dural (CPPD)
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue">
+          <strong>Mecanismo:</strong> Vazamento de LCR pelo orifício da punção → tração de estruturas intracranianas ao ficar em pé → dor fronto-occipital.
+        </div>
+        <div class="sh sh-blue" style="margin-top:12px">Características Clínicas</div>
+        <ul style="font-size:13px;line-height:1.9;padding-left:16px;margin-top:6px">
+          <li>Início: 12–72 h após a punção</li>
+          <li>Dor fronto-occipital bilateral</li>
+          <li><strong>POSTURAL:</strong> piora ao sentar/levantar, melhora ao deitar — sinal clássico</li>
+          <li>Pode acompanhar: náusea, zumbido, diplopia, fotofobia</li>
+        </ul>
+        <div class="g2" style="margin-top:10px">
+          <div class="alert a-green">Agulha Quincke 29G: ~1–3%</div>
+          <div class="alert a-teal"><strong>Agulha Whitacre 25G: &lt; 1%</strong> ← preferida</div>
+        </div>
+
+        <div class="sh sh-teal" style="margin-top:14px">Tratamento Escalonado</div>
+        <div class="acc" style="margin-top:8px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">LEVE — Primeiras 24–48 h</div>
+          <div class="acc-body">
+            <ul style="font-size:13px;line-height:1.9;padding-left:16px">
+              <li>Repouso relativo (não absoluto — caminhar não piora)</li>
+              <li>Hidratação oral 2–3 L/dia</li>
+              <li>Paracetamol ou dipirona + Cafeína 300 mg VO 2x/dia</li>
+              <li>Ibuprofeno ou Naproxeno</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">MODERADA</div>
+          <div class="acc-body">
+            <ul style="font-size:13px;line-height:1.9;padding-left:16px">
+              <li>SF 0,9% IV 1–2 L/dia</li>
+              <li>Cafeína IV 500 mg diluída em 500 mL SF (infundir em 1–2 h)</li>
+              <li>Reavaliação após 24 h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">GRAVE / REFRATÁRIA — Blood Patch</div>
+          <div class="acc-body">
+            <div class="proto-steps">
+              <div class="proto-step"><span class="sn">1</span><div>Indicação: 72 h sem melhora ou CPPD grave incapacitante</div></div>
+              <div class="proto-step"><span class="sn">2</span><div>Colher 15–20 mL de sangue autólogo com técnica estéril</div></div>
+              <div class="proto-step"><span class="sn">3</span><div>Injetar no espaço epidural no mesmo nível (ou 1 abaixo)</div></div>
+              <div class="proto-step"><span class="sn sn-t">4</span><div>Taxa de sucesso: <strong>70–90%</strong> na primeira tentativa</div></div>
+              <div class="proto-step"><span class="sn sn-b">5</span><div>Se falhar: pode ser repetido 1x</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUTRAS COMPLICAÇÕES -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">12.4–12.9</span> Outras Complicações
+      </div>
+      <div class="card-body">
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)">12.4 — Toxicidade Sistêmica de AL (LAST)</div>
+          <div class="acc-body">
+            <div class="alert a-red">Raramente ocorre com doses intratecais (dose baixa), mas pode ocorrer em caso de injeção intravascular acidental.</div>
+            <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+              <thead><tr><th>Sistema</th><th>Manifestação</th></tr></thead>
+              <tbody>
+                <tr><td>SNC</td><td>Gosto metálico, tinido, confusão, convulsões</td></tr>
+                <tr><td>CV</td><td>Arritmias, bloqueio AV, colapso cardiovascular</td></tr>
+              </tbody>
+            </table></div>
+            <div class="proto-steps" style="margin-top:10px">
+              <div class="proto-step"><span class="sn">1</span><div>Parar injeção + chamar ajuda</div></div>
+              <div class="proto-step"><span class="sn">2</span><div>O₂ 100% + IOT se necessário</div></div>
+              <div class="proto-step"><span class="sn">3</span><div>Convulsões: Midazolam 2–4 mg IV</div></div>
+              <div class="proto-step"><span class="sn">4</span><div><strong>Intralipid 20%:</strong> Bolus 1,5 mL/kg IV em 1 min → manutenção 0,25 mL/kg/min por 30–60 min</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">12.5 — Hematoma Neuraxial (Emergência Cirúrgica)</div>
+          <div class="acc-body">
+            <div class="alert a-red">Raro porém catastrófico. Risco aumentado com coagulopatia, anticoagulação inadequada, múltiplas punções traumáticas.</div>
+            <div class="proto-steps" style="margin-top:8px">
+              <div class="proto-step"><span class="sn">1</span><div>Suspeitar: dor lombar progressiva + déficit neurológico que não regride</div></div>
+              <div class="proto-step"><span class="sn">2</span><div>RM de urgência (TC como alternativa)</div></div>
+              <div class="proto-step"><span class="sn">3</span><div>Descompressão cirúrgica em <strong>&lt; 8 horas</strong> do início dos sintomas</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">12.6 — TNS (Síndrome Neurológica Transitória) — Lidocaína</div>
+          <div class="acc-body">
+            <p style="font-size:13px">Dor lombar irradiada para nádegas/MMII após raqui com lidocaína. Início 12–24 h. Regressão espontânea em 1–4 dias. Principal razão pelo qual o uso de lidocaína intratecal foi reduzido no mundo.</p>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">12.7–12.8 — Retenção Urinária + Prurido</div>
+          <div class="acc-body">
+            <div class="g2">
+              <div class="alert a-blue">
+                <strong>Retenção urinária:</strong><br>
+                Bloqueio S2–S4 → controle vesical comprometido<br>
+                Comum com morfina IT<br>
+                Conduta: sondagem de alívio
+              </div>
+              <div class="alert a-blue">
+                <strong>Prurido por opioides IT:</strong><br>
+                Ondansetrona 4–8 mg IV (leve/moderado)<br>
+                Nalbufina 2,5–5 mg IV (grave)<br>
+                Naloxona 40 mcg IV diluída (refratário)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /raq-complicacoes -->
+
+
+  <!-- TAB 7 — POPULAÇÕES -->
+  <div class="tab-panel" id="raq-populacoes">
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> Idoso (&gt; 65 anos)
+      </div>
+      <div class="card-body">
+        <div class="alert a-gold">
+          Espaços interespinhosos calcificados + redução da compensação hemodinâmica → maior risco de hipotensão grave com doses padrão.
+        </div>
+        <div class="tbl-wrap"><table class="tbl" style="margin-top:10px">
+          <tbody>
+            <tr><td>Ajuste de dose</td><td><strong>Reduzir 20–30%</strong> em relação ao adulto jovem</td></tr>
+            <tr><td>Técnica</td><td>Paramediana pode ajudar em calcificações extensas</td></tr>
+            <tr><td>Fratura colo de fêmur</td><td>Bupi 8–10 mg + Fentanil 10–15 mcg</td></tr>
+            <tr><td>Monitorização</td><td>Intensiva; vasopressor já preparado antes do bloqueio</td></tr>
+            <tr><td>Preferência de AL</td><td>Levobupivacaína se disponível (menos cardiotóxica)</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Gestante / Cesárea
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal">
+          A cesárea sob raqui é o procedimento mais realizado no SUS brasileiro. A técnica é segura e bem estabelecida — conhecer cada detalhe é fundamental.
+        </div>
+        <div class="tbl-wrap"><table class="tbl" style="margin-top:10px">
+          <tbody>
+            <tr><td>Dose</td><td>NÃO reduzir pelo peso — risco de falha do bloqueio</td></tr>
+            <tr><td>Nível alvo</td><td><strong>T4–T6</strong> (linha dos mamilos)</td></tr>
+            <tr><td>Posicionamento</td><td>Deslocamento uterino para esquerda: evita compressão aortocava</td></tr>
+            <tr><td>Vasopressor</td><td><strong>Fenilefrina</strong> é 1ª escolha — preserva pH fetal</td></tr>
+            <tr><td>Protocolo típico</td><td>Bupi 10–12 mg + Fentanil 15–20 mcg + Morfina 80–100 mcg</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-blue" style="margin-top:10px">
+          <strong>Morfina intratecal na cesárea:</strong> padrão ouro para analgesia pós-operatória 18–24 h. Monitorizar FR e SpO₂ por 24 h. Informar equipe de enfermagem sobre risco de depressão respiratória tardia.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Obeso / Obeso Mórbido
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl">
+          <tbody>
+            <tr><td>Landmarks</td><td>Palpação difícil → ultrassom pré-punção fortemente recomendado</td></tr>
+            <tr><td>Posição</td><td>Sentada geralmente mais fácil (landmarks mais palpáveis)</td></tr>
+            <tr><td>Agulha</td><td>Comprimentos maiores: 120–150 mm</td></tr>
+            <tr><td>Dose</td><td><strong>NÃO aumentar por peso</strong> — volume de LCR é menor, dispersão maior</td></tr>
+            <tr><td>Via aérea</td><td>Avaliar e preparar rigorosamente — maior risco na conversão para AG</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">04</span> Cardiopata (Estenose Aórtica, IC)
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          A estenose aórtica severa é contraindicação relativa importante: a vasodilatação súbita do bloqueio simpático pode causar colapso hemodinâmico grave neste contexto.
+        </div>
+        <div class="tbl-wrap"><table class="tbl" style="margin-top:10px">
+          <tbody>
+            <tr><td>Ajuste de dose</td><td>Reduzir 20–30% — menos hipotensão</td></tr>
+            <tr><td>AL preferido</td><td>Levobupivacaína (menos cardiotóxica)</td></tr>
+            <tr><td>Monitorização</td><td>Linha arterial em casos graves</td></tr>
+            <tr><td>Vasopressor</td><td>Pré-preparado e disponível imediatamente antes do bloqueio</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">05</span> Cirurgia de Coluna (Posição Prona)
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl">
+          <tbody>
+            <tr><td>Sequência</td><td>Bloqueio em DL → confirmar nível T6–T8 → posicionar em prona</td></tr>
+            <tr><td>Coxins</td><td>Evitar compressão abdominal (interfere no campo cirúrgico)</td></tr>
+            <tr><td>Comunicação</td><td>Constante com equipe cirúrgica</td></tr>
+            <tr><td>Protocolo</td><td>Bupi 10–15 mg + Fentanil 15–20 mcg + Morfina 100–150 mcg</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-gold" style="margin-top:10px">
+          Confirmar hemodinâmica estável ANTES da pronação. A mudança de posição pode deslocar a droga e alterar o nível do bloqueio.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /raq-populacoes -->
+
+<!-- TAB — REVISÃO RÁPIDA RAQUIANESTESIA -->
+  <div class="tab-panel" id="raq-revisao">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">⚡ Revisão Rápida — Raquianestesia</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Para revisão pré-plantão ou pré-prova · 10 pontos essenciais</p>
+          <div class="algo-box algo-b" style="margin-bottom:8px">
+            <div class="algo-title">10 pontos que você não pode esquecer</div>
+            <ol style="font-size:12px;line-height:2;margin:6px 0 0 16px">
+              <li>Nível sensitivo para cesaréa: T4 (linha mamilar) · colecistectomia: T6 · apendicectomia: T10</li>
+              <li>Bupivacaína hiperbara 0,5%: dose usual 10–15 mg · 3 mL = 15 mg · nível depende de posição e dose</li>
+              <li>Adjuvantes intratecais: morfina 100–200 mcg (analgesia prolongada 12–24h) · fentanil 25 mcg (onset rápido)</li>
+              <li>Hipotensão pós-raqui: incidência 25–80% · fenilefrina infusão profilática 25–50 mcg/min (1ª escolha)</li>
+              <li>CPPD (cefaleia pós-punção dural): agulha ponta de lápis (Whitacre/Sprotte) ↓incidência · blood patch se &gt;24h</li>
+              <li>Bloqueio total: hipotensão grave + apneia + perda de consciência → suporte ABC + VM imediata</li>
+              <li>Contraindicações absolutas: recusa, coagulopatia grave, infecção local, hipertensão intracraniana</li>
+              <li>Raqui em anticoagulados (ASRA 2022): enoxaparina profilática → aguardar 12h · terapêutica → 24h</li>
+              <li>Clonidina intratecal 75 mcg: prolonga bloqueio motor e sensitivo em 30–60 min sem efeitos sistêmicos graves</li>
+              <li>Bupivacaína isobara: nível menos previsível · paciente em posição lateral: tende a bloquear lado dependente</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Revisão Rápida</div>
+    </div>
+  </div><!-- /raq-revisao -->
+
+<!-- TAB — QUESTÕES RAQUIANESTESIA -->
+  <div class="tab-panel" id="raq-questoes">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">📝 Questões — Raquianestesia</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">5 questões de múltipla escolha · Clique para revelar o gabarito</p>
+
+          <div class="caso-card" id="q1-raq">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">1</div>
+              <div class="caso-title">QUESTÃO 1 — Nível Sensitivo para Cesaréa</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente gestante será submetida a cesaréa eletiva sob raquianestesia. Qual o nível sensitivo mínimo necessário para garantir analgesia cirurgica adequada durante o procedimento?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) T10 — nível umbilical<br>
+                B) T8 — abaixo do apêndice xifóide<br>
+                C) T6 — apêndice xifóide<br>
+                D) T4 — linha mamilar bilateral<br>
+                E) T2 — claviculares
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: D)</strong> — A cesaréa requer bloqueio até <strong>T4 (linha mamilar)</strong> bilateralmente para cobrir a incisão de Pfannenstiel e o painé parietal peritoneal, além de prevenir dor com tracção uterina e peritoneal. Níveis abaixo de T6 são insuficientes para cobrir a dor visceral da exteriorização uterina. O nível T4 garante margem de segurança adequada para o procedimento completo.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q2-raq">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">2</div>
+              <div class="caso-title">QUESTÃO 2 — Hipotensão Pós-Raqui em Cesaréa</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Gestante após raquianestesia para cesaréa desenvolveu hipotensão (PAS 80 mmHg) com náuseas. Qual é a conduta farmacológica de <strong>primeira linha</strong> recomendada pelas diretrizes atuais?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Efedrina 10 mg IV em bolus — 1ª linha por ação mista (α+β)<br>
+                B) Fenilefrina em infusão contínua profilática 25–50 mcg/min<br>
+                C) Adrenalina 0,5 mg IV em emergência<br>
+                D) Noradrenalina 0,1 mcg/kg/min em infusão<br>
+                E) Atropina 0,5 mg IV + hidratação rápida com cristaloide
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: B)</strong> — A <strong>fenilefrina em infusão contínua profilática</strong> (25–50 mcg/min) é a 1ª escolha atual para prevenção e tratamento da hipotensão pós-raqui em obstetrics, pois mantém ou eleva a RVP sem efeito cronotrópico positivo, preservando melhor o pH fetal em comparação à efedrina. A efedrina (α+β) é reservada para hipotensão com bradicardia associada. Recomendação baseada em méta-análises e diretrizes SOAP/OAA.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q3-raq">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">3</div>
+              <div class="caso-title">QUESTÃO 3 — Agulha para Minimizar CPPD</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Mulher de 28 anos, 62 kg, será submetida a artroplastia de joelho sob raquianestesia. Para minimizar o risco de cefaleia pós-punção dural (CPPD), qual o tipo de agulha mais adequado?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Quincke 20G (bisel cortante)<br>
+                B) Quincke 22G (bisel cortante)<br>
+                C) Whitacre 25G (ponta de lápis) ou Sprotte 25G<br>
+                D) Tuohy 17G (ponta de Hustead)<br>
+                E) Calibre não influencia — apenas a técnica importa
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — Agulhas de ponta de lápis (<strong>Whitacre</strong> ou <strong>Sprotte</strong>, calibre ≥25G) separam as fibras da dura-máter ao invés de cortá-las, resultando em orificio menor e cicatrização mais rápida, o que reduz significativamente a incidência de CPPD (de ~5–10% com Quincke 22G para &lt;1% com Whitacre 25G). O calibre menor também contribui — quanto mais fino, menor o orificio residual na dura.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q4-raq">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">4</div>
+              <div class="caso-title">QUESTÃO 4 — Raqui em Paciente com Enoxaparina Terapêutica</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente em uso de enoxaparina na dose <strong>terapêutica</strong> (1 mg/kg 12/12h) por trombose venosa profunda necessita de cirurgia eletiva com raquianestesia. Segundo as diretrizes ASRA 2022, após quanto tempo da última dose é seguro realizar a punção?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) 6 horas<br>
+                B) 12 horas<br>
+                C) 18 horas<br>
+                D) 24 horas<br>
+                E) 48 horas
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: D)</strong> — Segundo a ASRA 2022, para enoxaparina em dose <strong>terapêutica</strong> (anti-Xa mais alta, meia-vida prolongada), o intervalo mínimo antes de bloqueio neuroaxial é de <strong>24 horas</strong>. Para dose <strong>profilática</strong> (ex.: 40 mg/dia), o intervalo é de 12 horas. O intervalo pós-procedimento para reiniciar enoxaparina profilática é 6–8h; terapêutica é 24h. Sempre verificar função renal (enoxaparina acumula em IRT).
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q5-raq">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">5</div>
+              <div class="caso-title">QUESTÃO 5 — Adjuvante para Analgesia Pós-Op Prolongada</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente submetida a cesaréa eletiva sob raquianestesia com bupivacaína hiperbara. Qual adjuvante intratecal proporciona <strong>analgesia pós-operatória prolongada de 12–24 horas</strong> sem impacto significativo no bloqueio motor intraoperatório?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Fentanil 25 mcg intratecal<br>
+                B) Clonidina 75 mcg intratecal<br>
+                C) Morfina 100–200 mcg intratecal<br>
+                D) Dexametasona 4 mg intratecal<br>
+                E) Sufentanil 10 mcg intratecal
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A <strong>morfina intratecal 100–200 mcg</strong> é o adjuvante que oferece analgesia pós-operatória mais prolongada (12–24h) após cesaréa, por difusão rostral lenta no LCR até receptores supraespinhais. Não interfere no bloqueio motor intraoperatório. Efeitos adversos: prunído (20–40%), náuseas e, raramente, depressão respiratoria tardia (monitoração 24h). O fentanil intratecal (25 mcg) oferece onset rápido, mas analgesia de apenas 2–4h.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Questões</div>
+    </div>
+  </div><!-- /raq-questoes -->
+
+
+  <!-- TAB 8 — CASOS CLÍNICOS (10 casos) -->
+  <div class="tab-panel" id="raq-casos">
+
+    <div class="alert a-teal" style="margin:12px 0 16px">
+      Clique em cada caso para expandir a discussão completa com prescrição, cálculos e pontos de atenção.
+    </div>
+
+    <!-- CASO 1 -->
+    <div class="caso-card">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 1</span>
+        <span class="caso-title">Herniorrafia Inguinal — Adulto Jovem (35a, ASA I)</span>
+      </div>
+      <div class="caso-body">
+        <div class="tbl-wrap"><table class="tbl"><tbody>
+          <tr><td>Paciente</td><td>Homem, 35 anos, ASA I, 75 kg</td></tr>
+          <tr><td>Cirurgia</td><td>Herniorrafia inguinal direita, ~60–90 min</td></tr>
+          <tr><td>Nível alvo</td><td>T8–T10</td></tr>
+        </tbody></table></div>
+        <div class="caso-question">Qual a prescrição ideal para raqui neste caso?</div>
+        <div class="caso-answer">
+          <strong>Prescrição:</strong><br>
+          Bupivacaína 0,5% hiperbárica: <strong>12,5 mg</strong> = 2,5 mL<br>
+          + Fentanil: <strong>15–20 mcg</strong> = 0,3–0,4 mL<br>
+          <strong>Total: ~2,8–2,9 mL</strong>
+          <div class="alert a-teal" style="margin-top:10px">
+            Dose média para adulto jovem ASA I em cirurgia infraumbilical. Nível T8–T10 adequado para herniorrafia inguinal. Fentanil melhora qualidade do bloqueio intraoperatório.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 2 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 2</span>
+        <span class="caso-title">Cesárea Eletiva — Nulípara Obesa (28a, ASA II)</span>
+      </div>
+      <div class="caso-body">
+        <div class="tbl-wrap"><table class="tbl"><tbody>
+          <tr><td>Paciente</td><td>Mulher, 28 anos, ASA II, 90 kg, gestação a termo</td></tr>
+          <tr><td>Cirurgia</td><td>Cesárea eletiva, ~60 min</td></tr>
+          <tr><td>Nível alvo</td><td>T4–T6</td></tr>
+        </tbody></table></div>
+        <div class="caso-question">Qual a prescrição e quais os cuidados específicos?</div>
+        <div class="caso-answer">
+          <strong>Prescrição:</strong><br>
+          Bupivacaína 0,5% hiperbárica: <strong>10–12 mg</strong> = 2,0–2,4 mL<br>
+          + Fentanil: <strong>15–20 mcg</strong> = 0,3–0,4 mL<br>
+          + Morfina: <strong>80–100 mcg</strong> = 0,08–0,1 mL (morfina 1 mg/mL)
+          <div class="alert a-red" style="margin-top:10px">
+            <strong>Cuidados obrigatórios:</strong><br>
+            • Deslocamento uterino para esquerda em DDH<br>
+            • Fenilefrina como vasopressor de 1ª escolha<br>
+            • Monitorizar FR e SpO₂ por 24 h (morfina IT)<br>
+            • Avisar equipe de enfermagem sobre risco de depressão respiratória tardia
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            NÃO reduzir dose pelo peso na gestante — risco de falha do bloqueio e necessidade de conversão para AG (muito indesejável na cesárea em andamento).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 3 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 3</span>
+        <span class="caso-title">Artroplastia de Joelho — Idoso com ICC (78a, ASA III)</span>
+      </div>
+      <div class="caso-body">
+        <div class="tbl-wrap"><table class="tbl"><tbody>
+          <tr><td>Paciente</td><td>Homem, 78 anos, ASA III, ICC leve compensada</td></tr>
+          <tr><td>Cirurgia</td><td>Artroplastia total de joelho, 90–120 min</td></tr>
+          <tr><td>Objetivo</td><td>Minimizar hipotensão</td></tr>
+        </tbody></table></div>
+        <div class="caso-question">Como ajustar a técnica neste paciente de alto risco?</div>
+        <div class="caso-answer">
+          <strong>Prescrição ajustada:</strong><br>
+          Bupivacaína 0,5% hiperbárica: <strong>7,5–10 mg</strong> = 1,5–2,0 mL (redução 20–30%)<br>
+          + Fentanil: <strong>15 mcg</strong> = 0,3 mL
+          <div class="alert a-gold" style="margin-top:10px">
+            Redução de 20–30% da dose pela idade e comorbidade cardíaca. Vasopressor pré-preparado antes do bloqueio. Considerar levobupivacaína se disponível. Monitorização intensiva.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 4 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 4</span>
+        <span class="caso-title">Herniorrafia Ambulatorial — Alta Precoce (45a, ASA I)</span>
+      </div>
+      <div class="caso-body">
+        <div class="tbl-wrap"><table class="tbl"><tbody>
+          <tr><td>Paciente</td><td>Homem, 45 anos, ASA I, cirurgia ~45 min, deseja alta no mesmo dia</td></tr>
+        </tbody></table></div>
+        <div class="caso-question">Como garantir alta precoce com raquianestesia?</div>
+        <div class="caso-answer">
+          <strong>Prescrição de baixa dose:</strong><br>
+          Bupivacaína 0,5% hiperbárica: <strong>7,5–8 mg</strong> = 1,5–1,6 mL<br>
+          + Fentanil: <strong>10–15 mcg</strong> = 0,2–0,3 mL
+          <div class="alert a-teal" style="margin-top:10px">
+            Dose baixa permite recuperação motora mais rápida. Sem morfina IT para não retardar alta. Nível T8–T10 adequado. Critérios de alta: Bromage 0, micção espontânea, PA estável, dor controlada.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 5 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 5</span>
+        <span class="caso-title">Hemorroidectomia — Posição Jack-Knife (40a, ASA I)</span>
+      </div>
+      <div class="caso-body">
+        <div class="tbl-wrap"><table class="tbl"><tbody>
+          <tr><td>Paciente</td><td>Mulher, 40 anos, ASA I, ~60 min, posição jack-knife (prona com glúteos elevados)</td></tr>
+          <tr><td>Nível alvo</td><td>S2–S4 (bloqueio saddle/perianal)</td></tr>
+        </tbody></table></div>
+        <div class="caso-question">Como posicionar e dosar para bloqueio saddle?</div>
+        <div class="caso-answer">
+          <strong>Opção hiperbárica (DL no bloqueio):</strong><br>
+          Bupivacaína 0,5% hiperbárica: <strong>10 mg</strong> = 2,0 mL<br>
+          + Fentanil: <strong>20 mcg</strong> = 0,4 mL
+          <div class="alert a-gold" style="margin-top:10px">
+            Posição influencia DIRETAMENTE a distribuição da solução hiperbárica. Confirmar nível sensitivo adequado ANTES de reposicionar em jack-knife. Nível S2–S4 suficiente para procedimentos perineais.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 6 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 6</span>
+        <span class="caso-title">Ortopedia de Tornozelo — Retorno Motor Rápido (30a, ASA I)</span>
+      </div>
+      <div class="caso-body">
+        <div class="tbl-wrap"><table class="tbl"><tbody>
+          <tr><td>Paciente</td><td>Homem, 30 anos, ASA I, ~60 min, exige recuperação motora ágil (esportista)</td></tr>
+        </tbody></table></div>
+        <div class="caso-question">Qual AL escolher para recuperação motora mais rápida?</div>
+        <div class="caso-answer">
+          <strong>Opção preferencial (ropivacaína):</strong><br>
+          Ropivacaína 0,5–0,75%: <strong>15–20 mg</strong> = 3–4 mL
+          <div class="alert a-teal" style="margin-top:8px">
+            Ropivacaína tem perfil sensitivo-motor mais favorável: bloqueio sensitivo mantido com menor bloqueio motor. Recuperação motora mais rápida que bupivacaína na mesma dose.
+          </div>
+          <strong>Alternativa:</strong> Bupi 0,5% hiperbárica 10 mg + Fentanil 10–15 mcg (dose menor para recuperação mais rápida).
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 7 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 7</span>
+        <span class="caso-title">Fratura de Colo de Fêmur — Idosa com Múltiplas Comorbidades (85a, ASA III–IV)</span>
+      </div>
+      <div class="caso-body">
+        <div class="tbl-wrap"><table class="tbl"><tbody>
+          <tr><td>Paciente</td><td>Mulher, 85 anos, ASA III–IV, HAS + ICC + FA, urgência</td></tr>
+          <tr><td>Cirurgia</td><td>Fixação de colo de fêmur, 60–90 min</td></tr>
+        </tbody></table></div>
+        <div class="caso-question">Como manejar o risco hemodinâmico extremo?</div>
+        <div class="caso-answer">
+          <strong>Prescrição conservadora:</strong><br>
+          Bupivacaína 0,5% hiperbárica: <strong>8–10 mg</strong> = 1,6–2,0 mL (dose mínima eficaz)<br>
+          + Fentanil: <strong>10–15 mcg</strong> = 0,2–0,3 mL
+          <div class="alert a-red" style="margin-top:10px">
+            Doses altas têm risco alto de colapso hemodinâmico neste perfil. Linha arterial se instável. Vasopressor pré-preparado e pronto para uso imediato. Monitorização intensiva intraoperatória.
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            A raqui é PREFERÍVEL à anestesia geral neste caso: menor mortalidade perioperatória, menos complicações pulmonares e menor confusão mental pós-operatória no idoso.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 8 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 8</span>
+        <span class="caso-title">RTU de Próstata — Vantagem da Raqui (70a, ASA II)</span>
+      </div>
+      <div class="caso-body">
+        <div class="tbl-wrap"><table class="tbl"><tbody>
+          <tr><td>Paciente</td><td>Homem, 70 anos, ASA II, 60–90 min</td></tr>
+          <tr><td>Nível alvo</td><td>T10</td></tr>
+        </tbody></table></div>
+        <div class="caso-question">Por que a raqui tem vantagem especial na RTU de próstata?</div>
+        <div class="caso-answer">
+          <strong>Prescrição:</strong><br>
+          Bupivacaína 0,5% hiperbárica: <strong>10–12,5 mg</strong> = 2,0–2,5 mL<br>
+          + Fentanil: <strong>15 mcg</strong> = 0,3 mL
+          <div class="alert a-teal" style="margin-top:10px">
+            <strong>Vantagem única da raqui na RTU:</strong> paciente CONSCIENTE permite monitorar sintomas da Síndrome de RTU (intoxicação hídrica por solução irrigação, hiponatremia). Os primeiros sintomas — confusão, agitação, náusea — só são perceptíveis em paciente acordado. Em anestesia geral, o diagnóstico é tardio e mais grave.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 9 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 9</span>
+        <span class="caso-title">Curetagem Uterina Curta (32a, ASA I, 20–30 min)</span>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">Como evitar bloqueio excessivo em procedimento muito curto?</div>
+        <div class="caso-answer">
+          <strong>Prescrição dose baixa:</strong><br>
+          Bupivacaína 0,5% hiperbárica: <strong>7,5–8 mg</strong> = 1,5–1,6 mL<br>
+          + Fentanil: <strong>10–15 mcg</strong> = 0,2–0,3 mL
+          <div class="alert a-gold" style="margin-top:10px">
+            Evitar drogas de longa duração (morfina IT) em procedimentos muito curtos. Bloqueio cobre o necessário com recuperação mais rápida para alta hospitalar. Nível T10 adequado para curetagem uterina.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 10 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 10</span>
+        <span class="caso-title">Laminectomia / Discectomia L4–L5 Sob Raqui (55a, ASA II)</span>
+      </div>
+      <div class="caso-body">
+        <div class="tbl-wrap"><table class="tbl"><tbody>
+          <tr><td>Paciente</td><td>Homem, 55 anos, ASA II, hérnia L4–L5, ~90 min</td></tr>
+          <tr><td>Posição cirúrgica</td><td>Prona</td></tr>
+          <tr><td>Ponto de punção</td><td>L2–L3 (1 nível acima da cirurgia)</td></tr>
+          <tr><td>Nível alvo</td><td>T6–T8</td></tr>
+        </tbody></table></div>
+        <div class="caso-question">Quais os cuidados específicos para raqui em cirurgia de coluna lombar?</div>
+        <div class="caso-answer">
+          <strong>Prescrição:</strong><br>
+          Bupivacaína 0,5% hiperbárica: <strong>10–12,5 mg</strong> = 2,0–2,5 mL<br>
+          + Fentanil: <strong>15–20 mcg</strong> = 0,3–0,4 mL<br>
+          + Morfina: <strong>100–150 mcg</strong> = 0,1–0,15 mL
+          <div class="alert a-teal" style="margin-top:10px">
+            <strong>Sequência obrigatória:</strong> Bloqueio em DL → confirmar hemodinâmica estável + nível T6–T8 → prona cuidadosa.<br>
+            Coxins para evitar pressão abdominal (interfere no campo cirúrgico).<br>
+            Comunicação constante com equipe cirúrgica sobre tempo e nível do bloqueio.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /raq-casos -->
+
+
+  <!-- TAB 9 — CHECKLIST + FAQ -->
+  
+  <!-- ═══ TAB PERIDURAL ═══ -->
+  <div class="tab-panel" id="raq-peridural">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Anestesia Peridural — Anatomia e Técnica</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">O espaço peridural (epidural) é um espaço real que circunda o saco dural, preenchido por gordura, vasos venosos e raízes nervosas. Localizado entre o ligamento amarelo (posterior) e a dura-máter.</p>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Raquianestesia</th><th>Peridural</th></tr></thead>
+            <tbody>
+              <tr><td>Local de ação</td><td>Espaço subaracnóideo (LCR)</td><td>Espaço peridural</td></tr>
+              <tr><td>Onset</td><td>2–5 min (rápido)</td><td>15–20 min (lento)</td></tr>
+              <tr><td>Duração</td><td>Limitada ao fármaco</td><td>Ilimitada (cateter)</td></tr>
+              <tr><td>Volume</td><td>2–4 mL</td><td>10–30 mL (por segmento)</td></tr>
+              <tr><td>Dose para T4</td><td>10–12 mg bupiv.</td><td>15–20 mL lido 2%</td></tr>
+              <tr><td>Cateter</td><td>Geralmente não</td><td>Sempre (agulha Tuohy)</td></tr>
+            </tbody>
+          </table></div>
+          <p style="font-size:12px;line-height:1.7;margin-top:8px"><strong>Técnica de identificação do espaço peridural:</strong></p>
+          <ul style="font-size:12px;line-height:1.8;margin:6px 0 0 16px">
+            <li><strong>Perda de resistência (LOR)</strong> — padrão ouro: seringa com soro fisiológico (preferível ao ar — menor risco de embolia e cefaleia) avança junto com a agulha. Ao atravessar o lig. amarelo, a resistência cai abruptamente.</li>
+            <li>Agulha de Tuohy: ponta curva (Huber tip) direciona o cateter cefalicamente</li>
+            <li>Cateter avançar 3–5 cm além da ponta da agulha</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">Farmacologia Peridural</span>
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th style="white-space:nowrap">Fármaco</th><th>Concentração</th><th>Volume/segmento</th><th>Onset</th><th>Uso</th></tr></thead>
+            <tbody>
+              <tr><td>Lidocaína 2%</td><td>20 mg/mL</td><td>1–2 mL</td><td>10–15 min</td><td>Cirurgia, extensão urgente</td></tr>
+              <tr><td>Bupivacaína 0.5%</td><td>5 mg/mL</td><td>1.5–2 mL</td><td>20–25 min</td><td>Cirurgia eletiva</td></tr>
+              <tr><td>Ropivacaína 0.75%</td><td>7.5 mg/mL</td><td>1.5–2 mL</td><td>15–20 min</td><td>Cirurgia — menos cardiotóxica</td></tr>
+              <tr><td>Bupivacaína 0.125%</td><td>1.25 mg/mL</td><td>8–12 mL/h infusão</td><td>—</td><td>Analgesia de parto</td></tr>
+              <tr><td>Fentanil (peridural)</td><td>2–5 mcg/mL</td><td>Adjuvante</td><td>10 min</td><td>Melhora analgesia, ↓dose AL</td></tr>
+              <tr><td>Morfina (peridural)</td><td>2–4 mg</td><td>Volume 10 mL</td><td>Lento (30–60 min)</td><td>Analgesia pós-op 12–24h</td></tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">Dose de teste obrigatória</div>
+            Lidocaína 1.5% + adrenalina 1:200.000 (3 mL): ↑FC &gt;20 bpm em 60 seg = intravascular; bloqueio motor rápido = intratecal. Sempre aspirar antes de qualquer injeção.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--violet)">
+          <span class="card-title">Peridural Torácica — Indicações e Técnica</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">Padrão ouro de analgesia para toracotomia e grandes cirurgias abdominais. Níveis T4-T8 para cirurgia torácica; T8-T12 para abdominal superior.</p>
+          <div class="algo-box algo-g">
+            <div class="algo-title">✅ Benefícios (evidência nível A)</div>
+            ↓dor pós-op, ↓complicações pulmonares, ↓uso de opioides sistêmicos, ↓íleo paralítico, ↓TVP, retorno intestinal mais precoce. Protocolo ERAS recomenda amplamente.
+          </div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">⚠ Contraindicações absolutas</div>
+            Recusa do paciente · Coagulopatia grave (plaquetas &lt;50.000, INR &gt;1.5, TTPA &gt;1.5x) · Infecção local · HIC · Hipovolemia não corrigida (hipotensão iminente)
+          </div>
+          <p style="font-size:12px;line-height:1.7;margin-top:8px"><strong>Hematoma peridural:</strong> complicação rara mas devastadora (1:150.000). Síndrome cauda equina = urgência neurocirúrgica — descompressão em &lt;8h. Respeitar intervalos ASRA para anticoagulantes.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--orange)">
+          <span class="card-title">CSE — Raqui-Peridural Combinada</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px"><strong>Vantagem:</strong> onset rápido da raqui + flexibilidade e duração ilimitada do cateter peridural.</p>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px"><strong>Técnica needle-through-needle:</strong> agulha Tuohy avança até peridural → agulha espinhal longa (120 mm) passa pelo lúmen da Tuohy até espaço subaracnóideo → injeção da raqui → retirada da espinhal → introdução do cateter peridural pelo lúmen da Tuohy.</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Indicação</th><th>Vantagem</th></tr></thead>
+            <tbody>
+              <tr><td>Analgesia de parto</td><td>Onset rápido, controle total da duração</td></tr>
+              <tr><td>Cesárea urgente c/ peridural in situ</td><td>Extensão rápida pelo cateter</td></tr>
+              <tr><td>Cirurgias longas (≥4h)</td><td>Anestesia completa sem limite de tempo</td></tr>
+              <tr><td>Analgesia pós-op prolongada</td><td>Morfina peridural + AL em baixa dose</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /raq-peridural -->
+
+<div class="tab-panel" id="raq-checklist">
+
+    <!-- CHECKLIST -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">15</span> Checklist de Bolso — Raquianestesia
+      </div>
+      <div class="card-body">
+        <div class="sh sh-teal">Pré-Procedimento</div>
+        <ul class="ck-list" style="margin-top:8px">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Identidade e consentimento confirmados</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Jejum adequado verificado</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Anticoagulante verificado + janela de segurança OK</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Plaquetas &gt; 70.000 e INR &lt; 1,5 (quando indicado)</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Monitorização instalada: PA / FC / SpO₂</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Acesso venoso calibroso funcionante (16G ou 18G)</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Vasopressor preparado: efedrina + fenilefrina</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Material de via aérea disponível</span></li>
+        </ul>
+
+        <div class="sh sh-blue" style="margin-top:14px">Durante o Procedimento</div>
+        <ul class="ck-list" style="margin-top:8px">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">MÁSCARA CIRÚRGICA no meu rosto (obrigatório — risco de meningite!)</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Assepsia 3x / campo estéril amplo</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Dose e droga checadas DUAS VEZES antes de conectar seringa</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">LCR CLARO e LIVRE confirmado antes de injetar</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Injeção LENTA (20–30 s para 3 mL)</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Sem dor irradiada intensa / parestesia durante injeção</span></li>
+        </ul>
+
+        <div class="sh sh-teal" style="margin-top:14px">Pós-Procedimento</div>
+        <ul class="ck-list" style="margin-top:8px">
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Posicionar corretamente conforme baricidade</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">PA a cada 2–3 min por 20–30 min</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Testar nível sensitivo com álcool (comparar frio)</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Confirmar Bromage adequado para cirurgia</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Se morfina IT: avisar enfermagem → monitorar FR e SpO₂ por 12–24 h</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Registrar: hora, nível, droga, dose, volume, intercorrências</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DERMÁTOMOS RÁPIDOS -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">16</span> Dermátomos de Referência Rápida
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Dermátomo</th><th>Referência</th><th>Cirurgia</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(192,57,43,0.08)"><td><strong>T4</strong></td><td>Linha dos mamilos</td><td><span class="tag tr">Cesárea</span></td></tr>
+            <tr><td><strong>T6</strong></td><td>Processo xifoide</td><td>Abdome baixo</td></tr>
+            <tr><td><strong>T8</strong></td><td>Margem costal inferior</td><td>Hérnia inguinal</td></tr>
+            <tr style="background:rgba(14,116,144,0.08)"><td><strong>T10</strong></td><td>Umbigo</td><td><span class="tag tb">Urologia · MMII</span></td></tr>
+            <tr><td><strong>T12</strong></td><td>Virilha / prega inguinal</td><td>Pé, tornozelo</td></tr>
+            <tr><td><strong>L1</strong></td><td>Inguinal baixo</td><td>Genitália externa</td></tr>
+            <tr><td><strong>S2–S4</strong></td><td>Períneo</td><td>Hemorroidectomia, anal</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-blue" style="margin-top:10px">
+          <strong>Teste padrão:</strong> Algodão embebido em álcool isopropílico → comparar sensação de "frio" no membro inferior com o tórax (referência). Perda do frio = dermátomo anestesiado.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">17</span> Perguntas Frequentes (FAQ)
+      </div>
+      <div class="card-body">
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Por que raqui em vez de anestesia geral?</div>
+          <div class="acc-body">
+            <ul style="font-size:13px;line-height:1.9;padding-left:16px">
+              <li>Menos náusea e vômito pós-op (NVPO)</li>
+              <li>Melhor analgesia pós-op (opioides IT)</li>
+              <li>Sem intubação traqueal → menos risco respiratório</li>
+              <li>Menor tempo de recuperação e alta mais precoce</li>
+              <li>Menor custo e menor consumo de recursos</li>
+              <li>Ideal para ASA III–IV em cirurgias de MMII (menor mortalidade perioperatória)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Quando preferir anestesia geral?</div>
+          <div class="acc-body">
+            <ul style="font-size:13px;line-height:1.9;padding-left:16px">
+              <li>Cirurgia com duração prevista &gt; 3 h (raqui tem duração limitada)</li>
+              <li>Contraindicação absoluta à raqui</li>
+              <li>Necessidade de relaxamento muscular profundo prolongado</li>
+              <li>Paciente recusou bloqueio mesmo após orientação adequada</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Raquianestesia dói?</div>
+          <div class="acc-body">
+            <p style="font-size:13px">Punção: dor leve ("picada"), geralmente menor que acesso venoso. O botão anestésico com lidocaína reduz significativamente o desconforto. Durante a cirurgia: o paciente não sente dor — sente pressão e tração, o que é absolutamente normal e deve ser informado antes.</p>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Quanto tempo dura o efeito?</div>
+          <div class="acc-body">
+            <p style="font-size:13px">Bupivacaína 0,5% hiperbárica: sensitivo 2–4 h, motor 3–6 h. Com morfina IT, a analgesia se estende por 18–24 h. Informar o paciente para ajustar expectativas.</p>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Posso amamentar após morfina intratecal?</div>
+          <div class="acc-body">
+            <div class="alert a-green">SIM — a dose intratecal é muito baixa (80–100 mcg) e não passa em quantidade significativa para o leite materno. Seguro para o bebê. Não é contraindicação para aleitamento.</div>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Risco de paralisia permanente?</div>
+          <div class="acc-body">
+            <div class="alert a-teal">Risco extremamente baixo: &lt; 1:50.000 na prática contemporânea com técnica adequada e indicação correta. Técnica amplamente segura quando bem indicada e executada.</div>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">LCR saiu sanguinolento — o que fazer?</div>
+          <div class="acc-body">
+            <div class="proto-steps">
+              <div class="proto-step"><span class="sn sn-t">1</span><div>Aguardar clareamento espontâneo (30–60 s)</div></div>
+              <div class="proto-step"><span class="sn sn-b">2</span><div>Se não clarear: retirar agulha e puncionar nível diferente</div></div>
+              <div class="proto-step"><span class="sn sn-y">3</span><div>Registrar ocorrência no prontuário com detalhes</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Quanto tempo injetar 3 mL?</div>
+          <div class="acc-body">
+            <div class="alert a-teal"><strong>20–30 segundos</strong> — injeção lenta e controlada. Injeção rápida aumenta a turbulência no espaço subaracnoide, tornando a distribuição do anestésico imprevisível e podendo elevar o nível além do desejado.</div>
+          </div>
+        </div>
+        <div class="acc" style="margin-top:4px">
+          <div class="acc-hdr" onclick="toggleAcc(this)">Parestesia durante injeção — o que fazer?</div>
+          <div class="acc-body">
+            <div class="alert a-red"><strong>PARAR IMEDIATAMENTE a injeção.</strong> Parestesia indica contato da agulha com raiz nervosa. Risco de injeção intrafascicular → lesão neural direta. Redirecionar a agulha e injetar apenas após ausência completa de parestesia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /raq-checklist -->
+</div>

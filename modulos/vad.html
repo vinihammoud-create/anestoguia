@@ -1,0 +1,1667 @@
+<div class="screen" id="screen-vad">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Via Aérea Difícil</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="vad-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('vad','definicao',this)">Definições</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vad','das',this)">Algoritmo DAS</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vad','tecnicas',this)">Técnicas</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vad','cico',this)">CICO</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vad','acordado',this)">Acordado</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vad','extubacao',this)">Extubação</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vad','vni',this)">VNI</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vad','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vad','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vad','casos',this)">Casos</button>
+  </div>
+
+  <!-- TAB 1 — DEFINIÇÕES E CLASSIFICAÇÕES -->
+  <div class="tab-panel active" id="vad-definicao">
+    <div class="page-wrap">
+
+    <!-- DEFINIÇÃO GERAL -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> O Que é Via Aérea Difícil?
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>Definição ASA:</strong> situação clínica na qual um anestesiologista treinado convencionalmente experimenta dificuldade com ventilação com máscara facial, dificuldade com inserção de dispositivo supraglótico, dificuldade com laringoscopia, dificuldade com intubação traqueal, ou falha nessas tentativas.
+        </div>
+
+                <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px">
+          <div class="alert a-red" style="padding:12px 14px">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#FF6B6B">IOT DIFÍCIL</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#A8CFFF">Incidência: 1–4%</span>
+            </div>
+            <div style="font-size:12px;line-height:1.6;margin-top:6px;color:#FFB3BB">Cormack-Lehane grau 3 ou 4 na laringoscopia direta, ou necessidade de &gt;3 tentativas ou &gt;10 min para intubação com lâmina convencional.</div>
+          </div>
+          <div class="alert a-red" style="padding:12px 14px">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#FF6B6B">IOT IMPOSSÍVEL</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#A8CFFF">Incidência: 0,05–0,35%</span>
+            </div>
+            <div style="font-size:12px;line-height:1.6;margin-top:6px;color:#FFB3BB">Falha na intubação após múltiplas tentativas com operadores experientes, sem conseguir posicionar o TOT nas vias aéreas.</div>
+          </div>
+          <div class="alert a-gold" style="padding:12px 14px">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#FFD166">VBM DIFÍCIL</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#A8CFFF">Incidência: 0,01–2%</span>
+            </div>
+            <div style="font-size:12px;line-height:1.6;margin-top:6px;color:#FFD580">Ventilação por máscara facial inadequada para manter oxigenação, exigindo dois operadores ou dispositivos adjuvantes.</div>
+          </div>
+          <div class="alert a-red" style="padding:12px 14px;border-left:3px solid #C0392B">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#FF6B6B">CICO / CICV</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#A8CFFF">Incidência: 1:5.000–1:50.000</span>
+            </div>
+            <div style="font-size:12px;line-height:1.6;margin-top:6px;color:#FFB3BB"><strong>Can't Intubate, Can't Oxygenate</strong> — falha simultânea de IOT e oxigenação por qualquer método. Emergência cirúrgica absoluta.</div>
+          </div>
+        </div>
+
+        <div class="alert a-gold" style="margin-top:14px">
+          <strong>Via aérea difícil antecipada vs. não antecipada:</strong><br>
+          • <strong>Antecipada</strong> — preditores identificados na avaliação pré-anestésica → planejamento ativo (protocolo VAD acordado, planos de contingência definidos antes da indução)<br>
+          • <strong>Não antecipada</strong> — VAD descoberta somente após indução anestésica → algoritmo DAS de emergência entra em jogo imediatamente
+        </div>
+
+        <div class="tbl-wrap wide"><table class="tbl" style="margin-top:14px">
+          <thead><tr><th>Categoria</th><th>Definição Operacional</th><th>Incidência</th><th>Mortalidade Associada</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tr">IOT Difícil</span></td><td>CL III–IV ou &gt;3 tentativas</td><td>1–4%</td><td>Baixa se reconhecida</td></tr>
+            <tr><td><span class="tag tr">IOT Impossível</span></td><td>Fracasso total da IOT</td><td>0,05–0,35%</td><td>Depende de salvamento</td></tr>
+            <tr><td><span class="tag ty">VBM Difícil</span></td><td>Oxigenação inadequada com máscara</td><td>0,01–2%</td><td>Elevada se não revertida</td></tr>
+            <tr><td><span class="tag tr">CICO</span></td><td>Falha IOT + falha oxigenação</td><td>1:5.000–1:50.000</td><td>Alta sem cricotirotomia imediata</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- CORMACK-LEHANE SVG -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Classificação de Cormack-Lehane
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue" style="margin-bottom:12px">
+          Avalia a visão laringoscópica direta — o quanto da glote é visível com o laringoscópio posicionado. Aplicada <em>durante</em> a laringoscopia direta.
+        </div>
+        <div class="tbl-wrap wide"><table class="tbl">
+          <thead><tr><th>Grau</th><th>Visão Obtida</th><th>Frequência</th><th>Conduta</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tg">I</span></td><td>Glote e aritenoides completamente visíveis</td><td>~65%</td><td>IOT direta simples; sem manobras adjuvantes</td></tr>
+            <tr><td><span class="tag ty">II</span></td><td>Apenas porção posterior da glote + aritenoides</td><td>~22%</td><td>Geralmente IOT possível; considerar BURP/bougie</td></tr>
+            <tr><td><span class="tag to">III</span></td><td>Apenas epiglote visível — glote não vista</td><td>~10%</td><td>Difícil; usar bougie + BURP + videolaringoscopia</td></tr>
+            <tr><td><span class="tag tr">IV</span></td><td>Nem epiglote visível — palato mole apenas</td><td>~3%</td><td>Acionar protocolo VAD imediatamente</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- MALLAMPATI SVG -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">03</span> Classificação de Mallampati Modificada (Samsoon & Young)
+      </div>
+      <div class="card-body">
+        <div class="sh sh-blue">Técnica Correta de Avaliação</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-b">1</span><div>Paciente <strong>sentado</strong>, cabeça em posição neutra, nível dos olhos do examinador</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div>Boca <strong>maximamente aberta</strong> e língua protruída ao máximo</div></div>
+          <div class="proto-step"><span class="sn sn-r">3</span><div><strong>SEM fonação</strong> — não pedir "diga Ah"; eleva o palato e subestima a classificação</div></div>
+          <div class="proto-step"><span class="sn sn-b">4</span><div>Iluminação adequada; classificar pelas estruturas visíveis</div></div>
+        </div>
+
+        <div style="text-align:center;margin:14px 0">
+        </div>
+        <div class="alert a-orange">
+          <strong>Limitações do Mallampati:</strong> sensibilidade ~50%, especificidade ~89% para IOT difícil isoladamente. Deve ser combinado com outros preditores (LEMON, Wilson, MOANS) para avaliação completa.
+        </div>
+      </div>
+    </div>
+
+    <!-- LEMON -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Score LEMON — Preditor de IOT Difícil
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>LEMON:</strong> mnemônico para avaliação sistemática da IOT difícil. <strong>Pontuação ≥3 = alto risco</strong> — planejar abordagem VAD antes de induzir.
+        </div>
+
+        <div class="tbl-wrap wide"><table class="tbl" style="margin-top:12px">
+          <thead><tr><th>Letra</th><th>Significado</th><th>O Que Avaliar</th><th>Pontos</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tv">L</span></td><td><strong>Look</strong> externally</td><td>Aparência geral: trauma facial, barba densa, macroglossia, micrognatia, próteses dentárias volumosas</td><td>0 ou 1</td></tr>
+            <tr><td><span class="tag tv">E</span></td><td><strong>Evaluate</strong> 3-3-2</td><td>Abertura bucal ≥3 dedos; Mento-hioide ≥3 dedos; Hioide-tireoide ≥2 dedos</td><td>0–3</td></tr>
+            <tr><td><span class="tag tv">M</span></td><td><strong>Mallampati</strong></td><td>Classe III = 1 ponto; Classe IV = 2 pontos</td><td>0–2</td></tr>
+            <tr><td><span class="tag tv">O</span></td><td><strong>Obstruction</strong></td><td>Tumor, angioedema, hematoma, corpo estranho, epiglotite, abscesso peritonsilar</td><td>0 ou 2</td></tr>
+            <tr><td><span class="tag tv">N</span></td><td><strong>Neck mobility</strong></td><td>Extensão cervical &lt;35°; colar; AR; espondilite anquilosante</td><td>0 ou 1</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="g3" style="margin-top:12px">
+          <div class="alert a-green"><strong>LEMON 0–2</strong><br>Baixo risco. IOT convencional planejada com MOANS e SHORT como complemento.</div>
+          <div class="alert a-gold"><strong>LEMON 3–5</strong><br>Risco moderado. Equipamento de resgate preparado. Videolaringoscópio disponível na sala.</div>
+          <div class="alert a-red"><strong>LEMON ≥6</strong><br>Alto risco. Considerar VAD acordado com FOI ou VL. Não induzir sem plano completo definido.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOANS -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">05</span> MOANS — Preditor de VBM Difícil
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue">
+          <strong>MOANS:</strong> cinco fatores preditores de dificuldade na ventilação com bolsa-valva-máscara. Qualquer um presente = considerar estratégia alternativa de oxigenação.
+        </div>
+        <div class="acc" style="margin-top:12px">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">M</span> &nbsp;MASK SEAL — Vedação da Máscara</div>
+          <div class="acc-body">
+            <ul class="ck-list">
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Barba densa (reduz vedação facial em até 40%)</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Trauma facial ou queimaduras</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Edema facial extenso</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Ausência de dentes (afunda mento das bochechas)</span></li>
+            </ul>
+            <div class="alert a-blue" style="margin-top:8px">Solução: máscara de tamanho adequado, compressão bimanual, manter prótese dentária para VBM.</div>
+          </div>
+        </div>
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">O</span> &nbsp;OBESITY / OBSTRUCTION</div>
+          <div class="acc-body">
+            <ul class="ck-list">
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">IMC &gt;30 kg/m² — reserva de O₂ reduzida, pressão abdominal elevada</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Tumor laríngeo / epiglotite / abscesso peritonsilar</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Gravidez no 3º trimestre</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">A</span> &nbsp;AGE ≥55 anos</div>
+          <div class="acc-body">
+            <p>Perda de tonicidade muscular orofaríngea, flacidez de tecidos moles, edentulismo parcial frequente. Combinado com obesidade = risco multiplicativo.</p>
+          </div>
+        </div>
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">N</span> &nbsp;NO TEETH (edentulismo)</div>
+          <div class="acc-body">
+            <p>Ausência de dentes reduz a vedação da máscara. <strong>Estratégia:</strong> manter a prótese dentária do paciente no lugar durante a pré-oxigenação e VBM; retirar apenas antes de laringo.</p>
+          </div>
+        </div>
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">S</span> &nbsp;STIFF / SNORES</div>
+          <div class="acc-body">
+            <ul class="ck-list">
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Complacência pulmonar reduzida (SARA, fibrose, pneumonia)</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Ronco / SAOS — obstrução funcional em hipofaringe</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Broncoespasmo grave</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHORT (LMA difícil) -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">06</span> SHORT — Preditor de LMA/Dispositivo Supraglótico Difícil
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal">
+          <strong>SHORT:</strong> preditores de dificuldade na inserção ou vedação adequada de dispositivo supraglótico (LMA, iGel). Importante porque a LMA é o principal dispositivo de resgate no DAS Plano B.
+        </div>
+        <div class="tbl-wrap"><table class="tbl" style="margin-top:12px">
+          <thead><tr><th>Letra</th><th>Preditor</th><th>Mecanismo</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tt">S</span></td><td><strong>Surgery/radiotherapy</strong> do pescoço</td><td>Fibrose, anatomia distorcida, tecidos enrijecidos</td></tr>
+            <tr><td><span class="tag tt">H</span></td><td><strong>Hematoma / mass</strong> no pescoço</td><td>Compressão e deslocamento da hipofaringe</td></tr>
+            <tr><td><span class="tag tt">O</span></td><td><strong>Obesity</strong> (IMC &gt;30)</td><td>Tecido adiposo perifaríngeo reduz espaço e vedação</td></tr>
+            <tr><td><span class="tag tt">R</span></td><td><strong>Restricted mouth opening</strong> (&lt;2,5 cm)</td><td>Impossibilita inserção da LMA de tamanho adequado</td></tr>
+            <tr><td><span class="tag tt">T</span></td><td><strong>Tracheal deviation / disruption</strong></td><td>Alinhamento incorreto da máscara sobre glote</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-gold" style="margin-top:10px">
+          <strong>Importante:</strong> mesmo com SHORT presente, a LMA de 2ª geração (ProSeal, iGel) é a melhor alternativa antes de progredir ao Plano D (cricotirotomia). Tente com ajuste de posição e tamanho antes de abandonar.
+        </div>
+      </div>
+    </div>
+
+    <!-- FATORES DE RISCO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">07</span> Fatores de Risco Clínicos para VAD
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div>
+            <div class="sh sh-red">Anatômicos</div>
+            <ul class="ck-list">
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Micrognatia / retrognatia severa</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Macroglossia (Síndrome de Down, hipotireoidismo)</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Pescoço curto e muscular</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Abertura bocal &lt;3 cm</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Distância tireomento &lt;6 cm (Patil)</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="sh sh-red">Patológicos / Adquiridos</div>
+            <ul class="ck-list">
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Radioterapia cervical prévia — fibrose tecidual</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Artrite reumatoide — articulação atlantoaxial e CTJ</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Espondilite anquilosante — fixação em flexão</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Obesidade mórbida (IMC &gt;40) — SAOS associado</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Gestação (3º trimestre) — edema, seios aumentados</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Acromegalia — prognatismo, macroglossia</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Burns/trauma de face e pescoço</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sh sh-blue" style="margin-top:12px">Classificação Anatômica da VAD</div>
+        <div class="g3" style="margin-top:8px">
+          <div class="dr dr-b">
+            <div class="dn">Supra-glótica</div>
+            <div class="dc">Problemas em língua, palato, tonsilas, epiglote, hipofaringe. Laringoscopia possível mas glote não visualizada.</div>
+            <div class="dd">Mallampati III–IV, micrognatia, macroglossia</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Glótica</div>
+            <div class="dc">Patologia das pregas vocais, aritenoides ou laringe propriamente dita.</div>
+            <div class="dd">Tumor de laringe, paralisia de pregas, estenose subglótica</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Infra-glótica</div>
+            <div class="dc">Patologia abaixo das pregas vocais — traqueia ou brônquios. A laringoscopia pode ser normal mas a IOT ainda assim falha.</div>
+            <div class="dd">Compressão traqueal, estenose traqueal, tumor mediastinal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vad-definicao -->
+
+  <!-- TAB 2 — ALGORITMO DAS 2015 -->
+  <div class="tab-panel" id="vad-das">
+    <div class="page-wrap">
+
+    <!-- INTRO DAS -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">01</span> O Algoritmo DAS 2015 — Visão Geral
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue">
+          O algoritmo da <strong>Difficult Airway Society (DAS) 2015</strong> é o guideline mais referenciado mundialmente para manejo da VAD não antecipada. Estruturado em <strong>4 planos sequenciais (A→B→C→D)</strong>, cada um com filosofia e objetivos distintos.
+        </div>
+
+        <!-- SVG Fluxograma DAS 2015 -->
+        <div style="text-align:center;margin:16px 0">
+          <svg viewBox="0 0 520 700" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;border-radius:10px;background:#F0F4FA;border:1px solid #C0D0E8">
+            <defs>
+              <marker id="arrowDAS" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#4A6080"/>
+              </marker>
+            </defs>
+            <rect width="520" height="700" fill="#F0F4FA" rx="10"/>
+            <text x="260" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700" fill="#1B5E96">ALGORITMO DAS 2015</text>
+            <text x="260" y="36" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#555">Unanticipated Difficult Airway — Sequência de Planos</text>
+
+            <!-- Pré-oxigenação -->
+            <rect x="160" y="48" width="200" height="30" rx="6" fill="#E8F4E8" stroke="#1A7A4A" stroke-width="1.5"/>
+            <text x="260" y="63" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#1A7A4A">PRÉ-OXIGENAÇÃO ADEQUADA</text>
+            <text x="260" y="73" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1A7A4A">SpO₂ ≥ 95% — FiO₂ 100% por 3–5 min</text>
+            <line x1="260" y1="78" x2="260" y2="98" stroke="#4A6080" stroke-width="1.5" marker-end="url(#arrowDAS)"/>
+
+            <!-- PLANO A -->
+            <rect x="60" y="100" width="400" height="120" rx="8" fill="#E8F0FC" stroke="#1B5E96" stroke-width="2"/>
+            <text x="90" y="118" font-family="JetBrains Mono,monospace" font-size="13" font-weight="700" fill="#1B5E96">PLANO A</text>
+            <text x="260" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#1B5E96">Tentativa de IOT</text>
+            <text x="80" y="136" font-family="Inter,sans-serif" font-size="9" fill="#333">• Posição ótima (sniffing / ramped em obesos)</text>
+            <text x="80" y="149" font-family="Inter,sans-serif" font-size="9" fill="#333">• VL preferencial desde 1ª tentativa (quando disponível)</text>
+            <text x="80" y="162" font-family="Inter,sans-serif" font-size="9" fill="#333">• Máx 3 tentativas de IOT + 1 tentativa alternativa (VL diferente)</text>
+            <text x="80" y="175" font-family="Inter,sans-serif" font-size="9" fill="#C0392B">• Entre tentativas: oxigenar via máscara facial → SpO₂ ≥ 95%</text>
+            <text x="80" y="188" font-family="Inter,sans-serif" font-size="9" fill="#C0392B">• Otimizações: BURP, ELM, mudança de lâmina/operador</text>
+            <!-- Seta falha -->
+            <line x1="260" y1="220" x2="260" y2="242" stroke="#4A6080" stroke-width="1.5" marker-end="url(#arrowDAS)"/>
+            <text x="270" y="234" font-family="Inter,sans-serif" font-size="8" fill="#C0392B">FALHA</text>
+
+            <!-- PLANO B -->
+            <rect x="60" y="244" width="400" height="100" rx="8" fill="#F0F8FF" stroke="#38B6E0" stroke-width="2"/>
+            <text x="90" y="262" font-family="JetBrains Mono,monospace" font-size="13" font-weight="700" fill="#38B6E0">PLANO B</text>
+            <text x="260" y="262" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#0E7490">Dispositivo Supraglótico (LMA 2ª Geração)</text>
+            <text x="80" y="280" font-family="Inter,sans-serif" font-size="9" fill="#333">• iGel, ProSeal, Supreme ou LMA AuraGain (têm canal gástrico)</text>
+            <text x="80" y="293" font-family="Inter,sans-serif" font-size="9" fill="#333">• Reinserir com LMA de tamanho diferente se falha inicial</text>
+            <text x="80" y="306" font-family="Inter,sans-serif" font-size="9" fill="#333">• Intubação pela LMA via fibroscópio como ponte</text>
+            <text x="80" y="319" font-family="Inter,sans-serif" font-size="9" fill="#C0392B">• Máx 3 tentativas de LMA — oxigenar entre cada uma</text>
+            <line x1="260" y1="344" x2="260" y2="366" stroke="#4A6080" stroke-width="1.5" marker-end="url(#arrowDAS)"/>
+            <text x="270" y="358" font-family="Inter,sans-serif" font-size="8" fill="#C0392B">FALHA</text>
+
+            <!-- PLANO C -->
+            <rect x="60" y="368" width="400" height="90" rx="8" fill="#FFF8E8" stroke="#E8A020" stroke-width="2"/>
+            <text x="90" y="386" font-family="JetBrains Mono,monospace" font-size="13" font-weight="700" fill="#E8A020">PLANO C</text>
+            <text x="260" y="386" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#C87000">Oxigenação c/ Máscara Facial — Reversão Urgente</text>
+            <text x="80" y="404" font-family="Inter,sans-serif" font-size="9" fill="#333">• Técnica bimanual + 2º operador segurando máscara</text>
+            <text x="80" y="417" font-family="Inter,sans-serif" font-size="9" fill="#333">• Cânula de Guedel + cânula nasofaríngea</text>
+            <text x="80" y="430" font-family="Inter,sans-serif" font-size="9" fill="#333">• Extensão máxima + abertura bocal otimizada</text>
+            <text x="80" y="443" font-family="Inter,sans-serif" font-size="9" fill="#C0392B">• Acordar o paciente sempre que seguro e possível</text>
+            <line x1="260" y1="458" x2="260" y2="480" stroke="#C0392B" stroke-width="2" marker-end="url(#arrowDAS)"/>
+            <text x="270" y="472" font-family="Inter,sans-serif" font-size="8" fill="#C0392B">CICO!</text>
+
+            <!-- PLANO D -->
+            <rect x="60" y="482" width="400" height="90" rx="8" fill="#FFEAEA" stroke="#C0392B" stroke-width="2.5"/>
+            <text x="90" y="502" font-family="JetBrains Mono,monospace" font-size="13" font-weight="700" fill="#C0392B">PLANO D</text>
+            <text x="260" y="502" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#C0392B">CICO — Cricotirotomia de Emergência</text>
+            <text x="80" y="520" font-family="Inter,sans-serif" font-size="9" fill="#333">• DECLARAR CICO em voz alta — pedir ajuda imediatamente</text>
+            <text x="80" y="533" font-family="Inter,sans-serif" font-size="9" fill="#C0392B">• Técnica cirúrgica (Scalpel-Bougie-Tube) — DAS preferida</text>
+            <text x="80" y="546" font-family="Inter,sans-serif" font-size="9" fill="#333">• Não percutânea / Melker = aceitável mas mais lenta</text>
+            <text x="80" y="559" font-family="Inter,sans-serif" font-size="9" fill="#333">• Jet ventilation transtraqueal = ponte temporária (&lt;30 min)</text>
+
+            <!-- Decisão acordar -->
+            <rect x="140" y="588" width="240" height="38" rx="6" fill="#E8F4E8" stroke="#1A7A4A" stroke-width="1.5"/>
+            <text x="260" y="604" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#1A7A4A">PLANO C alternativo: ACORDAR</text>
+            <text x="260" y="617" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1A7A4A">Reavaliação → VAD acordado → adiamento da cirurgia</text>
+            <!-- Seta lateral do Plano C para acordar -->
+            <line x1="60" y1="415" x2="40" y2="415" stroke="#1A7A4A" stroke-width="1.5"/>
+            <line x1="40" y1="415" x2="40" y2="607" stroke="#1A7A4A" stroke-width="1.5"/>
+            <line x1="40" y1="607" x2="140" y2="607" stroke="#1A7A4A" stroke-width="1.5" marker-end="url(#arrowDAS)"/>
+            <text x="30" y="510" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1A7A4A" transform="rotate(-90,30,510)">Acordar quando possível</text>
+
+            <!-- Linha de tempo -->
+            <text x="260" y="690" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#888">DAS 2015 — Fritscherova S. et al. | Anaesthesia 2015;70:1286–1312</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLANO A detalhe -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Plano A — Intubação Traqueal Otimizada
+      </div>
+      <div class="card-body">
+        <div class="sh sh-blue">Pré-Oxigenação e Posicionamento</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-b">1</span><div><strong>Pré-oxigenação:</strong> FiO₂ 100% por 3–5 min com máscara facial bem vedada. Meta: SpO₂ ≥ 95–98% antes de qualquer tentativa de IOT</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div><strong>Posição sniffing:</strong> flexão cervical + extensão atlantoccipital. Alinhamento de 3 eixos (oral, faríngeo, laríngeo)</div></div>
+          <div class="proto-step"><span class="sn sn-y">3</span><div><strong>Posição ramped em obesos:</strong> coxins sob escápulas e ombros até orelha estar alinhada horizontalmente com o esterno</div></div>
+          <div class="proto-step"><span class="sn sn-b">4</span><div><strong>VL desde a 1ª tentativa</strong> quando disponível — não reservar como "recurso de resgate"</div></div>
+        </div>
+
+        <div class="sh sh-blue" style="margin-top:12px">Regra das 3 Tentativas — DAS</div>
+        <div class="alert a-red">
+          <strong>Nunca mais de 3 inserções de lâmina</strong> no Plano A. Cada laringoscopia causa trauma incremental, edema e sangramento — piora progressiva das condições. Entre cada tentativa: oxigenação com máscara facial para SpO₂ ≥ 95%.
+        </div>
+        <div class="g3" style="margin-top:10px">
+          <div class="alert a-blue"><strong>Tentativa 1</strong><br>Técnica padrão + otimização de posição</div>
+          <div class="alert a-gold"><strong>Tentativa 2</strong><br>+ BURP/ELM + bougie + mudar lâmina</div>
+          <div class="alert a-orange"><strong>Tentativa 3</strong><br>+ Operador mais experiente + VL (se não usado)</div>
+        </div>
+
+        <div class="sh sh-blue" style="margin-top:12px">Otimizações do Plano A</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Manobra</th><th>Técnica</th><th>Indicação</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tb">BURP</span></td><td>Backward-Up-Right Pressure sobre cartilagem tireoide pelo assistente</td><td>CL grau III — melhora visão em 50–60% dos casos</td></tr>
+            <tr><td><span class="tag tb">ELM</span></td><td>External laryngeal manipulation — pelo próprio laringoscopista</td><td>CL grau II/III — mais preciso que BURP</td></tr>
+            <tr><td><span class="tag tb">Bougie</span></td><td>Introduzir bougie angulado sob epiglote → "cliques" táteis dos anéis → rail para TOT</td><td>CL grau III — padrão de cuidado</td></tr>
+            <tr><td><span class="tag tb">Troca de lâmina</span></td><td>Curva → reta (Miller) se epiglote grande, longa ou flácida</td><td>CL grau III com epiglote proeminente</td></tr>
+            <tr><td><span class="tag tb">Videolaringoscópio</span></td><td>C-MAC / GlideScope / McGrath — visão indireta hiperangulatada</td><td>CL III–IV, pescoço curto, trauma</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- PLANO B/C/D -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Planos B, C e D — Escalada de Resgate
+      </div>
+      <div class="card-body">
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tt">PLANO B</span> — Dispositivo Supraglótico de 2ª Geração</div>
+          <div class="acc-body">
+            <div class="alert a-teal">
+              O Plano B tem objetivo duplo: <strong>(1) oxigenar o paciente</strong> e <strong>(2) usar a LMA como via para IOT via fibroscópio</strong>. A LMA de 2ª geração (com canal gástrico) é mandatória — reduz risco de aspiração.
+            </div>
+            <div class="proto-steps" style="margin-top:10px">
+              <div class="proto-step"><span class="sn sn-t">1</span><div>Escolher LMA de 2ª geração: <strong>iGel, ProSeal, Supreme, AuraGain</strong></div></div>
+              <div class="proto-step"><span class="sn sn-t">2</span><div>Tamanho pela massa corporal: tamanho 3 (&lt;50 kg), 4 (50–70 kg), 5 (&gt;70 kg)</div></div>
+              <div class="proto-step"><span class="sn sn-t">3</span><div>Inserção com cabeça em extensão, deslizando pela parede posterior da faringe</div></div>
+              <div class="proto-step"><span class="sn sn-t">4</span><div>Confirmar posição: ventilação eficaz, boa curva capnográfica, sem vazamento aéreo &gt;20 cmH₂O</div></div>
+              <div class="proto-step"><span class="sn sn-b">5</span><div>Oxigenar paciente — SpO₂ ≥ 95% antes de tentar IOT via LMA</div></div>
+              <div class="proto-step"><span class="sn sn-b">6</span><div>IOT via LMA com fibroscópio + cateter Aintree ou diretamente por canal de ventilação (AuraGain)</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag ty">PLANO C</span> — Oxigenação por Máscara + Despertar</div>
+          <div class="acc-body">
+            <div class="alert a-gold">
+              Plano C representa <strong>reconhecimento da falha dos Planos A e B</strong>. Metas: manter oxigenação para preservar vida e, quando possível, <strong>acordar o paciente em segurança</strong>.
+            </div>
+            <div class="proto-steps" style="margin-top:10px">
+              <div class="proto-step"><span class="sn sn-y">1</span><div>Técnica bimanual: polegar + indicador em "E" nos ramos mandibulares + 2º e 3º dedos em tração mandibular; pedir segundo operador para comprimir o saco</div></div>
+              <div class="proto-step"><span class="sn sn-y">2</span><div>Inserir cânula orofaríngea de Guedel (tamanho: ponta do lábio → ângulo mandibular) e/ou cânula nasofaríngea (tamanho 7 Fr com lubrificante)</div></div>
+              <div class="proto-step"><span class="sn sn-y">3</span><div>Reduzir profundidade anestésica — se oxigenação possível, <strong>acordar o paciente</strong></div></div>
+              <div class="proto-step"><span class="sn sn-r">4</span><div>Se não consegue oxigenar: <strong>DECLARAR CICO</strong> → Plano D imediatamente</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tr">PLANO D</span> — CICO: Cricotirotomia Cirúrgica</div>
+          <div class="acc-body">
+            <div class="alert a-red">
+              <strong>DECLARAR CICO em voz alta:</strong> "Não consigo intubar, não consigo oxigenar — precisamos de cricotirotomia agora!" Esta declaração mobiliza toda a equipe e elimina hesitação.
+            </div>
+            <div class="proto-steps" style="margin-top:10px">
+              <div class="proto-step"><span class="sn sn-r">1</span><div><strong>Declarar CICO</strong> — em voz alta, para toda a equipe</div></div>
+              <div class="proto-step"><span class="sn sn-r">2</span><div>Pedir <strong>kit de cricotirotomia</strong> e <strong>cirurgião de emergência</strong></div></div>
+              <div class="proto-step"><span class="sn sn-r">3</span><div>Técnica cirúrgica (Scalpel-Bougie-Tube) — ver aba CICO</div></div>
+              <div class="proto-step"><span class="sn sn-r">4</span><div>Confirmação com capnografia + ausculta bilateral</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert a-violet" style="margin-top:14px">
+          <strong>Filosofia central do DAS 2015:</strong> cada plano tem um número máximo de tentativas. Não escalar indefinidamente no mesmo plano — o tempo é o recurso mais crítico. A SpO₂ é o árbitro de progressão.
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Atualização ASA 2022 vs DAS 2015</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">O guideline ASA 2022 (Practice Guidelines for Management of the Difficult Airway) trouxe atualizações importantes em relação ao DAS 2015:</p>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Aspecto</th><th>DAS 2015</th><th>ASA 2022</th></tr></thead>
+            <tbody>
+              <tr><td>Videolaringoscopia</td><td>Alternativa</td><td><strong>Ferramenta de 1ª linha</strong> em VAD prevista</td></tr>
+              <tr><td>Oxigenação apnéica</td><td>Mencionada</td><td><strong>Recomendada formalmente</strong> (HFNC/THRIVE)</td></tr>
+              <tr><td>Dispositivos supraglóticos</td><td>LMA de 2ª geração</td><td>Qualquer DSG de 2ª geração adequado</td></tr>
+              <tr><td>Via aérea cirúrgica</td><td>Técnica bisturi (padrão)</td><td>Manutenção da técnica bisturi; punção como alternativa em <strong>mãos treinadas</strong></td></tr>
+              <tr><td>Oxigenação durante VA acordada</td><td>Não específico</td><td>HFNC explicitamente recomendado</td></tr>
+              <tr><td>Extubação em VAD</td><td>Algoritmo próprio</td><td>Reforçado: planejar extubação com tanto cuidado quanto a intubação</td></tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">✅ Convergência ASA 2022 + DAS 2015</div>
+            Ambos concordam nos princípios fundamentais: máximo 3 tentativas com mesmo dispositivo; CICV = via aérea cirúrgica imediata; oxigenação prioritária; comunicação de VAD documentada.
+          </div>
+          <div class="algo-box algo-r" style="margin-top:6px">
+            <div class="algo-title">⚠ Pérola TEA/TSA</div>
+            Videolaringoscópio como 1ª linha em VAD prevista (ASA 2022) é questão frequente. C-MAC e Glidescope são os mais estudados. Não eliminam a necessidade de treinamento em via aérea cirúrgica.
+          </div>
+        </div>
+      </div>
+
+</div><!-- /vad-das -->
+
+  <!-- TAB 3 — TÉCNICAS DE RESGATE -->
+  <div class="tab-panel" id="vad-tecnicas">
+    <div class="page-wrap">
+
+    <!-- VIDEOLARINGOSCOPIA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">01</span> Videolaringoscopia (VL)
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue">
+          A videolaringoscopia tornou-se o <strong>padrão de cuidado</strong> para IOT difícil antecipada em muitos centros. O DAS 2015 recomenda seu uso desde a <strong>primeira tentativa</strong> quando VAD é prevista — não guardar como "último recurso".
+        </div>
+
+        <div class="sh sh-blue" style="margin-top:12px">Tipos de Videolaringoscópio</div>
+        <div class="tbl-wrap wide"><table class="tbl">
+          <thead><tr><th>Tipo</th><th>Exemplos</th><th>Ângulo da Lâmina</th><th>Uso Ideal</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tb">Hiperangulatado</span></td><td>C-MAC D-Blade, GlideScope, McGrath MAC</td><td>60–70°</td><td>CL III–IV, pescoço fixo, trauma — visão excelente mas necessita estilete angulado</td></tr>
+            <tr><td><span class="tag tg">Ângulo Padrão</span></td><td>C-MAC lâmina padrão 3/4, McGrath Series 5</td><td>40°</td><td>VAD moderada, uso combinado direta/indireta, treinamento</td></tr>
+            <tr><td><span class="tag ty">Canal de Intubação</span></td><td>AirTraQ, King Vision, Pentax AWS</td><td>Variável</td><td>Operador menos experiente em VL; guia o TOT</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-red" style="margin-top:12px">Paradoxo Óptico da VL Hiperangulatada</div>
+        <div class="alert a-orange">
+          Com VL hiperangulatado (D-Blade / GlideScope): a visão da glote é <strong>excelente</strong>, mas a introdução do TOT é <strong>mais difícil</strong> porque o tubo segue o ângulo da lâmina. Solução: usar <strong>estilete pré-angulado</strong> (60–90°) e avançar lateralmente pela comissura, não pela linha média.
+        </div>
+
+        <div class="sh sh-blue" style="margin-top:12px">Técnica VL — Passo a Passo</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-b">1</span><div>Inserir a lâmina <strong>na linha média</strong>, avançando pela vallécula ou levantando a epiglote (como na DL)</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div>Avançar <strong>devagar</strong> com visão na tela — não forçar às cegas</div></div>
+          <div class="proto-step"><span class="sn sn-b">3</span><div>Centralizar a glote na tela ANTES de introduzir o TOT com estilete</div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div>TOT com estilete: introduzir pela comissura direita, angulando para a glote visível na tela</div></div>
+          <div class="proto-step"><span class="sn sn-b">5</span><div>Ao cruzar as pregas vocais: retirar estilete e avançar TOT; confirmar com capnografia</div></div>
+          <div class="proto-step"><span class="sn sn-t">6</span><div><strong>Vantagem pedagógica:</strong> visão compartilhada na tela permite supervisão em tempo real e ensino</div></div>
+        </div>
+
+        <div class="alert a-gold" style="margin-top:10px">
+          <strong>Quando a VL falha:</strong> nebulização de secreção na câmera, sangramento ativo, anatomia extremamente distorcida. Alternativas: limpar óptica com gaze seca, mudar para lâmina com canal, considerar FOI.
+        </div>
+      </div>
+    </div>
+
+    <!-- FOI -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Intubação com Fibroscópio Flexível (FOI)
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal">
+          O fibroscópio flexível é o <strong>padrão ouro</strong> para VAD acordada e para cervical instável. Permite navegação direta pela via aérea com visualização em tempo real — sem necessidade de alinhamento de eixos.
+        </div>
+
+                <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+          <div class="alert a-red" style="padding:12px 14px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#FF6B6B;margin-bottom:6px">PACIENTE DE ALTO RISCO PARA EXTUBAÇÃO</div>
+            <div style="font-size:12px;line-height:1.7;color:#FFB3BB">
+              • VAD documentada na IOT<br>
+              • Cirurgia de cabeça/pescoço<br>
+              • Edema cervical ou angioedema<br>
+              • Radioterapia prévia de cabeça/pescoço<br>
+              • Hematoma cervical ou trauma facial
+            </div>
+            <div class="alert a-orange" style="margin-top:8px;padding:8px 10px;font-size:11px"><strong>Qualquer um desses = protocolo de extubação de alto risco (AEC obrigatório)</strong></div>
+          </div>
+          <div class="alert a-gold" style="padding:12px 14px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#FFD166;margin-bottom:6px">PROBLEMAS DA EXTUBAÇÃO NÃO PLANEJADA</div>
+            <div style="font-size:12px;line-height:1.7;color:#FFD580">
+              • Laringoespasmo (mais comum)<br>
+              • Broncoespasmo<br>
+              • Edema glótico pós-intubação prolongada<br>
+              • Obstrução por bloqueio neuromuscular residual<br>
+              • Aspiração de secreções / hipoventilação
+            </div>
+            <div class="alert a-red" style="margin-top:8px;padding:8px 10px;font-size:11px"><strong>TOF ratio &lt;0,9 antes de extubar = risco aumentado de obstrução</strong></div>
+          </div>
+        </div>
+
+        <div class="sh sh-blue" style="margin-top:12px">Anatomia pelo Fibroscópio — Sequência Nasotraqueal</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-b">1</span><div><strong>Narina</strong> → anestesia tópica + descongestionante (xilometazolina) + vasoconstritor</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div><strong>Nasofaringe</strong> → manter fibroscópio na linha posterior, flexão para visão para baixo</div></div>
+          <div class="proto-step"><span class="sn sn-b">3</span><div><strong>Velofaringe → Orofaringe</strong> → identificar base da língua, tonsilas, parede posterior da faringe</div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div><strong>Epiglote</strong> → estrutura em formato de pétala, passo de referência obrigatório</div></div>
+          <div class="proto-step"><span class="sn sn-t">5</span><div><strong>Pregas vocais</strong> → visão das pregas em forma de "V invertido"; aritenoides posteriores</div></div>
+          <div class="proto-step"><span class="sn sn-t">6</span><div><strong>Traqueia</strong> → anéis cartilaginosos visíveis, carina ao fundo — confirma posição intratraqueal</div></div>
+          <div class="proto-step"><span class="sn sn-g">7</span><div><strong>Rail-road:</strong> manter fibroscópio no lugar, avançar o TOT sobre ele até 2–3 cm abaixo das pregas</div></div>
+        </div>
+
+        <div class="alert a-gold" style="margin-top:10px">
+          <strong>Técnica de passagem pelo nariz:</strong> TOT 6,5 mm (nasotraqueal) — lubrificar bem, avançar com rotação suave. Se resistência em nasofaringe = forame coanal estreito → trocar para o outro narina ou reduzir calibre para 6.0.
+        </div>
+      </div>
+    </div>
+
+    <!-- LMA -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Dispositivos Supraglóticos — LMA e Alternativas
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal">
+          Os <strong>dispositivos supraglóticos de 2ª geração</strong> (com canal gástrico) são o Plano B do DAS. Formam uma vedação sobre a glote sem necessidade de laringoscopia. Fundamentais no manejo de via aérea difícil não antecipada.
+        </div>
+
+        <div class="tbl-wrap wide"><table class="tbl" style="margin-top:12px">
+          <thead><tr><th style="white-space:nowrap">Dispositivo</th><th>Geração</th><th>Canal Gástrico</th><th>Diâmetro IOT Via LMA</th><th>Destaque</th></tr></thead>
+          <tbody>
+            <tr><td><strong>LMA Clássica</strong></td><td>1ª</td><td>Não</td><td>Não</td><td>Histórica; sem canal gástrico — NÃO preferida em VAD</td></tr>
+            <tr><td><strong>ProSeal</strong></td><td>2ª</td><td>Sim</td><td>TOT 6,5 mm via FOI</td><td>Canal gástrico duplo; alta vedação (até 30 cmH₂O)</td></tr>
+            <tr><td><strong>iGel</strong></td><td>2ª</td><td>Sim</td><td>TOT 6,5 mm via FOI</td><td>Sem cuff inflável; fácil inserção; vedação 30 cmH₂O</td></tr>
+            <tr><td><strong>Supreme</strong></td><td>2ª</td><td>Sim</td><td>TOT 6,5 mm</td><td>Curvatura pré-formada; canal gástrico rígido</td></tr>
+            <tr><td><strong>AuraGain</strong></td><td>2ª</td><td>Sim</td><td><strong>TOT até 8,0 mm diretamente</strong></td><td>Canal de intubação dedicado — ideal para IOT via LMA sem FOI</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-teal" style="margin-top:12px">Técnica de Inserção da LMA iGel</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-t">1</span><div>Escolher tamanho: 3 (&lt;50 kg), 4 (50–70 kg), 5 (&gt;70 kg)</div></div>
+          <div class="proto-step"><span class="sn sn-t">2</span><div>Lubrificar a superfície posterior com gel não solúvel</div></div>
+          <div class="proto-step"><span class="sn sn-t">3</span><div>Cabeça em extensão; abrir boca; inserir pela linha média, deslizando pela parede posterior da faringe</div></div>
+          <div class="proto-step"><span class="sn sn-t">4</span><div>Avançar até sentir resistência — máscara posicionada sobre laringe</div></div>
+          <div class="proto-step"><span class="sn sn-b">5</span><div>Confirmar: capnografia, expansão torácica simétrica, ausculta, passagem de sonda gástrica pelo canal</div></div>
+          <div class="proto-step"><span class="sn sn-b">6</span><div>Fixar com esparadrapo; morder-bloco se necessário</div></div>
+        </div>
+
+        <div class="sh sh-blue" style="margin-top:12px">Intubação via LMA com Aintree Catheter</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-b">1</span><div>LMA posicionada e ventilando (SpO₂ ≥ 95%)</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div>Fibroscópio com cateter Aintree 56 cm precarregado avança pelo canal da LMA</div></div>
+          <div class="proto-step"><span class="sn sn-b">3</span><div>Visualizar pregas vocais → avançar cateter Aintree para traqueia</div></div>
+          <div class="proto-step"><span class="sn sn-t">4</span><div>Retirar fibroscópio mantendo cateter in situ → retirar LMA</div></div>
+          <div class="proto-step"><span class="sn sn-t">5</span><div>Avançar TOT 8,0 mm sobre o cateter Aintree → confirmar com capno</div></div>
+        </div>
+
+        <div class="sh sh-red" style="margin-top:12px">THRIVE — Apneia Segura com Alto Fluxo</div>
+        <div class="alert a-blue">
+          <strong>THRIVE (Transnasal Humidified Rapid-Insufflation Ventilatory Exchange):</strong> cânulas nasais de alto fluxo (30–70 L/min) durante tentativas de intubação. Prolonga a janela de apneia segura de 3 min para &gt;25 min em adultos saudáveis. Indicado em qualquer VAD como oxigenação de manutenção entre tentativas.
+        </div>
+      </div>
+    </div>
+
+    <!-- TABELA COMPARATIVA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">04</span> Comparativo: Dispositivos de Resgate
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap xwide"><table class="tbl">
+          <thead><tr><th style="white-space:nowrap">Dispositivo</th><th>Velocidade de Inserção</th><th>Oxigenação</th><th>Permite IOT</th><th>Risco Aspiração</th><th>Indicação Principal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>LMA 2ª Gen.</strong></td><td><span class="tag tg">Rápida</span></td><td><span class="tag tg">Boa</span></td><td>Via FOI/Aintree</td><td>Baixo</td><td>Plano B DAS — resgate imediato</td></tr>
+            <tr><td><strong>VL (C-MAC/GS)</strong></td><td><span class="tag tg">Rápida</span></td><td>Depende IOT</td><td>Sim (direta)</td><td>Depende IOT</td><td>Plano A — melhora visualização</td></tr>
+            <tr><td><strong>FOI</strong></td><td><span class="tag ty">Moderada</span></td><td>Depende IOT</td><td>Sim (ouro)</td><td>Baixo</td><td>VAD acordado; cervical instável</td></tr>
+            <tr><td><strong>Combitubo</strong></td><td><span class="tag tg">Rápida</span></td><td><span class="tag tg">Boa</span></td><td>Limitada</td><td>Baixo</td><td>Resgate pré-hospitalar; 1 lúmen traqueia</td></tr>
+            <tr><td><strong>Cricotirotomia</strong></td><td><span class="tag tr">Lenta*</span></td><td><span class="tag tg">Definitiva</span></td><td>Sim (CTT)</td><td>Baixo</td><td>CICO — salva-vidas definitivo</td></tr>
+          </tbody>
+        </table></div>
+        <p style="font-size:11px;color:#888;margin-top:6px">*Lenta apenas para operador não treinado. Com treinamento adequado: 30–45 s (técnica cirúrgica).</p>
+
+        <div class="alert a-violet" style="margin-top:12px">
+          <strong>Intubação retrógrada:</strong> técnica histórica (wire-guided via membrana CTR → fio para boca → guia para TOT). Ainda usada em contextos sem fluoroscopia nem FOI. Reservada para situações específicas com operador experiente. Tempo de execução: ~5–10 min.
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vad-tecnicas -->
+
+  <!-- TAB 4 — CICO E CRICOTIROTOMIA -->
+  <div class="tab-panel" id="vad-cico">
+    <div class="page-wrap">
+
+    <!-- CICO DEFINIÇÃO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> CICO — Can't Intubate, Can't Oxygenate
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>CICO é a emergência máxima da anestesiologia.</strong> Sem oxigenação por nenhum meio (IOT, LMA, máscara facial), o paciente evolui para hipóxia cerebral irreversível em 3–5 minutos. A <strong>cricotirotomia cirúrgica imediata é a única saída.</strong>
+        </div>
+
+        <div class="sh sh-red" style="margin-top:14px">Reconhecimento do CICO</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-r">!</span><div><strong>SpO₂ em queda progressiva</strong> apesar de todas as tentativas de oxigenação</div></div>
+          <div class="proto-step"><span class="sn sn-r">!</span><div><strong>ETCO₂ = 0</strong> e sem expansão torácica visível</div></div>
+          <div class="proto-step"><span class="sn sn-r">!</span><div><strong>Falha confirmada</strong> de IOT (≥3 tentativas) E falha de LMA E falha de máscara facial</div></div>
+          <div class="proto-step"><span class="sn sn-r">!</span><div><strong>Cianose progressiva</strong>, bradicardia (sinal tardio de hipóxia profunda)</div></div>
+        </div>
+
+        <div class="alert a-red" style="margin-top:12px">
+          <strong>A declaração CICO deve ser verbal e explícita:</strong><br>
+          <em>"Não consigo intubar. Não consigo oxigenar. Estamos em CICO. Precisamos de cricotirotomia AGORA. Alguém chama o cirurgião enquanto eu realizo a técnica."</em><br><br>
+          Essa declaração: (1) mobiliza toda a equipe, (2) elimina hesitação e (3) inicia protocolo de emergência institucional.
+        </div>
+      </div>
+    </div>
+
+    <!-- ANATOMIA CTR SVG -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Anatomia da Membrana Cricotireóidea
+      </div>
+      <div class="card-body">
+        <img src="img-anatomia-cricoidea.jpg" style="width:100%;max-width:560px;display:block;margin:12px auto;border-radius:10px;border:1px solid rgba(255,255,255,.1)" alt="Anatomia da Membrana Cricotireóidea">
+
+        <div class="g2" style="margin-top:10px">
+          <div class="dr dr-r">
+            <div class="dn">Dimensões da Membrana CTR</div>
+            <div class="dc">Largura: 2–3 cm | Altura: 0,9–3 cm</div>
+            <div class="dd">Varia com sexo, IMC e patologia. Em mulheres: menor. Em obesos: difícil palpação.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Identificação por Ultrassom</div>
+            <div class="dc">Scanning horizontal anterior — hiperlinear da membrana entre as cartilagens. Identificar pré-operatoriamente em obesos e pescoço difícil.</div>
+            <div class="dd">Técnica: probe linear de alta frequência em sentido transverso sobre a laringe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TÉCNICAS CRICOTIROTOMIA -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">03</span> Técnicas de Cricotirotomia
+      </div>
+      <div class="card-body">
+
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tr">TÉCNICA 1</span> — Cirúrgica: Scalpel-Bougie-Tube (DAS Recomendada)</div>
+          <div class="acc-body">
+            <div class="alert a-red">
+              <strong>Técnica preferida pelo DAS 2015 para CICO.</strong> Rápida (&lt;60 s com treinamento), definitiva, menor taxa de falha que percutânea em emergência.
+            </div>
+            <div class="proto-steps" style="margin-top:10px">
+              <div class="proto-step"><span class="sn sn-r">1</span><div><strong>Posicionamento:</strong> pescoço em extensão máxima, rolo sob ombros se possível</div></div>
+              <div class="proto-step"><span class="sn sn-r">2</span><div><strong>Estabilizar a laringe</strong> com a mão não-dominante: polegar e médio fixam as laterais; indicador palpa a membrana CTR ("Laryngeal Handshake")</div></div>
+              <div class="proto-step"><span class="sn sn-r">3</span><div><strong>Incisão cutânea horizontal</strong> de ~4 cm sobre a membrana CTR com bisturi 10 ou 20</div></div>
+              <div class="proto-step"><span class="sn sn-r">4</span><div><strong>Incisão transversa</strong> na membrana CTR (porção inferior para evitar veias superiores) — blade 10, corte seguro</div></div>
+              <div class="proto-step"><span class="sn sn-r">5</span><div><strong>Dilatar abertura:</strong> introduzir gancho traqueal ou ponta do bisturi rodando 90° + tração caudal; ou bougie Eschmann</div></div>
+              <div class="proto-step"><span class="sn sn-r">6</span><div><strong>Inserir TOT 6,0 cuffado</strong> (ou cânula de traqueostomia 6,0) guiado pelo bougie até cuff abaixo das pregas</div></div>
+              <div class="proto-step"><span class="sn sn-g">7</span><div><strong>Inflar cuff, ventilar, confirmar</strong> com capnografia + ausculta bilateral</div></div>
+              <div class="proto-step"><span class="sn sn-b">8</span><div>Fixar o tubo; agendar conversão para traqueostomia formal em 24–72h</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag ty">TÉCNICA 2</span> — Percutânea (Kit Melker)</div>
+          <div class="acc-body">
+            <div class="alert a-gold">
+              Técnica Seldinger modificada. Mais familiar para anestesiologistas com experiência em punção vascular, mas apresenta <strong>maior taxa de falha em emergência</strong> que a técnica cirúrgica — não é a 1ª escolha no CICO.
+            </div>
+            <div class="proto-steps" style="margin-top:10px">
+              <div class="proto-step"><span class="sn sn-y">1</span><div>Puncionar membrana CTR com agulha 18G com seringa de 5 mL contendo 2 mL de SF</div></div>
+              <div class="proto-step"><span class="sn sn-y">2</span><div>Confirmar entrada na traqueia: aspiração fácil de ar com a seringa</div></div>
+              <div class="proto-step"><span class="sn sn-y">3</span><div>Introduzir guidewire pelo agulha em direção caudal</div></div>
+              <div class="proto-step"><span class="sn sn-y">4</span><div>Retirar agulha; fazer incisão de 5 mm na pele sobre o guidewire</div></div>
+              <div class="proto-step"><span class="sn sn-y">5</span><div>Passar dilatador + cânula (conjunto Melker) sobre o guidewire</div></div>
+              <div class="proto-step"><span class="sn sn-y">6</span><div>Retirar dilatador + guidewire; inflar cuff; confirmar com capno</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag to">TÉCNICA 3</span> — Cricotirotomia por Agulha + Jato (Jet Ventilation)</div>
+          <div class="acc-body">
+            <div class="alert a-orange">
+              <strong>Ponte temporária apenas — máximo 30 minutos.</strong> Não reverte obstrução supraglótica completa (CO₂ não elimina). Risco de barotrauma e enfisema subcutâneo. Reservada para crianças &lt;10 anos onde a técnica cirúrgica é tecnicamente mais difícil.
+            </div>
+            <div class="proto-steps" style="margin-top:10px">
+              <div class="proto-step"><span class="sn sn-o">1</span><div>Agulha 14G com cateter de Teflon; puncionar CTR com angulação 45° caudal</div></div>
+              <div class="proto-step"><span class="sn sn-o">2</span><div>Confirmar posição intratraqueal: aspirar ar com seringa</div></div>
+              <div class="proto-step"><span class="sn sn-o">3</span><div>Conectar à fonte de O₂ a 15 L/min com sistema de jato (Manujet III ou similar)</div></div>
+              <div class="proto-step"><span class="sn sn-o">4</span><div>Ciclo: insuflar 1 s / pausar 4 s (I:E = 1:4) para permitir expiração passiva</div></div>
+              <div class="proto-step"><span class="sn sn-r">5</span><div>Converter para cricotirotomia cirúrgica o mais rápido possível</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Protocolo CICO -->
+        <div class="sh sh-red" style="margin-top:14px">Protocolo CICO — Sequência de Ações</div>
+        <div class="ck-list" style="margin-top:8px">
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text"><strong>DECLARAR CICO</strong> em voz alta</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Pedir ajuda — cirurgião, sênior, kit de cricotirotomia</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Posicionar pescoço em extensão máxima</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Laryngeal Handshake — palpar membrana CTR</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Incisão cutânea horizontal + incisão CTR</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Dilatar + inserir TOT 6,0 cuffado</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Confirmar com capnografia + ausculta</span></div>
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Agendar conversão para traqueostomia formal (24–72h)</span></div>
+        </div>
+
+        <div class="alert a-violet" style="margin-top:12px">
+          <strong>Treinamento é fundamental:</strong> a cricotirotomia cirúrgica deve ser praticada regularmente em modelos sintéticos (laringe de borracha) e biológicos (pescoço de porco). A hesitação no momento do CICO tem origem no falta de treinamento — não na complexidade técnica do procedimento.
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vad-cico -->
+
+  <!-- TAB 5 — VAD ACORDADO (AWAKE INTUBATION) -->
+  <div class="tab-panel" id="vad-acordado">
+    <div class="page-wrap">
+
+    <!-- PRINCÍPIO -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">01</span> Princípio e Indicações da VAD Acordado
+      </div>
+      <div class="card-body">
+        <div class="alert a-violet">
+          <strong>Princípio fundamental:</strong> quando a VAD é prevista e o risco de "can't oxygenate" após indução é real, a estratégia mais segura é <strong>realizar a IOT com o paciente acordado e respirando espontaneamente</strong>, antes de qualquer agente indutor.
+        </div>
+
+        <div class="g2" style="margin-top:14px">
+          <div>
+            <div class="sh sh-red">Indicações Absolutas</div>
+            <ul class="ck-list">
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">VAD anatômica prevista + impossibilidade de anestesiar com segurança</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Instabilidade cervical com risco neurológico à laringoscopia</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Obstrução parcial da via aérea (tumor glótico, epiglotite, angioedema)</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Radioterapia cervical prévia — fibrose tecidual</span></li>
+              <li class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Acesso cirúrgico impossível em caso de CICO (ex.: tração mandibular operada)</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="sh sh-green">Indicações Relativas</div>
+            <ul class="ck-list">
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">LEMON ≥6 + MOANS ≥2 preditores</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Histórico documentado de VAD em cirurgia anterior</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Espondilite anquilosante avançada</span></li>
+              <li class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Obesidade + SAOS + Mallampati IV</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="alert a-gold" style="margin-top:12px">
+          <strong>Contraindicações relativas à VAD acordado:</strong> paciente não cooperativo, agitado ou com retardo cognitivo significativo; alergia a anestésicos locais; recusa do paciente após esclarecimento. Nesses casos, discutir com a equipe cirúrgica alternativa (traqueostomia vigil, anestesia regional total sem intubação).
+        </div>
+      </div>
+    </div>
+
+    <!-- ANESTESIA TÓPICA -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">02</span> Anestesia Tópica da Via Aérea
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue">
+          A anestesia tópica adequada é a base do sucesso da VAD acordado. Um paciente mal anestesiado topicamente irá tossir, fechar as pregas vocais e potencialmente entrar em laringoespasmo durante o FOI.
+        </div>
+
+        <div class="sh sh-violet" style="margin-top:12px">Lidocaína — Agente Principal</div>
+        <div class="tbl-wrap wide"><table class="tbl">
+          <thead><tr><th style="white-space:nowrap">Formulação</th><th>Concentração</th><th>Uso</th><th>Dose</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tv">Nebulização</span></td><td>4% (aerossol)</td><td>Anestesia da orofaringe e supraglote; paciente respira por 10–15 min</td><td>2–4 mg/kg</td></tr>
+            <tr><td><span class="tag tv">Spray</span></td><td>10% (10 mg/dose)</td><td>Aplicação direta em mucosa oral, base da língua, orofaringe</td><td>Máx 3–4 mg/kg total</td></tr>
+            <tr><td><span class="tag tv">Gel 2%</span></td><td>2%</td><td>Lubrificação + anestesia do TOT nasotraqueal; nasofaringe</td><td>Conforme volume aplicado</td></tr>
+            <tr><td><span class="tag tv">Instilação transtraqueal</span></td><td>4% (2 mL = 80 mg)</td><td>Anestesia subglótica; paciente tosse para distribuir</td><td>80 mg (1–2 mL 4%)</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-red" style="margin-top:10px">
+          <strong>LAST — Local Anesthetic Systemic Toxicity:</strong> a mucosa da via aérea absorve lidocaína rapidamente (quase como IV). Dose máxima: <strong>3–4 mg/kg</strong>. Sinais de toxicidade: zumbido, gosto metálico, perioral parestesia, convulsão. Benzocaína: <strong>EVITAR</strong> — risco de metemoglobinemia.
+        </div>
+
+        <div class="sh sh-violet" style="margin-top:12px">Bloqueios de Nervos</div>
+        <div class="g2">
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">N. Laríngeo Superior Bilateral</div>
+            <div class="acc-body">
+              <p>Anestesia da supraglote (epiglote, pregas ariepiglóticas, rima glótica superior). Acesso: palpação do corno maior do osso hioide → agulha 25G → 2 mL lidocaína 1–2% bilateralmente.</p>
+              <div class="alert a-blue" style="margin-top:8px">Reduz reflexo de tosse durante passagem do FOI pela epiglote.</div>
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">N. Laríngeo Recorrente (Transtraqueal)</div>
+            <div class="acc-body">
+              <p>Anestesia subglótica. Puncionar membrana CTR com agulha 22G, confirmar posição com aspiração de ar, injetar 2 mL lidocaína 4% rapidamente. O paciente tossirá (distribui o AL). Esperar 60–90 s antes de iniciar FOI.</p>
+              <div class="alert a-gold" style="margin-top:8px">Mais eficaz que nebulização para região subglótica. Cuidado em coagulopáticos.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEDAÇÃO -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">03</span> Sedação para VAD Acordado
+      </div>
+      <div class="card-body">
+        <div class="alert a-violet">
+          <strong>Regra de ouro:</strong> o paciente deve estar <strong>sedado e confortável, mas acordado e cooperando</strong>. A perda de consciência durante VAD acordado transforma o procedimento eletivo em emergência não antecipada.
+        </div>
+
+        <div class="tbl-wrap wide"><table class="tbl" style="margin-top:12px">
+          <thead><tr><th style="white-space:nowrap">Agente</th><th>Dose</th><th>Vantagens</th><th>Riscos</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="tag tv">Dexmedetomidina</span></td>
+              <td>Ataque: 0,5–1 mcg/kg em 10 min<br>Manutenção: 0,3–0,7 mcg/kg/h</td>
+              <td><strong>Padrão-ouro.</strong> Sedação preservando respiração espontânea; ansiolítico; cooperativo; analgésico leve</td>
+              <td>Bradicardia, hipotensão; início lento (~10 min)</td>
+            </tr>
+            <tr>
+              <td><span class="tag tb">Remifentanil</span></td>
+              <td>0,05–0,1 mcg/kg/min IC</td>
+              <td>Supressão de tosse excelente; titulável; meia-vida ultra-curta</td>
+              <td><strong>Risco de apneia!</strong> — monitorização rigorosa; dose mínima eficaz</td>
+            </tr>
+            <tr>
+              <td><span class="tag ty">Midazolam + Fentanil</span></td>
+              <td>Mida 1–2 mg + Fenta 25–50 mcg IV titulado</td>
+              <td>Disponível em todos os serviços; ansiolítico; familiar ao anestesiologista</td>
+              <td>Menos previsível; risco de amnésia excessiva ou sedação profunda acidental</td>
+            </tr>
+            <tr>
+              <td><span class="tag tg">Ketamina subanestésica</span></td>
+              <td>0,1–0,3 mg/kg IV (dose única ou IC 0,1–0,2 mg/kg/h)</td>
+              <td>Mantém tônus das vias aéreas; broncodilatador; analgésico; dissociativo leve</td>
+              <td>Hipersecreção (+ glicopirrolato 0,2 mg); nistagmo; sensação dissociativa incômoda</td>
+            </tr>
+          </tbody>
+        </table></div>
+
+        <div class="alert a-gold" style="margin-top:12px">
+          <strong>Protocolo padrão ouro NYSORA / DAS:</strong> dexmedetomidina 1 mcg/kg em 10 min → 0,5 mcg/kg/h de manutenção + anestesia tópica completa (nebulização + bloqueios de nervos + instilação transtraqueal). Glicopirrolato 0,2 mg 10 min antes (reduz secreções).
+        </div>
+      </div>
+    </div>
+
+    <!-- TÉCNICA FOI ACORDADO -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">04</span> FOI Acordado — Técnica Nasotraqueal
+      </div>
+      <div class="card-body">
+        <div class="sh sh-violet">Preparo do Paciente</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-v">1</span><div><strong>Explicar ao paciente</strong> o que vai acontecer: "Vou passar um tubo pelo seu nariz e você vai respirar normalmente o tempo todo. Pode ser desconfortável mas não doerá muito."</div></div>
+          <div class="proto-step"><span class="sn sn-v">2</span><div><strong>Pré-medicação:</strong> glicopirrolato 0,2 mg IV 10–15 min antes (seca secreções), dexmedetomidina conforme esquema</div></div>
+          <div class="proto-step"><span class="sn sn-v">3</span><div><strong>Descongestionante nasal:</strong> xilometazolina ou oximetazolina nasal bilateral 10 min antes</div></div>
+          <div class="proto-step"><span class="sn sn-v">4</span><div><strong>Anestesia tópica completa:</strong> nebulização lidocaína 4% + bloqueio n. laríngeo superior + instilação transtraqueal</div></div>
+        </div>
+
+        <div class="sh sh-violet" style="margin-top:12px">Técnica FOI Nasotraqueal — Passo a Passo</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-v">1</span><div><strong>Posição sentada</strong> ou semi-sentada — otimiza via aérea em pacientes obesos e com patologia cervical</div></div>
+          <div class="proto-step"><span class="sn sn-v">2</span><div>TOT 6,5 mm (nasotraqueal) com lidocaína gel 2% no interior e exterior; precarregar no fibroscópio</div></div>
+          <div class="proto-step"><span class="sn sn-v">3</span><div>Introduzir fibroscópio pela narina mais pérvia, avançando suavemente</div></div>
+          <div class="proto-step"><span class="sn sn-v">4</span><div>Identificar epiglote → aplicar spray lidocaína 10% diretamente sobre pregas se necessário (via canal do fibro)</div></div>
+          <div class="proto-step"><span class="sn sn-v">5</span><div>Comunicar a cada passo: "Agora vai sentir pressão... respira normalmente... muito bem..."</div></div>
+          <div class="proto-step"><span class="sn sn-v">6</span><div>Avançar pelo glote na expiração (pregas abertas) → identificar anéis traqueais na tela → confirmar posição intratraqueal</div></div>
+          <div class="proto-step"><span class="sn sn-g">7</span><div><strong>Fixar fibroscópio na traqueia → induzir anestesia geral → avançar TOT sobre o fibroscópio</strong></div></div>
+          <div class="proto-step"><span class="sn sn-g">8</span><div>Retirar fibroscópio; confirmar com capnografia; fixar TOT</div></div>
+        </div>
+
+        <div class="alert a-teal" style="margin-top:12px">
+          <strong>Videolaringoscopia acordada como alternativa:</strong> em mãos experientes, o VL (C-MAC ou GlideScope) pode ser usado acordado como alternativa ao FOI. Mais rápido, porém menos tolerável pelo paciente. Requer anestesia tópica orofaríngea excelente.
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vad-acordado -->
+
+  <!-- TAB 6 — EXTUBAÇÃO DE ALTO RISCO -->
+  <div class="tab-panel" id="vad-extubacao">
+    <div class="page-wrap">
+
+    <!-- INTRO -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> Por Que a Extubação é Tão Perigosa Quanto a IOT?
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal">
+          Estudos do NAP4 (National Audit Project do Royal College of Anaesthetists) demonstram que <strong>complicações perioperatórias de via aérea ocorrem com igual frequência na extubação e na IOT</strong>. A extubação é frequentemente subestimada como evento de risco.
+        </div>
+
+        <div class="g2" style="margin-top:12px">
+          <div class="dr dr-r">
+            <div class="dn">Paciente de Alto Risco para Extubação</div>
+            <div class="dc">VAD documentada na IOT; cirurgia de cabeça/pescoço; edema cervical; angioedema; radioterapia prévia; hematoma cervical.</div>
+            <div class="dd">Qualquer um desses = protocolo de extubação de alto risco</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Problemas da Extubação Não Planejada</div>
+            <div class="dc">Laringoespasmo, broncoespasmo, edema glótico, obstrução por relaxante muscular residual, aspiração, necessidade de re-intubação em condições piores que a IOT original.</div>
+            <div class="dd">TOF &lt;0,9 antes de extubar = risco aumentado</div>
+          </div>
+        </div>
+
+        <div class="sh sh-teal" style="margin-top:12px">Critérios para Extubação Segura (DAS 2012)</div>
+        <div class="ck-list" style="margin-top:8px">
+          <div class="ck-item ok"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Paciente acordado e responsivo a comandos simples</span></div>
+          <div class="ck-item ok"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Reflexo de tosse adequado — tosse ao estímulo do tubo</span></div>
+          <div class="ck-item ok"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">TOF ratio ≥ 0,9 (aceleromiografia) ou TOF count = 4 com ausência de fade</span></div>
+          <div class="ck-item ok"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">SpO₂ ≥ 97% em FiO₂ ≤ 0,4</span></div>
+          <div class="ck-item ok"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">FR 12–20 irpm, VT adequado</span></div>
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Analgesia adequada sem sedação excessiva</span></div>
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Estabilidade hemodinâmica</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AEC -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Airway Exchange Catheter (AEC) — Extubação Guiada
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal">
+          O <strong>AEC (cateter de troca de via aérea)</strong> é introduzido pelo TOT antes da extubação, permanecendo in situ como guia para re-intubação de emergência. É o dispositivo de segurança padrão em extubações de alto risco.
+        </div>
+
+        <div class="sh sh-teal">Técnica AEC — Passo a Passo</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-t">1</span><div>Verificar critérios de extubação + <strong>SpO₂ ≥ 97%</strong> em FiO₂ 100% por 3–5 min</div></div>
+          <div class="proto-step"><span class="sn sn-t">2</span><div>Escolher AEC: <strong>Cook AEC 14 Fr, 83 cm</strong> — rígido o suficiente para guiar re-intubação mas flexível para tolerar</div></div>
+          <div class="proto-step"><span class="sn sn-t">3</span><div>Lubrifcar AEC; introduzir pelo TOT até <strong>25 cm na comissura labial</strong> (ponta na traqueia média-inferior)</div></div>
+          <div class="proto-step"><span class="sn sn-t">4</span><div>Avisar o paciente: "Vou retirar o tubo. Haverá um fio fino no lugar. Respire normalmente."</div></div>
+          <div class="proto-step"><span class="sn sn-y">5</span><div>Desinsuflar cuff → extubar com AEC in situ; fixar AEC com curativo na comissura</div></div>
+          <div class="proto-step"><span class="sn sn-t">6</span><div>O₂ por cateter nasal; monitorar SpO₂ e FR continuamente por <strong>30–60 min</strong></div></div>
+          <div class="proto-step"><span class="sn sn-r">7</span><div>Se re-intubação necessária: lubrificar TOT 6,5 mm, passar sobre AEC com rotação 90° anti-horária ao cruzar as pregas</div></div>
+          <div class="proto-step"><span class="sn sn-b">8</span><div>Retirar AEC somente após certeza de via aérea estável e equipe disponível</div></div>
+        </div>
+
+        <div class="g2" style="margin-top:12px">
+          <div class="alert a-green">
+            <strong>Ventilação pelo AEC:</strong> o AEC Cook possui conector Luer-lock — pode oferecer O₂ suplementar ou jets de O₂ a 15 L/min durante curto período enquanto prepara re-intubação.
+          </div>
+          <div class="alert a-red">
+            <strong>Falha do AEC:</strong> se TOT não avança sobre o AEC na re-intubação → não forçar (risco perfuração). Remover TOT, tentar VL com AEC como guia visual, ou usar fibroscópio com AEC paralelo.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLUXOGRAMA EXTUBAÇÃO SVG -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Fluxograma — Extubação de Alto Risco
+      </div>
+      <div class="card-body">
+        <div style="text-align:center;margin:12px 0">
+          <svg viewBox="0 0 480 540" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;border-radius:10px;background:#F0F8F8;border:1px solid #A0C8C8">
+            <defs>
+              <marker id="arrowEXT" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#0E7490"/>
+              </marker>
+            </defs>
+            <rect width="480" height="540" fill="#F0F8F8" rx="10"/>
+            <text x="240" y="20" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#0E7490">EXTUBAÇÃO DE ALTO RISCO — PROTOCOLO</text>
+
+            <!-- Avaliação risco -->
+            <rect x="120" y="32" width="240" height="36" rx="8" fill="#E0F4F4" stroke="#0E7490" stroke-width="1.5"/>
+            <text x="240" y="47" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#0E7490">Identificar Paciente de Alto Risco</text>
+            <text x="240" y="61" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#333">VAD documentada | Cx cabeça-pescoço | Hematoma | Edema</text>
+            <line x1="240" y1="68" x2="240" y2="88" stroke="#0E7490" stroke-width="1.5" marker-end="url(#arrowEXT)"/>
+
+            <!-- Critérios -->
+            <rect x="80" y="90" width="320" height="44" rx="8" fill="#FFF8E8" stroke="#E8A020" stroke-width="1.5"/>
+            <text x="240" y="106" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#C87000">Verificar Critérios de Extubação Segura</text>
+            <text x="240" y="119" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#333">TOF ≥ 0,9 | SpO₂ ≥ 97% | Acordado | Reflexo tosse | Hemo estável</text>
+            <line x1="240" y1="134" x2="240" y2="154" stroke="#0E7490" stroke-width="1.5" marker-end="url(#arrowEXT)"/>
+
+            <!-- Decisão -->
+            <polygon points="240,156 330,176 240,196 150,176" fill="#E8F4E8" stroke="#1A7A4A" stroke-width="1.5"/>
+            <text x="240" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#1A7A4A">Critérios</text>
+            <text x="240" y="184" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#1A7A4A">Satisfeitos?</text>
+            <!-- NÃO -->
+            <line x1="150" y1="176" x2="80" y2="176" stroke="#C0392B" stroke-width="1.5" marker-end="url(#arrowEXT)"/>
+            <text x="115" y="170" font-family="Inter,sans-serif" font-size="8" fill="#C0392B">NÃO</text>
+            <rect x="20" y="192" width="60" height="28" rx="5" fill="#FFEAEA" stroke="#C0392B" stroke-width="1"/>
+            <text x="50" y="205" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#C0392B">Aguardar</text>
+            <text x="50" y="215" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#C0392B">/ Otimizar</text>
+            <!-- SIM -->
+            <line x1="240" y1="196" x2="240" y2="216" stroke="#0E7490" stroke-width="1.5" marker-end="url(#arrowEXT)"/>
+            <text x="250" y="210" font-family="Inter,sans-serif" font-size="8" fill="#1A7A4A">SIM</text>
+
+            <!-- AEC -->
+            <rect x="80" y="218" width="320" height="36" rx="8" fill="#E0F4F4" stroke="#0E7490" stroke-width="1.5"/>
+            <text x="240" y="233" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#0E7490">Inserir AEC 14Fr (25 cm comissura) + pré-O₂ FiO₂ 100%</text>
+            <text x="240" y="246" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#333">Avisar paciente | Monitorar via capno | Equipe disponível</text>
+            <line x1="240" y1="254" x2="240" y2="274" stroke="#0E7490" stroke-width="1.5" marker-end="url(#arrowEXT)"/>
+
+            <!-- Extubar -->
+            <rect x="100" y="276" width="280" height="28" rx="7" fill="#E8F0FC" stroke="#1B5E96" stroke-width="1.5"/>
+            <text x="240" y="294" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#1B5E96">Extubar sobre o AEC — Manter AEC in situ 30–60 min</text>
+            <line x1="240" y1="304" x2="240" y2="324" stroke="#0E7490" stroke-width="1.5" marker-end="url(#arrowEXT)"/>
+
+            <!-- Monitoramento -->
+            <rect x="60" y="326" width="360" height="36" rx="7" fill="#F8F8F8" stroke="#8888CC" stroke-width="1.5"/>
+            <text x="240" y="341" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#333">Monitorar: SpO₂ | FR | Fonação | Nível consciência</text>
+            <text x="240" y="354" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#555">O₂ nasal | HFNO se disponível | VNI se indicado</text>
+            <line x1="240" y1="362" x2="240" y2="382" stroke="#0E7490" stroke-width="1.5" marker-end="url(#arrowEXT)"/>
+
+            <!-- Decisão re-intubação -->
+            <polygon points="240,384 330,404 240,424 150,404" fill="#FFEAEA" stroke="#C0392B" stroke-width="1.5"/>
+            <text x="240" y="400" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#C0392B">Sinais de</text>
+            <text x="240" y="412" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#C0392B">desconforto?</text>
+            <!-- SIM re-int -->
+            <line x1="330" y1="404" x2="400" y2="404" stroke="#C0392B" stroke-width="1.5" marker-end="url(#arrowEXT)"/>
+            <text x="356" y="398" font-family="Inter,sans-serif" font-size="8" fill="#C0392B">SIM</text>
+            <rect x="400" y="380" width="66" height="48" rx="5" fill="#FFEAEA" stroke="#C0392B" stroke-width="1"/>
+            <text x="433" y="398" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#C0392B">Re-intubar</text>
+            <text x="433" y="408" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#C0392B">via AEC</text>
+            <text x="433" y="420" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#C0392B">TOT 6.5+</text>
+            <!-- NÃO ok -->
+            <line x1="240" y1="424" x2="240" y2="444" stroke="#1A7A4A" stroke-width="1.5" marker-end="url(#arrowEXT)"/>
+            <text x="250" y="438" font-family="Inter,sans-serif" font-size="8" fill="#1A7A4A">Estável</text>
+
+            <!-- Retirar AEC -->
+            <rect x="100" y="446" width="280" height="28" rx="7" fill="#E8F4E8" stroke="#1A7A4A" stroke-width="1.5"/>
+            <text x="240" y="465" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#1A7A4A">Retirar AEC após 30–60 min de estabilidade — Alta para SRPA</text>
+            <text x="240" y="528" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#888">DAS 2012 Extubation Guidelines | Difficult Airway Society</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDEMA GLOTE -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">04</span> Edema de Glote e Stridor Pós-Extubação
+      </div>
+      <div class="card-body">
+        <div class="sh sh-teal">Prevenção — Estratégias Farmacológicas</div>
+        <div class="g2" style="margin-top:8px">
+          <div class="alert a-blue">
+            <strong>Dexametasona:</strong> 0,1 mg/kg IV (máx 8 mg) 4–6h ANTES da extubação planejada. Reduz edema glótico em cirurgias de cabeça/pescoço e IOT prolongada (&gt;12h).
+          </div>
+          <div class="alert a-blue">
+            <strong>Cuff leak test:</strong> desinsuflar o cuff e observar vazamento de ar ao redor do TOT durante ventilação com pressão positiva. Ausência de leak = edema subglótico significativo → adiar extubação + dexametasona.
+          </div>
+        </div>
+
+        <div class="sh sh-red" style="margin-top:12px">Critérios de Re-intubação Urgente</div>
+        <div class="ck-list">
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">SpO₂ &lt; 92% com O₂ suplementar em alto fluxo</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">FR &gt; 35 irpm com esforço respiratório visível</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">PaCO₂ progressivamente crescente (hipoventilação)</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Alteração do nível de consciência (sonolência, agitação)</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Fadiga muscular progressiva (uso de musculatura acessória)</span></div>
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Estridor progressivo apesar de adrenalina nebulizada</span></div>
+        </div>
+
+        <div class="sh sh-teal" style="margin-top:12px">Manejo do Estridor Pós-Extubação</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-t">1</span><div>O₂ em alto fluxo por máscara, heliox se disponível</div></div>
+          <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Adrenalina nebulizada:</strong> 0,5 mg/kg (máx 5 mg) diluída em 3 mL SF — ação vasoconstritora local, reduz edema</div></div>
+          <div class="proto-step"><span class="sn sn-t">3</span><div><strong>Dexametasona</strong> IV se não administrada previamente</div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div>VNI/CPAP se tolera — melhora oxigenação e reduz colapso supraglótico</div></div>
+          <div class="proto-step"><span class="sn sn-r">5</span><div>Se falha: re-intubação precoce — não esperar piora máxima (edema piora a cada minuto)</div></div>
+        </div>
+
+        <div class="alert a-orange" style="margin-top:12px">
+          <strong>Hematoma cervical pós-tireoidectomia:</strong> emergência cirúrgica. Sinais: abaulamento da ferida, estridor, dispneia progressiva. Conduta: abrir a ferida imediatamente para aliviar a compressão + re-intubação urgente ANTES de progressão completa do edema. Não aguardar SpO₂ &lt;90%.
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vad-extubacao -->
+
+  <!-- TAB 7 — CASOS CLÍNICOS -->
+  <!-- ═══ TAB: VNI PERIOPERATÓRIA ═══ -->
+  <div class="tab-panel" id="vad-vni">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Ventilação Não Invasiva — Princípios</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7">VNI aplica pressão positiva via interface (máscara facial total, oronasal ou capacete) sem via aérea artificial. Modalidades: <strong>CPAP</strong> (pressão contínua — apenas PEEP, sem suporte ventilatório) e <strong>BiPAP</strong> (IPAP + EPAP — suporte inspiratório + PEEP).</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Modalidade</th><th>Parâmetros</th><th>Indicação principal</th></tr></thead>
+            <tbody>
+              <tr><td>CPAP</td><td>5–10 cmH₂O</td><td>Hipoxemia pós-op, SAOS, atelectasia</td></tr>
+              <tr><td>BiPAP</td><td>IPAP 10–18 / EPAP 4–8 cmH₂O</td><td>Hipercapnia, DPOC descompensado, edema pulmonar</td></tr>
+              <tr><td>Alto fluxo nasal (HFNC)</td><td>30–60 L/min, FiO₂ titulada</td><td>Hipoxemia pós-extubação, pré-oxigenação em VAD</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">VNI no Perioperatório — Indicações e Evidências</span>
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Momento</th><th>Indicação</th><th>Benefício comprovado</th></tr></thead>
+            <tbody>
+              <tr><td>Pré-operatório</td><td>DPOC, IC, SAOS, obesidade</td><td>↓atelectasias pós-op, ↑reserva funcional antes da indução</td></tr>
+              <tr><td>Pré-oxigenação</td><td>Obesidade (IMC&gt;35), gestante, baixa reserva</td><td>CPAP 5–10 + O₂ 100% → ↑tempo apneia segura em 1–2 min</td></tr>
+              <tr><td>Pós-extubação SRPA</td><td>SpO₂&lt;92% em O₂ suplementar, atelectasia, hipercapnia</td><td>↓reintubação vs. O₂ convencional (Cochrane 2015)</td></tr>
+              <tr><td>Pós-operatório cirurgia abdominal maior</td><td>Profilática nas primeiras 1–2h pós-extubação</td><td>CPAP profilático ↓CPP em 28% (Squadrone JAMA 2005)</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--red)">
+          <span class="card-title">Contraindicações e Critérios de Falha</span>
+        </div>
+        <div class="card-body">
+          <div class="algo-box algo-r">
+            <div class="algo-title">🚫 Contraindicações absolutas de VNI</div>
+            Parada cardiorrespiratória · Rebaixamento de consciência sem proteção de VA · Trauma facial · Vômitos ativos com risco de aspiração · Pneumotórax não drenado · Cirurgia esofágica recente
+          </div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">⚠ Sinais de falha — indicar intubação</div>
+            FR &gt;35 ipm após 1h de VNI · SpO₂ &lt;90% com FiO₂ &gt;0.6 · pH &lt;7.25 ou piorando · Agitação crescente · Instabilidade hemodinâmica · Ausência de melhora em 2h
+          </div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">✅ VNI e Via Aérea Difícil</div>
+            HFNC (alto fluxo nasal) é excelente estratégia de pré-oxigenação em paciente desperto com VAD prevista — mantém SpO₂ durante laringoscopia acordada com fibroscópio (técnica THRIVE: Transnasal Humidified Rapid-Insufflation Ventilatory Exchange).
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /vad-vni -->
+
+<!-- TAB — REVISÃO RÁPIDA VAD -->
+  <div class="tab-panel" id="vad-revisao">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--red)">
+          <span class="card-title">⚡ Revisão Rápida — Via Aérea Difícil</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Para revisão pré-plantão ou pré-prova · 10 pontos essenciais</p>
+          <div class="algo-box algo-b" style="margin-bottom:8px">
+            <div class="algo-title">10 pontos que você não pode esquecer</div>
+            <ol style="font-size:12px;line-height:2;margin:6px 0 0 16px">
+              <li>VAD prevista: sempre planejar estratégia ANTES da indução · nunca induzir sem plano B pronto</li>
+              <li>DAS 2015: 4 tentativas máximas de IOT → se falha: máscara facial/supraglótico → CICO → cricotireoidostomia</li>
+              <li>CICV (Can’t Intubate Can’t Ventilate): emergência extrema → cricotireoidostomia cirúrgica imediata</li>
+              <li>Fibroscopia acordado: técnica mais segura em VAD prevista de alto risco · dexmedetomidina + anestesia tópica</li>
+              <li>Videolaringioscópio: não elimina necessidade de abertura bucal adequada (≥2 cm) nem substitui preparo de VAD</li>
+              <li>Supraglóticos de 2ª geração (ProSeal, i-gel, Supreme): permitem ventilação + passagem de SNE · uso em VAD</li>
+              <li>THRIVE (alto fluxo nasal): manter oxigenação durante laringoscopia acordada · 30–70 L/min</li>
+              <li>Obesidade: apneia segura muito curta → pré-ox rigoroso + posição rampa (30°) + CPAP durante indução</li>
+              <li>Gestante: estômago cheio + edema de via aérea → RSI obrigatória · Mallampati frequentemente III–IV</li>
+              <li>Extubação em VAD: tão crítica quanto a intubação · usar cateter de troca · nunca extubar sem estar preparado para re-intubar</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Revisão Rápida</div>
+    </div>
+  </div><!-- /vad-revisao -->
+
+<!-- TAB — QUESTÕES VAD -->
+  <div class="tab-panel" id="vad-questoes">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--red)">
+          <span class="card-title">📝 Questões — Via Aérea Difícil</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">5 questões de múltipla escolha · Clique para revelar o gabarito</p>
+
+          <div class="caso-card" id="q1-vad">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">1</div>
+              <div class="caso-title">QUESTÃO 1 — CICV: Conduta Imediata</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Após indução anestésica, todas as tentativas de intubação falharam e não é possível ventilar o paciente com máscara facial nem com dispositivo supraglótico (CICV confirmado). SpO₂ = 72% e caindo. Qual a conduta imediata?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Nova tentativa de laringoscopia com videolaringioscópio<br>
+                B) Inserir outro dispositivo supraglótico de 2ª geração<br>
+                C) Cricotireoidostomia cirúrgica imediata<br>
+                D) Ventilação jet transtraqueal percutanânea<br>
+                E) Acordar o paciente com sugamadex
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — Em CICV (Can’t Intubate Can’t Ventilate) com hipoxêmia grave e progressiva, a única via que garante oxigenação imediata é a <strong>cricotireoidostomia cirúrgica</strong> (técnica por escalpe ou por Seldinger com kit comercial). É a conduta definitiva e insubstituível nesta situação. Novas tentativas de intubação ou supraglóticos já falharam; ventilação jet pode ser ponte temporária mas não substitui a cricotireoidostomia. Segundo DAS 2015, CICV = <em>declara emergência → cricotireoidostomia</em>.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q2-vad">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">2</div>
+              <div class="caso-title">QUESTÃO 2 — Máximo de Tentativas DAS 2015</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">De acordo com as diretrizes DAS 2015 para manejo da via aérea não prevista difícil, qual é o número máximo recomendado de tentativas de intubação antes de declarar falha e seguir o algoritmo de resgate?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) 1 tentativa apenas<br>
+                B) 2 tentativas com o mesmo laringioscópio<br>
+                C) 3 tentativas com o mesmo dispositivo, máximo 4 no total<br>
+                D) 5 tentativas independentemente do dispositivo<br>
+                E) Sem limite — tentar até intubar ou o paciente descompensar
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — O DAS 2015 recomenda no máximo <strong>3 tentativas com o mesmo dispositivo</strong> e <strong>4 tentativas no total</strong> (incluindo mudança de técnica/operador). Após esse limite, deve-se declarar falha e seguir para plano de resgate (máscara facial, supraglótico, ou CICO). Múltiplas tentativas sem planejamento aumentam trauma de via aérea, edema e piora da visualização, além de consumir tempo vital.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q3-vad">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">3</div>
+              <div class="caso-title">QUESTÃO 3 — VAD Prevista em Cirurgia Eletiva</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente com artrite reumatoide cervical grave, Mallampati IV, abertura bucal de 2 cm e DTM de 4 cm será submetido a cirurgia eletiva. Qual a melhor abordagem para intubação traqueal?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Indução inalatória sévoflurano com laringoscopia direta<br>
+                B) RSI com succinilcolina seguida de videolaringioscópio<br>
+                C) Fibroscopia acordado com sedoação (dexmedetomidina) e anestesia tópica<br>
+                D) Indução IV convencional e preparar cricotireoidostomia na mesa<br>
+                E) Anestesia regional total sem intubação
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — Em VAD prevista de alto risco (≥3 preditores positivos), a técnica mais segura é a <strong>fibroscopia acordado</strong> com o paciente mantendo tonus de via aérea e respiração espontânea. A combinação <strong>dexmedetomidina</strong> (sedoação sem apneia) + <strong>anestesia tópica</strong> (lidocaína nebulizada/transtráquea) permite intubação com conforto mínimo e máxima segurança. Nunca induzir sem plano B claro em VAD prevista.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q4-vad">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">4</div>
+              <div class="caso-title">QUESTÃO 4 — Supraglótico em CICV</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Em situação de CICV, um colega sugere inserir um supraglótico de 2ª geração (i-gel) antes de realizar a cricotireoidostomia. Qual afirmativa melhor descreve o papel do supraglótico neste cenário?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) O supraglótico resolve o CICV e a cricotireoidostomia não será necessária<br>
+                B) Pode ser tentado como ponte para ganhar tempo, mas não substitui a cricotireoidostomia se falhar<br>
+                C) O supraglótico é contraindicado em CICV por risco de dispersão de ar<br>
+                D) Deve-se realizar cricotireoidostomia primeiro e depois tentar supraglótico<br>
+                E) Supraglótico não tem papel no algoritmo de VAD
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: B)</strong> — O supraglótico de 2ª geração (i-gel, ProSeal, Supreme) pode ser tentado como <strong>medida ponte</strong> no CICV para restaurar ventilação enquanto prepara a equipe para cricotireoidostomia. Se o supraglótico ventilar adequadamente, pode-se ganhar tempo; se falhar, a <strong>cricotireoidostomia cirúrgica é mandatoria e imediata</strong>. Não se deve atrasar a cricotireoidostomia esperando que o supraglótico resolva definitivamente o CICV.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q5-vad">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">5</div>
+              <div class="caso-title">QUESTÃO 5 — Videolaringioscópio: Vantagem Principal</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Qual é a principal vantagem do videolaringioscópio em relação à laringoscopia direta convencional para manejo de via aérea difícil?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Elimina completamente a necessidade de abertura bucal<br>
+                B) Permite intubação sem qualquer sedoação ou anestesia<br>
+                C) Melhora a visualização glótica em Cormack III–IV sem necessidade de alinhamento de eixos<br>
+                D) Substitui completamente a fibroscopia em todos os cenários de VAD<br>
+                E) Reduz o número de tentativas para sempre uma única
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A principal vantagem do videolaringioscópio é melhorar significativamente a <strong>visualização glótica em Cormack III–IV</strong> sem exigir alinhamento dos eixos oral-faríngeo-laringotraqueal (característico da laringoscopia direta). Isso torna-o especialmente útil em pescolos rígidos, obesidade e Mallampati elevado. Contudo, ainda requer abertura bucal adequada (≥2 cm) e não substitui a fibroscopia acordado em VAD prevista de alto risco.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Questões</div>
+    </div>
+  </div><!-- /vad-questoes -->
+
+  <div class="tab-panel" id="vad-casos">
+    <div class="page-wrap">
+
+    <div class="alert a-blue" style="margin-bottom:16px">
+      Clique em cada caso para expandir e revelar o raciocínio clínico completo. Tente responder à pergunta antes de ver a resposta.
+    </div>
+
+    <!-- CASO 1 -->
+    <div class="caso-card">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 1</span>
+        <span class="caso-title">Obesidade Mórbida + Mallampati IV + SAOS — Estratégia Pré-Indução</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Paciente:</strong> feminino, 48 anos, 118 kg, IMC 42 kg/m². Histórico de SAOS (usa CPAP domiciliar), ronco intenso, Mallampati IV, abertura bucal 2,5 dedos, distância tireomento 5,5 cm, extensão cervical limitada por pescoço curto e adiposo. Vai para colecistectomia laparoscópica eletiva. SpO₂ basal 95% em ar ambiente.</p>
+        <div class="caso-question">Qual a estratégia anestésica mais segura para a via aérea nesse caso? Quais preditores de VAD estão presentes? Descreva o preparo da sala e a sequência de manejo.</div>
+        <div class="caso-answer">
+          <div class="sh sh-red">Preditores de VAD Presentes</div>
+          <div class="g3" style="margin-top:8px">
+            <div class="alert a-red"><strong>LEMON ≥6:</strong><br>L=1 (pescoço gordo) + E=2 (TMD &lt;6 cm) + M=2 (Mallampati IV) + O=0 + N=1 (extensão limitada) = 6</div>
+            <div class="alert a-red"><strong>MOANS ≥3:</strong><br>M=1 (barba/adiposo facial possível) + O=1 (obeso) + A=0 + N=0 + S=1 (SAOS/ronco) = 3</div>
+            <div class="alert a-gold"><strong>Reserva de O₂ reduzida:</strong><br>SpO₂ basal 95%, posição supina piora a desaturação. Janela de apneia segura ≈ 2 min (normal: 5–8 min)</div>
+          </div>
+
+          <div class="sh sh-blue" style="margin-top:12px">Estratégia de Manejo</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">Preparo</span><div><strong>VAD kit na sala:</strong> videolaringoscópio C-MAC + D-Blade, FOI, iGel tamanho 4 e 5, kit cricotirotomia, capnógrafo, TOT 6,5 e 7,0, estilete angulado</div></div>
+            <div class="proto-step"><span class="sn sn-b">Posição</span><div><strong>Posição ramped:</strong> coxins sob ombros e escápulas — orelha alinhada horizontalmente ao esterno. Fundamental em obesos.</div></div>
+            <div class="proto-step"><span class="sn sn-b">Pré-O₂</span><div>FiO₂ 100% por <strong>5 min</strong> com máscara bem vedada e CPAP 10 cmH₂O (VCPAP = HFNO + máscara). Cheek test antes de induzir. Meta SpO₂ ≥ 99%.</div></div>
+            <div class="proto-step"><span class="sn sn-y">THRIVE</span><div>Instalar cânulas nasais de alto fluxo 30–40 L/min durante tentativa de IOT — apneia segura prolongada</div></div>
+            <div class="proto-step"><span class="sn sn-b">Indução</span><div>RSI modificada: <strong>propofol 2 mg/kg + rocurônio 1,2 mg/kg + sugammadex 16 mg/kg disponível</strong>. VBM suave entre calar e IOT.</div></div>
+            <div class="proto-step"><span class="sn sn-t">Plano A</span><div><strong>VL (C-MAC D-Blade) desde 1ª tentativa</strong> com estilete angulado. Máx 3 tentativas. BURP + ELM entre tentativas.</div></div>
+            <div class="proto-step"><span class="sn sn-t">Plano B</span><div>Se IOT falha: iGel tamanho 5 → oxigenar → intubação via FOI pela LMA</div></div>
+            <div class="proto-step"><span class="sn sn-r">Plano C/D</span><div>Mask + acordar se possível; CICO → cricotirotomia cirúrgica</div></div>
+          </div>
+
+          <div class="alert a-violet" style="margin-top:12px">
+            <strong>Consideração especial SAOS:</strong> não usar benzodiazepínicos como pré-medicação — aumentam apneia e dificultam despertar. Dexmedetomidina intranasal 1 mcg/kg 30 min antes é alternativa mais segura para ansiedade.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 2 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 2</span>
+        <span class="caso-title">Tentativa de IOT → Falha → VBM Difícil — O Que Fazer?</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Situação:</strong> paciente masculino, 62 anos, 95 kg, Mallampati III, LEMON 4. Induzido com propofol + rocurônio. Laringoscopia direta: CL grau III, 1ª tentativa falha; 2ª tentativa com BURP + bougie, CL II mas TOT não passa; 3ª tentativa com VL: glote visível mas TOT prende na supraglote. SpO₂ cai de 99% para 91% após 3ª tentativa. VBM difícil — leak grande, mal expandindo.</p>
+        <div class="caso-question">Esgotado o Plano A, SpO₂ em 91% e VBM ineficaz — descreva o raciocínio e as próximas ações segundo o DAS 2015.</div>
+        <div class="caso-answer">
+          <div class="sh sh-red">Análise da Situação</div>
+          <div class="alert a-red">
+            Plano A esgotado (3 tentativas). SpO₂ 91% = janela estreita. VBM difícil = não reconfortar. <strong>Avançar para Plano B imediatamente — não tentar 4ª laringoscopia.</strong>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:10px">Plano B — LMA de 2ª Geração</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div>Inserir <strong>iGel tamanho 4</strong> rapidamente — não insuflar cuff, apenas posicionar</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div>Ventilar — confirmar capnografia, expansão e SpO₂ em recuperação</div></div>
+            <div class="proto-step"><span class="sn sn-b">3</span><div>Oxigenar até SpO₂ ≥ 95% antes de qualquer nova tentativa de IOT</div></div>
+            <div class="proto-step"><span class="sn sn-b">4</span><div>Com SpO₂ estável, tentar IOT via FOI + cateter Aintree pela LMA</div></div>
+          </div>
+
+          <div class="sh sh-gold" style="margin-top:10px">Se VBM Continuar Difícil (Plano C)</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-y">1</span><div>Técnica bimanual + 2º operador comprimindo saco + cânula de Guedel</div></div>
+            <div class="proto-step"><span class="sn sn-y">2</span><div>Reduzir anestesia → tentar despertar o paciente</div></div>
+            <div class="proto-step"><span class="sn sn-y">3</span><div>Sugammadex 16 mg/kg para reverter rocurônio (reversão de bloqueio — melhora tônus)</div></div>
+          </div>
+
+          <div class="alert a-red" style="margin-top:10px">
+            <strong>Se nenhuma medida oxigena o paciente → CICO. Declarar em voz alta e iniciar Plano D (cricotirotomia cirúrgica) imediatamente.</strong>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Reflexão pós-caso:</strong> o erro mais comum nessa situação é tentar uma 4ª, 5ª laringoscopia enquanto SpO₂ cai. Cada tentativa adicional piora as condições. A decisão de progredir para o Plano B deve ser rápida e determinada.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 3 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 3</span>
+        <span class="caso-title">CICO Declarado na Sala Cirúrgica — Sequência Completa DAS</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Situação:</strong> feminino, 35 anos, 70 kg. Cirurgia de urgência por abscessos cervical profundo. Edema difuso do pescoço, trismo (abertura bocal 1,5 dedos), Mallampati IV. Induzida em RSI. Após 3 tentativas de IOT (CL IV em todas): VL falhou (sangue e secreção na câmera). LMA não veda adequadamente (seio piriforme distorcido). VBM ineficaz. SpO₂ 78% e caindo. Cianose central.</p>
+        <div class="caso-question">Descreva a sequência de manejo de CICO nesse caso, com técnica cirúrgica passo a passo e comunicação da equipe.</div>
+        <div class="caso-answer">
+          <div class="sh sh-red">DECLARAÇÃO CICO</div>
+          <div class="alert a-red">
+            <strong>Anestesiologista em voz alta:</strong> "ATENÇÃO — Estamos em CICO. Não consegui intubar, não consigo oxigenar. Necessitamos de cricotirotomia agora. Alguém chama o cirurgião. Enfermagem: kit de emergência cervical."
+          </div>
+
+          <div class="sh sh-red" style="margin-top:12px">Técnica Scalpel-Bougie-Tube</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-r">0s</span><div>Extensão máxima do pescoço — rolo sob ombros</div></div>
+            <div class="proto-step"><span class="sn sn-r">5s</span><div><strong>Laryngeal Handshake:</strong> mão esquerda estabiliza laringe — polegar e médio nas laterais, indicador palpa a membrana CTR</div></div>
+            <div class="proto-step"><span class="sn sn-r">10s</span><div>Bisturi nº 20 ou 10 — <strong>incisão cutânea horizontal de 4 cm</strong> sobre membrana CTR</div></div>
+            <div class="proto-step"><span class="sn sn-r">15s</span><div><strong>Incisão transversa na membrana CTR</strong> (porção inferior) — corte direto, não hesitar</div></div>
+            <div class="proto-step"><span class="sn sn-r">20s</span><div>Dilatar: gancho traqueal + tração caudal OU inserir bougie Eschmann com angulação caudal 45°</div></div>
+            <div class="proto-step"><span class="sn sn-r">25s</span><div>Inserir <strong>TOT 6,0 cuffado</strong> guiado pelo bougie até o cuff abaixo da membrana</div></div>
+            <div class="proto-step"><span class="sn sn-r">30s</span><div>Inflar cuff 5–7 mL, conectar ao respirador, ventilar FiO₂ 100%</div></div>
+            <div class="proto-step"><span class="sn sn-g">35s</span><div><strong>Confirmar:</strong> capnografia (curva CO₂), ausculta bilateral, SpO₂ em ascensão</div></div>
+            <div class="proto-step"><span class="sn sn-b">Pós</span><div>Fixar tubo; informar cirurgião; planejar conversão para traqueostomia formal em 24–72h em bloco</div></div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Nesse caso específico (abscesso cervical):</strong> a anatomia pode estar completamente distorcida, mas a membrana CTR geralmente permanece palpável na linha média. Se não encontrar a membrana, guiar por US pré-operatório (se disponível) ou por landmarks ósseos (entre tireoide e cricoide).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 4 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 4</span>
+        <span class="caso-title">Radioterapia Cervical Prévia — VAD Acordado com FOI</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Paciente:</strong> masculino, 58 anos, 72 kg. Histórico de carcinoma de laringe tratado com radioterapia há 3 anos. Apresenta fibrose cervical extensa, abertura bucal 2 cm (trismo por fibrose), extensão cervical quase nula, Mallampati IV, distância tireomento 4 cm. Necessita de laringectomia parcial.</p>
+        <div class="caso-question">Por que esse paciente é candidato a VAD acordado? Descreva o protocolo completo incluindo pré-medicação, anestesia tópica e técnica de FOI.</div>
+        <div class="caso-answer">
+          <div class="sh sh-red">Justificativa para VAD Acordado</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="alert a-red"><strong>IOT após indução = inaceitável:</strong> abertura bocal 2 cm impede lâmina de laringoscópio; extensão cervical nula elimina sniffing position; fibrose impede deformação orofaríngea pela LMA</div>
+            <div class="alert a-red"><strong>CICO seria catastrófico:</strong> fibrose cervical dificulta AINDA a palpação da membrana CTR e a cricotirotomia de emergência. Risco muito elevado.</div>
+          </div>
+
+          <div class="sh sh-violet" style="margin-top:12px">Protocolo VAD Acordado</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-v">D-1</span><div>Conversa detalhada com paciente; explicar procedimento; obter consentimento informado específico</div></div>
+            <div class="proto-step"><span class="sn sn-v">H-1h</span><div><strong>Glicopirrolato 0,2 mg IV</strong> — secar secreções; facilita anestesia tópica</div></div>
+            <div class="proto-step"><span class="sn sn-v">H-30min</span><div><strong>Dexmedetomidina 1 mcg/kg em 10 min IV</strong> → manutenção 0,5 mcg/kg/h</div></div>
+            <div class="proto-step"><span class="sn sn-v">H-15min</span><div><strong>Nebulização lidocaína 4%</strong> por 15 min — anestesia orofaringe e supraglote</div></div>
+            <div class="proto-step"><span class="sn sn-v">H-10min</span><div><strong>Bloqueio n. laríngeo superior bilateral</strong> 2 mL lid 2% cada lado</div></div>
+            <div class="proto-step"><span class="sn sn-v">H-5min</span><div><strong>Instilação transtraqueal:</strong> puncionar CTR, injetar 2 mL lid 4% — paciente tosse para distribuir</div></div>
+            <div class="proto-step"><span class="sn sn-b">H0</span><div>Fibroscópio carregado com TOT nasotraqueal 6,5 mm; posição semi-sentada; THRIVE 40 L/min pelas narinas livres</div></div>
+            <div class="proto-step"><span class="sn sn-b">Técnica</span><div>FOI pela narina pérvia; comunicação contínua; avançar passo a passo; identificar traqueia → induzir anestesia geral → rail-road do TOT</div></div>
+          </div>
+
+          <div class="alert a-teal" style="margin-top:10px">
+            <strong>Atenção especial:</strong> a fibrose por radioterapia pode distorcer a anatomia visualizada pelo FOI. Pode haver estenose parcial da glote. Planejar TOT de menor calibre (6,0) como alternativa. Cirurgião de cabeça e pescoço deve estar presente na sala com campo preparado para traqueostomia vigil.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 5 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 5</span>
+        <span class="caso-title">Tumor Glótico Obstrutivo — Despertar vs. Traqueostomia Vigil</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Paciente:</strong> masculino, 65 anos. Tumor de laringe com lesão glótica obstrutiva (TC: redução do lúmen laríngeo em ~70%). Estridor em repouso moderado, SpO₂ 93% em ar ambiente, voz "borbulhante", Mallampati II (difícil avaliar por edema), extensão cervical normal. Proposta de microcirurgia endoscópica laríngea com anestesia geral.</p>
+        <div class="caso-question">Como planejar a via aérea? A indução com IOT convencional é segura? Discuta despertar vs. traqueostomia vigil como estratégias alternativas.</div>
+        <div class="caso-answer">
+          <div class="sh sh-red">Por Que a Indução Convencional É de Alto Risco</div>
+          <div class="alert a-red">
+            Tumor com 70% de obstrução do lúmen: a indução anestésica causa perda do tônus muscular → colapso total da via aérea obstruída → obstrução completa. Se o TOT não passar pela lesão, o resultado é CICO potencial sem anestesia local prévia para manejo do pescoço.
+          </div>
+
+          <div class="sh sh-blue" style="margin-top:12px">Opção 1 — VAD Acordado com FOI</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">1</span><div>FOI acordado com anestesia tópica completa + dexmedetomidina</div></div>
+            <div class="proto-step"><span class="sn sn-b">2</span><div>Navegar pelo fibroscópio → identificar lesão → tentar passar por estenose com TOT 5,5–6,0 mm</div></div>
+            <div class="proto-step"><span class="sn sn-b">3</span><div>Se TOT passa: induzir anestesia geral — via aérea segura</div></div>
+            <div class="proto-step"><span class="sn sn-r">!</span><div><strong>Risco:</strong> se TOT não passa, paciente ainda está acordado → manter respiração espontânea → planejar traqueostomia</div></div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:12px">Opção 2 — Traqueostomia Vigil (Padrão Ouro para Obstrução Grave)</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div>Anestesia local cervical + sedação leve (dexmedetomidina)</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div>Cirurgião realiza traqueostomia com paciente acordado e respirando</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div>Com via aérea segura: induzir anestesia geral → cirurgia endoscópica</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div>Vantagem: via aérea definitiva antes de qualquer risco</div></div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Decisão baseada em grau de obstrução:</strong><br>
+            • Obstrução &lt;50%: VAD acordado com FOI pode ser tentado<br>
+            • Obstrução 50–70%: discutir multidisciplinarmente (cirurgião, anestesio, UTI)<br>
+            • Obstrução &gt;70% ou estridor em repouso severo: <strong>traqueostomia vigil é a escolha mais segura</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 6 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 6</span>
+        <span class="caso-title">Extubação Pós-Tireoidectomia — Hematoma Cervical Expansivo</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Situação:</strong> feminino, 54 anos. Tireoidectomia total concluída. 45 minutos após extubação na SRPA: enfermeira chama porque paciente está com estridor, agitada, SpO₂ caiu de 98% para 87%, com abaulamento progressivo da ferida cervical anterior.</p>
+        <div class="caso-question">Qual a emergência em questão? Descreva a sequência correta de tratamento, incluindo quando e como realizar a re-intubação.</div>
+        <div class="caso-answer">
+          <div class="sh sh-red">Diagnóstico — Hematoma Cervical Expansivo Pós-Tireoidectomia</div>
+          <div class="alert a-red">
+            <strong>Emergência cirúrgica e de via aérea simultânea.</strong> O hematoma comprime a traqueia externamente e causa obstrução progressiva. A janela para IOT convencional é estreita e fecha rapidamente com o edema.
+          </div>
+
+          <div class="sh sh-red" style="margin-top:12px">Sequência de Tratamento — URGENTE</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-r">T+0</span><div><strong>Chamar cirurgião imediatamente</strong> — ele deve estar disponível 24h pós-op tireoidectomia por esse risco</div></div>
+            <div class="proto-step"><span class="sn sn-r">T+1min</span><div><strong>ABRIR A FERIDA CIRÚRGICA IMEDIATAMENTE</strong> — à beira do leito, sem anestesia se necessário. A descompressão do hematoma pode reverter a obstrução e ganhar tempo para IOT controlada</div></div>
+            <div class="proto-step"><span class="sn sn-r">T+2min</span><div>O₂ por máscara em alto fluxo. Posicionar paciente sentada (melhora obstrução funcional)</div></div>
+            <div class="proto-step"><span class="sn sn-y">T+3min</span><div>Chamar anestesiologista sênior. Preparar sala de emergência com VL, FOI, kit cricotirotomia</div></div>
+            <div class="proto-step"><span class="sn sn-y">T+5min</span><div>Avaliar via aérea: se SpO₂ recupera com abertura da ferida → re-intubação eletiva com VL ou FOI acordado</div></div>
+            <div class="proto-step"><span class="sn sn-r">T+5min</span><div>Se SpO₂ continua caindo: <strong>IOT urgente com VL C-MAC</strong> — edema pode mudar anatomia completamente. Ter kit CICO na mão.</div></div>
+            <div class="proto-step"><span class="sn sn-b">Pós</span><div>Bloco cirúrgico para drenagem formal do hematoma + revisão hemostasia. Manter IOT até edema resolvido.</div></div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Mensagem-chave:</strong> não aguardar piora da SpO₂ para abrir a ferida. A abertura à beira do leito é o primeiro e mais crítico gesto. Cada minuto de espera piora o edema laríngeo associado e pode transformar uma re-intubação possível em um CICO.
+          </div>
+
+          <div class="alert a-violet" style="margin-top:8px">
+            <strong>Prevenção:</strong> AEC 14Fr inserido antes da extubação em todas as tireoidectomias de alto risco (bócio volumoso, reoperação, comprometimento da paratireoide). Manter por 60 min pós-extubação + observação ativa na SRPA por 4h.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESUMO FLASH CARDS -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-red">
+        <span class="card-num">★</span> Resumo Rápido — Pontos-Chave VAD
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="alert a-red"><strong>LEMON ≥6</strong> = planejar VAD acordado antes de induzir</div>
+          <div class="alert a-red"><strong>CICO</strong> = declarar em voz alta → cricotirotomia cirúrgica imediata</div>
+          <div class="alert a-blue"><strong>DAS Plano A</strong> = máx 3 tentativas de IOT; VL desde a 1ª se disponível</div>
+          <div class="alert a-teal"><strong>DAS Plano B</strong> = LMA 2ª geração (iGel/ProSeal) → oxigenar → FOI via LMA</div>
+          <div class="alert a-gold"><strong>MOANS</strong> = prever VBM difícil; preparar LMA antes de induzir</div>
+          <div class="alert a-gold"><strong>SHORT</strong> = prever LMA difícil; radioterapia cervical = maior risco</div>
+          <div class="alert a-violet"><strong>Dexmedetomidina</strong> = padrão ouro para sedação em VAD acordado</div>
+          <div class="alert a-violet"><strong>FOI acordado</strong> = padrão ouro para VAD antecipada grave</div>
+          <div class="alert a-teal"><strong>AEC</strong> = inserir antes de extubar qualquer VAD documentada</div>
+          <div class="alert a-orange"><strong>Membrana CTR</strong> = entre tireoide e cricoide; "passo" palpável</div>
+          <div class="alert a-blue"><strong>THRIVE</strong> = O₂ alto fluxo nasal durante tentativas → apneia segura &gt;25 min</div>
+          <div class="alert a-green"><strong>Hematoma cervical</strong> = abrir ferida à beira do leito PRIMEIRO, re-intubar depois</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /vad-casos -->
+</div>

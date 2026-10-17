@@ -1,0 +1,1713 @@
+<div class="screen" id="screen-ped">
+  <div class="top-bar" style="border-bottom:3px solid var(--pink)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Anestesia Pediátrica</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+  <div class="tab-bar" id="ped-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('ped','calc',this)">Calculadora</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','fisiologia',this)">Fisiologia</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','equipamentos',this)">Equipamentos</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','farmacologia',this)">Farmacologia</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','tecnica',this)">Técnica</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','situacoes',this)">Situações</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','vni',this)">VNI / Agitação</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','casos',this)">Casos</button>
+  </div>
+
+  <!-- ABA 1 — CALCULADORA PEDIÁTRICA -->
+  <div id="ped-calc" class="tab-panel active">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-header ch-pink"><div class="card-num">🧮</div>CALCULADORA PEDIÁTRICA</div>
+        <div class="card-body">
+          <div class="peso-strip">
+            <label>PESO (kg)</label>
+            <input class="peso-input" id="ped-peso" type="number" placeholder="20" min="1" max="70" oninput="calcPed()" inputmode="decimal">
+            <div class="peso-info" id="ped-info">Insira o peso</div>
+          </div>
+          <div class="g2" style="margin-bottom:12px">
+            <div class="field">
+              <label>Idade</label>
+              <select id="ped-idade" onchange="calcPed()">
+                <option value="neonato">Neonato (&lt;28 dias)</option>
+                <option value="lactente">Lactente (1–12 meses)</option>
+                <option value="crianca" selected>Criança (1–12 anos)</option>
+                <option value="adolescente">Adolescente (12–18 anos)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Contexto</label>
+              <select id="ped-contexto" onchange="calcPed()">
+                <option value="eletiva">Cirurgia Eletiva</option>
+                <option value="emergencia">Urgência/Emergência</option>
+                <option value="rsi">RSI</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="ped-results" style="display:none">
+            <div class="sh sh-pink">VIA AÉREA</div>
+            <div class="result-box">
+              <div class="result-label">TUBO OROTRAQUEAL (DI sem cuff)</div>
+              <div class="result-value" id="ped-tot">—</div>
+              <div class="result-detail" id="ped-tot-detail">—</div>
+            </div>
+            <div class="g2">
+              <div class="result-box">
+                <div class="result-label">PROFUNDIDADE NO DENTE</div>
+                <div class="result-value" id="ped-prof">—</div>
+                <div class="result-detail">cm</div>
+              </div>
+              <div class="result-box">
+                <div class="result-label">MLA (TAMANHO)</div>
+                <div class="result-value" id="ped-mla">—</div>
+                <div class="result-detail">Dispositivo supraglótico</div>
+              </div>
+            </div>
+
+            <div class="sh sh-blue">DROGAS DE INDUÇÃO</div>
+            <div class="dr dr-b"><div class="dn"><strong>Propofol</strong><small>Indução IV</small></div><div class="dc"><div class="dv" id="ped-prop">—</div><div class="dd" id="ped-prop-v">—</div></div></div>
+            <div class="dr dr-v"><div class="dn"><strong>Cetamina</strong><small>IM / urgência</small></div><div class="dc"><div class="dv" id="ped-ceta">—</div><div class="dd" id="ped-ceta-v">—</div></div></div>
+            <div class="dr dr-t"><div class="dn"><strong>Etomidato</strong><small>Instabilidade CV</small></div><div class="dc"><div class="dv" id="ped-etom">—</div><div class="dd" id="ped-etom-v">—</div></div></div>
+            <div class="dr dr-g"><div class="dn"><strong>Midazolam MPA</strong><small>Pré-med VO</small></div><div class="dc"><div class="dv" id="ped-midaz">—</div><div class="dd" id="ped-midaz-v">—</div></div></div>
+
+            <div class="sh sh-orange">BLOQUEADORES NEUROMUSCULARES</div>
+            <div class="dr dr-r"><div class="dn"><strong>Succinilcolina</strong><small>Despolarizante</small></div><div class="dc"><div class="dv" id="ped-sux">—</div><div class="dd" id="ped-sux-v">—</div></div></div>
+            <div class="dr dr-b"><div class="dn"><strong>Rocurônio</strong><small>Adespolarizante</small></div><div class="dc"><div class="dv" id="ped-roc">—</div><div class="dd" id="ped-roc-v">—</div></div></div>
+
+            <div class="sh sh-red">EMERGÊNCIA</div>
+            <div class="dr dr-r"><div class="dn"><strong>Adrenalina IV</strong><small>PCR / Anafilaxia</small></div><div class="dc"><div class="dv" id="ped-adre">—</div><div class="dd" id="ped-adre-v">—</div></div></div>
+            <div class="dr dr-y"><div class="dn"><strong>Atropina</strong><small>Bradicardia</small></div><div class="dc"><div class="dv" id="ped-atrp">—</div><div class="dd" id="ped-atrp-v">—</div></div></div>
+            <div class="dr dr-r"><div class="dn"><strong>Adrenalina IM</strong><small>Anafilaxia</small></div><div class="dc"><div class="dv" id="ped-adre-im">—</div><div class="dd">Vasto lateral coxa</div></div></div>
+
+            <div class="sh sh-green">FLUIDOS</div>
+            <div class="dr dr-g"><div class="dn"><strong>Bolus inicial</strong><small>Ressuscitação</small></div><div class="dc"><div class="dv" id="ped-bolus">—</div><div class="dd">SF 0,9% ou Ringer Lactato</div></div></div>
+            <div class="dr dr-g"><div class="dn"><strong>Manutenção</strong><small>Regra 4-2-1</small></div><div class="dc"><div class="dv" id="ped-maint">—</div><div class="dd" id="ped-maint-detail">—</div></div></div>
+
+            <div class="sh sh-teal">VENTILAÇÃO MECÂNICA</div>
+            <div id="ped-vm-result" class="result-box">
+              <div class="result-label">PARÂMETROS INICIAIS</div>
+              <div id="ped-vm-text" style="color:rgba(255,255,255,.8);font-size:12px;line-height:2;margin-top:4px">—</div>
+            </div>
+
+            <div id="ped-obs" class="alert a-gold" style="margin-top:10px">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert a-blue">
+        <strong>Como usar:</strong> Insira o peso em kg e selecione a faixa etária e contexto clínico. Todas as doses são calculadas automaticamente. Sempre conferir com protocolo institucional e BVS Pediátrica.
+      </div>
+    </div>
+  </div>
+
+  <!-- ABA 2 — FISIOLOGIA PEDIÁTRICA -->
+  <div id="ped-fisiologia" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-pink"><div class="card-num">01</div>POR QUE ANESTESIA PEDIÁTRICA É ESPECIALIDADE DISTINTA?</div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>Crianças não são adultos em miniatura.</strong> As diferenças fisiológicas, anatômicas, farmacológicas e psicológicas são tão profundas que exigem treinamento e abordagem específicos em cada faixa etária.
+          </div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">A anestesia pediátrica abrange desde prematuros de 23 semanas até adolescentes de 18 anos — uma variação de peso de 600g a 80kg e diferenças fisiológicas radicais. A taxa de complicações graves é inversamente proporcional à idade: neonatos e lactentes concentram a maior morbimortalidade anestésica.</p>
+          <div class="g2">
+            <div class="result-box">
+              <div class="result-label">MORTALIDADE ANESTÉSICA</div>
+              <div class="result-value" style="font-size:14px">3–5×</div>
+              <div class="result-detail">maior em &lt;1 ano vs adulto</div>
+            </div>
+            <div class="result-box">
+              <div class="result-label">COMPLICAÇÕES VA</div>
+              <div class="result-value" style="font-size:14px">10×</div>
+              <div class="result-detail">maior em &lt;3 anos vs adulto</div>
+            </div>
+          </div>
+          <div class="sh sh-navy">Faixas Etárias — Classificação</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--navy);color:white"><th>Faixa</th><th>Intervalo</th><th>Particularidades Principais</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tr">NEONATO</span></td><td>0–28 dias</td><td>Fisiologia fetal transitória, metabolismo imaturo, hipoglicemia, hipotermia</td></tr>
+              <tr><td><span class="tag tr">PREMATURO</span></td><td>&lt;37 sem. gestação</td><td>Risco apneia pós-anestésica, surfactante insuficiente, DBP</td></tr>
+              <tr><td><span class="tag ty">LACTENTE</span></td><td>1–12 meses</td><td>CAM máxima, via aérea mais vulnerável, maior consumo O₂</td></tr>
+              <tr><td><span class="tag tg">PRÉ-ESCOLAR</span></td><td>1–5 anos</td><td>Ansiedade de separação, laringoespasmo frequente, MPA indicada</td></tr>
+              <tr><td><span class="tag tb">ESCOLAR</span></td><td>6–12 anos</td><td>Cooperativo, fisiologia próxima adulto, PONV frequente</td></tr>
+              <tr><td><span class="tag tv">ADOLESCENTE</span></td><td>12–18 anos</td><td>Doses próximas adulto, questões emocionais, privacidade</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-blue"><div class="card-num">02</div>SISTEMA CARDIOVASCULAR PEDIÁTRICO</div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>Conceito fundamental:</strong> O débito cardíaco (DC) pediátrico é <strong>frequência-dependente</strong>. O ventrículo esquerdo imaturo tem baixa complacência → volume sistólico (VS) praticamente fixo → DC = FC × VS → bradicardia = colapso cardiovascular.
+          </div>
+
+          <div class="sh sh-blue">Frequência Cardíaca Normal por Faixa Etária</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--blue);color:white"><th>Faixa Etária</th><th>FC Normal (bpm)</th><th>FC Bradicardia</th><th>Alerta</th></tr></thead>
+            <tbody>
+              <tr><td>Prematuro</td><td>130–170</td><td>&lt;100</td><td><span class="tag tr">CRÍTICO</span></td></tr>
+              <tr><td>Neonato (0–28d)</td><td>120–160</td><td>&lt;100</td><td><span class="tag tr">CRÍTICO</span></td></tr>
+              <tr><td>Lactente (1–12m)</td><td>100–160</td><td>&lt;80</td><td><span class="tag tr">CRÍTICO</span></td></tr>
+              <tr><td>Pré-escolar (1–5a)</td><td>80–120</td><td>&lt;70</td><td><span class="tag ty">URGENTE</span></td></tr>
+              <tr><td>Escolar (6–12a)</td><td>70–110</td><td>&lt;60</td><td><span class="tag ty">URGENTE</span></td></tr>
+              <tr><td>Adolescente (12–18a)</td><td>60–100</td><td>&lt;50</td><td><span class="tag ty">URGENTE</span></td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-blue">Pressão Arterial Normal</div>
+          <div class="alert a-blue">
+            <strong>Fórmula PA Sistólica mínima:</strong> 70 + (2 × idade em anos) mmHg<br>
+            <strong>Fórmula PA Sistólica normal:</strong> 90 + (2 × idade em anos) mmHg
+          </div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--blue);color:white"><th>Faixa Etária</th><th>PAS normal</th><th>PAD normal</th><th>PAS mínima aceitável</th></tr></thead>
+            <tbody>
+              <tr><td>Neonato</td><td>60–80</td><td>30–50</td><td>50 mmHg</td></tr>
+              <tr><td>Lactente</td><td>80–100</td><td>50–70</td><td>60 mmHg</td></tr>
+              <tr><td>Pré-escolar (2a)</td><td>90–100</td><td>55–70</td><td>74 mmHg</td></tr>
+              <tr><td>Escolar (8a)</td><td>100–115</td><td>60–75</td><td>86 mmHg</td></tr>
+              <tr><td>Adolescente (14a)</td><td>110–130</td><td>65–80</td><td>98 mmHg</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-red">Circulação Fetal e Transição Pós-Natal</div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">Na vida fetal, a circulação pulmonar tem alta resistência vascular — a maior parte do débito direito é shuntada para a circulação sistêmica via <strong>ductus arteriosus</strong> (DA) e <strong>foramen ovale</strong> (FO). O <strong>ductus venosus</strong> desvia sangue oxigenado da veia umbilical para a cava inferior.</p>
+
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--red);color:white"><th>Estrutura Fetal</th><th>Função</th><th>Fechamento</th><th>Relevância Anestésica</th></tr></thead>
+            <tbody>
+              <tr><td>Foramen ovale</td><td>Shunt D→E (AD→AE)</td><td>Funcional: horas; Anatômico: 1–2 anos</td><td>Permanece aberto em 25% adultos (PFO)</td></tr>
+              <tr><td>Ductus arteriosus</td><td>Shunt AP→Ao (D→E)</td><td>Funcional: 12–24h; Anatômico: 2–4 semanas</td><td>Pode reabrir com hipóxia/acidose → HPPN</td></tr>
+              <tr><td>Ductus venosus</td><td>Desvia sangue placentário</td><td>1–3 semanas</td><td>Acesso IV umbilical em emergências neonatais</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-red" style="margin-top:10px">
+            <strong>Hipertensão Pulmonar Persistente do RN (HPPN):</strong> Falha na queda da resistência vascular pulmonar pós-natal → shunts D→E reabrem → hipóxia profunda.<br><br>
+            <strong>Gatilhos na anestesia:</strong> Hipóxia, hipercapnia, acidose, hipotermia, estímulo doloroso, acidemia, uso de N₂O.<br>
+            <strong>Prevenção:</strong> FiO₂ alta, normocapnia, normotermia, anestesia adequada, evitar N₂O.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-teal"><div class="card-num">03</div>SISTEMA RESPIRATÓRIO PEDIÁTRICO</div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Conceito-chave:</strong> O consumo de O₂ pediátrico é 6–8 mL/kg/min (vs 3–4 no adulto) com CRF relativa menor → dessaturação ocorre em segundos durante apneia, especialmente em lactentes.
+          </div>
+
+          <div class="sh sh-teal">Anatomia da Via Aérea Pediátrica vs Adulto</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--teal);color:white"><th>Característica</th><th>Criança / Lactente</th><th>Adulto</th><th>Implicação Clínica</th></tr></thead>
+            <tbody>
+              <tr><td>Ponto mais estreito da laringe</td><td><strong>Subglótico</strong> (anel cricoide)</td><td>Cordas vocais (glote)</td><td>TOT sem cuff veda naturalmente; cuff pode lesar</td></tr>
+              <tr><td>Posição da laringe</td><td>C3–C4 (mais alta/anterior)</td><td>C5–C6</td><td>Laringoscopia mais difícil; epiglote obstrui visão</td></tr>
+              <tr><td>Epiglote</td><td>Em ômega (Ω), longa, flácida</td><td>Reta, rígida</td><td>Miller (reta) preferida em neonatos/lactentes</td></tr>
+              <tr><td>Língua</td><td>Proporcionalmente maior</td><td>Proporcional</td><td>Obstrução fácil; CPAP frequentemente necessário</td></tr>
+              <tr><td>Occiput</td><td>Proeminente</td><td>Plano</td><td>Flexão do pescoço em decúbito → coxim sob ombros</td></tr>
+              <tr><td>Narinas</td><td>Respirador nasal obrigatório (lactente)</td><td>Opcional</td><td>Sonda nasogástrica/nasotacanal → obstrução crítica</td></tr>
+              <tr><td>Parede torácica</td><td>Complacente, cartilaginosa</td><td>Rígida</td><td>Retrações facilmente visíveis; menos eficiente</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-teal">Parâmetros Respiratórios Normais por Faixa Etária</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--teal);color:white"><th>Faixa</th><th>FR (ipm)</th><th>VC (mL/kg)</th><th>VM (mL/kg/min)</th><th>CRF (mL/kg)</th></tr></thead>
+            <tbody>
+              <tr><td>Neonato</td><td>40–60</td><td>6–8</td><td>300–350</td><td>27–30</td></tr>
+              <tr><td>Lactente</td><td>30–40</td><td>6–8</td><td>200–250</td><td>27–30</td></tr>
+              <tr><td>Pré-escolar</td><td>20–30</td><td>6–8</td><td>130–160</td><td>27–30</td></tr>
+              <tr><td>Escolar</td><td>15–20</td><td>6–8</td><td>100–120</td><td>27–30</td></tr>
+              <tr><td>Adolescente</td><td>12–16</td><td>7–8</td><td>85–100</td><td>30–35</td></tr>
+              <tr><td>Adulto</td><td>12–18</td><td>7–8</td><td>80–100</td><td>30–35</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-orange" style="margin-top:10px">
+            <strong>Risco de dessaturação:</strong> Em lactentes, a CRF é próxima do volume de fechamento das vias aéreas → tendência à atelectasia mesmo em ventilação espontânea. PEEP 4–5 cmH₂O é necessário na ventilação mecânica para manter CRF adequada.
+          </div>
+
+          <div class="sh sh-orange">Consumo de O₂ e Velocidade de Dessaturação</div>
+          <div class="g2">
+            <div class="result-box">
+              <div class="result-label">LACTENTE — SpO₂ &lt;90%</div>
+              <div class="result-value" style="font-size:15px">45–70s</div>
+              <div class="result-detail">após apneia com pré-O₂</div>
+            </div>
+            <div class="result-box">
+              <div class="result-label">ADULTO — SpO₂ &lt;90%</div>
+              <div class="result-value" style="font-size:15px">~8 min</div>
+              <div class="result-detail">após pré-oxigenação adequada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-green"><div class="card-num">04</div>METABOLISMO, RENAL, HEPÁTICO E TEMPERATURA</div>
+        <div class="card-body">
+          <div class="sh sh-green">Sistema Renal</div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">A filtração glomerular (TFG) no neonato é apenas 20–30% do adulto. Maturidade renal completa ocorre entre 12–24 meses. Implicações:</p>
+          <ul class="ck-list">
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Drogas de eliminação renal têm meia-vida prolongada em neonatos (morfina, vancomicina, aminoglicosídeos) <span class="ck-sub">Ajuste de intervalo necessário</span></div>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Menor capacidade de concentração urinária → maior risco de desidratação e distúrbios eletrolíticos <span class="ck-sub">Débito urinário mínimo: 1 mL/kg/h</span></div>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Cisatracúrio (degradação de Hofmann) é preferido em pacientes com disfunção renal e hepática <span class="ck-sub">Independente de eliminação orgânica</span></div>
+            </li>
+          </ul>
+
+          <div class="sh sh-gold">Sistema Hepático</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--gold);color:var(--navy)"><th>Enzima/Via</th><th>Maturidade</th><th>Droga Afetada</th></tr></thead>
+            <tbody>
+              <tr><td>CYP3A4</td><td>~1 ano</td><td>Midazolam, fentanil, lidocaína</td></tr>
+              <tr><td>CYP1A2</td><td>1–3 anos</td><td>Teofilina, cafeína</td></tr>
+              <tr><td>Glucuronidação</td><td>2–3 anos</td><td>Morfina, propofol</td></tr>
+              <tr><td>Colinesterase plasmática</td><td>~6 meses</td><td>Succinilcolina, mivacúrio</td></tr>
+            </tbody>
+          </table></div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>PRIS (Síndrome de Infusão do Propofol):</strong> Propofol em infusão contínua &gt;48h em crianças &lt;3 anos é <strong>contraindicado</strong> para sedação em UTI. Causa acidose metabólica, falência hepática, rabdomiólise, bloqueio cadeia respiratória mitocondrial. <strong>Dose: sem limite em anestesia intraoperatória curta.</strong>
+          </div>
+
+          <div class="sh sh-gold">Hipoglicemia Pediátrica</div>
+          <div class="alert a-gold">
+            <strong>Glicemia &lt;60 mg/dL = hipoglicemia.</strong> Grupos de risco: neonatos (estoques de glicogênio hepático reduzidos), prematuros, filhos de mãe diabética (hiperinsulinismo), pequenos para a idade gestacional (PIG), jejum prolongado.<br><br>
+            <strong>Tratamento:</strong> SG 10% 2 mL/kg IV → repetir glicemia em 15–30 min.
+          </div>
+
+          <div class="sh sh-orange">Termorregulação — Hipotermia Pediátrica</div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">Crianças, especialmente neonatos e lactentes, perdem calor rapidamente por 4 mecanismos: irradiação (maior área de superfície relativa), convecção, condução e evaporação. A relação superfície corporal/volume é inversamente proporcional ao peso.</p>
+
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--orange);color:white"><th>Fator</th><th>Neonato / Lactente</th><th>Criança Maior</th></tr></thead>
+            <tbody>
+              <tr><td>Relação superfície/volume</td><td>Alta → perda rápida</td><td>Intermediária</td></tr>
+              <tr><td>Gordura subcutânea</td><td>Mínima → isolamento pobre</td><td>Maior</td></tr>
+              <tr><td>Tremor termogênico</td><td>Ausente em lactentes</td><td>Presente acima de 6 meses</td></tr>
+              <tr><td>Termogênese sem tremor</td><td>Gordura marrom ativa</td><td>Reduzida com o crescimento</td></tr>
+              <tr><td>Temperatura sala operatória</td><td>≥26°C necessário</td><td>≥22°C</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="ck-list" style="margin-top:8px">
+            <div class="sh sh-teal">Medidas de Aquecimento — Checklist</div>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Manta térmica (colchão de água quente ou ar forçado) ligada antes da entrada do paciente <span class="ck-sub">Temperatura alvo: 37°C corporal</span></div>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Sala aquecida ≥26°C para neonatos e lactentes <span class="ck-sub">Definir antes da indução</span></div>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Fluidos IV aquecidos (38°C) para infusões acima de 10 mL/kg <span class="ck-sub">Aquecedor de fluidos em linha</span></div>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Campos cirúrgicos aquecidos; cobrir cabeça (máxima perda por irradiação) <span class="ck-sub">Gorro pediátrico ou capa plástica em neonatos</span></div>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Monitorar temperatura contínua (esofágica ou retal) em cirurgias &gt;30 min <span class="ck-sub">Alerta para T &lt;36°C</span></div>
+            </li>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-violet"><div class="card-num">05</div>FARMACOLOGIA PEDIÁTRICA — BASES</div>
+        <div class="card-body">
+          <div class="sh sh-violet">Farmacocinética Pediátrica</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--violet);color:white"><th>Parâmetro</th><th>Neonato/Lactente</th><th>Criança 1–6a</th><th>Implicação</th></tr></thead>
+            <tbody>
+              <tr><td>Água corporal total</td><td>85% peso (vs 60% adulto)</td><td>75–80%</td><td>Vd maior → doses/kg iniciais maiores</td></tr>
+              <tr><td>Gordura corporal</td><td>10–15% (RN) → 25% (6m)</td><td>15–20%</td><td>Menor captação de drogas lipossolúveis</td></tr>
+              <tr><td>Albumina sérica</td><td>30–35 g/L (vs 40–45 adulto)</td><td>35–40 g/L</td><td>Fração livre maior → efeito clínico aumentado</td></tr>
+              <tr><td>α1-glicoproteína ácida</td><td>Muito baixa no neonato</td><td>Aumenta gradualmente</td><td>Maior fração livre de ALs → risco de toxicidade</td></tr>
+              <tr><td>CYP3A4 / P450</td><td>10–30% atividade adulto</td><td>Próximo adulto ao 1–2a</td><td>T½ prolongada de drogas hepáticas</td></tr>
+              <tr><td>TFG</td><td>20–30% adulto ao nascer</td><td>Adulto ao 1–2a</td><td>Acúmulo de drogas de eliminação renal</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-violet" style="margin-top:10px">
+            <strong>CAM dos Anestésicos Inalatórios:</strong> Mais alta na infância, com pico aos 6 meses → declínio progressivo com o envelhecimento.<br>
+            • Sevoflurano: neonato 3,3% | lactente 3,2% | 1–3 anos 2,8% | adulto 2,0%<br>
+            • Isoflurano: neonato 1,6% | lactente 1,87% | adulto 1,15%<br>
+            <em>Ajuste de CAM intraoperatório é obrigatório pela faixa etária.</em>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABA 3 — EQUIPAMENTOS -->
+  <div id="ped-equipamentos" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-teal"><div class="card-num">01</div>SELEÇÃO DO TUBO OROTRAQUEAL</div>
+        <div class="card-body">
+          <div class="sh sh-teal">Fórmulas de Seleção</div>
+          <div class="g2">
+            <div class="result-box">
+              <div class="result-label">SEM CUFF (tradicional)</div>
+              <div class="result-value" style="font-size:15px">(Idade/4) + 4</div>
+              <div class="result-detail">Para &lt;8 anos</div>
+            </div>
+            <div class="result-box">
+              <div class="result-label">COM CUFF (baixa pressão)</div>
+              <div class="result-value" style="font-size:15px">(Idade/4) + 3,5</div>
+              <div class="result-detail">Pressão cuff &lt;20 cmH₂O</div>
+            </div>
+          </div>
+
+          <div class="alert a-blue" style="margin-top:10px">
+            <strong>Tendência atual:</strong> Cuff de baixa pressão é aceito em todas as idades, inclusive neonatos e prematuros, quando a pressão de cuff é rigorosamente monitorada (&lt;20 cmH₂O). Vantagens: menor aspiração, melhor vedação em ventilação com altas pressões, facilita ventilação protetora.
+          </div>
+
+          <div class="sh sh-teal">Profundidade de Inserção</div>
+          <div class="g2">
+            <div class="result-box">
+              <div class="result-label">FÓRMULA 1 (DI × 3)</div>
+              <div class="result-value" style="font-size:14px">DI × 3 cm</div>
+              <div class="result-detail">Mais usada em lactentes</div>
+            </div>
+            <div class="result-box">
+              <div class="result-label">FÓRMULA 2 (Idade)</div>
+              <div class="result-value" style="font-size:14px">(Idade/2) + 12</div>
+              <div class="result-detail">Para crianças ≥2 anos</div>
+            </div>
+          </div>
+
+          <div class="sh sh-teal">Tabela Completa por Idade</div>
+          <div style="overflow-x:auto">
+            <div class="tbl-wrap wide"><table class="tbl">
+              <thead><tr style="background:var(--teal);color:white"><th>Idade / Peso</th><th>DI sem cuff</th><th>DI com cuff</th><th>Prof. (cm)</th><th>Lâmina</th></tr></thead>
+              <tbody>
+                <tr><td>Prematuro &lt;1kg</td><td>2,0 mm</td><td>2,0 mm</td><td>6–7</td><td>Miller 00</td></tr>
+                <tr><td>Prematuro 1–2,5kg</td><td>2,5 mm</td><td>2,5 mm</td><td>7–8</td><td>Miller 0</td></tr>
+                <tr><td>RN a termo / &lt;1m</td><td>3,0–3,5 mm</td><td>3,0 mm</td><td>9–10</td><td>Miller 0–1</td></tr>
+                <tr><td>1–6 meses (~4–6kg)</td><td>3,5 mm</td><td>3,0–3,5 mm</td><td>10–11</td><td>Miller 1</td></tr>
+                <tr><td>6–12 meses (~6–10kg)</td><td>3,5–4,0 mm</td><td>3,5 mm</td><td>11–12</td><td>Miller 1</td></tr>
+                <tr><td>1–2 anos (~10–12kg)</td><td>4,0–4,5 mm</td><td>4,0 mm</td><td>12–13</td><td>Mac 2 ou Miller 1</td></tr>
+                <tr><td>2–4 anos (~12–16kg)</td><td>4,5 mm</td><td>4,0 mm</td><td>13–14</td><td>Mac 2</td></tr>
+                <tr><td>4–6 anos (~16–22kg)</td><td>5,0 mm</td><td>4,5 mm</td><td>14–16</td><td>Mac 2</td></tr>
+                <tr><td>6–8 anos (~22–28kg)</td><td>5,5 mm</td><td>5,0 mm</td><td>16–18</td><td>Mac 2–3</td></tr>
+                <tr><td>8–10 anos (~28–35kg)</td><td>6,0 mm</td><td>5,5 mm c/cuff</td><td>18–20</td><td>Mac 3</td></tr>
+                <tr><td>10–12 anos (~35–45kg)</td><td>6,5 mm</td><td>6,0 mm c/cuff</td><td>20–22</td><td>Mac 3</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Regra prática:</strong> Tenha sempre três tubos — o calculado, um número acima e um número abaixo. Confirmação de posição: ausculta bilateral axilar, capnografia (ETCO₂), Rx tórax se disponível (carina T2–T4).
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-violet"><div class="card-num">02</div>MLA PEDIÁTRICA — DISPOSITIVOS SUPRAGLÓTICOS</div>
+        <div class="card-body">
+          <div class="sh sh-violet">Seleção por Peso</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--violet);color:white"><th>Tamanho</th><th>Peso (kg)</th><th>Volume Cuff (máx)</th><th>TOT máx passagem</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Nº 1</strong></td><td>&lt;5 kg</td><td>4 mL</td><td>TOT 3,5 mm</td></tr>
+              <tr><td><strong>Nº 1,5</strong></td><td>5–10 kg</td><td>7 mL</td><td>TOT 4,0 mm</td></tr>
+              <tr><td><strong>Nº 2</strong></td><td>10–20 kg</td><td>10 mL</td><td>TOT 4,5 mm</td></tr>
+              <tr><td><strong>Nº 2,5</strong></td><td>20–30 kg</td><td>14 mL</td><td>TOT 5,0 mm</td></tr>
+              <tr><td><strong>Nº 3</strong></td><td>30–50 kg</td><td>20 mL</td><td>TOT 6,0 mm</td></tr>
+            </tbody>
+          </table></div>
+          <div class="alert a-violet" style="margin-top:8px">
+            <strong>Indicações em pediatria:</strong> Procedimentos curtos (adenoamigdalectomia, cirurgias ortopédicas de membros superiores), ventilação controlada superficial, resgate de via aérea difícil.<br>
+            <strong>Contraindicações:</strong> Estômago cheio, pressão inspiratória necessária &gt;20 cmH₂O, posicionamentos que comprometem vedação.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-blue"><div class="card-num">03</div>LARINGOSCÓPIO — LÂMINAS PEDIÁTRICAS</div>
+        <div class="card-body">
+          <div class="sh sh-blue">Por que Miller (reta) em lactentes?</div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">A epiglote pediátrica é longa, flácida e em formato de ômega (Ω). Na laringoscopia com lâmina curva (Macintosh), a lâmina posicionada na valécula frequentemente não afasta a epiglote de forma adequada. A lâmina reta (Miller) permite elevar diretamente a epiglote, expondo melhor a glote.</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--blue);color:white"><th>Faixa Etária</th><th>Lâmina</th><th>Tamanho</th></tr></thead>
+            <tbody>
+              <tr><td>Prematuro / &lt;1kg</td><td>Miller reta</td><td>00</td></tr>
+              <tr><td>Neonato a termo</td><td>Miller reta</td><td>0–1</td></tr>
+              <tr><td>Lactente 1–12m</td><td>Miller reta</td><td>1</td></tr>
+              <tr><td>Criança 1–3 anos</td><td>Miller reta ou Macintosh curva</td><td>1–2</td></tr>
+              <tr><td>Criança 3–8 anos</td><td>Macintosh curva</td><td>2</td></tr>
+              <tr><td>Criança &gt;8 anos</td><td>Macintosh curva</td><td>2–3</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-gold"><div class="card-num">04</div>CIRCUITOS ANESTÉSICOS PEDIÁTRICOS</div>
+        <div class="card-body">
+          <div class="sh sh-gold">Sistema de Mapleson D/F — Jackson-Rees</div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">O sistema de Mapleson D (modificação Jackson-Rees em T de Ayre) é o padrão para crianças &lt;10–15 kg por ter espaço morto mínimo, sem válvulas de resistência, e permitir ventilação controlada e espontânea. A bolsa de 0,5–1L funciona como reservatório e indicador visual de ventilação.</p>
+
+          <div class="g2">
+            <div class="result-box">
+              <div class="result-label">FLUXO DE GÁS FRESCO</div>
+              <div class="result-value" style="font-size:14px">2–3× VM</div>
+              <div class="result-detail">Mínimo para evitar reinalação</div>
+            </div>
+            <div class="result-box">
+              <div class="result-label">VOLUME BOLSA</div>
+              <div class="result-value" style="font-size:14px">0,5–1 L</div>
+              <div class="result-detail">Pediátrica (não usar bolsa adulto 3L)</div>
+            </div>
+          </div>
+
+          <div class="sh sh-gold">Quando usar Circuito Circular?</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--gold);color:var(--navy)"><th>Sistema</th><th>Peso indicado</th><th>Vantagens</th><th>Desvantagens</th></tr></thead>
+            <tbody>
+              <tr><td>Jackson-Rees / Mapleson D</td><td>&lt;10–15 kg</td><td>Baixa resistência, espaço morto mínimo, fácil inspeção</td><td>Alto consumo de gás fresco, sem economia de vapor</td></tr>
+              <tr><td>Circular c/ absorvedor CO₂</td><td>&gt;10–15 kg</td><td>Economia de agente, umidificação, baixo fluxo</td><td>Maior resistência, espaço morto do circuito</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-navy"><div class="card-num">05</div>ACESSO VENOSO E INTRAÓSSEO</div>
+        <div class="card-body">
+          <div class="sh sh-navy">Calibre por Peso</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--navy);color:white"><th>Peso (kg)</th><th>Calibre IV recomendado</th><th>Sítio preferencial</th></tr></thead>
+            <tbody>
+              <tr><td>&lt;3 kg (neonato)</td><td>24G ou menor</td><td>Dorso mão, safena, umbilical</td></tr>
+              <tr><td>3–10 kg</td><td>24G</td><td>Dorso mão, fossa antecubital</td></tr>
+              <tr><td>10–20 kg</td><td>22–24G</td><td>Dorso mão, fossa antecubital</td></tr>
+              <tr><td>20–40 kg</td><td>20–22G</td><td>Fossa antecubital, antebraço</td></tr>
+              <tr><td>&gt;40 kg</td><td>18–20G</td><td>Fossa antecubital, como adulto</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-red">Acesso Intraósseo (IO)</div>
+          <div class="alert a-red">
+            <strong>Indicação:</strong> Ausência de acesso venoso em 2 tentativas ou 90 segundos em emergência pediátrica.<br>
+            <strong>Sítio primário:</strong> Tíbia proximal (2 cm abaixo da tuberosidade tibial, face ântero-medial)<br>
+            <strong>Alternativas:</strong> Úmero proximal, fêmur distal, esterno (apenas adulto).<br>
+            <strong>Tempo de uso:</strong> Apenas até obtenção de acesso venoso periférico ou central.<br>
+            <strong>Drogas via IO:</strong> Todas as drogas de emergência, fluidos e sangue podem ser administrados via IO.
+          </div>
+
+          <div class="sh sh-navy">Manguito de PA — Seleção por Tamanho</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--navy);color:white"><th>Faixa</th><th>Largura do Manguito</th><th>Erro sem adequação</th></tr></thead>
+            <tbody>
+              <tr><td>Neonato</td><td>3–4 cm</td><td>Falsamente alta se grande</td></tr>
+              <tr><td>Lactente</td><td>4–6 cm</td><td>Falsamente baixa se pequeno</td></tr>
+              <tr><td>Pré-escolar</td><td>6–9 cm</td><td>—</td></tr>
+              <tr><td>Escolar</td><td>9–12 cm</td><td>—</td></tr>
+              <tr><td>Adolescente</td><td>12–16 cm</td><td>—</td></tr>
+            </tbody>
+          </table></div>
+          <div class="alert a-blue" style="margin-top:8px">
+            <strong>Regra:</strong> Largura do manguito = 2/3 do comprimento do braço; comprimir 80–100% da circunferência. Manguito muito pequeno → PA falsamente alta; muito grande → PA falsamente baixa.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABA 4 — FARMACOLOGIA PEDIÁTRICA -->
+  <div id="ped-farmacologia" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-violet"><div class="card-num">01</div>HIPNÓTICOS E INDUTORES</div>
+        <div class="card-body">
+
+          <div class="drug-card" id="drug-propofol">
+            <div class="drug-hdr" style="background:var(--blue)" onclick="toggleDrug(this)">
+              <div class="drug-hdr-inner">
+                <div class="drug-name">PROPOFOL</div>
+                <div class="drug-class">Hipnótico IV — Alquilfenol</div>
+              </div>
+              <span class="drug-arrow">▶</span>
+            </div>
+            <div class="drug-body">
+              <div class="drug-section">
+                <div class="drug-section-title">Doses Pediátricas</div>
+                <div class="dr dr-b"><div class="dn"><strong>Indução IV</strong><small>Lactente/bebê</small></div><div class="dc"><div class="dv">2,5–3,5 mg/kg</div><div class="dd">Dose maior que adulto</div></div></div>
+                <div class="dr dr-b"><div class="dn"><strong>Indução IV</strong><small>Criança 1–8a</small></div><div class="dc"><div class="dv">2,5–3,0 mg/kg</div><div class="dd">Titular até perda de consciência</div></div></div>
+                <div class="dr dr-b"><div class="dn"><strong>Manutenção TIVA</strong><small>&gt;3 anos</small></div><div class="dc"><div class="dv">6–15 mg/kg/h</div><div class="dd">Dose maior que adulto</div></div></div>
+                <div class="dr dr-g"><div class="dn"><strong>Laringoespasmo</strong><small>Propofol sub-hipnótico</small></div><div class="dc"><div class="dv">0,5–1,0 mg/kg</div><div class="dd">Relaxa musculatura laringe</div></div></div>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Particularidades Pediátricas</div>
+                <div class="drug-text">
+                  <p style="margin-bottom:6px">• <strong>Dor à injeção:</strong> muito frequente em crianças (veia dorsal mão). Profilaxia: lidocaína 1mg/kg IV 60s antes com torniquete ou misturar na seringa (1mg/10mg propofol).</p>
+                  <p style="margin-bottom:6px">• <strong>PRIS (Síndrome Infusão Propofol):</strong> CI em sedação &gt;48h em crianças &lt;3 anos em UTI. Fatal por rabdomiólise e falência mitocondrial. Uso anestésico intraoperatório: SEM restrição de dose.</p>
+                  <p>• <strong>Por que dose maior?</strong> Volume de distribuição maior (mais água corporal), clearance hepático aumentado por kg, ligação proteica menor.</p>
+                </div>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Contraindicações</div>
+                <span class="drug-pill bad">PRIS — sedação UTI &lt;3a &gt;48h</span>
+                <span class="drug-pill bad">Alergia ao ovo/soja (relativa)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" id="drug-cetamina">
+            <div class="drug-hdr" style="background:var(--violet)" onclick="toggleDrug(this)">
+              <div class="drug-hdr-inner">
+                <div class="drug-name">CETAMINA</div>
+                <div class="drug-class">Dissociativo — Antagonista NMDA</div>
+              </div>
+              <span class="drug-arrow">▶</span>
+            </div>
+            <div class="drug-body">
+              <div class="drug-section">
+                <div class="drug-section-title">Doses Pediátricas</div>
+                <div class="dr dr-v"><div class="dn"><strong>Indução IV</strong></div><div class="dc"><div class="dv">1–2 mg/kg</div><div class="dd">Lento, 60s</div></div></div>
+                <div class="dr dr-v"><div class="dn"><strong>Indução IM</strong><small>Sem acesso venoso</small></div><div class="dc"><div class="dv">4–6 mg/kg IM</div><div class="dd">Vasto lateral; onset 3–5 min</div></div></div>
+                <div class="dr dr-v"><div class="dn"><strong>Pré-medicação IM</strong></div><div class="dc"><div class="dv">2–3 mg/kg IM</div><div class="dd">Sedação leve; + atropina</div></div></div>
+                <div class="dr dr-v"><div class="dn"><strong>Analgesia subanestésica</strong></div><div class="dc"><div class="dv">0,3–0,5 mg/kg IV</div><div class="dd">Procedimentos dolorosos</div></div></div>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Vantagens em Pediatria</div>
+                <div class="drug-text">
+                  <p style="margin-bottom:6px">• <strong>Criança não-cooperativa:</strong> única droga eficaz IM que induz anestesia segura sem acesso venoso.</p>
+                  <p style="margin-bottom:6px">• <strong>Preserva reflexos de via aérea</strong> e drive respiratório → maior margem de segurança.</p>
+                  <p style="margin-bottom:6px">• <strong>Analgesia potente:</strong> ideal para curativos, reduções, punções em emergência.</p>
+                  <p>• <strong>Broncodilatador:</strong> opção em broncoespasmo grave; aumenta secreções brônquicas (usar + atropina).</p>
+                </div>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Cuidados</div>
+                <span class="drug-pill warn">+ atropina 0,02 mg/kg para hipersecreção</span>
+                <span class="drug-pill warn">Midazolam 0,05 mg/kg IV para anterograde amnesia</span>
+                <span class="drug-pill bad">CI relativa: HIC, HAS não controlada</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" id="drug-sevo">
+            <div class="drug-hdr" style="background:var(--teal)" onclick="toggleDrug(this)">
+              <div class="drug-hdr-inner">
+                <div class="drug-name">SEVOFLURANO</div>
+                <div class="drug-class">Halogenado — Indução Inalatória Padrão</div>
+              </div>
+              <span class="drug-arrow">▶</span>
+            </div>
+            <div class="drug-body">
+              <div class="drug-section">
+                <div class="drug-section-title">CAM por Faixa Etária</div>
+                <div class="tbl-wrap"><table class="tbl">
+                  <thead><tr style="background:var(--teal);color:white"><th>Faixa</th><th>CAM Sevoflurano</th><th>Indução</th></tr></thead>
+                  <tbody>
+                    <tr><td>Neonato (0–1m)</td><td>3,3%</td><td>4–6%</td></tr>
+                    <tr><td>Lactente (1–6m)</td><td>3,2%</td><td>6–8%</td></tr>
+                    <tr><td>Lactente (6–12m)</td><td>2,8%</td><td>6–8%</td></tr>
+                    <tr><td>1–3 anos</td><td>2,6%</td><td>5–7%</td></tr>
+                    <tr><td>3–12 anos</td><td>2,4%</td><td>5–7%</td></tr>
+                    <tr><td>Adulto</td><td>2,0%</td><td>4–6%</td></tr>
+                  </tbody>
+                </table></div>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Técnica de Indução Inalatória</div>
+                <div class="drug-text">
+                  <p style="margin-bottom:6px">• <strong>Início rápido:</strong> alta concentração alveolar (6–8%) + O₂ 100%; coeficiente sangue/gás baixo → indução rápida.</p>
+                  <p style="margin-bottom:6px">• <strong>Excitação (stage II):</strong> gerenciar com estímulo mínimo, não tentar laringoscopia; aguardar stage III.</p>
+                  <p style="margin-bottom:6px">• <strong>Agitação pós-despertar (emergence delirium):</strong> incidência 10–30% em pré-escolares após sevo; tratar com fentanil 0,5 mcg/kg IV ou propofol 0,5 mg/kg.</p>
+                  <p>• <strong>Hepatotoxicidade:</strong> extremamente rara em crianças (menos exposição prévia a halogenados).</p>
+                </div>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Gatilho Hipertermia Maligna</div>
+                <span class="drug-pill bad">Gatilho HM — evitar em suspeita RYR1</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-orange"><div class="card-num">02</div>BLOQUEADORES NEUROMUSCULARES</div>
+        <div class="card-body">
+
+          <div class="drug-card">
+            <div class="drug-hdr" style="background:var(--red)" onclick="toggleDrug(this)">
+              <div class="drug-hdr-inner">
+                <div class="drug-name">SUCCINILCOLINA</div>
+                <div class="drug-class">BNM Despolarizante — RSI Pediátrico</div>
+              </div>
+              <span class="drug-arrow">▶</span>
+            </div>
+            <div class="drug-body">
+              <div class="drug-section">
+                <div class="drug-section-title">Doses Pediátricas</div>
+                <div class="dr dr-r"><div class="dn"><strong>IV — &lt;2 anos</strong></div><div class="dc"><div class="dv">2 mg/kg IV</div><div class="dd">Dose maior: maior Vd</div></div></div>
+                <div class="dr dr-r"><div class="dn"><strong>IV — &gt;2 anos</strong></div><div class="dc"><div class="dv">1–1,5 mg/kg IV</div><div class="dd">RSI padrão</div></div></div>
+                <div class="dr dr-r"><div class="dn"><strong>IM — emergência</strong><small>Sem acesso venoso</small></div><div class="dc"><div class="dv">4 mg/kg IM</div><div class="dd">Vasto lateral; onset 2–3 min</div></div></div>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Contraindicações ABSOLUTAS em Pediatria</div>
+                <span class="drug-pill bad">Miopatias conhecidas (Duchenne, Becker)</span>
+                <span class="drug-pill bad">Hipercalemia (&gt;6 mEq/L)</span>
+                <span class="drug-pill bad">Queimaduras extensas (&gt;24h) → hipercalemia</span>
+                <span class="drug-pill bad">Lesão medular aguda &gt;24h</span>
+                <span class="drug-pill bad">Hipertermia maligna (HM) conhecida ou suspeita</span>
+                <span class="drug-pill bad">Miotonia congênita</span>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Efeitos adversos em pediatria</div>
+                <div class="drug-text">
+                  <p style="margin-bottom:6px">• <strong>Bradicardia sinusal:</strong> mais frequente em lactentes após 2ª dose → pré-tratar com atropina 0,02 mg/kg em crianças &lt;5 anos ou 2ª dose sux.</p>
+                  <p>• <strong>Mioglobinúria:</strong> em crianças com miopatia subclínica → insuficiência renal aguda.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card">
+            <div class="drug-hdr" style="background:var(--blue)" onclick="toggleDrug(this)">
+              <div class="drug-hdr-inner">
+                <div class="drug-name">ROCURÔNIO</div>
+                <div class="drug-class">BNM Adespolarizante — Aminoesteroide</div>
+              </div>
+              <span class="drug-arrow">▶</span>
+            </div>
+            <div class="drug-body">
+              <div class="drug-section">
+                <div class="drug-section-title">Doses Pediátricas</div>
+                <div class="dr dr-b"><div class="dn"><strong>Intubação padrão</strong></div><div class="dc"><div class="dv">0,6 mg/kg</div><div class="dd">Onset 60–90s</div></div></div>
+                <div class="dr dr-r"><div class="dn"><strong>RSI — alta dose</strong></div><div class="dc"><div class="dv">1,2 mg/kg</div><div class="dd">Onset 45–60s; reverter sug 16mg/kg</div></div></div>
+                <div class="dr dr-b"><div class="dn"><strong>Manutenção</strong></div><div class="dc"><div class="dv">0,1–0,2 mg/kg</div><div class="dd">A cada 20–30 min ou infusão</div></div></div>
+                <div class="dr dr-g"><div class="dn"><strong>Reversão — Sugammadex</strong></div><div class="dc"><div class="dv">2–4 mg/kg IV</div><div class="dd">Bloqueio moderado; 16 mg/kg RSI</div></div></div>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Particularidades</div>
+                <div class="drug-text">
+                  <p>• <strong>Alternativa à succinilcolina no RSI</strong> quando há contraindicações (miopatia, hipercalemia). Dose alta 1,2 mg/kg + sugammadex disponível = segurança equiparável.<br>• Onset mais rápido em lactentes vs crianças maiores (maior DC relativo, maior fluxo hepático).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card">
+            <div class="drug-hdr" style="background:var(--teal)" onclick="toggleDrug(this)">
+              <div class="drug-hdr-inner">
+                <div class="drug-name">CISATRACÚRIO</div>
+                <div class="drug-class">BNM Adespolarizante — Benzilisoquinolínico</div>
+              </div>
+              <span class="drug-arrow">▶</span>
+            </div>
+            <div class="drug-body">
+              <div class="drug-section">
+                <div class="drug-section-title">Doses e Indicações</div>
+                <div class="dr dr-t"><div class="dn"><strong>Intubação</strong></div><div class="dc"><div class="dv">0,15 mg/kg</div><div class="dd">Onset 3–4 min</div></div></div>
+                <div class="dr dr-t"><div class="dn"><strong>Manutenção</strong></div><div class="dc"><div class="dv">0,03 mg/kg</div><div class="dd">Ou infusão 1–2 mcg/kg/min</div></div></div>
+              </div>
+              <div class="drug-section">
+                <div class="drug-section-title">Vantagens em Pediatria</div>
+                <div class="drug-text">
+                  <p>• <strong>Degradação de Hofmann:</strong> independente de função hepática e renal → preferido em neonatos com imaturidade orgânica, disfunção hepática/renal, UTI pediátrica.<br>• Ausência de acúmulo mesmo em insuficiência de múltiplos órgãos.<br>• Não libera histamina (vs atracúrio).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-red"><div class="card-num">03</div>OPIOIDES PEDIÁTRICOS</div>
+        <div class="card-body">
+
+          <div class="sh sh-red">Fentanil</div>
+          <div class="dr dr-r"><div class="dn"><strong>Bolus analgesia</strong></div><div class="dc"><div class="dv">1–4 mcg/kg IV</div><div class="dd">Lento (>30s); atenção rigidez torácica</div></div></div>
+          <div class="dr dr-r"><div class="dn"><strong>Infusão</strong></div><div class="dc"><div class="dv">1–3 mcg/kg/h</div><div class="dd">Ajuste por contexto clínico</div></div></div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>Rigidez torácica em neonatos:</strong> fentanil em doses altas (>5 mcg/kg) pode causar rigidez da caixa torácica em neonatos → impossibilidade de ventilar. Trate com succinilcolina ou naloxona. Administração lenta minimiza risco.
+          </div>
+
+          <div class="sh sh-red">Morfina</div>
+          <div class="dr dr-r"><div class="dn"><strong>IV analgesia</strong></div><div class="dc"><div class="dv">0,05–0,1 mg/kg</div><div class="dd">Titular lentamente</div></div></div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Metabolismo da morfina em 1–12 meses:</strong> glucuronidação aumentada → maior produção de morfina-6-glucuronídeo (M6G, ativa) → efeito prolongado e impredizível. Usar com cautela e monitorar depressão respiratória.
+          </div>
+
+          <div class="sh sh-red">Remifentanil</div>
+          <div class="dr dr-r"><div class="dn"><strong>Infusão</strong></div><div class="dc"><div class="dv">0,05–0,3 mcg/kg/min</div><div class="dd">Mesma FK do adulto (hidrólise esterase)</div></div></div>
+          <div class="alert a-teal" style="margin-top:8px">
+            <strong>Farmacocinética:</strong> remifentanil é degradado por esterases plasmáticas não-específicas, que têm atividade madura desde o nascimento → T½ de 3–4 minutos em qualquer faixa etária, incluindo neonatos. É o único opioide com FK verdadeiramente igual ao adulto em pediatria.
+          </div>
+
+          <div class="sh sh-orange">Tramadol</div>
+          <div class="dr dr-y"><div class="dn"><strong>IV lento</strong><small>&gt;1 ano</small></div><div class="dc"><div class="dv">1–2 mg/kg IV</div><div class="dd">Em 15 min; NÃO usar &lt;1 ano</div></div></div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>ANVISA / FDA:</strong> Tramadol e codeína são <strong>contraindicados em &lt;12 anos</strong> para uso ambulatorial (2018) — risco de depressão respiratória grave em metabolizadores ultrarrápidos de CYP2D6. Em ambiente hospitalar com monitorização, uso até &gt;1 ano sob vigilância é aceito em protocolos de alguns centros.
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-green"><div class="card-num">04</div>ANESTÉSICOS LOCAIS PEDIÁTRICOS</div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>Atenção especial:</strong> Ligação proteica menor em neonatos e lactentes → fração livre maior → limiar de toxicidade reduzido. Doses máximas devem ser calculadas por peso e administradas lentamente com aspiração antes de cada injeção.
+          </div>
+          <div class="sh sh-green">Doses Máximas por Faixa Etária</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--green);color:white"><th>AL</th><th>&lt;6 meses</th><th>6m–3 anos</th><th>&gt;3 anos</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td>Lidocaína simples</td><td>4 mg/kg</td><td>5 mg/kg</td><td>5–7 mg/kg</td><td>Sem adrenalina: 4 mg/kg</td></tr>
+              <tr><td>Lidocaína c/ adren.</td><td>5 mg/kg</td><td>6 mg/kg</td><td>7 mg/kg</td><td>Adrenalina: 5 mcg/kg máx</td></tr>
+              <tr><td>Bupivacaína</td><td>1,5 mg/kg</td><td>2 mg/kg</td><td>2–2,5 mg/kg</td><td>NUNCA IV (cardiotoxicidade)</td></tr>
+              <tr><td>Ropivacaína</td><td>2 mg/kg</td><td>2,5 mg/kg</td><td>3 mg/kg</td><td>Menos cardiotóxica que bupi</td></tr>
+              <tr><td>Levobupivacaína</td><td>2 mg/kg</td><td>2,5 mg/kg</td><td>2,5–3 mg/kg</td><td>Perfil segurança > racêmica</td></tr>
+            </tbody>
+          </table></div>
+          <div class="alert a-blue" style="margin-top:10px">
+            <strong>Bloqueios regionais pediátricos:</strong> Raquianestesia (neonatos prematuro para hérnia inguinal), bloqueio caudal (procedimentos urológicos/perineais — dose única 0,5–1 mL/kg bupi 0,25%), bloqueio de nervo ilioinguinal, TAP block, bloqueio peniano são os mais comuns em pediatria.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-gold"><div class="card-num">05</div>PRÉ-MEDICAÇÃO PEDIÁTRICA (MPA)</div>
+        <div class="card-body">
+          <div class="sh sh-gold">Midazolam — Padrão Ouro MPA</div>
+          <div class="dr dr-y"><div class="dn"><strong>Via oral</strong><small>1–5 anos</small></div><div class="dc"><div class="dv">0,4–0,5 mg/kg VO</div><div class="dd">Máx 15 mg; 30–60 min antes</div></div></div>
+          <div class="dr dr-y"><div class="dn"><strong>Intranasal</strong></div><div class="dc"><div class="dv">0,2–0,3 mg/kg IN</div><div class="dd">5 mg/mL; onset 10–15 min</div></div></div>
+          <div class="dr dr-y"><div class="dn"><strong>Retal</strong></div><div class="dc"><div class="dv">0,3–0,5 mg/kg PR</div><div class="dd">Via alternativa lactentes</div></div></div>
+          <div class="dr dr-y"><div class="dn"><strong>IV</strong></div><div class="dc"><div class="dv">0,05–0,1 mg/kg IV</div><div class="dd">Titulado; pós-acesso venoso</div></div></div>
+
+          <div class="sh sh-teal">Dexmedetomidina Intranasal</div>
+          <div class="dr dr-t"><div class="dn"><strong>Intranasal</strong></div><div class="dc"><div class="dv">0,5–2 mcg/kg IN</div><div class="dd">Onset 30–45 min; sem amargura</div></div></div>
+          <div class="alert a-teal" style="margin-top:8px">
+            <strong>Vantagens:</strong> Sem amargura oral (vs midazolam), sedação leve, crianças que recusam oral. Menor depressão respiratória. Custo maior. Exige atomizador nasal.
+          </div>
+
+          <div class="sh sh-violet">Cetamina IM — Última Linha</div>
+          <div class="dr dr-v"><div class="dn"><strong>Pré-med IM</strong><small>Criança inconsolável</small></div><div class="dc"><div class="dv">2–3 mg/kg IM</div><div class="dd">+ Atropina 0,02 mg/kg IM</div></div></div>
+
+          <div class="sh sh-gold">Indicações por Faixa Etária</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--gold);color:var(--navy)"><th>Faixa</th><th>Indicação MPA</th><th>Melhor opção</th></tr></thead>
+            <tbody>
+              <tr><td>&lt;6 meses</td><td>Rara — geralmente desnecessário</td><td>—</td></tr>
+              <tr><td>6m–1 ano</td><td>Separação pais causa estresse</td><td>Midazolam intranasal</td></tr>
+              <tr><td>1–5 anos</td><td>Alta ansiedade separação — MPA INDICADA</td><td>Midazolam VO 0,4–0,5 mg/kg</td></tr>
+              <tr><td>5–12 anos</td><td>Seletiva — depende da criança</td><td>Midazolam VO + preparo psicológico</td></tr>
+              <tr><td>&gt;12 anos</td><td>Como adulto — individualizar</td><td>Midazolam VO ou IV</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-red"><div class="card-num">06</div>TABELA REFERÊNCIA — DOSES EMERGÊNCIA</div>
+        <div class="card-body">
+          <div class="sh sh-red">Drogas de Emergência por Peso</div>
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr style="background:var(--red);color:white"><th style="white-space:nowrap">Droga</th><th>Dose</th><th>5 kg</th><th>10 kg</th><th>20 kg</th><th>30 kg</th></tr></thead>
+            <tbody>
+              <tr><td>Adrenalina IV PCR</td><td>0,01 mg/kg</td><td>0,05 mg</td><td>0,1 mg</td><td>0,2 mg</td><td>0,3 mg</td></tr>
+              <tr><td>Atropina bradicardia</td><td>0,02 mg/kg</td><td>0,1 mg*</td><td>0,2 mg</td><td>0,4 mg</td><td>0,5 mg**</td></tr>
+              <tr><td>Adrenalina IM anafilaxia</td><td>0,01 mg/kg</td><td>0,05 mg</td><td>0,1 mg</td><td>0,2 mg</td><td>0,3 mg</td></tr>
+              <tr><td>Succinilcolina IV</td><td>2 mg/kg (&lt;2a) / 1,5 mg/kg</td><td>10 mg</td><td>15 mg</td><td>30 mg</td><td>45 mg</td></tr>
+              <tr><td>Rocurônio RSI</td><td>1,2 mg/kg</td><td>6 mg</td><td>12 mg</td><td>24 mg</td><td>36 mg</td></tr>
+              <tr><td>Dantrolene HM</td><td>2,5 mg/kg</td><td>12,5 mg</td><td>25 mg</td><td>50 mg</td><td>75 mg</td></tr>
+              <tr><td>Glicose hipoglicemia SG10%</td><td>2 mL/kg</td><td>10 mL</td><td>20 mL</td><td>40 mL</td><td>60 mL</td></tr>
+              <tr><td>Propofol laringoespasmo</td><td>0,5–1 mg/kg</td><td>5 mg</td><td>10 mg</td><td>20 mg</td><td>30 mg</td></tr>
+              <tr><td>Naloxona</td><td>0,01 mg/kg</td><td>0,05 mg</td><td>0,1 mg</td><td>0,2 mg</td><td>0,3 mg</td></tr>
+            </tbody>
+          </table></div>
+          <p style="font-size:10px;color:var(--muted);margin-top:4px">* Atropina dose mínima: 0,1 mg (atropina sub-terapêutica pode causar bradicardia paradoxal) | ** Dose máxima 0,5 mg em crianças</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABA 5 — TÉCNICA E INDUÇÃO -->
+  <div id="ped-tecnica" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-blue"><div class="card-num">01</div>AVALIAÇÃO PRÉ-OPERATÓRIA PEDIÁTRICA</div>
+        <div class="card-body">
+
+          <div class="sh sh-blue">IVAS — Infecção de Vias Aéreas Superiores</div>
+          <div class="alert a-orange">
+            <strong>Dilema clássico em pediatria:</strong> Crianças têm 6–10 episódios de IVAS por ano. Até 50% das cirurgias eletivas pediátricas são agendadas com IVAS ativa ou recente. Quando adiar?
+          </div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--orange);color:white"><th>Situação</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td>IVAS leve (coriza clara, sem febre)</td><td>PROSSEGUIR — risco vs benefício; cirurgia eletiva simples pode ser realizada</td></tr>
+              <tr><td>IVAS moderada (febre ≤38,5°C, coriza purulenta, tosse)</td><td>ADIAR 2–4 semanas se eletiva; avaliar urgência</td></tr>
+              <tr><td>IVAS grave (sibilos, febre &gt;38,5°C, comprometimento pulmonar)</td><td>ADIAR 4–6 semanas; risco laringoespasmo e broncoespasmo muito alto</td></tr>
+              <tr><td>Período reatividade VA após IVAS</td><td>Hiper-reatividade persiste 4–6 semanas pós-resolução; informar famílias</td></tr>
+            </tbody>
+          </table></div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>Fatores de alto risco para complicações respiratórias na IVAS:</strong> Uso de tubo orotraqueal (vs MLA ou máscara), &lt;1 ano, exposição ao tabagismo passivo, cirurgia de via aérea, asma concomitante, prematuridade.
+          </div>
+
+          <div class="sh sh-red">Prematuridade e Risco de Apneia Pós-Anestésica</div>
+          <div class="alert a-red">
+            <strong>Apneia pós-anestésica:</strong> prematuros e ex-prematuros têm risco elevado de apneia (pausa &gt;15s ou episódio de bradipneia + dessaturação) nas primeiras 12–24h pós-anestesia geral, por imaturidade do centro respiratório.<br><br>
+            <strong>Critério de risco:</strong> Idade pós-concepcional (IPC = IG ao nascer + semanas de vida) &lt;60 semanas = alto risco.<br>
+            <strong>Conduta:</strong> Monitorização cardiorrespiratória por 12–24h pós-anestesia. Cafeína profilática (10 mg/kg IV/VO) reduz risco. Para IPC &lt;44 semanas: internação obrigatória.
+          </div>
+
+          <div class="sh sh-violet">Cardiopatia Congênita — Estratificação</div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">Crianças com cardiopatia congênita têm risco anestésico elevado, dependendo da complexidade. Sempre contatar cardiologista pediátrico antes de cirurgia não-cardíaca.</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--violet);color:white"><th>Complexidade</th><th>Exemplos</th><th>Risco</th></tr></thead>
+            <tbody>
+              <tr><td>Baixa</td><td>CIV pequena, CIA pequena, PCA pequena, CIA fossa oval</td><td>Baixo — manejo padrão com cuidados básicos</td></tr>
+              <tr><td>Moderada</td><td>CIV moderada, CIA moderada, Tetralogia de Fallot corrigida</td><td>Moderado — cardioanestesista ideal</td></tr>
+              <tr><td>Alta</td><td>Cardiopatia cianótica não corrigida, shunts significativos, HPPN</td><td>Alto — centro especializado obrigatório</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-green"><div class="card-num">02</div>JEJUM PEDIÁTRICO — REGRA 6-4-2 (ATUALIZADA)</div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Diretriz ESAIC 2022 e SBA 2023:</strong> Liberação progressiva do jejum, especialmente de líquidos claros, com evidências de que jejum prolongado aumenta insulinorresistência, hipoglicemia, agitação pré-operatória e piora outcomes.
+          </div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--green);color:white"><th>Alimento/Líquido</th><th>Jejum Mínimo</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td>Líquidos claros* (água, suco sem polpa, chá, isotônico)</td><td><strong>1–2h</strong></td><td>ESAIC 2022: 1h; SBA atual: 2h; Verificar protocolo local</td></tr>
+              <tr><td>Leite materno</td><td><strong>4h</strong></td><td>Digestão mais rápida que fórmula</td></tr>
+              <tr><td>Leite de fórmula / leite de vaca</td><td><strong>6h</strong></td><td>Maior conteúdo proteico e gorduroso</td></tr>
+              <tr><td>Sólidos leves (tostada, biscoito)</td><td><strong>6h</strong></td><td>Esvaziamento gástrico parcial</td></tr>
+              <tr><td>Refeição principal / sólidos com gordura</td><td><strong>8h</strong></td><td>Carne, frituras, alimentos pesados</td></tr>
+            </tbody>
+          </table></div>
+          <p style="font-size:10px;color:var(--muted);margin-top:4px">* Líquidos claros = sem partículas, sem gordura, sem álcool. Excluem: leite, suco com polpa, bebidas com álcool.</p>
+
+          <div class="alert a-blue" style="margin-top:10px">
+            <strong>Hipoglicemia no jejum pediátrico:</strong> Neonatos e lactentes &lt;6 meses têm risco de hipoglicemia com jejum &gt;4h por estoques de glicogênio reduzidos. Verificar glicemia capilar pré-operatória em &lt;6 meses e iniciar SG 1–2% IV se glicemia &lt;60 mg/dL ou jejum prolongado inadvertido.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-teal"><div class="card-num">03</div>PREPARO PSICOLÓGICO E PRÉ-MEDICAÇÃO</div>
+        <div class="card-body">
+          <div class="sh sh-teal">Presença dos Pais na Indução (PPIA)</div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">A presença dos pais na sala de indução é benéfica para crianças de 1–8 anos quando: os pais são orientados sobre seu papel, estão calmos e cooperativos, e a equipe aceita e está preparada. Não reduz ansiedade da criança de forma significativa isoladamente — o preparo combinado (MPA + PPIA + distração) é mais eficaz.</p>
+          <div class="g2">
+            <div class="result-box">
+              <div class="result-label">BENEFÍCIO PPIA</div>
+              <div class="result-value" style="font-size:14px">1–8 anos</div>
+              <div class="result-detail">Faixa com maior benefício</div>
+            </div>
+            <div class="result-box">
+              <div class="result-label">PAI/MÃE ANSIOSO</div>
+              <div class="result-value" style="font-size:14px">Contraindicado</div>
+              <div class="result-detail">Transmite ansiedade à criança</div>
+            </div>
+          </div>
+
+          <div class="sh sh-gold">Estratégias de Distração</div>
+          <ul class="ck-list">
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Máscara anestésica colorida ou aromatizada (baunilha, morango) para crianças 2–6 anos <span class="ck-sub">Reduz recusa e luta durante indução</span></div>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Tablet/celular com vídeo favorito durante TIVA em acesso venoso <span class="ck-sub">Distração poderosa em 3–8 anos</span></div>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">EMLA creme aplicado 60 min antes em possíveis sítios de punção <span class="ck-sub">Oclusivo adesivo; dorso mão bilateral</span></div>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box ck-chk">✓</div>
+              <div class="ck-text">Clown hospitalar / brinquedo favorito permitido na indução <span class="ck-sub">Evidência moderada de redução de ansiedade</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-pink"><div class="card-num">04</div>INDUÇÃO INALATÓRIA — PADRÃO PEDIÁTRICO</div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>Quando usar indução inalatória?</strong> Criança sem acesso venoso pré-operatório (maioria dos casos em &lt;6 anos), recusa de acesso, ou preferência por evitar punção acordado.
+          </div>
+
+          <div class="sh sh-pink">Protocolo de Indução Inalatória com Sevoflurano</div>
+          <ol class="proto-steps">
+            <li class="proto-step"><span class="sn sn-b">1</span><span><strong>Preparação:</strong> Máscara colorida/aromatizada; pré-oxigenação lúdica; oxímetro e monitor cardíaco posicionados com mínima perturbação</span></li>
+            <li class="proto-step"><span class="sn sn-b">2</span><span><strong>Início:</strong> Sevoflurano 4–8% + O₂ 100%; fluxo de gás fresco 6–8 L/min; aproximar máscara gradualmente</span></li>
+            <li class="proto-step"><span class="sn sn-b">3</span><span><strong>Monitoramento:</strong> SpO₂ contínuo, FC, movimentos respiratórios, abertura mandibular progressiva</span></li>
+            <li class="proto-step"><span class="sn sn-v">4</span><span><strong>Stage II (excitação):</strong> Estrídos, movimentos, apneia transitória são normais — ESTÍMULO MÍNIMO, não tentar laringo ou IV ainda; manter máscara firmemente</span></li>
+            <li class="proto-step"><span class="sn sn-g">5</span><span><strong>Stage III (cirúrgico):</strong> Mandíbula relaxa, globos fixos, respiração regular e profunda — punção venosa agora sem dor</span></li>
+            <li class="proto-step"><span class="sn sn-g">6</span><span><strong>Acesso venoso:</strong> Após inconsciência: cateter IV sem pressa; reduzir sevo para 2–3% manutenção</span></li>
+            <li class="proto-step"><span class="sn sn-g">7</span><span><strong>BNM + IOT ou MLA:</strong> Propofol 1–2 mg/kg IV para aprofundar + BNM se necessário; intubar</span></li>
+          </ol>
+
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Agitação no despertar (Emergence Delirium):</strong> Incidência 10–30% após sevoflurano em pré-escolares. Manifestações: agitação inconsolável, choro, movimentos incontroláveis nos primeiros 20–30 min pós-operatório — sem resposta a estímulos.<br>
+            <strong>Tratamento:</strong> Fentanil 0,5–1 mcg/kg IV, propofol 0,5 mg/kg IV ou dexmedetomidina 0,3–0,5 mcg/kg IV lento. Profilaxia: dexmedetomidina 0,3 mcg/kg ao final cirurgia ou troca para TIVA.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-navy"><div class="card-num">05</div>INDUÇÃO IV, MANUTENÇÃO E VENTILAÇÃO</div>
+        <div class="card-body">
+          <div class="sh sh-navy">Indução IV (criança com acesso pré-operatório)</div>
+          <div class="dr dr-b"><div class="dn"><strong>Propofol</strong><small>Padrão</small></div><div class="dc"><div class="dv">2,5–3,0 mg/kg IV</div><div class="dd">Lento 30–60s; dor à injeção</div></div></div>
+          <div class="dr dr-v"><div class="dn"><strong>Cetamina + Propofol</strong><small>Combinação segura</small></div><div class="dc"><div class="dv">Keta 1 mg/kg + Prop 1 mg/kg</div><div class="dd">Menor hipotensão; analgesia</div></div></div>
+          <div class="alert a-blue" style="margin-top:8px">
+            <strong>Dor à injeção de propofol:</strong> muito prevalente em veias pequenas/distais. Prevenção: lidocaína 0,5 mg/kg IV 60 segundos antes com torniquete, ou misturar lidocaína na seringa (1 mg/10 mg propofol), ou usar veia antecubital mais calibrosa.
+          </div>
+
+          <div class="sh sh-navy">Manutenção Anestésica</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--navy);color:white"><th>Modalidade</th><th style="white-space:nowrap">Agente</th><th>Dose</th><th>Indicação preferencial</th></tr></thead>
+            <tbody>
+              <tr><td>Inalatória</td><td>Sevoflurano</td><td>1,5–2,5 CAM</td><td>Qualquer faixa etária</td></tr>
+              <tr><td>TIVA</td><td>Propofol + Remifentanil</td><td>Prop 6–12 mg/kg/h + Remi 0,1–0,3 mcg/kg/min</td><td>&gt;3 anos, HM, PONV++</td></tr>
+              <tr><td>Balanceada</td><td>Sevo + Fentanil</td><td>Sevo 1–1,5 CAM + Fent 1–2 mcg/kg/h</td><td>Mais comum na prática</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-teal">Ventilação Mecânica Protetora Pediátrica</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--teal);color:white"><th>Parâmetro</th><th>Valor Alvo</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td>Volume corrente (VC)</td><td>6–7 mL/kg</td><td>Peso ideal ou estimado</td></tr>
+              <tr><td>PEEP</td><td>4–5 cmH₂O</td><td>Mantém CRF, previne atelectasia</td></tr>
+              <tr><td>Pressão de platô</td><td>&lt;28–30 cmH₂O</td><td>Barotrauma em pulmões pequenos</td></tr>
+              <tr><td>FR — neonato</td><td>35–45 ipm</td><td>Evitar hiperventilação (HipoCapnia → vasoconstrição cerebral)</td></tr>
+              <tr><td>FR — lactente</td><td>25–35 ipm</td><td>—</td></tr>
+              <tr><td>FR — pré-escolar</td><td>20–25 ipm</td><td>—</td></tr>
+              <tr><td>FR — escolar</td><td>15–20 ipm</td><td>—</td></tr>
+              <tr><td>FiO₂ inicial</td><td>100% → reduzir</td><td>Em neonatos: FiO₂ mínima eficaz; O₂ excessivo prejudicial</td></tr>
+              <tr><td>ETCO₂ alvo</td><td>35–45 mmHg</td><td>30–35 em HPPN; 40–50 em broncoespasmo</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-green"><div class="card-num">06</div>FLUIDOS, HIPOTERMIA E DESPERTAR</div>
+        <div class="card-body">
+          <div class="sh sh-green">Fluidos Intraoperatórios — Regra 4-2-1</div>
+          <div class="alert a-green">
+            <strong>Regra 4-2-1 (manutenção):</strong><br>
+            • 4 mL/kg/h para os primeiros 10 kg<br>
+            • + 2 mL/kg/h para cada kg entre 10–20 kg<br>
+            • + 1 mL/kg/h para cada kg acima de 20 kg
+          </div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--green);color:white"><th>Peso (kg)</th><th>Taxa de manutenção (mL/h)</th></tr></thead>
+            <tbody>
+              <tr><td>5 kg (neonato)</td><td>20 mL/h (4×5)</td></tr>
+              <tr><td>10 kg (lactente)</td><td>40 mL/h (4×10)</td></tr>
+              <tr><td>15 kg</td><td>50 mL/h (40 + 2×5)</td></tr>
+              <tr><td>20 kg</td><td>60 mL/h (40 + 2×10)</td></tr>
+              <tr><td>30 kg</td><td>70 mL/h (60 + 1×10)</td></tr>
+              <tr><td>40 kg</td><td>80 mL/h (60 + 1×20)</td></tr>
+            </tbody>
+          </table></div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Fluido de reposição:</strong> Ringer Lactato ou Plasmalyte (isotônicos balanceados) para reposição de perdas cirúrgicas. <strong>Evitar SF 0,9% em volumes &gt;20 mL/kg</strong> — acidose hiperclorêmica em neonatos.<br>
+            <strong>Vigilância de hipoglicemia:</strong> Neonatos e lactentes &lt;3 meses: adicionar SG 1–2% ao Ringer Lactato + monitorar glicemia a cada 1–2h.
+          </div>
+
+          <div class="sh sh-orange">Despertar e Recuperação</div>
+          <ol class="proto-steps">
+            <li class="proto-step"><span class="sn sn-g">1</span><span><strong>Reverter BNM:</strong> Sugammadex 2–4 mg/kg (rocurônio) ou neostigmina 0,05 mg/kg + atropina 0,02 mg/kg (benzilisoquinolínicos)</span></li>
+            <li class="proto-step"><span class="sn sn-g">2</span><span><strong>Critérios para extubação:</strong> Acordado/respondendo, TO &gt;90%, FR regular, reflexos de via aérea presentes, força muscular (sustenta cabeça 5s em &gt;2a)</span></li>
+            <li class="proto-step"><span class="sn sn-b">3</span><span><strong>Extubação em criança:</strong> Considerar extubação profunda em crianças sem risco de aspiração para evitar laringoespasmo (controverso — só por anestesista experiente)</span></li>
+            <li class="proto-step"><span class="sn sn-g">4</span><span><strong>Analgesia pós-operatória:</strong> Garantir antes do despertar — paracetamol 15 mg/kg IV, dipirona 15 mg/kg IV, dipirona + morfina ou fentanil titulados</span></li>
+            <li class="proto-step"><span class="sn sn-b">5</span><span><strong>SRPA:</strong> Manter O₂ suplementar, SpO₂ contínuo, FC, tempertura. Alerta para emergence delirium, laringoespasmo e broncoespasmo pós-extubação</span></li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABA 6 — SITUAÇÕES ESPECIAIS E EMERGÊNCIAS -->
+  <div id="ped-situacoes" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-red"><div class="card-num">01</div>LARINGOESPASMO PEDIÁTRICO</div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>Epidemiologia:</strong> Laringoespasmo é 2–4× mais frequente em crianças que adultos. Pico de incidência em 1–3 anos. Maior risco: indução/extubação, especialmente com sevoflurano, e em crianças com IVAS ativa ou recente, tabagismo passivo no domicílio, irritação de via aérea por sangue/secreção.
+          </div>
+
+          <div class="sh sh-red">Fisiopatologia e Reconhecimento</div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">Laringoespasmo = fechamento reflexo das pregas vocais por estímulo sensorial da laringe (sangue, secreções, tubo, laringoscópio) durante anestesia superficial. Pode ser parcial (estridor) ou total (silêncio absoluto).</p>
+
+          <div class="g3">
+            <div class="algo-box algo-y">
+              <div class="algo-title">PARCIAL</div>
+              Estridor alto-agudo, esforço respiratório, SpO₂ caindo lentamente
+            </div>
+            <div class="algo-box algo-r">
+              <div class="algo-title">TOTAL</div>
+              Silêncio absoluto, retrações graves, SpO₂ caindo rapidamente, cianose
+            </div>
+            <div class="algo-box algo-r">
+              <div class="algo-title">ALARME</div>
+              Bradicardia sinusal → sinal de hipóxia grave → AGIR IMEDIATAMENTE
+            </div>
+          </div>
+
+          <div class="sh sh-orange">Protocolo de Tratamento — Laringoespasmo</div>
+          <ol class="proto-steps">
+            <li class="proto-step"><span class="sn sn-t">1</span><span><strong>CHAMAR AJUDA</strong> imediatamente — é emergência</span></li>
+            <li class="proto-step"><span class="sn sn-t">2</span><span><strong>O₂ 100% + CPAP com máscara</strong> bem vedada — pressão positiva contínua 10–20 cmH₂O; muitas vezes resolve espasmo parcial</span></li>
+            <li class="proto-step"><span class="sn sn-t">3</span><span><strong>Manobra de Larson:</strong> dedos médios/indicadores em notch retromandibular (espaço posterior ao ramo da mandíbula, anterior ao processo mastoide) + pressão firme + jaw thrust — estimula abertura reflexa da laringe</span></li>
+            <li class="proto-step"><span class="sn sn-b">4</span><span><strong>Aprofundar anestesia:</strong> Propofol 0,5–1 mg/kg IV se acesso disponível — relaxa musculatura laríngea sem bloqueio completo</span></li>
+            <li class="proto-step"><span class="sn sn-r">5</span><span><strong>Succinilcolina:</strong> SpO₂ &lt;85% não responsivo → <strong>Sux 0,5–2 mg/kg IV</strong> (ou 4 mg/kg IM se sem acesso) → relaxamento imediato → ventilar com máscara</span></li>
+            <li class="proto-step"><span class="sn sn-r">6</span><span><strong>IOT:</strong> Apenas se não consegue ventilar com máscara após succinilcolina</span></li>
+            <li class="proto-step"><span class="sn sn-g">7</span><span><strong>Atropina:</strong> 0,02 mg/kg IV se bradicardia sinusal — sinal de hipóxia, não apenas vagal</span></li>
+          </ol>
+
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Prevenção:</strong> Extubação no momento correto (profundo ou totalmente acordado, nunca superficial), sucção de sangue/secreções antes de extubação, lidocaína tópica na laringe antes de extubação, sevoflurano até o último momento antes de retirar o tubo.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-orange"><div class="card-num">02</div>BRONCOESPASMO INTRAOPERATÓRIO</div>
+        <div class="card-body">
+          <div class="sh sh-orange">Diagnóstico Diferencial — Obstrução Expiratória Intraoperatória</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--orange);color:white"><th>Condição</th><th>Característica</th><th>Diagnóstico</th></tr></thead>
+            <tbody>
+              <tr><td>Broncoespasmo</td><td>Sibilos expiratórios, aumento P inspiratória, capnograma inclinado</td><td>Ausculta + capnograma "tubo inclinado"</td></tr>
+              <tr><td>IOT endobrônquica</td><td>Assimetria de sons, SpO₂ caindo</td><td>Retirar TOT 1–2 cm + ausculta bilateral</td></tr>
+              <tr><td>Laringoespasmo</td><td>Estridor, obstrução inspiratória predominante</td><td>Visualização direta ou por laringoscopia</td></tr>
+              <tr><td>Pneumotórax</td><td>Assimetria ausculta, desvio mediastinal, hipotensão</td><td>Rx tórax ou ecografia + descompressão</td></tr>
+              <tr><td>Obstrução mecânica</td><td>Dobra do TOT, secreção espessa</td><td>Sondagem do TOT + cuff deflacionado</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-orange">Tratamento do Broncoespasmo</div>
+          <ol class="proto-steps">
+            <li class="proto-step"><span class="sn sn-b">1</span><span><strong>Excluir causas mecânicas:</strong> IOT endobrônquica, dobra do TOT, secreção — resolver primeiro</span></li>
+            <li class="proto-step"><span class="sn sn-b">2</span><span><strong>Aprofundar anestesia:</strong> Sevoflurano 3–4% (broncodilatador potente) ou propofol bolus 1 mg/kg</span></li>
+            <li class="proto-step"><span class="sn sn-b">3</span><span><strong>Salbutamol inalatório:</strong> 4–8 puffs via câmara espaçadora no circuito; repetir a cada 20 min</span></li>
+            <li class="proto-step"><span class="sn sn-b">4</span><span><strong>Cetamina IV:</strong> 0,5–1 mg/kg — broncodilatador por mecanismo simpatomimético</span></li>
+            <li class="proto-step"><span class="sn sn-r">5</span><span><strong>Grave/refratário:</strong> Adrenalina 0,01 mg/kg IV lento ou sulfato de magnésio 25–50 mg/kg IV (máx 2g) em 20 min</span></li>
+            <li class="proto-step"><span class="sn sn-b">6</span><span><strong>Ventilação:</strong> I:E = 1:4 a 1:5, FR baixa, PEEP mínimo, permissive hypercapnia (CO₂ 55–70 mmHg tolerável)</span></li>
+            <li class="proto-step"><span class="sn sn-g">7</span><span><strong>Hidrocortisona:</strong> 2 mg/kg IV — efeito tardio 4–6h, previne fase tardia</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-red"><div class="card-num">03</div>BRADICARDIA PEDIÁTRICA — EMERGÊNCIA REAL</div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>NUNCA subestime bradicardia em pediatria.</strong> DC = FC × VS. Em crianças, VS é praticamente fixo → qualquer queda de FC = queda proporcional de débito cardíaco. Bradicardia sinusal em lactente = emergência cardiovascular.
+          </div>
+
+          <div class="sh sh-red">Causas por Prioridade</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--red);color:white"><th>Causa</th><th>Frequência</th><th>Confirmação</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Hipóxia</strong> ← PRIMEIRA CAUSA</td><td>Mais comum</td><td>SpO₂, ETCO₂, visualizar VA</td></tr>
+              <tr><td>Hipercapnia</td><td>Comum</td><td>ETCO₂ &gt;55 mmHg</td></tr>
+              <tr><td>Reflexo vagal (laringoscopia, tração peritoneal)</td><td>Comum</td><td>Contexto clínico</td></tr>
+              <tr><td>Hipotermia</td><td>Comum em neonatos</td><td>Temperatura esofágica/retal</td></tr>
+              <tr><td>Drogas (neostigmina, opioides altos, dexmedetomidina)</td><td>Iatrogênica</td><td>Histórico farmacológico</td></tr>
+              <tr><td>Hipertonia vagal intrínseca (lactente)</td><td>Fisiológica</td><td>Exclusão de outras causas</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-orange">Algoritmo Bradicardia Pediátrica Intraoperatória</div>
+          <ol class="proto-steps">
+            <li class="proto-step"><span class="sn sn-r">1</span><span><strong>CHECAR HIPÓXIA → O₂ 100% + ventilar manualmente</strong> — sempre primeiro passo. SpO₂ + ETCO₂ + ausculta</span></li>
+            <li class="proto-step"><span class="sn sn-r">2</span><span><strong>Interromper estímulo cirúrgico</strong> se bradicardia vagal (tração mesentério, ocular, laringo)</span></li>
+            <li class="proto-step"><span class="sn sn-b">3</span><span><strong>Atropina 0,02 mg/kg IV/IO</strong> (mín 0,1 mg / máx 0,5 mg) — dose sub-terapêutica paradoxalmente agrava bradicardia</span></li>
+            <li class="proto-step"><span class="sn sn-r">4</span><span><strong>FC &lt; 60 bpm + hipotensão refratária:</strong> ADRENALINA 0,01 mg/kg IV/IO — não aguardar atropina agir</span></li>
+            <li class="proto-step"><span class="sn sn-r">5</span><span><strong>Ausência de pulso (PCR):</strong> RCP — 15 compressões: 2 ventilações (2 operadores) ou 30:2 (1 operador); adrenalina a cada 3–5 min</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-orange"><div class="card-num">04</div>HIPERTERMIA MALIGNA (HM)</div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>Emergência anestésica com mortalidade &gt;70% sem tratamento → &lt;5% com dantrolene precoce.</strong> Incidência: 1:10.000–50.000 anestesias. Mais frequente em crianças e adultos jovens. Herança autossômica dominante (penetrância variável) — mutação do receptor rianodina 1 (RYR1) em 70% dos casos.
+          </div>
+
+          <div class="sh sh-red">Fisiopatologia</div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px">Mutação RYR1 → canal de Ca++ do retículo sarcoplasmático defeituoso → gatilhos (halogenados + succinilcolina) → liberação descontrolada de Ca++ intracelular → contração muscular contínua → hipermetabolismo → produção de CO₂, H⁺, K⁺ → rabdomiólise → insuficiência de múltiplos órgãos.</p>
+
+          <div class="sh sh-orange">Sinais Clínicos — Evolução Temporal</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr style="background:var(--orange);color:white"><th>Sinal</th><th>Precoce?</th><th>Especificidade</th></tr></thead>
+            <tbody>
+              <tr><td><strong>ETCO₂ crescente sem causa</strong></td><td><span class="tag tg">PRECOCE</span></td><td>Primeiro sinal em 80% dos casos</td></tr>
+              <tr><td>Taquicardia sinusal</td><td><span class="tag tg">PRECOCE</span></td><td>Baixa — diferencial com dor, anestesia superficial</td></tr>
+              <tr><td>Rigidez muscular (especialmente masseter)</td><td><span class="tag tg">PRECOCE</span></td><td>Alta se generalizada + gatilho</td></tr>
+              <tr><td>SpO₂ caindo (inadequação DO₂/VO₂)</td><td>Intermediário</td><td>—</td></tr>
+              <tr><td>Instabilidade hemodinâmica</td><td>Intermediário</td><td>—</td></tr>
+              <tr><td><strong>Hipertermia (>39°C)</strong></td><td><span class="tag tr">TARDIO</span></td><td>Alta quando presente, mas sinal tardio</td></tr>
+              <tr><td>Acidose mista, hipercalemia, mioglobinúria</td><td>Tardio</td><td>Gasometria + EEG urinário</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-red">PROTOCOLO DE EMERGÊNCIA HM</div>
+          <ol class="proto-steps">
+            <li class="proto-step"><span class="sn sn-r">1</span><span><strong>SUSPENDER HALOGENADO + SUCCINILCOLINA IMEDIATAMENTE</strong></span></li>
+            <li class="proto-step"><span class="sn sn-r">2</span><span><strong>DANTROLENE 2,5 mg/kg IV bolus</strong> → repetir a cada 5–10 min → até 10 mg/kg. Cada ampola = 20 mg em 60 mL água estéril quente (dissolver é trabalhoso — designar alguém)</span></li>
+            <li class="proto-step"><span class="sn sn-r">3</span><span><strong>Trocar circuito anestésico</strong> e vaporizador se possível; hiperventilação com O₂ 100% a 3× volume minuto (purgar halogenado residual)</span></li>
+            <li class="proto-step"><span class="sn sn-b">4</span><span><strong>Resfriamento ativo:</strong> bolsas de gelo em axilas, virilha, pescoço; SF gelado IV 15–20 mL/kg; lavagem gástrica/vesical com SF gelado se grave</span></li>
+            <li class="proto-step"><span class="sn sn-b">5</span><span><strong>Tratar complicações:</strong> bicarbonato 1–2 mEq/kg (acidose), gluconato de cálcio 30 mg/kg IV (hipercalemia sintomática), antiarrítmicos (procainamida — NÃO usar bloqueadores de canal de Ca++ com dantrolene)</span></li>
+            <li class="proto-step"><span class="sn sn-b">6</span><span><strong>Gasometria e eletrólitos</strong> seriados: pH, pCO₂, K⁺, CK a cada 30 min</span></li>
+            <li class="proto-step"><span class="sn sn-b">7</span><span><strong>Acionar UTI</strong> e transferir após estabilização; continuar dantrolene 1 mg/kg IV 6/6h × 24–48h</span></li>
+            <li class="proto-step"><span class="sn sn-g">8</span><span><strong>Suspender cirurgia</strong> se eletiva; em urgência, continuar com anestesia TIVA (propofol + opioides) sem halogenados</span></li>
+          </ol>
+
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Estoque de dantrolene:</strong> Todo serviço que usa halogenados deve ter mínimo 36 ampolas de dantrolene (720 mg) disponíveis para uma crise inicial. Temperatura alvo de resfriamento: 38,5°C — parar resfriamento ao atingir para evitar hipotermia de rebote.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-gold"><div class="card-num">05</div>HIPOGLICEMIA E PCR PEDIÁTRICA</div>
+        <div class="card-body">
+          <div class="sh sh-gold">Hipoglicemia Pediátrica</div>
+          <div class="alert a-red">
+            <strong>Definição:</strong> Glicemia &lt;60 mg/dL (neonatos e crianças). Em neonatos prematuros: glicemia &lt;45 mg/dL já é crítica.<br>
+            <strong>Sinais:</strong> Taquicardia, palidez, sudorese (mascarados pela anestesia!) → atenção a crianças em risco sem monitorização clínica adequada.
+          </div>
+          <ol class="proto-steps">
+            <li class="proto-step"><span class="sn sn-g">1</span><span><strong>Confirmar glicemia</strong> por hemoglicoteste capilar em qualquer criança de risco a cada 30–60 min</span></li>
+            <li class="proto-step"><span class="sn sn-g">2</span><span><strong>SG 10% 2 mL/kg IV</strong> em bolus lento → glicemia alvo &gt;80 mg/dL</span></li>
+            <li class="proto-step"><span class="sn sn-g">3</span><span><strong>Repetir glicemia</strong> em 15 min → manutenção com SG 10% em BIC se persistência</span></li>
+            <li class="proto-step"><span class="sn sn-b">4</span><span><strong>Neonato com hipoglicemia grave:</strong> SG 10% 5 mL/kg IV se &lt;40 mg/dL</span></li>
+          </ol>
+
+          <div class="sh sh-red">PCR Pediátrica — Pontos-Chave</div>
+          <div class="alert a-red">
+            <strong>Diferença fundamental da PCR adulto:</strong> Em crianças, PCR é quase sempre <strong>asfíxica</strong> (hipóxia como causa primária) — não cardiogênica como no adulto. Portanto, ventilação é tão ou mais importante que compressão.
+          </div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr style="background:var(--red);color:white"><th>Parâmetro</th><th>&lt;1 ano (lactente)</th><th>1–8 anos (criança)</th><th>&gt;8 anos / adolescente</th></tr></thead>
+            <tbody>
+              <tr><td>Comprimento tórax</td><td>1/3 do diâmetro AP</td><td>1/3 do diâmetro AP</td><td>5–6 cm</td></tr>
+              <tr><td>Técnica compressão</td><td>2 dedos ou abraço torácico (2 socorristas)</td><td>Calcanhar da mão</td><td>Duas mãos</td></tr>
+              <tr><td>Relação C:V (2 socorristas)</td><td>15:2</td><td>15:2</td><td>30:2</td></tr>
+              <tr><td>Adrenalina dose</td><td>0,01 mg/kg IV/IO a cada 3–5 min</td><td>0,01 mg/kg</td><td>0,01 mg/kg (máx 1mg)</td></tr>
+              <tr><td>Desfibrilação (FV/TV sem pulso)</td><td>2 J/kg → 4 J/kg → 4 J/kg</td><td>2 J/kg → 4 J/kg</td><td>150–200 J bifásico</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-navy"><div class="card-num">06</div>REFERÊNCIA RÁPIDA — ACORDEONS DE REVISÃO</div>
+        <div class="card-body">
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">▸</span><strong>Critérios para NÃO intubar — usar MLA</strong></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;margin-left:16px;font-size:12px;line-height:1.8">
+                <li>Cirurgia curta (&lt;90 min), superficial, sem risco de aspiração</li>
+                <li>Abertura bucal adequada para o tamanho da MLA</li>
+                <li>Pressão inspiratória necessária &lt;20 cmH₂O</li>
+                <li>Posição cirúrgica não compromete vedação</li>
+                <li>Sem histórico de RGE ou estômago cheio</li>
+                <li>Vantagem: menor incidência de laringoespasmo vs IOT</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">▸</span><strong>Pré-medicação — quando indicar por faixa etária</strong></div>
+            <div class="acc-body">
+              <div class="tbl-wrap"><table class="tbl">
+                <thead><tr style="background:var(--navy);color:white"><th>Faixa</th><th>Indicar MPA?</th><th>Justificativa</th></tr></thead>
+                <tbody>
+                  <tr><td>&lt;6 meses</td><td>Raramente</td><td>Sem ansiedade de separação desenvolvida</td></tr>
+                  <tr><td>6–12 meses</td><td>Seletivamente</td><td>Início de ansiedade de separação</td></tr>
+                  <tr><td>1–5 anos</td><td><strong>Sim — principal indicação</strong></td><td>Pico de ansiedade de separação</td></tr>
+                  <tr><td>5–12 anos</td><td>Seletivo</td><td>Preparo psicológico é mais eficaz</td></tr>
+                  <tr><td>&gt;12 anos</td><td>Individualizar</td><td>Como adulto; respeitar autonomia</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">▸</span><strong>Analgesia multimodal pós-operatória pediátrica</strong></div>
+            <div class="acc-body">
+              <div class="dr dr-g"><div class="dn"><strong>Paracetamol IV</strong><small>1ª linha</small></div><div class="dc"><div class="dv">15 mg/kg IV</div><div class="dd">6/6h; máx 60 mg/kg/dia; &gt;1 mês</div></div></div>
+              <div class="dr dr-g"><div class="dn"><strong>Dipirona IV</strong><small>1ª linha</small></div><div class="dc"><div class="dv">15–20 mg/kg</div><div class="dd">6/6h; &gt;3 meses; lento 15 min</div></div></div>
+              <div class="dr dr-b"><div class="dn"><strong>Ibuprofeno VO</strong><small>Pós-op leve</small></div><div class="dc"><div class="dv">10 mg/kg VO</div><div class="dd">8/8h; &gt;6 meses; com alimentação</div></div></div>
+              <div class="dr dr-r"><div class="dn"><strong>Morfina IV</strong><small>Dor moderada/intensa</small></div><div class="dc"><div class="dv">0,05–0,1 mg/kg</div><div class="dd">Titular; monitorar depressão resp.</div></div></div>
+              <div class="dr dr-v"><div class="dn"><strong>Bloqueio regional</strong><small>Padrão-ouro</small></div><div class="dc"><div class="dv">Por tipo cirurgia</div><div class="dd">Caudal, peniano, TAP, ilioinguinal</div></div></div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">▸</span><strong>Profilaxia de PONV (náusea e vômito pós-op) em crianças</strong></div>
+            <div class="acc-body">
+              <div class="alert a-violet"><strong>PONV em crianças:</strong> incidência &gt;25% sem profilaxia. Fatores de risco: &gt;3 anos, cirurgia &gt;30 min, história prévia de PONV, cinetose, uso de opioides, amigdalectomia.</div>
+              <div class="dr dr-v"><div class="dn"><strong>Dexametasona IV</strong><small>Profilaxia</small></div><div class="dc"><div class="dv">0,1–0,15 mg/kg</div><div class="dd">Máx 8 mg; na indução</div></div></div>
+              <div class="dr dr-v"><div class="dn"><strong>Ondansetrona IV</strong><small>Profilaxia/resgate</small></div><div class="dc"><div class="dv">0,1 mg/kg IV</div><div class="dd">Máx 4 mg; ao fim cirurgia</div></div></div>
+              <div class="alert a-teal" style="margin-top:8px">Combinação dexametasona + ondansetrona reduz PONV de 25% para &lt;5% em populações de alto risco. TIVA com propofol vs sevoflurano também reduz PONV.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABA 7 — CASOS CLÍNICOS -->
+  <!-- ═══ TAB: VNI PEDIÁTRICA E EMERGENCE AGITATION ═══ -->
+  <div class="tab-panel" id="ped-vni">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">VNI Pediátrica — Particularidades</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7">VNI em crianças exige interface adequada ao tamanho facial, compliance diferente dos adultos e monitorização rigorosa. Crianças &lt;2 anos têm maior risco de falha por agitação e obstrução nasal.</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Faixa etária</th><th>Interface preferida</th><th>Parâmetros iniciais</th></tr></thead>
+            <tbody>
+              <tr><td>Neonato / lactente</td><td>CPAP nasal (Hudson, máscara neonatal)</td><td>CPAP 4–6 cmH₂O, FiO₂ mínima eficaz</td></tr>
+              <tr><td>1–5 anos</td><td>Máscara oronasal pediátrica</td><td>IPAP 10–14 / EPAP 4–6 cmH₂O</td></tr>
+              <tr><td>6–12 anos</td><td>Máscara facial total ou oronasal</td><td>IPAP 12–16 / EPAP 5–8 cmH₂O</td></tr>
+              <tr><td>&gt;12 anos</td><td>Igual ao adulto</td><td>Parâmetros de adulto</td></tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">⚠ Atenção ao FiO₂ em neonatos prematuros</div>
+            Oxigênio &gt;0.4 em prematuros &lt;34 semanas → risco de retinopatia (ROP) e displasia broncopulmonar. Alvo SpO₂: 91–95% em prematuros.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--orange)">
+          <span class="card-title">Emergence Agitation (Agitação no Despertar)</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7">Emergence agitation (EA) é um estado de agitação, desorientação e inconsolabilidade no despertar pós-anestésico. Incidência: 10–80% em crianças com sevoflurano. Pico: 5–15 min após extubação. Autolimitada em maioria dos casos.</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Fator de risco</th><th>Impacto</th></tr></thead>
+            <tbody>
+              <tr><td>Sevoflurano</td><td>Principal agente associado — mais que propofol ou halotano</td></tr>
+              <tr><td>Idade 2–5 anos</td><td>Faixa de maior incidência</td></tr>
+              <tr><td>Cirurgia ORL (otorrino)</td><td>Dor intensa no pós-op imediato</td></tr>
+              <tr><td>Ansiedade pré-operatória</td><td>Agitação pré-op → EA pós-op</td></tr>
+              <tr><td>Despertar rápido</td><td>Mismatch entre recuperação motora e cognitiva</td></tr>
+            </tbody>
+          </table></div>
+
+          <div style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase">Escala PAED (Pediatric Anesthesia Emergence Delirium)</div>
+          <div class="tbl-wrap xwide"><table class="tbl" style="margin-top:4px">
+            <thead><tr><th>Item avaliado</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead>
+            <tbody>
+              <tr><td>Faz contato visual</td><td>Muito</td><td>—</td><td>Pouco</td><td>—</td><td>Nada</td></tr>
+              <tr><td>Ações propositais</td><td>Muito</td><td>—</td><td>Pouco</td><td>—</td><td>Nada</td></tr>
+              <tr><td>Consciente do ambiente</td><td>Muito</td><td>—</td><td>Pouco</td><td>—</td><td>Nada</td></tr>
+              <tr><td>Inquietude</td><td>Nada</td><td>—</td><td>Pouco</td><td>—</td><td>Muito</td></tr>
+              <tr><td>Inconsolável</td><td>Nada</td><td>—</td><td>Pouco</td><td>—</td><td>Muito</td></tr>
+            </tbody>
+          </table></div>
+          <p style="font-size:11px;color:var(--muted);margin-top:4px">PAED ≥10 = emergence delirium significativo</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--green)">
+          <span class="card-title">Prevenção e Tratamento da Emergence Agitation</span>
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Estratégia</th><th>Droga / Intervenção</th><th>Evidência</th></tr></thead>
+            <tbody>
+              <tr><td>Trocar sevoflurano por propofol no fim</td><td>Propofol 1 mg/kg IV antes de despertar</td><td>↓EA em 60% — meta-análise 2019</td></tr>
+              <tr><td>Opioide ao fim da cirurgia</td><td>Fentanil 1–2 mcg/kg IV (15 min antes do fim)</td><td>Controla dor residual → ↓EA</td></tr>
+              <tr><td>Dexmedetomidina</td><td>0.3–0.5 mcg/kg IV em 10 min (fim cirurgia)</td><td>Mais estudado e eficaz — NNT 3</td></tr>
+              <tr><td>Midazolam pré-op</td><td>0.3–0.5 mg/kg VO 20–30 min antes</td><td>Reduz ansiedade pré-op → ↓EA</td></tr>
+              <tr><td>Presença dos pais no despertar</td><td>—</td><td>Comprovado em vários RCTs pediátricos</td></tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">⚠ EA vs. Dor — Diagnóstico diferencial crítico</div>
+            Antes de sedar: <strong>excluir dor</strong> (FLACC ≥4), retenção urinária, hipoglicemia, hipoxemia. Se dor → analgesia primeiro. Se EA puro → dexmedetomidina 0.5 mcg/kg ou propofol 0.5 mg/kg.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /ped-vni -->
+
+  <!-- TAB REVISÃO — PEDIÁTRICA -->
+  <div class="tab-panel" id="ped-revisao">
+    <div class="page-wrap">
+      <div class="alert" style="background:#BE185D;color:#fff;margin-bottom:12px">
+        <strong>Revisão Rápida — 10 pontos-chave de Anestesia Pediátrica</strong>
+      </div>
+      <ol style="font-size:13px;line-height:2;padding-left:18px">
+        <li><strong>Frequência cardíaca:</strong> neonato 120–160 · lactente 100–140 · 1–2 anos 90–120 · 3–5 anos 80–100 · escolar 70–90 bpm</li>
+        <li><strong>Cálculo de dose de atropina:</strong> 0.02 mg/kg IV · dose mínima 0.1 mg (evitar bradicardia paradoxal)</li>
+        <li><strong>Tubo sem cuff até 8 anos</strong> era padrão · evidências atuais (King 2023): cuff baixa pressão aceitável em lactentes</li>
+        <li><strong>Fórmula de Cole:</strong> diâmetro tubo sem cuff = (idade/4) + 4 · com cuff: (idade/4) + 3.5</li>
+        <li><strong>Succinilcolina em pediatria:</strong> CI de rotina em &lt;8 anos (risco rabdomiólise em miopatia oculta) · usar apenas em laringospasmo grave</li>
+        <li><strong>CAM sevoflurano:</strong> neonato 3.3% · lactente 3.2% · criança 2.5% (maior que adulto!)</li>
+        <li><strong>Emergence agitation:</strong> pico 5–15 min pós-extubação · dexmedetomidina 0.5 mcg/kg previne · escala PAED ≥10 = significativo</li>
+        <li><strong>Hipoglicemia:</strong> neonato &lt;45 mg/dL · lactente/criança &lt;60 mg/dL · risco ↑em jejum prolongado</li>
+        <li><strong>Bolus de ressuscitação:</strong> 20 mL/kg cristaloide IV · repetir até 3x · se refratário → drogas vasoativas</li>
+        <li><strong>FiO₂ em prematuros:</strong> alvo SpO₂ 91–95% · FiO₂ elevada → retinopatia (ROP) + displasia broncopulmonar</li>
+      </ol>
+    </div>
+  </div><!-- /ped-revisao -->
+
+  <!-- TAB QUESTÕES — PEDIÁTRICA -->
+  <div class="tab-panel" id="ped-questoes">
+    <div class="page-wrap">
+      <div class="alert" style="background:#BE185D;color:#fff;margin-bottom:12px">
+        <strong>Questões — Anestesia Pediátrica</strong><br>
+        <span style="font-size:11px;font-weight:400">Clique em cada questão para revelar o gabarito.</span>
+      </div>
+
+      <div class="caso-card" id="caso-ped-q1">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">1</div>
+          <div class="caso-title">QUESTÃO 1 — FÓRMULA DE COLE</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Criança de 6 anos necessita de intubação orotraqueal. Usando a fórmula de Cole, qual o diâmetro correto do tubo sem cuff?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) 4,0 mm<br>B) 4,5 mm<br>C) 5,0 mm<br>D) 5,5 mm<br>E) 6,0 mm</p>
+          <div class="caso-answer"><strong>Gabarito: D)</strong> — Fórmula de Cole para tubo sem cuff: (idade/4) + 4 = (6/4) + 4 = 1,5 + 4 = 5,5 mm. Para tubo com cuff: (idade/4) + 3,5 = 5,0 mm. Sempre ter disponível um tubo 0,5 mm acima e abaixo do calculado.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px" id="caso-ped-q2">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">2</div>
+          <div class="caso-title">QUESTÃO 2 — SUCCINILCOLINA EM PEDIATRIA</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Criança de 5 anos, hígida, programada para amigdalectomia eletiva. O anestesista decide usar succinilcolina para facilitar a intubação orotraqueal. Isso é correto?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Sim — succinilcolina é o bloqueador neuromuscular de escolha em pediatria<br>B) Sim — dose de 2 mg/kg é segura em crianças<br>C) Não — contraindicada de rotina em &lt;8 anos por risco de rabdomiólise<br>D) Sim — mas apenas em crianças &gt;3 anos<br>E) Não — succinilcolina é contraindicada em todas as idades</p>
+          <div class="caso-answer"><strong>Gabarito: C)</strong> — Succinilcolina é contraindicada de rotina em crianças &lt;8 anos pelo risco de rabdomiólise e hipercalemia fatal em miopatias ocultas (ex: distrofia de Duchenne não diagnosticada). O bloqueador de escolha para IOT eletiva em pediatria é o rocurônio. Succinilcolina fica reservada para laringospasmo grave (dose IM: 4 mg/kg).</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px" id="caso-ped-q3">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">3</div>
+          <div class="caso-title">QUESTÃO 3 — CAM SEVOFLURANO</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Comparando o CAM do sevoflurano em lactente de 3 meses vs adulto de 35 anos, qual a diferença esperada?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Lactente 1.5% vs adulto 2.0% — lactente tem CAM menor<br>B) Lactente 2.5% vs adulto 2.0% — diferença pequena<br>C) Lactente 3.2% vs adulto 2.0% — lactente tem CAM maior<br>D) Iguais — CAM não varia com idade<br>E) Lactente 4.0% vs adulto 2.0% — dobro do adulto</p>
+          <div class="caso-answer"><strong>Gabarito: C)</strong> — O CAM do sevoflurano é maior em lactentes (3.2%) comparado ao adulto (2.0%). Neonatos têm CAM de 3.3%. Crianças de 1–3 anos: ~2.5%. Isso significa que lactentes precisam de concentrações maiores para alcançar plano anestésico adequado. O CAM diminui progressivamente com o envelhecimento.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px" id="caso-ped-q4">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">4</div>
+          <div class="caso-title">QUESTÃO 4 — EMERGENCE AGITATION</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Criança de 4 anos, 10 minutos após extubação pós-amigdalectomia, apresenta agitação intensa, não reconhece os pais, não consolável. Como diferenciar dor de emergence agitation (delirium)?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) EA não responde a analgesia; avaliar FLACC — se ≥4, tratar dor primeiro<br>B) EA sempre responde a opioide<br>C) Dor sempre causa febre no despertar<br>D) EA é diagnosticada apenas por exclusão após 30 min<br>E) Não há como diferenciar clinicamente</p>
+          <div class="caso-answer"><strong>Gabarito: A)</strong> — Avaliar dor pela escala FLACC: se ≥4, tratar com analgesia primeiro. Se dor tratada e agitação persiste → emergence agitation (delirium do despertar). Tratamento da EA: dexmedetomidina 0.5 mcg/kg IV ou propofol 1 mg/kg. A escala PAED ≥10 confirma EA significativa. EA é autolimitada (5–15 min) mas pode causar auto-extubação e trauma.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px" id="caso-ped-q5">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">5</div>
+          <div class="caso-title">QUESTÃO 5 — SpO₂ EM PREMATURO</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Prematuro de 32 semanas, 1,8 kg, em anestesia para cirurgia de hérnia inguinal. Qual o alvo de SpO₂ durante a anestesia?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) 99–100% — quanto maior, melhor<br>B) 96–99% — alvo de adulto<br>C) 91–95% — evitar hiperóxia<br>D) 85–90% — prematuros toleram hipóxia<br>E) Não há alvo definido para prematuros</p>
+          <div class="caso-answer"><strong>Gabarito: C)</strong> — Em prematuros, o alvo de SpO₂ é 91–95%. FiO₂ elevada causa retinopatia da prematuridade (ROP) e displasia broncopulmonar. Hipóxia (SpO₂ &lt;88%) causa lesão cerebral. O intervalo 91–95% é o equilíbrio entre os dois riscos — monitorar continuamente e ajustar FiO₂.</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /ped-questoes -->
+
+  <div id="ped-casos" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="alert a-blue">
+        <strong>Metodologia:</strong> Leia o cenário, reflita sobre as perguntas, e clique para revelar a discussão e conduta esperada. Casos baseados em situações reais de residência de anestesiologia.
+      </div>
+
+      <!-- CASO 1 -->
+      <div class="caso-card" id="caso-ped1">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">C1</div>
+          <div class="caso-title">Amigdalectomia em criança de 4 anos com IVAS — Adiar ou não?</div>
+          <span class="caso-arrow">▶</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:10px"><strong>Cenário:</strong> Menino de 4 anos, 16 kg, agendado para amigdalectomia por hipertrofia obstrutiva. Na véspera, a mãe relata "resfriado" há 3 dias: coriza transparente, tosse ocasional, sem febre, sem sibilos, brincando normalmente. Sem histórico de asma. Cirurgia eletiva.</p>
+          <div class="caso-question">
+            <strong>Perguntas:</strong><br>
+            1. Você realizaria a cirurgia ou adiaria? Justifique.<br>
+            2. Se prosseguir, quais cuidados adicionais você tomaria?<br>
+            3. Se adiar, por quanto tempo?
+          </div>
+          <div class="caso-answer">
+            <strong>Discussão e Conduta:</strong><br><br>
+            <strong>1. Decisão:</strong> Esta é uma IVAS leve (coriza clara, ausência de febre, ausência de sibilos, criança em bom estado geral). Segundo as diretrizes atuais, IVAS leve <em>não</em> é contraindicação absoluta para anestesia. A decisão deve considerar: risco vs benefício, tipo de cirurgia e urgência.<br><br>
+            Neste caso: cirurgia eletiva + IVAS leve + amigdalectomia (cirurgia de via aérea = risco aumentado). A maioria dos protocolos recomendaria <strong>ADIAR 2–4 semanas</strong> por ser cirurgia de via aérea (risco de laringoespasmo e broncoespasmo especialmente elevado nesta combinação).<br><br>
+            <strong>2. Se prosseguir</strong> (decisão compartilhada com família após risco explicado):<br>
+            • MLA em vez de TOT se técnica cirúrgica permitir (menor irritação VA)<br>
+            • Sevoflurano como indutor — evitar irritação de VA<br>
+            • Lidocaína IV 1 mg/kg antes de extubação<br>
+            • Extubação profunda (em mãos experientes) ou extubação acordado com aspiração cuidadosa<br>
+            • Dexametasona 0,1 mg/kg IV — reduz edema e PONV<br>
+            • SRPA monitorado com SpO₂ contínua por ≥2h<br><br>
+            <strong>3. Se adiar:</strong> 4–6 semanas (hiper-reatividade persiste até 6 semanas após IVAS).
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 2 -->
+      <div class="caso-card" id="caso-ped2">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">C2</div>
+          <div class="caso-title">Laringoespasmo pós-extubação em criança de 2 anos</div>
+          <span class="caso-arrow">▶</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:10px"><strong>Cenário:</strong> Menina de 2 anos, 12 kg, submetida a herniorrafia inguinal. Indução inalatória com sevoflurano, IOT com Miller 1, TOT 4,5 mm. Cirurgia transcorre sem intercorrências. Ao final, sevoflurano suspenso, reversão com neostigmina + atropina. TOT retirado com a criança ainda no estágio II (semiconsciente — erro técnico). Imediatamente: estridor intenso → silêncio → SpO₂ 85% → 70% em 30 segundos → criança cianótica.</p>
+          <div class="caso-question">
+            <strong>Perguntas:</strong><br>
+            1. Qual é o diagnóstico e a gravidade?<br>
+            2. Descreva a sequência de intervenções em ordem.<br>
+            3. Qual dose e via de succinilcolina você usaria?
+          </div>
+          <div class="caso-answer">
+            <strong>Diagnóstico:</strong> Laringoespasmo total (completo) pós-extubação — SpO₂ 70% em 30s = emergência crítica.<br><br>
+            <strong>Sequência de intervenções:</strong><br>
+            1. <strong>Chamar ajuda</strong> (simultâneo com intervenção)<br>
+            2. <strong>O₂ 100% + CPAP máscara</strong> firmemente aplicada (pressão 15–20 cmH₂O). Em laringoespasmo total, provavelmente não haverá fluxo — mas manter oxigênio de reserva<br>
+            3. <strong>Manobra de Larson</strong> (pressão firme no notch retromandibular bilateral + jaw thrust intenso)<br>
+            4. <strong>Propofol 0,5–1 mg/kg IV</strong> se acesso venoso disponível (12 kg → 6–12 mg propofol)<br>
+            5. Sem melhora em 15–20s: <strong>Succinilcolina IV urgente</strong><br><br>
+            <strong>Dose de succinilcolina:</strong> Criança &gt;2 anos → <strong>1,5 mg/kg IV = 18 mg IV</strong> (1,8 mL da solução 10 mg/mL). Administrar em bolus rápido no acesso mais próximo do coração. Caso sem acesso venoso (improvável aqui): <strong>4 mg/kg IM = 48 mg IM</strong> no vasto lateral.<br><br>
+            Após relaxamento: ventilar com máscara, aguardar retorno do drive respiratório, monitorar SpO₂ > 96%, IOT se necessário. Evento deve ser documentado e família comunicada.
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 3 -->
+      <div class="caso-card" id="caso-ped3">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">C3</div>
+          <div class="caso-title">ETCO₂ subindo, FC 170 durante tonsilectomia — Hipertermia Maligna?</div>
+          <span class="caso-arrow">▶</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:10px"><strong>Cenário:</strong> Menino de 6 anos, 22 kg, tonsilectomia bilateral sob sevoflurano + succinilcolina (indução). Após 30 minutos de cirurgia, ETCO₂ sobe de 35 para 52 mmHg apesar de ventilação adequada. FC 170 bpm. O cirurgião comenta que a musculatura do pescoço está rígida ao palpação. Temperatura axilar 37,8°C (coletada há 10 min, sobe para 38,5°C no termômetro esofágico).</p>
+          <div class="caso-question">
+            <strong>Perguntas:</strong><br>
+            1. Qual é o diagnóstico mais provável? Que sinal foi o primeiro?<br>
+            2. Qual é a primeira droga a ser administrada e em que dose?<br>
+            3. Descreva as próximas 10 intervenções em ordem de prioridade.
+          </div>
+          <div class="caso-answer">
+            <strong>Diagnóstico:</strong> Hipertermia Maligna (HM) — tríade clássica: ETCO₂ crescente inexplicado + rigidez muscular + taquicardia com gatilhos (sevoflurano + succinilcolina). O <strong>ETCO₂ crescente foi o primeiro sinal</strong> (precoce, altamente específico).<br><br>
+            <strong>Primeira droga:</strong> <strong>DANTROLENE 2,5 mg/kg IV = 55 mg IV</strong> em bolus (22 kg × 2,5 mg/kg = 55 mg → ~3 ampolas de 20 mg cada). Repetir a cada 5–10 min até resposta — máximo 10 mg/kg (220 mg total).<br><br>
+            <strong>Protocolo completo:</strong><br>
+            1. Suspender sevoflurano e informar cirurgião: PARAR CIRURGIA se possível<br>
+            2. <strong>Dantrolene 2,5 mg/kg IV</strong> — designar 2 pessoas para diluição (20 mg em 60 mL água estéril quente por ampola)<br>
+            3. O₂ 100% hiperventilação 3× VM (purgar halogenado residual do circuito)<br>
+            4. Chamar ajuda — UTI pediátrica e cardiologia de plantão<br>
+            5. Resfriamento ativo: gelo axilas, virilha, nuca; SF gelado 15 mL/kg IV<br>
+            6. Gasometria arterial urgente (pH, pCO₂, K⁺, lactato, CK)<br>
+            7. Bicarbonato 1 mEq/kg IV se pH &lt; 7,20<br>
+            8. Monitor contínuo de temperatura + ECG para hipercalemia<br>
+            9. Suspender qualquer outro halogenado; usar TIVA se cirurgia urgente continuar<br>
+            10. Transferir para UTI após estabilização; dantrolene 1 mg/kg IV 6/6h × 48h
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 4 -->
+      <div class="caso-card" id="caso-ped4">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">C4</div>
+          <div class="caso-title">Neonato para hérnia inguinal urgente — Cuidados específicos</div>
+          <span class="caso-arrow">▶</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:10px"><strong>Cenário:</strong> Neonato masculino de 18 dias de vida, 3,2 kg, nascido a termo (40 semanas), APGAR 9/10. Diagnóstico: hérnia inguinal direita encarcerada. Indicação cirúrgica de urgência. Cirurgia estimada: 45–60 min. Acesso venoso: cateter 24G dorso mão esquerda. Glicemia capilar pré-op: 58 mg/dL.</p>
+          <div class="caso-question">
+            <strong>Perguntas:</strong><br>
+            1. Como você conduziria a indução e escolha de TOT?<br>
+            2. O que você faz com a glicemia de 58 mg/dL?<br>
+            3. Quais 5 cuidados especiais o neonato exige que a criança maior não exige?
+          </div>
+          <div class="caso-answer">
+            <strong>1. Indução e TOT:</strong><br>
+            Neonato com acesso venoso: <strong>indução IV.</strong><br>
+            • Propofol tem absorção/metabolismo imprevisível em neonatos, especialmente com hérnia encarcerada (risco de hipotensão) — usar <strong>cetamina 1–2 mg/kg IV</strong> como alternativa mais cardiossegura, ou fentanil 2–3 mcg/kg + baixa dose de propofol.<br>
+            • BNM: <strong>succinilcolina 2 mg/kg IV</strong> (neonato) = 6,4 mg, ou rocurônio 0,6 mg/kg = 2 mg.<br>
+            • TOT: Miller 0–1 (lâmina reta obrigatória); DI <strong>3,0–3,5 mm</strong> sem cuff; profundidade <strong>9–10 cm</strong> no dente.<br><br>
+            <strong>2. Glicemia 58 mg/dL:</strong><br>
+            Glicemia &lt;60 mg/dL = hipoglicemia em neonato. <strong>Tratar ANTES da indução:</strong> SG 10% 2 mL/kg IV = 6,4 mL em bolus lento → repetir glicemia em 15 min → manutenção com SG 10% BIC 2 mL/kg/h adicionada ao RL de manutenção durante a cirurgia.<br><br>
+            <strong>3. Cinco cuidados específicos do neonato:</strong><br>
+            1. <strong>Hipotermia:</strong> Sala ≥26°C, manta térmica, campos aquecidos, gorro, fluidos aquecidos — perde calor 3–4× mais rápido que adulto<br>
+            2. <strong>Hipoglicemia:</strong> Monitor glicemia a cada 30 min; SG 1–2% em manutenção<br>
+            3. <strong>FiO₂ mínima eficaz:</strong> Evitar hiperoxia em neonatos a termo (retinopatia, fechamento prematuro DA); SpO₂ alvo: 95–98%<br>
+            4. <strong>ETCO₂ alvo:</strong> 35–45 mmHg — hipocapnia agrava hipertensão pulmonar e restringe DC<br>
+            5. <strong>Apneia pós-anestésica:</strong> Monitorização cardiorrespiratória por 12–24h no pós-operatório; cafeína profilática 10 mg/kg IV/VO antes da anestesia (reduz apneia pós-anestésica)
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 5 -->
+      <div class="caso-card" id="caso-ped5">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">C5</div>
+          <div class="caso-title">CIV moderada em apendicectomia de urgência — Adaptações anestésicas</div>
+          <span class="caso-arrow">▶</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:10px"><strong>Cenário:</strong> Menina de 7 anos, 25 kg, portadora de comunicação interventricular (CIV) moderada não-operada (shunt E→D com fluxo pulmonar aumentado, sem HPPN ainda). SpO₂ basal: 97%. Apresentação: dor abdominal há 18h, febre 38,2°C, peritonite localizada → apendicectomia de urgência. Sem cardiologista pediátrico disponível no plantão.</p>
+          <div class="caso-question">
+            <strong>Perguntas:</strong><br>
+            1. Qual o risco desta CIV na anestesia? O que mais teme?<br>
+            2. Quais adaptações anestésicas você faria?<br>
+            3. Qual seria sua escolha de BNM e por quê?
+          </div>
+          <div class="caso-answer">
+            <strong>1. Risco da CIV moderada:</strong><br>
+            CIV moderada com shunt E→D tem fluxo pulmonar aumentado. Principal risco: <strong>inversão do shunt (E→D vira D→E)</strong> se cair a resistência vascular sistêmica (RVS) e/ou aumentar a resistência vascular pulmonar (RVP) → shunt D→E = dessaturação arterial sistêmica grave. Além disso: infecção sistêmica (peritonite) pode aumentar consumo de O₂ e sobrecarregar um coração já com hiperfluxo. Risco de endocardite infecciosa (antibioticoprofilaxia).<br><br>
+            <strong>2. Adaptações anestésicas:</strong><br>
+            • <strong>Evitar queda da RVS:</strong> cuidado com propofol em bolus rápido (vasodilatação), reposição volêmica agressiva se hipotenso<br>
+            • <strong>Evitar aumento da RVP:</strong> normocapnia, normóxia, normotermia, analgesia adequada (dor aumenta RVP), evitar acidose<br>
+            • <strong>Opioides para bluntar resposta laríngea/cirúrgica:</strong> fentanil 2–3 mcg/kg antes de intubação<br>
+            • Monitorização: SpO₂ contínuo, capnografia, acesso arterial se viável<br>
+            • <strong>Antibioticoprofilaxia para endocardite:</strong> ampicilina + gentamicina pré-operatório<br>
+            • Comunicar ao cirurgião sobre risco cardiovascular; solicitar cardiologista para avaliação pós-operatória<br><br>
+            <strong>3. BNM:</strong><br>
+            <strong>Cisatracúrio 0,15 mg/kg (= 3,75 mg)</strong> — preferível por não liberar histamina (evitar vasodilatação/queda de RVS), degradação de Hofmann (previsível), menos variabilidade. Rocurônio também aceitável. Evitar atracúrio (libera histamina).
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 6 -->
+      <div class="caso-card" id="caso-ped6">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">C6</div>
+          <div class="caso-title">Pré-medicação falhada: criança de 3 anos inconsolável — Abordagem</div>
+          <span class="caso-arrow">▶</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:10px"><strong>Cenário:</strong> Menino de 3 anos, 14 kg, agendado para postectomia eletiva. Recebeu midazolam 0,5 mg/kg VO (7 mg) há 45 minutos. Está acordado, agitado, chorando, recusa aproximação de qualquer profissional, se contorce na maca e não permite colocação de máscara ou acesso venoso. Os pais tentam acalmar sem sucesso.</p>
+          <div class="caso-question">
+            <strong>Perguntas:</strong><br>
+            1. Por que o midazolam pode ter falhado?<br>
+            2. Quais são as opções farmacológicas de resgate?<br>
+            3. Como proceder tecnicamente para induzir essa criança?
+          </div>
+          <div class="caso-answer">
+            <strong>1. Falha do midazolam — causas:</strong><br>
+            • Absorção oral variável (30–70%): vômito pós-ingestão, alimento recente, pH gástrico<br>
+            • Criança extremamente ansiosa: catabolismo de ansiolíticos acelerado<br>
+            • Dose sub-ótima: 0,5 mg/kg é adequado, mas pode ser insuficiente em algumas crianças<br>
+            • Tempo insuficiente: pico de ação oral = 20–30 min, mas início eficaz pode precisar de 45–60 min<br>
+            • Genética: polimorfismo CYP3A4 → metabolismo ultra-rápido<br><br>
+            <strong>2. Opções de resgate:</strong><br>
+            <strong>a) Dexmedetomidina intranasal 1–2 mcg/kg (14–28 mcg)</strong> via atomizador — aguardar 30 min, onset mais previsível, sem amargura<br>
+            <strong>b) Cetamina 2–3 mg/kg IM (28–42 mg)</strong> no vasto lateral — opção mais confiável para criança inconsolável; precisa segurar brevemente para aplicar; onset 3–5 min; + atropina 0,02 mg/kg IM para hipersecreção<br>
+            <strong>c) Midazolam intranasal 0,2 mg/kg (2,8 mg)</strong> = 0,56 mL da solução 5 mg/mL — mesma droga, via mais biodisponível<br><br>
+            <strong>3. Técnica após sedação de resgate:</strong><br>
+            • Aguardar cetamina IM ou dexmet IN fazer efeito (3–10 min)<br>
+            • Com criança sedada: acesso venoso sem dor (EMLA aplicado antes ou simplesmente aproveitando sedação)<br>
+            • <strong>Indução IV:</strong> propofol 2,5 mg/kg + fentanil 1–2 mcg/kg (depois de cetamina, dose de propofol pode ser reduzida para 1–1,5 mg/kg)<br>
+            • Alternativamente após dexmet IN: máscara e sevoflurano 4–6% até inconsciência, então acesso venoso<br>
+            • Postectomia: bloqueio peniano bilateral com bupivacaína 0,25% 0,1 mL/kg/lado = excelente analgesia pós-operatória sem opioide
+          </div>
+        </div>
+      </div>
+
+      <div class="alert a-teal" style="margin-top:12px">
+        <strong>Revisão rápida de indicadores de qualidade em anestesia pediátrica:</strong><br>
+        • Taxa de laringoespasmo: &lt;1% em eletivos, &lt;3% em urgências/IVAS<br>
+        • Emergência agitada pós-sevo: &lt;15% com protocolo de profilaxia<br>
+        • Hipotermia &lt;36°C ao final: &lt;5% com protocolo ativo de aquecimento<br>
+        • Hipoglicemia intraoperatória em neonatos: &lt;2% com protocolo de monitorização
+      </div>
+
+
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+    </div>
+  </div>
+</div>

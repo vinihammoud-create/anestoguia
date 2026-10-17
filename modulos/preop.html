@@ -1,0 +1,924 @@
+<div class="screen" id="screen-preop">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Avaliação Pré-Anestésica</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="preop-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('preop','consulta',this)">Consulta</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('preop','risco',this)">Risco</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('preop','sistemas',this)">Sistemas</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('preop','jejum',this)">Jejum</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('preop','nvpo',this)">NVPO/TEV</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('preop','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('preop','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('preop','casos',this)">Casos</button>
+  </div>
+
+  <!-- TAB 1 — CONSULTA PRÉ-ANESTÉSICA -->
+  <div class="tab-panel active" id="preop-consulta">
+    <div class="page-wrap">
+
+      <!-- OBJETIVOS -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">01</span> Objetivos da Consulta Pré-Anestésica
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            A consulta pré-anestésica é <strong>obrigatória</strong> (CFM 2174/2017) sempre que possível. Deve ocorrer com antecedência suficiente para otimização do paciente. Seus objetivos são: <strong>anamnese dirigida, exame físico, estratificação de risco, seleção da técnica e obtenção do consentimento</strong>.
+          </div>
+          <div class="g2" style="margin-top:12px">
+            <div class="alert a-blue"><strong>ANAMNESE DIRIGIDA</strong><br>Comorbidades, uso de medicamentos (especialmente anticoagulantes/antiagregantes), alergias, cirurgias/anestesias anteriores, história familiar de hipertermia maligna, jejum atual</div>
+            <div class="alert a-teal"><strong>EXAME FÍSICO</strong><br>Via aérea (Mallampati, abertura bucal, DTM, pescoço), ausculta cardiopulmonar, estado nutricional, acesso venoso, sítios de bloqueio</div>
+            <div class="alert a-green"><strong>ESTRATIFICAÇÃO DE RISCO</strong><br>ASA, RCRI, capacidade funcional (METs), risco pulmonar (ARISCAT), STOP-BANG, avaliação por sistemas</div>
+            <div class="alert a-gold"><strong>PLANO ANESTÉSICO</strong><br>Técnica (geral, neuroaxial, regional), monitorização necessária, previsão de UTI, necessidade de otimização prévia</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLASSIFICAÇÃO ASA -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">02</span> Classificação ASA — ASA Physical Status 2020/2025
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal" style="margin-bottom:10px">
+            A classificação ASA é a escala mais utilizada para estratificação pré-operatória. <strong>Não substitui o RCRI</strong>, mas orienta o plano e a comunicação entre equipes. Revisada pela ASA em 2020/2025.
+          </div>
+<div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th style="min-width:70px;white-space:nowrap">ASA</th><th>Definição</th><th>Exemplos Clínicos</th><th>Mortalidade estimada</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">ASA I</span></td><td>Paciente saudável, sem doenças sistêmicas</td><td>Paciente jovem, não fumante, sem comorbidades; IMC &lt;30</td><td>&lt;0,1%</td></tr>
+              <tr><td><span class="tag tb">ASA II</span></td><td>Doença sistêmica leve, sem limitação funcional</td><td>Fumante ativo, gestante, obesidade (IMC 30–40), DM/HAS controlados, DPOC leve, álcool social</td><td>0,1–0,2%</td></tr>
+              <tr><td><span class="tag ty">ASA III</span></td><td>Doença sistêmica grave, com limitação funcional</td><td>DM ou HAS mal controlados, DPOC moderado-grave, obesidade IMC &gt;40, hepatite ativa, alcoolismo, marca-passo, FEVE &lt;40%, IRC em diálise, IAM/AVC &gt;3 meses, história de IAM</td><td>1,8–4,3%</td></tr>
+              <tr><td><span class="tag tr">ASA IV</span></td><td>Doença sistêmica grave com risco de vida constante</td><td>IAM/AVC/TIA &lt;3 meses, FEVE &lt;25%, sepse, CID, insuficiência renal/hepática grave, DPOC descompensado</td><td>7,8–23%</td></tr>
+              <tr><td><span class="tag tr">ASA V</span></td><td>Paciente moribundo; não se espera sobrevida sem cirurgia</td><td>Ruptura de AAA, trauma grave, isquemia intestinal extensa, TCE grave com hipertensão intracraniana</td><td>9,4–51%</td></tr>
+              <tr><td><span class="tag tr">ASA VI</span></td><td>Morte cerebral — doação de órgãos</td><td>Captação de órgãos em paciente com diagnóstico de morte encefálica</td><td>—</td></tr>
+              <tr><td><span class="tag tb">+ E</span></td><td>Sufixo de urgência/emergência</td><td>Ex.: ASA IIIE — mesmo paciente ASA III, porém em cirurgia de urgência</td><td>Duplica risco</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- DOCUMENTAÇÃO E FLUXOGRAMA -->
+      <div class="card">
+        <div class="card-header ch-gold">
+          <span class="card-num">03</span> Documentação e Fluxograma de Conduta
+        </div>
+        <div class="card-body">
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-gold"><strong>DOCUMENTAÇÃO OBRIGATÓRIA</strong><br>• TCLE assinado (anestesia + transfusão se aplicável)<br>• Ficha de avaliação pré-anestésica no prontuário<br>• Comunicação escrita ao cirurgião se risco elevado<br>• Registro de consentimento informado verbal documentado</div>
+            <div class="alert a-violet"><strong>COMUNICAÇÃO MULTIDISCIPLINAR</strong><br>• Cirurgião: informar risco e necessidade de otimização<br>• Cardiologista: avaliar se necessário (ACC/AHA 2022)<br>• UTI: reserva de leito para ASA IV–V ou cirurgia de alto risco<br>• Hematologia: anticoagulação complexa</div>
+          </div>
+          <div class="sh sh-blue">Fluxograma de Conduta — Cirurgia Eletiva</div>
+          <div class="algo-box" style="margin-top:8px">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div class="alert a-green"><strong>ELETIVO — BAIXO RISCO (ASA I–II, RCRI 0–1)</strong><br>→ Preparo padrão: jejum, MH, acesso venoso, medicações habituais conforme protocolo local. Sem exames adicionais obrigatórios se &lt;45 anos e assintomático.</div>
+              <div class="alert a-gold"><strong>ELETIVO — ALTO RISCO (ASA III–IV, RCRI ≥2, cirurgia vascular/torácica)</strong><br>→ Otimização antes da cirurgia: controle de PA/glicemia, ecocardiograma se FEVE não conhecida, avaliação cardiológica/pneumológica, suspensão/ajuste de anticoagulantes, reserva de hemoderivados.</div>
+              <div class="alert a-red"><strong>URGÊNCIA/EMERGÊNCIA — QUALQUER ASA</strong><br>→ Preparo mínimo: estabilização ABCDE (ATLS), acesso venoso calibroso, volemia, glicemia, considerar RSI (estômago cheio), comunicação rápida com equipe. Não retardar cirurgia que salva vida para exames.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /preop-consulta -->
+
+  <!-- TAB 2 — RISCO PERIOPERATÓRIO -->
+  <div class="tab-panel" id="preop-risco">
+    <div class="page-wrap">
+
+      <!-- RCRI -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">01</span> Risco Cardiovascular — RCRI / Índice de Lee
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue" style="margin-bottom:10px">
+            O <strong>RCRI (Revised Cardiac Risk Index)</strong>, ou Índice de Lee, é o escore mais validado para predizer complicações cardíacas maiores (MACE) em cirurgia não cardíaca. Cada variável presente soma 1 ponto.
+          </div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr><th>#</th><th>Variável RCRI</th><th>Definição/Exemplo</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Cirurgia de alto risco</td><td>Intraperitoneal, intratorácica ou vascular suprainguinal</td></tr>
+              <tr><td>2</td><td>Cardiopatia isquêmica</td><td>IAM prévio, angina, uso de nitrato, ECG com ondas Q, revascularização prévia</td></tr>
+              <tr><td>3</td><td>Insuficiência cardíaca</td><td>Congestiva: edema pulmonar, dispneia paroxística noturna, B3, cardiomegalia</td></tr>
+              <tr><td>4</td><td>Doença cerebrovascular</td><td>AVC ou AIT prévio</td></tr>
+              <tr><td>5</td><td>Diabetes insulinodependente</td><td>DM tipo 1 ou DM tipo 2 em uso de insulina</td></tr>
+              <tr><td>6</td><td>Creatinina pré-op &gt;2,0 mg/dL</td><td>Indica IRC moderada-grave</td></tr>
+            </tbody>
+          </table></div>
+</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:10px"><table class="tbl">
+            <thead><tr><th>Pontos RCRI</th><th>Risco MACE</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">0</span></td><td>~0,4%</td><td>Cirurgia sem necessidade de avaliação adicional</td></tr>
+              <tr><td><span class="tag tg">1</span></td><td>~1%</td><td>Prosseguir; considerar ECG se &gt;50 anos</td></tr>
+              <tr><td><span class="tag ty">2</span></td><td>~2,4–7%</td><td>Considerar avaliação cardiológica; otimizar medicações</td></tr>
+              <tr><td><span class="tag tr">≥3</span></td><td>&gt;5,4–11%</td><td>Avaliação cardiológica obrigatória; considerar ecocardiograma e teste funcional</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- METs -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">02</span> Capacidade Funcional em METs
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal" style="margin-bottom:10px">
+            A <strong>capacidade funcional</strong> em METs (Equivalentes Metabólicos) é preditor independente de mortalidade. Pacientes com capacidade funcional ≥4 METs têm risco menor, mesmo com comorbidades. Deve ser avaliada durante a anamnese.
+          </div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr><th>METs</th><th>Capacidade</th><th>Exemplos de Atividade</th><th>Risco Periop.</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tr">1–4 METs</span></td><td>Ruim / Limitada</td><td>Autocuidado, comer, vestir-se, caminhar em casa em passo lento, andar 1–2 quarteirões</td><td><strong>Alto</strong> — considerar avaliação cardiológica</td></tr>
+              <tr><td><span class="tag ty">4–10 METs</span></td><td>Moderada / Boa</td><td>Subir um lance de escadas, caminhar 6 km/h, trabalho doméstico pesado, golf, dança</td><td><strong>Moderado</strong> — prosseguir com cautela</td></tr>
+              <tr><td><span class="tag tg">&gt;10 METs</span></td><td>Excelente</td><td>Natação competitiva, corrida, futebol, tênis, esqui</td><td><strong>Baixo</strong> — cirurgia sem restrição cardiovascular</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="footnote">* 1 MET = consumo de O₂ de 3,5 mL/kg/min em repouso. Limiar de 4 METs = subir um lance de escadas sem parar.</div>
+        </div>
+      </div>
+
+      <!-- RISCO PULMONAR e CIRÚRGICO -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">03</span> Risco Pulmonar (ARISCAT / STOP-BANG) e Risco por Tipo de Cirurgia
+        </div>
+        <div class="card-body">
+          <div class="sh sh-green">ARISCAT — Complicações Pulmonares Pós-Op</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Variável</th><th>Pontos</th></tr></thead>
+            <tbody>
+              <tr><td>SpO₂ pré-op: 91–95%</td><td>8</td></tr>
+              <tr><td>SpO₂ pré-op: ≤90%</td><td>24</td></tr>
+              <tr><td>Infecção respiratória no último mês</td><td>17</td></tr>
+              <tr><td>Anemia (Hb &lt;10 g/dL)</td><td>11</td></tr>
+              <tr><td>Cirurgia torácica ou abdominal alta</td><td>15</td></tr>
+              <tr><td>Cirurgia de urgência/emergência</td><td>8</td></tr>
+              <tr><td>Duração &gt;2 horas</td><td>8</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="alert a-green"><strong>Baixo risco:</strong> &lt;26 pontos → 1,6%</div>
+            <div class="alert a-gold"><strong>Moderado:</strong> 26–44 → 13,3%</div>
+            <div class="alert a-red"><strong>Alto risco:</strong> ≥45 → 42,1%</div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">STOP-BANG — Triagem de SAOS</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Letra</th><th>Critério</th></tr></thead>
+            <tbody>
+              <tr><td><strong>S</strong>noring</td><td>Ronco alto?</td></tr>
+              <tr><td><strong>T</strong>ired</td><td>Frequentemente cansado, sonolento durante o dia?</td></tr>
+              <tr><td><strong>O</strong>bserved</td><td>Observado parar de respirar durante o sono?</td></tr>
+              <tr><td><strong>P</strong>ressure</td><td>Hipertensão arterial?</td></tr>
+              <tr><td><strong>B</strong>MI</td><td>IMC &gt;35?</td></tr>
+              <tr><td><strong>A</strong>ge</td><td>Idade &gt;50 anos?</td></tr>
+              <tr><td><strong>N</strong>eck</td><td>Circunferência cervical &gt;40 cm?</td></tr>
+              <tr><td><strong>G</strong>ender</td><td>Sexo masculino?</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="alert a-teal"><strong>0–2:</strong> Baixo risco SAOS</div>
+            <div class="alert a-red"><strong>≥3:</strong> Alto risco — considerar PSG ou iniciar CPAP periop.</div>
+          </div>
+
+          <div class="sh sh-blue" style="margin-top:14px">Risco Cardíaco por Tipo de Cirurgia (ACC/AHA 2022)</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Risco</th><th>MACE estimado</th><th>Exemplos de Cirurgia</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">Baixo</span></td><td>&lt;1%</td><td>Superficial, endoscopia, catarata, mama, laparoscópica (exceto abdominal alta), ortopédica periférica, urológica ambulatorial</td></tr>
+              <tr><td><span class="tag ty">Intermediário</span></td><td>1–5%</td><td>Abdominal intraperitoneal, intratorácica, ortopédica maior (quadril/joelho), próstata, cabeça/pescoço, neurológica eletiva</td></tr>
+              <tr><td><span class="tag tr">Alto</span></td><td>&gt;5%</td><td>Aorta e vascular maior, vascular periférica, duodenopancreatectomia, ressecção hepática, ressecção esofágica</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="sh sh-violet" style="margin-top:14px">Quando Solicitar Avaliação Cardiológica — Algoritmo ACC/AHA 2022 (Resumido)</div>
+          <div class="algo-box" style="margin-top:8px">
+            <ul style="margin:0;padding-left:18px;line-height:1.7">
+              <li><strong>Cirurgia de emergência?</strong> → Ir direto à sala; monitorização periop. máxima. Sem avaliação adicional pré-op.</li>
+              <li><strong>SCA ativa?</strong> (IAM recente, angina instável, arritmia grave, IC descompensada, doença valvar grave) → Adiar cirurgia, tratar primeiro.</li>
+              <li><strong>Cirurgia de baixo risco?</strong> (MACE &lt;1%) → Prosseguir sem avaliação cardiológica adicional.</li>
+              <li><strong>Capacidade funcional ≥4 METs sem sintomas?</strong> → Prosseguir sem testes.</li>
+              <li><strong>Capacidade funcional &lt;4 METs OU desconhecida + cirurgia intermediária/alta?</strong> → Avaliar se teste adicional (ECG esforço, eco stress) mudará conduta. Se sim, solicitar. Se não, prosseguir com tratamento clínico periop. (betabloqueador se RCRI ≥2).</li>
+              <li><strong>RCRI ≥3 + cirurgia de alto risco?</strong> → Avaliação cardiológica formal antes de proceder.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--red)">
+          <span class="card-title">MINS e PMI — Lesão Miocárdica Perioperatória</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px"><strong>MINS (Myocardial Injury after Non-cardiac Surgery):</strong> Elevação de troponina (hsTnT {'>'} 65 ng/L OU qualquer ↑ com cinética) nas primeiras 30 dias pós-op, independentemente de sintomas isquêmicos.</p>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px"><strong>PMI (Perioperative Myocardial Infarction):</strong> Subgrupo de MINS com critérios clássicos de IAM (sintomas + ECG + troponina).</p>
+          <div class="algo-box algo-r">
+            <div class="algo-title">🔴 Incidência e Mortalidade (VISION Study, 2014-2018)</div>
+            MINS ocorre em ~8% das cirurgias não-cardíacas de médio/grande porte. 30-day mortality: 10% em pacientes com MINS vs 2% sem MINS. A maioria (80%) é assintomática — detectável apenas pela dosagem seriada de troponina.
+          </div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Fator de risco</th><th>OR para MINS</th></tr></thead>
+            <tbody>
+              <tr><td>Doença coronariana conhecida</td><td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--red)">2.5×</td></tr>
+              <tr><td>Insuficiência cardíaca</td><td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--red)">2.1×</td></tr>
+              <tr><td>Cirurgia de alto risco</td><td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--red)">1.8×</td></tr>
+              <tr><td>Idade {'>'} 75 anos</td><td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--gold)">1.6×</td></tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">✅ Implicação clínica</div>
+            Considerar dosagem de troponina em pacientes de alto risco (RCRI ≥2) nas primeiras 24-72h pós-operatórias. Dabigatrana 110 mg 2x/dia reduz MINS (MANAGE trial — Lancet 2018). Tema crescente nas provas TEA/TSA.
+          </div>
+        </div>
+      </div>
+
+</div><!-- /preop-risco -->
+
+  <!-- TAB 3 — AVALIAÇÃO POR SISTEMAS -->
+  <div class="tab-panel" id="preop-sistemas">
+    <div class="page-wrap">
+
+      <!-- CARDIOVASCULAR -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">01</span> Sistema Cardiovascular
+        </div>
+        <div class="card-body">
+<div class="tbl-wrap">
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Condição</th><th>Achados Relevantes</th><th>Conduta Perioperatória</th></tr></thead>
+            <tbody>
+              <tr><td><strong>HAS</strong></td><td>PA &gt;180/110 mmHg no dia da cirurgia; HVE no ECG</td><td>PA &gt;180/110: adiar cirurgia eletiva e otimizar. PA &lt;180/110: prosseguir. Manter betabloqueadores e bloqueadores de canal de cálcio. Suspender IECA/BRA no dia (hipotensão pós-indução)</td></tr>
+              <tr><td><strong>IC</strong></td><td>FEVE, classe NYHA, BNP/NT-proBNP, ecocardiograma</td><td>FEVE &lt;35%: avaliação cardiológica obrigatória. Otimizar diurético/vasodilatador. Evitar cargas de volume. Monitorização hemodinâmica avançada</td></tr>
+              <tr><td><strong>FA</strong></td><td>Controle de frequência, anticoagulação, CHADS2-VASc</td><td>Manter controle de FC (betabloqueador/digoxina). Manejo anticoagulante (ver Tab Sistemas). Cardioversão eletiva não é necessária antes de cirurgia de baixo risco</td></tr>
+              <tr><td><strong>Valvopatia</strong></td><td>Estenose aórtica grave (&lt;1 cm²): risco alto</td><td>EA grave sintomática = adiar até TAVI/cirurgia valvar. EM grave: controle de FC. Insuficiências bem toleradas geralmente permitem prosseguir</td></tr>
+              <tr><td><span class="tag tr">IAM recente</span></td><td>Janela de risco elevado após SCA</td><td><strong>Eletiva: aguardar ≥60 dias</strong> após IAM. Em pacientes com stent: aguardar 30 dias (stent convencional) ou <strong>12 meses</strong> (stent farmacológico) antes de suspender DAP. Discutir com cardiologista</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- PULMONAR -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">02</span> Sistema Pulmonar
+        </div>
+        <div class="card-body">
+<div class="tbl-wrap">
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Condição</th><th>Avaliação</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><strong>DPOC</strong></td><td>VEF₁, VEF₁/CVF, GOLD I–IV, SpO₂ basal</td><td>VEF₁ &lt;50% ou GOLD III–IV: risco pulmonar alto (ARISCAT). Broncodilatador até o dia. Fisioterapia pré-op. Considerar corticoide sistêmico se exacerbação recente. Evitar N₂O</td></tr>
+              <tr><td><strong>Asma</strong></td><td>Grau de controle, uso de corticoide inalatório, última crise</td><td>Asma não controlada: adiar cirurgia eletiva. Manter broncodilatador. Corticoide oral se asma grave. Evitar intubação se possível → preferir VMS/bloqueio regional</td></tr>
+              <tr><td><strong>SAOS</strong></td><td>STOP-BANG ≥3, polissonografia, AHI</td><td>Usuário de CPAP: trazer aparelho. Cirurgia ambulatorial: evitar se SAOS grave sem CPAP. Pós-op: posição semi-sentada, monitorização SpO₂ prolongada, evitar opioides em excesso</td></tr>
+              <tr><td><strong>Tabagismo</strong></td><td>Pacote-ano, tempo desde última cigarro</td><td>Cessação ≥8 semanas reduz complicações. &lt;8 semanas: pode aumentar secreção transitoriamente, mas ainda benéfico. Nicotina não é contraindicação periop.</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- NEUROLÓGICO -->
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">03</span> Sistema Neurológico
+        </div>
+        <div class="card-body">
+<div class="tbl-wrap">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr><th>Condição</th><th>Janela / Alerta</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><strong>AVC / AIT</strong></td><td><span class="tag tr">Janela 9 meses</span> para cirurgia eletiva</td><td>Aguardar ≥9 meses após AVC isquêmico para cirurgia eletiva. Risco de AVC periop. é mais alto nos primeiros meses. Manter antiagregante (AAS) se possível</td></tr>
+              <tr><td><strong>Epilepsia</strong></td><td>Tipo de crise, última crise, anticonvulsivante</td><td>Manter anticonvulsivante no dia da cirurgia (se VO: administrar com gole d'água). Alguns aumentam metabolismo de propofol/opioides (fenitoína, carbamazepina). Sevoflurano pode ser pró-epiléptico</td></tr>
+              <tr><td><strong>Parkinson</strong></td><td>Rigidez, disfagia, risco de aspiração</td><td><strong>L-DOPA no dia da cirurgia</strong> (meia-vida curta — suspensão causa crise aguda). Evitar droperidol, metoclopramida (bloqueadores D2). Haloperidol contraindicado. Preferir ondansetrona para NVPO</td></tr>
+              <tr><td><strong>Miastenia Gravis</strong></td><td>Musculatura bulbar, crise miastênica, piridostigmina</td><td>Atenção aos <strong>BNM</strong>: sensibilidade aumentada a adespolarizantes (reduzir dose 50–75%). Succinilcolina pode ser resistente. Monitorização TOF obrigatória. Reversão com sugammadex preferida. Risco de crise pós-extubação</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- RENAL e ENDÓCRINO -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">04</span> Sistema Renal e Endócrino
+        </div>
+        <div class="card-body">
+          <div class="sh sh-blue">Renal — DRC e Risco de IRA</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>TFGe (CKD-EPI)</th><th>Estágio DRC</th><th>Conduta Periop.</th></tr></thead>
+            <tbody>
+              <tr><td>&gt;90 mL/min</td><td>G1 — Normal</td><td>Preparo padrão; hidratação adequada</td></tr>
+              <tr><td>60–89</td><td>G2 — Leve</td><td>Ajuste leve de doses; evitar AINE e contraste sem pré-hidratação</td></tr>
+              <tr><td>30–59</td><td>G3a/b — Moderado</td><td>Ajuste de doses de opióides/BNM; monitorizar eletrólitos (K⁺); evitar nefrotóxicos</td></tr>
+              <tr><td>15–29</td><td>G4 — Grave</td><td>Avaliação nefrologista; hemostasia (uremia → disfunção plaquetária); anemia</td></tr>
+              <tr><td>&lt;15 / Diálise</td><td>G5 — Falência</td><td>Diálise pré-op se necessário; acesso AV proteger; eletrólitos rigorosos; evitar morfina (metabólitos acumulam)</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="alert a-blue" style="margin-top:8px"><strong>IRA periop. (critérios KDIGO):</strong> ↑Cr ≥0,3 mg/dL em 48h OU ↑50% do basal em 7 dias OU débito urinário &lt;0,5 mL/kg/h por 6h. Fatores de risco: hipovolemia, sepse, contraste, nefrotóxicos, cirurgia cardíaca/vascular.</div>
+
+          <div class="sh sh-gold" style="margin-top:14px">Endócrino — DM, Tireoide e Adrenal</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Condição</th><th>Manejo Pré-Op</th><th>Meta Intra-Op</th></tr></thead>
+            <tbody>
+              <tr><td><strong>DM — Geral</strong></td><td>HbA1c: idealmente &lt;8,5% para eletiva. Suspender SGLT2i <strong>48–72h antes</strong> (risco de cetoacidose euglicêmica). Metformina: suspender no dia</td><td>Glicemia <strong>100–180 mg/dL</strong> intraoperatória. Evitar hipoglicemia (&lt;70) e hiperglicemia grave (&gt;250)</td></tr>
+              <tr><td><strong>DM tipo 1</strong></td><td>Nunca suspender insulina basal (ajustar para 50–80% da dose). Glicemia em jejum antes da indução</td><td>Infusão de glicose + insulina regular se jejum prolongado. Glicemia horária</td></tr>
+              <tr><td><strong>Hipotireoidismo</strong></td><td>Manter levotiroxina (incluindo no dia). Hipotireoidismo grave não tratado: adiar cirurgia eletiva</td><td>Cuidado com hipotermia, bradicardia, íleo prolongado, hipoglicemia em crianças</td></tr>
+              <tr><td><strong>Hipertireoidismo</strong></td><td>Controlar antes de cirurgia eletiva (propiltiouracil + betabloqueador). Tireotoxicose ativa = contraindicação relativa</td><td>Risco de tempestade tireotoxicósica: taquicardia + hipertermia + agitação. Tratar com propranolol + iodo + hidrocortisona</td></tr>
+              <tr><td><strong>Insuf. Adrenal</strong></td><td>Identificar uso de corticoide ≥5 mg/dia de prednisona por &gt;3 semanas no último ano</td><td><strong>Dose de estresse:</strong> Cirurgia leve: 25 mg hidrocortisona IV. Moderada: 50–75 mg/dia × 1–2 dias. Grave/grande porte: 100–150 mg/dia × 2–3 dias. Reduzir 50%/dia conforme melhora</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- HEMATOLÓGICO e ONCOLÓGICO -->
+      <div class="card">
+        <div class="card-header ch-gold">
+          <span class="card-num">05</span> Hematológico e Oncológico
+        </div>
+        <div class="card-body">
+          <div class="sh sh-gold">Anemia Pré-Op e Suspensão de Anticoagulantes</div>
+          <div class="alert a-gold" style="margin:8px 0">
+            <strong>Anemia pré-op:</strong> Hb &lt;10 g/dL → investigar causa (ferropriva, DRC, doença crônica). Tratar com ferro IV (ferropriva) ou EPO (DRC) para Hb alvo ≥10–13 antes de cirurgia eletiva de grande porte. Transfusão intraoperatória: gatilho Hb &lt;7 g/dL (ou &lt;8 em cardiopatas).
+          </div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Anticoagulante</th><th>Suspensão Pré-Op</th><th>Critério de Retomada</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Varfarina</strong></td><td>5 dias antes → confirmar INR &lt;1,5 no dia</td><td>24–48h após hemostasia cirúrgica assegurada</td></tr>
+              <tr><td><strong>Rivaroxabana / Apixabana</strong></td><td>24–48h (baixo risco) / 48–72h (alto risco hemorrágico)</td><td>12–24h pós-op se hemostasia adequada</td></tr>
+              <tr><td><strong>Dabigatrana</strong></td><td>48–72h (TFG ≥50) / 96h (TFG 30–49) — nunca usar com TFG &lt;30</td><td>24–48h pós-op</td></tr>
+              <tr><td><strong>Enoxaparina terapêutica</strong></td><td>24h antes</td><td>24–48h pós-op ou após hemostasia segura</td></tr>
+              <tr><td><strong>HNF IV</strong></td><td>4–6h antes</td><td>Retomar 6–12h pós-op</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="alert a-blue" style="margin-top:8px"><strong>Antiagregantes (AAS / Clopidogrel):</strong> AAS em monoterapia — <em>manter</em> se risco trombótico alto (stent, AVC, DAP). Se baixo risco cirúrgico: manter. AAS pode ser suspenso 7 dias antes de neurocirurgia ou cirurgia com risco hemorrágico alto. Clopidogrel: suspender 5–7 dias se risco hemorrágico alto, manter se stent coronariano recente (&lt;12 meses).</div>
+
+          <div class="sh sh-violet" style="margin-top:14px">Oncológico — Complicações de Quimioterapia</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="alert a-violet"><strong>Cardiotóxica (Antraciclinas: doxorrubicina, epirrubicina)</strong><br>Miocardiopatia dose-dependente. Solicitar ecocardiograma se dose cumulativa &gt;300 mg/m². FEVE &lt;50%: avaliação cardiológica obrigatória</div>
+            <div class="alert a-orange"><strong>Pulmonotóxica (Bleomicina)</strong><br>Pneumonite + fibrose. FiO₂ periop. mínima necessária (alvo SpO₂ 94–96%). FiO₂ alta aumenta toxicidade. Espirometria e DLCO pré-op</div>
+            <div class="alert a-gold"><strong>Estado Nutricional</strong><br>NRS-2002 ≥3 ou perda peso &gt;10–15% em 6 meses → risco nutricional alto. Considerar nutrição pré-op (ERAS: carboidratos). Albumina &lt;3 g/dL = mau prognóstico pós-op</div>
+            <div class="alert a-teal"><strong>Imunossupressão</strong><br>Neutrófilos &lt;500/mm³ = neutropenia grave. Risco infeccioso alto. Profilaxia antibiótica expandida. Corticoide crônico = dose de estresse</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /preop-sistemas -->
+
+  <!-- TAB 4 — JEJUM PRÉ-ANESTÉSICO -->
+  <div class="tab-panel" id="preop-jejum">
+    <div class="page-wrap">
+
+      <!-- REGRAS ASA 2023 -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">01</span> Regras de Jejum — ASA Practice Guidelines 2023
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue" style="margin-bottom:10px">
+            As <strong>diretrizes ASA 2023</strong> foram atualizadas para melhor evidência sobre bebidas carboidratadas e jejum individualizado (ERAS). O objetivo é minimizar o risco de aspiração sem causar jejum desnecessariamente prolongado.
+          </div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Tipo de Ingestão</th><th>Jejum Mínimo</th><th>Observações</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">Líquidos claros</span><br><small>(água, suco sem polpa, chá, café sem leite, carboidratos)</small></td><td><strong>2 horas</strong></td><td>Inclui bebidas carboidratadas ERAS. Não inclui álcool. Não inclui líquidos com partículas ou alto teor de proteína</td></tr>
+              <tr><td><span class="tag tg">Leite materno</span></td><td><strong>4 horas</strong></td><td>Apenas para lactentes — mama diretamente ou leite materno ordenhado</td></tr>
+              <tr><td><span class="tag ty">Fórmula infantil</span></td><td><strong>6 horas</strong></td><td>Fórmulas lácteas para lactentes e crianças pequenas</td></tr>
+              <tr><td><span class="tag ty">Leite não humano</span></td><td><strong>6 horas</strong></td><td>Leite de vaca, soja. Comporta-se como refeição sólida leve</td></tr>
+              <tr><td><span class="tag ty">Refeição leve</span><br><small>(torrada + suco ou café com leite)</small></td><td><strong>6 horas</strong></td><td>Sólidos de fácil digestão, baixo teor de gordura e proteína</td></tr>
+              <tr><td><span class="tag tr">Refeição gordurosa / carne / fritura</span></td><td><strong>8 horas</strong></td><td>Refeições completas, alimentos com alto teor de gordura ou proteína retardam o esvaziamento gástrico</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="footnote">* Jejum de 8h garantido para qualquer refeição sólida desconhecida. Em dúvida, considerar estômago cheio.</div>
+        </div>
+      </div>
+
+      <!-- BEBIDA CARBOIDRATADA -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">02</span> Bebida Carboidratada Pré-Op (ERAS)
+        </div>
+        <div class="card-body">
+          <div class="alert a-green">
+            O <strong>protocolo ERAS</strong> (Enhanced Recovery After Surgery) recomenda bebida carboidratada pré-operatória para reduzir resistência insulínica, melhorar bem-estar do paciente e diminuir catabolismo pós-op. <strong>NÃO aumenta o risco de aspiração</strong> em pacientes sem fator de risco para esvaziamento gástrico lento.
+          </div>
+          <div class="g2" style="margin-top:10px">
+            <div class="alert a-green"><strong>DOSE:</strong> 200–400 mL de líquido claro rico em carboidratos (12,5% maltodextrina, ~50 g CHO) até <strong>2h antes</strong> da indução</div>
+            <div class="alert a-teal"><strong>BENEFÍCIOS:</strong> ↓Resistência insulínica pós-op, ↓catabolismo muscular, ↓náusea pós-op, ↑bem-estar, retorno mais rápido da função intestinal</div>
+          </div>
+          <div class="alert a-red" style="margin-top:10px">
+            <strong>Contraindicações para bebida carboidratada:</strong> diabetes com gastroparesia, DRGE grave, acalasia, estenose esofágica, qualquer condição de esvaziamento gástrico retardado, urgência/emergência, paciente que não consegue engolir com segurança.
+          </div>
+        </div>
+      </div>
+
+      <!-- SITUAÇÕES ESPECIAIS -->
+      <div class="card">
+        <div class="card-header ch-gold">
+          <span class="card-num">03</span> Situações Especiais de Jejum
+        </div>
+        <div class="card-body">
+<div class="tbl-wrap">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr><th>Situação</th><th>Risco</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Gestante</strong><br>(≥20 sem. ou parturiente)</td><td><span class="tag tr">ESTÔMAGO CHEIO</span></td><td>Progesterona retarda esvaziamento gástrico. Pressão uterina no estômago. Considerar RSI em toda gramnde gestante. Antiácido não particulado (citrato de sódio) + metoclopramida 30 min antes. Posição lateral esq. até intubação</td></tr>
+              <tr><td><strong>Diabético / Gastroparesia</strong></td><td><span class="tag tr">ESVAZIAMENTO LENTO</span></td><td>Esvaziamento gástrico pode ser significativamente retardado mesmo com jejum aparentemente adequado. US gástrico pré-op. Se gastroparesia conhecida → jejum estendido (≥8h sólidos, ≥4h líquidos) OU RSI por protocolo</td></tr>
+              <tr><td><strong>Urgência / Emergência</strong></td><td><span class="tag tr">ESTÔMAGO CHEIO PRESUMIDO</span></td><td>Presume-se estômago cheio independente do tempo de jejum relatado. Dor/opioides/trauma/peritonite retardam esvaziamento. Indicação absoluta de RSI (pré-ox + cetamina/propofol + succinilcolina/rocurônio 1,2 mg/kg, sem ventilação manual antes da intubação)</td></tr>
+              <tr><td><strong>Obstrução intestinal</strong></td><td><span class="tag tr">RISCO MÁXIMO</span></td><td>Sonda nasogástrica pré-op para descompressão (não elimina risco). RSI obrigatório. Ter aspirador à mão. Intubação em posição de Fowler se possível</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- USG GÁSTRICO -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">04</span> Ultrassonografia Gástrica — Point-of-Care
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal" style="margin-bottom:10px">
+            O <strong>USG gástrico pré-op</strong> é uma ferramenta rápida (3–5 min) para avaliar o conteúdo gástrico em situações de dúvida sobre o risco de aspiração. Avalia-se a área de secção transversal do antro gástrico (CSA) em decúbito dorsal e lateral direito.
+          </div>
+          <div class="sh sh-teal">Técnica</div>
+          <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+            <li>Transdutor curvilíneo (3,5–5 MHz) em epigástrio, plano sagital</li>
+            <li>Identificar: aorta e VCI como referências posteriores, lobo hepático esquerdo anteriormente</li>
+            <li>Medir CSA do antro em 2 posições: <strong>decúbito dorsal</strong> e <strong>lateral direito</strong></li>
+            <li>CSA = π × (D1 × D2) / 4 — onde D1 e D2 são os diâmetros ortogonais</li>
+          </ul>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Achado USG</th><th>CSA Antro</th><th>Interpretação / Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">Vazio / Mínimo</span></td><td>&lt;10 cm² (decúbito dorsal)<br>ou &lt;1,5 mL/kg</td><td>Baixo risco de aspiração. Conteúdo &lt;1,5 mL/kg = normal em jejum. Prosseguir com técnica padrão</td></tr>
+              <tr><td><span class="tag ty">Líquido Claro</span></td><td>10–20 cm²</td><td>Volume líquido residual. Se &lt;1,5 mL/kg → provável dentro da normalidade. Considerar aguardar ou usar RSI baseado no contexto clínico</td></tr>
+              <tr><td><span class="tag tr">Sólido / Misto</span></td><td>&gt;20 cm² ou ecogenicidade ↑ (material heterogêneo)</td><td>Alto risco de aspiração. Adiar cirurgia eletiva. Em urgência → RSI obrigatório + aspirador pronto + considerar SNG</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="footnote">* Limitações: obesidade, ascite e pacientes pós-gastrectomia dificultam a visibilização. Treinamento mínimo recomendado: 30–50 exames supervisionados.</div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /preop-jejum -->
+
+  <!-- TAB 5 — NVPO E TEV -->
+  <div class="tab-panel" id="preop-nvpo">
+    <div class="page-wrap">
+
+      <!-- NVPO — APFEL -->
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">01</span> NVPO — Escore de Apfel e Profilaxia
+        </div>
+        <div class="card-body">
+          <div class="alert a-violet" style="margin-bottom:10px">
+            Náuseas e Vômitos Pós-Operatórios (NVPO) afetam 20–30% dos pacientes e até 70–80% nos de alto risco. O <strong>Escore de Apfel</strong> é o mais validado e de fácil aplicação à beira do leito.
+          </div>
+
+          <div class="sh sh-violet">4 Fatores de Risco — Escore de Apfel</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="alert a-violet"><strong>1. Sexo feminino</strong><br>Risco ~2× maior que masculino</div>
+            <div class="alert a-violet"><strong>2. Não fumante</strong><br>Tabagismo protege contra NVPO por mecanismo desconhecido</div>
+            <div class="alert a-violet"><strong>3. Hist. NVPO ou cinetose</strong><br>Predisposição individual confirmada</div>
+            <div class="alert a-violet"><strong>4. Opioides pós-op</strong><br>Dose-dependente — morfina &gt; fentanil &gt; tramadol</div>
+          </div>
+
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:10px"><table class="tbl">
+            <thead><tr><th>Pontos Apfel</th><th>Risco NVPO</th><th>Estratégia</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">0–1</span></td><td>10–20%</td><td>Sem profilaxia rotineira OU 1 droga se preferência do paciente</td></tr>
+              <tr><td><span class="tag ty">2</span></td><td>~40%</td><td>2 drogas de classes diferentes (combinação)</td></tr>
+              <tr><td><span class="tag tr">3–4</span></td><td>60–80%</td><td>3 drogas + TIVA (propofol) + minimizar opioides (multimodal)</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="sh sh-violet" style="margin-top:14px">Drogas Profiláticas — Doses e Timing</div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th style="white-space:nowrap">Droga</th><th>Dose</th><th>Timing</th><th>Mecanismo</th></tr></thead>
+            <tbody>
+              <tr><td><span class="drug-pill dp-blue">Ondansetrona</span></td><td>4 mg IV</td><td>Ao final da cirurgia</td><td>5-HT₃ antagonista</td></tr>
+              <tr><td><span class="drug-pill dp-green">Dexametasona</span></td><td>4–8 mg IV</td><td>Pós-indução (antes da incisão)</td><td>Anti-inflamatório / desconhecido</td></tr>
+              <tr><td><span class="drug-pill dp-violet">Droperidol</span></td><td>0,625–1,25 mg IV</td><td>Ao final da cirurgia</td><td>D₂ antagonista</td></tr>
+              <tr><td><span class="drug-pill dp-orange">Escopolamina TD</span></td><td>1 patch (1,5 mg)</td><td>Noite anterior ou 2–4h antes</td><td>Anticolinérgico</td></tr>
+              <tr><td><span class="drug-pill dp-teal">TIVA (Propofol)</span></td><td>Infusão contínua</td><td>Durante toda a cirurgia</td><td>Reduz NVPO em 30% vs inalatório</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="footnote">* Dexametasona + ondansetrona = combinação mais estudada. Droperidol: atenção ao QTc prolongado (ECG pré-op se fatores de risco).</div>
+        </div>
+      </div>
+
+      <!-- TEV — CAPRINI -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">02</span> TEV — Escore de Caprini e Profilaxia
+        </div>
+        <div class="card-body">
+          <div class="alert a-red" style="margin-bottom:10px">
+            O <strong>Escore de Caprini</strong> é o mais validado para risco de TEV em cirurgia geral, ortopédica e plástica. Cada fator soma pontos conforme o peso de risco. A pontuação total determina a estratégia profilática.
+          </div>
+
+<div class="tbl-wrap">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr><th>Pontos/Fator</th><th>Fatores de Risco</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">1 ponto</span></td><td>Idade 41–60 anos, cirurgia menor (&lt;45 min), varizes, obesidade (IMC &gt;25), gestação/puerpério, história de aborto, ACO/TH, infarto do miocárdio, ICC, sepse, DPOC, repouso no leito &gt;72h</td></tr>
+              <tr><td><span class="tag ty">2 pontos</span></td><td>Idade 61–74 anos, cirurgia artroscópica, neoplasia maligna, cirurgia laparoscópica (&gt;45 min), confinamento ao leito (&gt;72h), gesso/imobilização, acesso venoso central</td></tr>
+              <tr><td><span class="tag tr">3 pontos</span></td><td>Idade ≥75 anos, história de TVP/TEP, trombofilia (fator V Leiden, mutação protrombina, anticoagulante lúpico, anticardiolipina), heparina induziu trombocitopenia</td></tr>
+              <tr><td><span class="tag tr">5 pontos</span></td><td>AVC (&lt;1 mês), artroplastia de quadril/joelho, fratura de quadril, pelve ou perna, trauma grave, lesão de medula espinhal</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:10px"><table class="tbl">
+            <thead><tr><th>Caprini Total</th><th>Risco TEV</th><th>Profilaxia Recomendada</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">0–2</span></td><td>Baixo (&lt;0,5%)</td><td>Deambulação precoce. Meias de compressão graduada</td></tr>
+              <tr><td><span class="tag ty">3–4</span></td><td>Moderado (0,5–3%)</td><td>Enoxaparina 40 mg SC 1×/dia OU HNF 5000 UI SC 2×/dia + compressão pneumática intermitente</td></tr>
+              <tr><td><span class="tag tr">≥5</span></td><td>Alto (&gt;3%) a muito alto (&gt;6%)</td><td>Enoxaparina 40 mg SC 1×/dia (ou 30 mg 2×/dia em ortopédica) + compressão pneumática. Em oncológica: considerar 28 dias de profilaxia (ERAS ESCP)</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="sh sh-blue" style="margin-top:14px">Neuraxial e Anticoagulação — Intervalo ASRA 2022</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Anticoagulante</th><th>Intervalo antes do neuraxial</th><th>Intervalo após neuraxial / retirada cateter</th></tr></thead>
+            <tbody>
+              <tr><td>Enoxaparina profilática (40 mg)</td><td><strong>12 horas</strong></td><td>4–6 horas</td></tr>
+              <tr><td>Enoxaparina terapêutica (1 mg/kg 12/12h)</td><td><strong>24 horas</strong></td><td>4–6 horas após retirada cateter</td></tr>
+              <tr><td>HNF SC (5000 UI 2×/dia)</td><td>4–6 horas (verificar TTPa)</td><td>1 hora após neuraxial</td></tr>
+              <tr><td>HNF IV terapêutica</td><td>4–6 horas (TTPa normal)</td><td>1 hora após neuraxial</td></tr>
+              <tr><td>Rivaroxabana / Apixabana</td><td>22–26 horas</td><td>4–6 horas</td></tr>
+              <tr><td>Dabigatrana</td><td>72–120 horas (dependente TFG)</td><td>6 horas</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="footnote">* ASRA 2022: sempre avaliar razão risco/benefício individualizada. Trombocitopenia (&lt;80.000): evitar neuraxial.</div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /preop-nvpo -->
+
+  <!-- <!-- TAB — REVISÃO RÁPIDA --> -->
+  <div class="tab-panel" id="preop-revisao">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--violet)">
+          <span class="card-title">⚡ Revisão Rápida — Avaliação Pré-operatória</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Para revisão pré-plantão ou pré-prova · 10 pontos essenciais</p>
+          <div class="algo-box algo-b" style="margin-bottom:8px">
+            <div class="algo-title">10 pontos que você não pode esquecer</div>
+            <ol style="font-size:12px;line-height:2;margin:6px 0 0 16px">
+              <li>ASA I–II: cirurgia eletiva sem restrições · ASA III: otimizar · ASA IV-V: risco alto, avaliar benefício</li>
+              <li>RCRI ≥3 pontos: risco cardíaco perioperatório alto (&gt;10%) — considerar avaliação cardiológica</li>
+              <li>Jejum ASA 2023: líquidos claros 2h · leite materno 4h · fórmula/sólidos 6h · gorduroso 8h</li>
+              <li>STOP-BANG ≥3: risco moderado-alto de SAOS — CPAP perioperatório, evitar opioides</li>
+              <li>Apfel score: 0-1 baixo · 2 moderado · 3-4 alto → profilaxia escalonada NVPO</li>
+              <li>Caprini: &gt;8 pontos = alto risco TEV → enoxaparina + compressão pneumática</li>
+              <li>Stent coronariano: &lt;30 dias coronariana de emergência → adiar cirurgia · 30 dias–12 meses: manter DAP</li>
+              <li>Metformina: suspender no dia · SGLT2: suspender 48–72h antes (risco cetoacidose euglicêmica)</li>
+              <li>NOAC: rivaroxabana/apixabana suspender 24h (baixo risco sangramento) / 48h (alto risco)</li>
+              <li>Varfarina: suspender 5 dias antes · INR alvo &lt;1.5 para procedimento · heparina bridge se risco trombo alto</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Revisão Rápida</div>
+    </div>
+  </div><!-- /preop-revisao -->
+
+<!-- TAB — QUESTÕES -->
+  <div class="tab-panel" id="preop-questoes">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--violet)">
+          <span class="card-title">📝 Questões — Avaliação Pré-operatória</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">5 questões de múltipla escolha · Clique para revelar o gabarito</p>
+
+          <div class="caso-card" id="q1-preop">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">1</div>
+              <div class="caso-title">QUESTÃO 1 — Jejum Pré-operatório</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente adulto, hígido, agendado para herniorrafia inguinal eletiva sob anestesia geral. Segundo as diretrizes ASA 2023, qual é o tempo mínimo de jejum para <strong>líquidos claros</strong> (água, chá sem leite, suco sem polpa)?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) 1 hora<br>
+                B) 2 horas<br>
+                C) 4 horas<br>
+                D) 6 horas<br>
+                E) 8 horas
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: B)</strong> — As diretrizes ASA 2023 recomendam jejum de <strong>2 horas</strong> para líquidos claros em adultos submetidos a procedimentos eletivos. Leite materno: 4h; fórmula infantil e sólidos leves: 6h; refeição gordurosa: 8h. A liberação precoce de líquidos claros reduz desconforto, hipoglicemia e resistência insulínica perioperatória sem aumentar risco de aspiração.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q2-preop">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">2</div>
+              <div class="caso-title">QUESTÃO 2 — RCRI e Risco Cardíaco</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Ao calcular o RCRI (Revised Cardiac Risk Index) de um paciente, você identifica: doença cardíaca isquêmica, insuficiência cardíaca e <strong>diabetes mellitus insulinodependente</strong>. Quantos pontos o diabetes insulinodependente contribui para o escore RCRI?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) 0 pontos (não faz parte do RCRI)<br>
+                B) 0,5 ponto<br>
+                C) 1 ponto<br>
+                D) 2 pontos<br>
+                E) 3 pontos
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — O RCRI possui 6 variáveis, cada uma valendo <strong>1 ponto</strong>: (1) cirurgia de alto risco, (2) doença cardíaca isquêmica, (3) ICC, (4) doença cerebrovascular, (5) diabetes insulinodependente, (6) creatinina &gt;2 mg/dL. RCRI ≥3 indica risco perioperatório cardíaco maior &gt;10%, devendo ser considerada avaliação cardiológica especializada.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q3-preop">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">3</div>
+              <div class="caso-title">QUESTÃO 3 — Apfel Score e NVPO</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente do sexo feminino, não fumante, com história de NVPO em cirurgia anterior, agendada para colecistectomia laparoscópica com uso de opioides no pós-operatório. Apfel score = 3. Qual é a estratégia profilática MAIS adequada para NVPO nesta paciente?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Nenhuma profilaxia necessária<br>
+                B) Apenas ondansetrona 4 mg IV ao final<br>
+                C) Dexametasona 8 mg + ondansetrona 4 mg (2 drogas)<br>
+                D) 3 drogas antieméticas (ex.: dexametasona + ondansetrona + droperidol/escopolamina)<br>
+                E) TIVA obrigatória + 4 drogas antieméticas
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: D)</strong> — Apfel 3 = risco alto de NVPO (~60%). A abordagem escalonada recomenda: 0-1 = sem profilaxia; 2 = 1-2 drogas; 3-4 = <strong>3 drogas antieméticas</strong> combinadas ± TIVA (propofol como agente de manutenção). Combinações habituais: dexametasona 8 mg na indução + ondansetrona 4 mg no final + droperidol 0,625 mg ou escopolamina transdérmica.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q4-preop">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">4</div>
+              <div class="caso-title">QUESTÃO 4 — SAOS e Anestesia</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente com STOP-BANG = 5 (risco alto de SAOS), candidato à artroscopia de joelho sob anestesia geral. Qual conduta perioperatória é MAIS recomendada?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Sem cuidados especiais, SAOS não afeta o manejo anestésico<br>
+                B) Preferir opioides em alta dose para garantir analgesia adequada<br>
+                C) CPAP perioperatório e monitorização prolongada no pós-operatório<br>
+                D) Contraindicação absoluta à anestesia geral, usar apenas sedação<br>
+                E) Alta hospitalar imediata após o procedimento sem monitorização adicional
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — Pacientes com SAOS (STOP-BANG ≥3) têm risco aumentado de obstrução de via aérea, hipoxemia e complicações cardiovasculares no pós-operatório. Recomendações: uso de <strong>CPAP perioperatório</strong> (trazer o próprio aparelho), minimizar opioides (opioide-sparing), preferir anestesia regional quando possível, monitorização contínua de SpO2 no pós-op e observação prolongada antes da alta.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q5-preop">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">5</div>
+              <div class="caso-title">QUESTÃO 5 — Stent Coronariano e DAP</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente masculino, 62 anos, recebeu stent coronariano farmacológico há <strong>8 meses</strong> e usa AAS 100 mg + clopidogrel 75 mg/dia (dupla antiagregação plaquetária). Necessita de colecistectomia eletiva. Qual é a conduta CORRETA em relação à DAP?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Suspender ambos os antiagregantes 7 dias antes da cirurgia<br>
+                B) Suspender apenas o clopidogrel, manter AAS<br>
+                C) Manter a dupla antiagregação plaquetária (não suspender)<br>
+                D) Substituir por heparina de baixo peso molecular<br>
+                E) Adiar a cirurgia até completar 12 meses do stent
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — Stent farmacológico implantado há 8 meses: está na janela de 30 dias–12 meses onde a <strong>DAP deve ser mantida</strong> (risco de trombose do stent se suspensa). A suspensão precoce pode causar trombose catastrófica do stent (mortalidade ~20–45%). A cirurgia eletiva deve ser realizada mantendo-se os dois antiagregantes, aceitando-se maior sangramento cirúrgico, ou adiada até completar 12 meses quando o clopidogrel já pode ser suspenso com mais segurança.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Questões</div>
+    </div>
+  </div><!-- /preop-questoes -->
+
+  <!-- TAB 6 — CASOS CLÍNICOS
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="preop-casos">
+    <div class="page-wrap">
+
+      <div class="alert a-blue" style="margin-bottom:12px">
+        Clique em cada caso para revelar a análise completa. Tente responder antes de abrir.
+      </div>
+
+      <!-- CASO 1 -->
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 1</span>
+          <span class="caso-title">Paciente 68 anos, HAS + DM2, RCRI 2 — Colecistectomia Eletiva</span>
+        </div>
+        <div class="caso-body">
+          <p><strong>Paciente:</strong> masculino, 68 anos, 82 kg. HAS em uso de enalapril 10 mg/dia e hidroclorotiazida, e DM2 em uso de metformina 1 g 2×/dia + sitagliptina. Não fumante, etilismo social. Refere cansaço ao subir dois lances de escada (pára mas consegue). Colecistectomia laparoscópica eletiva por litíase biliar sintomática. PA na consulta: 148/90 mmHg. ECG: ritmo sinusal, sem alterações isquêmicas. Glicemia 124 mg/dL em jejum. HbA1c 7,8%.</p>
+
+          <div class="caso-question">Qual a classificação ASA e RCRI? Quais exames solicitar? Qual a conduta pré-anestésica?</div>
+          <div class="caso-answer">
+            <div class="sh sh-blue">Estratificação de Risco</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li><strong>ASA:</strong> IIIE se urgência, porém eletiva → <strong>ASA III</strong> (HAS + DM2 com HbA1c 7,8% — doenças controladas mas com limitação funcional leve)</li>
+              <li><strong>RCRI:</strong> Variável 5 (DM insulinodependente) → <strong>NÃO</strong> (usa metformina, não insulina). Variável 1 (cirurgia alto risco) → <strong>NÃO</strong> (colecistectomia laparoscópica = intermediário). <strong>RCRI = 0–1</strong> — risco cardiovascular baixo a moderado</li>
+              <li><strong>Capacidade funcional:</strong> ~4–5 METs (sobe escada parando → beira de 4 METs). Limítrofe — não exclui avaliação cardiológica adicional se outros fatores presentes</li>
+              <li><strong>ARISCAT:</strong> Sem SpO₂ diminuída, sem infecção recente, sem anemia → risco pulmonar baixo</li>
+            </ul>
+
+            <div class="sh sh-teal" style="margin-top:10px">Exames Solicitados</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li>Hemograma completo + função renal (Cr, ureia) — DM + HAS → risco DRC</li>
+              <li>Glicemia em jejum + HbA1c (já disponíveis) — HbA1c 7,8%: aceitável para cirurgia eletiva</li>
+              <li>ECG de repouso (já realizado, normal) — satisfatório para ASA III &gt;50 anos</li>
+              <li>Rx de tórax PA: não obrigatório isolado, mas razoável em ASA III ≥60 anos</li>
+              <li><strong>Não é necessário:</strong> ecocardiograma (FEVE desconhecida mas RCRI baixo + ECG normal + cirurgia laparoscópica de baixo risco vascular), teste de esforço (capacidade funcional limítrofe mas suficiente)</li>
+            </ul>
+
+            <div class="sh sh-gold" style="margin-top:10px">Conduta Pré-Anestésica</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li>Suspender <strong>metformina no dia da cirurgia</strong> (risco de acidose láctica com contraste/jejum)</li>
+              <li>Glipiptinas: podem ser mantidas (evidência limitada de risco — ou suspender no dia por precaução)</li>
+              <li>IECA (enalapril): <strong>suspender no dia</strong> → hipotensão pós-indução. Diurético: avaliar, mas geralmente suspender</li>
+              <li>Meta glicêmica intra-op: 100–180 mg/dL. Glicemia no pré-op imediato.</li>
+              <li>Profilaxia NVPO: Apfel = 1 (não fumante) → profilaxia opcional / 1 droga (dexametasona 4 mg)</li>
+              <li>TEV (Caprini): Cirurgia laparoscópica (&gt;45 min) = 2 pts + idade 61–74 = 2 pts → <strong>Caprini 4 (moderado)</strong>: enoxaparina 40 mg SC 12h após cirurgia + meia compressão</li>
+              <li>Comunicar cirurgião: ASA III, risco intermediário, prosseguir sem otimização adicional</li>
+            </ul>
+
+            <div class="alert a-green" style="margin-top:10px">
+              <strong>Plano anestésico:</strong> Anestesia geral balanceada ou TIVA (Apfel 1 — não imperativo TIVA). Pré-medicação: midazolam 2 mg IV se ansioso. Indução: propofol + fentanil + rocurônio. Intubação orotraqueal. Manutenção: sevoflurano ou desflurano. Extubação após reversão confirmada por TOF. Analgesia multimodal: cetoprofeno IV + dipirona IV + infiltração local pelo cirurgião.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 2 -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 2</span>
+          <span class="caso-title">Mulher 45 anos, FA em Anticoagulação — Artroplastia de Joelho Eletiva</span>
+        </div>
+        <div class="caso-body">
+          <p><strong>Paciente:</strong> feminina, 45 anos, 68 kg. FA paroxística em anticoagulação com rivaroxabana 20 mg/dia (CHADS₂-VASc = 2: sexo feminino + HAS leve). Não fumante. Aguarda artroplastia total de joelho esquerdo. Cirurgia eletiva, marcada para daqui 3 dias. Sem comprometimento renal (Cr 0,8 mg/dL, TFG 85 mL/min). Cardiologista sugere manter anticoagulação no perioperatório se possível.</p>
+
+          <div class="caso-question">Qual o manejo da anticoagulação? É possível neuraxial? Qual a janela segura?</div>
+          <div class="caso-answer">
+            <div class="sh sh-blue">Análise de Risco Trombótico</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li><strong>CHADS₂-VASc = 2</strong> (sexo feminino + HAS): risco anual de AVC ~2,2% → risco BAIXO-MODERADO</li>
+              <li>FA paroxística (não permanente): risco tromboembólico menor que FA permanente com valvopatia</li>
+              <li><strong>Artroplastia de joelho:</strong> cirurgia de alto risco hemorrágico — não é seguro manter anticoagulante terapêutico intra-op</li>
+              <li>Conclusão: risco trombótico não justifica manutenção de rivaroxabana durante a cirurgia</li>
+            </ul>
+
+            <div class="sh sh-red" style="margin-top:10px">Manejo da Rivaroxabana — Janela</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li><strong>Suspender rivaroxabana 48–72h antes</strong> da cirurgia (cirurgia de alto risco hemorrágico = 72h = 3 doses omitidas)</li>
+              <li>TFG 85 mL/min: sem necessidade de estender o intervalo (dose ajustada para função renal normal)</li>
+              <li><strong>Não há necessidade de heparina-ponte</strong> em FA com CHADS₂-VASc ≤4 e sem válvula mecânica — risco hemorrágico da ponte supera benefício tromboembólico</li>
+              <li>Retomada: rivaroxabana 48–72h pós-op (após hemostasia segura + drenos retirados ou débito baixo)</li>
+            </ul>
+
+            <div class="sh sh-teal" style="margin-top:10px">Neuraxial — É Possível?</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li><strong>Sim — neuraxial (raquianestesia/epidural) é possível e preferível</strong> em artroplastia de joelho (menores complicações tromboembólicas e hemorrágicas que geral)</li>
+              <li>Intervalo ASRA 2022 para rivaroxabana: <strong>22–26 horas mínimo</strong> antes do neuraxial</li>
+              <li>Com janela de 72h: segurança muito satisfatória. Confirmar última dose e horário</li>
+              <li>Pós-neuraxial (raquianestesia simples): reintroduzir rivaroxabana em <strong>≥6 horas</strong></li>
+              <li>Se epidural contínua: retirar cateter com rivaroxabana suspensa por ≥22h e retomar 4–6h após retirada</li>
+            </ul>
+
+            <div class="sh sh-gold" style="margin-top:10px">Profilaxia TEV Periop.</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li>Caprini: artroplastia de joelho = 5 pontos → <strong>Alto risco TEV</strong></li>
+              <li>Intra-op e pós-op imediato (antes de retomar NOAC): compressão pneumática intermitente obrigatória</li>
+              <li>Ao retomar rivaroxabana 20 mg/dia: ela serve como profilaxia + tratamento da FA — sem necessidade de enoxaparina adicional</li>
+            </ul>
+
+            <div class="alert a-green" style="margin-top:10px">
+              <strong>Plano anestésico:</strong> Raquianestesia com bupivacaína hiperbárica 12,5–15 mg + morfina espinhal 100 mcg (analgesia pós-op). Sedação leve (midazolam 2 mg ± propofol em TCI). Profilaxia NVPO: Apfel 2 (feminino + não fumante) → dexametasona 4 mg + ondansetrona 4 mg. Comunicar cardiologista: cirurgia realizada na janela anticoagulante, retomada em 48–72h.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 3 -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 3</span>
+          <span class="caso-title">Urgência: Abdome Agudo, Jejum 0h, DM1 + Gastroparesia</span>
+        </div>
+        <div class="caso-body">
+          <p><strong>Paciente:</strong> masculino, 34 anos, 74 kg. DM tipo 1 há 18 anos, em insulina basal/bólus. Gastroparesia diabética confirmada (cintilografia prévia com esvaziamento &gt;60 min para 50% da refeição marcadora). Deu entrada com quadro de abdome agudo (colecistite aguda gangrenada, peritonite localizada). Última refeição: há 40 minutos (lanche completo com carne). SpO₂ 96% em ar ambiente. PA 110/70 mmHg, FC 108 bpm, T 38,4°C. Glicemia: 312 mg/dL. Acidose metabólica leve (pH 7,32, BE -5).</p>
+
+          <div class="caso-question">RSI é justificado? Qual o preparo mínimo? Como manejar a glicemia intra-op?</div>
+          <div class="caso-answer">
+            <div class="sh sh-red">RSI é Justificado? — SIM, Absolutamente</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li><strong>Jejum real: 40 minutos</strong> — sólidos com carne (jejum de 8h necessário)</li>
+              <li><strong>Gastroparesia diabética:</strong> esvaziamento gástrico gravemente retardado — mesmo que houvesse horas de jejum, o estômago poderia ter conteúdo sólido residual</li>
+              <li><strong>Peritonite + sepse:</strong> dor + opioides + inflamação → paralisia intestinal adicional</li>
+              <li>Conclusão: <strong>estômago cheio com alto risco de aspiração CONFIRMADO</strong>. RSI é mandatório</li>
+            </ul>
+
+            <div class="sh sh-blue" style="margin-top:10px">Preparo Mínimo — Sequência Rápida</div>
+            <div class="g2" style="margin-top:8px">
+              <div class="alert a-blue"><strong>PRÉ-OP (15–30 min):</strong><br>• Metoclopramida 10 mg IV (pró-cinético) + ranitidina ou omeprazol IV<br>• Acesso venoso calibroso (≥18G bilateral) + expansão volêmica cautelosa (SF 0,9% 500 mL)<br>• Insulina regular para glicemia (ver abaixo)<br>• SNG: considerar para descompressão gástrica antes da indução (remover antes de intubar)<br>• Equipamento de RSI disponível, aspirador ligado e testado</div>
+              <div class="alert a-red"><strong>INDUÇÃO RSI:</strong><br>• Pré-oxigenação 100% O₂ 3–5 min (VNI se disponível)<br>• <strong>Cetamina 2 mg/kg IV</strong> (148 mg) — mantém tônus laríngeo, broncodilatação, estabilidade HD<br>• <strong>Succinilcolina 1,5 mg/kg IV</strong> (111 mg) — 60–90s para intubação (alternativa: rocurônio 1,2 mg/kg)<br>• <strong>Sem ventilação manual</strong> entre indução e confirmação de intubação<br>• Intubação com TOT 8,0 mm, cuff insuflado, confirmar capnografia</div>
+            </div>
+
+            <div class="sh sh-gold" style="margin-top:12px">Manejo da Glicemia — Meta 100–180 mg/dL Intraop.</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li><strong>Glicemia de entrada: 312 mg/dL</strong> — hiperglicemia significativa mas sem CAD confirmada (pH 7,32, BE -5 → acidose metabólica leve, pode ser sepse/DRC)</li>
+              <li><strong>Não suspender insulina basal</strong> — DM1: sempre manter basal. Reduzir para 50–75% da dose do dia</li>
+              <li>Iniciar infusão de insulina regular IV: regra do 1.500/1.700 ou protocolo local</li>
+              <li>Glicemia horária intraoperatória. Meta: atingir 180–200 antes da incisão, depois manter 100–180</li>
+              <li>Infusão de SG 5% 50–100 mL/h para evitar hipoglicemia se insulina EV</li>
+              <li>Monitorar K⁺: insulina desloca K⁺ para intracelular → risco de hipocalemia em cirurgia prolongada</li>
+              <li><strong>Não adiar a cirurgia para normalizar glicemia</strong> — cirurgia de controle de foco é parte do tratamento da sepse</li>
+            </ul>
+
+            <div class="sh sh-teal" style="margin-top:10px">Cuidados Adicionais</div>
+            <ul style="margin:8px 0;padding-left:18px;line-height:1.7">
+              <li><strong>Antibióticos:</strong> iniciar antes da incisão — piperacilina-tazobactam (ou ceftriaxona + metronidazol) conforme protocolo</li>
+              <li><strong>Monitorização avançada:</strong> PA invasiva (cateter radial) — instabilidade esperada; cateter vesical + débito urinário horário</li>
+              <li><strong>Temperatura:</strong> cobertor térmico, fluidos aquecidos — risco de hipotermia em sepse + cirurgia abdominal</li>
+              <li><strong>Extubação:</strong> considerar extubação na sala se estável e acordado. UCI se instabilidade hemodinâmica, sepse grave, glicemia não controlada</li>
+            </ul>
+
+            <div class="alert a-red" style="margin-top:10px">
+              <strong>Erro a evitar:</strong> aguardar melhora da glicemia ou correção da acidose para iniciar cirurgia. Em peritonite com sepse, o controle do foco infeccioso (cirurgia) é prioritário. Acidose metabólica leve por sepse melhora com o tratamento cirúrgico e antibioticoterapia — não é contraindicação à indução.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /preop-casos -->
+</div>

@@ -1,0 +1,2040 @@
+<div class="screen" id="screen-monit">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Monitorização Anestésica</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="monit-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('monit','basica',this)">Básica</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','bis',this)">Profundidade</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','tof',this)">TOF/BNM</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','pai',this)">PAI/Hemo</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','gas',this)">Gasometria</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','ecotte',this)">EcoTTE</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','capno',this)">Capno/VM</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','casos',this)">Casos</button>
+  </div>
+
+  <!-- TAB 1 — MONITORIZAÇÃO BÁSICA (CFM 2021 — OBRIGATÓRIA) -->
+  <div class="tab-panel active" id="monit-basica">
+    <div class="page-wrap">
+
+      <!-- CONCEITO / RESOLUÇÃO CFM -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">01</span> Resolução CFM 2021 — O Que É Obrigatório?
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            A <strong>Resolução CFM nº 2.174/2017</strong> (atualizada em 2021) estabelece os requisitos mínimos obrigatórios para a prática da anestesiologia no Brasil. Nenhuma anestesia pode ser realizada sem essa monitorização mínima, independentemente do tipo de procedimento, porte cirúrgico ou local de atendimento.
+          </div>
+          <div class="g2" style="margin-top:12px">
+            <div class="alert a-blue"><strong>ECG CONTÍNUO</strong><br>Derivação II (arritmias) e V5 (isquemia) — obrigatório desde a indução</div>
+            <div class="alert a-teal"><strong>SpO₂ CONTÍNUA</strong><br>Oximetria de pulso — curva pletismográfica visível</div>
+            <div class="alert a-green"><strong>PA NÃO-INVASIVA</strong><br>Intervalo máx. 5 min (rotina) → 2–3 min em pacientes de risco</div>
+            <div class="alert a-gold"><strong>CAPNOGRAFIA</strong><br>Obrigatória em anestesia geral — ETCO₂ e forma de onda</div>
+            <div class="alert a-violet"><strong>TEMPERATURA</strong><br>Monitorização contínua — alvo: normotermia (36–37°C)</div>
+            <div class="alert a-orange"><strong>DIURESE</strong><br>0,5 mL/kg/h — cateter vesical nas indicações específicas</div>
+          </div>
+          <div class="alert a-red" style="margin-top:12px">
+            <strong>Além da monitorização mínima:</strong> o anestesiologista deve estar PRESENTE e vigilante durante TODO o procedimento anestésico. O abandono do paciente, mesmo que por curto período, constitui infração ética grave.
+          </div>
+        </div>
+      </div>
+
+      <!-- ECG -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">02</span> ECG Contínuo — Derivações e Arritmias Perioperatórias
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue" style="margin-bottom:12px">
+            O ECG perioperatório tem duas funções principais: <strong>diagnóstico de arritmias</strong> e <strong>detecção de isquemia miocárdica</strong>. A escolha das derivações monitoradas deve contemplar ambos os objetivos.
+          </div>
+          <div class="sh sh-blue">Derivações Recomendadas</div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Derivação</th><th>O Que Monitora</th><th>Sensibilidade</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">Derivação II</span></td><td>Onda P bem visível → diagnóstico de arritmias, eixo inferior</td><td>Referência para arritmias</td></tr>
+              <tr><td><span class="tag tr">V5</span></td><td>Parede lateral do VE → isquemia território DA/Cx</td><td>75% das isquemias periop.</td></tr>
+              <tr><td><span class="tag tg">II + V5</span></td><td>Combinação ideal — padrão ouro perioperatório</td><td>~80–90% das isquemias</td></tr>
+              <tr><td><span class="tag ty">V4R</span></td><td>Ventrículo direito — infarto de VD</td><td>Específico para VD</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-blue" style="margin-top:14px">Arritmias Perioperatórias Mais Frequentes</div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Arritmia</th><th>Contexto Periop.</th><th>Conduta Imediata</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tr">Bradicardia sinusal</span></td><td>Laringoscopia, reflexo vagal, neostigmina, betabloqueador</td><td>Atropina 0,5–1 mg IV; se grave → efedrina/adrenalina</td></tr>
+              <tr><td><span class="tag ty">Taquicardia sinusal</span></td><td>Plano anestésico superficial, dor, hipovolemia, febre</td><td>Tratar causa; betabloqueador se necessário</td></tr>
+              <tr><td><span class="tag ty">ESV / BESV</span></td><td>Hipóxia, hipocalemia, isoflurano + adrenalina</td><td>Corrigir causa; amiodarona se sintomático/multifocal</td></tr>
+              <tr><td><span class="tag tr">BAV 2° / 3°</span></td><td>Cirurgia cardíaca, vagotonia extrema</td><td>Atropina → marca-passo transcutâneo → ECMO se grave</td></tr>
+              <tr><td><span class="tag tr">FA de início agudo</span></td><td>Cirurgia torácica, hipertireoidismo, hipóxia</td><td>Controle de FC (betabloqueador/amiodarona) → cardioversão se instável</td></tr>
+              <tr><td><span class="tag tr">TV / FV</span></td><td>Intoxicação por AL, hipóxia, isquemia, hipercalemia</td><td>RCP imediato → desfibrilação → ACLS → lipídio EV se LAST</td></tr>
+            </tbody>
+          </table></div>
+
+          <!-- SVG: ECG monitor screen -->
+          <div style="text-align:center;margin:16px 0">
+            <svg viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;border-radius:10px;background:#0D1B2A;border:1px solid #1B5E96">
+              <text x="20" y="18" font-family="JetBrains Mono,monospace" font-size="10" fill="#38B6E0" font-weight="700">ECG — DII</text>
+              <text x="200" y="18" font-family="JetBrains Mono,monospace" font-size="10" fill="#1A7A4A">HR: 68 bpm</text>
+              <text x="380" y="18" font-family="JetBrains Mono,monospace" font-size="9" fill="#E8A020">NSR ✓</text>
+              <!-- Grid lines -->
+              <line x1="20" y1="80" x2="460" y2="80" stroke="#1B5E96" stroke-width="0.5" stroke-dasharray="3,3"/>
+              <!-- ECG waveform — one full complex -->
+              <polyline points="20,80 60,80 65,80 68,75 72,80 76,80 82,40 85,125 88,80 92,72 96,80 100,80 140,80 145,80 148,75 152,80 156,80 162,40 165,125 168,80 172,72 176,80 180,80 220,80 225,80 228,75 232,80 236,80 242,40 245,125 248,80 252,72 256,80 260,80 300,80 305,80 308,75 312,80 316,80 322,40 325,125 328,80 332,72 336,80 340,80 380,80 385,80 388,75 392,80 396,80 402,40 405,125 408,80 412,72 416,80 420,80 460,80"
+                fill="none" stroke="#4ADE80" stroke-width="1.5" stroke-linejoin="round"/>
+              <!-- Labels -->
+              <text x="82" y="35" font-family="JetBrains Mono,monospace" font-size="8" fill="#4ADE80" text-anchor="middle">R</text>
+              <text x="68" y="92" font-family="JetBrains Mono,monospace" font-size="8" fill="#4ADE80" text-anchor="middle">P</text>
+              <text x="92" y="90" font-family="JetBrains Mono,monospace" font-size="8" fill="#4ADE80" text-anchor="middle">T</text>
+              <text x="85" y="138" font-family="JetBrains Mono,monospace" font-size="8" fill="#4ADE80" text-anchor="middle">S</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- SpO2 -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">03</span> SpO₂ — Oximetria de Pulso
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            A oximetria de pulso mede a <strong>saturação funcional de oxihemoglobina (SpO₂)</strong> por espectrofotometria — diferença de absorção de luz vermelha (660 nm) e infravermelha (940 nm) entre oxihemoglobina e deoxihemoglobina. <strong>Normal: ≥ 95% (alvo periop: ≥ 98%)</strong>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:12px">Curva Pletismográfica — O que observar</div>
+          <div style="text-align:center;margin:12px 0">
+            <svg viewBox="0 0 460 130" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;width:100%;border-radius:8px;background:#0D1B2A;border:1px solid #0E7490">
+              <text x="20" y="16" font-family="JetBrains Mono,monospace" font-size="10" fill="#38B6E0" font-weight="700">PLESTIMOGRAFIA — SpO₂</text>
+              <text x="300" y="16" font-family="JetBrains Mono,monospace" font-size="10" fill="#38B6E0">SpO₂: 99%</text>
+              <!-- Pleth waveform -->
+              <polyline points="20,90 60,90 80,88 95,60 105,40 115,45 125,70 135,88 140,90 175,90 195,88 210,60 220,40 230,45 240,70 250,88 255,90 290,90 310,88 325,60 335,40 345,45 355,70 365,88 370,90 410,90 430,88 445,60 455,40"
+                fill="none" stroke="#38B6E0" stroke-width="2" stroke-linejoin="round"/>
+              <!-- Fill under curve -->
+              <polyline points="20,90 60,90 80,88 95,60 105,40 115,45 125,70 135,88 140,90 140,110 20,110"
+                fill="#38B6E0" fill-opacity="0.15" stroke="none"/>
+              <!-- Labels -->
+              <text x="105" y="35" font-family="JetBrains Mono,monospace" font-size="8" fill="#38B6E0" text-anchor="middle">Pico sistólico</text>
+              <line x1="105" y1="38" x2="105" y2="50" stroke="#38B6E0" stroke-width="0.8"/>
+              <text x="20" y="120" font-family="Inter,sans-serif" font-size="8" fill="#64748B">Dicrota: perfusão periférica adequada indica boa amplitude</text>
+            </svg>
+          </div>
+
+          <div class="sh sh-teal">Limitações Críticas da SpO₂</div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Causa de Erro</th><th>Efeito na Leitura</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tr">Metahemoglobinemia</span></td><td>SpO₂ falsamente ~85% (independente do valor real)</td><td>Co-oximetria — SpO₂ não confiável; azul de metileno</td></tr>
+              <tr><td><span class="tag tr">Carboxihemoglobin (CO)</span></td><td>SpO₂ falsamente ELEVADA — leitura normal mesmo com intoxicação</td><td>Co-oximetria obrigatória em intoxicação por CO</td></tr>
+              <tr><td><span class="tag ty">Hipoperfusão periférica</span></td><td>Sinal fraco / leitura ausente ou errática</td><td>Reposicionar sensor; usar sensor de reflexão (testa)</td></tr>
+              <tr><td><span class="tag ty">Esmalte de unhas escuro</span></td><td>Subtração de sinal — pode causar falsa queda</td><td>Remover esmalte ou girar sensor 90°</td></tr>
+              <tr><td><span class="tag ty">Anemia grave (Hb &lt;5)</span></td><td>SpO₂ pode parecer normal mesmo com DO₂ inadequado</td><td>Gasometria + Hb para avaliação real</td></tr>
+              <tr><td><span class="tag ty">Icterícia intensa</span></td><td>Bilirrubina absorve luz — pode interferir</td><td>Gasometria arterial para confirmação</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Curva de dissociação da Hb (Henderson-Hasselbalch):</strong> SpO₂ 90% = PaO₂ ~60 mmHg. Abaixo de 90%, a curva é muito íngreme — pequenas quedas de SpO₂ refletem grandes quedas de PaO₂. Nunca aceitar SpO₂ &lt;95% sem investigar.
+          </div>
+        </div>
+      </div>
+
+      <!-- PA NÃO-INVASIVA -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">04</span> Pressão Arterial Não-Invasiva (PANI)
+        </div>
+        <div class="card-body">
+          <div class="g2">
+            <div class="alert a-green"><strong>Frequência PADRÃO</strong><br>A cada <strong>5 minutos</strong> na maioria dos procedimentos</div>
+            <div class="alert a-red"><strong>Frequência em RISCO</strong><br>A cada <strong>2–3 minutos</strong> — indução, eventos hemodinâmicos, cirurgias de grande porte</div>
+          </div>
+
+          <div class="sh sh-green" style="margin-top:12px">Seleção do Manguito — Crítico!</div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Circunferência do Braço</th><th>Manguito</th><th>Erro se Errado</th></tr></thead>
+            <tbody>
+              <tr><td>&lt; 22 cm</td><td>Pediátrico adulto / obeso</td><td>Manguito pequeno → superleitura</td></tr>
+              <tr><td>22–32 cm</td><td>Adulto padrão</td><td>—</td></tr>
+              <tr><td>33–44 cm</td><td>Grande adulto / obeso</td><td>Manguito grande → subleitura</td></tr>
+              <tr><td>&gt; 44 cm</td><td>Coxa (obeso mórbido)</td><td>Considerar PAI obrigatória</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-green" style="margin-top:12px">Limitações da PANI</div>
+          <div class="g2">
+            <div>
+              <div class="alert a-yellow" style="margin-bottom:6px"><strong>Arritmias / FA:</strong> Leitura errática e pouco confiável em FA por irregularidade dos batimentos</div>
+              <div class="alert a-yellow"><strong>Obeso Mórbido (IMC &gt;40):</strong> Comprimento insuficiente do manguito mesmo em grande → considerar PAI</div>
+            </div>
+            <div>
+              <div class="alert a-yellow" style="margin-bottom:6px"><strong>Espasmo vascular periférico:</strong> PANI subestima a PA real → checar com PAI</div>
+              <div class="alert a-yellow"><strong>Movimento contínuo:</strong> Tremores, Parkinson, agitação → PAI obrigatória</div>
+            </div>
+          </div>
+
+          <div class="alert a-red" style="margin-top:10px">
+            <strong>Hipotensão perioperatória:</strong> PA sistólica &lt;90 mmHg ou queda &gt;20% do basal. Todo episódio deve ser registrado, avaliado e tratado — hipotensão prolongada correlaciona com lesão orgânica (rim, coração, cérebro).
+          </div>
+        </div>
+      </div>
+
+      <!-- CAPNOGRAFIA (básica - resumo) -->
+      <div class="card">
+        <div class="card-header ch-gold">
+          <span class="card-num">05</span> Capnografia (Visão Geral — Detalhes na Aba 7)
+        </div>
+        <div class="card-body">
+          <div class="alert a-gold">
+            <strong>Obrigatória em toda anestesia geral</strong> — confirma intubação traqueal vs esofágica, detecta hipoventilação, embolia, hipertermia maligna. ETCO₂ normal: <strong>35–45 mmHg</strong>. Gradiente ETCO₂–PaCO₂ normal: <strong>2–5 mmHg</strong>.
+          </div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:10px">
+            <thead><tr><th>ETCO₂</th><th>Interpretação</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">35–45 mmHg</span></td><td>Normal</td><td>Manter parâmetros ventilatórios</td></tr>
+              <tr><td><span class="tag ty">46–55 mmHg</span></td><td>Hipoventilação / hipercapnia leve</td><td>Aumentar VC ou FR</td></tr>
+              <tr><td><span class="tag tr">&gt;55 mmHg</span></td><td>Hipercapnia significativa / HM (se em ascensão)</td><td>Investigar urgente; considerar HM</td></tr>
+              <tr><td><span class="tag ty">&lt;35 mmHg</span></td><td>Hiperventilação</td><td>Reduzir FR/VC — risco de isquemia cerebral</td></tr>
+              <tr><td><span class="tag tr">≈ 0 mmHg (agudo)</span></td><td>Desconexão / extubação / embolia maciça / PCR</td><td>Investigar IMEDIATAMENTE — verificar via aérea</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- TEMPERATURA -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">06</span> Temperatura — Hipotermia Perioperatória
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange">
+            <strong>Hipotermia perioperatória</strong> (temperatura central &lt;36°C) ocorre em até 70% dos pacientes não aquecidos. Aumenta: sangramento, infecção de ferida cirúrgica, eventos cardíacos, recuperação prolongada, tremores, duração do BNM.
+          </div>
+
+          <div class="sh sh-orange" style="margin-top:12px">Sítios de Medição — Diferenças</div>
+          <div class="tbl-wrap wide"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Sítio</th><th>Correlação Central</th><th>Vantagens</th><th>Desvantagens</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">Esôfago (terço distal)</span></td><td>Excelente (temperatura core)</td><td>Padrão ouro intubados</td><td>Requer IOT; não para sedações</td></tr>
+              <tr><td><span class="tag tb">Artéria Pulmonar</span></td><td>Referência absoluta</td><td>Padrão ouro de pesquisa</td><td>Invasivo (Swan-Ganz)</td></tr>
+              <tr><td><span class="tag tg">Nasofaringe</span></td><td>Boa (próximo hipotálamo)</td><td>Fácil → usar com IOT nasal</td><td>Epistaxe possível</td></tr>
+              <tr><td><span class="tag tg">Timpânico (IR)</span></td><td>Boa (próximo SNC)</td><td>Não invasivo; rápido</td><td>Cerume, posição incorreta alteram leitura</td></tr>
+              <tr><td><span class="tag ty">Axilar</span></td><td>Razoável</td><td>Fácil; amplamente disponível</td><td>1–2°C abaixo da temperatura central</td></tr>
+              <tr><td><span class="tag ty">Cutâneo (adesivo)</span></td><td>Fraca</td><td>Contínuo, não invasivo</td><td>Reflete temperatura periférica, não core</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-orange" style="margin-top:12px">Estratégias de Aquecimento</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-o">1</span><div><strong>Aquecimento ativo externo (manta térmica)</strong> — método mais eficaz. Usar antes da indução (pré-aquecimento 30 min) + intraoperatório</div></div>
+            <div class="proto-step"><span class="sn sn-o">2</span><div><strong>Fluidos aquecidos a 37–39°C</strong> — importante em grandes volumes (hemodiluição tem efeito resfriador)</div></div>
+            <div class="proto-step"><span class="sn sn-o">3</span><div><strong>Temperatura ambiente da sala ≥ 21°C</strong> — especialmente em cirurgia pediátrica e queimados</div></div>
+            <div class="proto-step"><span class="sn sn-o">4</span><div><strong>Umidificação/aquecimento do circuito respiratório</strong> — HME (Heat-Moisture Exchanger) ou aquecedor ativo de circuito</div></div>
+            <div class="proto-step"><span class="sn sn-g">5</span><div><strong>Alvo:</strong> manter temperatura central ≥ 36°C durante todo o procedimento e na chegada ao pós-operatório</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIURESE -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">07</span> Diurese — Monitorização Renal
+        </div>
+        <div class="card-body">
+          <div class="g2">
+            <div class="alert a-teal"><strong>Alvo de Diurese</strong><br><strong>0,5 mL/kg/h</strong> no adulto<br>1,0 mL/kg/h na criança</div>
+            <div class="alert a-red"><strong>Oligúria</strong><br>&lt;0,5 mL/kg/h por &gt;2h<br>Investigar causa!</div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:12px">Indicações de Cateter Vesical Intraoperatório</div>
+          <ul class="ck-list">
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Cirurgias de grande porte (&gt; 2–3 horas)</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Cirurgias urológicas, ginecológicas pélvicas, vasculares</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Pacientes com insuficiência renal prévia ou em risco de IRA</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Reposição hídrica guiada (cirurgias com grandes perdas)</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Monitorização de diurese osmótica (hiperglicemia, manitol)</span></li>
+            <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Paciente em UTI-cirúrgica no pós-operatório</span></li>
+          </ul>
+
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Interpretação da diurese:</strong> Diurese preservada (≥0,5 mL/kg/h) NÃO garante normovolemia — vasopressores podem manter diurese com hipovolemia. Correlacionar com PA, FC, VPP e lactato.
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA GERAL DE MONITORES -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">08</span> Tabela Resumo — Parâmetros e Alarmes
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Monitor</th><th>Parâmetro</th><th>Valor Normal</th><th>Alarme Mínimo</th><th>Alarme Máximo</th></tr></thead>
+            <tbody>
+              <tr><td>ECG</td><td>FC</td><td>60–100 bpm</td><td>&lt;45 bpm</td><td>&gt;120 bpm</td></tr>
+              <tr><td>SpO₂</td><td>Saturação</td><td>≥95%</td><td>&lt;90%</td><td>—</td></tr>
+              <tr><td>PANI</td><td>PAM</td><td>70–100 mmHg</td><td>&lt;60 mmHg</td><td>&gt;110 mmHg</td></tr>
+              <tr><td>PANI</td><td>PAS</td><td>90–140 mmHg</td><td>&lt;80 mmHg</td><td>&gt;160 mmHg</td></tr>
+              <tr><td>Capnografia</td><td>ETCO₂</td><td>35–45 mmHg</td><td>&lt;25 mmHg</td><td>&gt;55 mmHg</td></tr>
+              <tr><td>Temperatura</td><td>Temp. central</td><td>36–37°C</td><td>&lt;35,5°C</td><td>&gt;38,5°C</td></tr>
+              <tr><td>BIS</td><td>Índice BIS</td><td>40–60 (AG)</td><td>&lt;30</td><td>&gt;70 (AG)</td></tr>
+              <tr><td>TOF</td><td>TOF ratio</td><td>≥0,9 (extubação)</td><td>&lt;0,9 ao final</td><td>—</td></tr>
+              <tr><td>ETCO₂</td><td>FR efetiva</td><td>10–14 irpm (ventilado)</td><td>&lt;8 irpm</td><td>&gt;20 irpm</td></tr>
+              <tr><td>PAI</td><td>PAM invasiva</td><td>70–105 mmHg</td><td>&lt;60 mmHg</td><td>&gt;110 mmHg</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- CHECKLIST INTERATIVO -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">09</span> Checklist Interativo — Setup de Monitorização Pré-Indução
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue" style="margin-bottom:10px">
+            <strong>Execute este checklist ANTES de qualquer indução anestésica.</strong> Toque para marcar cada item.
+          </div>
+          <div class="sh sh-blue">Monitorização Obrigatória (CFM 2021)</div>
+          <ul class="ck-list" style="margin-top:6px">
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">ECG: eletrodos posicionados (DII e V5), linha de base sem artefato, FC visível</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">SpO₂: sensor em dedo/testa, curva pletismográfica boa amplitude, valor &gt;95% pré-indução</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">PANI: manguito correto (tamanho/braço), PA basal aferida e registrada</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Capnografia: adaptador conectado ao circuito, linha de amostragem permeável</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Temperatura: sensor posicionado (esôfago/nasofaringe/timpânico)</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Alarmes configurados e ATIVOS (não silenciar sem causa)</span></li>
+          </ul>
+          <div class="sh sh-teal" style="margin-top:12px">Monitorização Adicional (conforme indicação)</div>
+          <ul class="ck-list" style="margin-top:6px">
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">BIS: sensor frontal, pele limpa/seca, índice visível antes de indução</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">TOF: acelerômetro no polegar, estimulador na ulna ou facial, calibração realizada</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">PAI: linha arterial posicionada, transdutor zerado ao nível do átrio (4° EIC — LAM), onda adequada</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Cateter vesical: drenagem livre, sistema fechado, bolsa de urina visível</span></li>
+            <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Débito cardíaco (FloTrac, LiDCO, PiCCO): transdutor configurado, algoritmo ativo</span></li>
+            <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Ecocardiograma TTE/TEE: equipamento disponível e testado</span></li>
+          </ul>
+          <div class="sh sh-green" style="margin-top:12px">Equipamento de Emergência</div>
+          <ul class="ck-list" style="margin-top:6px">
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Desfibrilador: cargado, pás testadas, energia selecionável</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Atropina 0,5mg e efedrina 25mg preparadas na seringa</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Adrenalina 1mg disponível e identificada</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Lipídio 20% (Intralipid) disponível se AL usados em bloqueio</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /monit-basica -->
+
+  <!-- TAB 2 — PROFUNDIDADE ANESTÉSICA (BIS / ENTROPIA) -->
+  <div class="tab-panel" id="monit-bis">
+    <div class="page-wrap">
+
+      <!-- POR QUE MONITORAR -->
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">01</span> Por Que Monitorar Profundidade Anestésica?
+        </div>
+        <div class="card-body">
+          <div class="alert a-violet">
+            <strong>Awareness intraoperatória</strong> — despertar com memória explícita durante anestesia geral. Incidência: <strong>0,1–0,2% em adultos</strong> (1–2:1.000), com consequências psicológicas graves (PTSD em ~50% dos casos).
+          </div>
+
+          <div class="sh sh-violet" style="margin-top:12px">Michigan Awareness Classification (MAC)</div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Grau</th><th>Experiência</th><th>Prevalência</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">Grau 0</span></td><td>Nenhuma awareness (ausência de memória)</td><td>99,8–99,9%</td></tr>
+              <tr><td><span class="tag ty">Grau 1</span></td><td>Percepção auditiva isolada — sem dor</td><td>~0,1%</td></tr>
+              <tr><td><span class="tag ty">Grau 2</span></td><td>Percepção sensorial (tato, pressão) — sem dor</td><td>Raro</td></tr>
+              <tr><td><span class="tag tr">Grau 3</span></td><td>Dor intraoperatória — muito angustiante</td><td>Muito raro</td></tr>
+              <tr><td><span class="tag tr">Grau 4</span></td><td>Dor + paralisia: o pior cenário — terror absoluto</td><td>Excepcional, mas devastador</td></tr>
+              <tr><td><span class="tag tv">Grau 5</span></td><td>Outros (sensação de sufocamento, pesadelos)</td><td>Variável</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-violet" style="margin-top:14px">Fatores de Risco para Awareness</div>
+          <div class="g2">
+            <div class="alert a-red">
+              <strong>Alto Risco:</strong><br>
+              • Cesárea (antes da incisão, feto protegido)<br>
+              • Trauma / indução de sequência rápida<br>
+              • Cardiopatia grave (doses reduzidas)<br>
+              • Cirurgia cardíaca com CEC<br>
+              • Via aérea difícil / intubação difícil
+            </div>
+            <div class="alert a-gold">
+              <strong>Risco Moderado:</strong><br>
+              • Tabagismo / etilismo (maior necessidade)<br>
+              • Uso crônico de benzodiazepínicos/opioides<br>
+              • Pacientes com história prévia de awareness<br>
+              • Uso de relaxante muscular sem hipnótico<br>
+              • TIVA sem confirmação de plano
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIS -->
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">02</span> BIS — Bispectral Index
+        </div>
+        <div class="card-body">
+          <div class="alert a-violet">
+            O BIS processa o <strong>EEG de 4 canais frontais</strong> e gera um índice adimensional de <strong>0 a 100</strong>, refletindo o grau de atividade cerebral. É uma combinação de análise espectral, sincronização burst e supressão burst ponderada por algoritmo proprietário.
+          </div>
+
+          <!-- SVG: Escala BIS visual -->
+          <div style="text-align:center;margin:16px 0">
+            <svg viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;width:100%;border-radius:10px;background:#0D1B2A;border:1px solid #7C3AED">
+              <text x="230" y="18" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#A78BFA" font-weight="700">ESCALA BIS — ESTADOS CLÍNICOS</text>
+
+              <!-- Bar 0-20: Isoelétrico -->
+              <rect x="20" y="30" width="35" height="30" rx="4" fill="#6B7280"/>
+              <text x="37" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#F4F6FA">0–20</text>
+              <text x="37" y="72" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#9CA3AF">Isoelétrico</text>
+
+              <!-- Bar 20-40: Burst suppression -->
+              <rect x="58" y="30" width="50" height="30" rx="4" fill="#C0392B"/>
+              <text x="83" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#F4F6FA">20–40</text>
+              <text x="83" y="72" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#F87171">Burst Supp.</text>
+
+              <!-- Bar 40-60: IDEAL AG -->
+              <rect x="111" y="25" width="70" height="40" rx="4" fill="#1A7A4A"/>
+              <text x="146" y="48" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#F4F6FA" font-weight="700">40–60</text>
+              <text x="146" y="75" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4ADE80" font-weight="700">★ ALVO AG ★</text>
+
+              <!-- Bar 60-80: Sedação -->
+              <rect x="184" y="30" width="70" height="30" rx="4" fill="#E8A020"/>
+              <text x="219" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#F4F6FA">60–80</text>
+              <text x="219" y="72" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#FCD34D">Sedação Mod.</text>
+
+              <!-- Bar 80-90: Sedação leve -->
+              <rect x="257" y="30" width="60" height="30" rx="4" fill="#D4580A"/>
+              <text x="287" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#F4F6FA">80–90</text>
+              <text x="287" y="72" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#FDBA74">Sedação Leve</text>
+
+              <!-- Bar 90-100: Acordado -->
+              <rect x="320" y="30" width="60" height="30" rx="4" fill="#1B5E96"/>
+              <text x="350" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#F4F6FA">90–100</text>
+              <text x="350" y="72" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#93C5FD">Acordado</text>
+
+              <!-- Annotations -->
+              <text x="230" y="100" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#A78BFA">↑ Risco awareness</text>
+              <line x1="184" y1="95" x2="380" y2="95" stroke="#A78BFA" stroke-width="1" marker-end="url(#arr)"/>
+              <text x="75" y="100" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#F87171">↑ Overdose / lesão</text>
+              <line x1="20" y1="95" x2="160" y2="95" stroke="#F87171" stroke-width="1"/>
+
+              <!-- Current BIS display -->
+              <rect x="390" y="25" width="60" height="50" rx="6" fill="#1A2332" stroke="#7C3AED" stroke-width="2"/>
+              <text x="420" y="45" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#A78BFA">BIS</text>
+              <text x="420" y="65" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="20" fill="#4ADE80" font-weight="700">48</text>
+
+              <!-- SQI label -->
+              <text x="230" y="130" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#64748B">SQI (Signal Quality Index) deve ser &gt;50% para leitura confiável</text>
+              <text x="230" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#64748B">EMG (eletromiógrafo) &gt;55 dB = artefato muscular → leitura falsa</text>
+              <text x="230" y="160" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#7C3AED">SR% (Suppression Ratio): &gt;0% em 40–60 = burst suppression</text>
+            </svg>
+          </div>
+
+          <div class="sh sh-violet">Colocação do Sensor BIS</div>
+          <div class="proto-steps" style="margin-top:8px">
+            <div class="proto-step"><span class="sn sn-v">1</span><div>Limpar a pele frontal com álcool isopropílico — remover gordura e células mortas</div></div>
+            <div class="proto-step"><span class="sn sn-v">2</span><div>Aguardar secar completamente (30–60 segundos)</div></div>
+            <div class="proto-step"><span class="sn sn-v">3</span><div>Posicionar eletrodo 1 (central) na linha média frontal — 5 cm acima da raiz nasal</div></div>
+            <div class="proto-step"><span class="sn sn-v">4</span><div>Eletrodos 2, 3, 4: seguindo o sensor pré-configurado em direção à têmpora</div></div>
+            <div class="proto-step"><span class="sn sn-v">5</span><div>Pressionar cada eletrodo por 5 segundos para ativar o gel condutor</div></div>
+            <div class="proto-step"><span class="sn sn-g">6</span><div>Verificar SQI &gt;50% e EMG &lt;55 dB antes de usar o valor BIS como guia</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIMITAÇÕES BIS -->
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">03</span> Limitações do BIS — Casos que Enganam
+        </div>
+        <div class="card-body">
+          <div class="alert a-red" style="margin-bottom:12px">
+            O BIS NÃO é perfeito — vários agentes e condições alteram a leitura de forma não linear. Conhecer as limitações é tão importante quanto conhecer a escala.
+          </div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Situação</th><th>BIS Esperado</th><th>Real/Paradoxo</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tv">Cetamina</span></td><td>↓ (anestesiado)</td><td>BIS AUMENTA (atividade EEG aumentada)</td><td>Não usar BIS como guia com cetamina</td></tr>
+              <tr><td><span class="tag tv">N₂O isolado</span></td><td>↓ esperado</td><td>BIS inconsistente — pode não cair</td><td>Usar BIS apenas como tendência com N₂O</td></tr>
+              <tr><td><span class="tag ty">Artefato muscular (EMG)</span></td><td>Em plano anestésico</td><td>BIS falsamente ELEVADO (tônus muscular)</td><td>Verificar EMG &gt;55 dB → artefato</td></tr>
+              <tr><td><span class="tag ty">Marca-passo cardíaco</span></td><td>—</td><td>Interferência eletromagnética → BIS errado</td><td>Deslocar sensor; filtrar interferência</td></tr>
+              <tr><td><span class="tag ty">Hipotermia grave</span></td><td>—</td><td>BIS cai com hipotermia mesmo em paciente acordado</td><td>Correlacionar com temperatura central</td></tr>
+              <tr><td><span class="tag ty">AVC isquêmico hemisférico</span></td><td>—</td><td>BIS pode ser &lt;40 com paciente consciente (hemisfério lesado)</td><td>Anamnese + contexto clínico</td></tr>
+              <tr><td><span class="tag tg">Isoflurano/Sevo/Des (dose alta)</span></td><td>↓ esperado</td><td>Dose-dependente — confiável neste caso</td><td>BIS válido como guia com halogenados</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- ENTROPIA GE -->
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">04</span> Entropia (GE Healthcare) — Alternativa ao BIS
+        </div>
+        <div class="card-body">
+          <div class="alert a-violet">
+            A <strong>Entropia</strong> usa o princípio de irregularidade do sinal EEG — um EEG irregular/caótico = paciente acordado; sinal mais regular/previsível = anestesia. Dois índices complementares:
+          </div>
+          <div class="g2" style="margin-top:10px">
+            <div class="alert a-blue">
+              <strong>State Entropy (SE)</strong><br>
+              Faixa: 0–91<br>
+              Reflete atividade cortical<br>
+              Alvo AG: <strong>40–60</strong><br>
+              Frequências 0,8–32 Hz (EEG dominante)
+            </div>
+            <div class="alert a-teal">
+              <strong>Response Entropy (RE)</strong><br>
+              Faixa: 0–100<br>
+              Inclui atividade EMG (frontal)<br>
+              Alvo AG: <strong>40–60</strong><br>
+              Frequências 0,8–47 Hz (EEG + EMG)
+            </div>
+          </div>
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Diferença RE – SE:</strong> Se RE &gt; SE + 10 = componente muscular elevado → superficialidade ou estímulo nociceptivo sem analgesia adequada. Ideal: RE ≈ SE (sem tensão muscular frontal).
+          </div>
+        </div>
+      </div>
+
+      <!-- PRST SCORE -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">05</span> PRST Score — Método Clínico de Profundidade
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            O <strong>PRST score</strong> avalia sinais clínicos autonômicos de resposta ao estímulo cirúrgico. Útil quando monitores de EEG não estão disponíveis ou são confiáveis.
+          </div>
+          <div class="tbl-wrap wide"><table class="tbl" style="margin-top:10px">
+            <thead><tr><th>Letra</th><th>Parâmetro</th><th>0 ponto</th><th>1 ponto</th><th>2 pontos</th></tr></thead>
+            <tbody>
+              <tr><td><strong>P</strong></td><td>Pressão Arterial</td><td>PA normal (basal)</td><td>PAS &gt; basal +15 mmHg</td><td>PAS &gt; basal +30 mmHg</td></tr>
+              <tr><td><strong>R</strong></td><td>FC (Rate)</td><td>FC normal (basal)</td><td>FC &gt; basal +15 bpm</td><td>FC &gt; basal +30 bpm</td></tr>
+              <tr><td><strong>S</strong></td><td>Sudorese</td><td>Pele seca</td><td>Pele úmida visível</td><td>Sudorese franca</td></tr>
+              <tr><td><strong>T</strong></td><td>Lágrimas (Tears)</td><td>Sem lágrimas</td><td>Umedecimento ocular</td><td>Lágrimas escorrendo</td></tr>
+            </tbody>
+          </table></div>
+          <div class="g2" style="margin-top:10px">
+            <div class="alert a-green"><strong>PRST 0–2:</strong> Profundidade adequada — manter</div>
+            <div class="alert a-gold"><strong>PRST 3–4:</strong> Profundidade limítrofe — aprofundar</div>
+            <div class="alert a-red" style="grid-column:1/-1"><strong>PRST ≥5:</strong> Plano superficial / despertar iminente → aprofundar URGENTE: bolus de hipnótico + analgésico</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROTOCOLO AWARENESS -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">06</span> Protocolo de Awareness — O Que Fazer?
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            Todo caso suspeito ou confirmado de awareness deve ser comunicado, documentado e o paciente deve receber suporte psicológico. Subnotificação é um problema real — muitos anestesiologistas não abordam o tema com o paciente.
+          </div>
+          <div class="proto-steps" style="margin-top:12px">
+            <div class="proto-step"><span class="sn sn-r">1</span><div><strong>No intraoperatório:</strong> se suspeita de despertar — aprofundar IMEDIATAMENTE com bolus de hipnótico (propofol 0,5–1 mg/kg IV) + opioide + benzodiazepínico; aumentar concentração de halogenado</div></div>
+            <div class="proto-step"><span class="sn sn-r">2</span><div><strong>Pós-operatório imediato:</strong> avaliar o paciente ativamente — fazer perguntas abertas: "Você se lembra de algo durante a cirurgia?"</div></div>
+            <div class="proto-step"><span class="sn sn-y">3</span><div><strong>Se awareness confirmado:</strong> ouvir o relato completo com empatia; NÃO minimizar a experiência; NÃO culpar o paciente</div></div>
+            <div class="proto-step"><span class="sn sn-y">4</span><div><strong>Documentação:</strong> registrar no prontuário detalhadamente — horário, duração estimada, circunstância, BIS durante o episódio</div></div>
+            <div class="proto-step"><span class="sn sn-g">5</span><div><strong>Encaminhamento psicológico:</strong> ~50% dos pacientes com awareness desenvolvem PTSD. Encaminhar para psiquiatra/psicólogo</div></div>
+            <div class="proto-step"><span class="sn sn-g">6</span><div><strong>Notificação institucional:</strong> comunicar ao serviço de qualidade / chefia de anestesiologia para análise de causa raiz</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /monit-bis -->
+
+  <!-- TAB 3 — BLOQUEIO NEUROMUSCULAR (TOF / PTC / DBS) -->
+  <div class="tab-panel" id="monit-tof">
+    <div class="page-wrap">
+
+      <!-- POR QUE MONITORAR BNM -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">01</span> Por Que Monitorar o Bloqueio Neuromuscular?
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>Bloqueio residual</strong> (TOF ratio &lt;0,9) ocorre em 20–60% dos pacientes extubados sem monitorização objetiva. Consequências: aspiração pulmonar, hipoxemia pós-op, atelectasia, pneumonia, prolongamento da internação e morte.
+          </div>
+          <div class="g2" style="margin-top:10px">
+            <div class="alert a-orange">
+              <strong>TOF ratio 0,7–0,9 (residual moderado):</strong><br>
+              • Disfunção faríngea → disfagia<br>
+              • Obstrução de via aérea superior<br>
+              • Resposta ventilatória à hipóxia ↓<br>
+              • Risco de aspiração significativo
+            </div>
+            <div class="alert a-red">
+              <strong>TOF ratio &lt;0,7 (residual grave):</strong><br>
+              • Fraqueza visível dos músculos acessórios<br>
+              • Incapacidade de elevar a cabeça por 5s<br>
+              • Diplopia, ptose palpebral<br>
+              • SpO₂ instável no SRPA
+            </div>
+          </div>
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Regra fundamental:</strong> NUNCA extubar baseado apenas em avaliação CLÍNICA (elevação de cabeça, pressão inspiratória). A avaliação clínica falha em detectar TOF ratio entre 0,7 e 0,9 — exatamente a faixa de maior risco.
+          </div>
+        </div>
+      </div>
+
+      <!-- TIPOS DE ESTIMULAÇÃO -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">02</span> Tipos de Estimulação Neuromuscular
+        </div>
+        <div class="card-body">
+
+          <div class="sh sh-green">TOF — Train-of-Four (Padrão)</div>
+          <div class="alert a-green" style="margin-top:6px;margin-bottom:10px">
+            4 estímulos supramáximos a <strong>2 Hz</strong> (intervalo de 0,5s). Avalia a progressão e recuperação do bloqueio. Parâmetros: <strong>contagem (T1–T4)</strong> e <strong>razão TOF = T4/T1</strong>.
+          </div>
+
+          <!-- SVG: TOF diagram -->
+          <div style="text-align:center;margin:12px 0">
+            <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;width:100%;border-radius:10px;background:#0D1B2A;border:1px solid #1A7A4A">
+              <text x="230" y="18" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#4ADE80" font-weight="700">TRAIN-OF-FOUR (TOF) — PADRÃO DE FADE</text>
+
+              <!-- Sem BNM (TOF 1.0) -->
+              <text x="20" y="38" font-family="Inter,sans-serif" font-size="9" fill="#9CA3AF">Normal (sem BNM)</text>
+              <rect x="90" y="28" width="15" height="22" rx="3" fill="#4ADE80"/>
+              <rect x="120" y="28" width="15" height="22" rx="3" fill="#4ADE80"/>
+              <rect x="150" y="28" width="15" height="22" rx="3" fill="#4ADE80"/>
+              <rect x="180" y="28" width="15" height="22" rx="3" fill="#4ADE80"/>
+              <text x="270" y="42" font-family="JetBrains Mono,monospace" font-size="10" fill="#4ADE80">T4/T1 = 1,0</text>
+              <text x="390" y="42" font-family="JetBrains Mono,monospace" font-size="9" fill="#4ADE80">TOF ratio: 1,0</text>
+
+              <!-- BNM leve (TOF 0.7) -->
+              <text x="20" y="78" font-family="Inter,sans-serif" font-size="9" fill="#9CA3AF">BNM leve (residual)</text>
+              <rect x="90" y="60" width="15" height="22" rx="3" fill="#E8A020"/>
+              <rect x="120" y="63" width="15" height="19" rx="3" fill="#E8A020" opacity="0.9"/>
+              <rect x="150" y="67" width="15" height="15" rx="3" fill="#E8A020" opacity="0.7"/>
+              <rect x="180" y="71" width="15" height="11" rx="3" fill="#E8A020" opacity="0.5"/>
+              <text x="270" y="75" font-family="JetBrains Mono,monospace" font-size="10" fill="#E8A020">T4/T1 = 0,7</text>
+              <text x="390" y="75" font-family="JetBrains Mono,monospace" font-size="9" fill="#FCD34D">FADE visível</text>
+
+              <!-- BNM moderado (TOF count 3) -->
+              <text x="20" y="118" font-family="Inter,sans-serif" font-size="9" fill="#9CA3AF">BNM moderado</text>
+              <rect x="90" y="100" width="15" height="22" rx="3" fill="#D4580A"/>
+              <rect x="120" y="100" width="15" height="22" rx="3" fill="#D4580A" opacity="0.7"/>
+              <rect x="150" y="100" width="15" height="22" rx="3" fill="#D4580A" opacity="0.4"/>
+              <text x="180" y="118" font-family="JetBrains Mono,monospace" font-size="12" fill="#6B7280">✕</text>
+              <text x="270" y="115" font-family="JetBrains Mono,monospace" font-size="10" fill="#D4580A">T count = 3</text>
+              <text x="390" y="115" font-family="JetBrains Mono,monospace" font-size="9" fill="#FDBA74">Não reverter</text>
+
+              <!-- BNM profundo (TOF 0) -->
+              <text x="20" y="158" font-family="Inter,sans-serif" font-size="9" fill="#9CA3AF">BNM profundo</text>
+              <text x="90" y="158" font-family="JetBrains Mono,monospace" font-size="12" fill="#6B7280">✕</text>
+              <text x="120" y="158" font-family="JetBrains Mono,monospace" font-size="12" fill="#6B7280">✕</text>
+              <text x="150" y="158" font-family="JetBrains Mono,monospace" font-size="12" fill="#6B7280">✕</text>
+              <text x="180" y="158" font-family="JetBrains Mono,monospace" font-size="12" fill="#6B7280">✕</text>
+              <text x="270" y="158" font-family="JetBrains Mono,monospace" font-size="10" fill="#C0392B">T count = 0</text>
+              <text x="390" y="158" font-family="JetBrains Mono,monospace" font-size="9" fill="#F87171">Usar PTC</text>
+
+              <!-- Label T1-T4 -->
+              <text x="97" y="190" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">T1</text>
+              <text x="127" y="190" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">T2</text>
+              <text x="157" y="190" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">T3</text>
+              <text x="187" y="190" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">T4</text>
+            </svg>
+          </div>
+
+          <div class="sh sh-green" style="margin-top:14px">PTC — Post-Tetanic Count</div>
+          <div class="alert a-teal" style="margin-top:6px;margin-bottom:10px">
+            Usado quando TOF = 0 (bloqueio profundo). Sequência: tétano 50 Hz por 5 s → pausa 3 s → TOF lento (conta estímulos isolados). <strong>PTC 1–2 = bloqueio profundo</strong>. PTC &lt;1 = bloqueio total. PTC &gt;10 = início de recuperação espontânea.
+          </div>
+
+          <div class="sh sh-green">DBS — Double Burst Stimulation</div>
+          <div class="alert a-blue" style="margin-top:6px">
+            Dois bursts curtos de estímulos a 50 Hz, separados por 750 ms. Mais fácil de detectar fade visualmente/tatilmente que o TOF. Útil quando aceleromiografia não está disponível.
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERPRETAÇÃO TOF -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">03</span> Interpretação Sistemática do TOF
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>TOF Count / Ratio</th><th>Nível de Bloqueio</th><th>Reversão Segura?</th><th>Reversor de Escolha</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tr">TOF 0 / PTC 0</span></td><td>Bloqueio TOTAL (intenso)</td><td>NÃO — aguardar</td><td>Sugammadex 16 mg/kg (emergência)</td></tr>
+              <tr><td><span class="tag tr">TOF 0 / PTC 1–2</span></td><td>Bloqueio profundo</td><td>NÃO — aguardar</td><td>Sugammadex 4 mg/kg (profundo)</td></tr>
+              <tr><td><span class="tag ty">TOF count 1–2</span></td><td>Bloqueio moderado</td><td>NÃO — aguardar</td><td>Sugammadex 4 mg/kg quando PTC &gt;2</td></tr>
+              <tr><td><span class="tag ty">TOF count 3</span></td><td>Bloqueio moderado-leve</td><td>NÃO revert. c/ neostigmina</td><td>Sugammadex 2–4 mg/kg</td></tr>
+              <tr><td><span class="tag ty">TOF count 4, ratio 0,7–0,89</span></td><td>Bloqueio RESIDUAL</td><td>Incompleta — não extubar</td><td>Sugammadex 2 mg/kg ou neostigmina (c/ cautela)</td></tr>
+              <tr><td><span class="tag tg">TOF ratio ≥ 0,9</span></td><td>Recuperação adequada</td><td>SIM — extubação segura</td><td>Não necessário reversor adicional</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Neostigmina — limitações importantes:</strong><br>
+            • NÃO reverter com TOF count &lt;4 (risco de bloqueio paradoxal)<br>
+            • Dose máxima eficaz: 0,07 mg/kg — acima disso não melhora e piora<br>
+            • Sempre associar com glicopirrolato (0,2 mg para cada 1 mg de neostigmina) ou atropina para prevenir bradicardia<br>
+            • Pode NÃO levar TOF ratio a ≥0,9 mesmo com count 4 em bloqueio residual significativo
+          </div>
+        </div>
+      </div>
+
+      <!-- ACELEROMOGRAFIA -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">04</span> Aceleromografia vs Estimulação Tátil
+        </div>
+        <div class="card-body">
+          <div class="g2">
+            <div class="alert a-green">
+              <strong>ACELEROMOGRAFIA (objetiva)</strong><br>
+              TOF-Watch SX, TOF-Scan, StimPod<br><br>
+              Mede a aceleração do polegar com piezoelétrico<br>
+              Fornece <strong>TOF ratio NUMÉRICO</strong><br>
+              Padrão ouro clínico atual<br>
+              Sensibilidade: detecta TOF 0,7–0,9 (clínica não detecta)
+            </div>
+            <div class="alert a-red">
+              <strong>ESTIMULAÇÃO TÁTIL/VISUAL (subjetiva)</strong><br>
+              Simplesmente observar/sentir a resposta do polegar<br><br>
+              NÃO fornece ratio numérico<br>
+              Avaliador não detecta fade &lt;0,4<br>
+              Muito imprecisa para TOF 0,7–0,9<br>
+              <strong>NÃO deve ser usada como único método</strong>
+            </div>
+          </div>
+
+          <div class="sh sh-green" style="margin-top:12px">Protocolo de Uso do TOF-Watch</div>
+          <div class="proto-steps" style="margin-top:8px">
+            <div class="proto-step"><span class="sn sn-g">1</span><div><strong>Posicionamento:</strong> eletrodos no nervo ulnar (face anterior do punho), acelerômetro no polegar livre (não imobilizado)</div></div>
+            <div class="proto-step"><span class="sn sn-g">2</span><div><strong>Calibração obrigatória:</strong> registrar resposta supramáxima ANTES de administrar o BNM (T0 = 100% = baseline)</div></div>
+            <div class="proto-step"><span class="sn sn-g">3</span><div><strong>Monitorar PTC</strong> se TOF count = 0 — determine quando é seguro realizar a reversão</div></div>
+            <div class="proto-step"><span class="sn sn-g">4</span><div><strong>Confirmar TOF ratio ≥0,9</strong> ANTES de extubar — não antes</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA REVERSORES -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">05</span> Tabela de Reversores — Doses e Indicações
+        </div>
+        <div class="card-body">
+          <div class="drug-card" style="margin-top:6px">
+            <div class="drug-hdr" style="background:var(--teal)" onclick="toggleDrug(this)"><div class="drug-hdr-inner"><div class="drug-name">Sugammadex (Bridion)</div><div class="drug-class">Cyclodextrina modificada · Reversor seletivo de rocurônio/vecurônio</div></div><span class="drug-arrow">›</span></div>
+            <div class="drug-body">
+              <div class="alert a-teal" style="margin-bottom:10px">Encapsula fisicamente o rocurônio/vecurônio — reversão imediata e completa independente da profundidade do bloqueio.</div>
+              <div class="tbl-wrap"><table class="tbl">
+                <thead><tr><th>Indicação</th><th>Dose</th><th>TOF esperado pós</th></tr></thead>
+                <tbody>
+                  <tr><td>Bloqueio moderado (TOF count ≥2)</td><td><strong>2 mg/kg IV</strong></td><td>TOF ratio ≥0,9 em ~3 min</td></tr>
+                  <tr><td>Bloqueio profundo (PTC 1–2)</td><td><strong>4 mg/kg IV</strong></td><td>TOF ratio ≥0,9 em ~3 min</td></tr>
+                  <tr><td>Reversão imediata / emergência (TOF 0 pós-dose plena)</td><td><strong>16 mg/kg IV</strong></td><td>TOF ratio ≥0,9 em 3–5 min</td></tr>
+                </tbody>
+              </table></div>
+              <div class="alert a-gold" style="margin-top:8px">
+                <strong>Cálculo rápido (adulto 70 kg):</strong><br>
+                2 mg/kg = 140 mg → 1,4 mL (100 mg/mL) ou 14 mL (10 mg/mL)<br>
+                4 mg/kg = 280 mg → 2,8 mL (100 mg/mL)<br>
+                16 mg/kg = 1120 mg → 11,2 mL (100 mg/mL) = approx 2 ampolas 200 mg/2mL
+              </div>
+            </div>
+          </div>
+
+          <div class="drug-card" style="margin-top:8px">
+            <div class="drug-hdr" style="background:var(--orange)" onclick="toggleDrug(this)"><div class="drug-hdr-inner"><div class="drug-name">Neostigmina + Glicopirrolato</div><div class="drug-class">Anticolinesterásico · Reversão APENAS com TOF count 4 · Limitações importantes</div></div><span class="drug-arrow">›</span></div>
+            <div class="drug-body">
+              <div class="alert a-red" style="margin-bottom:10px">Inibe a acetilcolinesterase → ↑ ACh na junção neuromuscular. NÃO reverter com TOF count &lt;4. Não leva a TOF ratio &gt;0,9 de forma confiável.</div>
+              <div class="tbl-wrap"><table class="tbl">
+                <tbody>
+                  <tr><td>Dose neostigmina</td><td><strong>0,04–0,07 mg/kg IV</strong> (máx. 5 mg)</td></tr>
+                  <tr><td>Dose glicopirrolato</td><td><strong>0,2 mg para cada 1 mg de neostigmina</strong> (ratio 1:5)</td></tr>
+                  <tr><td>Alternativa anticolinérgico</td><td>Atropina 0,01 mg/kg (age mais rápido — usar se bradicardia)</td></tr>
+                  <tr><td>Onset de reversão</td><td>5–15 minutos (muito mais lento que sugammadex)</td></tr>
+                  <tr><td>Contra-indicação</td><td>TOF count &lt;4 / bloqueio profundo / cirurgia em intestino (↑ peristaltismo)</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /monit-tof -->
+
+  <!-- TAB 4 — PRESSÃO ARTERIAL INVASIVA + HEMODINÂMICA AVANÇADA -->
+  <div class="tab-panel" id="monit-pai">
+    <div class="page-wrap">
+
+      <!-- INDICAÇÕES PAI -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">01</span> PAI — Indicações e Sítios de Acesso
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            A <strong>Pressão Arterial Invasiva (PAI)</strong> fornece monitorização contínua beat-to-beat da PA e acesso arterial para gasometrias seriadas. Indicada quando a PANI é insuficiente ou quando a variabilidade hemodinâmica é esperada.
+          </div>
+
+          <div class="sh sh-red" style="margin-top:12px">Indicações Clínicas</div>
+          <div class="g2" style="margin-top:6px">
+            <div class="alert a-red">
+              <strong>CIRÚRGICAS:</strong><br>
+              • Cirurgias de grande porte (cardíaca, vascular, torácica)<br>
+              • Neurocirurgia<br>
+              • Cirurgia de coluna lombar (decúbito ventral)<br>
+              • Hepatectomia / transplante hepático<br>
+              • Ressecção pulmonar / pulmão único
+            </div>
+            <div class="alert a-orange">
+              <strong>CLÍNICAS:</strong><br>
+              • Instabilidade hemodinâmica grave<br>
+              • Via aérea difícil antecipada (VAD)<br>
+              • Obesos mórbidos (PANI não confiável)<br>
+              • Gasometrias seriadas necessárias<br>
+              • Arritmias que invalidam a PANI (FA)
+            </div>
+          </div>
+
+          <div class="sh sh-red" style="margin-top:12px">Sítios de Punção — Comparativo</div>
+          <div class="tbl-wrap wide"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Artéria</th><th>Vantagens</th><th>Desvantagens</th><th>Teste Prévio</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">Radial (1ª escolha)</span></td><td>Superficial, colateral ulnar, baixa morbidade</td><td>Pequeno calibre em vasoconstrição</td><td>Teste de Allen</td></tr>
+              <tr><td><span class="tag tb">Femoral</span></td><td>Calibre maior, fácil em choques</td><td>Infecção, não adequada em deambulação</td><td>—</td></tr>
+              <tr><td><span class="tag ty">Braquial</span></td><td>Boa pulsatilidade</td><td>Fluxo terminal → isquemia do antebraço</td><td>—</td></tr>
+              <tr><td><span class="tag ty">Dorsal do pé</span></td><td>Útil quando radial inacessível</td><td>Mais instável, mobilidade do pé</td><td>Compressão tibial</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="acc" style="margin-top:12px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Teste de Allen — Como Realizar</div>
+            <div class="acc-body">
+              <div class="proto-steps">
+                <div class="proto-step"><span class="sn sn-r">1</span><div>Comprimir SIMULTANEAMENTE as artérias radial e ulnar com os dedos do examinador</div></div>
+                <div class="proto-step"><span class="sn sn-r">2</span><div>Pedir ao paciente que abra e feche o punho 10 vezes até a mão ficar pálida (isquemia)</div></div>
+                <div class="proto-step"><span class="sn sn-r">3</span><div>Soltar APENAS a artéria ulnar — mantendo compressão na radial</div></div>
+                <div class="proto-step"><span class="sn sn-g">4</span><div><strong>Normal (teste positivo):</strong> rubor da mão em &lt;7 segundos → circulação colateral ulnar adequada → punção radial segura</div></div>
+                <div class="proto-step"><span class="sn sn-y">5</span><div><strong>Anormal (teste negativo):</strong> rubor &gt;15 s ou ausente → sem colateral adequada → escolher outro sítio</div></div>
+              </div>
+              <div class="alert a-gold" style="margin-top:8px">Teste de Allen modificado com SpO₂: colocar sensor no polegar, soltar ulnar — SpO₂ deve retornar em &lt;10s. Mais objetivo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TÉCNICA -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">02</span> Técnica de Punção e Transdutor
+        </div>
+        <div class="card-body">
+          <div class="sh sh-red">Punção Direta (Padrão)</div>
+          <div class="proto-steps" style="margin-top:8px">
+            <div class="proto-step"><span class="sn sn-r">1</span><div>Posicionar punho em extensão ~30° (coxim/rolo sob o punho) e fixar na prancha</div></div>
+            <div class="proto-step"><span class="sn sn-r">2</span><div>Antissepsia rigorosa (clorexidina alcoólica), campos estéreis</div></div>
+            <div class="proto-step"><span class="sn sn-r">3</span><div>Palpar pulsação máxima da radial, anestesia local (lidocaína 0,5–1 mL)</div></div>
+            <div class="proto-step"><span class="sn sn-r">4</span><div>Cateter sobre agulha (20G padrão; 22G em obesos/vasoconstrição) angulado 30–45° até refluxo de sangue</div></div>
+            <div class="proto-step"><span class="sn sn-r">5</span><div>Achatar o ângulo para 10°, avançar o cateter sobre a agulha retrativa</div></div>
+            <div class="proto-step"><span class="sn sn-g">6</span><div>Conectar ao sistema de transdutor pressurizado (300 mmHg), zeragem ao nível do átrio direito</div></div>
+          </div>
+
+          <div class="sh sh-red" style="margin-top:14px">Zeragem do Transdutor — Ponto Zero Hidrostático</div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>Posição do transdutor:</strong> Nível do <strong>átrio direito</strong> = 4° espaço intercostal na linha axilar média (LAM). Cada 1 cm de diferença = erro de ~0,74 mmHg. Em posição sentada ou Trendelenburg, recalibrar obrigatoriamente.
+          </div>
+
+          <div class="sh sh-red" style="margin-top:12px">Fast Flush Test — Avaliação do Sistema</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="alert a-green"><strong>Sistema IDEAL (criticamente amortecido):</strong><br>1–2 oscilações após flush → sistema responsivo → valores confiáveis</div>
+            <div class="alert a-red"><strong>Superamortecido:</strong><br>Sem oscilação após flush → linha dobrada, coágulo, bolha de ar → subestima PA sistólica</div>
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Subamortecido (>3 oscilações):</strong> Superestima PA sistólica mas subestima diastólica — PAM confiável. Resolver: remover bolhas de ar, verificar conexões.
+          </div>
+        </div>
+      </div>
+
+      <!-- ANÁLISE DA CURVA PAI -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">03</span> Análise da Curva PAI e VPP
+        </div>
+        <div class="card-body">
+          <!-- SVG: PAI waveform -->
+          <div style="text-align:center;margin:12px 0">
+            <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;width:100%;border-radius:10px;background:#0D1B2A;border:1px solid #C0392B">
+              <text x="230" y="18" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#F87171" font-weight="700">CURVA DE PRESSÃO ARTERIAL INVASIVA</text>
+
+              <!-- Y axis labels -->
+              <text x="15" y="38" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">120</text>
+              <text x="15" y="83" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">80</text>
+              <text x="15" y="118" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">60</text>
+              <text x="15" y="163" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">40</text>
+
+              <!-- Grid lines -->
+              <line x1="35" y1="35" x2="450" y2="35" stroke="#1B3A5A" stroke-width="0.5" stroke-dasharray="3,3"/>
+              <line x1="35" y1="80" x2="450" y2="80" stroke="#1B3A5A" stroke-width="0.5" stroke-dasharray="3,3"/>
+              <line x1="35" y1="115" x2="450" y2="115" stroke="#1B3A5A" stroke-width="0.5" stroke-dasharray="3,3"/>
+              <line x1="35" y1="160" x2="450" y2="160" stroke="#1B3A5A" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+              <!-- PAI waveform — two complexes -->
+              <!-- Complex 1 -->
+              <polyline points="35,155 55,155 70,130 80,38 90,45 100,90 105,82 115,88 120,90 140,90 145,90 160,125 170,38 180,45 190,90 195,82 205,88 210,90 230,90 235,90 250,125 260,38 270,45 280,90 285,82 295,88 300,90 320,90 325,90 340,125 350,38 360,45 370,90 375,82 385,88 390,90 410,90 415,90 430,125 440,38 450,45"
+                fill="none" stroke="#EF4444" stroke-width="2" stroke-linejoin="round"/>
+
+              <!-- Annotations -->
+              <!-- Systolic -->
+              <line x1="80" y1="38" x2="80" y2="20" stroke="#EF4444" stroke-width="1" stroke-dasharray="2,2"/>
+              <text x="80" y="16" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#EF4444">PAS 120</text>
+
+              <!-- Dicrotic notch -->
+              <circle cx="105" cy="82" r="3" fill="none" stroke="#FBBF24" stroke-width="1.5"/>
+              <text x="112" y="75" font-family="Inter,sans-serif" font-size="7" fill="#FBBF24">Dicrota</text>
+
+              <!-- Diastolic -->
+              <line x1="120" y1="90" x2="140" y2="90" stroke="#60A5FA" stroke-width="1" stroke-dasharray="2,2"/>
+              <text x="145" y="94" font-family="JetBrains Mono,monospace" font-size="8" fill="#60A5FA">PAD 60</text>
+
+              <!-- PAM label -->
+              <text x="200" y="150" font-family="JetBrains Mono,monospace" font-size="9" fill="#A78BFA">PAM = (PAS + 2×PAD) ÷ 3 ≈ 80 mmHg</text>
+
+              <!-- VPP annotation -->
+              <line x1="80" y1="38" x2="260" y2="38" stroke="#4ADE80" stroke-width="1" stroke-dasharray="3,2"/>
+              <text x="170" y="33" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#4ADE80">VPP: variação resp da PP</text>
+            </svg>
+          </div>
+
+          <div class="sh sh-red">Variação de Pressão de Pulso (VPP)</div>
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>VPP = (PPmax − PPmin) / PPméd × 100</strong><br>
+            PP = PAS − PAD<br><br>
+            <strong>VPP &gt;13%</strong> → paciente <strong>respondedor a fluidos</strong> (na maioria dos contextos)<br>
+            VPP &lt;9% → não respondedor<br>
+            VPP 9–13% → zona cinza — avaliar outros índices
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Pré-requisitos para validade da VPP:</strong> ventilação mecânica controlada (VC ≥8 mL/kg), FC/FR ratio &gt;3,6, ritmo sinusal, tórax fechado. FA, respiração espontânea, PEEP alto e pneumotórax invalidam a VPP.
+          </div>
+        </div>
+      </div>
+
+      <!-- DÉBITO CARDÍACO E GDT -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">04</span> Débito Cardíaco e Hemodinâmica Avançada
+        </div>
+        <div class="card-body">
+          <div class="sh sh-red">Métodos de Medição do DC</div>
+          <div class="tbl-wrap wide"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Método</th><th>Princípio</th><th>Invasividade</th><th>Indicações</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tr">Swan-Ganz (cateter AP)</span></td><td>Termodiluição pulmonar (histórico)</td><td>Alta (cateter AP)</td><td>Hipertensão pulmonar, disfunção VD grave</td></tr>
+              <tr><td><span class="tag ty">PiCCO</span></td><td>Termodiluição transpulmonar + contorno de pulso</td><td>Moderada (CVC + linha femoral)</td><td>UTI, choque, grandes cirurgias</td></tr>
+              <tr><td><span class="tag ty">LiDCO</span></td><td>Diluição de lítio + contorno de pulso</td><td>Moderada (linha arterial + CVC)</td><td>Cirurgia abdominal maior, trauma</td></tr>
+              <tr><td><span class="tag tg">FloTrac/Vigileo</span></td><td>Contorno de pulso (análise estatística)</td><td>Baixa (só linha arterial)</td><td>Cirurgias de médio/grande porte</td></tr>
+              <tr><td><span class="tag tg">EcoTTE/TEE</span></td><td>Doppler — integral velocidade-tempo (IVT)</td><td>Não invasivo / mínima</td><td>Periop, UTI, avaliação focal</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-red" style="margin-top:14px">GDT — Goal-Directed Therapy (Terapia Guiada por Objetivos)</div>
+          <div class="alert a-blue" style="margin-top:8px">
+            O GDT otimiza os parâmetros hemodinâmicos <strong>antes</strong> de ocorrer hipoperfusão. Reduz complicações pós-operatórias em cirurgias de grande porte em ~30–50%.
+          </div>
+          <div class="proto-steps" style="margin-top:10px">
+            <div class="proto-step"><span class="sn sn-b">1</span><div><strong>Otimizar pré-carga:</strong> Se VPP &gt;13% → desafio de fluido (250–500 mL em 10 min) → reavaliação</div></div>
+            <div class="proto-step"><span class="sn sn-b">2</span><div><strong>Otimizar contratilidade:</strong> DC &lt;2,5 L/min/m² → considerar dobutamina</div></div>
+            <div class="proto-step"><span class="sn sn-b">3</span><div><strong>Otimizar pós-carga:</strong> PAM &lt;65 mmHg → vasopressor (noradrenalina 0,05–0,5 mcg/kg/min)</div></div>
+            <div class="proto-step"><span class="sn sn-g">4</span><div><strong>Alvo final:</strong> PAM ≥65 mmHg, IC ≥2,5 L/min/m², SvO₂ &gt;65%, lactato em queda, diurese ≥0,5 mL/kg/h</div></div>
+          </div>
+
+          <div class="sh sh-red" style="margin-top:14px">PVC — Pressão Venosa Central</div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Limitações atuais da PVC:</strong> PVC isolada NÃO prediz responsividade a fluidos de forma confiável. Estudos mostram correlação quase nula entre PVC e volume circulante efetivo. Ainda útil para: monitorização de tendência, verificar hipertensão venosa, acesso venoso central. <strong>Alvo classico: 8–12 mmHg (agora questionado)</strong>.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /monit-pai -->
+
+  <!-- TAB 5 — GASOMETRIA ARTERIAL E VENOSA -->
+  <div class="tab-panel" id="monit-gas">
+    <div class="page-wrap">
+
+      <!-- COLETA -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">01</span> Coleta da Gasometria — Técnica e Armadilhas
+        </div>
+        <div class="card-body">
+          <div class="g2">
+            <div class="alert a-blue">
+              <strong>GASOMETRIA ARTERIAL</strong><br>
+              Artéria radial (1ª escolha), femoral, braquial<br>
+              Seringa heparinizada (1.000 UI/mL, 0,5–1 mL de heparina)<br>
+              Coleta: 1–3 mL de sangue<br>
+              Expurgar bolhas de ar imediatamente<br>
+              Analisar em &lt;15 min (ou gelar em gelo)
+            </div>
+            <div class="alert a-teal">
+              <strong>GASOMETRIA VENOSA</strong><br>
+              Veia periférica (GVP) ou cavo superior (GVC)<br>
+              GVP: pH 0,03–0,04 ↓, PCO₂ 6–8 ↑, HCO₃ similar<br>
+              GVC: pH 0,03 ↓, PCO₂ 5–6 ↑ vs arterial<br>
+              Util para triagem de equilíbrio ácido-base<br>
+              Não usar para PaO₂ / SpO₂
+            </div>
+          </div>
+
+          <div class="sh sh-blue" style="margin-top:12px">Erros Pré-Analíticos que Invalidam o Resultado</div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Erro</th><th>Efeito</th><th>Como Evitar</th></tr></thead>
+            <tbody>
+              <tr><td>Bolhas de ar na seringa</td><td>PaO₂ falsa ↑, PaCO₂ falsa ↓</td><td>Expurgar imediatamente após coleta</td></tr>
+              <tr><td>Excesso de heparina</td><td>Dilui amostra → pH ↑, CO₂ ↓ artefato</td><td>Usar seringa pré-heparinizada; 0,5 mL máx</td></tr>
+              <tr><td>Demora para analisar (&gt;15 min, temp. amb.)</td><td>Metabolismo celular continua → pH ↓, PaO₂ ↓, PaCO₂ ↑</td><td>Analisar em &lt;15 min ou gelar (até 60 min)</td></tr>
+              <tr><td>Punção venosa acidental</td><td>PaO₂ muito baixa, PCO₂ alta — suspeitar</td><td>Confirmar: sangue pulsátil, vermelho-vivo</td></tr>
+              <tr><td>Leucocitose grave (&gt;100.000/mm³)</td><td>Leucócitos consomem O₂ → PaO₂ falsamente baixa</td><td>Analisar imediatamente; informar ao lab</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- INTERPRETAÇÃO SISTEMÁTICA -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">02</span> Interpretação Sistemática — 7 Passos
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue" style="margin-bottom:12px">
+            <strong>Seguir SEMPRE esta sequência.</strong> Nunca pular etapas — um resultado só faz sentido no contexto do todo.
+          </div>
+
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">1</span><div>
+              <strong>pH — Acidose ou Alcalose?</strong><br>
+              <span class="tag tg">Normal: 7,35–7,45</span>
+              <span class="tag tr">&lt;7,35 = Acidose</span>
+              <span class="tag ty">&gt;7,45 = Alcalose</span>
+            </div></div>
+
+            <div class="proto-step"><span class="sn sn-b">2</span><div>
+              <strong>PaCO₂ — Componente Respiratório</strong><br>
+              <span class="tag tg">Normal: 35–45 mmHg</span>
+              <span class="tag tr">&gt;45 = Hipercapnia/Acidose resp</span>
+              <span class="tag ty">&lt;35 = Hipocapnia/Alcalose resp</span>
+            </div></div>
+
+            <div class="proto-step"><span class="sn sn-b">3</span><div>
+              <strong>HCO₃⁻ — Componente Metabólico</strong><br>
+              <span class="tag tg">Normal: 22–26 mEq/L</span>
+              <span class="tag tr">&lt;22 = Acidose metabólica</span>
+              <span class="tag ty">&gt;26 = Alcalose metabólica</span>
+            </div></div>
+
+            <div class="proto-step"><span class="sn sn-b">4</span><div>
+              <strong>Identificar Distúrbio PRIMÁRIO:</strong> o parâmetro que explica o desvio do pH<br>
+              pH ↓ + PaCO₂ ↑ = Acidose Respiratória Primária<br>
+              pH ↓ + HCO₃ ↓ = Acidose Metabólica Primária<br>
+              pH ↑ + PaCO₂ ↓ = Alcalose Respiratória Primária<br>
+              pH ↑ + HCO₃ ↑ = Alcalose Metabólica Primária
+            </div></div>
+
+            <div class="proto-step"><span class="sn sn-b">5</span><div>
+              <strong>Compensação Esperada — Está Compensando?</strong><br>
+              <div class="tbl-wrap"><table class="tbl" style="margin-top:6px">
+                <thead><tr><th>Distúrbio</th><th>Compensação Esperada</th></tr></thead>
+                <tbody>
+                  <tr><td>Acidose Metabólica</td><td>PaCO₂ = 1,5 × HCO₃ + 8 ± 2 (Fórmula de Winter)</td></tr>
+                  <tr><td>Alcalose Metabólica</td><td>PaCO₂ aumenta 0,6 mmHg por cada 1 mEq/L ↑ HCO₃</td></tr>
+                  <tr><td>Acidose Resp. Aguda</td><td>HCO₃ ↑ 1 mEq/L por cada 10 mmHg ↑ PaCO₂</td></tr>
+                  <tr><td>Acidose Resp. Crônica</td><td>HCO₃ ↑ 3,5 mEq/L por cada 10 mmHg ↑ PaCO₂</td></tr>
+                  <tr><td>Alcalose Resp. Aguda</td><td>HCO₃ ↓ 2 mEq/L por cada 10 mmHg ↓ PaCO₂</td></tr>
+                  <tr><td>Alcalose Resp. Crônica</td><td>HCO₃ ↓ 5 mEq/L por cada 10 mmHg ↓ PaCO₂</td></tr>
+                </tbody>
+              </table></div>
+            </div></div>
+
+            <div class="proto-step"><span class="sn sn-b">6</span><div>
+              <strong>Ânion Gap — Causa da Acidose Metabólica</strong><br>
+              <strong>AG = Na⁺ − (Cl⁻ + HCO₃⁻)</strong><br>
+              <span class="tag tg">Normal: 8–12 mEq/L</span> (alguns usam 12 ± 2)<br><br>
+              <strong>AG ELEVADO (MUDPILES):</strong>
+              <div class="g2" style="margin-top:6px">
+                <div style="font-size:13px;line-height:1.7">
+                  <strong>M</strong>etanol<br>
+                  <strong>U</strong>remia<br>
+                  <strong>D</strong>KA (cetoacidose diabética)<br>
+                  <strong>P</strong>araaldeído / <strong>P</strong>ropileno glicol
+                </div>
+                <div style="font-size:13px;line-height:1.7">
+                  <strong>I</strong>soniazida / Ferro<br>
+                  <strong>L</strong>actato (mais comum no periop)<br>
+                  <strong>E</strong>tileno glicol<br>
+                  <strong>S</strong>alicilatos
+                </div>
+              </div>
+              <div class="alert a-gold" style="margin-top:8px"><strong>AG NORMAL + acidose metabólica (hiperclorêmica):</strong> diarreia, fístula intestinal, acidose tubular renal, excesso de SF 0,9%</div>
+            </div></div>
+
+            <div class="proto-step"><span class="sn sn-b">7</span><div>
+              <strong>Delta-Delta — Distúrbio Metabólico Oculto?</strong><br>
+              Se AG elevado: calcular Δ-Δ = (AG − 12) / (24 − HCO₃)<br>
+              <span class="tag tg">Δ-Δ 1–2: apenas acidose AG elevado</span><br>
+              <span class="tag ty">Δ-Δ &lt;1: também acidose hiperclorêmica simultânea</span><br>
+              <span class="tag ty">Δ-Δ &gt;2: também alcalose metabólica simultânea</span>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA DISTÚRBIOS -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">03</span> Tabela Completa de Distúrbios Ácido-Base
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Distúrbio</th><th>pH</th><th>PaCO₂</th><th>HCO₃</th><th>Causas Comuns</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tr">Acidose Respiratória</span></td><td>↓</td><td>↑ (&gt;45)</td><td>↑ (comp.)</td><td>Hipoventilação, DPOC, opioides, BNM residual, obesidade</td></tr>
+              <tr><td><span class="tag ty">Alcalose Respiratória</span></td><td>↑</td><td>↓ (&lt;35)</td><td>↓ (comp.)</td><td>Hiperventilação, dor, ansiedade, hipóxia, ventilação excessiva</td></tr>
+              <tr><td><span class="tag tr">Acidose Metabólica AG↑</span></td><td>↓</td><td>↓ (comp.)</td><td>↓</td><td>Lactato, cetoacidose, uremia, intoxicação</td></tr>
+              <tr><td><span class="tag tr">Acidose Metabólica AG normal</span></td><td>↓</td><td>↓ (comp.)</td><td>↓</td><td>Diarreia, SF 0,9% excessivo, RTA, ileostomia</td></tr>
+              <tr><td><span class="tag ty">Alcalose Metabólica</span></td><td>↑</td><td>↑ (comp.)</td><td>↑</td><td>Vômitos, aspiração gástrica, diuréticos, hipocalemia</td></tr>
+              <tr><td><span class="tag tv">Misto: Acid. Resp. + Acid. Met.</span></td><td>↓↓</td><td>↑↑</td><td>↓</td><td>PCR, DPOC + choque, fadiga + sepse</td></tr>
+              <tr><td><span class="tag tv">Misto: Alc. Resp. + Alc. Met.</span></td><td>↑↑</td><td>↓↓</td><td>↑</td><td>Insuficiência hepática + aspiração gástrica</td></tr>
+              <tr><td><span class="tag tv">Triplo distúrbio</span></td><td>Variável</td><td>Variável</td><td>Variável</td><td>UTI grave: DPOC + sepse + aspiração</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- LACTATO, BE, SvO2 -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">04</span> Lactato, Base Excess e SvO₂
+        </div>
+        <div class="card-body">
+          <div class="sh sh-teal">Lactato — Significado Clínico</div>
+          <div class="alert a-teal" style="margin-top:8px">
+            Lactato normal: <strong>&lt;2 mmol/L</strong>. Produzido em excesso quando há hipóxia tecidual (glicólise anaeróbia) ou hipoperfusão. É marcador de severidade e mortalidade em choque.
+          </div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Lactato</th><th>Significado</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">&lt;2 mmol/L</span></td><td>Normal</td><td>Manter vigilância</td></tr>
+              <tr><td><span class="tag ty">2–4 mmol/L</span></td><td>Hiperlactatemia — investigar causa</td><td>Tratar causa, reavaliação 1–2h</td></tr>
+              <tr><td><span class="tag tr">&gt;4 mmol/L</span></td><td>Choque hemorrágico, séptico, cardiogênico</td><td>Ressuscitação imediata guiada por objetivo</td></tr>
+              <tr><td><span class="tag tr">Em ascensão progressiva</span></td><td>Hipoperfusão não tratada / HM (associado a↑ETCO₂)</td><td>Emergência — investigar HM, choque</td></tr>
+              <tr><td><span class="tag tv">Elevado SEM hipoperfusão</span></td><td>Hipermetabolismo (HM, sepse hiperdinâmica, crise adrenérgica)</td><td>Clinicamente diferenciado do lactato hipóxico</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Base Excess (BE)</div>
+          <div class="alert a-blue" style="margin-top:6px">
+            O <strong>BE</strong> (normal: −2 a +2 mEq/L) quantifica o excesso ou déficit de base no sangue, independente do componente respiratório. <strong>BE &lt;−6 = acidose metabólica significativa</strong>. Útil por ser independente da ventilação.
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">SvO₂ — Saturação Venosa Mista</div>
+          <div class="g2" style="margin-top:6px">
+            <div class="alert a-violet">
+              <strong>SvO₂ artéria pulmonar (gold standard)</strong><br>
+              Normal: 60–75%<br>
+              &lt;60% = extração O₂ aumentada → oferta insuficiente<br>
+              &gt;80% = shunt, sepse hiperdinâmica, cianeto
+            </div>
+            <div class="alert a-blue">
+              <strong>ScvO₂ (cavo superior — substituto)</strong><br>
+              Normal: 65–80% (ligeiramente &gt; SvO₂)<br>
+              &lt;65% = hipoperfusão tecidual<br>
+              Medir na ressuscitação séptica (protocolo Surviving Sepsis)
+            </div>
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Equação de Fick:</strong> VO₂ = DC × (CaO₂ − CvO₂) × 10 → A SvO₂ reflete o EQUILÍBRIO entre oferta e consumo de O₂. Queda isolada da SvO₂ = DC ↓ ou VO₂ ↑ (ex: febre, shivering, dor).
+          </div>
+        </div>
+      </div>
+
+      <!-- CASOS DE GASOMETRIA -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">05</span> Exercício — 4 Gasometrias para Interpretar
+        </div>
+        <div class="card-body">
+          <div class="caso-card">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <span class="caso-num">GASO 1</span>
+              <span class="caso-title">pH 7,28 | PaCO₂ 28 | HCO₃ 13 | BE −12 | Lactato 4,2</span>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Qual o distúrbio? Qual a compensação esperada? Há distúrbio misto?</div>
+              <div class="caso-answer">
+                <strong>Passo 1:</strong> pH 7,28 → <strong>Acidose</strong><br>
+                <strong>Passo 2:</strong> PaCO₂ 28 → ↓ (hiperventilação compensatória)<br>
+                <strong>Passo 3:</strong> HCO₃ 13 → ↓ → <strong>Acidose Metabólica Primária</strong><br>
+                <strong>Passo 5 — Fórmula de Winter:</strong> PaCO₂ esperada = 1,5 × 13 + 8 = <strong>27,5 ± 2</strong> → PaCO₂ real 28 ✓ = compensação adequada (sem distúrbio respiratório sobreposto)<br>
+                <strong>Passo 6 — Ânion Gap:</strong> Assumindo Na 140, Cl 107: AG = 140 − (107 + 13) = <strong>20</strong> → AG ELEVADO<br>
+                <div class="alert a-red" style="margin-top:8px"><strong>Diagnóstico:</strong> Acidose metabólica com AG elevado, compensação respiratória adequada. Lactato 4,2 sugere choque/hipoperfusão como etiologia → ACIDOSE LÁTICA. Conduta: ressuscitação volêmica/vasopressores, tratar causa base.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" style="margin-top:8px">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <span class="caso-num">GASO 2</span>
+              <span class="caso-title">pH 7,51 | PaCO₂ 30 | HCO₃ 22 | BE −1 | Na 140, Cl 104</span>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente em ventilação mecânica pós-operatória. Qual o distúrbio?</div>
+              <div class="caso-answer">
+                <strong>Passo 1:</strong> pH 7,51 → <strong>Alcalose</strong><br>
+                <strong>Passo 2:</strong> PaCO₂ 30 → ↓ → <strong>Alcalose Respiratória Primária</strong><br>
+                <strong>Passo 3:</strong> HCO₃ 22 → Normal (limite inferior) → compensação metabólica iniciada<br>
+                <strong>Compensação esperada:</strong> Alcalose resp. aguda → HCO₃ cai 2 por 10 mmHg ↓ PaCO₂. ΔPaCO₂ = 40−30 = 10 → HCO₃ esperado: 24 − 2 = 22 ✓<br>
+                <div class="alert a-gold" style="margin-top:8px"><strong>Diagnóstico:</strong> Alcalose respiratória aguda com compensação metabólica adequada. Em paciente ventilado = hiperventilação iatrogênica. Conduta: reduzir FR ou VC no ventilador. Risco: vasoconstrição cerebral (PCO₂ baixo).</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" style="margin-top:8px">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <span class="caso-num">GASO 3</span>
+              <span class="caso-title">pH 7,33 | PaCO₂ 58 | HCO₃ 30 | BE +4 | SpO₂ 86%</span>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente DPOC, cirurgia de herniorrafia. Qual o distúrbio e o que fazer?</div>
+              <div class="caso-answer">
+                <strong>Passo 1:</strong> pH 7,33 → <strong>Acidose</strong><br>
+                <strong>Passo 2:</strong> PaCO₂ 58 → ↑ → <strong>Acidose Respiratória Primária</strong><br>
+                <strong>Passo 3:</strong> HCO₃ 30 → ↑ → compensação metabólica já estabelecida<br>
+                <strong>Compensação crônica esperada:</strong> ΔPaCO₂ = 58−40 = 18 → HCO₃ esperado: 24 + (18×3,5/10) = 24 + 6,3 = ~30,3 ✓<br>
+                <div class="alert a-orange" style="margin-top:8px"><strong>Diagnóstico:</strong> Acidose respiratória crônica (DPOC) com compensação metabólica adequada (retentor crônico de CO₂). SpO₂ 86% preocupante. Conduta: NUNCA hiperventilar (eliminar drive respiratório); manter FiO₂ mínima para SpO₂ 88–92%; considerar VNI pós-op.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" style="margin-top:8px">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <span class="caso-num">GASO 4</span>
+              <span class="caso-title">pH 7,48 | PaCO₂ 42 | HCO₃ 30 | BE +6 | K 2,8 mEq/L</span>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente pós-cirurgia abdominal com vômitos intensos. Qual o distúrbio?</div>
+              <div class="caso-answer">
+                <strong>Passo 1:</strong> pH 7,48 → <strong>Alcalose</strong><br>
+                <strong>Passo 2:</strong> PaCO₂ 42 → Normal → sem componente respiratório primário<br>
+                <strong>Passo 3:</strong> HCO₃ 30 → ↑ → <strong>Alcalose Metabólica Primária</strong><br>
+                <strong>Compensação esperada:</strong> PaCO₂ sobe 0,6 por 1 mEq/L ↑ HCO₃ → Δ HCO₃ = 6 → Δ PaCO₂ = 3,6 → esperado: 43,6 ≈ 44. Real: 42 → ↓ mínima, compensação adequada<br>
+                <div class="alert a-teal" style="margin-top:8px"><strong>Diagnóstico:</strong> Alcalose metabólica hipoclorêmica, hipocalêmica — vômitos. HCl perdido nos vômitos → HCO₃ retido. Hipocalemia frequente (K perdido no vômito + troca K↔H nos rins para manter pH). Conduta: SF 0,9% + KCl 40–80 mEq EV lento; ondansetrona IV.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /monit-gas -->
+
+  <!-- TAB 6 — EcoTTE POINT-OF-CARE EM ANESTESIA -->
+  <div class="tab-panel" id="monit-ecotte">
+    <div class="page-wrap">
+
+      <!-- POR QUE EcoTTE -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> Por Que Todo Anestesiologista Deve Saber EcoTTE Básico?
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            O <strong>ecocardiograma transtorácico (EcoTTE) point-of-care</strong> permite diagnóstico rápido de causas de instabilidade hemodinâmica no perioperatório — em minutos, à beira do leito, sem necessidade de cardologista. A competência básica (FATE protocol) é factível para anestesiologistas com treinamento adequado.
+          </div>
+          <div class="g2" style="margin-top:10px">
+            <div class="alert a-blue">
+              <strong>O que responde em 5 minutos:</strong><br>
+              ✓ Função sistólica do VE (FEVE visual)<br>
+              ✓ Volemia (VCI colapsabilidade)<br>
+              ✓ Derrame pericárdico + tamponamento<br>
+              ✓ Dilatação VD (TEP maciço)<br>
+              ✓ Hipovolemia grave (cavidades colabadas)
+            </div>
+            <div class="alert a-orange">
+              <strong>Quando usar perioperatório:</strong><br>
+              • Hipotensão refratária não explicada<br>
+              • PCR intraoperatório<br>
+              • Embolia pulmonar maciça suspeita<br>
+              • Hipovolemia grave suspeita<br>
+              • Tamponamento cardíaco pós-punção
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JANELAS ECOCARDIOGRÁFICAS -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">02</span> Janelas Ecocardiográficas Básicas
+        </div>
+        <img src="img-janelas-eco.jpg" style="width:100%;max-width:100%;display:block;margin:12px auto 0;border-radius:10px;border:1px solid rgba(255,255,255,.1)" alt="Janelas Ecocardiográficas — Abordagens TTE">
+      </div>
+
+      <!-- PROTOCOLO FATE -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">03</span> Protocolo FATE — Focused Assessment in TTE
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            O protocolo <strong>FATE</strong> (Jensen et al., 2004) estabelece 4 janelas obrigatórias + exame pulmonar bilateral para avaliação rápida em contexto crítico. Dura 3–5 minutos.
+          </div>
+          <div class="proto-steps" style="margin-top:12px">
+            <div class="proto-step"><span class="sn sn-t">1</span><div>
+              <strong>Subcostal 4 câmaras</strong> — iniciar aqui (fácil acesso em decúbito dorsal, avalia pericárdio)<br>
+              <span class="tag tg">Derrame pericárdico?</span> <span class="tag ty">Hipovolemia (cavidades colabadas)?</span> <span class="tag tg">VCI e colapsabilidade?</span>
+            </div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div>
+              <strong>Paraesternal eixo longo</strong> — função sistólica e morfologia<br>
+              <span class="tag tg">FEVE visual (olho nu)?</span> <span class="tag ty">Valvas funcionais?</span> <span class="tag ty">Dilatação de VE ou VD?</span>
+            </div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div>
+              <strong>Paraesternal eixo curto (nível mitral)</strong> — função segmentar e enchimento<br>
+              <span class="tag tg">Contração segmentar normal?</span> <span class="tag tr">VD dilatado / D-sign?</span>
+            </div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div>
+              <strong>Apical 4 câmaras</strong> — função global e câmaras direitas<br>
+              <span class="tag tg">VE &gt; VD (normal)?</span> <span class="tag tr">VD ≥ VE → TEP/cor pulmonale?</span> <span class="tag ty">Trombos intracavitários?</span>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APLICAÇÕES PERIOP -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">04</span> Aplicações Perioperatórias — Achados Específicos
+        </div>
+        <div class="card-body">
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Função Sistólica do VE — FEVE Visual</div>
+            <div class="acc-body">
+              <div class="alert a-blue">Estimativa visual da FEVE pela contração endocárdica (método do olho nu — "eyeballing"):</div>
+              <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+                <thead><tr><th>Aparência</th><th>FEVE Estimada</th><th>Classificação</th></tr></thead>
+                <tbody>
+                  <tr><td>Cavidade quase obliterando na sístole</td><td>&gt;60%</td><td>Normal-alta</td></tr>
+                  <tr><td>Boa contração, redução &gt;30% da cavidade</td><td>45–60%</td><td>Normal</td></tr>
+                  <tr><td>Contração reduzida, paredes pouco espessando</td><td>30–45%</td><td>Disfunção moderada</td></tr>
+                  <tr><td>Cavidade estática, paredes quase sem movimento</td><td>&lt;30%</td><td>Disfunção grave</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">VCI e Avaliação de Volemia</div>
+            <div class="acc-body">
+              <div class="alert a-teal">Janela subcostal → 2D da VCI no eixo longo → medição 2 cm distal à junção cavoatrial.</div>
+              <div class="tbl-wrap wide"><table class="tbl" style="margin-top:8px">
+                <thead><tr><th>Diâmetro VCI</th><th>Colapso Inspiratório</th><th>PAD Estimada</th><th>Interpretação</th></tr></thead>
+                <tbody>
+                  <tr><td>&lt;1,5 cm</td><td>&gt;50% (colapsável)</td><td>0–5 mmHg</td><td>Hipovolemia — responsivo a fluidos</td></tr>
+                  <tr><td>1,5–2,5 cm</td><td>50% variável</td><td>5–10 mmHg</td><td>Normovolemia</td></tr>
+                  <tr><td>&gt;2,5 cm</td><td>&lt;50% (rígida)</td><td>&gt;15 mmHg</td><td>Hipervolemia / hipertensão venosa / tamponamento</td></tr>
+                </tbody>
+              </table></div>
+              <div class="alert a-gold" style="margin-top:8px">Em ventilação mecânica, usar variação do diâmetro da VCI &gt;18% como preditor de responsividade a fluidos (não o colapso inspiratório).</div>
+            </div>
+          </div>
+
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Embolia Pulmonar Maciça — Sinais de TEP no EcoTTE</div>
+            <div class="acc-body">
+              <div class="alert a-red">TEP maciço = sobrecarga aguda de VD. Sinais:</div>
+              <ul style="margin-top:8px;padding-left:18px;line-height:1.8">
+                <li><strong>VD dilatado</strong> — VD ≥ VE (normal: VD &lt; 2/3 do VE)</li>
+                <li><strong>D-sign (septo em "D")</strong> — septo interventricular empurrado para esquerda → VE "comprimido"</li>
+                <li><strong>Movimento paradoxal do septo</strong></li>
+                <li><strong>VCI dilatada e não colapsável</strong> — hipertensão venosa aguda</li>
+                <li><strong>FEVE VE preservada</strong> mas com enchimento reduzido (VD rouba preload)</li>
+                <li><strong>Sinal de McConnell:</strong> acinesia da parede livre do VD com contração apical preservada (específico de TEP)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Tamponamento Cardíaco — Sinais Ecocardiográficos</div>
+            <div class="acc-body">
+              <div class="alert a-red">Derrame pericárdico comprimindo câmaras cardíacas → ↓ enchimento → choque obstrutivo.</div>
+              <ul style="margin-top:8px;padding-left:18px;line-height:1.8">
+                <li><strong>Derrame pericárdico</strong> — espaço econegativo ao redor do coração (subcostal ou paraesternal)</li>
+                <li><strong>Colapso diastólico do AD</strong> — primeiro sinal (mais sensível)</li>
+                <li><strong>Colapso diastólico do VD</strong> — sinal de tamponamento hemodinâmico</li>
+                <li><strong>VCI plena e não colapsável</strong> — hipertensão venosa</li>
+                <li><strong>Swing cardíaco</strong> — coração oscilando dentro do derrame</li>
+              </ul>
+              <div class="alert a-gold" style="margin-top:8px"><strong>Conduta:</strong> Pericardiocentese guiada por ECO (janela subcostal) ou cirúrgica. Manobra de resgate: fluidos IV (↑ pré-carga), evitar PEEP, FC alta (taquicardia compensatória é benéfica).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEE -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">05</span> TEE — Ecocardiografia Transesofágica
+        </div>
+        <div class="card-body">
+          <div class="alert a-violet">
+            O <strong>TEE (Ecocardiografia Transesofágica)</strong> fornece imagens de qualidade superior ao TTE em pacientes intubados/ventilados — o esôfago é adjacente ao coração. Requer certificação específica e treinamento adicional.
+          </div>
+          <div class="sh sh-violet" style="margin-top:12px">Indicações em Anestesia</div>
+          <div class="g2" style="margin-top:6px">
+            <div class="alert a-violet">
+              <strong>INDICAÇÕES CLASSE I (AHA/ASE):</strong><br>
+              • Cirurgia cardíaca aberta (reparo valvar, CABG)<br>
+              • Cirurgia de aorta torácica<br>
+              • Transplante cardíaco<br>
+              • Monitorização do enchimento intraop em alto risco<br>
+              • Instabilidade hemodinâmica introp. sem causa<br>
+              • PCR sem causa aparente
+            </div>
+            <div class="alert a-blue">
+              <strong>CONTRA-INDICAÇÕES:</strong><br>
+              • Disfagia severa / neoplasia esofágica<br>
+              • Fístula esôfago-traqueal<br>
+              • Varizes esofágicas de alto risco<br>
+              • Estenose esofágica não dilatada<br>
+              • Cirurgia esofágica recente<br>
+              • Anticoagulação e plaquetopenia grave
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /monit-ecotte -->
+
+  <!-- TAB 7 — CAPNOGRAFIA + VENTILAÇÃO MECÂNICA -->
+  <div class="tab-panel" id="monit-capno">
+    <div class="page-wrap">
+
+      <!-- FISIOLOGIA CO2 -->
+      <div class="card">
+        <div class="card-header ch-gold">
+          <span class="card-num">01</span> Fisiologia do CO₂ — Produção, Transporte e Eliminação
+        </div>
+        <div class="card-body">
+          <div class="alert a-gold">
+            O CO₂ é produzido continuamente pelo metabolismo celular (aeróbio), transportado pelo sangue e eliminado pelos pulmões durante a expiração. A capnografia monitora esse equilíbrio em tempo real — qualquer alteração no circuito reflete no ETCO₂.
+          </div>
+
+          <div class="proto-steps" style="margin-top:12px">
+            <div class="proto-step"><span class="sn sn-y">1</span><div><strong>PRODUÇÃO (VCO₂):</strong> Ciclo de Krebs mitocondrial → 200 mL/min em repouso. Aumenta com hipertermia, exercício, HM, hipertireoidismo, sepse. Diminui com hipotermia, barbitúricos, hipotireoidismo.</div></div>
+            <div class="proto-step"><span class="sn sn-y">2</span><div><strong>TRANSPORTE:</strong> 70% como bicarbonato (eritrócito), 23% como carbaminocompostos (Hb-CO₂), 7% dissolvido no plasma. Curva de dissociação CO₂-Hb linear (ao contrário da O₂).</div></div>
+            <div class="proto-step"><span class="sn sn-y">3</span><div><strong>ELIMINAÇÃO:</strong> Chegada ao pulmão → difusão alveolar → expiração. ETCO₂ ≈ PAO₂ alveolar ≈ PaCO₂ em pulmão normal. Gradiente ETCO₂–PaCO₂ normal: 2–5 mmHg.</div></div>
+            <div class="proto-step"><span class="sn sn-y">4</span><div><strong>GRADIENTE ETCO₂–PaCO₂ AUMENTADO (&gt;5 mmHg):</strong> ↑ Espaço morto fisiológico: TEP, baixo débito cardíaco, hipovolemia, DPOC, posição anti-Trendelenburg.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAPNOGRAMA NORMAL -->
+      <div class="card">
+        <div class="card-header ch-gold">
+          <span class="card-num">02</span> Capnograma Normal — 4 Fases
+        </div>
+        <div class="card-body">
+          <!-- SVG: Normal capnogram -->
+
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:10px">
+            <thead><tr><th>Fase</th><th>O Que Acontece</th><th>CO₂ Medido</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">Fase I</span></td><td>Expiração do espaço morto anatômico (ar da via aérea) — sem CO₂</td><td>≈ 0 mmHg</td></tr>
+              <tr><td><span class="tag tg">Fase II</span></td><td>Mistura entre espaço morto e ar alveolar — ascensão rápida</td><td>0 → ETCO₂</td></tr>
+              <tr><td><span class="tag ty">Fase III</span></td><td>Platô alveolar — expiração predominantemente de CO₂ alveolar</td><td>≈ ETCO₂ (pico)</td></tr>
+              <tr><td><span class="tag tr">Fase IV</span></td><td>Início da inspiração — CO₂ cai abruptamente a zero</td><td>ETCO₂ → 0</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- PADRÕES ANORMAIS -->
+      <div class="card">
+        <div class="card-header ch-gold">
+          <span class="card-num">03</span> Padrões Anormais do Capnograma
+        </div>
+        <div class="card-body">
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">ETCO₂ → Zero Súbito (Queda Abrupta)</div>
+            <div class="acc-body">
+              <div class="alert a-red">
+                <strong>EMERGÊNCIA!</strong> ETCO₂ que cai abruptamente a zero indica falha catastrófica na ventilação ou perfusão pulmonar.
+              </div>
+              <div class="g2" style="margin-top:8px">
+                <div class="alert a-red">
+                  <strong>CAUSAS DE VIA AÉREA:</strong><br>
+                  • Extubação acidental<br>
+                  • Desconexão do circuito<br>
+                  • IOT esofágica<br>
+                  • Obstrução total da via aérea
+                </div>
+                <div class="alert a-orange">
+                  <strong>CAUSAS CIRCULATÓRIAS:</strong><br>
+                  • Parada cardiorrespiratória<br>
+                  • Embolia pulmonar maciça<br>
+                  • Tamponamento cardíaco<br>
+                  • Baixo débito cardíaco extremo
+                </div>
+              </div>
+              <div class="proto-steps" style="margin-top:8px">
+                <div class="proto-step"><span class="sn sn-r">1</span><div>Confirmar via aérea: visualizar o tubo, auscultar imediatamente</div></div>
+                <div class="proto-step"><span class="sn sn-r">2</span><div>Verificar circuito: conexões, capnógrafo funcionando</div></div>
+                <div class="proto-step"><span class="sn sn-r">3</span><div>Se via aérea OK → buscar causa circulatória → ACLS se PCR</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">ETCO₂ Progressivamente Elevado</div>
+            <div class="acc-body">
+              <div class="tbl-wrap"><table class="tbl">
+                <thead><tr><th>Causa</th><th>Contexto Clínico</th><th>Diferencial</th></tr></thead>
+                <tbody>
+                  <tr><td><span class="tag tr">Hipertermia Maligna</span></td><td>ETCO₂ ascendente INTRATÁVEL mesmo com ↑ FR/VC</td><td>Temperatura ↑↑, espasmo masseterino, rigidez</td></tr>
+                  <tr><td><span class="tag ty">Hipoventilação</span></td><td>Máquina mal configurada, vazamento</td><td>Corrigir FR/VC</td></tr>
+                  <tr><td><span class="tag ty">Absorção de CO₂ (lap.)</span></td><td>Laparoscopia com pneumoperitônio de CO₂</td><td>Esperado — ↑ FR ~20%</td></tr>
+                  <tr><td><span class="tag ty">Torniquete liberado</span></td><td>CO₂ acumulado retorna circulação</td><td>Transitório, normaliza em minutos</td></tr>
+                  <tr><td><span class="tag ty">Cal sodada exausta</span></td><td>CO₂ recirculando no circuito</td><td>Troca o absorvente</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Platô Inclinado — "Sharknose"</div>
+            <div class="acc-body">
+              <div class="alert a-orange">
+                Fase III inclinada (platô em degraus ascendentes) → heterogeneidade do esvaziamento alveolar → obstrução ao fluxo.
+              </div>
+              <ul style="margin-top:8px;padding-left:18px;line-height:1.8">
+                <li><strong>Broncoespasmo intraoperatório</strong> — mais comum; tratar imediatamente com broncodilatador</li>
+                <li><strong>DPOC / asma</strong> — padrão crônico; ajustar tempos expiratórios (I:E 1:3 ou 1:4)</li>
+                <li><strong>Secreções brônquicas</strong> — aspirar via tubo</li>
+                <li><strong>IOT seletiva (brônquio)</strong> — auscultar e verificar profundidade do tubo</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">CO₂ Aparecendo na Fase Inspiratória</div>
+            <div class="acc-body">
+              <div class="alert a-violet">
+                Presença de CO₂ durante a fase inspiratória (o sinal não retorna a zero na fase I) — indica que CO₂ está sendo reininalado.
+              </div>
+              <ul style="margin-top:8px;padding-left:18px;line-height:1.8">
+                <li><strong>Cal sodada exausta</strong> — não absorve mais CO₂; troca o absorvente (cor muda indicando exaustão)</li>
+                <li><strong>Válvula expiratória com falha</strong> — ar expirado retorna ao circuito</li>
+                <li><strong>Válvula inspiratória incompetente</strong> — idem</li>
+                <li><strong>Fresh gas flow insuficiente</strong> (circuito semi-aberto) — aumentar FGF</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VENTILAÇÃO MECÂNICA -->
+      <div class="card">
+        <div class="card-header ch-gold">
+          <span class="card-num">04</span> Ventilação Mecânica Intraoperatória
+        </div>
+        <div class="card-body">
+          <div class="alert a-gold">
+            A ventilação protetora intraoperatória reduz complicações pulmonares pós-operatórias (CPP) em cirurgias de &gt;2h, especialmente em pacientes de risco. Seguir os parâmetros abaixo como ponto de partida.
+          </div>
+
+          <div class="sh sh-gold" style="margin-top:12px">Parâmetros Iniciais Recomendados</div>
+          <div class="tbl-wrap wide"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Parâmetro</th><th>Valor Inicial</th><th>Alvo</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td>Volume corrente (VC)</td><td>6–8 mL/kg PIB*</td><td>6 mL/kg PIB preferível</td><td>*Peso Ideal pelo Body Surface: H: 50+0,91×(altura cm-152,4); M: 45,5+0,91×(altura cm-152,4)</td></tr>
+              <tr><td>Frequência respiratória (FR)</td><td>10–14 irpm</td><td>ETCO₂ 35–45 mmHg</td><td>Ajustar conforme capnografia</td></tr>
+              <tr><td>PEEP</td><td>4–8 cmH₂O</td><td>5 cmH₂O padrão</td><td>↑ para 8–10 em obesos/Trendelenburg</td></tr>
+              <tr><td>FiO₂</td><td>0,4–0,6 (40–60%)</td><td>SpO₂ ≥95%</td><td>Evitar FiO₂ 1,0 de rotina (atelectasia por absorção)</td></tr>
+              <tr><td>Relação I:E</td><td>1:2</td><td>1:2 padrão</td><td>Obstrução → 1:3 ou 1:4</td></tr>
+              <tr><td>Pressão de platô (Pplatô)</td><td>—</td><td>&lt;30 cmH₂O</td><td>Medir com pausa inspiratória de 0,5s</td></tr>
+              <tr><td>Driving pressure (DP)</td><td>—</td><td>&lt;15 cmH₂O</td><td>DP = Pplatô − PEEP; melhor preditor de lesão</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-gold" style="margin-top:14px">Modos Ventilatórios — Comparativo</div>
+          <div class="tbl-wrap wide"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Modo</th><th>Controla</th><th>Varia</th><th>Vantagem Principal</th><th>Desvantagem</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">VCV</span> (Volume-controlado)</td><td>VC fixo</td><td>Pressão</td><td>VC garantido → ETCO₂ previsível</td><td>Risco pico de pressão alto</td></tr>
+              <tr><td><span class="tag ty">PCV</span> (Pressão-controlada)</td><td>Pressão fixa</td><td>VC</td><td>Limita pressão de pico → menos barotrauma</td><td>VC varia com complacência pulmonar</td></tr>
+              <tr><td><span class="tag tg">PRVC / VC+</span></td><td>VC alvo + limite P</td><td>Pressão (ajusta)</td><td>Combina vantagens de ambos</td><td>Complexidade; disponível em aparelhos modernos</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- VENTILAÇÃO PROTETORA -->
+      <div class="card">
+        <div class="card-header ch-gold">
+          <span class="card-num">05</span> Ventilação Protetora e Manobra de Recrutamento
+        </div>
+        <div class="card-body">
+          <div class="alert a-green">
+            <strong>Lung-Protective Ventilation (LPV):</strong> Baseada nos critérios do ARDSnet, adaptados para perioperatório.
+          </div>
+          <div class="g2" style="margin-top:10px">
+            <div class="alert a-green">
+              <strong>PILARES:</strong><br>
+              VC baixo: 6–8 mL/kg PIB<br>
+              PEEP individualizada: 5–8 cmH₂O<br>
+              Pplatô &lt;30 cmH₂O<br>
+              Driving pressure &lt;15 cmH₂O<br>
+              FiO₂ mínima (SpO₂ ≥95%)
+            </div>
+            <div class="alert a-blue">
+              <strong>POPULAÇÕES ESPECIAIS:</strong><br>
+              Obesos: PEEP 8–10; VC por PIB (não peso real)<br>
+              DPOC: I:E 1:3–1:4; FR menor; PEEP ext baixo<br>
+              ARDS: VC 4–6; PEEP alta (10–15); prona<br>
+              Neurocirurgia: PaCO₂ 35–40; evitar hipercapnia
+            </div>
+          </div>
+
+          <div class="sh sh-gold" style="margin-top:14px">Manobra de Recrutamento Alveolar</div>
+          <div class="alert a-blue" style="margin-top:8px">
+            Indicada quando há atelectasias significativas (pós-indução, laparoscopia, Trendelenburg). Aumenta temporariamente a pressão transpulmonar para reabrir alvéolos colabados.
+          </div>
+          <div class="proto-steps" style="margin-top:8px">
+            <div class="proto-step"><span class="sn sn-b">1</span><div>Informar o cirurgião — breve pausa cirúrgica necessária</div></div>
+            <div class="proto-step"><span class="sn sn-b">2</span><div>Aumentar FiO₂ para 1,0 temporariamente</div></div>
+            <div class="proto-step"><span class="sn sn-b">3</span><div>Modo PCV: P controle 20–25 cmH₂O + PEEP 15–20 cmH₂O → pressão alveolar 40–45 cmH₂O por 30–40 seg</div></div>
+            <div class="proto-step"><span class="sn sn-b">4</span><div>Monitorar PA — hipotensão é efeito colateral (↑ pressão intratorácica → ↓ retorno venoso)</div></div>
+            <div class="proto-step"><span class="sn sn-b">5</span><div>Retornar PEEP para valor adequado (manter alvéolos recrutados abertos)</div></div>
+            <div class="proto-step"><span class="sn sn-g">6</span><div>Verificar SpO₂ e ETCO₂ após manobra — melhora espera da troca gasosa</div></div>
+          </div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>Contra-indicações:</strong> instabilidade hemodinâmica grave, pneumotórax não drenado, hipertensão intracraniana.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /monit-capno -->
+
+
+  <!-- <!-- TAB — REVISÃO RÁPIDA --> -->
+  <div class="tab-panel" id="monit-revisao">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--orange)">
+          <span class="card-title">⚡ Revisão Rápida — Monitorização Anestésica</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Para revisão pré-plantão ou pré-prova · 10 pontos essenciais</p>
+          <div class="algo-box algo-b" style="margin-bottom:8px">
+            <div class="algo-title">10 pontos que você não pode esquecer</div>
+            <ol style="font-size:12px;line-height:2;margin:6px 0 0 16px">
+              <li>Monitorização mínima obrigatória (CFM 2174/2017): ECG, SpO2, ETCO2, PANi, temperatura + presença médica contínua</li>
+              <li>BIS alvo intraoperatório: 40–60 · &lt;40 = anestesia profunda · &gt;60 = risco de consciência intraoperatória</li>
+              <li>ETCO2 normal: 35–45 mmHg · queda súbita: embolia, PCR, desconexão · subida: hipoventilação</li>
+              <li>TOF ratio &lt;0.9 = bloqueio residual clinicamente significativo · exigir ≥0.9 para extubação</li>
+              <li>PPV &gt;13% em VCV sem FA = fluido-responsivo · adicionar 250 mL cristaloide e reavaliar</li>
+              <li>PAI radial: curva com incisura dicrótica = fechamento aórtico normal · curva amortecida = bolha de ar ou obstrução</li>
+              <li>SpO2 e disfemoglobinas: carboxiHb e metaHb falsamente normais na oximetria convencional</li>
+              <li>Capnograma "dente de tubarão" (platô inclinado): broncoespasmo ou DPOC</li>
+              <li>EcoTTE perioperatório: 4 janelas básicas — paraesternal longo, curto, apical 4C, subcostal</li>
+              <li>Temperatura: hipotermia &lt;36°C → coagulopatia, ↑BNM, ↑NVPO · prevenir com Bair Hugger + fluidos aquecidos</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Revisão Rápida</div>
+    </div>
+  </div><!-- /monit-revisao -->
+
+<!-- TAB — QUESTÕES -->
+  <div class="tab-panel" id="monit-questoes">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--orange)">
+          <span class="card-title">📝 Questões — Monitorização Anestésica</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">5 questões de múltipla escolha · Clique para revelar o gabarito</p>
+
+          <div class="caso-card" id="q1-monit">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">1</div>
+              <div class="caso-title">QUESTÃO 1 — BIS e Risco de Awareness</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Durante anestesia geral balanceada para colecistectomia laparoscópica, o monitor BIS exibe valor de <strong>72</strong>. O paciente está em ventilação mecânica, com sinais vitais estáveis. Qual é a interpretação CORRETA e a conduta mais adequada?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) BIS 72 está dentro do alvo ideal (60–80), conduta: manter<br>
+                B) BIS 72 indica anestesia excessivamente profunda, reduzir agentes<br>
+                C) BIS 72 está acima do alvo (40–60), indicando anestesia insuficiente — risco de awareness; aprofundar<br>
+                D) BIS 72 só é relevante se o paciente apresentar movimento<br>
+                E) BIS não é confiável durante laparoscopia; ignorar o valor
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — O alvo de BIS intraoperatório é <strong>40–60</strong>. BIS = 72 está <strong>acima do alvo</strong>, indicando nível de sedação potencialmente insuficiente com <strong>risco de consciência intraoperatória (awareness)</strong>. A conduta correta é aprofundar a anestesia (aumentar concentração do agente inalatório ou dose do hipnótico IV). BIS &lt;40 indica anestesia excessivamente profunda, associada a hipotensão e recuperação lenta.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q2-monit">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">2</div>
+              <div class="caso-title">QUESTÃO 2 — Queda Súbita do ETCO2</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Durante cirurgia ortopédica de longa duração, o ETCO2 cai abruptamente de <strong>38 para 8 mmHg</strong> em menos de 1 minuto, com SpO2 caindo para 88% e hipotensão súbita. O que essa apresentação sugere como diagnóstico MAIS provável?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Hipoventilação aguda<br>
+                B) Extubação acidental<br>
+                C) Embolia pulmonar maciça ou parada cardiorrespiratória<br>
+                D) Hipercapnia por reinalação<br>
+                E) Broncoespasmo grave
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A queda súbita do ETCO2 para valores muito baixos (&lt;10 mmHg) com instabilidade hemodinâmica sugere <strong>embolia pulmonar maciça</strong> (embolia gasosa, gordurosa ou trombótica) ou <strong>PCR</strong>. Nesses casos, o débito cardíaco cai drasticamente, reduzindo o transporte de CO2 para os pulmões. Extubação causaria ETCO2 = zero com alarme de circuito; hipoventilação elevaria o ETCO2; broncoespasmo elevaria levemente o ETCO2 com padrão em platô ascendente.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q3-monit">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">3</div>
+              <div class="caso-title">QUESTÃO 3 — TOF e Extubação</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Ao final de uma colectomia com uso de cisatracúrio, a aceleromiografia exibe <strong>TOF com 2 twitch</strong>. O paciente abre os olhos a estímulo verbal. É seguro extubá-lo?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Sim, pois o paciente responde a estímulos verbais<br>
+                B) Sim, pois 2 twitch indica recuperação adequada<br>
+                C) Não — há bloqueio residual; usar neostigmina e aguardar TOF ratio ≥0.9<br>
+                D) Não — o cisatracúrio não pode ser revertido<br>
+                E) Sim, se SpO2 estiver acima de 95% em ar ambiente
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — TOF com 2 twitch corresponde a bloqueio neuromuscular moderado-profundo. Para extubação segura, o <strong>TOF ratio deve ser ≥0.9</strong> (idealmente medido por aceleromiografia). A simples responsividade verbal não exclui bloqueio residual clinicamente significativo, que pode causar hipoventilação e reobstrução pós-extubação. O cisatracúrio pode ser revertido com neostigmina (máx 0.07 mg/kg) quando TOF tem ≥2 respostas, sempre associada à atropina.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q4-monit">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">4</div>
+              <div class="caso-title">QUESTÃO 4 — PPV e Fluido-responsividade</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente em ventilação mecânica (modo VCV, volume corrente 7 mL/kg, sem arritmia) apresenta <strong>PPV = 18%</strong> e PAM = 58 mmHg durante cirurgia abdominal. Qual é a interpretação e conduta CORRETA?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) PPV 18% indica sobrecarga volêmica; usar furosemida<br>
+                B) PPV 18% é normal; tratar apenas com vasopressor<br>
+                C) PPV &gt;13% = fluido-responsivo; infundir 250 mL de cristaloide e reavaliar<br>
+                D) PPV não é confiável em modo VCV<br>
+                E) Iniciar noradrenalina sem expansão volêmica
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — PPV (Pulse Pressure Variation) &gt;13% em paciente em VCV sem arritmias e FC regular indica <strong>fluido-responsividade</strong> (o coração está operando na parte ascendente da curva de Frank-Starling). A conduta padrão é um <strong>fluid challenge</strong> com 250 mL de cristaloide isotônico e reavaliação do PPV e PAM. Se PPV cair abaixo de 10% e PAM melhorar, confirma resposta ao fluido. Se não houver melhora, considerar vasopressor.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q5-monit">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">5</div>
+              <div class="caso-title">QUESTÃO 5 — Capnograma e Broncoespasmo</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Durante anestesia geral, o capnograma exibe <strong>fase III (platô alveolar) progressivamente ascendente</strong>, formando o padrão conhecido como "sinal do tubarão" ou "upsloping plateau". Qual é o diagnóstico MAIS provável?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Hipoventilação alveolar global<br>
+                B) Embolia pulmonar<br>
+                C) Broncoespasmo ou obstrução de via aérea (ex.: DPOC)<br>
+                D) Desconexão do circuito<br>
+                E) Reinalação de CO2 por válvula unidirecional defeituosa
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A fase III ascendente (platô com inclinação positiva ao invés de horizontal plana) é o sinal capnográfico clássico de <strong>broncoespasmo</strong> ou obstrução das vias aéreas (DPOC, asma). Ocorre por distribuição desigual da ventilação: alvéolos com maior resistência esvaziam mais lentamente, liberando CO2 de forma gradual ao longo do tempo expiratório. Em casos graves, o padrão evolui para "dente de tubarão" com pico expiratório tardio. Tratar com broncodilatador (salbutamol inalado ou IV) e aprofundar anestesia.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Questões</div>
+    </div>
+  </div><!-- /monit-questoes -->
+
+  <!-- TAB CASOS — 5 CASOS CLÍNICOS INTERATIVOS
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="monit-casos">
+    <div class="page-wrap">
+
+      <div class="alert a-blue" style="margin-bottom:12px">
+        <strong>5 Casos Clínicos de Monitorização Anestésica.</strong> Tente resolver antes de revelar a resposta.
+      </div>
+
+      <!-- CASO 1 -->
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 1</span>
+          <span class="caso-title">ETCO₂ cai a zero durante laparoscopia — Diagnóstico diferencial</span>
+        </div>
+        <div class="caso-body">
+          <div class="tbl-wrap"><table class="tbl"><tbody>
+            <tr><td>Paciente</td><td>Mulher, 45 anos, ASA II, colecistectomia videolaparoscópica</td></tr>
+            <tr><td>Situação</td><td>Cirurgia em andamento há 40 min. Pneumoperitônio instaurado. ETCO₂ estava em 42 mmHg e cai ABRUPTAMENTE para 0 mmHg</td></tr>
+            <tr><td>Dados</td><td>SpO₂ começa a cair. PA indisponível por 30 segundos. Chest rise ausente.</td></tr>
+          </tbody></table></div>
+          <div class="caso-question">Qual seu raciocínio imediato? O que você faz nos próximos 30 segundos?</div>
+          <div class="caso-answer">
+            <div class="sh sh-red">Diagnóstico Diferencial — Ordem de Prioridade</div>
+            <div class="proto-steps" style="margin-top:8px">
+              <div class="proto-step"><span class="sn sn-r">1°</span><div><strong>Desconexão do circuito</strong> — mais comum. Verificar imediatamente todas as conexões (tubo-ventilador, adaptador capnógrafo). CHECAR VISUALMENTE.</div></div>
+              <div class="proto-step"><span class="sn sn-r">2°</span><div><strong>Extubação acidental</strong> — trocar posição ou movimento cirúrgico deslocou o tubo. Auscultar IMEDIATAMENTE / visualizar glote por laringoscopia direta.</div></div>
+              <div class="proto-step"><span class="sn sn-r">3°</span><div><strong>Obstrução total da via aérea</strong> — kinking do tubo, secreção impactada, herniação do cuff. Checar pressão de pico no ventilador (alta = obstrução).</div></div>
+              <div class="proto-step"><span class="sn sn-r">4°</span><div><strong>PCR / TEP maciço</strong> — se via aérea OK → buscar causa circulatória. Checar pulso carotídeo. Iniciar ACLS se PCR.</div></div>
+            </div>
+            <div class="alert a-red" style="margin-top:8px">
+              <strong>Conduta imediata (DRILLS):</strong><br>
+              1. PAUSAR cirurgia — avisar o cirurgião<br>
+              2. Assumir ventilação manual com bolsa AMBU + O₂ 100%<br>
+              3. Auscultar — expansão bilateral?<br>
+              4. Verificar circuito e posição do tubo (laringoscopia direta)<br>
+              5. Se PCR confirmado → RCP imediato, chamar ajuda<br>
+              <br><strong>Neste caso:</strong> na laparoscopia, considerar também embolia gasosa por CO₂ (queda súbita de ETCO₂ + colapso hemodinâmico) → deflacionar peritônio, Trendelenburg invertido, aspirar CVC se disponível.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 2 -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 2</span>
+          <span class="caso-title">BIS 70 em paciente "adormecido" — o que fazer?</span>
+        </div>
+        <div class="caso-body">
+          <div class="tbl-wrap"><table class="tbl"><tbody>
+            <tr><td>Paciente</td><td>Homem, 52 anos, ASA III, gastrectomia laparoscópica em TIVA</td></tr>
+            <tr><td>Situação</td><td>Cirurgia há 90 min. Propofol TCI 3 mcg/mL (Ce), remifentanil 0,15 mcg/kg/min. Paciente aparentemente imóvel. BIS: 72. EMG: 25 dB. SQI: 85%.</td></tr>
+            <tr><td>Dados</td><td>PA: 118/72, FC: 88. Nenhuma resposta motora visível ao estímulo cirúrgico.</td></tr>
+          </tbody></table></div>
+          <div class="caso-question">O BIS 72 em TIVA com propofol é adequado? O que fazer?</div>
+          <div class="caso-answer">
+            <div class="alert a-red">
+              <strong>NÃO é adequado!</strong> BIS alvo em anestesia geral = 40–60. BIS 72 indica plano INSUFICIENTE para TIVA — risco real de awareness.
+            </div>
+            <div class="sh sh-blue" style="margin-top:10px">Análise</div>
+            <div class="tbl-wrap"><table class="tbl" style="margin-top:6px">
+              <tbody>
+                <tr><td>BIS 72</td><td>Acima do alvo (40–60) → sedação moderada, não anestesia geral</td></tr>
+                <tr><td>EMG 25 dB</td><td>Baixo → não é artefato muscular. O BIS é real.</td></tr>
+                <tr><td>SQI 85%</td><td>Alta qualidade de sinal → leitura confiável</td></tr>
+                <tr><td>Sem resposta motora</td><td>BNM pode estar mascarando movimento — NÃO significa que está em plano adequado!</td></tr>
+              </tbody>
+            </table></div>
+            <div class="alert a-gold" style="margin-top:8px">
+              <strong>Conduta:</strong><br>
+              1. Aumentar concentração alvo do propofol: subir Ce para 3,5–4 mcg/mL<br>
+              2. Verificar se a bomba está funcionando e a via está pérvea (extravasamento?)<br>
+              3. Aguardar 5 min e reavaliação do BIS — alvo 40–60<br>
+              4. Considerar adicionar halogenado (sevoflurano 0,5–1 MAC) se BNM em uso<br>
+              5. Registrar o episódio de BIS elevado em prontuário<br>
+              6. No pós-operatório: perguntar ativamente sobre memórias durante a cirurgia
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 3 -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 3</span>
+          <span class="caso-title">TOF = 0 ao final da cirurgia de 3h — como reverter?</span>
+        </div>
+        <div class="caso-body">
+          <div class="tbl-wrap"><table class="tbl"><tbody>
+            <tr><td>Paciente</td><td>Homem, 68 anos, ASA II, 80 kg, hemicolectomia aberta 3 horas</td></tr>
+            <tr><td>Situação</td><td>Cirurgia concluída. Halogenado desligado. BIS 58. ETCO₂ 38. Você testa o TOF: TOF count = 0, PTC = 3.</td></tr>
+            <tr><td>Dados</td><td>Rocurônio 1,2 mg/kg na indução + bolus de 0,3 mg/kg às 90 min. Última dose há 45 min.</td></tr>
+          </tbody></table></div>
+          <div class="caso-question">Pode extubar? Qual reversor? Qual dose?</div>
+          <div class="caso-answer">
+            <div class="alert a-red">
+              <strong>NÃO pode extubar!</strong> TOF 0 + PTC 3 = bloqueio profundo. Extubação seria catastrófica.
+            </div>
+            <div class="sh sh-green" style="margin-top:10px">Análise do TOF</div>
+            <div class="tbl-wrap"><table class="tbl" style="margin-top:6px">
+              <tbody>
+                <tr><td>TOF count 0</td><td>Nenhuma resposta às 4 estimulações → bloqueio profundo</td></tr>
+                <tr><td>PTC = 3</td><td>Bloqueio profundo residual — mas início de recuperação espontânea possível</td></tr>
+                <tr><td>Neostigmina</td><td>CONTRAINDICADA com TOF 0 — pode paradoxalmente aprofundar o bloqueio</td></tr>
+              </tbody>
+            </table></div>
+            <div class="alert a-teal" style="margin-top:8px">
+              <strong>Conduta — Sugammadex:</strong><br>
+              Dose para bloqueio profundo (PTC positivo) = <strong>4 mg/kg IV</strong><br>
+              Para 80 kg: 4 × 80 = <strong>320 mg IV</strong> em bolus<br>
+              Esperar 3–5 minutos → retestar TOF<br>
+              Confirmar TOF ratio ≥0,9 ANTES de extubar<br>
+              <br>
+              <strong>Alternativa se sugammadex não disponível:</strong><br>
+              Aguardar PTC ≥10 (recuperação espontânea) → pode tentar neostigmina com TOF count 4<br>
+              Manter IOT e ventilação mecânica enquanto espera
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 4: Gasometria (referência do caso já na aba 5) -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 4</span>
+          <span class="caso-title">pH 7,28 | PaCO₂ 28 | HCO₃ 13 | Lactato 4,2 — paciente hipotenso</span>
+        </div>
+        <div class="caso-body">
+          <div class="tbl-wrap"><table class="tbl"><tbody>
+            <tr><td>Paciente</td><td>Mulher, 72 anos, ASA IV, esplenectomia de urgência por ruptura esplênica (trauma)</td></tr>
+            <tr><td>Situação</td><td>Intraoperatório, 90 min de cirurgia. PA 80/50. FC 118. 1,5 L cristaloide infundido. Gasometria: pH 7,28 | PaCO₂ 28 | HCO₃ 13 | BE −13 | Lactato 4,2 | Hb 6,2 g/dL</td></tr>
+            <tr><td>ETCO₂</td><td>22 mmHg (gradiente ETCO₂-PaCO₂ = 28−22 = 6 mmHg)</td></tr>
+          </tbody></table></div>
+          <div class="caso-question">Interprete a gasometria e conduza o caso.</div>
+          <div class="caso-answer">
+            <div class="sh sh-red">Interpretação</div>
+            <div class="tbl-wrap"><table class="tbl" style="margin-top:6px">
+              <tbody>
+                <tr><td>pH 7,28</td><td>Acidose grave</td></tr>
+                <tr><td>PaCO₂ 28</td><td>↓ — resposta respiratória compensatória (hiperventilação)</td></tr>
+                <tr><td>HCO₃ 13</td><td>↓↓ — Acidose Metabólica GRAVE (primária)</td></tr>
+                <tr><td>Fórmula de Winter</td><td>PaCO₂ esperada = 1,5×13+8 = 27,5 → real 28 ✓ = compensação adequada</td></tr>
+                <tr><td>AG = 140−(107+13)</td><td>AG = 20 → ELEVADO → causa MUDPILES → LACTATO (4,2 confirma)</td></tr>
+                <tr><td>Gradiente ETCO₂-PaCO₂ = 6</td><td>Aumentado (&gt;5) → ↑ espaço morto → baixo DC / hipovolemia</td></tr>
+              </tbody>
+            </table></div>
+            <div class="alert a-red" style="margin-top:8px">
+              <strong>Diagnóstico:</strong> Acidose metabólica por acidose lática (choque hemorrágico) — <span class="tag tr">CLASSE III-IV de ATLS</span><br>
+              <strong>Conduta (damage control resuscitation):</strong><br>
+              1. <strong>Hemotransfusão imediata:</strong> concentrado de hemácias (ratio 1:1:1 com plasma e plaquetas)<br>
+              2. Ácido tranexâmico 1g IV se &lt;3h do trauma<br>
+              3. Controle cirúrgico da hemorragia (prioridade absoluta)<br>
+              4. Evitar hipotermia: fluidos aquecidos, manta térmica<br>
+              5. Não hiperventilar além do compensatório — PaCO₂ 28 é a compensação do distúrbio metabólico; forçar mais causa isquemia cerebral<br>
+              6. Gasometria seriada: avaliar lactato em queda como indicador de resposta à ressuscitação
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 5 -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 5</span>
+          <span class="caso-title">VCI plana no EcoTTE + hipotensão intraoperatória</span>
+        </div>
+        <div class="caso-body">
+          <div class="tbl-wrap"><table class="tbl"><tbody>
+            <tr><td>Paciente</td><td>Homem, 60 anos, ASA III, hepatectomia parcial direita</td></tr>
+            <tr><td>Situação</td><td>Intraoperatório, 2h30 de cirurgia. PA cai: 78/42 mmHg. FC 110. Já recebeu: 2L cristaloide + 500mL colide. Noradrenalina 0,1 mcg/kg/min em curso.</td></tr>
+            <tr><td>EcoTTE (subcostal)</td><td>VCI colapsável &lt;1,5 cm, colapso &gt;50%. Cavidades ventriculares pequenas, contração vigorosa ("beijo" das paredes na sístole). FEVE estimada &gt;65%.</td></tr>
+          </tbody></table></div>
+          <div class="caso-question">Qual o diagnóstico ecocardiográfico? O que fazer?</div>
+          <div class="caso-answer">
+            <div class="sh sh-teal">Interpretação Ecocardiográfica</div>
+            <div class="tbl-wrap"><table class="tbl" style="margin-top:6px">
+              <tbody>
+                <tr><td>VCI &lt;1,5 cm + colapso &gt;50%</td><td>PAD estimada 0–5 mmHg → HIPOVOLEMIA GRAVE</td></tr>
+                <tr><td>Cavidades pequenas/"kissing walls"</td><td>Confirma hipovolemia — ventrículo vazio na sístole</td></tr>
+                <tr><td>FEVE &gt;65%</td><td>Função sistólica PRESERVADA → hipovolemia, não falência de bomba</td></tr>
+                <tr><td>Sem derrame pericárdico</td><td>Descarta tamponamento</td></tr>
+                <tr><td>VD não dilatado</td><td>Descarta TEP maciço como causa principal</td></tr>
+              </tbody>
+            </table></div>
+            <div class="alert a-teal" style="margin-top:8px">
+              <strong>Diagnóstico:</strong> Hipotensão por HIPOVOLEMIA GRAVE (choque distributivo/hemorrágico em hepatectomia — campo cirúrgico sangrante)<br><br>
+              <strong>Conduta:</strong><br>
+              1. <strong>Comunicar ao cirurgião:</strong> controle hemostático prioritário<br>
+              2. <strong>Ressuscitação volêmica guiada pelo ECO:</strong> bolus 250 mL cristaloide → reavaliação da VCI<br>
+              3. Se Hb &lt;7 g/dL: iniciar transfusão de CHC<br>
+              4. <strong>Vasopressor temporário</strong> (noradrenalina) enquanto repõe volume — não substituir o volume pelo vasopressor<br>
+              5. Reavaliação ecocardiográfica após cada intervenção — VCI deve aumentar com reposição adequada<br>
+              <br>
+              <strong>Armadilha:</strong> Aumentar vasopressor isoladamente (sem volume) em hipovolemia → vasoconstrição periférica mascara o problema, piora isquemia mesentérica, não resolve o choque.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHECKLIST FINAL DE MONITORIZAÇÃO -->
+      <div class="card" style="margin-top:16px">
+        <div class="card-header ch-blue">
+          <span class="card-num">★</span> Mapa Mental — Monitorização por Situação Clínica
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Situação Clínica</th><th>Monitorização Mínima Adicional</th><th>Parâmetro-Chave</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">Cirurgia de grande porte</span></td><td>PAI + cateter vesical + BIS</td><td>PAM ≥65, lactato, diurese</td></tr>
+              <tr><td><span class="tag tr">Instabilidade hemodinâmica</span></td><td>PAI + EcoTTE + gasometria seriada</td><td>VPP, lactato, FEVE, VCI</td></tr>
+              <tr><td><span class="tag ty">TIVA (propofol)</span></td><td>BIS obrigatório</td><td>BIS 40–60</td></tr>
+              <tr><td><span class="tag ty">BNM não despolarizante</span></td><td>TOF aceleromiográfico</td><td>TOF ratio ≥0,9 antes extubação</td></tr>
+              <tr><td><span class="tag tv">Laparoscopia</span></td><td>Capnografia + ETCO₂ contínuo</td><td>ETCO₂ 35–45 (+/− 5 por pneumop.)</td></tr>
+              <tr><td><span class="tag tv">Cirurgia cardíaca</span></td><td>TEE + Swan-Ganz ou PiCCO</td><td>Função ventricular, enchimento</td></tr>
+              <tr><td><span class="tag tg">Anestesia pediátrica</span></td><td>Temperatura + capnografia + SpO₂ digital</td><td>Normotermia, ETCO₂, SpO₂ ≥95%</td></tr>
+              <tr><td><span class="tag tg">Anestesia neuroaxial</span></td><td>PA 2–3 min × 20 min pós-bloqueio</td><td>Hipotensão &gt;20% basal = tratar</td></tr>
+              <tr><td><span class="tag tr">Suspeita de HM</span></td><td>ETCO₂ + temperatura contínua</td><td>ETCO₂ ↑↑ + Temp ↑↑ = emergência</td></tr>
+              <tr><td><span class="tag ty">DPOC grave</span></td><td>Capnografia + gasometria seriada</td><td>PaCO₂ basal do paciente (não normalizar forçadamente)</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /monit-casos -->
+</div>

@@ -1,0 +1,1052 @@
+<div class="screen" id="screen-cirurgias-esp">
+  <div class="top-bar" style="border-bottom:3px solid var(--cyan)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--cyan)">🏥 Cirurgias Especiais</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="cirurgias-esp-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('cesp','cardiaca',this)">CARDÍACA/CEC</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','neuro',this)">NEUROCIRURGIA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','toracica',this)">TORÁCICA/OLV</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','trauma',this)">TRAUMA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','laparosc',this)">LAPAROSCOPIA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','casos',this)">CASOS</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 1 — ANESTESIA CARDÍACA E CEC
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel active" id="cesp-cardiaca">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> A anestesia cardíaca exige domínio da fisiologia cardiovascular, farmacologia avançada e manejo da CEC. A monitorização invasiva é mandatória e a ETE intraoperatória é padrão nas grandes cirurgias cardíacas.
+    </div>
+
+    <!-- INDICAÇÕES CIRÚRGICAS -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Indicações Cirúrgicas Cardíacas
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Revascularização Miocárdica (CABG)</div>
+          <div class="dc">Padrão-ouro para doença triarterial, lesão de tronco de coronária esquerda e coronariopatas com disfunção de VE. Pode ser realizada com CEC (on-pump) ou sem CEC (off-pump — OPCAB).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Cirurgias Valvares</div>
+          <div class="dc">Valvoplastias (reparo) e trocas valvares (próteses mecânicas ou biológicas). Inclui cirurgia mitral, aórtica, tricúspide. Exigem CEC na grande maioria dos casos.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Correção de Cardiopatias Congênitas</div>
+          <div class="dc">CIA, CIV, tetralogia de Fallot, transposição de grandes artérias. Particularidades: shunts intracardíacos, anatomia variável, hipotermia profunda com parada circulatória total em casos complexos.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Transplante Cardíaco</div>
+          <div class="dc">Coração denervado → sem resposta a atropina, sem reflexo vagal. Responde a catecolaminas circulantes (efeito direto). Isoproterenol e marca-passo temporário podem ser necessários.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONITORIZAÇÃO AMPLIADA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Monitorização Ampliada
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">ECG 5 Derivações (DII + V5)</div>
+          <div class="dc">DII — melhor para detecção de arritmias e onda P. V5 — sensibilidade de ~75% para isquemia de parede anterior. A combinação DII + V5 detecta <strong>até 90% dos episódios isquêmicos</strong>. Monitorar segmento ST continuamente.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Pressão Arterial Invasiva (PAI)</div>
+          <div class="dc">Cateter radial (não-dominante) <strong>ANTES da indução</strong> — obrigatório em cirurgia cardíaca. Permite monitorar PA batimento a batimento durante indução e coleta seriada de gasometrias. Se CABG com artéria radial como enxerto → usar contralateral ou femoral.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">CVC + Cateter de Artéria Pulmonar (Swan-Ganz)</div>
+          <div class="dc">CVC: acesso para drogas vasoativas, PVC, infusões. Swan-Ganz (selecionados): mensura DC por termodiluição, PAP, PAWP, RVS, SvO₂. Indicado em disfunção ventricular grave, hipertensão pulmonar, reoperações complexas.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Ecocardiografia Transesofágica (ETE) Intraoperatória</div>
+          <div class="dc"><strong>Padrão nas grandes cirurgias cardíacas.</strong> Avalia: função ventricular (global e segmentar), débito cardíaco, grau de regurgitação/estenose valvar, presença de ar intracavitário após CEC, derrames pericárdicos, posição de cânulas. Detecta isquemia antes de ECG (alteração segmentar precede ST).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDUÇÃO -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Indução — Princípios
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>REGRA FUNDAMENTAL:</strong> Evitar taquicardia/hipertensão (↑demanda de O₂ miocárdico) e hipotensão severa (↓perfusão coronariana). Equilíbrio entre demanda e oferta de O₂.
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Opioides em Altas Doses</div>
+          <div class="dc"><strong>Fentanil 20-100 mcg/kg</strong> ou <strong>sufentanil 5-20 mcg/kg</strong> — estabilidade hemodinâmica superior. Associar hipnótico (midazolam, propofol em dose titulada ou etomidato) + BNM (rocurônio, pancurônio — este último fornece taquicardia leve compensatória).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Etomidato — Disfunção Ventricular Grave</div>
+          <div class="dc">Etomidato 0.2-0.3 mg/kg: menor efeito depressor miocárdico entre os hipnóticos. Preferido quando FE &lt;30% ou choque cardiogênico. Desvantagens: supressão adrenal transitória (dose única aceitável), mioclonias.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Ketamina — Tamponamento / Pericardite Constritiva</div>
+          <div class="dc">Ketamina 1-2 mg/kg: mantém tônus simpático → estabiliza PA e FC. Útil em tamponamento cardíaco (onde a redução de pré-carga é letal) e pericardite constritiva. Evitar se reserva coronariana limitada (pode ↑MVO₂).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CEC -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Circulação Extracorpórea (CEC)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Componentes da CEC</div>
+          <div class="dc"><strong>Oxigenador de membrana</strong> (troca gasosa), <strong>bomba de rolete ou centrífuga</strong> (propulsão), <strong>reservatório venoso</strong>, <strong>trocador de calor</strong> (hipo/reaquecimento), <strong>filtros arteriais</strong> (microbolhas, microêmbolos). O circuito é preenchido com cristaloide (prime) — causa hemodiluição (Hb-alvo ≥7 g/dL durante CEC).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Canulação</div>
+          <div class="dc"><strong>Arterial:</strong> aorta ascendente (padrão) — alternativas: femoral, axilar. <strong>Venosa:</strong> átrio direito (cânula única tipo two-stage) ou canulação bicaval (cava superior + inferior) — necessária quando abertura de câmaras direitas.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Anticoagulação</div>
+          <div class="dc"><strong>Heparina 300-400 UI/kg IV</strong> antes da canulação. Confirmar por <strong>ACT (Activated Clotting Time) &gt;480 segundos</strong> antes de iniciar CEC. ACT repetido a cada 30-60 min durante CEC. Se ACT cair, suplementar heparina.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Fluxo e Pressão na CEC</div>
+          <div class="dc">Fluxo: <strong>2.0-2.5 L/min/m²</strong> (adulto) — simula DC fisiológico. PAM alvo: <strong>50-80 mmHg</strong>. PAM &lt;50 → risco de hipoperfusão cerebral/renal; PAM &gt;80 → risco de sangramento em suturas e edema. Ajustar com fenilefrina (↑) ou halogenado no circuito (↓).</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Hipotermia Controlada</div>
+          <div class="dc"><strong>Moderada (28-32°C):</strong> cirurgias valvares, CRM — ↓CMRO₂ ~7% por °C → proteção cerebral. <strong>Profunda (18-20°C):</strong> parada circulatória total — procedimentos em arco aórtico, congênitas complexas. Reaquecimento máximo 1°C a cada 3-5 min (evitar overshoot).</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Cardioplegia</div>
+          <div class="dc">Parada cardíaca eletiva: solução com <strong>potássio 20-30 mEq/L</strong> em veículo cristaloide frio ou sanguíneo. Administrada na raiz aórtica (anterógrada) ou seio coronário (retrógrada). Pára o coração em diástole → ↓consumo de O₂ para ~1 mL/100g/min. Repetir a cada 15-20 min para manutenção.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAÍDA DA CEC -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#1a5276,#2471a3)">
+        <span class="card-num">05</span> Saída da CEC
+      </div>
+      <div class="card-body">
+        <div class="dr dr-g">
+          <div class="dn">Reaquecimento</div>
+          <div class="dc">Reaquecimento gradual até <strong>36-37°C</strong> (nasofaríngea). Diferença entre temperatura vesical e nasofaríngea &lt;2°C antes de sair de CEC (evitar afterdrop). Verificar: K⁺ corrigido, Hb, gasometria, lactatemia.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Retomada do Ritmo Cardíaco</div>
+          <div class="dc">Após reaquecimento, o coração pode retomar ritmo espontâneo (sinusal) ou fibrilação ventricular. Se FV → <strong>desfibrilar com pás internas (10-20 J)</strong>. Se bradicardia → marca-passo epicárdico (fios instalados pelo cirurgião). Verificar condução pelo ETE.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Suporte Farmacológico</div>
+          <div class="dc"><strong>Noradrenalina:</strong> tônus vascular (vasoplegia pós-CEC é frequente). <strong>Dobutamina:</strong> inotrópico β₁ — 1ª linha para disfunção sistólica de VE. <strong>Milrinona:</strong> inibidor PDE3 — inodilatador → ↓resistência pulmonar + inotropismo → <strong>especialmente útil na disfunção de VD</strong> e hipertensão pulmonar. Adrenalina: casos refratários.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Reversão da Heparina — Protamina</div>
+          <div class="dc"><strong>Protamina 1 mg / 100 UI de heparina</strong> administrada. Infundir lentamente (10-15 min). ACT alvo &lt;140 seg (próximo do basal). Monitorar atentamente durante a infusão.</div>
+        </div>
+        <div class="alert a-red" style="margin-top:10px">
+          <strong>⚠ Reações à Protamina:</strong> Hipotensão (liberação de histamina — mais comum), broncoespasmo, reação anafilactoide, e a mais temida: <strong>hipertensão pulmonar aguda catastrófica</strong> (rara, mas potencialmente fatal). Fatores de risco: uso prévio de insulina NPH, alergia a peixes, exposição prévia a protamina. Tratamento: interromper infusão, suporte hemodinâmico, adrenalina.
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLICAÇÕES CEC -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">06</span> Complicações Específicas da CEC
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">SIRS Pós-CEC</div>
+          <div class="dc">Contato do sangue com superfícies artificiais → ativação do complemento (C3a, C5a) → <strong>liberação maciça de citocinas</strong> → vasoplegia, disfunção miocárdica, IRA, SDRA, coagulopatia. Incidência proporcional ao tempo de CEC. Prevenção: CEC com biocompatibilidade, corticoides (controverso), ultrafiltração.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Coagulopatia Pós-CEC</div>
+          <div class="dc">Multifatorial: consumo de plaquetas (disfunção + ↓número), consumo de fatores de coagulação, hemodiluição, fibrinólise, heparina residual. <strong>TEG/ROTEM guiam hemoterapia de forma racional</strong> — reduzem transfusão desnecessária. Ácido tranexâmico profilático ↓ sangramento pós-CEC.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Disfunção Neurológica</div>
+          <div class="dc"><strong>Delirium pós-operatório:</strong> até 30% dos pacientes. <strong>AVC:</strong> 1-3% (embolia gasosa, particulada, hipoperfusão). <strong>Disfunção cognitiva pós-operatória (DCPO):</strong> frequente — déficits de memória e atenção podem persistir por semanas a meses. Fatores de risco: idade, aterosclerose aórtica, tempo de CEC prolongado.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Embolia Gasosa</div>
+          <div class="dc"><strong>Prioridade absoluta:</strong> deaerar cuidadosamente todas as câmaras cardíacas antes da saída de CEC. ETE identifica ar residual em câmaras esquerdas. Posição de Trendelenburg durante deaeração. Ar no sistema coronariano → isquemia → FV refratária.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /cesp-cardiaca -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 2 — ANESTESIA PARA NEUROCIRURGIA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="cesp-neuro">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> Os pilares da neuroanestesia são: manter PPC ≥60 mmHg, controlar PIC, reduzir CMRO₂, fornecer campo cirúrgico relaxado e permitir despertar rápido para avaliação neurológica.
+    </div>
+
+    <!-- OBJETIVOS -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Objetivos da Neuroanestesia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Pressão de Perfusão Cerebral (PPC)</div>
+          <div class="dc"><strong>PPC = PAM − PIC</strong>. Alvo: <strong>PPC ≥60 mmHg</strong>. Se PIC elevada (normal &lt;15 mmHg), necessário PAM mais alta para manter perfusão. Autorregulação cerebral mantém FSC constante entre PAM 50-150 mmHg — mas pode estar abolida em TCE, tumor, isquemia.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Redução do CMRO₂</div>
+          <div class="dc">Propofol e barbitúricos reduzem CMRO₂ de forma dose-dependente (até 60% com burst suppression). Halogenados reduzem CMRO₂ mas aumentam FSC → efeito líquido sobre PIC depende da dose. Hipotermia ↓CMRO₂ ~7% por °C.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Campo Cirúrgico Relaxado (Brain Relaxation)</div>
+          <div class="dc">Cérebro túrgido dificulta a cirurgia e ↑risco de retração. Estratégias: TIVA, leve hiperventilação, osmoterapia, drenagem de LCR, posicionamento com cabeceira elevada. Objetivo: cérebro "mole" sem herniação.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AVALIAÇÃO PRÉ-OPERATÓRIA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Avaliação Pré-operatória
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Sinais de PIC Elevada</div>
+          <div class="dc"><strong>Cefaleia que piora com tosse/Valsalva</strong>, vômitos em jato (sem náusea prévia), papiledema na fundoscopia, alteração do nível de consciência. Se presentes → solicitar TC de crânio → considerar derivação ventricular externa (DVE) ANTES da cirurgia eletiva.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Medicações em Uso</div>
+          <div class="dc"><strong>Corticoides:</strong> dexametasona 4 mg 6/6h — reduz edema vasogênico peritumoral. Manter no perioperatório. <strong>Anticonvulsivantes:</strong> fenitoína, levetiracetam — manter níveis terapêuticos no perioperatório (risco de convulsão pós-craniotomia). Verificar interações medicamentosas (fenitoína é indutor enzimático potente).</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Exames Essenciais</div>
+          <div class="dc">Neuroimagem (TC/RM): localização, tamanho, efeito de massa, desvio de linha média, hidrocefalia. Coagulograma: obrigatório (risco de hematoma pós-op). Eletrólitos: Na⁺ (SIADH, diabetes insipidus em tumores hipofisários).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDUÇÃO -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Indução
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Agentes Preferidos</div>
+          <div class="dc"><strong>Propofol + fentanil:</strong> propofol ↓CMRO₂, ↓FSC, ↓PIC — agente ideal para indução neurocirúrgica. Cetamina: tradicionalmente evitada por suposto ↑PIC, mas <strong>dados recentes mostram segurança quando associada a GABAérgicos</strong> — não mais contraindicação absoluta.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">RSI se Indicado</div>
+          <div class="dc">Estômago cheio (↓nível de consciência, vômitos recentes) ou GCS baixo → RSI com succinilcolina (↑PIC transitório, mas aceitável) ou rocurônio 1.2 mg/kg (se sugammadex disponível). Prioridade: proteger via aérea.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Atenuação da Resposta Pressórica à Laringoscopia</div>
+          <div class="dc">Laringoscopia → ↑PA + ↑FC + ↑PIC → risco de sangramento tumoral ou ruptura aneurismática. <strong>Lidocaína 1.5 mg/kg IV + fentanil 3-5 mcg/kg</strong> administrados 3 minutos antes da laringoscopia. Esmolol 0.5-1 mg/kg é alternativa para o componente taquicárdico.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MANUTENÇÃO -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">04</span> Manutenção Anestésica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">TIVA — Preferência em Neurocirurgia</div>
+          <div class="dc"><strong>Propofol (↓CMRO₂) + remifentanil:</strong> melhor controle de PIC, menos edema cerebral, despertar previsível e rápido para avaliação neurológica. Permite titulação fina. BIS 40-60 para manutenção; BIS 80-85 no final para despertar suave.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Inalatórios — Restrições</div>
+          <div class="dc">Se inalatório necessário: <strong>isoflurano ou sevoflurano &lt;1 CAM</strong>. Acima de 1 CAM → vasodilatação cerebral → ↑FSC → ↑PIC (efeito dose-dependente). <strong>DESFLURANO: EVITAR em neurocirurgia</strong> — causa ↑FSC de forma aguda e significativa, mesmo em baixas concentrações.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Controle da PaCO₂</div>
+          <div class="dc"><strong>Normocapnia (PaCO₂ 35-40 mmHg):</strong> padrão. <strong>Hiperventilação leve e temporária (PaCO₂ 30-35 mmHg):</strong> durante abertura dural se cérebro túrgido — ↓PIC por vasoconstrição cerebral. Não manter hiperventilação prolongada → risco de isquemia por vasoconstrição excessiva. Hipercapnia (PaCO₂ &gt;45): SEMPRE evitar → vasodilatação cerebral → ↑PIC.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POSICIONAMENTO -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">05</span> Posicionamento
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Cabeceira Elevada (15-30°)</div>
+          <div class="dc">↓PIC por melhora da drenagem venosa cerebral (veias jugulares). <strong>Não comprometer o retorno venoso:</strong> evitar flexão excessiva do pescoço (comprime jugulares → ↑PIC paradoxalmente). Verificar 2 dedos entre queixo e esterno. Cabeça em posição neutra.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Posição Sentada</div>
+          <div class="dc">Usada em cirurgias de fossa posterior. <strong>Risco principal: embolia gasosa venosa (EAV)</strong> — pressão venosa negativa no campo cirúrgico favorece aspiração de ar. Monitorização obrigatória: <strong>Doppler precordial</strong> (mais sensível — detecta 0.05 mL/kg de ar) + cateter atrial direito para aspiração de ar. ETCO₂ cai subitamente se EAV significativa.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Posição Prona</div>
+          <div class="dc">Cirurgia de fossa posterior, coluna. Riscos: <strong>lesão ocular por compressão</strong> (cegueira pós-operatória — pressão nos globos oculares deve ser ZERO), isquemia de medula, edema facial/vias aéreas, lesão de plexo braquial. Coxins adequados, verificar olhos a cada 30 min, manter PAM adequada.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OSMOTERAPIA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">06</span> Osmoterapia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Manitol 20%</div>
+          <div class="dc"><strong>0.25-1 g/kg IV em 15-20 min.</strong> Mecanismo: ↑osmolaridade sérica → gradiente osmótico → água sai do parênquima cerebral → ↓volume cerebral → ↓PIC. Início: 15-30 min. Duração: 3-6h. <strong>Osmolaridade sérica alvo &lt;320 mOsm/L</strong> (acima → risco de IRA, acidose tubular). Efeito rebote possível com uso repetido.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">NaCl Hipertônico 3%</div>
+          <div class="dc"><strong>2-3 mL/kg IV.</strong> Alternativa ao manitol. Vantagens: <strong>mantém volemia</strong> (expansor plasmático — útil em hipovolemia), sem efeito diurético, sem rebote significativo. Monitorar Na⁺ sérico (alvo &lt;155 mEq/L, correção máxima 12 mEq/24h para evitar mielinólise pontina). Pode ser preferido em politraumatizados com TCE.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESPERTAR E EXTUBAÇÃO -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">07</span> Despertar e Extubação
+      </div>
+      <div class="card-body">
+        <div class="alert a-cyan" style="margin-bottom:10px">
+          <strong>Objetivo:</strong> Extubação suave, sem tosse (↑PIC, ↑PA → risco de hematoma pós-op), com acordar imediato para exame neurológico precoce.
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Técnica de Extubação Suave</div>
+          <div class="dc"><strong>Remifentanil em infusão baixa</strong> (0.05-0.1 mcg/kg/min) durante extubação — suprime tosse sem deprimir consciência. Lidocaína IV 1 mg/kg 2 min antes. Aspirar faringe com suavidade. Não reverter BNM até certeza de despertar adequado.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Justificativa para TIVA + Remifentanil</div>
+          <div class="dc">Despertar rápido e previsível: BIS 80-85 no final → paciente acorda em minutos com drive ventilatório preservado. Exame neurológico imediato: força motora, pupilas, comandos verbais — qualquer déficit novo indica complicação cirúrgica → reintervenção precoce.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Metas no Despertar</div>
+          <div class="dc"><strong>Normotermia</strong> (35.5-37°C), <strong>normoglicemia</strong> (140-180 mg/dL — evitar hipo e hiperglicemia), <strong>normocapnia</strong>, PA controlada (evitar picos hipertensivos → nitroglicerina ou clevidipina se necessário). Dor: bloqueio de escalpo (nervo supraorbitário, auriculotemporal, occipital) com ropivacaína 0.5%.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /cesp-neuro -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 3 — ANESTESIA TORÁCICA E OLV
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="cesp-toracica">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> O domínio da ventilação monopulmonar (OLV), da fisiologia do shunt e da HPV é essencial. A escolha e posicionamento correto do dispositivo de isolamento pulmonar determinam o sucesso do procedimento.
+    </div>
+
+    <!-- INDICAÇÕES OLV -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Indicações de OLV (One-Lung Ventilation)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Indicações Absolutas</div>
+          <div class="dc"><strong>Isolamento pulmonar obrigatório:</strong> infecção pulmonar unilateral (abscesso, bronquiectasia infectada — evitar contaminação do pulmão saudável), hemorragia pulmonar maciça, fístula broncopleural (risco de ventilação ineficaz pela fístula), lavagem broncoalveolar unilateral, ressecção brônquica.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Indicações Relativas</div>
+          <div class="dc">Facilitação cirúrgica: pneumonectomia, lobectomia, <strong>VATS (toracoscopia videoassistida)</strong> — necessita colapso pulmonar completo para visualização, ressecção esofágica, cirurgia de aorta torácica, mediastinoscopia anterior.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DISPOSITIVOS OLV -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Dispositivos para OLV
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Tubo Duplo-Lúmen (DLT) — Padrão</div>
+          <div class="dc">Dois lúmens independentes: traqueal e brônquico. <strong>DLT esquerdo é o mais usado</strong> — margem de segurança maior (brônquio fonte esquerdo mais longo: ~5 cm vs ~2.5 cm à direita). Permite aspiração bilateral independente, broncoscopia por cada lúmen, ventilação seletiva.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">DLT Direito — Indicações Específicas</div>
+          <div class="dc">Indicado quando: <strong>pneumonectomia esquerda</strong> (cirurgião precisa clampear brônquio esquerdo), lesão/compressão do brônquio esquerdo, stent brônquico esquerdo. <strong>Risco:</strong> oclusão do brônquio lobar superior direito (emerge a apenas ~2.5 cm da carina) → verificação fibroscópica obrigatória.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Bloqueador Brônquico (BB)</div>
+          <div class="dc">Alternativa ao DLT. Indicações: <strong>via aérea difícil</strong> (mantém TOT convencional), crianças pequenas, traqueostomia prévia, troca do lado de isolamento durante cirurgia. Tipos: <strong>Arndt</strong> (wire-guided), <strong>Cohen</strong> (ponta flexível com roda), <strong>Fuji Uniblocker</strong>. Desvantagens: colapso pulmonar mais lento, pode migrar, sem aspiração eficaz do pulmão colapsado.</div>
+        </div>
+
+        <div style="overflow-x:auto;margin-top:12px">
+<div class="tbl-wrap">
+          <table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+            <thead>
+              <tr style="background:rgba(0,207,193,.15);color:var(--cyan)">
+                <th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Dispositivo</th>
+                <th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Vantagem</th>
+                <th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Desvantagem</th>
+              </tr>
+            </thead>
+            <tbody style="color:rgba(255,255,255,.85)">
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                <td style="padding:8px;font-weight:600">DLT Esquerdo</td>
+                <td style="padding:8px">Margem segurança maior, mais versátil</td>
+                <td style="padding:8px">Lúmen estreito, difícil em VAD</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                <td style="padding:8px;font-weight:600">DLT Direito</td>
+                <td style="padding:8px">Pneumonectomia esquerda</td>
+                <td style="padding:8px">Risco de oclusão do lobar superior D</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                <td style="padding:8px;font-weight:600">Bloqueador Brônquico</td>
+                <td style="padding:8px">VAD, crianças, traqueostomia</td>
+                <td style="padding:8px">Colapso lento, pode migrar</td>
+              </tr>
+            </tbody>
+          </table>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POSICIONAMENTO DLT -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Posicionamento do DLT
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Técnica de Inserção</div>
+          <div class="dc">Laringoscopia → inserir DLT com concavidade anterior → avançar até ultrapassar as cordas vocais → <strong>remover o estilete</strong> → rodar 90° para o lado desejado (esquerda para DLT esquerdo) → avançar suavemente até sentir resistência leve (profundidade ~29 cm em homem médio, ~27 cm em mulher).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Confirmação — Fibroscopia Obrigatória</div>
+          <div class="dc"><strong>Pelo lúmen traqueal:</strong> visualizar a carina e o cuff brônquico azul posicionado abaixo da carina, dentro do brônquio-alvo. <strong>Pelo lúmen brônquico:</strong> visualizar a patência do brônquio distal. Verificar após: intubação, posicionamento lateral (DLT pode migrar), e ao final da cirurgia.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Teste de Separação Pulmonar</div>
+          <div class="dc">Insuflar cuff traqueal e brônquico. <strong>Clampear lúmen brônquico:</strong> auscultar — apenas pulmão contralateral deve ventilar. <strong>Clampear lúmen traqueal:</strong> apenas pulmão ipsilateral deve ventilar. Se ar escapa → mau posicionamento → reposicionar com fibroscópio.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FISIOLOGIA OLV -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Fisiologia da OLV
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Shunt Intrapulmonar</div>
+          <div class="dc">Pulmão não-ventilado mantém perfusão → <strong>shunt direito-esquerdo verdadeiro</strong> (sangue passa sem trocar gases). Em posição lateral, a gravidade favorece perfusão do pulmão dependente (ventilado) — benefício parcial. Shunt típico durante OLV: 25-30% do DC.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Vasoconstrição Pulmonar Hipóxica (HPV)</div>
+          <div class="dc">Mecanismo protetor: <strong>↓PAO₂ alveolar no pulmão colapsado → vasoconstrição arteriolar local → desvia perfusão para o pulmão ventilado</strong>. Reduz shunt em até 50%. Onset: segundos; efeito máximo: 15-30 min. É o principal mecanismo de compensação durante OLV.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Inibidores da HPV</div>
+          <div class="dc"><strong>Halogenados:</strong> inibem HPV de forma dose-dependente (relevante acima de 1 CAM). <strong>Vasodilatadores pulmonares:</strong> nitroglicerina, nitroprussiato, milrinona sistêmica. <strong>Outros:</strong> infecção/inflamação pulmonar, hipotermia, alcalose. TIVA com propofol não inibe HPV — vantagem teórica.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Valores Aceitáveis Durante OLV</div>
+          <div class="dc"><strong>SpO₂ ≥90%</strong> e <strong>PaO₂ ≥60 mmHg</strong> são aceitáveis durante OLV. Hipoxemia leve é esperada e tolerável. A preocupação surge com SpO₂ &lt;90% ou queda progressiva.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MANEJO HIPÓXIA OLV -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#922b21,#e74c3c)">
+        <span class="card-num">05</span> Manejo da Hipóxia em OLV — Algoritmo
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>Sequência escalonada — seguir na ordem:</strong>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">1. Verificar Posição do DLT</div>
+          <div class="dc"><strong>Fibroscopia IMEDIATA.</strong> Causa mais comum de hipóxia em OLV é malposicionamento do DLT (migração durante posicionamento lateral). Corrigir antes de qualquer outra medida.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">2. FiO₂ para 1.0</div>
+          <div class="dc">Maximizar oxigênio alveolar disponível no pulmão ventilado. Simples e imediato.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">3. CPAP no Pulmão Colapsado</div>
+          <div class="dc"><strong>CPAP 2-5 cmH₂O</strong> no pulmão não-ventilado (através do lúmen brônquico correspondente). Mantém alvéolos parcialmente abertos → permite alguma troca gasosa sem inflar completamente o pulmão → <strong>melhora oxigenação sem atrapalhar o campo cirúrgico</strong>. Medida mais eficaz.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">4. PEEP no Pulmão Ventilado</div>
+          <div class="dc"><strong>PEEP 5 cmH₂O</strong> (pode titular até 10). Recruta atelectasias no pulmão dependente → melhora relação V/Q. Cuidado: PEEP excessivo pode comprimir vasos pulmonares e desviar perfusão para o pulmão colapsado → piora shunt.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">5. Ventilação Intermitente de 2 Pulmões</div>
+          <div class="dc">Se medidas anteriores falharem: comunicar ao cirurgião → ventilação temporária de ambos os pulmões (re-insuflar pulmão colapsado brevemente). Repete até estabilizar oxigenação.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">6. Conversão se Refratário</div>
+          <div class="dc">Se hipóxia refratária a todas as medidas → converter VATS para toracotomia aberta (permite compressão mecânica do hilo pulmonar pelo cirurgião). Clampeamento da artéria pulmonar do pulmão colapsado elimina shunt completamente.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VENTILAÇÃO PROTETORA OLV -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">06</span> Ventilação Protetora em OLV
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Volume Corrente Reduzido</div>
+          <div class="dc"><strong>VC 4-5 mL/kg PBW</strong> (peso ideal). Menor que a estratégia de 2 pulmões (6-8 mL/kg). Um único pulmão tem compliance reduzida → volumes maiores causam barotrauma e volutrauma → lesão pulmonar induzida pela ventilação (VILI).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Parâmetros-Alvo</div>
+          <div class="dc"><strong>FR 12-18/min</strong> para manter normocapnia (aceitar PaCO₂ até 50 mmHg — hipercapnia permissiva se necessário). <strong>PEEP 5-10 cmH₂O</strong> no pulmão ventilado. <strong>Pressão de Platô &lt;30 cmH₂O</strong> (limitar para evitar lesão pulmonar). FiO₂ titulada para SpO₂ ≥92%.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANALGESIA PÓS-TORACOTOMIA -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">07</span> Analgesia Pós-Toracotomia
+      </div>
+      <div class="card-body">
+        <div class="alert a-cyan" style="margin-bottom:10px">
+          <strong>Dor pós-toracotomia</strong> é uma das mais intensas em cirurgia — analgesia inadequada → ↓capacidade vital, ↓tosse, atelectasias, pneumonia, cronificação da dor.
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Peridural Torácica — Padrão-Ouro</div>
+          <div class="dc"><strong>Cateter peridural torácico (T5-T7)</strong> com bupivacaína 0.1-0.125% + fentanil 2 mcg/mL em infusão contínua. Bloqueio segmentar bilateral. Excelente analgesia com preservação de função pulmonar. Permite tosse e fisioterapia precoce.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Bloqueio Paravertebral Torácico</div>
+          <div class="dc">Alternativa eficaz à peridural. Bloqueio unilateral → menos hipotensão, menos retenção urinária. Cateter paravertebral para infusão contínua. Analgesia comparável à peridural em metanálises. Preferido se contraindicação a peridural (coagulopatia leve).</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Bloqueio ESP (Erector Spinae Plane)</div>
+          <div class="dc">Emergindo como alternativa menos invasiva. Injeção no plano fascial profundo ao eretor da espinha → difusão para espaço paravertebral. Guiado por USG. Menor risco de pneumotórax vs paravertebral. Eficácia analgésica ainda sendo validada em ensaios clínicos de grande porte.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /cesp-toracica -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 4 — TRAUMA E URGÊNCIAS
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="cesp-trauma">
+    <div class="page-wrap">
+
+    <div class="alert a-red" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> No trauma, rapidez e sistematização salvam vidas. O anestesiologista é parte integral da equipe de ressuscitação — dominar xABCDE, Damage Control Resuscitation e a tríade letal é obrigatório.
+    </div>
+
+    <!-- xABCDE -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> Abordagem xABCDE
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">x — eXsanguinação</div>
+          <div class="dc"><strong>Controle imediato da hemorragia externa catastrófica.</strong> Torniquete em extremidades (tempo limite registrado), compressão direta com curativo hemostático, sutura de escalpo. Prioridade sobre todas as outras etapas — hemorragia exsanguinante mata em minutos.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">A — Airway (com Controle Cervical)</div>
+          <div class="dc">Via aérea pérvia + imobilização de coluna cervical (colar + estabilização manual durante laringoscopia). Se obstrução: jaw thrust (sem hiperextensão), aspiração, Guedel. IOT com estabilização manual em linha (MILS) se indicado. Cricotireoidostomia se via aérea cirúrgica necessária.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">B — Breathing</div>
+          <div class="dc">Pneumotórax hipertensivo, pneumotórax aberto, hemotórax maciço, tórax instável (flail chest) com contusão pulmonar. Inspeção + ausculta + percussão. Saturação de O₂. Oxigênio suplementar em alto fluxo.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">C — Circulation</div>
+          <div class="dc">Dois acessos venosos calibrosos (14-16G) ou acesso intraósseo. Classificar choque hemorrágico (classes I-IV). Iniciar reposição volêmica precoce. Controle de sangramento interno: pelve (binder pélvico), tórax (drenagem), abdome (cirurgia/embolização).</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">D — Disability</div>
+          <div class="dc">GCS (motor é o componente mais importante), pupilas (tamanho, reatividade, simetria), déficit neurológico focal. GCS ≤8 → IOT para proteção de via aérea.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">E — Exposure/Environment</div>
+          <div class="dc">Despir completamente para exame → mas <strong>prevenir hipotermia ativamente</strong> (cobertores térmicos, fluidos aquecidos, temperatura da sala ≥24°C). Log roll para avaliação dorsal. Temperatura axilar ou esofágica obrigatória.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRÍADE LETAL -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#922b21,#c0392b)">
+        <span class="card-num">02</span> Tríade Letal do Trauma
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>Acidose + Coagulopatia + Hipotermia</strong> — potenciam-se mutuamente em ciclo vicioso → morte se não corrigidas agressivamente.
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Acidose Metabólica</div>
+          <div class="dc">Hipoperfusão tecidual → metabolismo anaeróbio → lactato ↑ → acidose. Consequências: <strong>↓contratilidade miocárdica</strong>, ↓resposta a catecolaminas, ↓metabolismo hepático dos fatores de coagulação. pH &lt;7.20 → coagulopatia grave. Tratamento: restaurar perfusão (volume + vasopressores), não tratar com bicarbonato isoladamente.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Hipotermia</div>
+          <div class="dc">T° &lt;35°C: <strong>↓função enzimática dos fatores de coagulação</strong> (coagulopatia funcional — coagulograma convencional pode estar "normal" porque é processado a 37°C no laboratório). Disfunção plaquetária. Arritmias (FV abaixo de 28°C). Prevenção agressiva: fluidos aquecidos (38-42°C), manta térmica, sala aquecida.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Coagulopatia Induzida pelo Trauma (TIC)</div>
+          <div class="dc">Multifatorial: consumo de fatores (hemorragia), diluição (cristaloides em excesso), hipotermia, acidose, hiperfibrinólise. <strong>TIC aguda</strong> pode estar presente já na admissão (ativação da proteína C → anticoagulação endógena + fibrinólise). Monitorar: INR, fibrinogênio, plaquetas, TEG/ROTEM.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Damage Control Surgery</div>
+          <div class="dc">Conceito: cirurgia mínima para <strong>controlar hemorragia e contaminação</strong> → fechamento temporário → UTI para ressuscitação → re-exploração em 24-48h quando fisiologia corrigida. Indicado quando tríade letal instalada ou prevista.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAMAGE CONTROL RESUSCITATION -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Damage Control Resuscitation
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Hemotransfusão Maciça — Proporção 1:1:1</div>
+          <div class="dc"><strong>CH : PFC : Plaquetas = 1:1:1</strong> (ou 2:1:1 em alguns protocolos). Objetivo: repor sangue total "reconstituído" para evitar coagulopatia dilucional. Ativar protocolo de transfusão maciça precocemente (gatilhos: ABC score ≥2, perda estimada &gt;50% da volemia em 4h).</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Ácido Tranexâmico (TXA)</div>
+          <div class="dc"><strong>1g IV em 10 min + 1g em 8h</strong> de infusão. <strong>Iniciar &lt;3 horas do trauma</strong> (CRASH-2 — benefício significativo na mortalidade quando administrado precocemente; após 3h pode ser deletério). Antifibrinolítico — estabiliza o coágulo.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Hipotensão Permissiva</div>
+          <div class="dc"><strong>PAM 50-65 mmHg</strong> até controle cirúrgico definitivo da hemorragia. Racional: PA mais alta → deslocamento de coágulos + ↑sangramento. <strong>EXCEÇÃO: TCE → PAM &gt;80 mmHg</strong> (necessita PPC ≥60 para evitar isquemia cerebral secundária).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Evitar Cristaloides em Excesso</div>
+          <div class="dc">Cristaloide isotônico &gt;1.5L → diluição de fatores de coagulação, ↓plaquetas, acidose hiperclorêmica (se SF 0.9%), edema intersticial, hipotermia (se não aquecido). <strong>Preferir hemoderivados precocemente</strong> em choque hemorrágico classe III-IV.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANESTESIA NO POLITRAUMATIZADO -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">04</span> Anestesia no Politraumatizado
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>Estômago cheio SEMPRE → RSI obrigatória.</strong> Todo politraumatizado é considerado estômago cheio independente do tempo de jejum.
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Indução em Choque Hemorrágico</div>
+          <div class="dc"><strong>Cetamina 1-2 mg/kg</strong> (↑tônus simpático → mantém PA) + <strong>succinilcolina 1.5 mg/kg</strong> (onset rápido para RSI). Propofol causa colapso cardiovascular em hipovolêmico — EVITAR ou usar dose muito reduzida (0.5-1 mg/kg). Se não TCE grave, cetamina é o agente ideal.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Alternativa: Etomidato</div>
+          <div class="dc"><strong>Etomidato 0.3 mg/kg:</strong> estabilidade hemodinâmica sem estimulação simpática (diferente da cetamina). Útil se contraindicação a cetamina. Dose única aceitável (supressão adrenal transitória clinicamente irrelevante em dose única no trauma).</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Monitorização no Trauma</div>
+          <div class="dc"><strong>PA invasiva</strong> (artéria radial ou femoral) — precocemente. <strong>Débito urinário contínuo</strong> (cateter vesical — alvo &gt;0.5 mL/kg/h). <strong>Temperatura contínua</strong> (esofágica ou vesical). <strong>Gasometria seriada</strong> (lactato, pH, BE, hemoglobina, ionograma). TEG/ROTEM se disponível.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PNEUMOTÓRAX HIPERTENSIVO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">05</span> Pneumotórax Hipertensivo
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>Diagnóstico CLÍNICO — NÃO aguardar raio-X.</strong> Atraso no tratamento é fatal.
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Diagnóstico</div>
+          <div class="dc"><strong>Hipotensão + ausência de murmúrio vesicular unilateral + desvio de traqueia CONTRALATERAL</strong> + hipertimpanismo à percussão + turgência jugular (nem sempre presente em hipovolêmico). Em VM: pico de pressão ↑↑ súbito, hipotensão refratária, ↓ETCO₂.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Tratamento Imediato</div>
+          <div class="dc"><strong>Descompressão por agulha:</strong> jelco 14G no 2° espaço intercostal, linha medioclavicular (ou 5° EIC, linha axilar anterior — ATLS recente). Saída de ar sob pressão confirma diagnóstico. <strong>Seguida de drenagem torácica definitiva</strong> (dreno 28-32 Fr no 5° EIC, linha axilar média).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TCE GRAVE -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#1a5276,#2471a3)">
+        <span class="card-num">06</span> TCE Grave (GCS ≤8)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">IOT Imediata (RSI)</div>
+          <div class="dc">GCS ≤8 → indicação absoluta de IOT para proteção de via aérea. Manter estabilização manual cervical em linha (MILS) durante laringoscopia. Videolaringoscópio reduz mobilização cervical.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Metas Ventilatórias</div>
+          <div class="dc"><strong>SpO₂ ≥95%</strong> (hipóxia é lesão secundária devastadora). <strong>PaCO₂ 35-40 mmHg</strong> — normocapnia estrita. Evitar hiperventilação rotineira (↓FSC → isquemia). Evitar hipocapnia (&lt;30) e hipercapnia (&gt;45). Hiperventilação breve apenas se sinais de herniação iminente.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Metas Hemodinâmicas</div>
+          <div class="dc"><strong>PAM &gt;80 mmHg → PPC ≥60 mmHg.</strong> Hipotensão é o principal fator de lesão secundária evitável no TCE. Um único episódio de PAS &lt;90 mmHg duplica a mortalidade. Noradrenalina é vasopressor de escolha. Fenilefrina se bradicardia concomitante.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Osmoterapia e Cuidados</div>
+          <div class="dc"><strong>Manitol 20% 0.25-1 g/kg</strong> ou <strong>NaCl hipertônico 3-7.5%</strong> se sinais de herniação (anisocoria, postura de decorticação/descerebração, deterioração neurológica). <strong>Evitar glicose IV</strong> (hiperglicemia → ↑CMRO₂ + acidose cerebral → piora prognóstico neurológico). Cabeceira 30°.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /cesp-trauma -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 5 — LAPAROSCOPIA E BARIÁTRICA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="cesp-laparosc">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> O pneumoperitônio altera profundamente a fisiologia cardiovascular, respiratória e renal. O paciente obeso mórbido acrescenta desafios adicionais de via aérea, ventilação e dosagem farmacológica.
+    </div>
+
+    <!-- PNEUMOPERITÔNIO — CARDIOVASCULAR -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Pneumoperitônio — Efeitos Cardiovasculares
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Hipercapnia + Estimulação Simpática</div>
+          <div class="dc">CO₂ absorvido pela superfície peritoneal → <strong>hipercapnia → ↑FC + ↑PA</strong> por estimulação simpática e liberação de catecolaminas. ETCO₂ aumenta 10-20% nos primeiros 15-30 min. Ajustar ventilação para compensar.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Compressão Vascular</div>
+          <div class="dc">Pressão intra-abdominal (PIA) &gt;15 mmHg → <strong>compressão da veia cava inferior → ↓retorno venoso → ↓DC</strong>. Compressão aórtica → ↑pós-carga. O efeito líquido sobre DC depende da interação entre ↓retorno venoso e ↑pós-carga. Manter PIA ≤15 mmHg sempre que possível.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Efeito da Posição</div>
+          <div class="dc"><strong>Trendelenburg reverso</strong> (laparoscopia de andar superior — colecistectomia, bariátrica): ↑pooling venoso em MMII + compressão caval → ↓DC significativo. <strong>Trendelenburg</strong> (ginecológica, prostática): ↑retorno venoso → pode ser excessivo em cardiopatas → ↑PAP, ↑PVC, edema pulmonar.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PNEUMOPERITÔNIO — RESPIRATÓRIO -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Pneumoperitônio — Efeitos Respiratórios
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Compressão Diafragmática</div>
+          <div class="dc">PIA elevada empurra o diafragma cefalicamente → <strong>↑pressão de pico nas vias aéreas</strong>, ↓compliance pulmonar, ↑PaCO₂. O gradiente alveolar-arterial de O₂ aumenta. Efeito mais pronunciado em obesos e Trendelenburg.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">↓CRF e Atelectasias</div>
+          <div class="dc">CRF ↓ adicionalmente ao efeito da anestesia geral → <strong>mais atelectasias</strong> → ↑shunt intrapulmonar → hipoxemia. Estratégia: ↑PEEP (8-12 cmH₂O), manobras de recrutamento após insuflação, ↑FR para normocapnia.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PNEUMOPERITÔNIO — RENAL -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Pneumoperitônio — Efeitos Renais
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">↓Perfusão Renal</div>
+          <div class="dc">PIA &gt;12-15 mmHg → <strong>compressão renal direta + ↓DC → ↑risco de IRA</strong>. Compressão do parênquima → ↓TFG + ↓fluxo sanguíneo renal. Efeito potencializado em hipovolemia.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Oligúria Intraoperatória</div>
+          <div class="dc">Diurese pode diminuir significativamente durante pneumoperitônio — <strong>não indicar mais fluidos sem avaliar débito cardíaco</strong>. A oligúria geralmente reverte espontaneamente após desinsuflação. Furosemida é desnecessária na maioria dos casos.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EMBOLIA GASOSA CO₂ -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Embolia Gasosa por CO₂
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Mecanismo e Diagnóstico</div>
+          <div class="dc">Insuflação inadvertida de CO₂ em vaso sanguíneo aberto (veia hepática, veia cava lesada). Sinais: <strong>↑ETCO₂ súbito (inicialmente) → ↓ETCO₂ abrupto (quando ar obstrui fluxo pulmonar)</strong>, colapso cardiovascular, sopro em "moinho de água" na ausculta precordial. Pode ser catastrófico se volume grande.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Tratamento Imediato</div>
+          <div class="dc"><strong>1.</strong> Parar insuflação imediatamente, desinflar abdome. <strong>2.</strong> Posição de Trendelenburg esquerdo (<strong>manobra de Durant</strong>) — aprisiona ar no ápice de VD, evitando obstrução do TSVD. <strong>3.</strong> FiO₂ 100%. <strong>4.</strong> Aspiração de ar por CVC (se disponível). <strong>5.</strong> RCP se PCR. CO₂ é mais solúvel que ar → resolução geralmente mais rápida que embolia aérea.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REFLEXO VAGAL -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">05</span> Reflexo Pneumoperitônio-Vagal
+      </div>
+      <div class="card-body">
+        <div class="dr dr-y">
+          <div class="dn">Bradicardia Reflexa</div>
+          <div class="dc">Insuflação rápida → distensão peritoneal → <strong>↑tônus vagal → bradicardia reflexa</strong> (pode ser severa — assistolia descrita). Mais comum no início da insuflação. Comunicar ao cirurgião: desinflar brevemente. <strong>Tratamento: atropina 0.5 mg IV</strong>. Prevenção: insuflação lenta e gradual.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARIÁTRICA -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#1a5276,#2471a3)">
+        <span class="card-num">06</span> Anestesia Bariátrica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Desafios de Via Aérea</div>
+          <div class="dc"><strong>VAD prevista em até 15-20% dos obesos mórbidos:</strong> pescoço curto, Mallampati alto, circunferência cervical aumentada, apneia do sono (edema de VAS), restrição de abertura bucal. <strong>Videolaringoscópio de 1ª escolha.</strong> Posição de rampa (head-elevated laryngoscopy position — HELP) alinha eixos e melhora visibilização.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Pré-oxigenação Otimizada</div>
+          <div class="dc"><strong>Posição sentada 30-45°</strong> (↑CRF vs supino) + <strong>CPAP/BIPAP</strong> durante pré-oxigenação → ↑tempo de apneia segura (de ~2.5 min em obeso supino para ~5 min em rampa + CPAP). Pré-oxigenar por ≥3 min com FiO₂ 100%. Alvo: EtO₂ ≥90%.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Dosagem de Fármacos</div>
+          <div class="dc">
+
+          <div style="overflow-x:auto;margin-bottom:8px">
+<div class="tbl-wrap">
+            <table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+              <thead>
+                <tr style="background:rgba(0,207,193,.15);color:var(--cyan)">
+                  <th style="padding:6px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Fármaco</th>
+                  <th style="padding:6px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Peso de Referência</th>
+                  <th style="padding:6px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Racional</th>
+                </tr>
+              </thead>
+              <tbody style="color:rgba(255,255,255,.85)">
+                <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                  <td style="padding:6px;font-weight:600">BNM (rocurônio, vecurônio)</td>
+                  <td style="padding:6px">IBW (peso ideal)</td>
+                  <td style="padding:6px">Distribui-se pouco no tecido adiposo</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                  <td style="padding:6px;font-weight:600">Succinilcolina</td>
+                  <td style="padding:6px">TBW (peso total)</td>
+                  <td style="padding:6px">Pseudocolinesterase ↑ em obesos</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                  <td style="padding:6px;font-weight:600">Propofol TCI</td>
+                  <td style="padding:6px">LBM (massa magra)</td>
+                  <td style="padding:6px">Vd moderadamente ↑ em obesos</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                  <td style="padding:6px;font-weight:600">Opioides (fentanil, remifentanil)</td>
+                  <td style="padding:6px">IBW ou LBM</td>
+                  <td style="padding:6px">Lipofílicos mas metabolismo baseado em massa magra</td>
+                </tr>
+              </tbody>
+            </table>
+</div>
+          </div>
+          </div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Ventilação Intraoperatória</div>
+          <div class="dc"><strong>PEEP alto (10-12 cmH₂O)</strong> — essencial para manter CRF e evitar atelectasias em obesos. <strong>Manobra de recrutamento</strong> após intubação (30-40 cmH₂O por 30-40s). VC 6-8 mL/kg IBW. FR ajustada para normocapnia. Pplatô &lt;30 cmH₂O.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Analgesia Multimodal</div>
+          <div class="dc"><strong>Reduzir opioides ao máximo</strong> — pacientes com SAOS têm hipersensibilidade a opioides → risco de apneia e obstrução de VAS no pós-operatório. Dipirona, paracetamol, AINEs (se permitido), gabapentina/pregabalina, bloqueio TAP, infiltração de ferida, dexametasona.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Despertar e Pós-operatório</div>
+          <div class="dc"><strong>Extubação acordado</strong> — jamais extubar obeso sedado. <strong>Posição sentada</strong> (≥30°) para extubação e recuperação. CPAP/BIPAP disponível no pós-operatório imediato para pacientes com SAOS. Monitorização contínua de oximetria por ≥24h. Deambulação precoce (profilaxia TVP).</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /cesp-laparosc -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 6 — CASOS CLÍNICOS
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="cesp-casos">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px">
+      <strong>Casos Clínicos — Cirurgias Especiais:</strong> Pratique a integração de conceitos de anestesia cardíaca, torácica e trauma. Clique para expandir a resolução.
+    </div>
+
+    <!-- CASO 1 -->
+    <div class="caso-card" id="cespcaso1">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <div class="caso-num">1</div>
+        <div class="caso-title">Saída da CEC — Choque Cardiogênico</div>
+        <div class="caso-arrow">›</div>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">
+          Pós-CEC em revascularização miocárdica. Dados do cateter de Swan-Ganz: DC 2.1 L/min, RVS 1800 dinas·s/cm⁵, PA 75/50 mmHg, FC 110 bpm. PVC 14 mmHg. Qual o diagnóstico hemodinâmico e a conduta?
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:var(--cyan);margin:12px 0 8px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px">RESOLUÇÃO</div>
+
+        <div style="font-size:13px;line-height:1.8">
+          <strong>1. Interpretação Hemodinâmica:</strong><br>
+          • DC 2.1 L/min → <strong>baixo débito cardíaco</strong> (IC ~1.1 L/min/m² — abaixo do mínimo de 2.2)<br>
+          • RVS 1800 → <strong>↑↑ resistência vascular sistêmica</strong> (vasoconstricção compensatória)<br>
+          • PA 75/50 (PAM ~58) → hipotensão apesar de RVS alta → coração não consegue ejetar<br>
+          • PVC 14 → pré-carga adequada/elevada → não é hipovolemia<br>
+          • FC 110 → taquicardia compensatória<br>
+          • <strong>Diagnóstico: Choque cardiogênico pós-CEC (disfunção sistólica de VE)</strong><br><br>
+
+          <strong>2. Diagnóstico Diferencial (descartar):</strong><br>
+          • Tamponamento: PVC alta + equalização de pressões → ETE é diagnóstico definitivo<br>
+          • Isquemia/infarto perioperatório: ECG + troponina + alteração segmentar na ETE<br>
+          • Protamina: reação pode causar ↓DC + ↑RVP → verificar PAP<br><br>
+
+          <strong>3. Conduta — Suporte Inotrópico:</strong><br>
+          • <strong>Dobutamina 5-15 mcg/kg/min:</strong> 1ª linha para ↑contratilidade (agonista β₁). ↑DC e ↓RVS moderadamente<br>
+          • <strong>Se RVS permanece alta:</strong> milrinona (0.375-0.75 mcg/kg/min) — inodilatador → ↓pós-carga + ↑inotropismo<br>
+          • <strong>Noradrenalina em dose baixa</strong> se PAM não melhora com inotrópicos (manter perfusão coronariana)<br>
+          • <strong>BIA (balão intra-aórtico):</strong> se refratário — ↑perfusão coronariana diastólica + ↓pós-carga sistólica<br>
+          • <strong>ECMO VA:</strong> última linha — suporte cardiopulmonar mecânico completo<br><br>
+
+          <strong>4. Monitorar Resposta:</strong><br>
+          • DC por Swan-Ganz ou ETE contínuo → alvo IC &gt;2.2 L/min/m²<br>
+          • PAM &gt;65 mmHg, lactato em queda, diurese &gt;0.5 mL/kg/h<br>
+          • SvO₂ &gt;65% (indica extração adequada de O₂)
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 2 -->
+    <div class="caso-card" id="cespcaso2">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <div class="caso-num">2</div>
+        <div class="caso-title">Hipóxia em OLV — Algoritmo Diagnóstico</div>
+        <div class="caso-arrow">›</div>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">
+          OLV para lobectomia esquerda com DLT esquerdo. Paciente em decúbito lateral direito. 15 minutos após início da ventilação monopulmonar, SpO₂ cai de 99% para 84%. FiO₂ já em 100%. Como diagnosticar a causa e tratar sequencialmente?
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:var(--cyan);margin:12px 0 8px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px">RESOLUÇÃO</div>
+
+        <div style="font-size:13px;line-height:1.8">
+          <strong>1. PASSO IMEDIATO — Verificar posição do DLT:</strong><br>
+          • <strong>Fibroscopia AGORA</strong> — causa mais comum de hipóxia em OLV é migração do DLT<br>
+          • Posicionamento lateral → DLT pode avançar ou recuar → lúmen traqueal pode ventilar parcialmente o pulmão errado<br>
+          • Se DLT migrado → reposicionar sob visão fibroscópica<br>
+          • Verificar também: cuff brônquico herniado sobre a carina, secreções obstruindo lúmen<br><br>
+
+          <strong>2. Se posição OK e FiO₂ já 100% → CPAP no pulmão colapsado:</strong><br>
+          • Conectar circuito de CPAP ao lúmen brônquico do pulmão esquerdo (não ventilado)<br>
+          • <strong>CPAP 2-5 cmH₂O</strong> — mantém alvéolos parcialmente abertos → troca gasosa residual<br>
+          • Esta é a medida mais eficaz sem comprometer o campo cirúrgico significativamente<br>
+          • Comunicar ao cirurgião: "vou aplicar CPAP discreto no pulmão operado"<br><br>
+
+          <strong>3. Otimizar pulmão ventilado:</strong><br>
+          • <strong>PEEP 5-8 cmH₂O</strong> no pulmão direito (ventilado) → recrutamento de atelectasias<br>
+          • Verificar VC adequado (5 mL/kg IBW) e FR para normocapnia<br>
+          • Aspirar secreções do lúmen traqueal<br>
+          • Cuidado: PEEP excessivo (>10) → comprime vasos pulmonares → desvia fluxo para pulmão colapsado → piora shunt<br><br>
+
+          <strong>4. Se persistir SpO₂ &lt;90%:</strong><br>
+          • Solicitar ao cirurgião: <strong>ventilação intermitente de 2 pulmões</strong> (re-insuflar pulmão esquerdo brevemente com O₂ 100%)<br>
+          • Repetir ciclos de OLV/ventilação bilateral conforme necessário<br><br>
+
+          <strong>5. Se refratário:</strong><br>
+          • Clampeamento da artéria pulmonar esquerda pelo cirurgião (elimina shunt)<br>
+          • Conversão de VATS para toracotomia aberta se necessário<br><br>
+
+          <strong>6. Investigar causas secundárias:</strong><br>
+          • Broncoespasmo do pulmão ventilado (auscultar)<br>
+          • Pneumotórax contralateral (raro)<br>
+          • ↓DC (hipotensão → ↓SvO₂ → piora oxigenação)
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 3 -->
+    <div class="caso-card" id="cespcaso3">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <div class="caso-num">3</div>
+        <div class="caso-title">Trauma com Tríade Letal — Damage Control</div>
+        <div class="caso-arrow">›</div>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">
+          Vítima de trauma penetrante abdominal por arma branca, chega ao centro cirúrgico para laparotomia de emergência. PA 70/40 mmHg, FC 140 bpm, T° 34°C, pH 7.18, BE -12, lactato 8 mmol/L, INR 2.1, plaquetas 85.000, fibrinogênio 120 mg/dL. Como conduzir a anestesia?
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:var(--cyan);margin:12px 0 8px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px">RESOLUÇÃO</div>
+
+        <div style="font-size:13px;line-height:1.8">
+          <strong>1. Reconhecimento — Tríade Letal Instalada:</strong><br>
+          • <strong>Hipotermia:</strong> T° 34°C<br>
+          • <strong>Acidose:</strong> pH 7.18, lactato 8, BE -12<br>
+          • <strong>Coagulopatia:</strong> INR 2.1, plaquetas 85.000, fibrinogênio baixo (120 mg/dL — alvo &gt;200)<br>
+          • Choque hemorrágico classe IV (PA 70/40, FC 140) → perda estimada &gt;40% da volemia<br>
+          • <strong>Prognóstico grave — Damage Control Surgery + Resuscitation</strong><br><br>
+
+          <strong>2. Indução Anestésica — RSI:</strong><br>
+          • <strong>Cetamina 1-1.5 mg/kg IV</strong> (mantém tônus simpático — NÃO usar propofol)<br>
+          • <strong>Succinilcolina 1.5 mg/kg</strong> (ou rocurônio 1.2 mg/kg se sugammadex disponível)<br>
+          • Pré-oxigenação máxima (pode ser breve — urgência)<br>
+          • Preparar vasopressor em seringa ANTES da indução (fenilefrina ou noradrenalina push-dose)<br>
+          • Manter indução anestésica superficial — paciente chocado necessita mínimo de anestésico<br><br>
+
+          <strong>3. Ativar Protocolo de Transfusão Maciça IMEDIATAMENTE:</strong><br>
+          • <strong>CH:PFC:Plaquetas = 1:1:1</strong> — iniciar com O negativo se tipagem indisponível<br>
+          • <strong>Ácido Tranexâmico 1g IV em 10 min</strong> (se &lt;3h do trauma)<br>
+          • Crioprecipitado ou fibrinogênio concentrado se fibrinogênio &lt;150 mg/dL → alvo &gt;200<br>
+          • Cálcio (CaCl₂ 1g ou gluconato 3g) a cada 4 CH (citrato dos hemoderivados quela cálcio)<br><br>
+
+          <strong>4. Manutenção — Metas:</strong><br>
+          • <strong>Hipotensão permissiva: PAM 50-65 mmHg</strong> até controle cirúrgico do sangramento<br>
+          • <strong>Aquecimento agressivo:</strong> fluidos em aquecedor de alto fluxo (Level 1® ou Ranger®), manta térmica, sala a 24°C+<br>
+          • Manutenção: cetamina em infusão (0.5-1 mg/kg/h) ± midazolam baixa dose. Mínimo de halogenado/propofol<br>
+          • Gasometria seriada (15-30 min): acompanhar pH, lactato, Hb, K⁺, Ca²⁺<br>
+          • TEG/ROTEM: guia hemoterapia racional<br><br>
+
+          <strong>5. Pós-operatório — Fechamento Temporário:</strong><br>
+          • Se Damage Control Surgery → abdome aberto (Bogotá bag ou VAC) → UTI<br>
+          • Corrigir tríade letal: reaquecer, normalizar pH, repor fatores de coagulação<br>
+          • Re-exploração em 24-48h quando fisiologia permitir<br>
+          • NÃO extubar — manter sedado e ventilado na UTI
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · Miller 9ª ed. · Morgan & Mikhail · Uso educacional</div>
+</div><!-- /cesp-casos -->
+</div>

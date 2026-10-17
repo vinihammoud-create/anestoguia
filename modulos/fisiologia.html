@@ -1,0 +1,1041 @@
+<div class="screen" id="screen-fisiologia">
+  <div class="top-bar" style="border-bottom:3px solid var(--cyan)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--cyan)">🫀 Fisiologia Aplicada</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="fisiologia-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('fisio','cv',this)">CARDIOVASCULAR</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','resp',this)">RESPIRATÓRIA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','farmaco',this)">FARMACOCINÉTICA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','renal',this)">RENAL/HEPÁTICA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','neuro',this)">NEUROLÓGICA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','casos',this)">CASOS/QUIZ</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 1 — FISIOLOGIA CARDIOVASCULAR
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel active" id="fisio-cv">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> A compreensão dos determinantes do débito cardíaco, das curvas pressão-volume e dos efeitos cardiovasculares dos anestésicos é fundamento obrigatório. Dominar estes conceitos é essencial para decisões hemodinâmicas intraoperatórias seguras.
+    </div>
+
+    <!-- DÉBITO CARDÍACO E DETERMINANTES -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Débito Cardíaco e Determinantes
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">DC = FC × VS</div>
+          <div class="dc">Débito cardíaco normal: <strong>4-8 L/min</strong>. Índice cardíaco (IC) = DC / superfície corpórea → normal <strong>2.4-4.0 L/min/m²</strong>. O DC é o principal determinante da oferta tecidual de O₂ (DO₂ = DC × CaO₂). Reduções no DC impactam diretamente a perfusão orgânica — cérebro, rins e coronárias são os mais vulneráveis.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Determinantes do Volume Sistólico</div>
+          <div class="dc">O VS é regulado por três variáveis interdependentes: <strong>pré-carga</strong> (volume diastólico final), <strong>pós-carga</strong> (resistência à ejeção) e <strong>contratilidade</strong> (força intrínseca miocárdica). Cada anestésico altera estas variáveis de forma diferente — o anestesiologista deve prever e compensar estas mudanças.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRÉ-CARGA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Pré-carga
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Definição</div>
+          <div class="dc">Volume ou pressão no ventrículo no final da diástole (VEDV ou VEDP). Reflete o grau de estiramento das fibras miocárdicas antes da contração. VEDV é a medida volumétrica mais precisa; VEDP é a aproximação pressórica clinicamente utilizada.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Lei de Frank-Starling</div>
+          <div class="dc">O aumento da pré-carga → aumento do VS <strong>até um ponto ótimo</strong> no plateau da curva. Além desse ponto, o aumento adicional de volume não melhora o DC e pode precipitar congestão pulmonar e edema. Corações com disfunção sistólica têm curvas deslocadas para baixo e para direita — necessitam maior pré-carga para gerar o mesmo VS.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Avaliação Clínica da Pré-carga</div>
+          <div class="dc"><strong>PVC:</strong> medida grosseira, influenciada por complacência ventricular, ventilação mecânica e pressão intratorácica. <strong>PAWP (wedge):</strong> melhor correlação com pré-carga de VE, obtida por cateter de artéria pulmonar (Swan-Ganz). <strong>Variação da VCI ao USG:</strong> colapsibilidade &gt;50% sugere responsividade a volume em espontâneo; distensibilidade &gt;18% em ventilação mecânica. <strong>ΔPP (variação de pressão de pulso):</strong> &gt;13% → fluido-responsivo.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Anestesia e Pré-carga</div>
+          <div class="dc">Vasodilatadores (propofol, halogenados) reduzem retorno venoso → ↓pré-carga. Posição de Trendelenburg reverso, PEEP elevado e pneumoperitônio também reduzem retorno venoso. Venodilatação por nitroglicerina e bloqueio simpático da raqui causam pooling venoso. Estratégia: expansão volêmica ou vasopressores para compensar.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PÓS-CARGA -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Pós-carga
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Definição e Cálculo</div>
+          <div class="dc">Resistência que o VE encontra para ejetar sangue na aorta. <strong>RVS = (PAM - PVC) / DC × 80</strong>. Normal: <strong>800-1200 dinas·s/cm⁵</strong>. A pós-carga de VD é a Resistência Vascular Pulmonar (RVP), normalmente 1/10 da RVS (80-120 dinas·s/cm⁵). Impedância aórtica é a medida mais completa, mas clinicamente usa-se RVS.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">↑Pós-carga (Estados de Alta Resistência)</div>
+          <div class="dc">HAS crônica, estenose aórtica, clampeamento aórtico, uso de vasopressores em excesso. Consequência: ↓DC, ↑consumo de O₂ miocárdico, hipertrofia concêntrica a longo prazo. Tratamento: vasodilatadores (nitroprussiato, clevidipina, nicardipina). Em estenose aórtica: manter RVS — vasodilatação é perigosa.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">↓Pós-carga (Vasoplegia)</div>
+          <div class="dc">Sepse, anafilaxia, bloqueio neuraxial alto, síndrome vasoplégica pós-CEC. DC pode estar ↑ reflexamente, mas PA cai por RVS muito baixa → hipoperfusão apesar de alto débito. Tratamento de primeira linha: <strong>noradrenalina</strong> (agonista α₁ potente). Em sepse refratária: vasopressina 0.03 U/min.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTRATILIDADE -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">04</span> Contratilidade
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Conceito</div>
+          <div class="dc">Força intrínseca de contração miocárdica, <strong>independente de pré e pós-carga</strong>. Medida pela inclinação da relação pressão-volume no final da sístole (ESPVR — End-Systolic Pressure-Volume Relationship). Clinicamente avaliada por dP/dT, fração de ejeção (ecocardiograma) e curvas de função ventricular.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Fatores que Aumentam Contratilidade</div>
+          <div class="dc"><strong>Adrenalina</strong> (agonista β₁ potente), <strong>dobutamina</strong> (agonista β₁ seletivo, 1ª linha no choque cardiogênico), glucagon (bypass dos receptores β — útil em overdose de β-bloqueador), digitálicos (inibem Na⁺/K⁺-ATPase → ↑Ca²⁺ intracelular), milrinona (inibidor PDE3 — inodilatador).</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Fatores que Reduzem Contratilidade</div>
+          <div class="dc"><strong>Halogenados:</strong> depressão miocárdica dose-dependente (isoflurano < sevoflurano < desflurano em estabilidade hemodinâmica; halotano é o mais depressor). <strong>β-bloqueadores:</strong> reduzem contratilidade e FC. <strong>Bloqueadores de canais de cálcio</strong> (verapamil, diltiazem): inotrópicos negativos. <strong>Hipóxia, acidose (pH &lt;7.20) e hipercalemia grave</strong> deprimem contratilidade diretamente.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CURVAS PRESSÃO-VOLUME -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#1a5276,#2471a3)">
+        <span class="card-num">05</span> Curvas Pressão-Volume Ventricular
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Loop Pressão-Volume (P-V)</div>
+          <div class="dc">Descreve o ciclo cardíaco completo: <strong>enchimento diastólico</strong> (volume ↑, pressão ↑ levemente) → <strong>contração isovolumétrica</strong> (pressão ↑↑, volume constante, válvulas fechadas) → <strong>ejeção</strong> (pressão ↑ até pico e cai, volume ↓) → <strong>relaxamento isovolumétrico</strong> (pressão ↓↓, volume constante). A <strong>área interna do loop = trabalho sistólico</strong> (stroke work) representando a energia mecânica por batimento.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">↑Pré-carga no Loop P-V</div>
+          <div class="dc">O loop desloca-se para a <strong>direita</strong>: volume diastólico final maior → VS maior (Frank-Starling). Largura do loop aumenta. Pressão sistólica final pode aumentar discretamente. Clinicamente: ressuscitação volêmica melhora DC até atingir o plateau.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">↑Pós-carga no Loop P-V</div>
+          <div class="dc">O loop torna-se <strong>mais alto e mais estreito</strong>: pressão sistólica maior para vencer resistência, mas menos volume é ejetado (VS ↓). Volume sistólico final ↑ → fração de ejeção ↓. Consequência clínica: em estenose aórtica grave, o VE gera altíssima pressão com ejeção reduzida → hipertrofia compensatória.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">↑Contratilidade no Loop P-V</div>
+          <div class="dc">O loop desloca-se para a <strong>esquerda e mais alto</strong>: maior pressão gerada com menor volume residual (VSFV ↓). A ESPVR (reta de elastância máxima) tem inclinação mais íngreme. Clinicamente: dobutamina aumenta FE sem necessidade de maior pré-carga.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRESSÃO ARTERIAL E REGULAÇÃO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">06</span> Pressão Arterial e Regulação
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Cálculo da PAM</div>
+          <div class="dc"><strong>PAM = PAD + 1/3 × (PAS - PAD)</strong> ou equivalentemente <strong>PAM = DC × RVS</strong>. A PAM é o principal determinante da perfusão orgânica. Alvo intraoperatório geral: PAM &gt;65 mmHg (individualizar em hipertensos crônicos — manter dentro de 20% do basal).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Barorreceptores</div>
+          <div class="dc">Localizados no <strong>seio carotídeo</strong> (via nervo de Hering → glossofaríngeo/IX) e <strong>arco aórtico</strong> (nervo vago/X). Respondem a ↑PA → ↑disparos aferentes → centro vasomotor bulbar → ↓ tônus simpático + ↑ tônus vagal → bradicardia + vasodilatação → PA normaliza. Mecanismo rápido (segundos). Halogenados e propofol <strong>atenuam o reflexo barorreceptor</strong> → resposta hipotensiva prolongada.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Autorregulação Cerebral</div>
+          <div class="dc">Fluxo sanguíneo cerebral (FSC) mantido constante para <strong>PAM entre 50-150 mmHg</strong> por vasodilatação/vasoconstrição arteriolar. Fora desta faixa, FSC torna-se passivamente dependente da PA. Anestesia geral, hipercapnia e lesão cerebral deslocam ou abolem a curva de autorregulação.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Autorregulação Coronariana</div>
+          <div class="dc">Ativa entre <strong>PAM 60-130 mmHg</strong>. Abaixo de 60 mmHg → isquemia subendocárdica. A reserva coronariana (capacidade de aumentar fluxo acima do basal) é reduzida em HVE, estenose coronariana e taquicardia. Anestesia geral diminui ou elimina autorregulação coronariana.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CIRCULAÇÃO CORONARIANA -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#922b21,#c0392b)">
+        <span class="card-num">07</span> Circulação Coronariana
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Fluxo Coronariano — Padrão Diastólico</div>
+          <div class="dc">O VE recebe fluxo coronariano <strong>predominantemente na diástole</strong> — durante a sístole, a compressão intramural oblitera os vasos subendocárdicos. O VD recebe fluxo contínuo (sistólico e diastólico) porque gera menor pressão intramural. Implicação clínica: <strong>taquicardia encurta a diástole → ↓fluxo coronariano → isquemia</strong>. Manter FC controlada é cardioprotetor.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Balanço Oferta vs. Demanda de O₂</div>
+          <div class="dc">Demanda de O₂ miocárdico determinada por: <strong>FC × PAS (duplo produto ou RPP)</strong>, tensão parietal (Lei de Laplace), contratilidade. RPP &gt;12.000 → risco de isquemia. Oferta depende de: PA diastólica, tempo diastólico, CaO₂, patência coronariana. Isquemia ocorre quando oferta &lt; demanda.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Sinais ECG de Isquemia Perioperatória</div>
+          <div class="dc"><strong>ST↓ horizontal ou descendente ≥1 mm:</strong> isquemia subendocárdica (forma mais comum no perioperatório). <strong>ST↑:</strong> isquemia transmural ou vasoespasmo coronariano. Derivações mais sensíveis: <strong>V5</strong> (deteta 75% dos episódios) e <strong>DII</strong> (coronária direita). Monitorização com DII + V5 detecta ~95% dos eventos isquêmicos.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EFEITOS DOS ANESTÉSICOS NO SCV -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">08</span> Efeitos dos Anestésicos no Sistema Cardiovascular
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue" style="margin-bottom:10px">
+          <strong>Tabela obrigatória TEA/TSA</strong> — dominar os efeitos hemodinâmicos de cada agente é essencial para a indução segura e manutenção estável.
+        </div>
+
+        <div style="overflow-x:auto;margin:10px 0">
+<div class="tbl-wrap wide">
+          <table class="tbl" style="width:100%;border-collapse:collapse;font-size:12px;font-family:'JetBrains Mono',monospace">
+            <thead>
+              <tr style="background:rgba(0,207,193,.15);color:var(--cyan)">
+                <th style="padding:8px 6px;text-align:left;border-bottom:2px solid var(--cyan)">Droga</th>
+                <th style="padding:8px 4px;text-align:center;border-bottom:2px solid var(--cyan)">FC</th>
+                <th style="padding:8px 4px;text-align:center;border-bottom:2px solid var(--cyan)">PA</th>
+                <th style="padding:8px 4px;text-align:center;border-bottom:2px solid var(--cyan)">Contrat.</th>
+                <th style="padding:8px 6px;text-align:left;border-bottom:2px solid var(--cyan)">Mecanismo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                <td style="padding:6px;font-weight:700;color:#e8e8e8">Propofol</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">↓</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">↓↓</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">↓</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Vasodilatação arterial e venosa + depressão miocárdica direta</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02)">
+                <td style="padding:6px;font-weight:700;color:#e8e8e8">Cetamina</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">↑</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">↑</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">↑ (indireto)</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Estimulação simpática central; em miocárdio depletado → depressor direto</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                <td style="padding:6px;font-weight:700;color:#e8e8e8">Halogenados</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">↓</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">↓</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">↓↓</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Depressão miocárdica dose-dependente; vasodilatação (isoflurano > sevo)</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02)">
+                <td style="padding:6px;font-weight:700;color:#e8e8e8">Opioides</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">↓ (vagal)</td>
+                <td style="padding:6px;text-align:center;color:#E8A020">Neutro</td>
+                <td style="padding:6px;text-align:center;color:#E8A020">Mínimo</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Bradicardia por estímulo vagal; sem depressão miocárdica significativa</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                <td style="padding:6px;font-weight:700;color:#e8e8e8">Etomidato</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">Neutro</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">Neutro</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">Neutro</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Estabilidade hemodinâmica máxima; inibe 11β-hidroxilase (supressão adrenal)</td>
+              </tr>
+              <tr>
+                <td style="padding:6px;font-weight:700;color:#e8e8e8">Benzodiazep.</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">Neutro</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">↓ leve</td>
+                <td style="padding:6px;text-align:center;color:#E8A020">Mínimo</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Vasodilatação leve; em cardiopatas pode causar hipotensão significativa</td>
+              </tr>
+            </tbody>
+          </table>
+</div>
+        </div>
+
+        <div class="alert a-red" style="margin-top:8px">
+          <strong>Pérola TEA/TSA:</strong> Etomidato é a indução mais estável hemodinamicamente, porém suprime adrenal — usar dose única. Cetamina mantém PA em normovolêmicos mas deprime diretamente o miocárdio depletado de catecolaminas (sepse grave, IC avançada).
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /fisio-cv -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 2 — FISIOLOGIA RESPIRATÓRIA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="fisio-resp">
+    <div class="page-wrap">
+
+    <div class="alert a-blue" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> A fisiologia respiratória é a base da ventilação mecânica, manejo da hipoxemia e decisão de estratégias protetoras. A CRF, relação V/Q e curva de dissociação da Hb são temas centrais da prova.
+    </div>
+
+    <!-- MECÂNICA VENTILATÓRIA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">01</span> Mecânica Ventilatória — Volumes e Capacidades
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Volumes Pulmonares</div>
+          <div class="dc"><strong>Volume Corrente (VT):</strong> 500 mL — volume de uma respiração normal. <strong>Volume de Reserva Expiratório (VRE):</strong> 1100 mL — expiração forçada além do VT. <strong>Volume de Reserva Inspiratório (VRI):</strong> 3000 mL — inspiração forçada além do VT. <strong>Volume Residual (VR):</strong> 1200 mL — ar que permanece no pulmão após expiração máxima (não mensurável por espirometria simples, requer pletismografia ou diluição de hélio).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Capacidades Pulmonares</div>
+          <div class="dc"><strong>CPT (Capacidade Pulmonar Total):</strong> ~6.0 L = todos os volumes. <strong>CI (Capacidade Inspiratória):</strong> ~3.5 L = VT + VRI. <strong>CVF (Capacidade Vital Forçada):</strong> ~4.8 L = VT + VRI + VRE. <strong>CRF (Capacidade Residual Funcional):</strong> ~2.5 L = VRE + VR — volume pulmonar no equilíbrio entre retração elástica pulmonar e tônus expansivo da parede torácica.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">CRF — Importância Crítica na Anestesia</div>
+          <div class="dc">A CRF é o <strong>reservatório de O₂</strong> durante a apneia (pré-oxigenação enche a CRF com O₂). <strong>Anestesia geral reduz a CRF em 15-25%</strong> por: perda do tônus diafragmático, posição supina, compressão por conteúdo abdominal. Consequência: <strong>atelectasias em 90% dos pacientes</strong> nos primeiros minutos após indução. Capacidade de fechamento (CC) pode exceder CRF → colapso de pequenas vias aéreas → ↑shunt → hipoxemia.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Fatores que Reduzem CRF</div>
+          <div class="dc">Posição supina (-10%), Trendelenburg (-15%), anestesia geral (-15-25%), obesidade (↓↓CRF proporcional ao IMC), gestação (↓20-30%), ascite, distensão abdominal. Pacientes com CRF reduzida dessaturam muito mais rápido durante apneia — tempo de apneia seguro cai para 2-3 minutos em obesos/gestantes vs. 5-8 min em adultos saudáveis.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELAÇÃO V/Q E SHUNT -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Relação V/Q e Shunt
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">V/Q = 0: Shunt Verdadeiro</div>
+          <div class="dc">Sangue perfunde alvéolos não ventilados → sangue venoso misto passa ao lado arterial sem oxigenar. <strong>Não responde ao aumento de FiO₂</strong> (o O₂ não alcança os alvéolos colapsados). Causas: atelectasias, edema pulmonar, pneumonia consolidada, shunt intracardíaco (D→E). Shunt fisiológico normal: <strong>2-5%</strong> (veias de Thebesiano + brônquicas).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">V/Q = ∞: Espaço Morto</div>
+          <div class="dc">Alvéolo ventilado mas não perfundido → ventilação desperdiçada. Espaço morto anatômico: ~150 mL (vias condutoras). Espaço morto fisiológico = anatômico + alveolar. Causas de ↑espaço morto: TEP, ↓DC (zonas de West I), PEEP excessivo, hiperventilação. Equação de Bohr: VD/VT = (PaCO₂ - PECO₂) / PaCO₂. Normal: VD/VT ~0.3.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Distribuição V/Q no Pulmão Normal</div>
+          <div class="dc">V/Q médio global: <strong>0.8</strong>. Em ortostatismo: <strong>bases</strong> recebem mais perfusão (V/Q ~0.6, mais baixo) e <strong>ápices</strong> são mais ventilados relativamente (V/Q ~3.0, alto). A vasoconstrição pulmonar hipóxica (VPH) é um mecanismo compensatório que desvia sangue de áreas mal ventiladas para áreas bem ventiladas → otimiza V/Q. Halogenados <strong>inibem VPH</strong> dose-dependente → piora a hipoxemia.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">↑Shunt na Anestesia</div>
+          <div class="dc">Atelectasias (causa principal), ventilação monopulmonar (OLV — shunt obrigatório pelo pulmão não ventilado), edema pulmonar, SDRA. PaO₂ cai e <strong>não melhora com FiO₂ 100%</strong> quando shunt &gt;30%. Tratamento: recrutamento alveolar, PEEP, posicionamento (decúbito lateral com pulmão bom para baixo em OLV), CPAP no pulmão não ventilado.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EQUAÇÃO DO GÁS ALVEOLAR -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Equação do Gás Alveolar e Gradiente A-a
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Equação do Gás Alveolar</div>
+          <div class="dc"><strong>PAO₂ = FiO₂ × (Pb - PH₂O) - PaCO₂ / QR</strong>. Onde: Pb = 760 mmHg (nível do mar), PH₂O = 47 mmHg (37°C), QR = 0.8 (quociente respiratório). Com FiO₂ 0.21: PAO₂ = 0.21 × (760-47) - 40/0.8 = 149.7 - 50 ≈ <strong>100 mmHg</strong>. Com FiO₂ 1.0: PAO₂ = 1.0 × 713 - 50 ≈ <strong>663 mmHg</strong>. Esta equação é fundamental para calcular o gradiente A-a.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Gradiente A-a (P(A-a)O₂)</div>
+          <div class="dc"><strong>Gradiente A-a = PAO₂ - PaO₂</strong>. Normal: <strong>&lt;15 mmHg</strong> em jovens (aumenta ~3 mmHg por década: estimativa = idade/4 + 4). Gradiente A-a normal + hipoxemia → hipoventilação pura (causa extrapulmonar). Gradiente A-a elevado → causa intrapulmonar: shunt, V/Q mismatch, difusão prejudicada. Na anestesia, monitorizar o gradiente A-a com FiO₂ elevada permite estimar a fração de shunt (cada 20 mmHg de ΔA-a ≈ 1% de shunt quando FiO₂ = 1.0).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CURVA DE DISSOCIAÇÃO DA HB -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Curva de Dissociação da Hemoglobina
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Formato Sigmoide e P50</div>
+          <div class="dc">Curva sigmoide por <strong>cooperatividade</strong> das 4 subunidades de Hb: ligação da 1ª molécula de O₂ facilita as seguintes. <strong>P50 = 26-27 mmHg</strong> (PO₂ na qual SaO₂ = 50%). A porção superior (plateau) garante saturação quase completa mesmo com queda moderada da PaO₂ → margem de segurança. A porção íngreme (PaO₂ 20-60 mmHg) permite grande entrega de O₂ nos tecidos com pequenas variações de PO₂.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Desvio à Direita (↓Afinidade O₂ = Facilita Entrega)</div>
+          <div class="dc">P50 ↑ (>27 mmHg). Fatores: <strong>↑temperatura</strong> (febre, HM), <strong>↑PCO₂</strong>, <strong>↑H⁺ (↓pH = acidose)</strong>, <strong>↑2,3-DPG</strong> (anemia crônica, altitude, hipertireoidismo). Mnemônico: tecido periférico é quente, ácido e rico em CO₂ → Hb libera O₂ onde é necessário.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Desvio à Esquerda (↑Afinidade O₂ = Dificulta Entrega)</div>
+          <div class="dc">P50 ↓ (&lt;26 mmHg). Fatores: <strong>↓temperatura</strong> (hipotermia — CEC, trauma), <strong>↓PCO₂</strong> (hiperventilação), <strong>↓H⁺ (↑pH = alcalose)</strong>, <strong>↓2,3-DPG</strong> (sangue estocado — CHAD, transfusão maciça), <strong>carboxiHb</strong> (intoxicação por CO — SpO₂ pode ser falsamente normal!), <strong>metaHb</strong>, Hb fetal. Consequência: Hb "segura" o O₂ → hipóxia tecidual apesar de SaO₂ normal.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Efeito Bohr e Efeito Haldane</div>
+          <div class="dc"><strong>Efeito Bohr:</strong> nos tecidos periféricos, ↑CO₂ e ↑H⁺ → desvio à direita → Hb libera O₂ onde há maior demanda metabólica. <strong>Efeito Haldane:</strong> nos pulmões, a oxigenação da Hb (HbO₂) reduz sua afinidade pelo CO₂ → CO₂ é liberado mais eficientemente para ser exalado. Os dois efeitos são complementares e garantem transporte eficiente de O₂ e CO₂ entre pulmões e tecidos.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROLE DA RESPIRAÇÃO -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#1a5276,#2471a3)">
+        <span class="card-num">05</span> Controle Neural da Respiração
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Centro Bulbar — Gerador de Ritmo</div>
+          <div class="dc">O <strong>complexo pré-Bötzinger</strong> no bulbo gera o ritmo respiratório basal. O centro pneumotáxico (ponte) limita a inspiração e regula a frequência. O centro apnêustico promove inspiração prolongada (só evidente em lesões pontinas). A ventilação normal é um equilíbrio entre estes centros + inputs quimiorreceptores.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Quimiorreceptores Centrais — Drive Dominante</div>
+          <div class="dc">Localizados na <strong>superfície ventral do bulbo</strong>. Respondem a ↑H⁺ no LCR, que é determinado pela PaCO₂ (CO₂ difunde pela barreira hematoencefálica, se converte em H⁺ pela anidrase carbônica). <strong>Resposta ao CO₂ é o drive ventilatório dominante</strong> (80% do estímulo). Sensibilidade: cada ↑1 mmHg de PaCO₂ → ↑ventilação minuto em 2-3 L/min. Opioides e anestésicos gerais deprimem este drive dose-dependente.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Quimiorreceptores Periféricos — Resposta à Hipóxia</div>
+          <div class="dc"><strong>Corpos carotídeos</strong> (bifurcação da carótida comum): respondem a <strong>↓PaO₂ &lt;60 mmHg</strong>, ↑PaCO₂ e ↓pH. Resposta rápida (segundos). <strong>Corpos aórticos:</strong> contribuição menor. O drive hipóxico é o <strong>único estímulo ventilatório em pacientes com DPOC avançado</strong> (retenção crônica de CO₂ dessensibiliza quimiorreceptores centrais) → administrar O₂ com cautela (alvo SpO₂ 88-92%) para não abolir o drive residual.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VENTILAÇÃO PROTETORA -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">06</span> Ventilação Protetora — Fisiologia e Estratégia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">VILI — Lesão Induzida por Ventilação</div>
+          <div class="dc">Volume corrente alto → <strong>volutrauma</strong> (distensão excessiva) e <strong>barotrauma</strong> (pressões elevadas). Colapso-reabertura cíclica de alvéolos instáveis → <strong>atelectrauma</strong>. Todos liberam citocinas pró-inflamatórias → <strong>biotrauma</strong> (lesão à distância → DMOS). Ventilação protetora busca minimizar todos estes mecanismos.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Parâmetros da Ventilação Protetora</div>
+          <div class="dc"><strong>VC baixo:</strong> 6-8 mL/kg de peso predito (não peso real!). <strong>PEEP:</strong> 5-8 cmH₂O (mantém alvéolos abertos, evita atelectrauma). <strong>Driving Pressure = Pplatô - PEEP</strong>: reflete o stress do parênquima pulmonar → <strong>alvo &lt;13 cmH₂O</strong> (Amato, NEJM 2015 — driving pressure foi o parâmetro mais fortemente associado a sobrevida). Pplatô &lt;30 cmH₂O. Manobras de recrutamento periódicas.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">FiO₂ e Atelectasia de Absorção</div>
+          <div class="dc"><strong>FiO₂ alta → atelectasia de absorção:</strong> N₂ alveolar (que mantém os alvéolos abertos por ser pouco absorvível) é substituído por O₂, que é rapidamente absorvido → alvéolo colapsa. Efeito mais pronunciado em alvéolos com V/Q baixo. Estratégia: usar a <strong>menor FiO₂ possível</strong> para manter SpO₂ &gt;92-94%. Na pré-oxigenação: FiO₂ 1.0 é aceitável por tempo limitado antes da intubação.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EFEITOS DOS ANESTÉSICOS NA RESPIRAÇÃO -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">07</span> Efeitos dos Anestésicos na Respiração
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Opioides</div>
+          <div class="dc"><strong>Depressão respiratória dose-dependente</strong> — o efeito mais importante clinicamente. Reduzem primariamente a <strong>resposta ao CO₂</strong> (deslocam curva de resposta para direita e reduzem inclinação). Depressão da resposta à hipóxia também ocorre, mas é menos proeminente. Apneia pode ocorrer com doses altas. Morfina/fentanil/remifentanil: todos causam depressão — sufentanil em TCI permite titulação mais precisa.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Propofol e Barbitúricos</div>
+          <div class="dc">Propofol causa <strong>apneia</strong> em doses de indução (2-2.5 mg/kg) — efeito dose-dependente, transitório. Em infusão de manutenção: ↓resposta ao CO₂ de forma proporcional à concentração. Tiopental: apneia em 50-60% dos pacientes na indução. Ambos deprimem drive ventilatório central. Efeito potencializado quando combinados com opioides (sinergia depressora).</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Halogenados</div>
+          <div class="dc">Padrão respiratório <strong>"rápido e superficial"</strong>: ↑FR + ↓VT. A ventilação-minuto pode parecer mantida, mas a <strong>PaCO₂ sobe</strong> progressivamente (ventilação alveolar reduzida pelo ↑proporção de espaço morto). Em ventilação espontânea com sevoflurano 1 MAC: PaCO₂ atinge ~55-60 mmHg. Todos os halogenados reduzem resposta ao CO₂ dose-dependente e inibem VPH.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Cetamina — Exceção Importante</div>
+          <div class="dc"><strong>Mantém reflexos protetores de via aérea</strong> (tosse, deglutição) em doses subanestésicas, embora não garanta proteção completa contra aspiração. <strong>Broncodilatação potente</strong>: relaxamento direto da musculatura lisa brônquica + estimulação simpática → agente de escolha na indução do paciente asmático em broncoespasmo grave. Drive ventilatório relativamente preservado comparado aos outros agentes.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /fisio-resp -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 3 — FARMACOCINÉTICA APLICADA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="fisio-farmaco">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> A farmacocinética define quando e como os efeitos clínicos começam e terminam. A meia-vida contexto-dependente (CSHT) é o conceito mais clinicamente relevante para infusões — tema frequente na prova.
+    </div>
+
+    <!-- MODELOS COMPARTIMENTAIS -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">01</span> Modelos Compartimentais
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Modelo 1 Compartimento</div>
+          <div class="dc">Droga distribui-se instantaneamente em um único compartimento homogêneo. Cinética de eliminação monoexponencial: Cp(t) = C₀ × e^(-K₁₀×t). V1 = compartimento central, K₁₀ = constante de eliminação. Modelo simplificado — raramente aplicável a anestésicos (maioria tem distribuição multicompartimental). Útil para antibióticos hidrossolúveis e BNM de início rápido.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Modelo 2 Compartimentos</div>
+          <div class="dc">V1 (compartimento central — plasma + órgãos bem perfundidos) e V2 (compartimento periférico rápido — músculo, vísceras). Curva de concentração biexponencial: fase α (distribuição rápida) e fase β (eliminação). <strong>Maioria dos anestésicos segue este modelo:</strong> tiopental, midazolam, vecurônio. A fase de distribuição (α) é responsável pelo término do efeito clínico após dose única (não a eliminação).</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Modelo 3 Compartimentos</div>
+          <div class="dc">V1 + V2 (redistribuição rápida) + V3 (compartimento profundo — gordura, osso). Curva triexponencial: fases π (distribuição rápida), α (redistribuição) e β (eliminação). <strong>Propofol, sufentanil, fentanil</strong> seguem modelo de 3 compartimentos. O V3 funciona como reservatório: drogas lipossolúveis acumulam na gordura durante infusões prolongadas → redistribuição lenta para o plasma após interrupção → atrasa despertar.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARÂMETROS FUNDAMENTAIS -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Parâmetros Farmacocinéticos Fundamentais
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Volume de Distribuição (Vd)</div>
+          <div class="dc"><strong>Vd = Dose / C₀</strong> (concentração plasmática no tempo zero). Vd reflete o "espaço aparente" no qual a droga se distribui. Vd pequeno (ex: BNM ~0.2 L/kg → confinados ao plasma/extracelular). Vd grande (ex: propofol ~3-4 L/kg, fentanil ~4 L/kg → extensamente distribuídos em tecidos). ↑Vd → menor Cp inicial (necessita dose de ataque maior) e maior duração potencial. Lipossolubilidade é o principal determinante do Vd.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Clearance (Cl)</div>
+          <div class="dc"><strong>Cl = Dose / AUC</strong> (área sob a curva). Representa o volume de plasma completamente "limpo" da droga por unidade de tempo (mL/min ou L/h). Depende de: fluxo sanguíneo ao órgão de eliminação × coeficiente de extração (ER). <strong>Drogas de alta extração hepática</strong> (ER &gt;0.7): lidocaína, propranolol, morfina — Cl depende do fluxo hepático (flow-dependent). <strong>Drogas de baixa extração</strong> (ER &lt;0.3): diazepam, warfarina — Cl depende da atividade enzimática (capacity-dependent).</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Meia-vida de Eliminação (t½β)</div>
+          <div class="dc"><strong>t½β = 0.693 × Vd / Cl</strong>. Tempo para Cp cair 50% durante a fase de eliminação. <strong>IMPORTANTE:</strong> t½β NÃO prediz adequadamente a duração clínica do efeito após infusões prolongadas! Após infusão longa, a queda de Cp depende da redistribuição dos compartimentos periféricos → conceito de CSHT é muito mais relevante. Exemplo: fentanil t½β ~3.5h, mas CSHT após 8h de infusão = ~600 min.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSHT -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#7D3C98,#9B59B6)">
+        <span class="card-num">03</span> Meia-vida Contexto-Dependente (CSHT) — Conceito Central
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Definição</div>
+          <div class="dc"><strong>CSHT (Context-Sensitive Half-Time):</strong> tempo necessário para a concentração plasmática cair 50% após a interrupção de uma infusão contínua de duração variável. O "contexto" é a duração da infusão. Conceito introduzido por Hughes et al. (1992) — <strong>revolucionou a escolha de agentes para infusão contínua</strong> em anestesia. Muito mais clinicamente relevante que t½β para prever despertar.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Remifentanil — O Agente Ideal para Infusões</div>
+          <div class="dc"><strong>CSHT constante ~3-5 minutos</strong>, independente da duração da infusão (1h, 4h, 8h ou 24h). Metabolismo por <strong>esterases plasmáticas e teciduais inespecíficas</strong> — não depende de fígado ou rim. Não acumula em nenhum compartimento. Metabolito (ácido remifentanínico) é 800× menos potente. Implicação: despertar rápido e previsível sempre, mesmo após cirurgias de 12+ horas. Desvantagem: cessação abrupta do efeito → necessita transição para analgesia pós-operatória.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Fentanil — Acúmulo Progressivo</div>
+          <div class="dc"><strong>CSHT aumenta dramaticamente com a duração:</strong> 1h → ~20 min; 4h → ~130 min; 8h → ~600 min (10 horas!). Motivo: alta lipossolubilidade → acúmulo extenso no V3 (gordura) → redistribuição lenta para o plasma após interrupção. <strong>Evitar infusão contínua de fentanil por mais de 2-3 horas.</strong> Bolus intermitentes são mais previsíveis para cirurgias longas, mas mesmo assim há acúmulo.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Propofol — CSHT Moderado e Previsível</div>
+          <div class="dc">CSHT: 1h → ~10 min; 4h → ~25 min; 8h → ~40 min. Apesar do Vd enorme (3-4 L/kg) e alta lipossolubilidade, o <strong>clearance alto</strong> (~30-60 mL/kg/min) compensa → redistribuição + eliminação eficientes. Resultado: despertar relativamente rápido mesmo após infusões longas. Base farmacocinética da TIVA (Anestesia Venosa Total) com propofol + remifentanil.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Sufentanil — Intermediário Favorável</div>
+          <div class="dc">CSHT: 1h → ~20 min; 4h → ~50 min; 8h → ~90 min. <strong>Melhor que fentanil para infusões longas</strong> apesar de ser mais lipossolúvel — o Cl hepático alto limita o acúmulo. Potência 5-10× maior que fentanil → doses volumétricas menores. Em TCI: modelo de Gepts permite titulação precisa. Boa opção para cirurgias de 3-6 horas.</div>
+        </div>
+
+        <div class="alert a-cyan" style="margin-top:10px;margin-bottom:10px">
+          <strong>Tabela CSHT Comparativa — Imprescindível para TEA/TSA:</strong>
+        </div>
+
+        <div style="overflow-x:auto;margin:10px 0">
+<div class="tbl-wrap wide">
+          <table class="tbl" style="width:100%;border-collapse:collapse;font-size:12px;font-family:'JetBrains Mono',monospace">
+            <thead>
+              <tr style="background:rgba(155,89,182,.2);color:#BB8FCE">
+                <th style="padding:8px 6px;text-align:left;border-bottom:2px solid #9B59B6">Fármaco</th>
+                <th style="padding:8px 4px;text-align:center;border-bottom:2px solid #9B59B6">1h</th>
+                <th style="padding:8px 4px;text-align:center;border-bottom:2px solid #9B59B6">4h</th>
+                <th style="padding:8px 4px;text-align:center;border-bottom:2px solid #9B59B6">8h</th>
+                <th style="padding:8px 6px;text-align:left;border-bottom:2px solid #9B59B6">Implicação Clínica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                <td style="padding:6px;font-weight:700;color:#2ECC71">Remifentanil</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">3 min</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">3 min</td>
+                <td style="padding:6px;text-align:center;color:#2ECC71">3 min</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Ideal para cirurgias longas; despertar ultrarrápido</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02)">
+                <td style="padding:6px;font-weight:700;color:#5DADE2">Propofol</td>
+                <td style="padding:6px;text-align:center;color:#5DADE2">10 min</td>
+                <td style="padding:6px;text-align:center;color:#5DADE2">25 min</td>
+                <td style="padding:6px;text-align:center;color:#5DADE2">40 min</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Recuperação previsível; base da TIVA</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+                <td style="padding:6px;font-weight:700;color:#E8A020">Sufentanil</td>
+                <td style="padding:6px;text-align:center;color:#E8A020">20 min</td>
+                <td style="padding:6px;text-align:center;color:#E8A020">50 min</td>
+                <td style="padding:6px;text-align:center;color:#E8A020">90 min</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Razoável para cirurgias longas; melhor que fentanil</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02)">
+                <td style="padding:6px;font-weight:700;color:#FF6B6B">Fentanil</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">20 min</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">130 min</td>
+                <td style="padding:6px;text-align:center;color:#FF6B6B">600 min</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Evitar infusão prolongada; acúmulo dramático</td>
+              </tr>
+              <tr>
+                <td style="padding:6px;font-weight:700;color:#BB8FCE">Alfentanil</td>
+                <td style="padding:6px;text-align:center;color:#BB8FCE">15 min</td>
+                <td style="padding:6px;text-align:center;color:#BB8FCE">45 min</td>
+                <td style="padding:6px;text-align:center;color:#BB8FCE">60 min</td>
+                <td style="padding:6px;color:rgba(255,255,255,.7)">Intermediário; menor Vd que fentanil</td>
+              </tr>
+            </tbody>
+          </table>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EFEITO DE PRIMEIRA PASSAGEM -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">04</span> Efeito de Primeira Passagem
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Conceito</div>
+          <div class="dc">Drogas administradas VO são absorvidas no intestino → veia porta → fígado → circulação sistêmica. O metabolismo hepático durante esta primeira passagem pode degradar significativamente a droga antes de atingir o plasma. <strong>Biodisponibilidade oral = fração que escapa da 1ª passagem.</strong></div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Exemplos Clinicamente Relevantes</div>
+          <div class="dc">Drogas com <strong>alta extração hepática</strong> e baixa biodisponibilidade VO: propranolol (~25%), lidocaína (~35% — por isso não se usa VO para arritmia), morfina (~30% — dose VO é 3× a dose IV). Drogas com <strong>baixa extração:</strong> diazepam (~100%), paracetamol (~90%). Anestésicos gerais são administrados IV ou inalatórios → contornam completamente a 1ª passagem.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FATORES QUE ALTERAM PK -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">05</span> Fatores que Alteram a Farmacocinética
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Obesidade</div>
+          <div class="dc">Vd ↑ significativamente para drogas lipossolúveis (propofol, benzodiazepínicos, fentanil). <strong>Doses de BNM:</strong> calcular por <strong>peso corporal magro (LBM)</strong> ou peso ideal (IBW) — exceção: <strong>succinilcolina → peso total</strong> (↑atividade de pseudocolinesterase e ↑Vd extracelular). Propofol indução: peso magro ou peso ajustado. Remifentanil: peso ideal. Desflurano/sevoflurano: indução mais lenta (↑CRF funcional nem sempre, mas ↑Vd de gordura).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Idoso</div>
+          <div class="dc">↓Cl renal (TFG cai ~1 mL/min/ano após 40 anos) e ↓Cl hepático (↓fluxo esplâncnico + ↓massa hepática). ↓Albumina → ↑fração livre de drogas ligadas a proteínas (ex: diazepam, tiopental). ↓Vd para hidrossolúveis (↓água corporal total) → maior Cp inicial. <strong>Regra prática: reduzir doses de indução em 30-50%.</strong> Propofol: 1-1.5 mg/kg (vs 2-2.5 mg/kg em jovens).</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Insuficiência Hepática</div>
+          <div class="dc">↓Metabolismo de <strong>fase I (CYP450)</strong>: oxidação, redução, hidrólise → produz metabólitos ativos ou inativos. Drogas com alta extração hepática acumulam quando fluxo hepático cai (IC, cirrose descompensada). ↓Síntese de albumina e α₁-glicoproteína ácida → ↑fração livre. <strong>Escolha em hepatopatia:</strong> atracúrio/cisatracúrio (degradação de Hofmann), remifentanil (esterases plasmáticas).</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Insuficiência Renal</div>
+          <div class="dc">Acúmulo de metabólitos ativos: <strong>morfina-6-glucuronídeo (M6G)</strong> — mais potente que morfina → depressão respiratória prolongada. <strong>Normeperidina</strong> (metabólito da meperidina) → excitação SNC, convulsões → <strong>meperidina contraindicada em IR</strong>. Laudanosina (metabólito do atracúrio) — acumula mas sem relevância clínica em doses normais. Pancurônio: excreção renal significativa → evitar em IR grave.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FARMACODINÂMICA -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">06</span> Farmacodinâmica — Relação Concentração-Efeito
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Curva Sigmoide Emax</div>
+          <div class="dc">Efeito = (Emax × Cᵞ) / (EC₅₀ᵞ + Cᵞ). <strong>Emax:</strong> efeito máximo possível. <strong>EC₅₀:</strong> concentração que produz 50% do efeito máximo — medida de potência. <strong>γ (coeficiente de Hill):</strong> determina a inclinação da curva — γ alto → transição abrupta entre "sem efeito" e "efeito máximo" (ex: BNM). γ baixo → transição gradual (mais titulável).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">MAC e BIS como Medidas Farmacodinâmicas</div>
+          <div class="dc"><strong>MAC (Concentração Alveolar Mínima):</strong> concentração alveolar que impede movimento em 50% dos pacientes frente a estímulo cirúrgico — é essencialmente a EC₅₀ para o endpoint de imobilidade. MAC-awake (~0.3-0.4 MAC): supressão de consciência. MAC-BAR (~1.5 MAC): bloqueio de resposta adrenérgica. <strong>BIS (Índice Bispectral):</strong> medida do efeito hipnótico no EEG → alvo 40-60 para anestesia geral.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Sinergia Anestésica</div>
+          <div class="dc"><strong>Propofol + remifentanil:</strong> interação supraditiva (sinérgica) — a EC₅₀ de cada agente é significativamente reduzida quando combinados. Isobologramas demonstram que a combinação permite reduzir propofol ~40% e remifentanil ~50% comparado a monoterapia. Isto é a base farmacológica da TIVA e da anestesia balanceada. Interação aditiva: halogenados + N₂O (MACs se somam). Interação antagonista: rara em anestesia.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /fisio-farmaco -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 4 — FISIOLOGIA RENAL E HEPÁTICA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="fisio-renal">
+    <div class="page-wrap">
+
+    <div class="alert a-orange" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> A IRA perioperatória está entre as complicações mais temidas. Compreender a fisiologia renal, os efeitos dos anestésicos no rim e as particularidades da hepatopatia é essencial para a segurança do paciente cirúrgico.
+    </div>
+
+    <!-- FUNÇÃO RENAL PERIOPERATÓRIA -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">01</span> Função Renal Perioperatória
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Taxa de Filtração Glomerular (TFG)</div>
+          <div class="dc">Normal: <strong>90-120 mL/min</strong> (homem) e <strong>80-110 mL/min</strong> (mulher). Determinada por: pressão hidrostática glomerular, pressão oncótica, coeficiente de filtração (Kf). TFG = Kf × (P_glomerular - P_cápsula - π_plasma). A autorregulação renal mantém TFG estável para PAM entre <strong>75-160 mmHg</strong> (mais estreita que cerebral). Abaixo de PAM 65 mmHg → TFG cai proporcionalmente.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Estimativa da TFG — CKD-EPI vs. MDRD</div>
+          <div class="dc"><strong>CKD-EPI (2021, sem raça):</strong> equação mais precisa, recomendada atualmente. <strong>MDRD:</strong> subestima TFG quando &gt;60 mL/min → tendência a superestimar o grau de insuficiência em pacientes com função próxima do normal. <strong>Cockroft-Gault:</strong> estima Cl de creatinina (não TFG) — ainda utilizada para ajuste de dose de alguns fármacos. Creatinina sérica isolada é marcador tardio — eleva-se somente após perda &gt;50% da função renal.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">IRA Perioperatória — Critérios KDIGO</div>
+          <div class="dc"><strong>Definição KDIGO (2012):</strong> ↑Creatinina ≥0.3 mg/dL em 48h OU ↑≥50% em 7 dias OU débito urinário &lt;0.5 mL/kg/h por ≥6h. <strong>Estágio 1:</strong> Cr ↑ 1.5-1.9× basal ou ↑ ≥0.3 em 48h. <strong>Estágio 2:</strong> Cr ↑ 2.0-2.9× basal. <strong>Estágio 3:</strong> Cr ↑ ≥3× basal, ou Cr ≥4.0, ou diálise, ou DU &lt;0.3 mL/kg/h por ≥24h. Incidência perioperatória: 5-7% em cirurgias maiores, até 30% em cirurgia cardíaca.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Fatores de Risco para IRA Perioperatória</div>
+          <div class="dc"><strong>Pré-operatórios:</strong> DRC prévia (principal fator), DM, HAS, IC, idade avançada, uso de IECA/BRA no dia da cirurgia (controverso). <strong>Intraoperatórios:</strong> hipovolemia/hipotensão prolongada (PAM &lt;65 por &gt;20 min), CEC (especialmente &gt;120 min), clampeamento aórtico, contraste IV recente, uso de aminoglicosídeos. <strong>Pós-operatórios:</strong> sepse, síndrome compartimental abdominal, rabdomiólise.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EFEITOS DOS ANESTÉSICOS NO RIM -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Efeitos dos Anestésicos no Rim
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Halogenados e Fluxo Sanguíneo Renal</div>
+          <div class="dc">Todos os halogenados causam <strong>↓FSR e ↓TFG dose-dependente e reversível</strong>, primariamente por ↓DC e ↓PAM. O efeito é funcional, não nefrotóxico direto. Isoflurano e desflurano: preservam melhor o FSR comparados ao sevoflurano por vasodilatação renal relativa. Na prática, a hidratação adequada e manutenção da PAM são mais importantes que a escolha do halogenado.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Sevoflurano — Composto A</div>
+          <div class="dc">Sevoflurano reage com absorvedores de CO₂ (cal sodada/baralyme) → <strong>Composto A (fluorometil-2,2-difluoro-1-vinil-éter)</strong>. Nefrotóxico em ratos em concentrações &gt;150-300 ppm. Em humanos: fluoreto inorgânico sérico pode elevar-se, mas <strong>relevância clínica mínima</strong> com fluxos &gt;2 L/min. Recomendação (controversa): alguns guidelines sugerem evitar fluxos &lt;2 L/min com sevoflurano por &gt;2 MAC-horas. Na prática, nenhum caso confirmado de nefrotoxicidade clínica em humanos.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">AINEs Perioperatórios e Risco Renal</div>
+          <div class="dc">AINEs inibem COX → <strong>↓síntese de prostaglandinas renais</strong> (PGE₂, PGI₂) que normalmente vasodilatam a arteríola aferente. Em condições de hipovolemia/hipotensão, as prostaglandinas são essenciais para manter a TFG → inibição por AINEs = perda da autorregulação → <strong>IRA</strong>. Risco máximo em: idosos, DRC, IC, hipovolemia, uso concomitante de IECA + diurético ("tríplice nefrotóxica").</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Ajustes de Dose em IRA</div>
+          <div class="dc"><strong>Neostigmina:</strong> excreção renal ~50% — duração prolongada em IRA; porém o BNM que está sendo revertido também pode ter eliminação prolongada → efeito clínico pode ser neutro. <strong>Sugammadex:</strong> complexo sugammadex-rocurônio é excretado renal — em IRA grave (Cl &lt;30), clearance muito lento, mas o complexo é estável e inativo → pode ser usado, porém com monitorização prolongada do BNMR.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- METABOLISMO HEPÁTICO -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">03</span> Metabolismo Hepático de Fármacos
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Fase I — Biotransformação (CYP450)</div>
+          <div class="dc">Reações de <strong>oxidação, redução e hidrólise</strong> catalisadas principalmente pelo sistema citocromo P450 (CYP3A4, CYP2D6, CYP2C9, etc.). Produzem metabólitos que podem ser ativos (ex: midazolam → α-hidroximidazolam, ainda ativo) ou inativos. Fase I geralmente torna a molécula mais polar, facilitando a fase II. <strong>CYP3A4:</strong> metaboliza ~50% dos fármacos — midazolam, fentanil, sufentanil, lidocaína, alfentanil.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Fase II — Conjugação</div>
+          <div class="dc">Reações de <strong>glucuronidação, sulfatação, acetilação, metilação</strong>. Produzem metabólitos hidrossolúveis para excreção renal ou biliar. Geralmente metabólitos inativos (exceção: <strong>morfina-6-glucuronídeo → ativo e potente</strong>). A fase II é mais resistente à doença hepática que a fase I — preservada até estágios avançados de cirrose.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Indutores e Inibidores do CYP450</div>
+          <div class="dc"><strong>Indutores</strong> (↑atividade enzimática → ↑metabolismo → ↓efeito da droga): rifampicina (potentíssimo), fenitoína, carbamazepina, barbitúricos, etanol crônico, tabagismo. <strong>Inibidores</strong> (↓metabolismo → ↑efeito e toxicidade): cetoconazol/fluconazol (CYP3A4), eritromicina/claritromicina, ciprofloxacina (CYP1A2), suco de grapefruit (CYP3A4 intestinal), cimetidina (inespecífico). Implicação: ajustar doses de opioides e BZDs em pacientes em uso destes fármacos.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANESTESIA EM HEPATOPATIA -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Anestesia em Hepatopatia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Estratificação de Risco — Child-Pugh e MELD</div>
+          <div class="dc"><strong>Child-Pugh:</strong> classifica cirrose em A (5-6, compensada), B (7-9, moderada) e C (10-15, descompensada). Mortalidade perioperatória: A ~10%, B ~30%, C ~80%. <strong>MELD (Model for End-Stage Liver Disease):</strong> fórmula com bilirrubina, INR e creatinina. MELD &gt;15 → mortalidade cirúrgica elevada; MELD &gt;20 → risco proibitivo para cirurgia eletiva. Cirurgia de emergência em Child C → mortalidade &gt;50%.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Escolha de Agentes na Hepatopatia</div>
+          <div class="dc"><strong>Morfina:</strong> metabolismo hepático (glucuronidação) → acúmulo em cirrose; preferir opioides com eliminação órgão-independente. <strong>Atracúrio/Cisatracúrio:</strong> degradação de Hofmann (eliminação de Hofmann — não depende de fígado nem rim) → <strong>escolha de 1ª linha para BNM em hepatopatia e insuficiência renal</strong>. Cisatracúrio: 3× mais potente, sem liberação de histamina. Remifentanil: esterases — seguro em hepatopatia.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Hepatite Halotânica</div>
+          <div class="dc">Reação imunomediada (tipo II) contra neoantígenos formados pelo metabolismo oxidativo do halotano (ácido trifluoroacético + proteínas hepáticas). Incidência com halotano: 1/5.000-35.000. Pode ocorrer com outros halogenados (sevoflurano, desflurano) em frequência muito menor (&lt;1/100.000). <strong>Reexposição ao agente causador é contraindicação absoluta.</strong> Quadro: febre + icterícia + eosinofilia + necrose hepática centrolobular 2-14 dias pós-exposição.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Coagulopatia na Hepatopatia</div>
+          <div class="dc">O fígado sintetiza fatores <strong>II, V, VII, IX, X</strong>, proteínas C, S e antitrombina. Cirrose → <strong>coagulopatia complexa:</strong> não é simplesmente "estado hipocoagulável" — há equilíbrio frágil entre pró e anticoagulantes. INR elevado não prediz sangramento. Tromboelastografia (TEG/ROTEM) é superior ao coagulograma convencional para guiar transfusão. <strong>Fator VII</strong> é o mais sensível (menor meia-vida, ~6h) → INR altera-se precocemente.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /fisio-renal -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 5 — FISIOLOGIA NEUROLÓGICA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="fisio-neuro">
+    <div class="page-wrap">
+
+    <div class="alert a-blue" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> A fisiologia cerebral e a pressão intracraniana são temas centrais em neuroanestesia. O controle da PaCO₂, a manutenção da PPC e a escolha de agentes com perfil neurofarmacológico adequado são habilidades obrigatórias.
+    </div>
+
+    <!-- FSC -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#1a5276,#2471a3)">
+        <span class="card-num">01</span> Fluxo Sanguíneo Cerebral (FSC)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Valores Normais</div>
+          <div class="dc">FSC normal: <strong>50 mL/100g/min</strong> (total ~750 mL/min = 15% do DC). O cérebro representa 2% do peso corporal mas consome 20% do O₂ e 25% da glicose total. <strong>Limiar de isquemia:</strong> &lt;20 mL/100g/min → disfunção neuronal (perda de EEG, déficits neurológicos). <strong>&lt;10 mL/100g/min → infarto</strong> (morte celular irreversível em minutos). A zona entre 10-20 mL = <strong>penumbra isquêmica</strong> — tecido viável se perfusão for restaurada.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Consumo de O₂ Cerebral (CMRO₂)</div>
+          <div class="dc">Normal: <strong>3.5 mL O₂/100g/min</strong>. O CMRO₂ é acoplado ao FSC → ↑atividade neuronal → ↑metabolismo → ↑FSC local (acoplamento fluxo-metabolismo). Substância cinzenta: CMRO₂ 4× maior que branca. <strong>Hipotermia:</strong> ↓1°C → ↓CMRO₂ ~7% (base fisiológica da hipotermia protetora em cirurgia cardíaca e neuroproteção). Anestésicos que ↓CMRO₂: barbitúricos, propofol, etomidato. Cetamina: ↑CMRO₂ (efeito excitotóxico discutido).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUTORREGULAÇÃO CEREBRAL -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Autorregulação Cerebral
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Mecanismo e Faixa de Autorregulação</div>
+          <div class="dc">FSC mantido constante para <strong>PAM entre 50-150 mmHg</strong> por vasodilatação (quando PA cai) e vasoconstrição (quando PA sobe) das arteríolas cerebrais. Mecanismo miogênico (resposta de Bayliss) + metabólico (H⁺, K⁺, adenosina, NO). <strong>Fora da faixa:</strong> FSC torna-se passivamente dependente da PA → hipotensão = isquemia; hipertensão = edema vasogênico/ruptura da barreira hematoencefálica.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Fatores que Alteram a Autorregulação</div>
+          <div class="dc"><strong>Anestesia geral:</strong> a maioria dos agentes atenua a autorregulação (halogenados &gt; propofol). <strong>Hipercapnia:</strong> PaCO₂ &gt;60 mmHg → vasodilatação máxima → perda de autorregulação. <strong>Lesão cerebral:</strong> TCE, AVC, tumores → autorregulação regional ou globalmente perdida. <strong>Hipertensos crônicos:</strong> curva desloca-se para a <strong>direita</strong> → toleram PAM mais elevadas, mas isquemiam com PAM que seria "normal" em normotensos (ex: PAM 65 pode ser insuficiente para um hipertenso crônico).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REGULADORES DO FSC -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">03</span> Reguladores do FSC
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">PaCO₂ — A Variável Mais Potente</div>
+          <div class="dc"><strong>↑PaCO₂ → vasodilatação cerebral → ↑FSC</strong> (~3-4% por mmHg de CO₂ entre 20-80 mmHg). <strong>↓PaCO₂ → vasoconstrição → ↓FSC.</strong> Hiperventilação para PaCO₂ 30-35 mmHg → ↓FSC ~30% → ↓volume sanguíneo cerebral → ↓PIC. Efeito é rápido (segundos a minutos) mas <strong>transitório</strong> — após 6-12h, o LCR tampona o pH e o efeito se perde. Hiperventilação agressiva (PaCO₂ &lt;25) → risco de isquemia cerebral por vasoconstrição excessiva.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">PaO₂ — Efeito Limiar</div>
+          <div class="dc">PaO₂ só afeta significativamente o FSC quando <strong>cai abaixo de ~50 mmHg</strong> → vasodilatação cerebral acentuada como mecanismo protetor. Acima de 50 mmHg: efeito mínimo. Hiperóxia (PaO₂ &gt;300 mmHg) → vasoconstrição leve (~10-15% ↓FSC). Na prática: manter normoxia; evitar tanto hipóxia quanto hiperóxia extrema (especialmente em isquemia-reperfusão → radicais livres).</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Temperatura</div>
+          <div class="dc"><strong>↓1°C → ↓CMRO₂ ~7% → ↓FSC proporcional</strong> (acoplamento preservado). A 33°C: CMRO₂ cai ~30%. A 28°C: ~50%. A 18°C: EEG isoelétrico (parada metabólica cerebral → permite parada circulatória total). Base fisiológica: <strong>hipotermia terapêutica</strong> em cirurgia de arco aórtico (15-18°C com parada circulatória), neuroproteção pós-PCR (32-36°C — estudo TTM-2 mostrou 33°C vs. normotermia sem diferença → controle direcionado de temperatura).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIC -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Pressão Intracraniana (PIC)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Valores e Doutrina de Monro-Kellie</div>
+          <div class="dc">PIC normal: <strong>5-15 mmHg</strong>. Hipertensão intracraniana (HIC): <strong>&gt;20 mmHg</strong>. A <strong>Doutrina de Monro-Kellie:</strong> o volume intracraniano é fixo (crânio rígido) = cérebro (~80%) + LCR (~10%) + sangue (~10%). O aumento de qualquer componente deve ser compensado pela redução de outro — caso contrário, a PIC sobe exponencialmente (curva de complacência intracraniana: inicialmente plana, depois vertical).</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Sinais Clínicos de HIC</div>
+          <div class="dc"><strong>Cefaleia</strong> (pior pela manhã, piora com Valsalva), <strong>vômitos em jato</strong> (sem náusea prévia), <strong>papiledema</strong> (fundoscopia), diplopia (compressão do VI par). <strong>Reflexo de Cushing</strong> (tríade de proteção: <strong>↑PA + bradicardia + respiração irregular/padrão de Cheyne-Stokes</strong>) — sinal tardio e ominoso indicando herniação iminente. Anisocoria (pupila fixa dilatada ipsilateral) → herniação uncal → emergência neurocirúrgica.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Pressão de Perfusão Cerebral (PPC)</div>
+          <div class="dc"><strong>PPC = PAM - PIC</strong>. Alvo em TCE: <strong>PPC &gt;60 mmHg</strong> (Brain Trauma Foundation, 4ª edição). PPC &lt;50 → isquemia cerebral. PPC &gt;70 pode ↑risco de SDRA por uso excessivo de vasopressores/fluidos. Estratégia: manter PAM adequada + controlar PIC. Em crianças: alvo PPC menor (40-50 mmHg dependendo da idade).</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Tratamento da HIC — Escalonamento</div>
+          <div class="dc"><strong>Nível 1:</strong> Cabeceira 30°, evitar compressão jugular, sedação (propofol ou midazolam), normocapnia/hipocapnia leve (PaCO₂ 35 mmHg), normotermia, drenagem de LCR se cateter ventricular disponível. <strong>Nível 2:</strong> Hiperventilação moderada (PaCO₂ 30-35 mmHg) — temporária, monitorar SjvO₂. <strong>Osmoterapia:</strong> manitol 0.25-1 g/kg IV (osmolaridade sérica alvo &lt;320) OU NaCl hipertônico 3-23.4% (NaCl 3% 250 mL ou 23.4% 30 mL em CVC). <strong>Nível 3:</strong> Coma barbitúrico (tiopental), hipotermia terapêutica, craniectomia descompressiva.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEUROPROTEÇÃO -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">05</span> Neuroproteção Farmacológica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Hipotermia</div>
+          <div class="dc">↓CMRO₂, ↓excitotoxicidade glutamatérgica, ↓liberação de radicais livres, ↓edema citotóxico. Utilizada em: cirurgia de arco aórtico (parada circulatória hipotérmica profunda a 15-18°C), CEC convencional (32-34°C). Pós-PCR: TTM (Targeted Temperature Management) — controle rigoroso de temperatura 32-36°C por 24h. Efeitos colaterais: arritmias, coagulopatia, hiperglicemia, infecções, shivering.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Barbitúricos — Burst Suppression</div>
+          <div class="dc"><strong>Tiopental/pentobarbital:</strong> ↓CMRO₂ até o limite máximo no <strong>burst suppression</strong> no EEG (padrão surto-supressão — alternância entre picos de atividade e silêncio). Além deste ponto, ↓adicional de CMRO₂ só com hipotermia (componente basal de manutenção celular). Indicação: HIC refratária, proteção intraoperatória em endarterectomia carotídea, status epilepticus. Efeitos adversos: hipotensão grave, depressão miocárdica, íleo, imunossupressão.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Propofol — Neuroproteção Modesta</div>
+          <div class="dc">↓CMRO₂ de forma dose-dependente (pode atingir burst suppression em altas doses). Mantém acoplamento fluxo-metabolismo. ↓PIC por ↓VSC. Vantagem sobre barbitúricos: meia-vida mais curta → permite avaliação neurológica mais rápida. Não há evidência robusta de neuroproteção superior aos barbitúricos. <strong>Síndrome de infusão de propofol (PRIS):</strong> infusões &gt;48h em doses &gt;5 mg/kg/h → acidose metabólica, rabdomiólise, IC, hiperlipidemia → fatal.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Cetamina — Controvérsia</div>
+          <div class="dc">Antagonista NMDA → bloqueia excitotoxicidade glutamatérgica (mecanismo teórico de neuroproteção em isquemia). Porém: ↑CMRO₂, ↑FSC, pode ↑PIC → <strong>historicamente contraindicada em HIC</strong>. Evidências recentes: em pacientes com VM controlada e PaCO₂ normal, cetamina pode não aumentar PIC significativamente (estudos em TCE). Papel neuroprotetor: promissor mas <strong>não comprovado clinicamente</strong> → não substitui barbitúricos/propofol.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONITORIZAÇÃO NEUROLÓGICA -->
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">06</span> Monitorização Neurológica Intraoperatória
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">BIS e Entropia — Profundidade Anestésica</div>
+          <div class="dc"><strong>BIS (Índice Bispectral):</strong> análise do EEG frontal → escala 0-100. Alvo anestesia geral: <strong>40-60</strong>. &lt;40: anestesia profunda (burst suppression). &gt;60: risco de awareness. <strong>Entropia:</strong> State Entropy (SE, 0-91) e Response Entropy (RE, 0-100) — RE inclui EMG frontal, útil para detectar resposta somática. Limitações: cetamina, N₂O e opioides alteram pouco o BIS; artefatos por EMG, hipotermia.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">SSEP — Potenciais Evocados Somatossensoriais</div>
+          <div class="dc">Estímulo no nervo periférico (mediano, tibial) → registro cortical. Monitora <strong>vias sensitivas (colunas dorsais/posteriores da medula)</strong>. Alteração significativa: ↓amplitude &gt;50% ou ↑latência &gt;10%. Indicações: cirurgias de coluna (correção de escoliose), cirurgia de aorta torácica, craniotomias. <strong>Halogenados &gt;0.5 MAC deprimem SSEP significativamente → usar TIVA para monitorização neurofisiológica ideal.</strong></div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">MEP — Potenciais Evocados Motores</div>
+          <div class="dc">Estimulação transcraniana → registro em músculos periféricos. Monitora <strong>trato corticoespinhal (vias motoras — colunas anteriores/laterais da medula)</strong>. Mais sensível que SSEP para isquemia medular anterior. <strong>BNM deve ser parcial ou ausente</strong> (contraindicação relativa a bloqueio completo — impossibilita registro). Exige TIVA (propofol + remifentanil) — halogenados abolem MEP em doses clínicas.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">EEG Intraoperatório e NIRS</div>
+          <div class="dc"><strong>EEG contínuo:</strong> craniectomias, endarterectomia carotídea (detectar isquemia hemisférica durante clampeamento), cirurgia de epilepsia. <strong>NIRS (Near-Infrared Spectroscopy):</strong> mede saturação regional de O₂ cerebral (rSO₂) por espectroscopia no infravermelho próximo. Normal: 60-80%. ↓rSO₂ &gt;20% do basal ou &lt;50% absoluto → intervenção (↑PAM, ↑FiO₂, ↑DC, transfusão). Útil em: CEC, endarterectomia carotídea, cirurgia em posição sentada, neonatos.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /fisio-neuro -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 6 — CASOS E QUIZ
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="fisio-casos">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px">
+      <strong>3 Cenários TEA/TSA</strong> — clique no cabeçalho para expandir a discussão e resolução.
+    </div>
+
+    <!-- CASO 1 -->
+    <div class="caso-card" id="fisiocaso1">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <div class="caso-num">1</div>
+        <div class="caso-title">V/Q e Shunt — Hipoxemia Refratária Pós-Pneumectomia</div>
+        <div class="caso-arrow">›</div>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">
+          Paciente 62 anos, submetido a pneumectomia direita por carcinoma broncogênico. No pós-operatório imediato em UTI, SpO₂ 88% com máscara de O₂ a FiO₂ 100%. Gasometria: PaO₂ 55 mmHg, PaCO₂ 38 mmHg, pH 7.40, HCO₃⁻ 24 mEq/L. Por que a FiO₂ alta não melhora a hipoxemia? Como calcular o shunt?
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:var(--cyan);margin:12px 0 8px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px">RESOLUÇÃO</div>
+
+        <div style="font-size:13px;line-height:1.8">
+          <strong>1. Diagnóstico fisiológico:</strong><br>
+          • PAO₂ com FiO₂ 1.0 = 1.0 × (760-47) - 38/0.8 = 713 - 47.5 = <strong>665.5 mmHg</strong><br>
+          • PaO₂ = 55 mmHg → Gradiente A-a = 665.5 - 55 = <strong>610.5 mmHg</strong> (massivamente elevado)<br>
+          • Gradiente A-a elevado + hipoxemia refratária a O₂ 100% = <strong>shunt verdadeiro</strong><br>
+          • O pulmão remanescente (esquerdo) não é suficiente para oxigenar todo o DC → áreas de atelectasia pós-cirúrgica funcionam como shunt<br><br>
+
+          <strong>2. Por que FiO₂ 100% não melhora:</strong><br>
+          • No shunt verdadeiro, o sangue passa por alvéolos colapsados/não ventilados → o O₂ suplementar não alcança estes alvéolos<br>
+          • O sangue shuntado (sangue venoso misto) mistura-se com o sangue oxigenado → queda desproporcional da PaO₂<br>
+          • Quando shunt &gt;30% do DC, mesmo FiO₂ 1.0 não corrige a hipoxemia adequadamente<br><br>
+
+          <strong>3. Cálculo do Shunt (Equação de Berggren):</strong><br>
+          • Qs/Qt = (CcO₂ - CaO₂) / (CcO₂ - CvO₂)<br>
+          • CcO₂ = Hb × 1.34 × 1.0 + PAO₂ × 0.003 (capilar pulmonar ideal = saturação 100%)<br>
+          • CaO₂ = Hb × 1.34 × SaO₂ + PaO₂ × 0.003<br>
+          • CvO₂ requer amostra de sangue venoso misto (cateter de AP) ou estimativa<br>
+          • Estimando Hb=13, SaO₂ ~88%, SvO₂ ~60%: Qs/Qt ≈ <strong>35-40%</strong><br><br>
+
+          <strong>4. Manejo:</strong><br>
+          • CPAP no pulmão remanescente para recrutar atelectasias<br>
+          • Fisioterapia respiratória intensiva<br>
+          • Posicionamento com pulmão remanescente para baixo (otimiza V/Q)<br>
+          • PEEP cauteloso (não comprometer o DC com pulmão único)<br>
+          • Se refratário: considerar ECMO como ponte
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 2 -->
+    <div class="caso-card" id="fisiocaso2">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <div class="caso-num">2</div>
+        <div class="caso-title">Curvas P-V e Choque Distributivo</div>
+        <div class="caso-arrow">›</div>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">
+          Paciente 55 anos, internado há 3 dias por peritonite fecal. Evolui com PA 85/55 mmHg (PAM 65), FC 128 bpm, DC por termodiluição = 8.5 L/min (IC = 4.7 L/min/m²), PVC 4 mmHg, PAWP 6 mmHg, RVS = 400 dinas·s/cm⁵. Lactato 4.2 mmol/L. Qual o tipo de choque? Qual o mecanismo fisiológico? Qual DVA de primeira linha e por quê?
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:var(--cyan);margin:12px 0 8px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px">RESOLUÇÃO</div>
+
+        <div style="font-size:13px;line-height:1.8">
+          <strong>1. Diagnóstico — Choque Séptico Distributivo (Hiperdinâmico):</strong><br>
+          • DC = 8.5 L/min (ALTO) → não é cardiogênico<br>
+          • RVS = 400 (MUITO BAIXO; normal 800-1200) → vasoplegia profunda<br>
+          • PVC/PAWP baixos → pré-carga inadequada apesar de alto DC<br>
+          • PAM limítrofe (65) com taquicardia compensatória → perfusão marginal<br>
+          • Lactato 4.2 → hipoperfusão tecidual apesar do alto DC (distribuição anômala do fluxo)<br><br>
+
+          <strong>2. Mecanismo Fisiológico:</strong><br>
+          • Sepse → liberação massiva de mediadores inflamatórios (TNF-α, IL-1, IL-6) → ativação de iNOS → produção excessiva de NO → vasodilatação generalizada<br>
+          • NO ativa guanilato-ciclase → ↑cGMP → relaxamento do músculo liso vascular → ↓RVS<br>
+          • Disfunção endotelial → ↑permeabilidade capilar → extravasamento de fluido → hipovolemia relativa<br>
+          • Coração responde com ↑FC e ↑VS (fase hiperdinâmica) → DC alto, mas ineficaz por shunt microvascular<br>
+          • No loop P-V: a pós-carga está drasticamente reduzida → loop mais largo (maior VS) mas com pressão baixa<br><br>
+
+          <strong>3. DVA de Primeira Linha — Noradrenalina:</strong><br>
+          • <strong>Noradrenalina 0.1-2 mcg/kg/min</strong> (Surviving Sepsis Campaign 2021 — recomendação forte)<br>
+          • Mecanismo: agonista α₁ potente → ↑RVS → restaura tônus vascular e PAM<br>
+          • Efeito β₁ modesto → mantém contratilidade sem taquicardia excessiva<br>
+          • Por que NÃO dopamina: mais arritmogênica, maior mortalidade em metanálises (De Backer, NEJM 2010)<br>
+          • Se refratário (dose &gt;0.5 mcg/kg/min): adicionar <strong>vasopressina 0.03 U/min</strong> (ação no receptor V1 — independente de catecolaminas)<br>
+          • Considerar hidrocortisona 200 mg/dia se choque refratário a 2 vasopressores<br><br>
+
+          <strong>4. Alvos de Ressuscitação:</strong><br>
+          • PAM ≥65 mmHg (individualizar)<br>
+          • Lactato em queda (clearance de lactato &gt;10%/2h)<br>
+          • Diurese &gt;0.5 mL/kg/h<br>
+          • SvcO₂ &gt;65% (se cateter venoso central disponível)
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 3 -->
+    <div class="caso-card" id="fisiocaso3">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <div class="caso-num">3</div>
+        <div class="caso-title">CSHT e Tempo de Despertar — TIVA</div>
+        <div class="caso-arrow">›</div>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">
+          Cirurgia de coluna posterior de 6 horas com monitorização neurofisiológica (SSEP + MEP). TIVA com propofol TCI (modelo de Marsh, Ce alvo 3.5 mcg/mL) e remifentanil TCI (modelo de Minto, Ce alvo 4 ng/mL). Cirurgia terminou. Em quanto tempo o paciente acorda? Compare com um cenário hipotético onde fentanil em infusão contínua (2 mcg/kg/h) tivesse sido usado no lugar do remifentanil. Qual a implicação prática?
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:var(--cyan);margin:12px 0 8px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px">RESOLUÇÃO</div>
+
+        <div style="font-size:13px;line-height:1.8">
+          <strong>1. Cenário Real — Propofol + Remifentanil:</strong><br>
+          • Propofol CSHT após 6h de infusão: ~30-35 min para Cp cair 50%<br>
+          • Despertar ocorre quando Ce de propofol cai abaixo de ~1.5-2.0 mcg/mL (concentração de despertar)<br>
+          • De 3.5 para 1.5 mcg/mL = queda de ~57% → ligeiramente mais que 50% → estimativa: <strong>35-45 minutos</strong><br>
+          • Remifentanil: CSHT = 3-5 minutos → efeito opioide termina em &lt;10 minutos independente da duração<br>
+          • Paciente acordará com drive ventilatório restaurado, apto para avaliação neurológica precoce<br>
+          • <strong>Tempo estimado para extubação: 15-25 minutos</strong> (propofol redistribui rapidamente nos primeiros 15 min)<br><br>
+
+          <strong>2. Cenário Hipotético — Propofol + Fentanil (infusão contínua 6h):</strong><br>
+          • Fentanil CSHT após 6h: ~250-350 minutos (~4-6 horas!)<br>
+          • Acúmulo massivo no V3 (tecido adiposo) → redistribuição lenta para o plasma após interrupção<br>
+          • Mesmo após propofol dissipar (30-40 min), fentanil residual manteria:<br>
+          &nbsp;&nbsp;→ Depressão respiratória significativa<br>
+          &nbsp;&nbsp;→ Sedação residual (potencialização com propofol residual)<br>
+          &nbsp;&nbsp;→ Miose, rigidez torácica em altas doses<br>
+          • Extubação provavelmente só segura após <strong>2-4 horas</strong> de monitorização com suporte ventilatório<br>
+          • Risco de reintubação por depressão respiratória tardia (re-narcotização)<br><br>
+
+          <strong>3. Implicação Prática:</strong><br>
+          • <strong>TIVA com propofol + remifentanil é o padrão-ouro para cirurgias longas com monitorização neurofisiológica:</strong><br>
+          &nbsp;&nbsp;→ Halogenados deprimem SSEP/MEP → contraindicados<br>
+          &nbsp;&nbsp;→ Remifentanil: despertar ultrarrápido → avaliação neurológica precoce (essencial após cirurgia de coluna)<br>
+          &nbsp;&nbsp;→ Fentanil em infusão contínua atrasa o despertar em horas → inaceitável quando avaliação motora é necessária<br>
+          • <strong>Cuidado na transição:</strong> remifentanil termina abruptamente → iniciar analgesia multimodal 30-40 min antes do fim (morfina 0.1 mg/kg IV, dipirona, AINE se apropriado, infiltração de ferida)<br>
+          • Se sufentanil fosse usado (CSHT ~70-80 min após 6h): intermediário — aceitável para cirurgias de 3-4h, mas inferior ao remifentanil para 6h+
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · Morgan & Mikhail · Miller · Uso educacional</div>
+</div><!-- /fisio-casos -->
+</div>

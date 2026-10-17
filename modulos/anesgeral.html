@@ -1,0 +1,1383 @@
+<div class="screen" id="screen-anesgeral">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Anestesia Geral e Sedação</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="ag-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('ag','mpa',this)">MPA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ag','sedacao',this)">Sedação</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ag','tiva',this)">TIVA/TCI</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ag','inalatoria',this)">Inalatória</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ag','balanceada',this)">Balanceada</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ag','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ag','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('ag','casos',this)">Casos</button>
+  </div>
+
+  <!-- TAB 1 — MPA -->
+  <div class="tab-panel active" id="ag-mpa">
+    <div class="page-wrap">
+
+      <!-- OBJETIVOS DA MPA -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">01</span> Medicação Pré-Anestésica — Objetivos e Racional
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            A MPA (Medicação Pré-Anestésica) é administrada antes da indução com o objetivo de otimizar as condições do paciente, reduzir a dose de agentes anestésicos e melhorar o conforto e a segurança perioperatória. A tendência moderna (protocolos ERAS) é a <strong>redução ou abolição de MPA sedativa</strong>, priorizando analgesia preventiva e mobilização precoce.
+          </div>
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-green">
+              <strong>OBJETIVOS CLÁSSICOS</strong><br>
+              • <strong>Ansiolítico:</strong> reduz ansiedade e estresse pré-operatório<br>
+              • <strong>Analgésico:</strong> analgesia preventiva → reduz dor pós-op<br>
+              • <strong>Antiemético:</strong> ↓NVPO (dexametasona, ondansetrona antecipada)<br>
+              • <strong>Amnésia:</strong> benzodiazepínicos — amnésia anterógrada<br>
+              • <strong>Simpaticomimético:</strong> ↓resposta ao estresse cirúrgico (α2-agonistas)
+            </div>
+            <div class="alert a-teal">
+              <strong>TENDÊNCIA ERAS</strong><br>
+              • Reduzir ou eliminar benzodiazepínicos de rotina<br>
+              • Priorizar analgesia preventiva: cetamina, AINEs, gabapentinoides<br>
+              • Benefício: mobilização precoce, menor sedação residual<br>
+              • Pacientes de alto risco cirúrgico: avaliar custo-benefício individual
+            </div>
+          </div>
+
+          <div class="sh sh-green">Indicações Específicas de MPA</div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Objetivo</th><th>Fármaco de Escolha</th><th>Alternativa</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td>Ansiolítico / Amnésia</td><td>Midazolam</td><td>Clonidina</td><td>Benzodiazepínico mais utilizado; reversor disponível (flumazenil)</td></tr>
+              <tr><td>Analgesia preventiva</td><td>Cetamina 0.15–0.3 mg/kg VO/IV</td><td>Fentanil IV pré-indução</td><td>Reduz consumo de opioide pós-op; cetamina VO com OJ</td></tr>
+              <tr><td>↓Resposta hemodinâmica</td><td>Clonidina 2–4 mcg/kg VO</td><td>Dexmedetomidina</td><td>↓MAC 15–25%, ↓taquicardia à laringoscopia</td></tr>
+              <tr><td>Antiemético (profilaxia)</td><td>Dexametasona 4–8 mg IV</td><td>Ondansetrona 4 mg IV</td><td>Na indução; máximo benefício Apfel ≥2</td></tr>
+              <tr><td>Analgesia preventiva opioide</td><td>Fentanil 50–100 mcg IV</td><td>Morfina IM</td><td>10 min antes da indução; cuidado em ASA ≥III e idosos</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- MIDAZOLAM -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">02</span> Midazolam — Benzodiazepínico de Referência na MPA
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            O midazolam é o benzodiazepínico mais utilizado como MPA. Seu perfil farmacológico (lipossolubilidade, meia-vida curta, metabolismo hepático via CYP3A4) confere vantagens sobre diazepam e lorazepam na prática perioperatória.
+          </div>
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-teal">
+              <strong>DOSES E VIAS</strong><br>
+              • <strong>VO adulto:</strong> 0.02–0.05 mg/kg (máx 7.5 mg) — 30–60 min antes<br>
+              • <strong>VO pediátrico:</strong> 0.3–0.5 mg/kg — 30 min antes; sabor amargo → disfarçar em suco<br>
+              • <strong>IV adulto:</strong> 1–2 mg IV em bolus lento — 5–15 min antes<br>
+              • <strong>Intranasal (pediatria):</strong> 0.2 mg/kg — início rápido (~10 min); irritação local<br>
+              • <strong>Retal:</strong> 0.3–0.5 mg/kg — alternativa em crianças não cooperativas
+            </div>
+            <div class="alert a-gold">
+              <strong>REVERSOR: FLUMAZENIL</strong><br>
+              • Dose: 0.01 mg/kg IV (máx 0.2 mg/dose); repetir a cada 1 min até 1 mg total<br>
+              • Início: 1–2 min; duração: 30–60 min (mais curto que midazolam!)<br>
+              • <strong>Atenção:</strong> ressedação possível — monitorizar após antagonismo<br>
+              • Não reverte depressão respiratória de opioides
+            </div>
+          </div>
+
+          <div class="algo-box algo-r" style="margin-bottom:12px">
+            <strong>CONTRAINDICAÇÕES E PRECAUÇÕES DO MIDAZOLAM</strong><br>
+            <span class="drug-pill bad">Idosos (>70 anos)</span> — risco de delirium pós-operatório e sedação prolongada; usar doses ≤1 mg IV<br>
+            <span class="drug-pill bad">DPOC grave / Insuficiência Respiratória</span> — depressão respiratória; avaliar custo-benefício<br>
+            <span class="drug-pill bad">Hepatopatia grave</span> — metabolismo reduzido → acúmulo e sedação prolongada<br>
+            <span class="drug-pill bad">Gestação 1.º trimestre</span> — risco teratogênico potencial (categoria D)<br>
+            <span class="drug-pill warn">Apneia obstrutiva do sono</span> — usar dose menor; ter reversor disponível
+          </div>
+
+          <div class="sh sh-teal">Efeitos Farmacológicos do Midazolam</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Efeito</th><th>Mecanismo</th><th>Aplicação Clínica</th></tr></thead>
+            <tbody>
+              <tr><td>Ansiolítico</td><td>Potenciação GABA-A → ↑Cl⁻ intracelular → hiperpolarização neuronal</td><td>Reduz ansiedade pré-operatória — especialmente útil em pediátrico</td></tr>
+              <tr><td>Amnésia anterógrada</td><td>Bloqueio de consolidação de memória no hipocampo</td><td>Paciente não recordará eventos peri-indução</td></tr>
+              <tr><td>Sedação</td><td>Depressão do SNC dose-dependente</td><td>Facilita separação de familiar (crianças) e cooperação na MR/TC</td></tr>
+              <tr><td>Anticonvulsivante</td><td>Potenciação GABAérgica</td><td>Útil em pré-op de neurocirurgia ou histórico de convulsão</td></tr>
+              <tr><td>Relaxamento muscular</td><td>Efeito GABAérgico em interneurônios espinhais</td><td>Contribui para intubação em doses altas; não substitui BNM</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- CLONIDINA E DEXMEDETOMIDINA -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">03</span> α2-Agonistas na MPA — Clonidina e Dexmedetomidina
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            Os α2-agonistas oferecem um perfil único: sedação sem depressão respiratória significativa, analgesia, atenuação da resposta hemodinâmica ao estresse e redução do consumo de anestésicos (↓MAC). São especialmente úteis em pacientes com alto risco cardiovascular, obesidade e hipertensão.
+          </div>
+
+          <div class="sh sh-teal">Clonidina — Agonista α2 Parcial</div>
+          <div class="g2" style="margin-top:8px; margin-bottom:12px">
+            <div class="alert a-teal">
+              <strong>DOSE E ADMINISTRAÇÃO</strong><br>
+              • Via oral: 2–4 mcg/kg VO — 60–90 min antes da cirurgia<br>
+              • Adulto típico 70 kg: 150–300 mcg VO (comprimido 100 mcg ou 150 mcg)<br>
+              • Transdérmico (adesivo): não prático para uso agudo pré-op<br>
+              • Início de ação: 45–90 min VO; pico: 1–3h
+            </div>
+            <div class="alert a-green">
+              <strong>EFEITOS BENÉFICOS</strong><br>
+              • ↓MAC 15–25% (reduz consumo de volátil ou propofol)<br>
+              • ↓Resposta hemodinâmica à laringoscopia (↓pico de PA e FC)<br>
+              • ↓NVPO — redução estimada 30–40%<br>
+              • Analgesia pós-operatória (efeito central e espinhal)<br>
+              • ↓Tremores pós-anestésicos<br>
+              • Sedação leve sem depressão respiratória
+            </div>
+          </div>
+          <div class="algo-box algo-r">
+            <strong>Atenção:</strong> Clonidina pode causar hipotensão e bradicardia, especialmente em pacientes hipovolêmicos, idosos e em uso de betabloqueadores. Monitorizar PA após administração.
+          </div>
+
+          <div class="sh sh-green" style="margin-top:14px">Dexmedetomidina — Agonista α2 Seletivo (8x mais que clonidina)</div>
+          <div class="g2" style="margin-top:8px; margin-bottom:12px">
+            <div class="alert a-green">
+              <strong>INFUSÃO PARA SEDAÇÃO/MPA</strong><br>
+              • Infusão de manutenção: 0.2–1.0 mcg/kg/h IV<br>
+              • Dose de ataque (opcional): 0.5–1 mcg/kg IV em 10–20 min (monitorizar bradicardia)<br>
+              • Sedação "cooperativa" — paciente arousável<br>
+              • Sem depressão respiratória clinicamente significativa em doses usuais
+            </div>
+            <div class="alert a-teal">
+              <strong>INDICAÇÕES PREFERENCIAS</strong><br>
+              • Procedimentos em UTI (intubação acordado, trocas de curativo)<br>
+              • Pacientes com SAOS (seguro quanto à respiração)<br>
+              • Cirurgia de tireoide e carótida (preserva monitorização neurológica)<br>
+              • Prevenção de emergence agitation em crianças<br>
+              • Neurocirurgia (↓CMRO₂, neuroproteção relativa)
+            </div>
+          </div>
+          <div class="algo-box algo-r">
+            <span class="drug-pill bad">Bradicardia e Bloqueio AV</span> — principal efeito adverso; evitar em bradicardia prévia &lt;50 bpm, BAV 2.º/3.º grau, uso de diltiazem/verapamil em doses altas<br>
+            <span class="drug-pill warn">Hipotensão</span> — resposta bifásica: hipertensão transitória à dose de ataque (ativação α2B vascular) seguida de hipotensão
+          </div>
+        </div>
+      </div>
+
+      <!-- OPIOIDES PRÉ-OP -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">04</span> Opioides e Analgesia Preventiva Pré-Operatória
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            A analgesia preventiva visa reduzir a sensibilização central e periférica, diminuindo a intensidade e duração da dor pós-operatória. O conceito é administrar o analgésico <em>antes</em> do estímulo nociceptivo (incisão), não apenas tratar a dor estabelecida.
+          </div>
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-teal">
+              <strong>FENTANIL PRÉ-INDUÇÃO</strong><br>
+              • Dose: 50–100 mcg IV — 10 min antes da indução<br>
+              • Objetivo: analgesia preventiva + atenua resposta ao estímulo de IOT<br>
+              • Pacientes opioides-naive: iniciar com 50 mcg<br>
+              • Idosos e ASA ≥3: doses menores (25–50 mcg), monitorizar depressão respiratória
+            </div>
+            <div class="alert a-gold">
+              <strong>MULTIMODAL ERAS — OPIOIDE-SPARING</strong><br>
+              • Cetamina 0.15–0.3 mg/kg IV pré-indução (antagonismo NMDA)<br>
+              • Paracetamol 1 g IV pré-op (seguro, ↓requerimento de opioide)<br>
+              • AINEs (se sem contraindicação): ibuprofeno VO ou cetorolaco IV<br>
+              • Gabapentina 300–600 mg VO 1–2h antes (dor neuropática pós-op)<br>
+              • Pregabalina 75–150 mg VO (mesmo objetivo)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA RESUMO MPA -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">05</span> Tabela Resumo — MPA Comparativa
+        </div>
+        <div class="card-body">
+<div class="tbl-wrap xwide">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr><th style="white-space:nowrap">Droga</th><th>Dose</th><th>Via</th><th>Timing</th><th>Vantagem</th><th>Cuidado</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Midazolam</strong></td>
+                <td>0.02–0.05 mg/kg (adulto); 0.3–0.5 mg/kg (criança)</td>
+                <td>VO / IV</td>
+                <td>30–60 min antes</td>
+                <td>Amnésia, ansiolítico, reversor disponível</td>
+                <td>Delirium em idosos, DPOC, acúmulo em hepatopatia</td>
+              </tr>
+              <tr>
+                <td><strong>Clonidina</strong></td>
+                <td>2–4 mcg/kg</td>
+                <td>VO</td>
+                <td>60–90 min antes</td>
+                <td>↓MAC 15–25%, ↓NVPO, ↓resposta à laringoscopia</td>
+                <td>Hipotensão, bradicardia, hipoglicemia (crianças)</td>
+              </tr>
+              <tr>
+                <td><strong>Dexmedetomidina</strong></td>
+                <td>0.5–1 mcg/kg/h (infusão)</td>
+                <td>IV</td>
+                <td>Iniciar 30 min antes / perioperatório</td>
+                <td>Sedação sem dep. respiratória, analgesia, neuroproteção</td>
+                <td>Bradicardia, hipotensão, custo elevado</td>
+              </tr>
+              <tr>
+                <td><strong>Fentanil</strong></td>
+                <td>50–100 mcg</td>
+                <td>IV</td>
+                <td>10 min antes da indução</td>
+                <td>Analgesia preventiva, atenua resposta à IOT</td>
+                <td>Depressão respiratória, rigidez torácica em doses altas</td>
+              </tr>
+              <tr>
+                <td><strong>Cetamina</strong></td>
+                <td>0.15–0.3 mg/kg</td>
+                <td>IV / VO</td>
+                <td>Pré-indução</td>
+                <td>Analgesia preventiva NMDA, opioide-sparing, broncodilatação</td>
+                <td>Alucinações (mitigar com midazolam), ↑secreções</td>
+              </tr>
+              <tr>
+                <td><strong>Paracetamol</strong></td>
+                <td>1 g IV</td>
+                <td>IV</td>
+                <td>30–60 min antes</td>
+                <td>Analgesia sem riscos gastrointestinais, ↓opioide</td>
+                <td>Hepatotoxicidade em alcoólicos e hepatopatas</td>
+              </tr>
+              <tr>
+                <td><strong>Gabapentina</strong></td>
+                <td>300–600 mg</td>
+                <td>VO</td>
+                <td>1–2h antes</td>
+                <td>↓Dor neuropática pós-op, ↓consumo de opioide</td>
+                <td>Tontura, sedação, queda (idosos), interação com outros sedativos</td>
+              </tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="algo-box algo-g" style="margin-top:12px">
+            <strong>Recomendação ERAS:</strong> Em cirurgias eletivas de médio/grande porte, preferir protocolo multimodal sem benzodiazepínico (paracetamol + cetamina ± dexmedetomidina) ao invés de midazolam isolado. Reservar midazolam para casos de alta ansiedade ou em ambiente não-ERAS. Grau de evidência: <strong>ERAS Society 2023 — Forte</strong>.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /ag-mpa -->
+
+  <!-- TAB 2 — SEDAÇÃO -->
+  <div class="tab-panel" id="ag-sedacao">
+    <div class="page-wrap">
+
+      <!-- CONCEITO E ESCALAS -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">01</span> Conceito — Espectro da Sedação
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            Sedação é a depressão progressiva e dose-dependente do Sistema Nervoso Central, formando um <strong>espectro contínuo</strong> da vigília plena até a anestesia geral. O objetivo clínico é atingir o nível adequado para cada procedimento, mantendo a segurança do paciente. A transição entre níveis pode ser imprevisível — o risco aumenta conforme a profundidade.
+          </div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr><th>Nível</th><th>Responsividade</th><th>Via Aérea</th><th>Respiração</th><th>CV</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Sedação Mínima (Ansiolítico)</strong></td><td>Normal ao comando verbal</td><td>Intacta</td><td>Normal</td><td>Intacta</td></tr>
+              <tr><td><strong>Sedação Moderada (Consciente)</strong></td><td>Arousável ao toque/verbal</td><td>Mantida sem suporte</td><td>Adequada</td><td>Mantida</td></tr>
+              <tr><td><strong>Sedação Profunda</strong></td><td>Arousável apenas a estímulo doloroso</td><td>Pode requerer suporte</td><td>Pode estar inadequada</td><td>Geralmente mantida</td></tr>
+              <tr><td><strong>Anestesia Geral</strong></td><td>Não arousável</td><td>Frequentemente requer suporte</td><td>Frequentemente inadequada</td><td>Pode estar comprometida</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="algo-box algo-r" style="margin-top:10px">
+            <strong>Alerta ASA:</strong> Toda sedação realizada fora do centro cirúrgico requer os mesmos recursos de segurança: O₂ suplementar, equipamento de aspiração, desfibrilador disponível e monitorização mínima (SpO₂, ETCO₂ capnografia, ECG, PANi). O profissional responsável pela sedação NÃO deve realizar o procedimento simultaneamente.
+          </div>
+        </div>
+      </div>
+
+      <!-- ESCALAS DE SEDAÇÃO -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">02</span> Escalas de Sedação — Ramsay e RASS
+        </div>
+        <div class="card-body">
+          <div class="sh sh-green">Escala de Ramsay — Sedação Clínica</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Nível</th><th>Descrição</th><th>Interpretação</th></tr></thead>
+            <tbody>
+              <tr><td><strong>1</strong></td><td>Acordado, ansioso e agitado ou inquieto</td><td>Subdosado / agitado</td></tr>
+              <tr><td><strong>2</strong> <span class="drug-pill good">Alvo proc.</span></td><td>Acordado, cooperativo, orientado e tranquilo</td><td>Sedação mínima-moderada ideal para procedimentos</td></tr>
+              <tr><td><strong>3</strong> <span class="drug-pill good">Alvo proc.</span></td><td>Adormecido, mas com resposta rápida a estímulo verbal</td><td>Sedação moderada — adequada para maioria dos procedimentos</td></tr>
+              <tr><td><strong>4</strong></td><td>Adormecido, com resposta lenta ao estímulo verbal</td><td>Sedação profunda — risco de perda de VA</td></tr>
+              <tr><td><strong>5</strong></td><td>Adormecido, resposta apenas a estímulos físicos intensos</td><td>Sedação muito profunda — monitorização rigorosa</td></tr>
+              <tr><td><strong>6</strong></td><td>Sem resposta a estímulos físicos intensos</td><td>Equivalente à anestesia geral</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="alert a-green" style="margin-top:10px; margin-bottom:14px">
+            <strong>Alvo para sedação em procedimentos:</strong> Ramsay 2–3 (cooperativo e tranquilo, com manutenção da via aérea).
+          </div>
+
+          <div class="sh sh-teal">RASS — Richmond Agitation-Sedation Scale (UTI)</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Escore</th><th>Descrição</th><th>Interpretação</th></tr></thead>
+            <tbody>
+              <tr><td><strong>+4</strong></td><td>Combativo, violento, perigo imediato à equipe</td><td>Agitação extrema</td></tr>
+              <tr><td><strong>+3</strong></td><td>Muito agitado — tenta retirar tubos/cateteres</td><td>Agitação grave</td></tr>
+              <tr><td><strong>+2</strong></td><td>Agitado — movimentos frequentes e não intencionais</td><td>Agitação moderada</td></tr>
+              <tr><td><strong>+1</strong></td><td>Inquieto — ansioso, mas movimentos não agressivos</td><td>Agitação leve</td></tr>
+              <tr><td><strong>0</strong></td><td>Alerta e calmo</td><td>Normal</td></tr>
+              <tr><td><strong>-1</strong> <span class="drug-pill good">Alvo UTI</span></td><td>Sonolento — mantém contato visual >10s ao chamado</td><td>Sedação leve</td></tr>
+              <tr><td><strong>-2</strong> <span class="drug-pill good">Alvo UTI</span></td><td>Sedação leve — acordável brevemente ao chamado (&lt;10s)</td><td>Sedação leve-moderada</td></tr>
+              <tr><td><strong>-3</strong></td><td>Sedação moderada — apenas movimento ao voz sem contato</td><td>Sedação moderada</td></tr>
+              <tr><td><strong>-4</strong></td><td>Sedação profunda — responde apenas a estímulo físico</td><td>Sedação profunda</td></tr>
+              <tr><td><strong>-5</strong></td><td>Não arousável — sem resposta a voz nem estímulo físico</td><td>Coma</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="alert a-teal" style="margin-top:10px">
+            <strong>Alvo RASS na UTI (PADIS Guidelines 2018):</strong> -2 a 0 para maioria dos pacientes em VM. Sedação mais profunda (RASS -3 a -5) apenas quando clinicamente necessário (SDRA grave, hipertensão intracraniana, status epilepticus).
+          </div>
+        </div>
+      </div>
+
+      <!-- FÁRMACOS DE SEDAÇÃO -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">03</span> Fármacos de Sedação — Comparação
+        </div>
+        <div class="card-body">
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr>
+              <th style="white-space:nowrap">Fármaco</th><th>Dose</th><th>Duração</th><th>Vantagem Principal</th><th>Risco/Limitação</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Propofol</strong></td>
+                <td>Sedação: 0.5–1 mg/kg/h infusão<br>Bolus: 0.5 mg/kg IV</td>
+                <td><span class="drug-pill good">Curta</span></td>
+                <td>Rápido despertar, antiemético, controle preciso da profundidade</td>
+                <td><span class="drug-pill bad">Hipotensão</span>, dor à injeção, PRIS (propofol infusion syndrome) em doses >4 mg/kg/h por >48h</td>
+              </tr>
+              <tr>
+                <td><strong>Dexmedetomidina</strong></td>
+                <td>0.2–0.7 mcg/kg/h infusão<br>Ataque: 0.5–1 mcg/kg em 10–20 min</td>
+                <td><span class="drug-pill warn">Médio</span></td>
+                <td>Sedação cooperativa, <strong>sem depressão respiratória</strong>, analgesia, ↓delirium UTI</td>
+                <td><span class="drug-pill bad">Bradicardia</span>, hipotensão, custo elevado, não substitui opioide em cirurgia</td>
+              </tr>
+              <tr>
+                <td><strong>Midazolam</strong></td>
+                <td>Bolus: 0.02–0.1 mg/kg IV<br>Infusão: 0.02–0.1 mg/kg/h</td>
+                <td><span class="drug-pill bad">Longa</span></td>
+                <td>Amnésia, ansiolítico, reversor disponível (flumazenil), anticonvulsivante</td>
+                <td>Depressão respiratória, <strong>acúmulo em uso prolongado</strong> (metabólitos ativos), delirium em idosos</td>
+              </tr>
+              <tr>
+                <td><strong>Cetamina</strong></td>
+                <td>Bolus: 0.5–1 mg/kg IV<br>Infusão: 0.1–0.5 mg/kg/h</td>
+                <td><span class="drug-pill good">Curta</span></td>
+                <td>Analgesia dissociativa, ↑FC e PA, broncodilatação, preserva reflexos de VA</td>
+                <td>Alucinações e emergence reactions (↓com midazolam), ↑secreções, ↑PIC em PCO₂ normal</td>
+              </tr>
+              <tr>
+                <td><strong>Remifentanil</strong></td>
+                <td>0.05–0.2 mcg/kg/min infusão</td>
+                <td><span class="drug-pill good">Ultracurta</span></td>
+                <td>Titulável, despertar rápido independente da duração, analgesia potente</td>
+                <td>Rigidez torácica em bolus rápido, hiperalgesia se descontinuado abruptamente</td>
+              </tr>
+              <tr>
+                <td><strong>Etomidato</strong></td>
+                <td>Bolus: 0.1–0.3 mg/kg IV</td>
+                <td><span class="drug-pill warn">Médio</span></td>
+                <td>Mínima depressão cardiovascular — útil em instabilidade hemodinâmica</td>
+                <td>Supressão adrenocortical (uso único = sem problema; infusão = risco de insuficiência adrenal)</td>
+              </tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- SEDAÇÃO FORA DO CO -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">04</span> Sedação Fora do Centro Cirúrgico (Non-OR Anesthesia)
+        </div>
+        <div class="card-body">
+          <div class="alert a-gold" style="margin-bottom:12px">
+            Procedimentos realizados fora do CO (endoscopia, radiologia intervencionista, hemodinâmica, tomografia, ressonância, radioterapia) apresentam <strong>risco aumentado</strong> de eventos adversos respiratórios, pois frequentemente há limitação de acesso ao paciente, ambiente desfamiliar e ausência de equipe de suporte imediato.
+          </div>
+
+          <div class="sh sh-green">Checklist Mínimo ASA para Sedação Fora do CO</div>
+          <div class="algo-box algo-g" style="margin-top:8px; margin-bottom:12px">
+            ✔ Avaliação pré-sedação: jejum, comorbidades, alergias, medicações em uso, classificação ASA<br>
+            ✔ Oxigênio suplementar disponível (cânula nasal ou máscara)<br>
+            ✔ Equipamento de aspiração funcional e testado<br>
+            ✔ Materiais de via aérea difícil (máscara laríngea, laringoscópio, TET)<br>
+            ✔ Desfibrilador acessível<br>
+            ✔ Medicamentos de emergência (epinefrina, atropina, flumazenil, naloxona)<br>
+            ✔ Profissional dedicado exclusivamente à sedação (não realizar o procedimento simultaneamente)<br>
+            ✔ Monitorização: SpO₂ contínua, ETCO₂ (capnografia), ECG, PANi
+          </div>
+
+          <div class="sh sh-teal">Protocolos por Especialidade</div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Especialidade / Procedimento</th><th>Fármaco de Escolha</th><th>Protocolo Típico</th><th>Particularidade</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Endoscopia digestiva (EDA/colonoscopia)</td>
+                <td><span class="drug-pill good">Propofol</span></td>
+                <td>Bolus 1–1.5 mg/kg → infusão 2–6 mg/kg/h ou boluses de resgate 0.5 mg/kg</td>
+                <td>Protocolo NAAP (non-anesthesiologist administered propofol) — controverso; risco respiratório real</td>
+              </tr>
+              <tr>
+                <td>Cardiologia intervencionista (cateterismo, cardioversão)</td>
+                <td><span class="drug-pill good">Dexmedetomidina</span></td>
+                <td>Ataque 0.5–1 mcg/kg em 10 min → manutenção 0.2–0.7 mcg/kg/h</td>
+                <td>Sem depressão respiratória; bradicardia — ter atropina/isoproterenol disponível</td>
+              </tr>
+              <tr>
+                <td>Radiologia intervencionista / RM</td>
+                <td><span class="drug-pill good">Propofol ± Cetamina</span></td>
+                <td>Propofol 50–150 mcg/kg/min + cetamina 0.5 mg/kg bolus conforme necessidade</td>
+                <td>Acesso difícil em RM — drogas e monitorização não-ferromagnética; longa imobilização</td>
+              </tr>
+              <tr>
+                <td>Pediatria — procedimentos diagnósticos</td>
+                <td><span class="drug-pill good">Cetamina ou Dexmedetomidina</span></td>
+                <td>Cetamina 1–2 mg/kg IV ou dexmedetomidina 2–4 mcg/kg IN</td>
+                <td>Cetamina preserva VA e reflexos; dexmeto ideal para RM (não movimenta, mantém respiração)</td>
+              </tr>
+              <tr>
+                <td>Unidade de Terapia Intensiva (VM)</td>
+                <td><span class="drug-pill good">Propofol ou Dexmedetomidina</span></td>
+                <td>Propofol ≤4 mg/kg/h (curto prazo); dexmeto 0.2–0.7 mcg/kg/h (desmame)</td>
+                <td>Protocolo ABCDEF Bundle; alvo RASS -2 a 0; evitar midazolam (acúmulo, delirium)</td>
+              </tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /ag-sedacao -->
+
+  <!-- TAB 3 — TIVA/TCI -->
+  <div class="tab-panel" id="ag-tiva">
+    <div class="page-wrap">
+
+      <!-- CONCEITO TIVA -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">01</span> TIVA — Anestesia Totalmente Intravenosa
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            A <strong>TIVA (Total Intravenous Anesthesia)</strong> consiste em manter todos os componentes da anestesia (hipnose, analgesia, relaxamento) por via venosa, sem uso de agentes inalatórios halogenados. O propofol é o hipnótico central da TIVA moderna, frequentemente combinado com remifentanil em infusão contínua.
+          </div>
+
+          <div class="sh sh-green">Indicações Clínicas da TIVA</div>
+          <div class="g2" style="margin-top:8px; margin-bottom:12px">
+            <div class="algo-box algo-g">
+              <strong>INDICAÇÕES PREFERENCIAIS</strong><br>
+              <span class="drug-pill good">VAD/Intubação acordado</span> — sem necessidade de vaporizador em circuito de VA difícil<br>
+              <span class="drug-pill good">História de HM</span> — hipertermia maligna: TIVA obrigatória (propofol é seguro; voláteis são gatilhos)<br>
+              <span class="drug-pill good">Alto risco NVPO</span> — Apfel ≥3: propofol ↓NVPO significativamente vs. inalatório<br>
+              <span class="drug-pill good">Cirurgia de tórax (pulmão único)</span> — evita eliminação heterogênea de volátil no pulmão dependente<br>
+              <span class="drug-pill good">Neurocirurgia</span> — propofol ↓CMRO₂, ↓PIC; ideal para monitorização eletrofisiológica (PEvS, PEM)<br>
+              <span class="drug-pill good">Cirurgia ORL com laser</span> — sem risco de incêndio com gases inalatórios<br>
+              <span class="drug-pill good">Emergence agitation (crianças)</span> — propofol ↓agitação vs. sevoflurano
+            </div>
+            <div class="algo-box algo-r">
+              <strong>LIMITAÇÕES DA TIVA</strong><br>
+              <span class="drug-pill bad">Acesso venoso inadequado</span> — risco de descontinuação acidental da infusão → despertar intraoperatório<br>
+              <span class="drug-pill bad">Sem monitor de agente</span> — necessidade de BIS ou índice espectral para confirmar hipnose<br>
+              <span class="drug-pill bad">Custo</span> — propofol + remifentanil + bombas TCI > sevoflurano em muitos contextos<br>
+              <span class="drug-pill warn">Alergias ao propofol</span> — alergia ao ovo e soja: mito em sua maioria; evitar apenas em alergia confirmada ao propofol
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FARMACOCINÉTICA -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">02</span> Modelos Farmacocinéticos — 3 Compartimentos
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            Os agentes IV seguem modelo farmacocinético multicompartimental. O modelo de 3 compartimentos é a base dos sistemas TCI: compartimento central (V1 — plasma + órgãos altamente perfundidos), periférico rápido (V2 — músculo), periférico lento (V3 — gordura). A distribuição entre compartimentos determina o início e término do efeito.
+          </div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr><th>Compartimento</th><th>Tecidos</th><th>Característica</th><th>Relevância Clínica</th></tr></thead>
+            <tbody>
+              <tr><td><strong>V1 (Central)</strong></td><td>Plasma, pulmões, fígado, rins, coração</td><td>Alta perfusão, equilíbrio rápido</td><td>Concentração no plasma (Cp) — direto relacionado ao efeito imediato</td></tr>
+              <tr><td><strong>V2 (Periférico Rápido)</strong></td><td>Músculo esquelético, pele</td><td>Equilíbrio em minutos a horas</td><td>Redistribuição precoce — causa queda rápida do efeito após bolus único</td></tr>
+              <tr><td><strong>V3 (Periférico Lento)</strong></td><td>Gordura, osso, tecido avascular</td><td>Equilíbrio em horas</td><td>Acúmulo em infusões prolongadas → recuperação mais lenta (contexto-sensitivo)</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="alert a-teal" style="margin-top:10px">
+            <strong>Meia-vida contexto-sensitiva:</strong> diferente da meia-vida de eliminação, é o tempo para queda de 50% da concentração após infusão de determinada duração. Para o <strong>remifentanil</strong>, permanece ~3–5 min independente da duração (éster com metabolismo plasmático). Para o <strong>propofol</strong>, aumenta gradualmente mas é controlável. Para o <strong>fentanil</strong> e sufentanil, aumenta significativamente com infusões longas.
+          </div>
+        </div>
+      </div>
+
+      <!-- TCI -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">03</span> TCI — Target Controlled Infusion (Infusão Controlada por Alvo)
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            Na <strong>TCI</strong>, o anestesiologista define uma concentração-alvo (Cp — concentração plasmática, ou Ce — concentração no sítio efetor). A bomba calcula automaticamente a taxa de infusão em tempo real, usando o modelo farmacocinético selecionado e os parâmetros do paciente (peso, idade, sexo, altura).
+          </div>
+
+          <div class="sh sh-green">Propofol — Modelos TCI</div>
+          <div class="g2" style="margin-top:8px; margin-bottom:12px">
+            <div class="alert a-teal">
+              <strong>MODELO DE MARSH</strong><br>
+              • Baseado no peso corporal total<br>
+              • Parâmetros: peso (kg)<br>
+              • Mais simples, amplamente validado<br>
+              • Menos preciso em obesos e idosos extremos<br>
+              • <strong>Ce-alvo indução:</strong> 3–5 mcg/mL<br>
+              • <strong>Ce-alvo manutenção:</strong> 2–4 mcg/mL<br>
+              • <strong>Ce-alvo despertar:</strong> ~1 mcg/mL
+            </div>
+            <div class="alert a-green">
+              <strong>MODELO DE SCHNIDER</strong><br>
+              • Baseado em LBM (Lean Body Mass) + idade + altura<br>
+              • Mais preciso em obesos (usa peso magro) e idosos<br>
+              • Parâmetros: peso, altura, idade, sexo<br>
+              • V1 fixo (4,27 L) → cuidado com bolus de indução em magros<br>
+              • <strong>Ce-alvo indução:</strong> 3–5 mcg/mL (Ce)<br>
+              • <strong>Ce-alvo manutenção:</strong> 2–4 mcg/mL<br>
+              • Preferido na maioria dos sistemas TCI modernos
+            </div>
+          </div>
+
+          <div class="sh sh-teal">Remifentanil — Modelo de Minto</div>
+          <div class="alert a-teal" style="margin-top:8px; margin-bottom:12px">
+            O modelo de Minto para remifentanil incorpora peso, altura, idade e sexo. O remifentanil tem meia-vida contexto-sensitiva ultracurta (~3–5 min) por metabolismo plasmático (ésteres) — permite titulação precisa sem acúmulo.<br><br>
+            • <strong>Ce-alvo intubação/laringoscopia:</strong> 4–8 ng/mL<br>
+            • <strong>Ce-alvo manutenção (estímulo cirúrgico moderado):</strong> 2–4 ng/mL<br>
+            • <strong>Ce-alvo despertar (redução gradual):</strong> 1–2 ng/mL<br>
+            • <strong>Atenção:</strong> descontinuação abrupta → hiperalgesia de rebote → planejar analgesia pós-op com tempo suficiente antes do despertar
+          </div>
+
+          <div class="sh sh-green">Monitorização de Profundidade Anestésica na TIVA</div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <strong>BIS (Bispectral Index) é MANDATÓRIO na TIVA:</strong><br>
+            • Alvo: BIS 40–60 durante manutenção (hipnose adequada)<br>
+            • BIS >60 intra-op: risco de awareness (despertar intraoperatório)<br>
+            • BIS <40: hipnose excessiva → recuperação mais lenta<br>
+            • Alternativas: Entropy (SE/RE), Narcotrend<br>
+            • Na TIVA sem BIS: risco de awareness até 10x maior vs. inalatório com ETAG monitorado
+          </div>
+
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:14px"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>TIVA</th><th>Inalatória</th></tr></thead>
+            <tbody>
+              <tr><td>NVPO</td><td><span class="drug-pill good">↓↓ (propofol antiemético)</span></td><td><span class="drug-pill bad">↑ (voláteis emetogênicos)</span></td></tr>
+              <tr><td>Emergence agitation (crianças)</td><td><span class="drug-pill good">↓ (propofol)</span></td><td><span class="drug-pill bad">↑ (sevoflurano)</span></td></tr>
+              <tr><td>HM (Hipertermia Maligna)</td><td><span class="drug-pill good">Seguro</span></td><td><span class="drug-pill bad">Gatilho</span></td></tr>
+              <tr><td>Monitorização de hipnose</td><td><span class="drug-pill bad">BIS obrigatório</span></td><td><span class="drug-pill good">ETAG (alveolar) disponível</span></td></tr>
+              <tr><td>Custo</td><td><span class="drug-pill bad">Maior</span></td><td><span class="drug-pill good">Menor</span></td></tr>
+              <tr><td>Proteção ambiental</td><td><span class="drug-pill good">Sem poluição por halogenados</span></td><td><span class="drug-pill warn">Desflurano (GWP 2.540x CO₂)</span></td></tr>
+              <tr><td>Mortalidade (MYRIAD trial 2019)</td><td>Sem diferença</td><td>Sem diferença</td></tr>
+              <tr><td>Neoplasia (estudo observacional)</td><td><span class="drug-pill warn">Possível ↓recidiva (dados insuficientes)</span></td><td><span class="drug-pill warn">Dados conflitantes</span></td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="alert a-teal" style="margin-top:10px">
+            <strong>MYRIAD Trial (2019 — Lancet):</strong> ensaio multicêntrico com 10.000+ pacientes comparando TIVA vs. inalatória em cirurgia oncológica. Não houve diferença em mortalidade em 1 ano, recidiva ou sobrevida global. A escolha deve ser baseada em fatores individuais do paciente (NVPO, HM, monitorização disponível).
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /ag-tiva -->
+
+  <!-- TAB 4 — INALATÓRIA -->
+  <div class="tab-panel" id="ag-inalatoria">
+    <div class="page-wrap">
+
+      <!-- AGENTES COMPARATIVOS -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">01</span> Agentes Inalatórios — Tabela Comparativa
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            Os agentes inalatórios halogenados (fluorados) são gases líquidos voláteis que produzem hipnose, amnésia e imobilidade, mas <strong>não fornecem analgesia suficiente</strong> para cirurgia sozinhos — requerem combinação com opioides e/ou bloqueios regionais. A potência é expressa pela CAM (Concentração Alveolar Mínima).
+          </div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead><tr>
+              <th>Propriedade</th><th>Sevoflurano</th><th>Desflurano</th><th>Isoflurano</th>
+            </tr></thead>
+            <tbody>
+              <tr><td><strong>CAM (%)</strong></td><td>2.0</td><td>6.0</td><td>1.15</td></tr>
+              <tr><td><strong>CAM em O₂ 100%</strong></td><td>2.0%</td><td>6.6%</td><td>1.17%</td></tr>
+              <tr><td><strong>Coef. partição sangue/gás</strong></td><td>0.65</td><td>0.42</td><td>1.4</td></tr>
+              <tr><td><strong>Metabolismo hepático</strong></td><td>3–5% (CYP2E1)</td><td>0.02%</td><td>0.2%</td></tr>
+              <tr><td><strong>Indução inalatória</strong></td><td><span class="drug-pill good">✅ Sim (odor adocicado)</span></td><td><span class="drug-pill bad">❌ Não (irritante, tosse, broncoespasmo)</span></td><td><span class="drug-pill bad">❌ Não (irritante)</span></td></tr>
+              <tr><td><strong>Velocidade de indução/recuperação</strong></td><td>Rápida</td><td><span class="drug-pill good">Mais rápida (baixo λ)</span></td><td>Lenta</td></tr>
+              <tr><td><strong>Estabilidade cardiovascular</strong></td><td>Boa (leve ↓PA)</td><td>Boa (↑FC com ↑rápida de dose)</td><td>Vasodilatação coronariana</td></tr>
+              <tr><td><strong>Nefrotoxicidade</strong></td><td>Composto A (baixo fluxo) — relevância clínica discutida</td><td>Nenhuma</td><td>Nenhuma</td></tr>
+              <tr><td><strong>Hepatotoxicidade</strong></td><td>Mínima (halotano <strong>não disponível</strong>)</td><td>Mínima</td><td>Rara (hepatite por isoflurano — extremamente rara)</td></tr>
+              <tr><td><strong>Potencial de aquecimento global (GWP-100)</strong></td><td>~130x CO₂</td><td><span class="drug-pill bad">~2.540x CO₂ ⚠️</span></td><td>~510x CO₂</td></tr>
+              <tr><td><strong>Custo relativo</strong></td><td>Médio</td><td><span class="drug-pill bad">Alto</span></td><td><span class="drug-pill good">Baixo</span></td></tr>
+              <tr><td><strong>Uso atual</strong></td><td><span class="drug-pill good">Agente padrão global</span></td><td><span class="drug-pill warn">Banimento progressivo Europa</span></td><td>Manutenção em países de baixa renda</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- CAM -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">02</span> CAM — Concentração Alveolar Mínima
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            A <strong>CAM</strong> é a concentração alveolar de um agente inalatório que, em 1 atm de pressão, previne movimento em 50% dos pacientes submetidos a incisão cirúrgica supramaximal. É o equivalente inalatório da DE50 — ou seja, só 50% dos pacientes não respondem. Para segurança cirúrgica, usa-se 1.0–1.3 CAM.
+          </div>
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-gold">
+              <strong>FATORES QUE AUMENTAM A CAM</strong><br>
+              (necessidade de mais agente)<br>
+              • Hipertermia<br>
+              • Hipernatremia<br>
+              • Etilismo agudo<br>
+              • Hipertireoidismo<br>
+              • Idade jovem<br>
+              • Uso crônico de etanol / opioide (tolerância)<br>
+              • Hiperoxia
+            </div>
+            <div class="alert a-teal">
+              <strong>FATORES QUE REDUZEM A CAM</strong><br>
+              (necessidade de menos agente)<br>
+              • Hipotermia (cada ↓1°C → ↓CAM ~5%)<br>
+              • Idade avançada (↓CAM ~6%/década após 40 anos)<br>
+              • Opioides (↓CAM 50–75%)<br>
+              • α2-agonistas: clonidina ↓MAC 15–25%<br>
+              • Gravidez (↓CAM ~28%)<br>
+              • Hipotensão grave, hiponatremia, hipoxia<br>
+              • Anemia grave, hipercapnia
+            </div>
+          </div>
+
+          <div class="sh sh-green">Variações da CAM — Marcadores Clínicos</div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Variante</th><th>Definição</th><th>Valor (Sevoflurano)</th><th>Aplicação</th></tr></thead>
+            <tbody>
+              <tr><td><strong>CAM (CAM-incisão)</strong></td><td>Sem movimento em 50% na incisão</td><td>2.0%</td><td>Base do cálculo de agente cirúrgico</td></tr>
+              <tr><td><strong>CAM-awake</strong></td><td>Sem seguir comandos em 50%</td><td>0.4 × CAM = ~0.8%</td><td>Alvo para despertar — manter acima até paciente ser extubado</td></tr>
+              <tr><td><strong>CAM-intubação</strong></td><td>Sem movimento à laringoscopia em 50%</td><td>~1.3 × CAM</td><td>Indução — se usando inalatório como único agente de indução</td></tr>
+              <tr><td><strong>CAM-BAR</strong></td><td>Blunts Adrenergic Response em 50%</td><td>~1.7 × CAM</td><td>Previne resposta hemodinâmica à incisão — associar opioide</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- SEVOFLURANO -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">03</span> Sevoflurano — Agente Inalatório de Referência
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            O sevoflurano é o agente inalatório mais utilizado mundialmente, sendo o único adequado para <strong>indução inalatória</strong> em adultos e crianças. Seu odor adocicado e baixo coeficiente de partição sangue/gás (0.65) conferem indução e recuperação rápidas. Em crianças, é o agente padrão para indução sem acesso venoso.
+          </div>
+
+          <div class="sh sh-green">Indução Inalatória com Sevoflurano</div>
+          <div class="g2" style="margin-top:8px; margin-bottom:12px">
+            <div class="alert a-teal">
+              <strong>TÉCNICA — ADULTO</strong><br>
+              1. Pré-oxigenar com O₂ a 100% por 3 min (ou 8 CV)<br>
+              2. Circular: FGF 4–6 L/min, sevoflurano 6–8% no vaporizador<br>
+              3. Solicitar ao paciente inspirações profundas pela máscara<br>
+              4. Perda de consciência em ~60–90 seg (1 min)<br>
+              5. Reduzir para concentração de manutenção após IOT<br>
+              6. Manutenção: 1.5–2.5% sevoflurano (1–1.3 CAM)
+            </div>
+            <div class="alert a-green">
+              <strong>TÉCNICA — PEDIÁTRICA</strong><br>
+              1. Pré-oxigenar (criança colaborativa) ou iniciar direto<br>
+              2. Sevoflurano 7–8% + O₂ 100% (inhalation induction)<br>
+              3. Esconder vaporizador: "cheiro de flor/morango" — diminui resistência<br>
+              4. Perda de consciência: 45–90 seg<br>
+              5. Após indução: inserir AV, reduzir sevoflurano<br>
+              6. Atenção: excitação (estágio II) pode ser agitado — manter máscara firme
+            </div>
+          </div>
+
+          <div class="algo-box algo-r">
+            <strong>Emergence Agitation com Sevoflurano (crianças):</strong> incidência 20–50% após cirurgia com sevoflurano em crianças, especialmente ORL e oftálmica. Caracteriza-se por agitação inconsolável, choro, desorientação — geralmente autolimitada (20–30 min).<br>
+            <strong>Prevenção:</strong> <span class="drug-pill good">Fentanil 1–2 mcg/kg IV ao final</span> | <span class="drug-pill good">Dexmedetomidina 0.5–1 mcg/kg IV ao final</span> | <span class="drug-pill good">Propofol 0.5–1 mg/kg IV ao final (substituto)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BAIXO FLUXO E IMPACTO AMBIENTAL -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">04</span> Anestesia com Baixo Fluxo e Impacto Ambiental
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal" style="margin-bottom:10px">
+            A anestesia com <strong>baixo fluxo</strong> (&lt;1 L/min) reduz o consumo de agente inalatório em 50–70%, diminui o custo e atenua o impacto ambiental. Requer monitorização contínua das frações inspiradas de O₂ e CO₂ para segurança.
+          </div>
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-green">
+              <strong>CLASSIFICAÇÃO POR FLUXO DE GÁS FRESCO</strong><br>
+              • Alto fluxo: >4 L/min (descarte &gt;80% do gás) — início e emergência<br>
+              • Médio fluxo: 1–2 L/min — padrão de muitos serviços<br>
+              • Baixo fluxo: 0.5–1 L/min — econômico e ecológico<br>
+              • Fluxo mínimo: &lt;0.5 L/min — apenas experientes; risco de hipoxia se O₂ não monitorado<br>
+              • Circuito fechado: = VO₂ do paciente (~3–4 mL/kg/min)
+            </div>
+            <div class="alert a-gold">
+              <strong>MONITORIZAÇÃO MANDATÓRIA EM BAIXO FLUXO</strong><br>
+              • FiO₂ inspirado contínuo (mínimo 30%)<br>
+              • ETCO₂ e FiCO₂ (fração inspirada de CO₂ — detecta exaustão da cal sodada)<br>
+              • Concentração de agente inspirado e expirado (ETAG)<br>
+              • Cuidado com N₂ acumulado: rinse inicial com 4 L/min por 5 min antes de reduzir
+            </div>
+          </div>
+
+          <div class="sh sh-green">Impacto Ambiental dos Agentes Inalatórios</div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th style="white-space:nowrap">Agente</th><th>GWP-100 (vs. CO₂)</th><th>Equivalente em CO₂ (1h cirurgia)</th><th>Situação Regulatória</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Desflurano</strong></td>
+                <td><span class="drug-pill bad">2.540</span></td>
+                <td>~14 kg CO₂-eq por hora de cirurgia</td>
+                <td><span class="drug-pill bad">Banimento progressivo na Europa (DK, UK, BE, NL)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Isoflurano</strong></td>
+                <td>510</td>
+                <td>~3 kg CO₂-eq por hora</td>
+                <td>Uso restrito em países desenvolvidos; ainda amplamente usado globalmente</td>
+              </tr>
+              <tr>
+                <td><strong>Sevoflurano</strong></td>
+                <td>130</td>
+                <td>~0.5 kg CO₂-eq por hora</td>
+                <td>Agente padrão — melhor perfil ambiental entre os halogenados</td>
+              </tr>
+              <tr>
+                <td><strong>N₂O (óxido nitroso)</strong></td>
+                <td>265 (+ destruição ozônio)</td>
+                <td>Variável por duração e concentração</td>
+                <td>Redução progressiva de uso</td>
+              </tr>
+              <tr>
+                <td><strong>Propofol (TIVA)</strong></td>
+                <td>~0 (sem halogenados)</td>
+                <td>~0 CO₂-eq de agente (plástico do descartável)</td>
+                <td>Alternativa mais sustentável em contexto de TIVA disponível</td>
+              </tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="algo-box algo-r" style="margin-top:10px">
+            <strong>Posição WFSA / ESA 2022:</strong> Desflurano deve ser evitado em toda cirurgia eletiva onde alternativas estejam disponíveis. O impacto de 1h de desflurano em fluxo moderado equivale a conduzir um carro ~250 km.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /ag-inalatoria -->
+
+  <!-- TAB 5 — BALANCEADA -->
+  <div class="tab-panel" id="ag-balanceada">
+    <div class="page-wrap">
+
+      <!-- CONCEITO -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">01</span> Anestesia Balanceada — Conceito e Componentes
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            A <strong>anestesia balanceada</strong> é a técnica mais utilizada na prática contemporânea. Combina múltiplos fármacos de classes diferentes para atingir os componentes da anestesia em doses menores, reduzindo os efeitos adversos de qualquer agente isolado. O racional farmacodinâmico é a sinergia entre agentes.
+          </div>
+
+          <div class="sh sh-green">Os Três Pilares da Anestesia Balanceada</div>
+          <div class="g2" style="margin-top:8px; margin-bottom:14px">
+            <div class="algo-box algo-g">
+              <strong>1. HIPNOSE</strong><br>
+              <em>Objetivo: inconsciência, amnésia</em><br>
+              • Agente inalatório (sevoflurano 1–1.3 CAM) — padrão<br>
+              • OU propofol TCI/TIVA (Ce 2–4 mcg/mL) — alternativa<br>
+              • Monitorização: ETAG ≥0.7–1.0 MAC OU BIS 40–60<br>
+              • Sem monitorização adequada: risco de awareness
+            </div>
+            <div class="algo-box algo-g">
+              <strong>2. ANALGESIA</strong><br>
+              <em>Objetivo: supressão da nocicepção</em><br>
+              • Fentanil bolus: 1–2 mcg/kg na indução; bolus de 25–50 mcg intra-op<br>
+              • Remifentanil infusão: 0.05–0.2 mcg/kg/min (titulável)<br>
+              • Sufentanil: 0.1–0.5 mcg/kg IV (mais longa duração que fentanil)<br>
+              • Adjuvantes: cetamina, lidocaína IV, dexmedetomidina<br>
+              • Bloqueios regionais (se aplicável)
+            </div>
+          </div>
+          <div class="algo-box algo-g" style="margin-bottom:14px">
+            <strong>3. RELAXAMENTO MUSCULAR (BNM)</strong><br>
+            <em>Objetivo: imobilidade, relaxamento abdominal/glótico para IOT</em><br>
+            • Succinilcolina 1–1.5 mg/kg IV (IOT de sequência rápida — curta ação, efeitos adversos)<br>
+            • Rocurônio 0.6 mg/kg (IOT padrão) / 1.2 mg/kg (ISR — sugammadex disponível)<br>
+            • Atracúrio 0.5 mg/kg — metabolismo de Hofmann (independente de órgãos)<br>
+            • <strong>Cisatracúrio 0.15–0.2 mg/kg</strong> — preferido em insuficiência hepática/renal<br>
+            • Monitorização TOF (Train-of-Four) obrigatória — TOF ratio ≥0.9 para extubação
+          </div>
+
+          <div class="sh sh-teal">Monitorização TOF — Critérios de Reversão e Extubação</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>TOF ratio</th><th>Interpretação</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><strong>&gt;0.9</strong></td><td>Bloqueio neuromuscular adequadamente revertido</td><td><span class="drug-pill good">Extubar com segurança</span></td></tr>
+              <tr><td><strong>0.7–0.9</strong></td><td>Bloqueio residual leve</td><td><span class="drug-pill warn">Neostigmina 0.04–0.07 mg/kg + atropina/glicopirrolato</span></td></tr>
+              <tr><td><strong>0.4–0.7</strong></td><td>Bloqueio moderado</td><td>Aguardar e/ou reverter com neostigmina (menos eficaz &lt;0.7)</td></tr>
+              <tr><td><strong>&lt;0.4 (ou 0 contagem TOF)</strong></td><td>Bloqueio profundo</td><td><span class="drug-pill good">Sugammadex para rocurônio/vecurônio</span> OU aguardar espontâneo</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="algo-box algo-r" style="margin-top:10px">
+            <strong>Bloqueio Residual:</strong> TOF ratio &lt;0.9 à extubação é associado a 4x mais complicações respiratórias pós-op (atelectasia, pneumonia, re-intubação). Monitorar TOF com aceleromiografia — tato e observação clínica são insuficientes para excluir bloqueio residual.
+          </div>
+        </div>
+      </div>
+
+      <!-- ANESTESIA BALANCEADA ERAS -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">02</span> Anestesia Balanceada no Contexto ERAS — Opioide-Sparing
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal" style="margin-bottom:10px">
+            A tendência atual nos protocolos ERAS (Enhanced Recovery After Surgery) é a <strong>anestesia opioide-redutora ou livre de opioides (opioid-free anesthesia — OFA)</strong>. O objetivo é reduzir os efeitos colaterais dos opioides sem comprometer a qualidade analgésica.
+          </div>
+
+          <div class="sh sh-green">Efeitos Adversos dos Opioides que Motivam Opioide-Sparing</div>
+          <div class="g2" style="margin-top:8px; margin-bottom:12px">
+            <div class="alert a-gold">
+              <strong>EFEITOS ADVERSOS RELEVANTES</strong><br>
+              • NVPO (náuseas e vômitos pós-operatórios) — cada opioide ↑NVPO ~10%<br>
+              • Íleo paralítico pós-op — especialmente cirurgia abdominal<br>
+              • Depressão respiratória — risco em SAOS, obesos, opioides-naive<br>
+              • Hiperalgesia induzida por opioides (HIO) — remifentanil > outros<br>
+              • Retenção urinária<br>
+              • Tolerância aguda e dependência
+            </div>
+            <div class="algo-box algo-g">
+              <strong>ALTERNATIVAS AOS OPIOIDES</strong><br>
+              • <strong>Cetamina:</strong> 0.1–0.5 mg/kg/h infusão intra-op → antagonismo NMDA → ↓HIO e ↓dor pós-op<br>
+              • <strong>Lidocaína IV:</strong> 1.5 mg/kg bolus + 1–2 mg/kg/h → anti-hiperalgesia, ↓íleo, ↓dor pós-op em cirurgia abdominal<br>
+              • <strong>Dexmedetomidina:</strong> 0.5–1 mcg/kg/h → analgesia, ↓consumo de opioide, ↓NVPO<br>
+              • <strong>Dexametasona:</strong> 4–8 mg IV → anti-inflamatório, antiemético, ↓dor pós-op<br>
+              • <strong>AINEs IV:</strong> cetorolaco, dipirona, paracetamol — base multimodal<br>
+              • <strong>Bloqueios regionais:</strong> PECS, TAP, ESP, bloqueio paravertebral — pilar do ERAS
+            </div>
+          </div>
+
+          <div class="algo-box algo-g" style="margin-bottom:12px">
+            <strong>Evidência ERAS (ERAS Society Guidelines 2023):</strong> Protocolo multimodal analgésico (paracetamol + AINE + corticoide + bloqueio regional ± cetamina/lidocaína IV) reduz consumo de opioide pós-op em 30–50%, ↓NVPO, ↓íleo paralítico, ↓tempo de internação em cirurgia abdominal maior.
+          </div>
+        </div>
+      </div>
+
+      <!-- CRITÉRIOS DE DESPERTAR -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">03</span> Critérios de Despertar e Extubação Segura
+        </div>
+        <div class="card-body">
+          <div class="alert a-green" style="margin-bottom:10px">
+            A extubação traqueal é um momento crítico — o paciente transita da anestesia para o despertar, com risco de laringoespasmo, broncoespasmo, agitação e comprometimento de via aérea. Os critérios abaixo devem ser preenchidos simultaneamente antes de extubar.
+          </div>
+
+          <div class="algo-box algo-g" style="margin-bottom:12px">
+            <strong>Critérios de Extubação Segura — Checklist</strong><br>
+            ✔ Responsivo a comandos verbais simples ("abra os olhos", "aperte minha mão")<br>
+            ✔ TOF ratio ≥0.9 (bloqueio residual descartado por aceleromiografia)<br>
+            ✔ SpO₂ adequada em ar ambiente (≥95% sem O₂ suplementar ou SpO₂ basal do paciente)<br>
+            ✔ Frequência respiratória regular: 8–20 irpm, volume corrente adequado (&gt;6 mL/kg)<br>
+            ✔ Temperatura &gt;36°C (hipotermia → bloqueio residual, tremores, ↑consumo O₂)<br>
+            ✔ Sem agitação ou movimentos descoordenados que sugiram dor inadequada<br>
+            ✔ Hemodinâmica estável (PA e FC na faixa esperada para o paciente)
+          </div>
+
+          <div class="sh sh-green">Extubação em Vigília vs. Deep Extubation</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="alert a-green">
+              <strong>EXTUBAÇÃO EM VIGÍLIA (Padrão)</strong><br>
+              Indicada na maioria dos pacientes. O paciente responde a comandos antes de extubar. Menor risco de comprometimento de VA. Extubar em inspiração (relaxa cordas vocais) → menor risco de laringoespasmo.
+            </div>
+            <div class="alert a-gold">
+              <strong>EXTUBAÇÃO PROFUNDA</strong><br>
+              Indicada para: cirurgia oftálmica (previne tosse/Valsalva), neurocirurgia selecionada, asma brônquica (↓broncoespasmo). <strong>SOMENTE em via aérea normal, cirurgia eletiva, estômago vazio.</strong> Risco maior de obstrução de VA — exige manejo imediato.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWARENESS -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">04</span> Despertar Intraoperatório (Awareness) — Prevenção
+        </div>
+        <div class="card-body">
+          <div class="alert a-gold" style="margin-bottom:10px">
+            O <strong>awareness</strong> (despertar intraoperatório com memória explícita) ocorre em 0.1–0.2% das anestesias gerais, podendo causar PTSD em até 30% dos casos. Fatores de risco incluem TIVA sem BIS, uso de BNM (impede sinalização por movimento), dose inadequada de hipnótico, cardiopatas com doses reduzidas.
+          </div>
+          <div class="g2" style="margin-bottom:12px">
+            <div class="algo-box algo-r">
+              <strong>FATORES DE RISCO PARA AWARENESS</strong><br>
+              <span class="drug-pill bad">TIVA sem monitorização de profundidade</span><br>
+              <span class="drug-pill bad">Uso de BNM sem adequação da hipnose</span><br>
+              <span class="drug-pill bad">Cardiopatas — doses reduzidas obrigatórias</span><br>
+              <span class="drug-pill bad">Obstétricas — limitação de doses por feto</span><br>
+              <span class="drug-pill bad">Trauma grave — paciente hipotenso</span><br>
+              <span class="drug-pill warn">Tolerância a opioides/benzodiazepínicos</span>
+            </div>
+            <div class="algo-box algo-g">
+              <strong>PREVENÇÃO E CONDUTA</strong><br>
+              ✔ BIS 40–60 durante toda anestesia com BNM<br>
+              ✔ ETAG ≥0.7–1.0 MAC como backup (anestesia inalatória)<br>
+              ✔ Midazolam na indução (amnésia anterógrada)<br>
+              ✔ Informar paciente em risco no pré-op<br>
+              ✔ Se suspeita de awareness: aprofundar imediatamente, documentar, encaminhar para apoio psicológico, notificar (5-étapes protocol)
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /ag-balanceada -->
+
+  <!-- <!-- TAB — REVISÃO RÁPIDA --> -->
+  <div class="tab-panel" id="ag-revisao">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:#064E3B">
+          <span class="card-title">⚡ Revisão Rápida — Anestesia Geral</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Para revisão pré-plantão ou pré-prova · 10 pontos essenciais</p>
+          <div class="algo-box algo-b" style="margin-bottom:8px">
+            <div class="algo-title">10 pontos que você não pode esquecer</div>
+            <ol style="font-size:12px;line-height:2;margin:6px 0 0 16px">
+              <li>MPA: midazolam 0.02–0.05 mg/kg IV (ou 7.5–15 mg VO 30 min antes) · evitar em idosos &gt;70 anos</li>
+              <li>TIVA indicações: VAD, história de HM, NVPO alto (Apfel 3-4), cirurgia torácica, neurocirurgia</li>
+              <li>Propofol TCI modelo Marsh: alvo Cp 3–5 mcg/mL indução · 2–4 manutenção · Schnider mais preciso em obesos/idosos</li>
+              <li>CAM sevoflurano: 2.0% · fatores que diminuem CAM: hipotermia, idoso, opioides, N2O, hipotensão</li>
+              <li>CAM-awake = 0.4 CAM · paciente acorda abaixo desse valor · evitar emergência muito rápida</li>
+              <li>Anestesia balanceada ERAS: opioide-sparing (cetamina + AINEs + bloqueio regional) reduz NVPO e íleo</li>
+              <li>TIVA vs inalatória (MYRIAD trial 2019): sem diferença em mortalidade · TIVA ↓NVPO</li>
+              <li>Emergence agitation pediátrico: dexmedetomidina 0.5 mcg/kg ou propofol 1 mg/kg ao final previne</li>
+              <li>Desflurano: maior GWP (2540× CO2) → banimento progressivo · sevoflurano preferido</li>
+              <li>Critérios de extubação: responsivo + TOF ≥0.9 + SpO2 adequada em ar ambiente + FR regular</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Revisão Rápida</div>
+    </div>
+  </div><!-- /ag-revisao -->
+
+<!-- TAB — QUESTÕES -->
+  <div class="tab-panel" id="ag-questoes">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:#064E3B">
+          <span class="card-title">📝 Questões — Anestesia Geral</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">5 questões de múltipla escolha · Clique para revelar o gabarito</p>
+
+          <div class="caso-card" id="q1-ag">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">1</div>
+              <div class="caso-title">QUESTÃO 1 — TCI: Modelo Schnider vs Marsh</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Em TIVA com propofol por TCI (Target Controlled Infusion), qual modelo farmacocinético é considerado <strong>mais preciso em pacientes obesos e idosos</strong>?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Modelo Marsh, por ser mais simples e amplamente testado<br>
+                B) Modelo Schnider, por incorporar idade, peso magro e altura no cálculo<br>
+                C) Ambos têm precisão equivalente em todas as populações<br>
+                D) Modelo Diprifusor, específico para pacientes pediátricos<br>
+                E) Modelo Eleveld, mas apenas em pacientes ASA I
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: B)</strong> — O modelo <strong>Schnider</strong> incorpora variáveis como <strong>idade, peso magro (LBW) e altura</strong> na estimativa de volumes de distribuição e depuração, tornando-o mais preciso em populações extremas como obesos e idosos. O modelo Marsh usa apenas peso total, podendo superestimar o volume de distribuição em obesos (levando a superdosagem) e subestimar em idosos. O modelo Eleveld é mais recente e ainda mais abrangente, mas Schnider permanece o padrão para obesos/idosos na maioria das plataformas TCI.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q2-ag">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">2</div>
+              <div class="caso-title">QUESTÃO 2 — CAM em Idoso</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente de <strong>80 anos</strong> será submetido à anestesia geral inalatória com sevoflurano (CAM = 2.0% em adulto jovem). Como a idade avançada afeta a CAM do sevoflurano neste paciente?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) A CAM aumenta em idosos — necessita de dose maior<br>
+                B) A CAM não é afetada pela idade<br>
+                C) A CAM é reduzida em aproximadamente 30–40% — necessita de dose menor<br>
+                D) A CAM cai para zero após os 75 anos<br>
+                E) A CAM aumenta no idoso, mas apenas se houver demência
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A CAM (Concentração Alveolar Mínima) diminui progressivamente com a idade, em aproximadamente <strong>6% por década após os 40 anos</strong>. Em um paciente de 80 anos, a CAM do sevoflurano é reduzida em cerca de <strong>30–40%</strong> em relação ao adulto jovem (CAM efetiva ~1.2–1.4%). Outros fatores que reduzem a CAM: hipotermia, opioides, N2O, hipotensão severa, anemia grave e gestação. Isso significa que o idoso necessita de doses menores para manter plano anestésico adequado — maior risco de hipotensão com doses padronizadas.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q3-ag">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">3</div>
+              <div class="caso-title">QUESTÃO 3 — Hipertermia Maligna e Escolha Anestésica</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente com <strong>história familiar confirmada de hipertermia maligna (HM)</strong> necessita de anestesia geral eletiva para hernioplastia. Qual é a abordagem anestésica de ESCOLHA?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Sevoflurano em baixas doses com monitorização de temperatura<br>
+                B) Desflurano com dantrolene profilático<br>
+                C) TIVA com propofol + remifentanil, evitando halogenados e succinilcolina<br>
+                D) Isoflurano + vecurônio, pois vecurônio não desencadeia HM<br>
+                E) Anestesia espinhal como única opção segura
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A hipertermia maligna é desencadeada por <strong>anestésicos inalatórios halogenados</strong> (sevoflurano, desflurano, isoflurano, halotano) e pela <strong>succinilcolina</strong>. Em pacientes com história pessoal ou familiar de HM, a escolha segura é <strong>TIVA</strong> (propofol + remifentanil ou fentanil) com agentes não despolarizantes (rocurônio, vecurônio, cisatracúrio). O centro cirúrgico deve estar preparado com dantrolene disponível (2,5 mg/kg na crise), máquina de anestesia "limpa" (sem resíduos de halogenados) e protocolo de manejo de HM acessível.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q4-ag">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">4</div>
+              <div class="caso-title">QUESTÃO 4 — Apfel 4 e Estratégia Antiemética</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente feminina, não fumante, com história de cinetose e NVPO, submetida à laparoscopia ginecológica com uso de opioides pós-operatórios. <strong>Apfel score = 4</strong>. Qual é a estratégia MAIS completa para prevenir NVPO?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Apenas ondansetrona 4 mg IV ao final da cirurgia<br>
+                B) TIVA com propofol + 1 antiemético<br>
+                C) TIVA + 2 antieméticos + N2O para reduzir doses de opioide<br>
+                D) TIVA + 3 antieméticos (dexametasona + ondansetrona + droperidol) + evitar opioides pós-op<br>
+                E) Somente anestesia regional; anestesia geral contraindicada
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: D)</strong> — Com Apfel 4 (risco &gt;80% de NVPO), a estratégia mais robusta combina: <strong>TIVA</strong> com propofol (↓NVPO em comparação com inalatórios), <strong>3 agentes antieméticos</strong> de diferentes classes (dexametasona 8 mg na indução + ondansetrona 4 mg ao final + droperidol 0,625 mg ou escopolamina transdérmica), <strong>minimizar opioides</strong> no pós-operatório (estratégia opioide-sparing com AINEs, cetamina, bloqueio regional), e evitar N2O. A combinação multimodal é superior a qualquer droga isolada nesse perfil de alto risco.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q5-ag">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">5</div>
+              <div class="caso-title">QUESTÃO 5 — Critério de Extubação Segura</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Ao final de uma laparotomia com uso de rocurônio, o paciente abre os olhos, segue comandos verbais e a SpO2 é 97% em O2 a 40%. Qual é o critério <strong>MAIS importante</strong> a ser confirmado antes da extubação segura?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) SpO2 &gt;95% em ar ambiente<br>
+                B) Capacidade de elevar a cabeça por 5 segundos<br>
+                C) TOF ratio ≥0.9 confirmado por aceleromiografia<br>
+                D) Pressão inspiratória máxima &gt; −20 cmH2O<br>
+                E) Temperatura corporal &gt;36°C
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — O <strong>TOF ratio ≥0.9</strong> confirmado por aceleromiografia quantitativa é o critério mais confiável e objetivo para extubação segura, pois descarta bloqueio neuromuscular residual (BNMR). O BNMR ocorre em até 40% das extubações sem monitorização quantitativa e é uma causa importante de hipoxemia pós-operatória e reintubação. Testes clínicos (elevação da cabeça, aperto de mão) não são confiáveis para excluir BNMR leve/moderado. SpO2 e temperatura são critérios complementares importantes, mas não substituem a confirmação do TOF.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Questões</div>
+    </div>
+  </div><!-- /ag-questoes -->
+
+  <!-- TAB 6 — CASOS
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="ag-casos">
+    <div class="page-wrap">
+
+      <div class="alert a-green" style="margin-bottom:16px">
+        Três casos clínicos representativos dos desafios da anestesia geral moderna. Clique no cartão para expandir a discussão.
+      </div>
+
+      <!-- CASO 1 -->
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 1</span>
+          <span class="caso-title">Mulher 32 anos, Apfel 4, Laparoscopia Eletiva — TIVA ou Inalatória? MPA? Profilaxia NVPO?</span>
+        </div>
+        <div class="caso-body">
+          <p><strong>Paciente:</strong> Feminina, 32 anos, 58 kg, ASA I. Colecistectomia laparoscópica eletiva. Não tabagista, não fumante, história prévia de NVPO grave em anestesia anterior ("enjoo o dia todo"). Apfel 4 (sexo feminino + não tabagista + NVPO prévio + uso pós-op de opioides presumido). Jejum 8h. Exames normais. Ansiosa.</p>
+
+          <div class="caso-question">Qual a melhor técnica anestésica? MPA com midazolam ou alternativa? Quantos antieméticos usar? Opioide pós-op?</div>
+          <div class="caso-answer">
+
+            <div class="sh sh-green">Análise do Risco NVPO — Apfel 4</div>
+            <div class="alert a-gold" style="margin-top:8px; margin-bottom:10px">
+              Apfel score 4 = <strong>risco de NVPO &gt;80%</strong> sem profilaxia. Com cada antiemético isolado, redução de ~26%. Combinação de 3 agentes reduz para ~20%. Técnica anestésica é a intervenção mais importante: TIVA reduz NVPO em ~25% adicional vs. inalatório.
+            </div>
+
+            <div class="sh sh-teal" style="margin-top:10px">Estratégia Anestésica Recomendada</div>
+            <ul style="margin:8px 0; padding-left:18px; line-height:1.8">
+              <li><strong>Técnica:</strong> <span class="drug-pill good">TIVA com propofol TCI</span> (modelo Schnider, Ce-alvo indução 4 mcg/mL, manutenção 2.5–3.5 mcg/mL) + remifentanil (Ce-alvo 3–5 ng/mL intra-op, reduzir para 1–2 ng/mL ao despertar)</li>
+              <li><strong>BIS:</strong> alvo 40–60 — mandatório na TIVA</li>
+              <li><strong>Evitar:</strong> N₂O (associado a NVPO), agentes inalatórios (emetogênicos)</li>
+            </ul>
+
+            <div class="sh sh-green" style="margin-top:10px">MPA — Ansiolítico</div>
+            <ul style="margin:8px 0; padding-left:18px; line-height:1.8">
+              <li><strong>Evitar midazolam de rotina</strong> (ERAS — sedação residual, ↑NVPO com benzo?). Contexto: paciente ansiosa → baixa dose aceitável: midazolam 1 mg IV pré-indução</li>
+              <li><strong>Alternativa preferível ERAS:</strong> clonidina 150 mcg VO 90 min antes (↓ansiedade + ↓NVPO + ↓MAC)</li>
+              <li>Conversa e acolhimento pré-op: reduz ansiedade sem fármacos</li>
+            </ul>
+
+            <div class="sh sh-teal" style="margin-top:10px">Profilaxia NVPO — Multimodal (Apfel 4)</div>
+<div class="tbl-wrap wide">
+            <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+              <thead><tr><th style="white-space:nowrap">Agente</th><th>Dose</th><th>Timing</th><th>Mecanismo</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Dexametasona</strong></td><td>4–8 mg IV</td><td>Indução (após intubação)</td><td>Inibição PG + efeito central; também: ↓dor pós-op, ↓fadiga</td></tr>
+                <tr><td><strong>Ondansetrona</strong></td><td>4 mg IV</td><td>30–45 min antes do fim</td><td>Antagonista 5-HT₃</td></tr>
+                <tr><td><strong>TIVA com propofol</strong></td><td>—</td><td>Durante toda a anestesia</td><td>Propofol: efeito antiemético direto (antagonismo D₂ + ↓5-HT)</td></tr>
+                <tr><td>Droperidol 0.625–1.25 mg IV</td><td>0.625 mg IV</td><td>30 min antes do fim</td><td>Antagonista D₂; 4.º agente se risco extremo</td></tr>
+              </tbody>
+            </table></div>
+</div>
+            <div class="alert a-green" style="margin-top:10px">
+              <strong>Analgesia Pós-Op Opioide-Sparing:</strong> Para laparoscopia eletiva em Apfel 4, preferir: paracetamol 1g IV + cetorolaco 30 mg IV no final + infiltração de portal com bupivacaína 0.25%. Evitar morfina IM rotineira — opioide pós-op é o 4.º fator Apfel. Se necessário: opioide somente se analgesia insuficiente com multimodal.
+            </div>
+
+            <div class="algo-box algo-g" style="margin-top:10px">
+              <strong>Conduta Final:</strong> TIVA propofol + remifentanil. MPA: clonidina 150 mcg VO 90 min antes (ou midazolam 1 mg IV se muito ansiosa). Profilaxia NVPO tripla: dexametasona 4 mg na indução + ondansetrona 4 mg 30 min antes do fim + propofol antiemético inerente. Analgesia multimodal pós-op sem morfina de rotina. Orientar paciente sobre risco residual de NVPO mesmo com toda profilaxia.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 2 -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 2</span>
+          <span class="caso-title">Homem 70 anos, IC com FE 30%, Cirurgia Abdominal — TIVA TCI: Qual Modelo? Metas Hemodinâmicas?</span>
+        </div>
+        <div class="caso-body">
+          <p><strong>Paciente:</strong> Masculino, 70 anos, 80 kg, altura 172 cm. IC com FE 30% (IC-FEr), NYHA II, em uso de carvedilol 25 mg 12/12h, enalapril 10 mg, espironolactona 25 mg, furosemida 40 mg. PA basal 110/70 mmHg, FC 62 bpm. Hb 10.8 g/dL. Creatinina 1.6 mg/dL. Colectomia esquerda laparoscópica por neoplasia (urgência relativa — cirurgia em 3 dias). Ecocardiograma: FE 30%, dilatação VE, regurgitação mitral leve.</p>
+
+          <div class="caso-question">TIVA: modelo Marsh ou Schnider? Ce-alvo de indução? Metas hemodinâmicas intra-op? Que monitorização adicional?</div>
+          <div class="caso-answer">
+
+            <div class="sh sh-green">Escolha do Modelo TCI — Schnider para Idoso com IC</div>
+            <ul style="margin:8px 0; padding-left:18px; line-height:1.8">
+              <li><strong>Modelo de Schnider</strong> — preferível em idosos e cardiopatas: incorpora idade (↓clearance), peso, altura e sexo. LBM calculada automaticamente → dose mais precisa em paciente com possível edema/desnutrição</li>
+              <li><strong>Marsh</strong> baseado apenas em peso total: superestima dose em idosos → maior risco de hipotensão</li>
+              <li>Schnider 70 anos, 80 kg, 172 cm: LBM ≈ 57 kg → volumes de distribuição menores → <strong>Ce-alvo de indução menor</strong></li>
+            </ul>
+
+            <div class="sh sh-teal" style="margin-top:10px">Ce-Alvo Recomendado — IC e Idoso</div>
+<div class="tbl-wrap wide">
+            <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+              <thead><tr><th>Momento</th><th>Ce-alvo Propofol (Schnider)</th><th>Ce-alvo Remifentanil (Minto)</th><th>Justificativa</th></tr></thead>
+              <tbody>
+                <tr><td>Pré-indução (priming)</td><td>0.5–1 mcg/mL (sedação leve)</td><td>2 ng/mL</td><td>Avaliar tolerância hemodinâmica gradualmente</td></tr>
+                <tr><td>Indução (apneia/inconsciente)</td><td><strong>1.5–2.5 mcg/mL</strong> (↓dose habitual)</td><td>4–6 ng/mL</td><td>FE 30% + carvedilol: extremamente sensível a hipotensão; Ce menor que padrão</td></tr>
+                <tr><td>Intubação</td><td>2–3 mcg/mL</td><td>5–7 ng/mL</td><td>Remifentanil atenua resposta hemodinâmica à laringoscopia sem precisar de Ce alto de propofol</td></tr>
+                <tr><td>Manutenção (cirurgia)</td><td>1.5–2.5 mcg/mL</td><td>2–4 ng/mL</td><td>Titulada por BIS 40–60 e hemodinâmica</td></tr>
+                <tr><td>Despertar</td><td>Reduzir para 0.5–1 mcg/mL</td><td>1–1.5 ng/mL</td><td>Gradual para evitar broncoespasmo/agitação; garantir analgesia pré-extubação</td></tr>
+              </tbody>
+            </table></div>
+</div>
+
+            <div class="sh sh-green" style="margin-top:12px">Metas Hemodinâmicas Intraoperatórias</div>
+            <div class="g2" style="margin-top:8px; margin-bottom:10px">
+              <div class="alert a-teal">
+                <strong>OBJETIVOS PRIMÁRIOS</strong><br>
+                • PAM ≥65 mmHg (se basal ~80: aceitar 70 mmHg — queda &lt;20%)<br>
+                • FC: 55–75 bpm (carvedilol em uso — não forçar FC alta)<br>
+                • Débito urinário: ≥0.5 mL/kg/h<br>
+                • Lactato sérico: &lt;2 mmol/L (confirmar perfusão)<br>
+                • SpO₂ ≥96%, ETCO₂ 35–45 mmHg
+              </div>
+              <div class="alert a-gold">
+                <strong>MANEJO DA HIPOTENSÃO (COMUM)</strong><br>
+                • Vasopressor de escolha: norepinefrina 0.05–0.2 mcg/kg/min (↑pós-carga sem taquicardia)<br>
+                • Vasopressina 0.03–0.04 U/min alternativa (vasoplegia)<br>
+                • Evitar fenilefrina em altas doses (↑pós-carga → piora IC)<br>
+                • Fluidos: volêmico apenas se responsivo — usar PLR/PPV para guiar<br>
+                • Dobutamina 2–5 mcg/kg/min se baixo DC confirmado (ETE/ecocardiograma)
+              </div>
+            </div>
+
+            <div class="sh sh-teal" style="margin-top:10px">Monitorização Adicional Recomendada</div>
+            <div class="algo-box algo-g" style="margin-top:8px">
+              ✔ <strong>Pressão arterial invasiva (cateter radial)</strong> — antes da indução; batimento a batimento em IC grave<br>
+              ✔ <strong>BIS</strong> — TIVA sem BIS em cardiopata é perigoso (awareness e superficialidade de alternada hipotensão)<br>
+              ✔ <strong>Cateter venoso central</strong> — acesso para vasopressor e medida de ScvO₂<br>
+              ✔ <strong>Temperatura esofagiana</strong> — hipotermia piora IC e BNM residual<br>
+              ✔ <strong>TOF aceleromiografia</strong> — bloqueio residual em cardiopata é mais perigoso<br>
+              ✔ <strong>Débito urinário (SVD)</strong> — IR prévia (Cr 1.6) + IC → monitorar oligúria intra-op<br>
+              ✔ <strong>Ecocardiograma transesofágico (ETE)</strong> — se deterioração hemodinâmica inesperada ou cirurgia &gt;3h
+            </div>
+
+            <div class="algo-box algo-g" style="margin-top:10px">
+              <strong>Conduta Final:</strong> TIVA com modelo Schnider (idoso, LBM). Indução lenta e escalonada: Ce propofol 1 → 1.5 → 2 mcg/mL + remifentanil 4–6 ng/mL. PA invasiva antes de induzir. Norepinefrina em bomba pronta. BIS 40–60. Fluidos guiados por PLR/PPV (volemia restritiva em IC). ETE disponível. Planejar analgesia pós-op sem remifentanil infusão (hiperalgesia + instabilidade ao despertar): morfina 2 mg IV titulada ou bloco regional (TAP/ESP) → ERAS opioide-sparing.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 3 -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 3</span>
+          <span class="caso-title">Criança 5 anos, Amigdalectomia — Indução Inalatória vs. Venosa, CAM Sevoflurano, Emergence Agitation</span>
+        </div>
+        <div class="caso-body">
+          <p><strong>Paciente:</strong> Masculino, 5 anos, 20 kg. Amigdalectomia + adenoidectomia por hiperplasia adenoamigdaliana com SAOS leve (AHI 4/h no polissonografia). Sem alergias conhecidas. Não coopera com punção venosa. Extremamente agitado na sala de espera. Pai presente e tranquilo. Exames normais. Cânula nasal não tolerada.</p>
+
+          <div class="caso-question">Indução inalatória (sevoflurano) ou venosa (com MPA)? Qual a CAM do sevoflurano para essa faixa etária? Como prevenir emergence agitation? SAOS leve — algum cuidado?</div>
+          <div class="caso-answer">
+
+            <div class="sh sh-green">Indução — Estratégia para Criança Não Cooperativa</div>
+            <div class="g2" style="margin-top:8px; margin-bottom:12px">
+              <div class="algo-box algo-g">
+                <strong>INDUÇÃO INALATÓRIA (PREFERIDA NESTE CASO)</strong><br>
+                • Criança sem AV, não cooperativa → <span class="drug-pill good">indução inalatória padrão</span><br>
+                • Sevoflurano 7–8% + O₂ 100% em FGF 4–6 L/min<br>
+                • Pai na sala (parental presence — ↓ansiedade da criança)<br>
+                • Máscara com "cheiro especial" — aceitar melhor<br>
+                • Perda de consciência: ~60–90 seg<br>
+                • Após inconsciente: inserir AV, reduzir sevoflurano
+              </div>
+              <div class="alert a-teal">
+                <strong>ALTERNATIVA — INDUÇÃO COM MPA</strong><br>
+                • Midazolam 0.4 mg/kg VO 30 min antes (máx 15 mg)<br>
+                • Após MPA: criança sedada tolera punção venosa<br>
+                • Indução venosa: propofol 2–3 mg/kg IV<br>
+                • Vantagem: <strong>↓emergence agitation</strong> (propofol vs. sevo)<br>
+                • Desvantagem: aguardar 30 min + dor da punção mesmo com EMLA
+              </div>
+            </div>
+
+            <div class="sh sh-teal" style="margin-top:10px">CAM do Sevoflurano em Crianças — Variações por Idade</div>
+<div class="tbl-wrap wide">
+            <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+              <thead><tr><th>Faixa Etária</th><th>CAM Sevoflurano</th><th>CAM-awake</th><th>Observação</th></tr></thead>
+              <tbody>
+                <tr><td>Recém-nascido (0–1 mês)</td><td>3.3%</td><td>~1.3%</td><td>Maior CAM por imaturidade neurológica</td></tr>
+                <tr><td>Lactente (1–6 meses)</td><td>3.2%</td><td>~1.3%</td><td>Pico da CAM nesta faixa</td></tr>
+                <tr><td>Infante (6 meses – 3 anos)</td><td>2.5%</td><td>~1.0%</td><td>Redução gradual com maturação</td></tr>
+                <tr><td><strong>Pré-escolar (3–7 anos) — este paciente</strong></td><td><strong>2.3–2.5%</strong></td><td><strong>~0.9–1.0%</strong></td><td>5 anos: CAM ~2.3–2.5% em O₂ 100%</td></tr>
+                <tr><td>Escolar (7–12 anos)</td><td>2.2%</td><td>~0.9%</td><td>Aproximação gradual ao adulto</td></tr>
+                <tr><td>Adulto jovem (20–40 anos)</td><td>2.0%</td><td>~0.8%</td><td>Referência padrão</td></tr>
+                <tr><td>Idoso (70 anos)</td><td>~1.3–1.4%</td><td>~0.5%</td><td>↓CAM ~6%/década após 40 anos</td></tr>
+              </tbody>
+            </table></div>
+</div>
+            <div class="alert a-green" style="margin-top:10px; margin-bottom:12px">
+              <strong>Prático:</strong> Para este paciente de 5 anos, manutenção com 2.0–2.5% de sevoflurano (≈1.0–1.1 CAM) em manutenção. Monitorizar com BIS-pediatria se disponível. CAM-awake ~1.0% → reduzir para ~1.0% antes de extubar.
+            </div>
+
+            <div class="sh sh-green" style="margin-top:10px">Emergence Agitation — Como Prevenir</div>
+            <div class="alert a-gold" style="margin-top:8px; margin-bottom:10px">
+              <strong>Incidência:</strong> 20–50% após sevoflurano em crianças. Fatores de risco: cirurgia ORL (amigdalectomia = alto risco), idade 2–7 anos, ansiedade pré-op alta, dor pós-op. Caracteriza-se por choro inconsolável, agitação, não responsividade aos pais — diferente do despertar de dor (que melhora com analgesia).
+            </div>
+            <div class="g2" style="margin-bottom:12px">
+              <div class="algo-box algo-g">
+                <strong>PREVENÇÃO FARMACOLÓGICA</strong><br>
+                • <span class="drug-pill good">Fentanil 1–2 mcg/kg IV no final</span> — mais estudado, eficaz<br>
+                • <span class="drug-pill good">Dexmedetomidina 0.5 mcg/kg IV ao final</span> (em 10 min) — reduz 60–70% emergence agitation<br>
+                • <span class="drug-pill good">Propofol 0.5–1 mg/kg IV ao final</span> — alternativa simples<br>
+                • Midazolam 0.05 mg/kg IV ao final — resultados variáveis
+              </div>
+              <div class="alert a-teal">
+                <strong>ESTRATÉGIA PARA AMIGDALECTOMIA</strong><br>
+                • Dexmedetomidina 0.5 mcg/kg IV 20 min antes do fim + fentanil 1 mcg/kg IV ao final<br>
+                • Analgesia adequada: paracetamol 15 mg/kg IV + anti-inflamatório (dexametasona 0.15 mg/kg IV na indução — também ↓edema e ↓NVPO)<br>
+                • Garantir analgesia antes de extubar — pain avoidance ↓agitação<br>
+                • Presença dos pais na sala de recuperação
+              </div>
+            </div>
+
+            <div class="sh sh-teal" style="margin-top:10px">SAOS Leve — Cuidados Perioperatórios</div>
+            <div class="algo-box algo-r" style="margin-top:8px">
+              Mesmo SAOS leve (AHI 4/h): <strong>sensibilidade aumentada aos opioides e sedativos</strong> — depressão respiratória pós-op. Medidas:<br>
+              • Opioides com cautela — preferir analgesia multimodal (paracetamol + AINE) pós-op<br>
+              • Monitorização SpO₂ contínua na recuperação anestésica e primeiras horas<br>
+              • Posição: semissentado (30–45°) na recuperação — melhora perviedade de VA<br>
+              • CPAP nasal disponível se dessaturaçõs na recuperação (raro em SAOS leve pós-amigdalectomia — que é curativa para SAOS infantil)
+            </div>
+
+            <div class="algo-box algo-g" style="margin-top:10px">
+              <strong>Conduta Final:</strong> Indução inalatória sevoflurano (criança não cooperativa, sem AV). MPA: midazolam 0.4 mg/kg VO 30 min antes se julgado necessário pelo nível de ansiedade — facilita separação e ↓emergence agitation. CAM-alvo manutenção: 2.0–2.5% sevoflurano (~1.0–1.1 CAM para 5 anos). Dexametasona 0.15 mg/kg IV na indução. Dexmedetomidina 0.5 mcg/kg IV 20 min antes do fim + fentanil 1 mcg/kg. Paracetamol 15 mg/kg IV na manutenção. SpO₂ contínua na RPA — posição sentada. Alta somente após SpO₂ estável em ar ambiente ≥95%.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /ag-casos -->
+</div>

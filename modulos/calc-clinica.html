@@ -1,0 +1,354 @@
+<div class="screen" id="screen-calc-clinica">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Calculadoras Clínicas</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+  <div class="tab-bar" id="calcc-tabbar">
+    <button class="tab-btn active" onclick="showTab('calcc','tci',this)">TCI/TIVA</button>
+    <button class="tab-btn" onclick="showTab('calcc','vol',this)">Volêmica</button>
+    <button class="tab-btn" onclick="showTab('calcc','eletro',this)">Eletrólitos</button>
+    <button class="tab-btn" onclick="showTab('calcc','gas',this)">Gasometria</button>
+    <button class="tab-btn" onclick="showTab('calcc','peso',this)">Doses/Peso</button>
+  </div>
+
+<div class="tab-panel" id="calcc-tci">
+  <div class="page-wrap">
+    <div class="card">
+      <div class="card-hdr" style="background:var(--violet)">
+        <span class="card-title">⚡ Calculadora TCI — Propofol (Modelo Schnider)</span>
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="field">
+            <label>Peso (kg)</label>
+            <input type="number" id="tci-peso" aria-label="Peso do paciente em kg" min="30" max="200" step="0.1" inputmode="decimal" placeholder="70" oninput="calcTCI()"/>
+          </div>
+          <div class="field">
+            <label>Altura (cm)</label>
+            <input type="number" id="tci-altura" aria-label="Altura do paciente em cm" min="120" max="220" inputmode="decimal" placeholder="170" oninput="calcTCI()"/>
+          </div>
+        </div>
+        <div class="g2">
+          <div class="field">
+            <label>Idade (anos)</label>
+            <input type="number" id="tci-idade" aria-label="Idade do paciente em anos" min="18" max="100" inputmode="decimal" placeholder="40" oninput="calcTCI()"/>
+          </div>
+          <div class="field">
+            <label>Sexo</label>
+            <select id="tci-sexo" onchange="calcTCI()">
+              <option value="M">Masculino</option>
+              <option value="F">Feminino</option>
+            </select>
+          </div>
+        </div>
+        <div id="tci-result" style="display:none" class="result-box">
+          <div class="result-label">MODELO SCHNIDER — PROPOFOL</div>
+          <div class="g2">
+            <div>
+              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">PESO MAGRO (LBM)</div>
+              <div id="tci-lbm" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--cyan)"></div>
+            </div>
+            <div>
+              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">VOLUME DIST. V1</div>
+              <div id="tci-v1" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--cyan)"></div>
+            </div>
+          </div>
+          <div class="g2" style="margin-top:10px">
+            <div><div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">BOLUS Ce 4 mcg/mL (≈ Cp×V1)</div><div id="tci-bolus" style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--cyan)"></div></div>
+            <div><div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">EQUILÍBRIO Ce/Cp</div><div id="tci-ke0" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--cyan)"></div></div>
+          </div>
+          <div style="margin-top:12px">
+            <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:6px">DOSES RECOMENDADAS — Ce-alvo</div>
+<div class="tbl-wrap">
+            <table style="width:100%;font-size:11px;border-collapse:collapse">
+              <tr style="background:rgba(255,255,255,.06)">
+                <th style="padding:6px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.5)">Fase</th>
+                <th style="padding:6px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.5)">Ce-alvo</th>
+                <th style="padding:6px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.5)">Infusão aprox.</th>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+                <td style="padding:6px 8px;color:rgba(255,255,255,.7)">Indução</td>
+                <td style="padding:6px 8px;text-align:center;font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:700">3–5 mcg/mL</td>
+                <td id="tci-inducao" style="padding:6px 8px;text-align:right;font-family:'JetBrains Mono',monospace;color:var(--cyan);font-weight:700"></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+                <td style="padding:6px 8px;color:rgba(255,255,255,.7)">Manutenção</td>
+                <td style="padding:6px 8px;text-align:center;font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:700">2–4 mcg/mL</td>
+                <td id="tci-manut" style="padding:6px 8px;text-align:right;font-family:'JetBrains Mono',monospace;color:var(--cyan);font-weight:700"></td>
+              </tr>
+              <tr>
+                <td style="padding:6px 8px;color:rgba(255,255,255,.7)">Despertar</td>
+                <td style="padding:6px 8px;text-align:center;font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:700">~1 mcg/mL</td>
+                <td style="padding:6px 8px;text-align:right;font-family:'JetBrains Mono',monospace;color:rgba(255,255,255,.4)">— bomba desligada</td>
+              </tr>
+            </table>
+</div>
+          </div>
+        </div>
+        <div class="algo-box algo-g" style="margin-top:8px">
+          <div class="algo-title">Notas Clínicas — Modelo Schnider</div>
+          <ul style="font-size:11px;line-height:1.8;margin:4px 0 0 16px">
+            <li>Mais preciso em obesos e idosos (usa LBM ao invés do peso total)</li>
+            <li>Idosos: Ce-alvo reduzido em 30-40% — iniciar com 2-3 mcg/mL</li>
+            <li>BIS alvo intraoperatório: 40-60 — ajustar Ce conforme BIS</li>
+            <li>Combinar com Remifentanil TCI: Ce-alvo 3-6 ng/mL na indução</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" style="background:var(--teal)">
+        <span class="card-title">💧 Remifentanil — Modelo Minto</span>
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap wide"><table class="tbl">
+          <thead><tr><th>Fase</th><th>Ce-alvo</th><th>Efeito esperado</th><th>Cuidado</th></tr></thead>
+          <tbody>
+            <tr><td>Pré-indução</td><td style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:700">1–2 ng/mL</td><td>Sedação leve</td><td>Rigidez torácica se rápido</td></tr>
+            <tr><td>Laringoscopia</td><td style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:700">4–8 ng/mL</td><td>Suprime resposta</td><td>Hipotensão, apneia</td></tr>
+            <tr><td>Manutenção</td><td style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:700">2–4 ng/mL</td><td>Analgesia adequada</td><td>Monitorar ETCO₂</td></tr>
+            <tr><td>Fechamento</td><td style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:700">1–2 ng/mL</td><td>Despertar suave</td><td>Analgesia pós-op ausente!</td></tr>
+            <tr><td>Extubação</td><td style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:700">0.5–1 ng/mL</td><td>Sem rigidez</td><td>Preparar analgesia imediata</td></tr>
+          </tbody>
+        </table></div>
+        <div class="algo-box algo-r" style="margin-top:8px">
+          <div class="algo-title">⚠ ATENÇÃO — Remifentanil</div>
+          Meia-vida contexto-sensitiva de 3-5 min → dor intensa no despertar! Sempre planejar analgesia de resgate: morfina 0.1 mg/kg IV ou cetorolaco 30 mg IV antes do fim da cirurgia.
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /calcc-tci -->
+
+<div class="tab-panel" id="calcc-vol">
+  <div class="page-wrap">
+    <div class="card">
+      <div class="card-hdr" style="background:var(--blue)">
+        <span class="card-title">💧 Calculadora de Reposição Volêmica</span>
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="field">
+            <label>Peso (kg)</label>
+            <input type="number" id="vol-peso" min="1" max="300" inputmode="decimal" placeholder="70" oninput="calcVol()"/>
+          </div>
+          <div class="field">
+            <label>Horas de jejum</label>
+            <input type="number" id="vol-jejum" min="0" max="24" inputmode="decimal" placeholder="8" oninput="calcVol()"/>
+          </div>
+        </div>
+        <div class="field">
+          <label>Tipo de cirurgia</label>
+          <select id="vol-cirurgia" onchange="calcVol()">
+            <option value="0">Superficial / laparoscopia (1 mL/kg/h)</option>
+            <option value="2">Médio porte / ortopedia (2-4 mL/kg/h)</option>
+            <option value="6">Grande porte / abdominal (4-8 mL/kg/h)</option>
+          </select>
+        </div>
+        <div id="vol-result" style="display:none" class="result-box">
+          <div class="result-label">PLANO DE HIDRATAÇÃO</div>
+<div class="tbl-wrap">
+          <table style="width:100%;font-size:11px;border-collapse:collapse">
+            <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+              <td style="padding:6px 0;color:rgba(255,255,255,.5)">Taxa de manutenção (4-2-1)</td>
+              <td id="vol-manut" style="text-align:right;font-family:'JetBrains Mono',monospace;color:var(--cyan);font-weight:700"></td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+              <td style="padding:6px 0;color:rgba(255,255,255,.5)">Déficit de jejum total</td>
+              <td id="vol-deficit" style="text-align:right;font-family:'JetBrains Mono',monospace;color:var(--cyan);font-weight:700"></td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+              <td style="padding:6px 0;color:rgba(255,255,255,.5)">Perda cirúrgica estimada</td>
+              <td id="vol-cirurg" style="text-align:right;font-family:'JetBrains Mono',monospace;color:var(--cyan);font-weight:700"></td>
+            </tr>
+            <tr>
+              <td style="padding:6px 0;color:rgba(255,255,255,.7);font-weight:700">1ª HORA total</td>
+              <td id="vol-hora1" style="text-align:right;font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:800;font-size:16px"></td>
+            </tr>
+          </table>
+</div>
+          <div id="vol-protocolo" style="margin-top:10px;font-size:11px;color:rgba(255,255,255,.6);line-height:1.7"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" style="background:var(--teal)">
+        <span class="card-title">🩸 Perda Sanguínea Tolerável (MABL)</span>
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="field">
+            <label>Peso (kg)</label>
+            <input type="number" id="mabl-peso" min="1" max="300" inputmode="decimal" placeholder="70" oninput="calcMABL()"/>
+          </div>
+          <div class="field">
+            <label>Ht inicial (%)</label>
+            <input type="number" id="mabl-ht" min="20" max="65" inputmode="decimal" placeholder="42" oninput="calcMABL()"/>
+          </div>
+        </div>
+        <div id="mabl-result" style="display:none" class="result-box">
+          <div class="result-label">PERDA SANGUÍNEA</div>
+          <div class="g2">
+            <div>
+              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">VOLUME SANGUÍNEO</div>
+              <div id="mabl-vsang" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--cyan)"></div>
+            </div>
+            <div>
+              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">MABL (Ht alvo 25%)</div>
+              <div id="mabl-val" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--gold)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /calcc-vol -->
+
+<div class="tab-panel" id="calcc-eletro">
+  <div class="page-wrap">
+    <!-- Correção de Sódio -->
+    <div class="card">
+      <div class="card-hdr" style="background:var(--blue)">
+        <span class="card-title">⚗️ Correção de Hiponatremia</span>
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="field">
+            <label>Peso (kg)</label>
+            <input type="number" id="na-peso" min="1" max="300" inputmode="decimal" placeholder="70" oninput="calcNa()"/>
+          </div>
+          <div class="field">
+            <label>Na⁺ atual (mEq/L)</label>
+            <input type="number" id="na-atual" min="100" max="145" inputmode="decimal" placeholder="125" oninput="calcNa()"/>
+          </div>
+        </div>
+        <div class="g2">
+          <div class="field">
+            <label>Na⁺ alvo (mEq/L)</label>
+            <input type="number" id="na-alvo" min="125" max="145" inputmode="decimal" placeholder="135" oninput="calcNa()"/>
+          </div>
+          <div class="field">
+            <label>Solução</label>
+            <select id="na-sol" onchange="calcNa()">
+              <option value="513">NaCl 3% (513 mEq/L)</option>
+              <option value="154">SF 0.9% (154 mEq/L)</option>
+              <option value="77">SF 0.45% (77 mEq/L)</option>
+            </select>
+          </div>
+        </div>
+        <div id="na-result" style="display:none" class="result-box">
+          <div class="result-label">CORREÇÃO DE SÓDIO</div>
+          <div class="g2">
+            <div>
+              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">DÉFICIT DE Na⁺</div>
+              <div id="na-deficit" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--cyan)"></div>
+            </div>
+            <div>
+              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">VOLUME NECESSÁRIO</div>
+              <div id="na-vol" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--gold)"></div>
+            </div>
+          </div>
+          <div id="na-rate" style="margin-top:8px;font-size:11px;color:rgba(255,255,255,.6);line-height:1.7"></div>
+        </div>
+        <div class="algo-box algo-r" style="margin-top:8px">
+          <div class="algo-title">⚠ Limite de correção</div>
+          Não corrigir mais que 8-10 mEq/L em 24h — risco de mielinólise pontina central. Emergência (convulsão): 2 mEq/L/h na 1ª hora.
+        </div>
+      </div>
+    </div>
+
+    <!-- Correção de Potássio -->
+    <div class="card">
+      <div class="card-hdr" style="background:var(--orange)">
+        <span class="card-title">⚗️ Reposição de Potássio (KCl)</span>
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="field">
+            <label>K⁺ atual (mEq/L)</label>
+            <input type="number" id="k-atual" aria-label="Potássio atual em mEq/L" min="1" max="7" step="0.1" inputmode="decimal" placeholder="3.0" oninput="calcK()"/>
+          </div>
+          <div class="field">
+            <label>K⁺ alvo (mEq/L)</label>
+            <input type="number" id="k-alvo" aria-label="Potássio alvo em mEq/L" min="3.5" max="5" step="0.1" inputmode="decimal" placeholder="4.0" oninput="calcK()"/>
+          </div>
+        </div>
+        <div id="k-result" style="display:none" class="result-box">
+          <div class="result-label">REPOSIÇÃO DE KCl</div>
+          <div id="k-plan" style="font-size:12px;line-height:1.8;color:rgba(255,255,255,.8)"></div>
+        </div>
+        <div class="algo-box algo-r" style="margin-top:8px">
+          <div class="algo-title">⚠ Taxa máxima de infusão</div>
+          Via periférica: máx 10 mEq/h · Via central: máx 20-40 mEq/h · NUNCA bolus IV direto — PCR!
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /calcc-eletro -->
+
+<div class="tab-panel" id="calcc-gas">
+  <div class="page-wrap">
+    <div class="card">
+      <div class="card-hdr" style="background:var(--teal)">
+        <span class="card-title">🔬 Interpretação Gasométrica</span>
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="field"><label>pH</label><input type="number" id="gas-ph" min="6.8" max="7.8" step="0.01" inputmode="decimal" placeholder="7.38" oninput="calcGas()"/></div>
+          <div class="field"><label>PaCO₂ (mmHg)</label><input type="number" id="gas-pco2" min="10" max="100" inputmode="decimal" placeholder="40" oninput="calcGas()"/></div>
+        </div>
+        <div class="g2">
+          <div class="field"><label>HCO₃⁻ (mEq/L)</label><input type="number" id="gas-hco3" min="5" max="50" inputmode="decimal" placeholder="24" oninput="calcGas()"/></div>
+          <div class="field"><label>PaO₂ (mmHg)</label><input type="number" id="gas-po2" min="20" max="600" inputmode="decimal" placeholder="90" oninput="calcGas()"/></div>
+        </div>
+        <div class="g2">
+          <div class="field"><label>BE (mEq/L)</label><input type="number" id="gas-be" min="-30" max="30" step="0.1" inputmode="decimal" placeholder="0" oninput="calcGas()"/></div>
+          <div class="field"><label>FiO₂ (%)</label><input type="number" id="gas-fio2" min="21" max="100" inputmode="decimal" placeholder="21" oninput="calcGas()"/></div>
+        </div>
+        <div id="gas-result" style="display:none" class="result-box">
+          <div class="result-label">INTERPRETAÇÃO</div>
+          <div id="gas-diagnostico" style="font-size:12px;line-height:1.8;color:rgba(255,255,255,.85)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /calcc-gas -->
+
+<div class="tab-panel" id="calcc-peso">
+  <div class="page-wrap">
+    <div class="card">
+      <div class="card-hdr" style="background:var(--navy);border:1px solid var(--cyan)">
+        <span class="card-title" style="color:var(--cyan)">⚡ Doses Rápidas por Peso</span>
+      </div>
+      <div class="card-body">
+        <div class="peso-strip">
+          <label>PESO (kg)</label>
+          <input type="number" class="peso-input" id="calcc-peso-input" min="1" max="300" inputmode="decimal" placeholder="70" oninput="calcDosesRapidas()"/>
+          <div class="peso-info" id="calcc-peso-info">Digite o peso para calcular</div>
+        </div>
+        <div id="calcc-doses-result">
+          <div class="tbl-wrap"><table class="tbl" id="calcc-doses-table">
+            <thead><tr><th style="white-space:nowrap">Fármaco</th><th>Dose</th><th>Calculado</th><th>Unidade</th></tr></thead>
+            <tbody id="calcc-doses-tbody"></tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /calcc-peso -->
+
+
+
+
+
+</div>

@@ -1,0 +1,2122 @@
+<div class="screen" id="screen-avc">
+
+  <!-- TOP BAR -->
+  <div class="topbar" style="border-bottom:3px solid var(--teal)">
+    <div>
+      <div class="topbar-brand">ACESSO VASCULAR CENTRAL
+    <button class="back-btn" style="color:var(--cyan);margin-right:4px" onclick="goTo('home')">&larr; M&oacute;dulos</button>
+  </div>
+      <div class="topbar-sub">Seldinger · Ultrassom · JI · SC · Femoral · PICC</div>
+    </div>
+    <button class="back-btn" onclick="goToLauncher()">← HOME</button>
+  </div>
+
+  <!-- TAB BAR -->
+  <div class="tab-bar" id="avc-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('avc','fundamentos',this)">FUNDAMENTOS</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','seldinger',this)">SELDINGER</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','vias',this)">VIAS</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','ultrassom',this)">ULTRASSOM</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','cuidados',this)">CUIDADOS</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','complicacoes',this)">COMPLIC.</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','hemo',this)">HEMODINÂMICA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','casos',this)">CASOS</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ABA 1 — FUNDAMENTOS                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="avc-fundamentos" class="tab-panel active">
+    <div class="page-wrap">
+
+      <!-- O QUE É CVC -->
+      <div class="card">
+        <div class="card-header ch-teal"><div class="card-num">1</div>O QUE É CVC E POR QUE É NECESSÁRIO</div>
+        <div class="card-body">
+          <div class="alert a-teal" style="margin-bottom:12px">
+            <strong>Definição:</strong> Cateter Venoso Central (CVC) é um dispositivo intravascular cuja ponta se localiza em veia central — preferencialmente na junção da veia cava superior (VCS) com o átrio direito, ou na veia cava inferior (VCI) para via femoral.
+          </div>
+
+          <div class="sh sh-teal">Indicações Clínicas</div>
+          <ul class="ck-list">
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Monitorização de PVC</strong> — Pressão Venosa Central: avaliação de pré-carga e status volêmico
+                <span class="ck-sub">Valores de referência: 4–12 cmH₂O (0–8 mmHg)</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Drogas vasoativas concentradas</strong> — noradrenalina, vasopressina, dopamina
+                <span class="ck-sub">Irritantes venosos: extravasamento periférico causa necrose tecidual</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Nutrição Parenteral Total (NPT)</strong> — osmolaridade &gt;800–900 mOsm/L
+                <span class="ck-sub">Osmolaridade elevada lesiona veias periféricas em &lt;72h</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Ausência de acesso periférico viável</strong> — veias inacessíveis, colapso circulatório
+                <span class="ck-sub">Indicação clássica em choque, queimaduras extensas, neonatos</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Hemodiálise / TRRC</strong> — cateter de duplo-lúmen de alto fluxo (11–13,5 Fr)
+                <span class="ck-sub">Prefere-se jugular interna direita ou femoral para hemodiálise aguda</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Marcapasso transvenoso temporário</strong> — urgência por bradicardia refratária
+                <span class="ck-sub">Eletrodo introduzido pelo cateter até ventrículo direito</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>ScvO₂ — Saturação venosa central de O₂</strong> — avaliação de adequação do débito cardíaco
+                <span class="ck-sub">ScvO₂ &lt;70% indica consumo excessivo: sepse grave, choque cardiogênico</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Swan-Ganz (Cateter de Artéria Pulmonar)</strong> — introduzido via JI ou SC
+                <span class="ck-sub">Monitora PCP, DC (termodiluição), resistências vasculares</span></span>
+            </li>
+          </ul>
+
+          <div class="sh sh-red" style="margin-top:12px">Contraindicações por Via</div>
+          <div class="g2" style="gap:8px;margin-bottom:10px">
+            <div class="alert a-red" style="margin-bottom:0">
+              <strong>Jugular Interna</strong><br>
+              • Trombose jugular<br>
+              • Cirurgia cervical prévia<br>
+              • Traqueostomia recente<br>
+              • Coagulopatia grave (INR&gt;3)<br>
+              • Tumor/massa cervical
+            </div>
+            <div class="alert a-orange" style="margin-bottom:0">
+              <strong>Subclávia</strong><br>
+              • PTX contralateral<br>
+              • MP ipsilateral<br>
+              • Fratura de clavícula<br>
+              • Cirurgia torácica prévia<br>
+              • Coagulopatia (não compressível)
+            </div>
+          </div>
+          <div class="g2" style="gap:8px">
+            <div class="alert a-gold" style="margin-bottom:0">
+              <strong>Femoral</strong><br>
+              • Queimadura/infecção local<br>
+              • Cirurgia prévia na virilha<br>
+              • Suspeita de TVP femoral<br>
+              • Trauma abdominal/pélvico<br>
+              • Filtro de VCI
+            </div>
+            <div class="alert a-violet" style="margin-bottom:0">
+              <strong>PICC</strong><br>
+              • Veias braquiais inacessíveis<br>
+              • Obstrução de VCS<br>
+              • Infecção no trajeto<br>
+              • Síndrome da veia cava sup.<br>
+              • Extremidade com fístula AV
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIPOS DE CVC -->
+      <div class="card">
+        <div class="card-header ch-blue"><div class="card-num">2</div>TIPOS DE CATETERES VENOSOS CENTRAIS</div>
+        <div class="card-body">
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">🔵</span>
+              <span>CVC Não-Tunelizado (curta duração) — Seldinger padrão</span>
+              <span class="tag tb">MAIS COMUM</span>
+            </div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li><strong>Calibre:</strong> 7 Fr (triplo lúmen) ou 8,5 Fr (introdutor)</li>
+                <li><strong>Comprimento:</strong> 15–20 cm dependendo da via</li>
+                <li><strong>Material:</strong> Poliuretano ou silicone</li>
+                <li><strong>Duração:</strong> Máximo 14 dias (risco infecção crescente)</li>
+                <li><strong>Usos:</strong> UTI, perioperatório, emergência</li>
+                <li><strong>Lúmens:</strong> Proximal (1,2 mm/azul) · Médio (1,7 mm/branco) · Distal (2,2 mm/marrom)</li>
+              </ul>
+              <div class="alert a-teal" style="margin-top:8px">
+                <strong>Prática:</strong> Use o lúmen distal (maior calibre) para drogas vasoativas e coleta de ScvO₂. Reserve proximais para expansão volêmica e medicações diversas.
+              </div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">🟢</span>
+              <span>CVC Tunelizado (Hickman, Broviac)</span>
+              <span class="tag tg">LONGA DURAÇÃO</span>
+            </div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li><strong>Tunelamento subcutâneo:</strong> 10–15 cm sob a pele, cuff de Dacron cria barreira infecciosa</li>
+                <li><strong>Duração:</strong> Meses a anos</li>
+                <li><strong>Indicações:</strong> Oncologia, NPT prolongada, hemodiálise crônica, HIV</li>
+                <li><strong>Hickman:</strong> adulto, lúmen único ou duplo, 9–12 Fr</li>
+                <li><strong>Broviac:</strong> pediátrico, menor calibre (2,7–6,6 Fr)</li>
+                <li><strong>Inserção:</strong> Centro cirúrgico ou sala de procedimentos com RX intraoperatório</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">🟣</span>
+              <span>Port-a-Cath (Câmara Subcutânea Implantável)</span>
+              <span class="tag tv">IMPLANTÁVEL</span>
+            </div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li><strong>Componentes:</strong> Reservatório metálico/plástico + cateter tunelizado até VCS</li>
+                <li><strong>Acesso:</strong> Agulha de Huber (ponta especial, não danifica membrana) punciona através da pele</li>
+                <li><strong>Duração:</strong> 5–10 anos (até 1000–2000 punções da membrana)</li>
+                <li><strong>Vantagens:</strong> Máxima conveniência do paciente, menor infecção, sem curativo permanente</li>
+                <li><strong>Indicações:</strong> Quimioterapia (ciclos repetidos), NPT domiciliar, fármacos biológicos</li>
+                <li><strong>Inserção:</strong> Cirurgia ambulatorial sob anestesia local + sedação</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">🔵</span>
+              <span>PICC — Cateter Central de Inserção Periférica</span>
+              <span class="tag tb">PERIFÉRICO→CENTRAL</span>
+            </div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li><strong>Inserção:</strong> Veia basílica ou cefálica do braço → avanço até junção VCS/AD</li>
+                <li><strong>Calibre:</strong> 3–6 Fr, mono ou duplo lúmen</li>
+                <li><strong>Comprimento:</strong> 45–60 cm (adulto médio)</li>
+                <li><strong>Sempre com US:</strong> Guia ultrassonográfico para punção</li>
+                <li><strong>Confirmação:</strong> RX tórax PA — ponta na projeção da 3ª costela / ângulo cardiofrénico</li>
+                <li><strong>Duração:</strong> 7 dias a 12 meses</li>
+                <li><strong>Indicações:</strong> Antibioticoterapia IV prolongada, quimioterapia ambulatorial, NPT domiciliar</li>
+              </ul>
+              <div class="alert a-gold">
+                <strong>Veia basílica:</strong> 1ª escolha — calibre maior, trajeto mais reto, menos tortuosidade na confluência com a cefálica. Veia cefálica tem ângulo agudo na junção com subclávia → maior dificuldade de progressão.
+              </div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">🔴</span>
+              <span>Cateter de Hemodiálise (Mahurkar / Quinton)</span>
+              <span class="tag tr">ALTO FLUXO</span>
+            </div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li><strong>Calibre:</strong> 11–13,5 Fr (muito maior que CVC padrão)</li>
+                <li><strong>Configuração:</strong> Duplo lúmen co-axial — vermelho (arterial, aspira sangue) + azul (venoso, retorna)</li>
+                <li><strong>Fluxo:</strong> 200–400 mL/min necessários para hemodiálise eficaz</li>
+                <li><strong>Via preferencial aguda:</strong> JI direita &gt; femoral &gt; JI esquerda &gt; SC (maior risco estenose)</li>
+                <li><strong>Comprimento JI:</strong> 15–16 cm; femoral: 20–24 cm</li>
+                <li><strong>Contraindicação SC:</strong> Estenose venosa subclávia compromete futuro acesso para FAV</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ANATOMIA -->
+      <div class="card">
+        <div class="card-header ch-navy"><div class="card-num">3</div>ANATOMIA COMPARATIVA DAS VIAS</div>
+        <div class="card-body">
+
+          <!-- SVG Anatomia do pescoço -->
+          <svg viewBox="0 0 340 280" style="width:100%;border-radius:8px;margin-bottom:12px;display:block" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background anatômico -->
+            <rect width="340" height="280" fill="#F4F6FA" rx="8"/>
+            <text x="170" y="18" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" font-weight="700" fill="#0D1B2A" letter-spacing="1">ANATOMIA CERVICAL — JUGULAR INTERNA</text>
+
+            <!-- Silhueta do pescoço/cabeça simplificada -->
+            <ellipse cx="170" cy="55" rx="55" ry="45" fill="#F0D9B5" stroke="#C4A882" stroke-width="1.5"/>
+            <text x="170" y="58" text-anchor="middle" font-size="10" fill="#5A3E28" font-family="Inter,sans-serif">Cabeça</text>
+
+            <!-- Pescoço -->
+            <rect x="135" y="97" width="70" height="80" rx="10" fill="#F0D9B5" stroke="#C4A882" stroke-width="1.5"/>
+
+            <!-- ECM — músculo esternocleidomastoideo -->
+            <!-- Cabeça esternal -->
+            <path d="M155 177 L148 140 L160 105" stroke="#8B6F5E" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <!-- Cabeça clavicular -->
+            <path d="M178 177 L180 145 L165 105" stroke="#8B6F5E" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <!-- Label ECM -->
+            <text x="225" y="145" font-size="9" fill="#5A3E28" font-family="Inter,sans-serif">ECM</text>
+            <line x1="220" y1="143" x2="185" y2="135" stroke="#5A3E28" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+            <!-- Triângulo de Sedillot (triângulo entre os dois ventres do ECM) -->
+            <polygon points="165,106 155,140 178,140" fill="rgba(14,116,144,0.15)" stroke="#0E7490" stroke-width="1.5" stroke-dasharray="4,2"/>
+            <text x="168" y="130" text-anchor="middle" font-size="8" fill="#0E7490" font-family="JetBrains Mono,monospace">Δ SEDILLOT</text>
+
+            <!-- Artéria carótida -->
+            <path d="M158 177 L156 155 L160 120 L163 100" stroke="#C0392B" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <text x="88" y="148" text-anchor="middle" font-size="9" fill="#C0392B" font-family="Inter,sans-serif" font-weight="700">Art.</text>
+            <text x="88" y="159" text-anchor="middle" font-size="9" fill="#C0392B" font-family="Inter,sans-serif" font-weight="700">Carótida</text>
+            <line x1="110" y1="153" x2="152" y2="148" stroke="#C0392B" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+            <!-- Veia Jugular Interna -->
+            <path d="M168 177 L170 155 L168 120 L170 100" stroke="#1B5E96" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"/>
+            <text x="248" y="148" text-anchor="middle" font-size="9" fill="#1B5E96" font-family="Inter,sans-serif" font-weight="700">V. Jugular</text>
+            <text x="248" y="159" text-anchor="middle" font-size="9" fill="#1B5E96" font-family="Inter,sans-serif" font-weight="700">Interna</text>
+            <line x1="233" y1="153" x2="175" y2="148" stroke="#1B5E96" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+            <!-- Clavícula -->
+            <path d="M100 178 Q170 170 240 178" stroke="#8B7355" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <text x="170" y="198" text-anchor="middle" font-size="9" fill="#5A3E28" font-family="Inter,sans-serif">Clavícula</text>
+
+            <!-- Ponto de punção JI central -->
+            <circle cx="168" cy="152" r="5" fill="#0E7490" stroke="white" stroke-width="2"/>
+            <text x="168" y="215" text-anchor="middle" font-size="8.5" fill="#0E7490" font-family="JetBrains Mono,monospace" font-weight="700">★ PUNÇÃO CENTRAL JI</text>
+            <text x="168" y="225" text-anchor="middle" font-size="8" fill="#5A6880" font-family="Inter,sans-serif">Nível cartilagem tireóide</text>
+            <text x="168" y="235" text-anchor="middle" font-size="8" fill="#5A6880" font-family="Inter,sans-serif">30–45° para mamilo ipsilateral</text>
+            <line x1="168" y1="157" x2="168" y2="208" stroke="#0E7490" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+            <!-- Agulha de punção -->
+            <line x1="200" y1="120" x2="172" y2="152" stroke="#E8A020" stroke-width="2" stroke-linecap="round"/>
+            <polygon points="172,152 168,148 176,148" fill="#E8A020"/>
+            <text x="218" y="115" text-anchor="middle" font-size="8" fill="#E8A020" font-family="JetBrains Mono,monospace">Agulha 18G</text>
+
+            <!-- Nervo vago (entre carótida e jugular) -->
+            <path d="M163 177 L162 155 L164 120" stroke="#7C3AED" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="3,2"/>
+            <text x="115" y="122" font-size="8" fill="#7C3AED" font-family="Inter,sans-serif">N. Vago</text>
+            <line x1="130" y1="122" x2="160" y2="138" stroke="#7C3AED" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+            <!-- Legenda -->
+            <rect x="5" y="245" width="330" height="30" fill="rgba(13,27,42,0.04)" rx="4"/>
+            <circle cx="18" cy="260" r="4" fill="#C0392B"/>
+            <text x="25" y="263" font-size="8" fill="#5A3E28" font-family="Inter,sans-serif">Artéria Carótida</text>
+            <circle cx="95" cy="260" r="4" fill="#1B5E96"/>
+            <text x="102" y="263" font-size="8" fill="#5A3E28" font-family="Inter,sans-serif">V. Jugular Int.</text>
+            <circle cx="170" cy="260" r="4" fill="#0E7490"/>
+            <text x="177" y="263" font-size="8" fill="#5A3E28" font-family="Inter,sans-serif">Ponto de punção</text>
+            <line x1="238" y1="260" x2="250" y2="260" stroke="#7C3AED" stroke-width="2" stroke-dasharray="3,2"/>
+            <text x="254" y="263" font-size="8" fill="#5A3E28" font-family="Inter,sans-serif">N. Vago</text>
+          </svg>
+
+          <div class="sh sh-teal">Jugular Interna (JI)</div>
+          <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px;margin-bottom:10px">
+            <li>Localizada no trígono de <strong>Sedillot</strong> (triângulo entre cabeça esternal e clavicular do ECM)</li>
+            <li>Relação: posterior à artéria carótida interna na porção alta → anterolateral no nível cervical médio</li>
+            <li>Nível de abordagem central: <strong>cartilagem tireóide</strong> (C4–C5)</li>
+            <li>Calibre: 10–15 mm de diâmetro</li>
+            <li>Preferência pela direita: trajeto mais reto → VCS → AD, evita ducto torácico</li>
+          </ul>
+
+          <div class="sh sh-blue">Subclávia (SC)</div>
+          <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px;margin-bottom:10px">
+            <li>Corre posterior à clavícula, anterior à artéria subclávia, superior à 1ª costela</li>
+            <li>Separada da artéria pelo músculo escaleno anterior (1–2 cm)</li>
+            <li>Cúpula pleural: imediatamente abaixo → risco de pneumotórax</li>
+            <li>Calibre: 12–20 mm (maior que JI)</li>
+            <li>Não compressível — emergência cirúrgica em punção arterial inadvertida</li>
+          </ul>
+
+          <div class="sh sh-gold">Femoral</div>
+          <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px;margin-bottom:10px">
+            <li>Triângulo femoral: ligamento inguinal (superior), sartório (lateral), adutor longo (medial)</li>
+            <li>Mnemônico <strong>NAVEL</strong> (lateral → medial): <span class="tag tb">N</span>ervo · <span class="tag tr">A</span>rtéria · <span class="tag tb">V</span>eia · <span class="tag ty">E</span>spaço morto · <span class="tag tg">L</span>infáticos</li>
+            <li>Ponto de punção: 1–2 cm medial ao pulso femoral, 2 cm abaixo do ligamento inguinal</li>
+            <li>Calibre: 12–15 mm</li>
+            <li>Compressível em caso de punção arterial inadvertida</li>
+          </ul>
+
+          <div class="sh sh-violet">PICC — Basílica vs Cefálica</div>
+          <div class="g2">
+            <div class="alert a-teal" style="margin-bottom:0">
+              <strong>Basílica (1ª escolha)</strong><br>
+              • Face medial do antebraço<br>
+              • Calibre maior (3–8mm)<br>
+              • Trajeto reto em direção à axila<br>
+              • Menos tortuosa
+            </div>
+            <div class="alert a-gold" style="margin-bottom:0">
+              <strong>Cefálica (2ª opção)</strong><br>
+              • Face lateral do antebraço<br>
+              • Angulação na junção deltopeitoral<br>
+              • Maior dificuldade de progressão<br>
+              • Menor taxa de sucesso
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MATERIAL -->
+      <div class="card">
+        <div class="card-header ch-green"><div class="card-num">4</div>MATERIAL NECESSÁRIO — KIT SELDINGER PADRÃO</div>
+        <div class="card-body">
+          <div class="alert a-green">
+            <strong>Princípio:</strong> Prepare <em>todo</em> o material antes de paramentar-se. A paramentação estéril após o preparo previne contaminação por reposicionamento.
+          </div>
+
+          <div class="sh sh-green">Checklist de Material</div>
+          <ul class="ck-list">
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Agulha de punção 18G × 7 cm</strong> + seringa 10 mL
+                <span class="ck-sub">Agulha Seldinger convencional ou agulha-cateter (Abbocath 18G pode ser usado)</span></span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Guia de aço J-tip 0.035" × 45 cm</strong>
+                <span class="ck-sub">Ponta em J suave: previne perfuração vascular · avançar com movimentos de rotação</span></span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Dilatador fascial</strong> (compatível com cateter 7 Fr)
+                <span class="ck-sub">Dilata o trajeto subcutâneo antes da introdução do cateter</span></span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Cateter multilúmen 7 Fr</strong> (2 ou 3 vias) × 15–20 cm
+                <span class="ck-sub">Verificar comprimento adequado pela via escolhida antes de inserir</span></span>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Campo estéril amplo</strong> (fenestrado ou 4 campos)
+                <span class="ck-sub">Mínimo 30×30 cm de pele visível · máxima barreira estéril</span></span>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Clorexidina alcoólica 2%</strong> — antissepsia
+                <span class="ck-sub">3 aplicações com swab · aguardar secar completamente (30–60 seg)</span></span>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Lidocaína 1% sem vasoconstritor</strong> — 5–10 mL
+                <span class="ck-sub">Botão dérmico + infiltração subcutânea até a veia</span></span>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Lâmina de bisturi 11</strong>
+                <span class="ck-sub">Pequena incisão na pele facilita passagem do dilatador</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Fio de sutura</strong> — seda 0 ou 2-0
+                <span class="ck-sub">Fixação do cateter em dois pontos (proximal e distal)</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Paramentação completa</strong> — gorro, máscara, avental estéril, luvas estéreis
+                <span class="ck-sub">Bundle IHI: máxima barreira estéril reduz ICSRC em 66%</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Monitor cardíaco conectado</strong>
+                <span class="ck-sub">Vigilância de arritmias durante introdução do guia</span></span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>Curativo transparente estéril</strong> (Tegaderm 10×12 cm)
+                <span class="ck-sub">Permite inspeção visual do sítio sem remover o curativo</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TABELA COMPARATIVA -->
+      <div class="card">
+        <div class="card-header ch-navy"><div class="card-num">5</div>TABELA COMPARATIVA DAS VIAS</div>
+        <div class="card-body">
+          <div style="overflow-x:auto">
+            <div class="tbl-wrap wide"><table class="tbl" style="width:100%;border-collapse:collapse;font-size:11px">
+              <thead>
+                <tr style="background:var(--navy);color:white">
+                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px">VIA</th>
+                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px">VANTAGENS</th>
+                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px">DESVANTAGENS</th>
+                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px">INDICAÇÃO PREFERENCIAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--border)">
+                  <td style="padding:7px 8px;font-weight:700;color:var(--teal)">JI Direita</td>
+                  <td style="padding:7px 8px">Trajeto reto · compressível · menor PTX · US fácil</td>
+                  <td style="padding:7px 8px">Desconforto do paciente · difícil em pescoço curto/obeso</td>
+                  <td style="padding:7px 8px"><span class="tag tg">1ª OPÇÃO</span> UTI / cirurgia cardíaca</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.02)">
+                  <td style="padding:7px 8px;font-weight:700;color:var(--blue)">Subclávia</td>
+                  <td style="padding:7px 8px">Baixa infecção · confortável · fixação fácil · grande calibre</td>
+                  <td style="padding:7px 8px">PTX 1–3% · hemotórax · não compressível · coagulopatia CI</td>
+                  <td style="padding:7px 8px">CVC prolongado · NPT · paciente acordado</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border)">
+                  <td style="padding:7px 8px;font-weight:700;color:var(--gold)">Femoral</td>
+                  <td style="padding:7px 8px">Sem PTX · compressível · rápida em emergência · sempre acessível</td>
+                  <td style="padding:7px 8px">Alta infecção · TVP · difícil manutenção · limita deambulação</td>
+                  <td style="padding:7px 8px">RCP · instabilidade cervical · coagulopatia grave</td>
+                </tr>
+                <tr>
+                  <td style="padding:7px 8px;font-weight:700;color:var(--violet)">PICC</td>
+                  <td style="padding:7px 8px">Ambulatorial · muito baixa infecção · seguro · fácil remoção</td>
+                  <td style="padding:7px 8px">Fluxo limitado · trombose braquial · requer US · lento inserir</td>
+                  <td style="padding:7px 8px">NPT domiciliar · quimioterapia · ATB IV prolongada</td>
+                </tr>
+              </tbody>
+            </table></div>
+          </div>
+
+          <div class="alert a-blue" style="margin-top:10px">
+            <strong>Regra Prática R1:</strong> Em cirurgia eletiva → JI direita guiada por US. Em emergência/RCP → femoral. Em oncologia ambulatorial → PICC ou Port-a-Cath. Em coagulopatia grave → femoral ou PICC (compressíveis/superficiais).
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /avc-fundamentos -->
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ABA 2 — TÉCNICA DE SELDINGER                              -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="avc-seldinger" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-teal"><div class="card-num">S</div>HISTÓRIA E PRINCÍPIO DE SELDINGER</div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Sven-Ivar Seldinger (1953):</strong> Radiologista sueco que descreveu a técnica de introdução de cateteres por fio-guia. Publicação original: <em>Acta Radiologica</em>, 1953. Princípio simples e universal que revolucionou todo o acesso vascular — continua inalterado até hoje.
+          </div>
+          <div class="sh sh-teal">Princípio Fundamental</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">①</span><span>Punção da veia com agulha fina (18G)</span></div>
+            <div class="proto-step"><span class="sn sn-b">②</span><span>Introdução do <strong>fio-guia</strong> através da agulha</span></div>
+            <div class="proto-step"><span class="sn sn-b">③</span><span>Retirada da agulha <strong>mantendo</strong> o guia no lugar</span></div>
+            <div class="proto-step"><span class="sn sn-b">④</span><span>Passagem do <strong>dilatador</strong> sobre o guia</span></div>
+            <div class="proto-step"><span class="sn sn-b">⑤</span><span>Passagem do <strong>cateter final</strong> sobre o guia</span></div>
+            <div class="proto-step"><span class="sn sn-b">⑥</span><span>Retirada do guia — cateter em posição final</span></div>
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Regra de Ouro:</strong> NUNCA solte o fio-guia. Segure-o em todos os momentos. A perda do guia para o interior da veia é uma emergência que requer fluoroscopia para recuperação.
+          </div>
+        </div>
+      </div>
+
+      <!-- PASSO A PASSO COMPLETO -->
+      <div class="card">
+        <div class="card-header ch-navy"><div class="card-num">P</div>PASSO A PASSO COMPLETO — 19 ETAPAS</div>
+        <div class="card-body">
+
+          <!-- SVG Sequência Seldinger -->
+          <svg viewBox="0 0 340 200" style="width:100%;border-radius:8px;margin-bottom:14px;display:block" xmlns="http://www.w3.org/2000/svg">
+            <rect width="340" height="200" fill="#0D1B2A" rx="8"/>
+            <text x="170" y="16" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" font-weight="700" fill="#38B6E0" letter-spacing="1">TÉCNICA DE SELDINGER — SEQUÊNCIA</text>
+
+            <!-- Passo 1: Agulha na veia -->
+            <g transform="translate(10,30)">
+              <rect width="70" height="80" rx="4" fill="rgba(255,255,255,.04)" stroke="rgba(56,182,224,.2)" stroke-width="1"/>
+              <!-- Veia -->
+              <ellipse cx="35" cy="55" rx="25" ry="10" fill="rgba(27,94,150,.5)" stroke="#1B5E96" stroke-width="1"/>
+              <!-- Agulha -->
+              <line x1="50" y1="20" x2="35" y2="50" stroke="#E8A020" stroke-width="2" stroke-linecap="round"/>
+              <polygon points="35,50 31,44 39,46" fill="#E8A020"/>
+              <text x="35" y="75" text-anchor="middle" font-size="7" fill="#38B6E0" font-family="JetBrains Mono,monospace">1.PUNÇÃO</text>
+            </g>
+
+            <!-- Seta -->
+            <text x="86" y="73" font-size="14" fill="rgba(56,182,224,.5)">→</text>
+
+            <!-- Passo 2: Guia introduzido -->
+            <g transform="translate(98,30)">
+              <rect width="70" height="80" rx="4" fill="rgba(255,255,255,.04)" stroke="rgba(56,182,224,.2)" stroke-width="1"/>
+              <ellipse cx="35" cy="55" rx="25" ry="10" fill="rgba(27,94,150,.5)" stroke="#1B5E96" stroke-width="1"/>
+              <line x1="50" y1="20" x2="35" y2="50" stroke="#E8A020" stroke-width="2" stroke-linecap="round"/>
+              <!-- guia em J -->
+              <path d="M35,50 Q30,60 25,57" stroke="#1A7A4A" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <text x="35" y="75" text-anchor="middle" font-size="7" fill="#38B6E0" font-family="JetBrains Mono,monospace">2.GUIA J</text>
+            </g>
+
+            <!-- Seta -->
+            <text x="174" y="73" font-size="14" fill="rgba(56,182,224,.5)">→</text>
+
+            <!-- Passo 3: Dilatador -->
+            <g transform="translate(186,30)">
+              <rect width="70" height="80" rx="4" fill="rgba(255,255,255,.04)" stroke="rgba(56,182,224,.2)" stroke-width="1"/>
+              <ellipse cx="35" cy="55" rx="25" ry="10" fill="rgba(27,94,150,.5)" stroke="#1B5E96" stroke-width="1"/>
+              <!-- guia só -->
+              <line x1="35" y1="20" x2="27" y2="57" stroke="#1A7A4A" stroke-width="2" stroke-linecap="round"/>
+              <!-- dilatador -->
+              <path d="M40,15 L37,50 L33,50 L30,15 Z" fill="#7C3AED" opacity="0.8"/>
+              <text x="35" y="75" text-anchor="middle" font-size="7" fill="#38B6E0" font-family="JetBrains Mono,monospace">3.DILAT.</text>
+            </g>
+
+            <!-- Seta -->
+            <text x="262" y="73" font-size="14" fill="rgba(56,182,224,.5)">→</text>
+
+            <!-- Passo 4: Cateter -->
+            <g transform="translate(274,30)">
+              <rect width="58" height="80" rx="4" fill="rgba(255,255,255,.04)" stroke="rgba(56,182,224,.2)" stroke-width="1"/>
+              <ellipse cx="29" cy="55" rx="22" ry="10" fill="rgba(27,94,150,.5)" stroke="#1B5E96" stroke-width="1"/>
+              <!-- cateter multilúmen -->
+              <rect x="22" y="15" width="14" height="40" rx="3" fill="#38B6E0" opacity="0.8"/>
+              <line x1="25" y1="15" x2="25" y2="55" stroke="white" stroke-width="0.5" opacity="0.5"/>
+              <line x1="29" y1="15" x2="29" y2="55" stroke="white" stroke-width="0.5" opacity="0.5"/>
+              <line x1="33" y1="15" x2="33" y2="55" stroke="white" stroke-width="0.5" opacity="0.5"/>
+              <text x="29" y="75" text-anchor="middle" font-size="7" fill="#38B6E0" font-family="JetBrains Mono,monospace">4.CATE.</text>
+            </g>
+
+            <!-- Segunda linha: legenda -->
+            <rect x="10" y="120" width="320" height="72" rx="4" fill="rgba(255,255,255,.03)" stroke="rgba(56,182,224,.15)" stroke-width="1"/>
+            <text x="170" y="134" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="rgba(255,255,255,.5)" letter-spacing=".5">LEGENDA</text>
+            <rect x="18" y="140" width="10" height="4" rx="1" fill="#E8A020"/>
+            <text x="32" y="146" font-size="8" fill="rgba(255,255,255,.7)" font-family="Inter,sans-serif">Agulha 18G</text>
+            <line x1="90" y1="142" x2="108" y2="142" stroke="#1A7A4A" stroke-width="2" stroke-linecap="round"/>
+            <text x="112" y="146" font-size="8" fill="rgba(255,255,255,.7)" font-family="Inter,sans-serif">Guia J-tip 0.035"</text>
+            <rect x="185" y="139" width="8" height="6" rx="1" fill="#7C3AED"/>
+            <text x="197" y="146" font-size="8" fill="rgba(255,255,255,.7)" font-family="Inter,sans-serif">Dilatador</text>
+            <rect x="250" y="138" width="10" height="8" rx="1" fill="#38B6E0"/>
+            <text x="264" y="146" font-size="8" fill="rgba(255,255,255,.7)" font-family="Inter,sans-serif">Cateter 7Fr</text>
+            <text x="18" y="162" font-size="7.5" fill="rgba(255,255,255,.4)" font-family="Inter,sans-serif">Veia alvo (JI/SC/Femoral): azul</text>
+            <text x="18" y="173" font-size="7.5" fill="rgba(255,255,255,.4)" font-family="Inter,sans-serif">Guia SEMPRE visível fora do paciente antes de qualquer passo</text>
+          </svg>
+
+          <div class="sh sh-teal">1. POSICIONAMENTO DO PACIENTE</div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🛏️</span><span>Posição para JI e Subclávia</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li><strong>Trendelenburg 15–20°</strong>: dilata as veias jugular e subclávia por aumento de pressão venosa</li>
+                <li>Cabeça rodada 30–45° para o lado <em>oposto</em> ao da punção</li>
+                <li>Almofada sob os ombros (SC): protrai o ombro e facilita acesso à subclávia</li>
+                <li>Braço do lado da punção estendido e levemente tracionado</li>
+                <li><strong>Atenção:</strong> Trendelenburg excessivo (>30°) piora ventilação em obesos e ICC</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🦵</span><span>Posição para Femoral</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li>Plano horizontal ou leve posição reversa de Trendelenburg</li>
+                <li>Membro inferior em leve abdução e rotação externa</li>
+                <li>Palpar artéria femoral antes de paramentar</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sh sh-blue">2–4. PARAMENTAÇÃO E ANTISSEPSIA</div>
+          <ul class="ck-list">
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Higiene das mãos (CCIH): sabão + álcool 70° antes de paramentar</span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Paramentação completa: <strong>gorro</strong> + <strong>máscara</strong> + <strong>avental estéril</strong> + <strong>luvas estéreis</strong>
+                <span class="ck-sub">Bundle IHI: 5 elementos. A paramentação máxima é o elemento mais impactante na redução de ICSRC</span></span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Campo estéril amplo: mínimo 30×30 cm de pele visível
+                <span class="ck-sub">Preferir campo fenestrado grande ou 4 campos separados cobrindo toda a região</span></span>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Clorexidina alcoólica 2%: 3 aplicações com swab
+                <span class="ck-sub">Movimentos circulares do centro para a periferia · aguardar secar 30–60s antes de cobrir com campo</span></span>
+            </li>
+          </ul>
+
+          <div class="sh sh-green">5. ANESTESIA LOCAL</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-g">5a</span><span>Lidocaína 1% sem vasoconstritor, seringa 5 mL + agulha 25G</span></div>
+            <div class="proto-step"><span class="sn sn-g">5b</span><span>Botão dérmico: 0,3–0,5 mL intradérmico no ponto de punção</span></div>
+            <div class="proto-step"><span class="sn sn-g">5c</span><span>Infiltração subcutânea: avançar a agulha aspirando antes de injetar (evitar injeção IV)</span></div>
+            <div class="proto-step"><span class="sn sn-g">5d</span><span>Total: 3–5 mL (JI), 5–8 mL (SC/femoral)</span></div>
+            <div class="proto-step"><span class="sn sn-g">5e</span><span>Aguardar 60–90 segundos para ação completa</span></div>
+          </div>
+
+          <div class="sh sh-orange" style="margin-top:12px">6–10. PUNÇÃO E INTRODUÇÃO DO GUIA</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn">6</span><span><strong>Agulha 18G + seringa 10 mL</strong>: aspiração contínua e lenta enquanto avança — ângulo e direção conforme via escolhida (ver Aba Vias)</span></div>
+            <div class="proto-step"><span class="sn">7</span><span><strong>Confirmar posição venosa</strong>: sangue fluindo livremente e de forma não-pulsátil. Sangue venoso = vermelho-escuro, fluxo contínuo. <em>Arterial</em> = vermelho-vivo, pulsátil (PARAR)</span></div>
+            <div class="proto-step"><span class="sn">8</span><span><strong>Estabilizar agulha</strong> com uma mão. Retirar seringa com a outra — <strong>ocluir imediatamente</strong> o canhão da agulha com o dedo indicador (evita embolia gasosa e saída de sangue)</span></div>
+            <div class="proto-step"><span class="sn">9</span><span><strong>Introduzir guia J-tip</strong>: ponta J voltada em direção ao coração. Avançar com movimentos suaves de rotação. Máximo 20–25 cm visíveis externamente. <strong>NUNCA forçar</strong></span></div>
+            <div class="proto-step"><span class="sn">10</span><span><strong>Monitorizar ECG</strong>: extrassístoles = guia chegando ao VD → recuar 2–3 cm até ECG normalizar</span></div>
+          </div>
+
+          <div class="alert a-red" style="margin-top:10px">
+            <strong>⚠ Guia resistente:</strong> Se o guia não avança suavemente, NÃO force. Reposicione a agulha (pequena rotação ou mudança de ângulo), aspire novamente para confirmar posição venosa, então tente o guia novamente.
+          </div>
+
+          <div class="sh sh-violet" style="margin-top:12px">11–15. DILATAÇÃO E INSERÇÃO DO CATETER</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-v">11</span><span>Retirar a agulha deslizando-a pelo guia — segurar o guia firmemente com a outra mão durante todo o movimento</span></div>
+            <div class="proto-step"><span class="sn sn-v">12</span><span><strong>Incisão cutânea</strong>: bisturi 11, corte de 2–3 mm na pele adjacente ao guia — apenas superficial, facilita passagem do dilatador sem arrastar o guia</span></div>
+            <div class="proto-step"><span class="sn sn-v">13</span><span><strong>Dilatador</strong>: introduzir sobre o guia com movimentos circulares + pressão firme · avançar 3–4 cm · retirar com movimento rotacional reverso</span></div>
+            <div class="proto-step"><span class="sn sn-v">14</span><span><strong>Cateter multilúmen</strong>: introduzir sobre o guia até profundidade marcada (ver tabela de profundidades abaixo)</span></div>
+            <div class="proto-step"><span class="sn sn-v">15</span><span>Retirar o guia pelo lúmen distal (marrom) — verificar que todo o guia foi retirado (confirmar comprimento inicial: 45 cm)</span></div>
+          </div>
+
+          <div class="sh sh-green" style="margin-top:12px">16–19. CONFIRMAÇÃO E FIXAÇÃO</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-g">16</span><span><strong>Confirmar refluxo</strong> em todos os lúmens: aspire com seringa — sangue deve refluir facilmente em todos os 3 lúmens</span></div>
+            <div class="proto-step"><span class="sn sn-g">17</span><span><strong>Lavar todos os lúmens</strong> com SF 0,9%: 5 mL por lúmen. Clampear os lúmens que não estão em uso</span></div>
+            <div class="proto-step"><span class="sn sn-g">18</span><span><strong>Fixar</strong> com sutura (seda 0 ou 2-0): dois pontos — proximal e distal nas aletas do cateter. Curativo transparente estéril. Registrar data/hora de inserção</span></div>
+            <div class="proto-step"><span class="sn sn-g">19</span><span><strong>Radiografia de tórax PA</strong> imediatamente após: confirmar posição da ponta (junção VCS/AD, projeção da 3ª costela direita) e afastar pneumotórax</span></div>
+          </div>
+
+          <!-- Tabela de profundidades -->
+          <div class="sh sh-gold" style="margin-top:12px">PROFUNDIDADE DE INSERÇÃO POR VIA</div>
+          <div class="tbl-wrap"><table style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead>
+              <tr style="background:var(--navy);color:white">
+                <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px">VIA</th>
+                <th style="padding:7px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px">ADULTO MÉDIO</th>
+                <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px">REFERÊNCIA RX</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:7px 8px;font-weight:700;color:var(--teal)">JI Direita</td>
+                <td style="padding:7px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--blue)">13–15 cm</td>
+                <td style="padding:7px 8px;font-size:11px">3ª costela, linha paraesternal direita</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.02)">
+                <td style="padding:7px 8px;font-weight:700;color:var(--blue)">JI Esquerda</td>
+                <td style="padding:7px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--blue)">16–18 cm</td>
+                <td style="padding:7px 8px;font-size:11px">Trajeto mais longo (cruzar linha média)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:7px 8px;font-weight:700;color:var(--orange)">Subclávia D</td>
+                <td style="padding:7px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--blue)">14–16 cm</td>
+                <td style="padding:7px 8px;font-size:11px">3ª costela / ângulo cardiofrênico direito</td>
+              </tr>
+              <tr>
+                <td style="padding:7px 8px;font-weight:700;color:var(--gold)">Femoral</td>
+                <td style="padding:7px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--blue)">15–20 cm</td>
+                <td style="padding:7px 8px;font-size:11px">VCI, nível L3–L4 no RX abdominal</td>
+              </tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- ERROS COMUNS -->
+      <div class="card">
+        <div class="card-header ch-red"><div class="card-num">E</div>ERROS COMUNS E COMO EVITAR</div>
+        <div class="card-body">
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🩸</span><span>Punção Arterial Inadvertida</span><span class="tag tr">FREQUENTE</span></div>
+            <div class="acc-body">
+              <div class="g2">
+                <div>
+                  <div style="font-weight:700;font-size:11px;color:var(--red);margin-bottom:6px">RECONHECIMENTO</div>
+                  <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                    <li>Sangue vermelho-vivo</li>
+                    <li>Fluxo pulsátil (pulsa com batimento)</li>
+                    <li>Seringa se enche espontaneamente</li>
+                    <li>SpO₂ arterial na gasometria</li>
+                  </ul>
+                </div>
+                <div>
+                  <div style="font-weight:700;font-size:11px;color:var(--green);margin-bottom:6px">MANEJO</div>
+                  <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                    <li>Retirar agulha imediatamente</li>
+                    <li>Comprimir 10–15 min</li>
+                    <li>Se cateter arterial inserido: NÃO remover → cirurgia vascular urgente</li>
+                    <li>Avisar equipe</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🌀</span><span>Guia Não Avança / Dobramento</span><span class="tag ty">COMUM</span></div>
+            <div class="acc-body">
+              <div class="alert a-orange">
+                <strong>Causa:</strong> Agulha não está totalmente dentro da veia, bisel na parede posterior, ou a veia colabou sobre a agulha.<br><br>
+                <strong>Solução:</strong> Nunca force! Aspire sangue novamente para confirmar posição. Rotacionar a agulha 15–30°. Reposicionar se necessário. Tentar novamente com movimentos suaves.
+              </div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">⚠️</span><span>Perda do Guia para o Interior</span><span class="tag tr">GRAVE</span></div>
+            <div class="acc-body">
+              <div class="alert a-red">
+                <strong>Prevenção:</strong> SEMPRE segure o guia. Nunca solte.<br><br>
+                <strong>Se ocorrer:</strong> É emergência — o guia pode causar arritmia fatal. Pedir fluoroscopia urgente. Cirurgiologia vascular para retirada por via endovascular.
+              </div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">💨</span><span>Pneumotórax Silencioso Pós-SC</span><span class="tag ty">NÃO ESQUECER</span></div>
+            <div class="acc-body">
+              <div class="alert a-blue">
+                <strong>Conceito:</strong> PTX pequeno (&lt;15%) pode ser completamente assintomático no pós-imediato, especialmente em paciente ventilado.<br><br>
+                <strong>Regra absoluta:</strong> RX de tórax APÓS qualquer CVC subclávia ou jugular. Nunca liberar paciente sem confirmação radiológica.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /avc-seldinger -->
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ABA 3 — VIAS DE ACESSO                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="avc-vias" class="tab-panel">
+    <div class="page-wrap">
+
+      <!-- SVG mapa comparativo das vias -->
+      <svg viewBox="0 0 340 220" style="width:100%;border-radius:8px;margin-bottom:12px;display:block" xmlns="http://www.w3.org/2000/svg">
+        <rect width="340" height="220" fill="#0D1B2A" rx="8"/>
+        <text x="170" y="16" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" font-weight="700" fill="#38B6E0" letter-spacing="1">MAPA DAS VIAS DE ACESSO CENTRAL</text>
+
+        <!-- Silhueta do tronco -->
+        <!-- Cabeça -->
+        <ellipse cx="170" cy="40" rx="22" ry="18" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+        <!-- Pescoço -->
+        <rect x="158" y="56" width="24" height="20" rx="3" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+        <!-- Tronco -->
+        <path d="M120,76 Q110,90 108,130 Q108,160 120,170 L220,170 Q232,160 232,130 Q230,90 220,76 Z" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <!-- Clavículas -->
+        <path d="M160,78 Q145,82 128,84" stroke="rgba(255,255,255,.3)" stroke-width="2" stroke-linecap="round"/>
+        <path d="M180,78 Q195,82 212,84" stroke="rgba(255,255,255,.3)" stroke-width="2" stroke-linecap="round"/>
+        <!-- Esterno -->
+        <rect x="163" y="78" width="14" height="50" rx="2" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+
+        <!-- VCS (veia cava superior) -->
+        <path d="M168,92 L168,115 Q168,120 170,122" stroke="#1B5E96" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- Coração (AD) -->
+        <ellipse cx="170" cy="128" rx="12" ry="10" fill="rgba(192,57,43,.3)" stroke="#C0392B" stroke-width="1.5"/>
+        <text x="170" y="131" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.7)" font-family="JetBrains Mono,monospace">AD</text>
+        <!-- VCI -->
+        <path d="M170,138 L170,175" stroke="#1B5E96" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+        <!-- JI DIREITA -->
+        <circle cx="155" cy="67" r="5" fill="#0E7490" stroke="white" stroke-width="1.5"/>
+        <path d="M155,72 Q158,80 165,90" stroke="#0E7490" stroke-width="2" fill="none" stroke-dasharray="3,2"/>
+        <text x="80" y="62" font-size="8" fill="#0E7490" font-family="JetBrains Mono,monospace" font-weight="700">JI DIREITA</text>
+        <line x1="115" y1="62" x2="150" y2="66" stroke="#0E7490" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+        <!-- SUBCLÁVIA DIREITA -->
+        <circle cx="130" cy="87" r="5" fill="#38B6E0" stroke="white" stroke-width="1.5"/>
+        <path d="M135,87 Q148,88 160,90" stroke="#38B6E0" stroke-width="2" fill="none" stroke-dasharray="3,2"/>
+        <text x="80" y="95" font-size="8" fill="#38B6E0" font-family="JetBrains Mono,monospace" font-weight="700">SUBCLÁVIA</text>
+        <line x1="115" y1="92" x2="126" y2="88" stroke="#38B6E0" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+        <!-- FEMORAL DIREITA -->
+        <circle cx="148" cy="172" r="5" fill="#E8A020" stroke="white" stroke-width="1.5"/>
+        <path d="M148,167 L156,145 L162,130 L168,128" stroke="#E8A020" stroke-width="2" fill="none" stroke-dasharray="3,2"/>
+        <text x="78" y="175" font-size="8" fill="#E8A020" font-family="JetBrains Mono,monospace" font-weight="700">FEMORAL</text>
+        <line x1="115" y1="173" x2="144" y2="172" stroke="#E8A020" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+        <!-- PICC (braço) -->
+        <circle cx="240" cy="115" r="5" fill="#7C3AED" stroke="white" stroke-width="1.5"/>
+        <path d="M235,115 Q215,110 200,105 Q185,100 175,95 Q172,92 170,90" stroke="#7C3AED" stroke-width="2" fill="none" stroke-dasharray="3,2"/>
+        <!-- Braço estilizado -->
+        <path d="M232,90 Q248,95 255,120 Q252,135 240,140" stroke="rgba(255,255,255,.2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <text x="255" y="112" font-size="8" fill="#7C3AED" font-family="JetBrains Mono,monospace" font-weight="700">PICC</text>
+        <text x="255" y="121" font-size="7" fill="rgba(124,58,237,.7)" font-family="Inter,sans-serif">Basílica</text>
+
+        <!-- Legenda na parte inferior -->
+        <text x="170" y="208" text-anchor="middle" font-size="7.5" fill="rgba(255,255,255,.35)" font-family="Inter,sans-serif">Todos os trajetos convergem para VCS → Átrio Direito</text>
+      </svg>
+
+      <!-- JI -->
+      <div class="card">
+        <div class="card-header ch-teal"><div class="card-num">1</div>JUGULAR INTERNA (JI)</div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>1ª Via de Escolha</strong> para CVC em cirurgia eletiva e UTI. Preferência pelo lado direito (trajeto reto, sem risco de ducto torácico).
+          </div>
+
+          <div class="sh sh-teal">Anatomia Detalhada</div>
+          <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px;margin-bottom:10px">
+            <li>Localização: entre a cabeça esternal e clavicular do ECM, <strong>anterolateral à artéria carótida</strong></li>
+            <li>Calibre: 10–15 mm em adulto médio (dilata com Trendelenburg)</li>
+            <li>Nível de abordagem: entre C4–C6 (cartilagem tireóide a fúrcula esternal)</li>
+            <li>Drena para: VCS (lado direito) ou veia inominada/braquiocefálica esquerda (lado esquerdo)</li>
+            <li>Estruturas adjacentes: artéria carótida (medial), nervo vago (entre ambas), plexo braquial (posterior), cúpula pleural (inferior)</li>
+          </ul>
+
+          <div class="sh sh-navy">Abordagens Disponíveis</div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">⭐</span><span>Abordagem Central (Padrão) — MAIS USADA</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li><strong>Referência:</strong> Ápice do triângulo de Sedillot (entre os dois ventres do ECM)</li>
+                <li><strong>Nível:</strong> Borda superior da cartilagem tireóide</li>
+                <li><strong>Ângulo:</strong> 30–45° com a pele, direção para o mamilo ipsilateral</li>
+                <li><strong>Profundidade:</strong> 2–4 cm (veia superficial neste nível)</li>
+                <li><strong>Vantagem:</strong> Mais previsível anatomicamente; palpação da carótida facilita orientação</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🔵</span><span>Abordagem Anterior</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li>Borda anterior do ECM, nível da cartilagem tireóide</li>
+                <li>Direção: 30° lateral, em direção à fúrcula esternal</li>
+                <li>Maior risco de punção carotídea (veia mais próxima da artéria neste nível)</li>
+                <li>Menos utilizada atualmente com disponibilidade de US</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🔵</span><span>Abordagem Posterior</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+                <li>Borda posterior do ECM, ponto de inserção da veia jugular externa</li>
+                <li>Direção: em ângulo para a fúrcula esternal, profundidade maior</li>
+                <li>Vantagem: carótida mais afastada lateralmente</li>
+                <li>Desvantagem: maior distância até a veia, mais difícil de guiar</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="g2" style="margin-top:10px">
+            <div>
+              <div class="sh sh-green" style="margin:0 -12px 8px;padding:5px 12px">VANTAGENS JI</div>
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                <li>Compressível (hematoma controlável)</li>
+                <li>Menor risco de pneumotórax (0,1–0,5%)</li>
+                <li>Visualização fácil ao US</li>
+                <li>Trajeto direto para VCS (lado direito)</li>
+                <li>Sem risco de estenose subclávia</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sh sh-red" style="margin:0 -12px 8px;padding:5px 12px">DESVANTAGENS JI</div>
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                <li>Desconforto (mobilidade do pescoço)</li>
+                <li>Difícil em obesidade cervical</li>
+                <li>Pior visualização em traqueostomia</li>
+                <li>Risco de punção carotídea (~3%)</li>
+                <li>Limitação em coagulopatia moderada</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUBCLÁVIA -->
+      <div class="card">
+        <div class="card-header ch-blue"><div class="card-num">2</div>SUBCLÁVIA (SC)</div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>Via Preferida:</strong> NPT prolongada, paciente acordado (melhor conforto), menor taxa de infecção de todos os acessos centrais.
+          </div>
+
+          <div class="sh sh-blue">Anatomia Detalhada</div>
+          <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px;margin-bottom:10px">
+            <li>Corre posterior à clavícula, entre a 1ª costela e a face posterior da clavícula</li>
+            <li>Anterior à artéria subclávia (separada pelo músculo escaleno anterior)</li>
+            <li>Calibre: 12–20 mm (maior que JI)</li>
+            <li>Cúpula pleural situa-se abaixo e medialmente — risco de pneumotórax</li>
+            <li>Drena para: veia inominada ipsilateral → VCS</li>
+          </ul>
+
+          <div class="sh sh-navy">Técnica Infraclavicular (Padrão)</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">P1</span><span><strong>Ponto de entrada:</strong> 1 cm abaixo e lateral à junção do terço médio com o terço lateral da clavícula</span></div>
+            <div class="proto-step"><span class="sn sn-b">P2</span><span><strong>Ângulo:</strong> agulha paralela ao chão (horizontal), bisel voltado para cima</span></div>
+            <div class="proto-step"><span class="sn sn-b">P3</span><span><strong>Direção:</strong> em direção à <strong>fúrcula esternal</strong> — não mergulhar para baixo (risco de PTX)</span></div>
+            <div class="proto-step"><span class="sn sn-b">P4</span><span><strong>Manobra:</strong> "raspar" a face inferior da clavícula com a agulha — mantém trajetória segura acima da pleura</span></div>
+            <div class="proto-step"><span class="sn sn-b">P5</span><span><strong>Profundidade:</strong> 3–5 cm; refluxo venoso confirma posição</span></div>
+          </div>
+
+          <div class="g2" style="margin-top:10px">
+            <div>
+              <div class="sh sh-green" style="margin:0 -12px 8px;padding:5px 12px">VANTAGENS SC</div>
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                <li>Menor taxa de infecção (pele seca)</li>
+                <li>Mais confortável (sem limitação cervical)</li>
+                <li>Fácil fixação</li>
+                <li>Calibre maior</li>
+                <li>Estenose menos frequente vs jugular</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sh sh-red" style="margin:0 -12px 8px;padding:5px 12px">DESVANTAGENS SC</div>
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                <li>PTX: 1–3%</li>
+                <li>Hemotórax possível</li>
+                <li><strong>Não compressível</strong></li>
+                <li>CI em coagulopatia</li>
+                <li>Estenose subclávia (CI para FAV futura)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEMORAL -->
+      <div class="card">
+        <div class="card-header ch-gold"><div class="card-num">3</div>FEMORAL</div>
+        <div class="card-body">
+          <div class="alert a-gold">
+            <strong>Via de Emergência:</strong> RCP em curso, instabilidade cervical, coagulopatia grave, pneumotórax contralateral. Acesso mais fácil e rápido.
+          </div>
+
+          <div class="sh sh-gold">Anatomia — Mnemônico NAVEL</div>
+          <div style="background:var(--navy);border-radius:8px;padding:12px;margin-bottom:10px">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+              <div style="flex:1;min-width:50px;text-align:center">
+                <div style="background:#7C3AED;border-radius:4px;padding:6px;margin-bottom:4px">
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">N</span>
+                </div>
+                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Nervo<br>Femoral</div>
+              </div>
+              <div style="flex:1;min-width:50px;text-align:center">
+                <div style="background:#C0392B;border-radius:4px;padding:6px;margin-bottom:4px">
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">A</span>
+                </div>
+                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Artéria<br>Femoral</div>
+              </div>
+              <div style="flex:1;min-width:50px;text-align:center">
+                <div style="background:#1B5E96;border-radius:4px;padding:6px;margin-bottom:4px">
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">V</span>
+                </div>
+                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Veia<br>Femoral</div>
+              </div>
+              <div style="flex:1;min-width:50px;text-align:center">
+                <div style="background:#5A6880;border-radius:4px;padding:6px;margin-bottom:4px">
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">E</span>
+                </div>
+                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Espaço<br>Morto</div>
+              </div>
+              <div style="flex:1;min-width:50px;text-align:center">
+                <div style="background:#1A7A4A;border-radius:4px;padding:6px;margin-bottom:4px">
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">L</span>
+                </div>
+                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Linfáticos</div>
+              </div>
+            </div>
+            <div style="font-size:10px;color:rgba(255,255,255,.5);text-align:center;font-family:'Inter',sans-serif">← Lateral &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Medial →</div>
+          </div>
+
+          <div class="sh sh-gold">Técnica</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-y">F1</span><span><strong>Palpar artéria femoral</strong> no triângulo femoral, 2 cm abaixo do ligamento inguinal</span></div>
+            <div class="proto-step"><span class="sn sn-y">F2</span><span><strong>Ponto de punção:</strong> 1–2 cm medial ao pulso femoral palpável</span></div>
+            <div class="proto-step"><span class="sn sn-y">F3</span><span><strong>Ângulo:</strong> 30–45° cranial (em direção à cabeça do paciente)</span></div>
+            <div class="proto-step"><span class="sn sn-y">F4</span><span>Avançar aspirando. Sangue venoso (escuro, não pulsátil) confirma posição</span></div>
+            <div class="proto-step"><span class="sn sn-y">F5</span><span>Profundidade: introduzir cateter 15–20 cm para posição na VCI</span></div>
+          </div>
+
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>Cuidado:</strong> Punção acima do ligamento inguinal → risco de hematoma retroperitoneal grave (não compressível externamente). Sempre palpar o ligamento inguinal antes de puncionar.
+          </div>
+
+          <div class="alert a-gold" style="margin-top:6px">
+            <strong>Em RCP:</strong> Via femoral não interrompe as compressões torácicas. Troca para JI assim que paciente estabilizar (maior risco de infecção, mobilidade limitada).
+          </div>
+        </div>
+      </div>
+
+      <!-- PICC -->
+      <div class="card">
+        <div class="card-header ch-violet"><div class="card-num">4</div>PICC — CATETER CENTRAL DE INSERÇÃO PERIFÉRICA</div>
+        <div class="card-body">
+          <div class="alert a-violet">
+            <strong>Indicação Principal:</strong> Acesso venoso central necessário por ≥7 dias sem necessidade de hemodiálise ou monitorização de PVC de alta fidelidade. Menor taxa de infecção de todos os acessos.
+          </div>
+
+          <div class="sh sh-violet">Indicações Específicas</div>
+          <ul class="ck-list">
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Antibioticoterapia IV prolongada (≥2 semanas): endocardite, osteomielite, abscessos profundos</span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Quimioterapia ambulatorial: ciclos repetidos, menos punções</span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">NPT domiciliar ou prolongada: osmolaridade alta via central</span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Pacientes com acesso venoso periférico difícil</span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Coagulopatia grave: menor risco de sangramentos graves</span>
+            </li>
+          </ul>
+
+          <div class="sh sh-violet">Técnica de Inserção</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-v">P1</span><span>Medição do comprimento: ponta do dedo médio → ombro ipsilateral → fúrcula esternal → 3ª costela (±45–55 cm)</span></div>
+            <div class="proto-step"><span class="sn sn-v">P2</span><span>US linear 7–15 MHz: identificar veia basílica no terço médio do braço</span></div>
+            <div class="proto-step"><span class="sn sn-v">P3</span><span>Torniquete para distender a veia. Técnica Seldinger modificada (microintrodutor, guia fino 0,018")</span></div>
+            <div class="proto-step"><span class="sn sn-v">P4</span><span>Avançar cateter com irrigação contínua. Manter braço em 90° durante progressão para facilitar entrada na subclávia</span></div>
+            <div class="proto-step"><span class="sn sn-v">P5</span><span>Confirmação: RX tórax PA — ponta na junção VCS/AD (nível da 3ª costela, linha paraesternal direita)</span></div>
+          </div>
+
+          <div class="sh sh-green" style="margin-top:10px">Posições da Ponta</div>
+          <div class="dr dr-g"><div class="dn"><strong>Ideal</strong><small>Junção VCS/AD</small></div><div class="dc"><div class="dv">3ª costela direita</div><div class="dd">RX PA tórax</div></div></div>
+          <div class="dr dr-y"><div class="dn"><strong>Aceitável</strong><small>Terço inf. VCS</small></div><div class="dc"><div class="dv">2ª–4ª costela</div><div class="dd">Ajuste se necessário</div></div></div>
+          <div class="dr dr-r"><div class="dn"><strong>Reposicionar</strong><small>VCS superior / átrio</small></div><div class="dc"><div class="dv">&lt;2ª ou &gt;AD</div><div class="dd">Arritmia · trombose</div></div></div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /avc-vias -->
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ABA 4 — ULTRASSOM                                         -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="avc-ultrassom" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-teal"><div class="card-num">US</div>POR QUE USAR ULTRASSOM NO CVC</div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Evidência Nível A:</strong> Meta-análises de Randolph et al. (1996) e Hind et al. (2003) demonstraram que o US em tempo real reduz falhas, punções arteriais, número de tentativas e complicações. Recomendado pela NICE (UK), ECRI e SBA (Sociedade Brasileira de Anestesiologia).
+          </div>
+
+          <div class="sh sh-teal">Benefícios Documentados do US para CVC</div>
+          <div class="g3">
+            <div style="background:rgba(14,116,144,.08);border:1px solid rgba(14,116,144,.25);border-radius:6px;padding:8px;text-align:center">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:800;color:var(--teal)">↓86%</div>
+              <div style="font-size:10px;color:var(--muted)">Falha de punção JI</div>
+            </div>
+            <div style="background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.25);border-radius:6px;padding:8px;text-align:center">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:800;color:var(--red)">↓57%</div>
+              <div style="font-size:10px;color:var(--muted)">Punção arterial</div>
+            </div>
+            <div style="background:rgba(26,122,74,.08);border:1px solid rgba(26,122,74,.25);border-radius:6px;padding:8px;text-align:center">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:800;color:var(--green)">↓78%</div>
+              <div style="font-size:10px;color:var(--muted)">Hematoma</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-blue"><div class="card-num">1</div>FUNDAMENTOS DE US VASCULAR</div>
+        <div class="card-body">
+          <div class="sh sh-blue">Equipamento</div>
+          <div class="dr dr-b"><div class="dn"><strong>Probe Linear</strong><small>7–15 MHz</small></div><div class="dc"><div class="dv">Alta freq.</div><div class="dd">Estruturas superficiais 0–6 cm</div></div></div>
+          <div class="dr dr-t"><div class="dn"><strong>Profundidade</strong><small>CVC cervical</small></div><div class="dc"><div class="dv">2–4 cm</div><div class="dd">JI geralmente a 1,5–3 cm da pele</div></div></div>
+          <div class="dr dr-g"><div class="dn"><strong>Gel estéril</strong><small>ou cobertura</small></div><div class="dc"><div class="dv">Técnica estéril</div><div class="dd">Cobertura plástica + gel dentro</div></div></div>
+
+          <div class="sh sh-blue" style="margin-top:12px">Diferenciando Veia de Artéria</div>
+
+          <!-- SVG imagem ultrassonográfica simulada -->
+          <svg viewBox="0 0 320 160" style="width:100%;border-radius:8px;margin-bottom:10px;display:block" xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="160" fill="#0D1B2A" rx="6"/>
+            <text x="160" y="14" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#38B6E0" letter-spacing=".5">IMAGEM US — CORTE TRANSVERSO · JI + CARÓTIDA</text>
+
+            <!-- Tecido subcutâneo -->
+            <rect x="20" y="20" width="280" height="30" rx="2" fill="rgba(255,255,255,.07)"/>
+            <text x="160" y="35" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.3)" font-family="Inter,sans-serif">Tecido subcutâneo</text>
+            <!-- ECM -->
+            <rect x="20" y="50" width="280" height="20" rx="2" fill="rgba(255,255,255,.12)"/>
+            <text x="160" y="63" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.5)" font-family="Inter,sans-serif">ECM (hipoecogênico)</text>
+
+            <!-- JI (veia - oval, anecogênico) -->
+            <ellipse cx="115" cy="105" rx="28" ry="20" fill="rgba(0,0,0,.8)" stroke="#1B5E96" stroke-width="2"/>
+            <text x="115" y="108" text-anchor="middle" font-size="8" fill="#38B6E0" font-family="JetBrains Mono,monospace" font-weight="700">JI</text>
+            <text x="115" y="140" text-anchor="middle" font-size="7.5" fill="#38B6E0" font-family="Inter,sans-serif">Anecogênica</text>
+            <text x="115" y="150" text-anchor="middle" font-size="7" fill="rgba(56,182,224,.6)" font-family="Inter,sans-serif">Compressível</text>
+            <!-- Seta compressão JI -->
+            <path d="M115,84 L115,92" stroke="#38B6E0" stroke-width="1.5" marker-end="url(#arrowUS)" stroke-dasharray="2,1"/>
+
+            <!-- Artéria carótida (redonda, pulsátil) -->
+            <ellipse cx="195" cy="108" rx="18" ry="18" fill="rgba(0,0,0,.7)" stroke="#C0392B" stroke-width="2.5"/>
+            <text x="195" y="111" text-anchor="middle" font-size="8" fill="#E57373" font-family="JetBrains Mono,monospace" font-weight="700">AC</text>
+            <!-- Pulsação simulada (arcos) -->
+            <ellipse cx="195" cy="108" rx="22" ry="22" fill="none" stroke="rgba(192,57,43,.2)" stroke-width="1"/>
+            <ellipse cx="195" cy="108" rx="26" ry="26" fill="none" stroke="rgba(192,57,43,.1)" stroke-width="1"/>
+            <text x="195" y="140" text-anchor="middle" font-size="7.5" fill="#E57373" font-family="Inter,sans-serif">Anecogênica</text>
+            <text x="195" y="150" text-anchor="middle" font-size="7" fill="rgba(229,115,115,.6)" font-family="Inter,sans-serif">Não compressível · Pulsátil</text>
+
+            <!-- Profundidade na direita -->
+            <line x1="300" y1="20" x2="300" y2="130" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+            <text x="312" y="24" text-anchor="middle" font-size="6.5" fill="rgba(255,255,255,.3)" font-family="JetBrains Mono,monospace" transform="rotate(90,312,75)">PROF (cm)</text>
+            <text x="308" y="23" font-size="6" fill="rgba(255,255,255,.4)" font-family="JetBrains Mono,monospace">0</text>
+            <text x="305" y="73" font-size="6" fill="rgba(255,255,255,.4)" font-family="JetBrains Mono,monospace">2</text>
+            <text x="305" y="123" font-size="6" fill="rgba(255,255,255,.4)" font-family="JetBrains Mono,monospace">4</text>
+
+            <!-- Ponto de punção recomendado no centro da JI -->
+            <circle cx="115" cy="105" r="3" fill="#0E7490"/>
+            <text x="60" y="118" font-size="7" fill="#0E7490" font-family="JetBrains Mono,monospace">★ CENTRO</text>
+            <line x1="85" y1="115" x2="110" y2="106" stroke="#0E7490" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+            <defs>
+              <marker id="arrowUS" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#38B6E0"/>
+              </marker>
+            </defs>
+          </svg>
+
+          <div class="tbl-wrap"><table style="width:100%;border-collapse:collapse;font-size:11px">
+            <thead>
+              <tr style="background:var(--navy);color:white">
+                <th style="padding:7px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:left">CARACTERÍSTICA</th>
+                <th style="padding:7px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:center;color:#38B6E0">VEIA</th>
+                <th style="padding:7px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:center;color:#E57373">ARTÉRIA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px 8px;color:var(--muted)">Compressibilidade</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--green);font-weight:700">✓ Colapsa</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--red);font-weight:700">✗ Resiste</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.02)">
+                <td style="padding:6px 8px;color:var(--muted)">Pulsatilidade</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--green)">Ausente ou mínima</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--red);font-weight:700">Pulsátil (batimento)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px 8px;color:var(--muted)">Parede</td>
+                <td style="padding:6px 8px;text-align:center">Fina, irregular</td>
+                <td style="padding:6px 8px;text-align:center">Espessa, muscular</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.02)">
+                <td style="padding:6px 8px;color:var(--muted)">Forma</td>
+                <td style="padding:6px 8px;text-align:center">Oval, achatada</td>
+                <td style="padding:6px 8px;text-align:center">Circular, simétrica</td>
+              </tr>
+              <tr>
+                <td style="padding:6px 8px;color:var(--muted)">Doppler colorido</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--blue)">Azul (fluxo ao afastar)</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--red)">Vermelho pulsátil</td>
+              </tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-navy"><div class="card-num">2</div>TÉCNICA GUIADA POR US — JI</div>
+        <div class="card-body">
+          <div class="sh sh-teal">Planos de Imagem</div>
+          <div class="g2">
+            <div class="alert a-teal" style="margin-bottom:0">
+              <strong>Eixo Transverso (Out-of-plane)</strong><br>
+              • Probe perpendicular ao vaso<br>
+              • Veia aparece como círculo<br>
+              • Agulha entra de lado<br>
+              • Só a ponta da agulha é visível<br>
+              • <span class="tag tg">MAIS USADO</span>
+            </div>
+            <div class="alert a-blue" style="margin-bottom:0">
+              <strong>Eixo Longitudinal (In-plane)</strong><br>
+              • Probe paralela ao vaso<br>
+              • Veia aparece como tubo longo<br>
+              • Toda a agulha visível<br>
+              • Exige mais coordenação<br>
+              • <span class="tag ty">AVANÇADO</span>
+            </div>
+          </div>
+
+          <div class="sh sh-blue" style="margin-top:12px">Protocolo Passo a Passo com US</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">US1</span><span>Cobertura estéril na probe (ou gel estéril diretamente se técnica adequada)</span></div>
+            <div class="proto-step"><span class="sn sn-b">US2</span><span>Posicionar probe em corte transverso no pescoço, nível C4–C5. Identificar JI (oval, compressível) e carótida (redonda, pulsátil)</span></div>
+            <div class="proto-step"><span class="sn sn-b">US3</span><span><strong>Centralizar a JI</strong> na tela (centro da imagem = alvo ideal). Confirmar com compressão suave: JI colapsa, carótida resiste</span></div>
+            <div class="proto-step"><span class="sn sn-b">US4</span><span>Inserir agulha 18G a 30–45° da pele, direcionada ao centro da veia na imagem. Visualizar "tenting" (abaulamento da parede anterior) antes da punção</span></div>
+            <div class="proto-step"><span class="sn sn-b">US5</span><span>Confirmar agulha DENTRO da veia: aspirar sangue + ver a ponta na tela</span></div>
+            <div class="proto-step"><span class="sn sn-b">US6</span><span>Introduzir guia J-tip: <strong>visualizar o guia dentro da veia</strong> antes de retirar a agulha (passo crítico — previne dilatação arterial acidental)</span></div>
+            <div class="proto-step"><span class="sn sn-b">US7</span><span>Opcional: Doppler colorido para confirmar guia na JI (não pulsátil, azul) vs carótida (pulsátil, vermelho)</span></div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Protocolo Estático vs Dinâmico:</strong><br>
+            <strong>Dinâmico (preferido):</strong> US guia a punção em tempo real. Reduz complicações mesmo em mãos experientes.<br>
+            <strong>Estático:</strong> Marca o local antes de cobrir com campo estéril. Menos preciso (veia pode se mover). Aceito apenas quando cobertura estéril não disponível.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-violet"><div class="card-num">3</div>US PARA PICC E OUTRAS APLICAÇÕES</div>
+        <div class="card-body">
+          <div class="sh sh-violet">US para PICC (obrigatório)</div>
+          <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px;margin-bottom:10px">
+            <li>Probe linear 10–15 MHz: excelente para veias superficiais do braço</li>
+            <li>Identificar veia basílica: face medial do terço médio do braço</li>
+            <li>Medir calibre: basílica ideal &gt;3 mm com torniquete (razão cateter/veia &lt;45%)</li>
+            <li>Confirmar ausência de trombose prévia (veia deve ser compressível)</li>
+            <li>Técnica in-plane (longitudinal) permite visualização de todo o trajeto inicial</li>
+          </ul>
+
+          <div class="sh sh-gold">Confirmação da Posição da Ponta</div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🫀</span><span>Ecocardiograma Transesofágico Intraoperatório</span></div>
+            <div class="acc-body">
+              <p style="font-size:12px;line-height:1.7">Em cirurgias cardíacas, o ETE pode confirmar em tempo real a posição do guia e do cateter no átrio direito ou VCS durante a inserção. Visualização direta da "sombra acústica" do guia metálico no interior das câmaras cardíacas.</p>
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">📡</span><span>Técnica de Flush Salina Gelada (Teste US)</span></div>
+            <div class="acc-body">
+              <p style="font-size:12px;line-height:1.7">Injeta-se salina agitada (microbolhas) pelo cateter enquanto se observa com probe cardíaca subcostal. Se o cateter estiver no átrio direito, verão-se as microbolhas chegando ao AD em &lt;3 batimentos. Confirma posição central sem necessidade de RX imediato.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /avc-ultrassom -->
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ABA 5 — MANUTENÇÃO E CUIDADOS                             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="avc-cuidados" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-green"><div class="card-num">B</div>BUNDLE IHI — PREVENÇÃO DE ICSRC</div>
+        <div class="card-body">
+          <div class="alert a-green">
+            <strong>ICSRC:</strong> Infecção de Corrente Sanguínea Relacionada a Cateter. Mortalidade: 12–25%. Custo adicional: R$40.000–80.000/episódio. Prevenível em &gt;60% dos casos com bundle correto.
+          </div>
+
+          <div class="sh sh-green">Bundle IHI (5 Elementos — TODOS obrigatórios)</div>
+          <ul class="ck-list">
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>1. Higiene das mãos</strong> antes da inserção e manipulação
+                <span class="ck-sub">CCIH: lavagem com clorexidina degermante + álcool 70° ou gel alcoólico 70°</span></span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>2. Precauções de barreira máxima</strong> durante inserção
+                <span class="ck-sub">Gorro + máscara + avental estéril + luvas estéreis + campo estéril grande</span></span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>3. Antissepsia com clorexidina alcoólica 2%</strong>
+                <span class="ck-sub">3 aplicações · secar completamente · superior a PVPI em estudos randomizados</span></span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>4. Evitar via femoral sempre que possível</strong>
+                <span class="ck-sub">Taxa ICSRC: femoral (2–5/1000 cath-days) &gt; JI &gt; subclávia (0,5–1/1000)</span></span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text"><strong>5. Remover cateter quando não mais necessário</strong>
+                <span class="ck-sub">Avaliação DIÁRIA da indicação. É a medida mais importante de prevenção de ICSRC tardio</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CURATIVO -->
+      <div class="card">
+        <div class="card-header ch-teal"><div class="card-num">C</div>CURATIVO E MANUTENÇÃO DO SÍTIO</div>
+        <div class="card-body">
+          <div class="sh sh-teal">Tipos de Curativo</div>
+          <div class="g2">
+            <div class="alert a-teal" style="margin-bottom:0">
+              <strong>Transparente (Tegaderm)</strong><br>
+              • Troca a cada 7 dias<br>
+              • Troca imediata se úmido, solto ou com sangue<br>
+              • Permite inspeção visual<br>
+              • <span class="tag tg">PADRÃO OURO</span>
+            </div>
+            <div class="alert a-blue" style="margin-bottom:0">
+              <strong>Gaze + fita adesiva</strong><br>
+              • Troca a cada 48h<br>
+              • Usar quando secreção local<br>
+              • Não permite inspeção<br>
+              • Alternativa em alergia
+            </div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:12px">Protocolo de Troca de Curativo</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">C1</span><span>Higiene de mãos. Reunir material: gaze, álcool 70°, clorexidina 0,5% tópica (ou alcoólica), curativo novo</span></div>
+            <div class="proto-step"><span class="sn sn-t">C2</span><span>Remover curativo antigo de forma centrípeta (do exterior para o cateter), evitando tracionar o cateter</span></div>
+            <div class="proto-step"><span class="sn sn-t">C3</span><span>Inspecionar sítio de inserção: eritema, edema, dor, secreção, sinais de inflamação → registrar e comunicar</span></div>
+            <div class="proto-step"><span class="sn sn-t">C4</span><span>Antissepsia: clorexidina 0,5% tópica × 3 passadas. Aguardar secar completamente</span></div>
+            <div class="proto-step"><span class="sn sn-t">C5</span><span>Aplicar novo curativo transparente. Registrar data/hora/assinatura do profissional</span></div>
+          </div>
+
+          <div class="sh sh-blue" style="margin-top:10px">Scrub-the-Hub — Desinfecção do Conector</div>
+          <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+            <li>Antes de TODA manipulação do conector (infusão, coleta, flush)</li>
+            <li>Fricção com álcool 70° por <strong>mínimo 15 segundos</strong> (método scrub)</li>
+            <li>Após friccionar, aguardar secar antes de conectar</li>
+            <li>Conectores com "cap" impregnados de antisséptico (CHX): troca a cada 7 dias</li>
+          </ul>
+
+          <div class="sh sh-green" style="margin-top:10px">Flush e Bloqueio dos Lúmens</div>
+          <ul style="list-style:disc;padding-left:18px;line-height:1.8;font-size:12px">
+            <li>Flush com SF 0,9%: <strong>10 mL por lúmen</strong> após cada uso (técnica pulsátil: push-stop-push)</li>
+            <li>Bloqueio heparinizado: verificar protocolo local (heparina 50–100 UI/mL, 3 mL por lúmen)</li>
+            <li>Lúmens não utilizados: clampear + tampar com cap estéril impregnado</li>
+            <li>Equipo de NPT: troca a cada 24h; equipo com lipídios/sangue: a cada 12–24h</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- VERIFICAÇÃO DIÁRIA -->
+      <div class="card">
+        <div class="card-header ch-navy"><div class="card-num">D</div>AVALIAÇÃO DIÁRIA E DOCUMENTAÇÃO</div>
+        <div class="card-body">
+          <div class="alert a-gold">
+            <strong>Pergunta do Dia:</strong> "Este cateter ainda é necessário hoje?" → Se não → REMOVER. A duração do cateter é o principal fator de risco para ICSRC.
+          </div>
+
+          <div class="sh sh-navy">Checklist Diário do CVC</div>
+          <ul class="ck-list">
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Indicação atual confirmada (documentar no prontuário)</span>
+            </li>
+            <li class="ck-item crit" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Sítio de inserção: sem sinais flogísticos, curativo íntegro e limpo</span>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Fixação adequada: cateter na profundidade correta, marcação da inserção visível</span>
+            </li>
+            <li class="ck-item warn" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Todos os lúmens em uso ou corretamente fechados e lavados</span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Temperatura: febre sem foco → considerar ICSRC se CVC &gt;48h</span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Data de inserção: registrada. CVC &gt;14 dias → avaliar troca de sítio</span>
+            </li>
+            <li class="ck-item ok" onclick="toggleItem(this)">
+              <div class="ck-box"><span class="ck-chk">✓</span></div>
+              <span class="ck-text">Radiografia de controle: se dúvida sobre posição ou sintomas respiratórios novos</span>
+            </li>
+          </ul>
+
+          <div class="sh sh-red" style="margin-top:10px">Complicações Tardias — Vigilância</div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🩹</span><span>Trombose do Cateter (Lúmen Ocluído)</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:16px;font-size:12px;line-height:1.7">
+                <li>Sintoma: dificuldade de aspirar ou infundir por um lúmen</li>
+                <li>Primeiro passo: verificar clampeamento, dobramento (kinking)</li>
+                <li>Fibrina parcial: urokinase 5.000 UI/mL · dwel time 30–60 min</li>
+                <li>Trombose completa: considerar troca do cateter</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🩸</span><span>Trombose Venosa Central (TVP)</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:16px;font-size:12px;line-height:1.7">
+                <li>Incidência: 2–4% com CVC (braquial/PICC: mais comum)</li>
+                <li>Sintomas: edema ipsilateral, dor, circulação colateral</li>
+                <li>Confirmação: US Doppler ou angioTC</li>
+                <li>Conduta: anticoagulação (HBPM ou HNF) + remoção do cateter se não essencial</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">📌</span><span>Pinch-Off Syndrome (PICC/SC)</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:16px;font-size:12px;line-height:1.7">
+                <li>Compressão do cateter entre a clavícula e a 1ª costela</li>
+                <li>Cateter subclávia inserido muito medialmente</li>
+                <li>Sinal: dificuldade de aspirar/infundir quando braço em adução</li>
+                <li>Risco: fratura do cateter → embolização do fragmento</li>
+                <li>Conduta: remoção e troca de via</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /avc-cuidados -->
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ABA 6 — COMPLICAÇÕES                                      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="avc-complicacoes" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="alert a-red" style="margin-bottom:12px">
+        <strong>Regra R1:</strong> Toda complicação de CVC deve ser <strong>antecipada, reconhecida precocemente e manejada imediatamente</strong>. O atraso no diagnóstico é a principal causa de morbidade.
+      </div>
+
+      <!-- MECÂNICAS -->
+      <div class="card">
+        <div class="card-header ch-red"><div class="card-num">M</div>COMPLICAÇÕES MECÂNICAS — DURANTE INSERÇÃO</div>
+        <div class="card-body">
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">🩸</span>
+              <span>Punção Arterial Inadvertida</span>
+              <span class="tag tr">3–5%</span>
+            </div>
+            <div class="acc-body">
+              <div class="sh sh-red" style="margin:0 0 6px">Reconhecimento</div>
+              <div class="g2">
+                <div>
+                  <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                    <li>Sangue vermelho-vivo pulsátil</li>
+                    <li>Seringa se enche sozinha</li>
+                    <li>Gasometria: PaO₂ arterial</li>
+                    <li>Pressão no transdutor: onda arterial</li>
+                  </ul>
+                </div>
+                <div>
+                  <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                    <li>US: sombra do cateter na carótida</li>
+                    <li>Diferença cor: venosa vs arterial</li>
+                    <li>Teste de pressão: tubo em U</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sh sh-orange" style="margin:8px 0 6px">Conduta Imediata</div>
+              <div class="proto-steps">
+                <div class="proto-step"><span class="sn">1</span><span><strong>Apenas agulha:</strong> retirar imediatamente + comprimir 10–15 minutos</span></div>
+                <div class="proto-step"><span class="sn">2</span><span><strong>Cateter arterial inserido:</strong> NÃO retirar às cegas. Manter e acionar cirurgia vascular de urgência. Reparo cirúrgico ou endovascular</span></div>
+                <div class="proto-step"><span class="sn">3</span><span>Monitorizar: hematoma expansivo, hemotórax, déficit neurológico (carótida)</span></div>
+                <div class="proto-step"><span class="sn">4</span><span>RX/TC: avaliar extensão do hematoma. Notificar chefe/equipe</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">💨</span>
+              <span>Pneumotórax</span>
+              <span class="tag ty">SC: 1–3% · JI: 0,1–0,5%</span>
+            </div>
+            <div class="acc-body">
+              <div class="sh sh-orange" style="margin:0 0 6px">Apresentação Clínica</div>
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7;margin-bottom:8px">
+                <li>Imediato: dispneia, hipoxemia, redução do murmúrio vesicular ipsilateral</li>
+                <li>Tardio (horas após): insidioso, especialmente em VM</li>
+                <li>Hipertensivo: taquicardia, hipotensão, desvio de traqueia (emergência)</li>
+                <li>RX: hipertransparência, ausência de trama vascular, desvio mediastinal</li>
+              </ul>
+              <div class="sh sh-green" style="margin:8px 0 6px">Fluxograma de Conduta</div>
+              <div class="algo-box algo-b">
+                <div class="algo-title">PTX Confirmado → Classificar</div>
+              </div>
+              <div class="flow-arrow">↓</div>
+              <div class="g2">
+                <div class="algo-box algo-g">
+                  <div class="algo-title">PTX PEQUENO (&lt;20%)</div>
+                  <div>Paciente estável sem VM<br><strong>→ O₂ 100% + Observação</strong><br>RX controle 4–6h</div>
+                </div>
+                <div class="algo-box algo-r">
+                  <div class="algo-title">PTX GRANDE (&gt;20%)</div>
+                  <div>Sintomático / VM<br><strong>→ Drenagem torácica</strong><br>Selo d'água 2ª EIC/LAA</div>
+                </div>
+              </div>
+              <div class="flow-arrow">↓</div>
+              <div class="algo-box algo-r">
+                <div class="algo-title">PTX HIPERTENSIVO — EMERGÊNCIA</div>
+                <div>Punção imediata 2ª EIC LAM com agulha 14–16G → depois drenagem definitiva</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">💉</span>
+              <span>Hemotórax</span>
+              <span class="tag tr">GRAVE</span>
+            </div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                <li>Causa: punção de artéria subclávia + progressão para espaço pleural</li>
+                <li>Volume: pode acumular 1–2 L antes de sintomas evidentes</li>
+                <li>Diagnóstico: RX (velamento costofrênico, opacidade densa) + US pleural (líquido hipoecogênico)</li>
+                <li>Conduta: <strong>drenagem torácica obrigatória</strong> (dreno 28–32 Fr). Cirurgia se débito &gt;200 mL/h ou instabilidade hemodinâmica</li>
+                <li>Prevenção: técnica correta SC, ângulo paralelo ao chão, "raspar" clavícula</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">💨</span>
+              <span>Embolia Gasosa</span>
+              <span class="tag ty">RARO, MAS FATAL</span>
+            </div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7;margin-bottom:8px">
+                <li>Mecanismo: ar entra pelo conector aberto ou pela bainha do introdutor</li>
+                <li>Risco: desconexão acidental ou durante troca de equipo sem ocluir a via</li>
+                <li>Sintomas: síncope súbita, queda do EtCO₂, "murmúrio de moínho" (auscuta)</li>
+              </ul>
+              <div class="alert a-red">
+                <strong>Conduta de Emergência:</strong><br>
+                1. Ocluir imediatamente a entrada de ar<br>
+                2. <strong>Trendelenburg + decúbito lateral esquerdo</strong> (Durant maneuver — ar fica no ápice do VD, longe da valva pulmonar)<br>
+                3. O₂ 100% (reabsorção do ar 4–5× mais rápida)<br>
+                4. Aspirar pelo cateter central<br>
+                5. RCP se PCR
+              </div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">🫁</span>
+              <span>Quilotórax</span>
+              <span class="tag tv">JI ESQUERDA / SC ESQUERDA</span>
+            </div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                <li>Ducto torácico: corre à esquerda, desemboca na junção JI esq. + SC esq.</li>
+                <li>Lesão por punção → extravasamento de quilo no espaço pleural</li>
+                <li>Líquido pleural: branco-leitoso, triglicerídeos &gt;110 mg/dL</li>
+                <li>Conduta: drenagem pleural + NPT (jejum do ducto) + octreotida IV</li>
+                <li>Prevenção: preferir JI direita sempre que possível</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)">
+              <span class="acc-icon">🩸</span>
+              <span>Hematoma Cervical Expansivo</span>
+              <span class="tag tr">URGÊNCIA</span>
+            </div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                <li>Após punção carotídea ou venosa com coagulopatia</li>
+                <li>Hematoma progressivo → compressão traqueal → obstrução de VA</li>
+                <li>Sintomas: dispneia progressiva, disfagia, estridor, desvio de traqueia</li>
+                <li>Conduta: compressão manual + suporte de VA imediato (IOT precoce antes do edema)</li>
+                <li>Se obstrução iminente: cricostireoidostomia ou traqueostomia de emergência</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- INFECCIOSAS -->
+      <div class="card">
+        <div class="card-header ch-orange"><div class="card-num">I</div>COMPLICAÇÕES INFECCIOSAS — ICSRC</div>
+        <div class="card-body">
+          <div class="alert a-orange">
+            <strong>ICSRC:</strong> Bacteremia sem outro foco identificável + cateter em sítio infectado ou hemocultura positiva (central e periférica com diferença de crescimento &gt;2h). Mortalidade: 12–25%.
+          </div>
+
+          <div class="sh sh-orange">Incidência por Sítio (ICSRC/1000 cateter-dias)</div>
+          <div class="dr dr-r"><div class="dn"><strong>Femoral</strong><small>Maior risco</small></div><div class="dc"><div class="dv" style="color:var(--red)">2,0–5,0</div><div class="dd">1000 cateter-dias</div></div></div>
+          <div class="dr dr-y"><div class="dn"><strong>Jugular Interna</strong><small>Risco intermediário</small></div><div class="dc"><div class="dv" style="color:var(--gold)">1,2–2,5</div><div class="dd">1000 cateter-dias</div></div></div>
+          <div class="dr dr-g"><div class="dn"><strong>Subclávia</strong><small>Menor risco central</small></div><div class="dc"><div class="dv" style="color:var(--green)">0,5–1,0</div><div class="dd">1000 cateter-dias</div></div></div>
+          <div class="dr dr-t"><div class="dn"><strong>PICC</strong><small>Menor de todos</small></div><div class="dc"><div class="dv" style="color:var(--teal)">0,2–0,5</div><div class="dd">1000 cateter-dias</div></div></div>
+
+          <div class="sh sh-orange" style="margin-top:12px">Agentes Etiológicos</div>
+          <div class="tbl-wrap"><table style="width:100%;border-collapse:collapse;font-size:11px">
+            <thead>
+              <tr style="background:var(--navy);color:white">
+                <th style="padding:6px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:left">AGENTE</th>
+                <th style="padding:6px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:center">FREQ.</th>
+                <th style="padding:6px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:left">COMENTÁRIO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px 8px;font-weight:600">S. epidermidis (coag-neg)</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--orange);font-weight:700">37%</td>
+                <td style="padding:6px 8px;font-size:10px">Flora cutânea · biofilme · resistente a oxacilina (ORSA)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.02)">
+                <td style="padding:6px 8px;font-weight:600">S. aureus</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--red);font-weight:700">23%</td>
+                <td style="padding:6px 8px;font-size:10px">Mais virulento · endocardite 25% casos · mortalidade alta</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px 8px;font-weight:600">Enterococcus spp.</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--gold);font-weight:700">13%</td>
+                <td style="padding:6px 8px;font-size:10px">E. faecium pode ser VRE · trato GI como fonte</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.02)">
+                <td style="padding:6px 8px;font-weight:600">Candida spp.</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--violet);font-weight:700">9%</td>
+                <td style="padding:6px 8px;font-size:10px">Imunossuprimido · NPT · antibióticos prolongados</td>
+              </tr>
+              <tr>
+                <td style="padding:6px 8px;font-weight:600">GNR (Klebsiella, P. aeruginosa)</td>
+                <td style="padding:6px 8px;text-align:center;color:var(--blue);font-weight:700">18%</td>
+                <td style="padding:6px 8px;font-size:10px">Hospital · resistência frequente · mortalidade elevada</td>
+              </tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-red" style="margin-top:12px">Conduta na ICSRC Suspeita</div>
+          <div class="algo-box algo-r">
+            <div class="algo-title">SUSPEITA ICSRC: FEBRE + CVC &gt; 48H SEM FOCO</div>
+          </div>
+          <div class="flow-arrow">↓</div>
+          <div class="algo-box algo-b">
+            <div class="algo-title">HEMOCULTURAS (×2–3)</div>
+            <div>Coleta central (pelo CVC) + periférica (punção venosa), simultâneas. Registrar horário de cada coleta.</div>
+          </div>
+          <div class="flow-arrow">↓</div>
+          <div class="algo-box algo-y">
+            <div class="algo-title">AVALIAÇÃO DO CATETER</div>
+            <div>Sítio com pus/celulite OU instabilidade hemodinâmica → remover imediatamente.<br>Sítio normal + paciente estável → decidir conforme culturas.</div>
+          </div>
+          <div class="flow-arrow">↓</div>
+          <div class="algo-box algo-r">
+            <div class="algo-title">ANTIBIOTICOTERAPIA EMPÍRICA</div>
+            <div>Vancomicina 25–30 mg/kg/dose IV (S. aureus MRSA, SCN) ± cobertura gram-negativo conforme perfil local. Escalonar conforme culturas (48–72h).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTRAS COMPLICAÇÕES -->
+      <div class="card">
+        <div class="card-header ch-violet"><div class="card-num">O</div>OUTRAS COMPLICAÇÕES</div>
+        <div class="card-body">
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">❗</span><span>Arritmias por Guia no VD</span><span class="tag ty">FREQUENTE</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                <li>Causa: guia J avançado demais → estimulação mecânica do miocárdio do VD</li>
+                <li>ECG: extrassístoles ventriculares, TVNS, raramente FV</li>
+                <li>Conduta: recuar guia 2–3 cm imediatamente → arritmia cessa</li>
+                <li>Prevenção: avançar guia apenas 20–25 cm (não ultrapassar 30 cm) + monitorar ECG</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">📍</span><span>Mau Posicionamento (Kinking, Looping, Via Errada)</span></div>
+            <div class="acc-body">
+              <ul style="list-style:disc;padding-left:14px;font-size:12px;line-height:1.7">
+                <li><strong>Looping:</strong> guia ou cateter dobra na VCS → RX: cateter em forma de U</li>
+                <li><strong>Via errada (JI esq):</strong> cateter vai para JI esquerda ou veia ázigos → reposicionar</li>
+                <li><strong>Intraatrial:</strong> ponta muito profunda no AD → arritmia, perfuração</li>
+                <li>Diagnóstico: RX de tórax imediatamente após inserção (obrigatório)</li>
+                <li>Conduta: reposicionar, guiando com fluoroscopia se disponível</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /avc-complicacoes -->
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ═══ TAB: HEMODINÂMICA INVASIVA ═══ -->
+  <div class="tab-panel" id="avc-hemo">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Pressão Arterial Invasiva (PAI) — Além do Acesso</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7">A curva de pressão arterial invasiva oferece análise beat-to-beat e permite derivar parâmetros hemodinâmicos funcionais. O cateter radial (mais comum) conectado a transdutor pressurizado a 300 mmHg (flush contínuo 3 mL/h).</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Componente da curva</th><th>Significado</th><th>Alteração patológica</th></tr></thead>
+            <tbody>
+              <tr><td>Subida sistólica rápida</td><td>Contratilidade + débito sistólico</td><td>Subida lenta → estenose aórtica</td></tr>
+              <tr><td>Pressão de pulso (PP)</td><td>PAS − PAD; reflexo do VS</td><td>PP estreita → ↓VS; PP larga → RA, sepse</td></tr>
+              <tr><td>Incisura dicrótica</td><td>Fechamento da valva aórtica</td><td>Ausente em vasoplegia</td></tr>
+              <tr><td>Variação respiratória</td><td>Base para cálculo de PPV/SVV</td><td>Variação &gt;13% → fluido-responsivo</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">PPV e SVV — Preditores de Responsividade a Fluidos</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7"><strong>PPV (Pulse Pressure Variation)</strong> e <strong>SVV (Stroke Volume Variation)</strong> medem a variação cíclica da pressão de pulso e volume sistólico com a ventilação mecânica. Refletem a posição na curva de Frank-Starling.</p>
+          <div class="algo-box algo-g">
+            <div class="algo-title">✅ PPV/SVV &gt;13% → Fluido-responsivo</div>
+            Expansão volêmica aumentará o DC significativamente. Administrar 250–500 mL de cristaloide balanceado e reavaliar.
+          </div>
+          <div class="algo-box algo-r" style="margin-top:6px">
+            <div class="algo-title">⚠ PPV/SVV &lt;13% → Não fluido-responsivo</div>
+            Expansão volêmica não aumentará DC — risco de edema sem benefício. Considerar vasopressor (noradrenalina) se hipotensão.
+          </div>
+          <div class="tbl-wrap"><table class="tbl" style="margin-top:8px">
+            <thead><tr><th>Limitação</th><th>Por quê invalida PPV/SVV</th></tr></thead>
+            <tbody>
+              <tr><td>Fibrilação atrial / arritmias</td><td>Variação por ritmo, não por respiração</td></tr>
+              <tr><td>Ventilação espontânea / VNI</td><td>Esforço respiratório próprio interfere</td></tr>
+              <tr><td>VC &lt;8 mL/kg</td><td>Variação insuficiente para testar reserva</td></tr>
+              <tr><td>Falência de VD / HTAP</td><td>VD não responde da mesma forma</td></tr>
+              <tr><td>Compliance torácica muito baixa</td><td>Obeso mórbido, abdome fechado sob tensão</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--violet)">
+          <span class="card-title">Dispositivos Minimamente Invasivos de Débito Cardíaco</span>
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th style="white-space:nowrap">Dispositivo</th><th>Princípio</th><th>Indicação</th></tr></thead>
+            <tbody>
+              <tr><td>PiCCO</td><td>Termodiluição transpulmonar + análise de contorno de pulso</td><td>Cirurgia cardíaca, grandes cirurgias abdominais, sepse grave</td></tr>
+              <tr><td>LiDCO</td><td>Diluição de lítio + contorno de pulso</td><td>Alternativa ao PiCCO sem cateter central obrigatório</td></tr>
+              <tr><td>ClearSight / Edwards</td><td>Pletismografia digital não invasiva</td><td>Cirurgia de médio porte com risco hemodinâmico moderado</td></tr>
+              <tr><td>Swan-Ganz</td><td>Termodiluição direita + pressões de câmaras</td><td>Hipertensão pulmonar, IC grave, transplante</td></tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">✅ GDT com PAI + PPV na prática</div>
+            1. Checar PPV/SVV a cada 10–15 min durante cirurgia · 2. Se PPV &gt;13% + hipotensão → 250 mL cristaloide em 10 min · 3. Reavaliar → se PPV ainda &gt;13% → repetir · 4. Se PPV &lt;13% + hipotensão → noradrenalina 0.05–0.1 mcg/kg/min
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /avc-hemo -->
+
+  <!-- TAB REVISÃO — AVC -->
+  <div class="tab-panel" id="avc-revisao">
+    <div class="page-wrap">
+      <div class="alert a-teal" style="margin-bottom:12px">
+        <strong>Revisão Rápida — 10 pontos-chave de Acesso Vascular Central</strong>
+      </div>
+      <ol style="font-size:13px;line-height:2;padding-left:18px">
+        <li><strong>Técnica de Seldinger:</strong> punção → guia → retirada agulha → dilatador → cateter → retirada guia · SEMPRE confirmar com flash de sangue venoso</li>
+        <li><strong>Veia jugular interna direita:</strong> melhor via — reta para VCS → átrio direito · abordagem posterior ao ECOM</li>
+        <li><strong>USG obrigatório:</strong> ↓50% complicações mecânicas · visão em cross-section = 100% da agulha dentro da veia antes de progredir</li>
+        <li><strong>VJI ao USG:</strong> maior, compressível, lateral à carótida · AC: pulsátil, não compressível, medial</li>
+        <li><strong>CVC posição:</strong> ponta na junção VCS-átrio direito · confirmar com RX ou EcoTTE pós-procedimento</li>
+        <li><strong>Pneumotórax:</strong> complicação mais temida da subclávia (1–2%) · RX após procedimento obrigatório</li>
+        <li><strong>Hematoma:</strong> comprimir acessível (jugular) · não compressível (subclávia): risco de tamponamento mediastinal</li>
+        <li><strong>PPV/SVV via PAI radial:</strong> ΔP &gt;13% = fluido-responsivo · inválido em FA, VE, VC &lt;8 mL/kg</li>
+        <li><strong>Teste de Allen:</strong> ocluir radial+ulnar → soltar ulnar → palma ruboriza &lt;5s = seguro para punção radial</li>
+        <li><strong>CVC não é guia de volemia:</strong> PVC baixa ≠ hipovolemia · PVC alta ≠ normovolemia · usar dinâmicos (PPV/SVV)</li>
+      </ol>
+    </div>
+  </div><!-- /avc-revisao -->
+
+  <!-- TAB QUESTÕES — AVC -->
+  <div class="tab-panel" id="avc-questoes">
+    <div class="page-wrap">
+      <div class="alert a-teal" style="margin-bottom:12px">
+        <strong>Questões — Acesso Vascular Central</strong><br>
+        <span style="font-size:11px;font-weight:400">Clique em cada questão para revelar o gabarito.</span>
+      </div>
+
+      <div class="caso-card" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">1</div>
+          <div class="caso-title">QUESTÃO 1 — POSIÇÃO DO CVC</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Após passagem de CVC por veia jugular interna direita, qual a posição correta da ponta do cateter e como confirmá-la?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Átrio direito — confirmado clinicamente pela pressão de infusão<br>B) Veia cava superior, terço médio — confirmado por RX ou EcoTTE<br>C) Junção VCS-átrio direito — confirmado por RX ou EcoTTE<br>D) Veia subclávia — confirmado por ausculta<br>E) Qualquer posição intravascular — não precisa confirmar</p>
+          <div class="caso-answer"><strong>Gabarito: C)</strong> — A posição ideal da ponta do CVC é na junção VCS-átrio direito. Confirmação mandatória com RX de tórax ou EcoTTE pós-procedimento. Ponta muito alta (VCS superior) → medição de PVC imprecisa; muito baixa (átrio/VD) → arritmias.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">2</div>
+          <div class="caso-title">QUESTÃO 2 — VJI vs CARÓTIDA AO USG</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Durante punção guiada por ultrassom para passagem de CVC, como diferenciar a veia jugular interna da artéria carótida?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) VJI: pulsátil, não compressível, medial<br>B) VJI: compressível, sem pulsação, lateral à carótida<br>C) VJI: menor, pulsátil, lateral<br>D) VJI: não compressível, medial, com fluxo turbulento<br>E) Impossível diferenciar — apenas o flash de sangue escuro confirma</p>
+          <div class="caso-answer"><strong>Gabarito: B)</strong> — Ao USG: VJI é compressível, não pulsátil e lateral à artéria carótida. A carótida é pulsátil, não compressível e medial. Sempre usar visão em cross-section para confirmar 100% da agulha dentro da VJI antes de progredir o guia.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">3</div>
+          <div class="caso-title">QUESTÃO 3 — PNEUMOTÓRAX</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Qual via de acesso venoso central apresenta o menor risco de pneumotórax como complicação?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Subclávia direita<br>B) Subclávia esquerda<br>C) Jugular interna direita<br>D) Femoral<br>E) Jugular externa</p>
+          <div class="caso-answer"><strong>Gabarito: C)</strong> — A veia jugular interna apresenta o menor risco de pneumotórax. A subclávia tem incidência de 1–2% de pneumotórax, sendo a complicação mais temida dessa via. RX de tórax é obrigatório após qualquer punção subclávia. A via femoral tem risco zero de pneumotórax, mas maior risco de infecção.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">4</div>
+          <div class="caso-title">QUESTÃO 4 — TESTE DE ALLEN</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Ao realizar o teste de Allen antes de punção de artéria radial, a palma demora 8 segundos para ruborizar após soltar a compressão ulnar. O que isso significa?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Teste positivo — circulação colateral adequada, puncionar com segurança<br>B) Teste negativo — circulação colateral ulnar inadequada, não puncionar radial<br>C) Resultado indeterminado — repetir o teste<br>D) Teste positivo — sempre que ruborizar, mesmo demora &gt;10s<br>E) Teste desnecessário — apenas o Doppler confirma circulação colateral</p>
+          <div class="caso-answer"><strong>Gabarito: B)</strong> — Teste de Allen negativo: rubor da palma em &gt;5 segundos indica circulação colateral ulnar inadequada. Nesse caso, NÃO puncionar a artéria radial ipsilateral — risco de isquemia de mão se ocorrer trombose. Considerar lado contralateral ou artéria femoral.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">5</div>
+          <div class="caso-title">QUESTÃO 5 — PVC COMO GUIA DE VOLEMIA</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Paciente em intraoperatório com CVC posicionado apresenta PVC de 2 mmHg. O anestesista residente afirma que o paciente está hipovolêmico. Você concorda?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Sim — PVC baixa sempre indica hipovolemia<br>B) Sim — PVC &lt;5 mmHg confirma hipovolemia<br>C) Não necessariamente — PVC é guia pobre de volemia; usar parâmetros dinâmicos<br>D) Sim — mas apenas se associada a taquicardia<br>E) Não — PVC baixa indica hipervolemia paradoxal</p>
+          <div class="caso-answer"><strong>Gabarito: C)</strong> — PVC é um guia pobre de volemia. PVC baixa ≠ hipovolemia; PVC alta ≠ normovolemia. Parâmetros dinâmicos (PPV/SVV &gt;13% via PAI radial) são superiores para avaliar fluido-responsividade. O PPV é o padrão ouro em VM com ritmo sinusal e VC ≥8 mL/kg.</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /avc-questoes -->
+
+  <!-- ABA 7 — CASOS CLÍNICOS                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="avc-casos" class="tab-panel">
+    <div class="page-wrap">
+
+      <div class="alert a-blue" style="margin-bottom:12px">
+        <strong>Como usar:</strong> Leia cada caso, reflita sobre a questão antes de revelar a resposta. Casos baseados em situações reais do contexto brasileiro de anestesiologia e UTI.
+      </div>
+
+      <!-- CASO 1 -->
+      <div class="caso-card" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">1</div>
+          <div class="caso-title">Punção Arterial da Carótida Durante CVC JI</div>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <div class="alert a-red">
+            <strong>Contexto:</strong> Paciente feminina, 58 anos, 68 kg. Pós-operatório imediato de laparotomia exploradora por trauma abdominal. Necessita CVC para NPT + monitorização de PVC. Sem US disponível no momento. R1 realizando procedimento supervisionado.
+          </div>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:10px">
+            Durante tentativa de punção da JI direita, o residente aspira sangue de coloração vermelho-vivo com fluxo pulsátil. Ele imediatamente reconhece que pode ter punctionado a artéria carótida. A agulha 18G ainda está no local da punção.
+          </p>
+          <div class="caso-question">❓ Qual a conduta imediata correta? O que NÃO deve ser feito? Quais são os riscos de não agir corretamente?</div>
+          <div class="caso-answer">
+            <strong>✅ Conduta Correta (Passo a Passo):</strong><br><br>
+            <strong>1. RETIRAR a agulha imediatamente</strong> (apenas agulha, sem cateter inserido)<br>
+            <strong>2. Comprimir manualmente</strong> o local por 10–15 minutos com gazes<br>
+            3. Manter monitorização neurológica: sinal de déficit neurológico → TC urgente<br>
+            4. Monitorizar hematoma: expansão progressiva → urgência cirúrgica<br>
+            5. Comunicar ao supervisor e registrar no prontuário<br>
+            6. Escolher outra via para o CVC (JI esquerda com US, ou femoral)<br><br>
+            <strong>❌ O que NÃO fazer:</strong><br>
+            • Não ignorar o sangue pulsátil pensando ser variação normal<br>
+            • Se um cateter tiver sido inserido na carótida: NUNCA remover às cegas → acionar cirurgia vascular para retirada controlada (risco de AVC hemorrágico e morte)<br><br>
+            <strong>⚠ Riscos do não reconhecimento:</strong><br>
+            Cateter arterial de grande calibre → hematoma expansivo comprimindo traqueia → obstrução de VA → morte. AVC isquêmico por embolia/dissecção.
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Lição:</strong> Com US, a incidência de punção carotídea cai de ~3–5% para &lt;0,5%. Sempre use US quando disponível. Quando não disponível, palpe a carótida e mantenha a agulha lateralmente a ela.
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 2 -->
+      <div class="caso-card" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">2</div>
+          <div class="caso-title">Pneumotórax Pós-CVC Subclávia — Diagnóstico e Tratamento</div>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <div class="alert a-orange">
+            <strong>Contexto:</strong> Paciente masculino, 72 anos, DPOC moderado, em ventilação mecânica por pneumonia grave. CVC subclávia direita inserido há 45 minutos. Nos últimos 20 minutos: SpO₂ caiu de 96% para 88%, pressão de platô aumentou de 22 para 31 cmH₂O, PIP de 26 para 38 cmH₂O. FC: 124 bpm. PA: 98/62 mmHg.
+          </div>
+          <div class="caso-question">❓ Qual é a hipótese diagnóstica principal? Quais achados confirmam? Como tratar? Quando uma toracocentese de emergência está indicada sem aguardar RX?</div>
+          <div class="caso-answer">
+            <strong>✅ Diagnóstico: Pneumotórax pós-CVC subclávia</strong><br><br>
+            <strong>Achados confirmando PTX:</strong><br>
+            • Murmúrio vesicular reduzido/ausente à direita<br>
+            • Hipersonoridade à percussão direita<br>
+            • Queda da SpO₂ + aumento de pressões de VM<br>
+            • RX: hipertransparência, ausência de trama vascular<br>
+            • US: ausência do "lung sliding" ipsilateral (sinal do ponto pulmonar)<br><br>
+            <strong>Fluxograma de tratamento:</strong><br>
+            PTX pequeno + paciente estável → O₂ 100% + RX controle 4h<br>
+            PTX médio-grande OU em VM → drenagem torácica urgente<br><br>
+            <strong>TORACOCENTESE DE EMERGÊNCIA SEM AGUARDAR RX:</strong><br>
+            Indicada se: PTX hipertensivo suspeito = hipotensão + taquicardia + desvio de traqueia + cianose em VM com pressões crescentes<br>
+            → Punção imediata: 2ª espaço intercostal, linha hemiclavicular, agulha 14G<br>
+            → Saída de ar sob pressão = confirma e trata simultaneamente<br>
+            → Seguida de drenagem definitiva (28–32 Fr)
+          </div>
+          <div class="alert a-teal" style="margin-top:8px">
+            <strong>Prevenção:</strong> Técnica correta (ângulo paralelo ao chão), US guiada para SC, preferir JI quando disponível. RX OBRIGATÓRIO após toda SC e JI.
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 3 -->
+      <div class="caso-card" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">3</div>
+          <div class="caso-title">Febre com CVC há 7 Dias — ICSRC</div>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <div class="alert a-orange">
+            <strong>Contexto:</strong> Paciente masculino, 55 anos, pós-operatório de cirurgia cardíaca. CVC jugular direito inserido há 7 dias para NPT + vasopressores. Hoje: temperatura 38,8°C, calafrios no momento de flush do cateter, leucocitose 18.000/mm³, PCR 22 mg/dL. Sítio de inserção com leve eritema ao redor. Sem outro foco infeccioso identificado.
+          </div>
+          <div class="caso-question">❓ Como confirmar ICSRC? O cateter deve ser removido? Qual antibiótico empírico? Por quanto tempo tratar?</div>
+          <div class="caso-answer">
+            <strong>✅ Abordagem da ICSRC Suspeita:</strong><br><br>
+            <strong>Confirmação diagnóstica:</strong><br>
+            • Hemoculturas ×2–3: coleta simultânea CENTRAL (pelo cateter) + PERIFÉRICA<br>
+            • Diferença temporal &gt;2h (positiva central antes da periférica) = confirma fonte cateter<br>
+            • Cultura da ponta do cateter (5 cm distal): &gt;15 UFC = colonização significativa<br><br>
+            <strong>Decisão sobre o cateter:</strong><br>
+            • Eritema local + febre sem instabilidade → pode manter com atenção por 48h aguardando cultura<br>
+            • Secreção purulenta NO sítio OU instabilidade hemodinâmica → remover IMEDIATAMENTE<br>
+            • Este caso: leve eritema → pode manter por 48h aguardando culturas<br><br>
+            <strong>Antibiótico empírico:</strong><br>
+            Vancomicina 25–30 mg/kg/dose IV (cobertura MRSA/SCN) ± gram-negativo se neutropenia/imunossupressão. Escalonar conforme antibiograma 48–72h.<br><br>
+            <strong>Duração do tratamento:</strong><br>
+            • SCN: 5–7 dias após remoção do cateter<br>
+            • S. aureus: 14 dias mínimos (ETE para afastar endocardite)<br>
+            • Candida: 14 dias após última hemocultura negativa + fundoscopia
+          </div>
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>Calafrios ao flush</strong> são altamente sugestivos de ICSRC — a liberação de biofilme bacteriano do cateter para a corrente sanguínea causa bacteremia transitória e calafrios.
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 4 -->
+      <div class="caso-card" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">4</div>
+          <div class="caso-title">Paciente Obeso sem Acesso Periférico → PICC Guiado por US</div>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <div class="alert a-violet">
+            <strong>Contexto:</strong> Paciente feminina, 84 anos, 112 kg, IMC 41. Diabetes, IC, insuficiência renal crônica estágio 3 (fístula AV no antebraço esquerdo para diálise futura). Internada para antibioticoterapia IV de longa duração por osteomielite de calcâneo. Sem acesso venoso periférico viável bilateralmente. Coagulopatia leve (INR 1,6).
+          </div>
+          <div class="caso-question">❓ Qual é a melhor via de acesso central nesta paciente? Por quê não CVC convencional? Quais cuidados especiais no procedimento?</div>
+          <div class="caso-answer">
+            <strong>✅ Melhor Opção: PICC no Braço Direito, Guiado por US</strong><br><br>
+            <strong>Por que PICC é ideal aqui:</strong><br>
+            • Indicação perfeita: ATB IV prolongada (semanas a meses)<br>
+            • Coagulopatia leve: PICC é compressível e de menor risco hemorrágico<br>
+            • Preserva veias centrais para o CVC de hemodiálise futuro<br>
+            • Fístula AV no esquerdo: NUNCA puncionar braço esquerdo (risco de trombose da FAV)<br>
+            • Ambulatorial: paciente pode ter alta com PICC e terminar ATB em casa<br><br>
+            <strong>Cuidados especiais no procedimento:</strong><br>
+            • US linear 10–15 MHz OBRIGATÓRIO em obesa<br>
+            • Medir calibre da veia basílica com torniquete: deve ser &gt;3 mm<br>
+            • Relação cateter/veia &lt;45% (previne trombose)<br>
+            • Cuidado com coagulopatia: compressão após punção<br>
+            • Medir comprimento: ombro → 3ª costela direita (~52 cm)<br>
+            • Confirmação: RX ou ECG intracavitário (onda P máxima na ponta = posição correta)<br><br>
+            <strong>Alternativa se PICC falhar:</strong> CVC jugular interna direita com US (risco menor de sangramento que SC com INR 1,6, e compressível se sangrar).
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 5 -->
+      <div class="caso-card" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">5</div>
+          <div class="caso-title">Extrassístoles Durante Inserção do Guia — Manejo</div>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <div class="alert a-gold">
+            <strong>Contexto:</strong> Paciente masculino, 67 anos, cardiomiopata com FE 35%. CVC jugular interna direita em andamento (anestesia geral para cirurgia abdominal). Durante introdução do guia J-tip, o monitor de ECG mostra início de extrassístoles ventriculares frequentes, bigemanismo. O residente já introduziu 28 cm do guia.
+          </div>
+          <div class="caso-question">❓ O que está acontecendo? Qual a conduta imediata? Quando as extrassístoles são normais vs perigosas? O procedimento pode continuar?</div>
+          <div class="caso-answer">
+            <strong>✅ O que está acontecendo:</strong><br>
+            O guia J-tip foi introduzido profundamente demais (28 cm) e está estimulando mecanicamente o endocárdio do ventrículo direito, causando irritabilidade ventricular.<br><br>
+            <strong>Conduta imediata:</strong><br>
+            1. <strong>Recuar o guia 3–5 cm</strong> imediatamente (para ~22–23 cm)<br>
+            2. Aguardar resolução das extrassístoles (geralmente cessam em segundos)<br>
+            3. Verificar ECG: se TVNS ou TV sustentada → parar o procedimento e tratar<br>
+            4. Em paciente com FE baixa: risco de degeneração para FV é maior<br><br>
+            <strong>Extrassístoles normais vs perigosas:</strong><br>
+            • Normais: 1–3 EVCs isoladas ao avançar o guia, cessam ao recuar → continuar procedimento<br>
+            • Perigosas: bigemanismo, TVNS (&gt;3 batimentos consecutivos), FC &gt;150 em TV → parar, tratar<br><br>
+            <strong>O procedimento pode continuar:</strong> Sim, após recuo do guia e resolução das arritmias. Inserir cateter com o guia posicionado a 20–22 cm (não mais profundo).
+          </div>
+          <div class="alert a-blue" style="margin-top:8px">
+            <strong>Regra prática:</strong> Regra dos 20 cm. Em adulto médio, nunca introduzir o guia além de 20–22 cm para JI/SC direita. Isso posiciona a ponta do guia no átrio direito/junção VCS-AD, sem estimular o VD.
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 6 -->
+      <div class="caso-card" onclick="void(0)">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">6</div>
+          <div class="caso-title">CVC Femoral em RCP — Técnica Rápida, Prioridades</div>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <div class="alert a-red">
+            <strong>Contexto:</strong> Paciente masculino, 52 anos. PCR por FV refratária em sala de cirurgia (pós-indução). RCP em andamento com compressões de alta qualidade. Acesso venoso periférico perdeu → equipe de RCP precisa de acesso venoso central para adrenalina e amiodarona AGORA. R1 é chamado para fazer CVC femoral enquanto RCP continua.
+          </div>
+          <div class="caso-question">❓ Como você faz o CVC femoral sem interromper as compressões? Quais as prioridades? Qual profundidade inserir o cateter? Quando trocar para outra via?</div>
+          <div class="caso-answer">
+            <strong>✅ CVC Femoral em Emergência — Protocolo:</strong><br><br>
+            <strong>Vantagem da via femoral em RCP:</strong><br>
+            • Não interrompe compressões torácicas (fica nos membros inferiores)<br>
+            • Anatomia constante, sempre acessível<br>
+            • Não há risco de PTX em RCP (piora dramática da ventilação)<br><br>
+            <strong>Técnica rápida (simplificada):</strong><br>
+            1. Palpar artéria femoral com dedos da mão esquerda (mesmo durante compressões)<br>
+            2. Ponto: 2 cm medial e 2 cm abaixo do ligamento inguinal<br>
+            3. Antissepsia RÁPIDA (uma passada de álcool/clorexidina — emergência, não há tempo para técnica estéril completa)<br>
+            4. Agulha 18G + seringa: aspirar avançando a 30–45°<br>
+            5. Guia → dilatador → cateter. Profundidade: 15–20 cm<br>
+            6. Não aguardar RX — verificar refluxo apenas<br>
+            7. Drogas podem ser administradas imediatamente após confirmação do refluxo<br><br>
+            <strong>⚠ Drogas pela femoral durante RCP:</strong><br>
+            Há evidências de que drogas administradas pela veia femoral durante RCP chegam mais lentamente ao coração que pela via central superior (subclávia/JI). Por isso, SEMPRE seguir com flush de 20–30 mL de SF após cada medicação pela femoral durante RCP.<br><br>
+            <strong>Quando trocar para outra via:</strong><br>
+            Após ROSC (retorno da circulação espontânea): assim que o paciente estabilizar, troque para JI ou SC (menor infecção, maior confiabilidade de monitorização de PVC).
+          </div>
+          <div class="alert a-teal" style="margin-top:8px">
+            <strong>IO (Intraósseo):</strong> Em RCP, se a via femoral falhar, considere IO imediatamente (tíbia proximal, úmero proximal, esterno). Velocidade de acesso: &lt;30 segundos. Mesmas drogas e doses do IV.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /avc-casos -->
+</div>

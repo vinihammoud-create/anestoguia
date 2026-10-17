@@ -1,0 +1,1850 @@
+<div class="screen" id="screen-iot">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Intubação Orotraqueal</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="iot-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('iot','anatomia',this)">Anatomia</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('iot','preparo',this)">Preparo</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('iot','tecnica',this)">Técnica</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('iot','rsi',this)">RSI</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('iot','confirmacao',this)">Confirmação</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('iot','complicacoes',this)">Complicações</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('iot','ventprot',this)">Vent. Protetora</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('iot','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('iot','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('iot','casos',this)">Casos</button>
+  </div>
+
+  <!-- TAB 1 — ANATOMIA E AVALIAÇÃO DA VIA AÉREA -->
+  <div class="tab-panel active" id="iot-anatomia">
+
+    <!-- ANATOMIA FUNCIONAL -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">01</span> Anatomia Funcional da Via Aérea
+      </div>
+      <div class="card-body">
+        <img src="img-visao-laringoscopia.jpg" style="width:100%;max-width:560px;display:block;margin:12px auto;border-radius:10px;border:1px solid rgba(255,255,255,.1)" alt="Visão Laringoscópica — Anatomia da Via Aérea">
+
+        
+
+        <div class="proto-steps" style="margin-top:10px">
+          <div class="proto-step"><span class="sn sn-b">1</span><div><strong>Nariz / Boca</strong> — entrada da via aérea; narinas filtram, aquecem e umidificam o ar</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div><strong>Nasofaringe / Orofaringe</strong> — convergência das vias nasal e oral; tonsilas palatinas e faríngeas nessa região</div></div>
+          <div class="proto-step"><span class="sn sn-b">3</span><div><strong>Hipofaringe</strong> — região crítica onde vias aérea e digestiva se separam; local de impactação de corpo estranho</div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div><strong>Epiglote</strong> — cartilagem em formato de pétala; tampona a laringe durante a deglutição; ponto de referência da laringoscopia</div></div>
+          <div class="proto-step"><span class="sn sn-t">5</span><div><strong>Laringe</strong> — estrutura cartilaginosa (tireoide, cricoide, aritenoides); contém as pregas vocais; a glote é o orifício de entrada</div></div>
+        </div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-t">6</span><div><strong>Membrana cricotireóidea</strong> — entre cartilagens tireoide e cricoide; acesso de emergência (cricotireotomia); identificável por US e palpação</div></div>
+          <div class="proto-step"><span class="sn sn-b">7</span><div><strong>Traqueia</strong> — 10–12 cm de comprimento, 16–20 anéis cartilaginosos; bifurca na carina (T4–T5); atenção ao brônquio direito mais vertical (IOT seletiva)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CORMACK-LEHANE -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Classificação de Cormack-Lehane
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue" style="margin-bottom:12px">
+          Avalia a <strong>visão laringoscópica direta</strong> — o quanto da glote é visível com o laringoscópio posicionado. Aplicada ante</em> a laringoscopia.
+        </div>
+
+        <img src="img-cormack-classificacao.jpg" style="width:100%;max-width:620px;display:block;margin:12px auto;border-radius:10px;border:1px solid rgba(255,255,255,.1)" alt="Classificação Cormack-Lehane Graus I-IV — Fotos endoscópicas e esquemas">
+
+        <img src="img-cormack-fotos.jpg" style="width:100%;max-width:620px;display:block;margin:12px auto;border-radius:10px;border:1px solid rgba(255,255,255,.1)" alt="Cormack-Lehane — Visão laringoscópica real graus I a IV" style="width:100%;max-width:620px;display:block;margin:8px auto;border-radius:10px;border:1px solid rgba(255,255,255,.1)">
+
+                  <div class="proto-step"><span class="sn sn-b">2</span><div>Boca <strong>maximamente aberta</strong></div></div>
+          <div class="proto-step"><span class="sn sn-b">3</span><div>Língua protruída ao máximo para fora</div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div><strong>SEM fonação</strong> — não pedir ao paciente para falar "ah", pois eleva o palato mole e falsifica a avaliação</div></div>
+          <div class="proto-step"><span class="sn sn-b">5</span><div>Iluminação adequada; observar estruturas visíveis</div></div>
+        </div>
+
+        <div class="tbl-wrap"><table class="tbl" style="margin-top:12px">
+          <thead><tr><th>Classe</th><th>Estruturas Visíveis</th><th>Risco de IOT Difícil</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tg">I</span></td><td>Palato mole, úvula, pilares, tonsilas — visão completa</td><td>Baixo (~5%)</td></tr>
+            <tr><td><span class="tag tg">II</span></td><td>Palato mole, úvula, pilares — tonsilas não visíveis</td><td>Baixo (~7%)</td></tr>
+            <tr><td><span class="tag ty">III</span></td><td>Palato mole, base da úvula apenas</td><td>Intermediário (~28%)</td></tr>
+            <tr><td><span class="tag tr">IV</span></td><td>Apenas palato duro visível — nenhuma estrutura mole</td><td>Alto (~>50%)</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-orange" style="margin-top:10px">
+          <strong>Limitações do Mallampati:</strong> sensibilidade ~50%, especificidade ~89% para IOT difícil. Isoladamente é insuficiente — deve ser combinado com outros preditores (LEMON, MOANS).
+        </div>
+      </div>
+    </div>
+
+    <!-- LEMON -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Score LEMON — Avaliação Sistemática da Via Aérea
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>LEMON</strong> é o mnemônico mais utilizado internacionalmente para <strong>prever IOT difícil</strong>. Pontuação ≥3 associa-se a risco aumentado.
+        </div>
+
+        <div class="acc" style="margin-top:12px">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">L</span> &nbsp;LOOK externally — Aparência externa</div>
+          <div class="acc-body">
+            <p>Avaliação visual geral da face e pescoço antes de qualquer manobra:</p>
+            <ul class="ck-list" style="margin-top:8px">
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Abertura bucal reduzida (&lt;3 cm / &lt;2 dedos transversos)</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Retrognacia / micrognatia (queixo recuado)</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Protrusão de dentes superiores</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Face larga, pescoço curto e grosso</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Angioedema, hematoma, massa cervical</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Queimaduras de face, trauma maxilofacial</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">E</span> &nbsp;EVALUATE — Regra 3-3-2</div>
+          <div class="acc-body">
+            <div class="g3" style="margin:8px 0">
+              <div class="alert a-blue">
+                <strong>3 dedos</strong><br>Abertura bucal (incisivos superiores → inferiores) ≥ 3 dedos transversos ≈ 4,5 cm
+              </div>
+              <div class="alert a-blue">
+                <strong>3 dedos</strong><br>Distância mento-hioide (queixo → osso hioide) ≥ 3 dedos transversos ≈ 4,5 cm
+              </div>
+              <div class="alert a-blue">
+                <strong>2 dedos</strong><br>Distância hioide-tireoide (hioide → incisura da cartilagem tireoide) ≥ 2 dedos transversos ≈ 3 cm
+              </div>
+            </div>
+            <div class="alert a-gold">Cada medida abaixo do limite prediz IOT progressivamente mais difícil.</div>
+          </div>
+        </div>
+
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">M</span> &nbsp;MALLAMPATI — Classificação orofaríngea</div>
+          <div class="acc-body">
+            <p>Mallampati III ou IV = 1 ponto no score LEMON.<br>Ver card anterior para técnica de avaliação detalhada.</p>
+            <div class="alert a-blue">Mallampati III–IV em combinação com abertura bocal reduzida: risco muito elevado.</div>
+          </div>
+        </div>
+
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">O</span> &nbsp;OBSTRUCTION — Obstrução da via aérea</div>
+          <div class="acc-body">
+            <ul class="ck-list">
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Stridor em repouso (grau extremo)</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Tumor de laringe / epiglotite / abscessos peritonsilar</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Hematoma expansivo de pescoço</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Bócio volumoso</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Voz abafada ou "hot potato voice"</span></li>
+            </ul>
+            <div class="alert a-red" style="margin-top:8px">Obstrução supraglótica = via aérea difícil mesmo com boa visão laringoscópica.</div>
+          </div>
+        </div>
+
+        <div class="acc">
+          <div class="acc-hdr" onclick="toggleAcc(this)"><span class="tag tb">N</span> &nbsp;NECK MOBILITY — Mobilidade cervical</div>
+          <div class="acc-body">
+            <p>Testar extensão e flexão cervical ativa do paciente consciente:</p>
+            <ul class="ck-list">
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Artrite reumatoide com acometimento cervical</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Espondilite anquilosante — fixação em flexão</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Instabilidade atlanto-axial (Down, AR, trauma C1-C2)</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Colar cervical rígido em trauma</span></li>
+            </ul>
+            <div class="alert a-blue" style="margin-top:8px">
+              <strong>Distância tireomento (Patil):</strong> com pescoço em extensão máxima, mento → cartilagem tireoide. <strong>≥6,5 cm = favorável</strong>. &lt;6 cm = IOT potencialmente difícil.
+            </div>
+          </div>
+        </div>
+
+        <div class="alert a-teal" style="margin-top:14px">
+          <strong>Score LEMON:</strong> 0 = IOT fácil | 1–2 = cuidado | ≥3 = planejamento para VAD necessário. <strong>Nenhum teste isolado tem valor preditivo perfeito — use LEMON como rastreio sistemático.</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCORE DE WILSON -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">05</span> Score de Wilson
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue" style="margin-bottom:10px">Cinco fatores avaliados antes da IOT. <strong>Score ≥2 prediz IOT difícil</strong> com sensibilidade ~75%.</div>
+        <div class="tbl-wrap wide"><table class="tbl">
+          <thead><tr><th>Fator</th><th>0 ponto</th><th>1 ponto</th><th>2 pontos</th></tr></thead>
+          <tbody>
+            <tr><td>Peso</td><td>&lt;90 kg</td><td>90–110 kg</td><td>&gt;110 kg</td></tr>
+            <tr><td>Mobilidade cervical</td><td>≥90°</td><td>80–89°</td><td>&lt;80°</td></tr>
+            <tr><td>Abertura bucal</td><td>≥5 cm</td><td>4–5 cm</td><td>&lt;4 cm</td></tr>
+            <tr><td>Subluxação mandibular</td><td>Incisivo inf. anterior ao sup.</td><td>No mesmo plano</td><td>Não alcança</td></tr>
+            <tr><td>Retrognatia</td><td>Normal</td><td>Moderada</td><td>Severa</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- MOANS / SHORT / RODS -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">06</span> Mnemônicos Adicionais: MOANS · SHORT · RODS
+      </div>
+      <div class="card-body">
+
+        <div class="sh sh-blue">MOANS — Prever Dificuldade de Ventilação com Máscara (VBM)</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Letra</th><th>Fator</th><th>Por quê importa</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tb">M</span></td><td>Mask seal (vedação da máscara)</td><td>Barba, trauma facial, anatomia irregular — impede vedação</td></tr>
+            <tr><td><span class="tag tb">O</span></td><td>Obesity / Obstruction</td><td>IMC &gt;30: ↓ CRF, ↑ pressão abdominal; obstrução = ventilação impossível</td></tr>
+            <tr><td><span class="tag tb">A</span></td><td>Age &gt;55 anos</td><td>Perda de tônus muscular faríngeo; VBM menos eficaz</td></tr>
+            <tr><td><span class="tag tb">N</span></td><td>No teeth (edentulado)</td><td>Sem estrutura de apoio para a máscara; cair de bochechas</td></tr>
+            <tr><td><span class="tag tb">S</span></td><td>Stiff lungs/Snoring</td><td>DPOC grave, asma, ronco = resistência aumentada; ↑ pico de pressão</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-teal" style="margin:10px 0">≥2 fatores de MOANS = VBM potencialmente difícil → preparar MLA ou dispositivo supraglótico de resgate.</div>
+
+        <div class="sh sh-orange">SHORT — Prever Dificuldade com Máscara Laríngea (MLA)</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Letra</th><th>Fator</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag to">S</span></td><td>Surgery/Scarring — cirurgia ou cicatriz cervical anterior</td></tr>
+            <tr><td><span class="tag to">H</span></td><td>Hypomobility — mobilidade cervical reduzida</td></tr>
+            <tr><td><span class="tag to">O</span></td><td>Obstruction/Obesity — obstrução de via aérea ou obesidade mórbida</td></tr>
+            <tr><td><span class="tag to">R</span></td><td>Radiation — radioterapia cervical prévia (fibrose + microstomia)</td></tr>
+            <tr><td><span class="tag to">T</span></td><td>Tumor — tumor de orofaringe, laringe ou pescoço</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-red" style="margin-top:12px">RODS — Prever Dificuldade com Dispositivos Ópticos (VAD)</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Letra</th><th>Fator</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tr">R</span></td><td>Restricted mouth opening — abertura bucal &lt;3 cm</td></tr>
+            <tr><td><span class="tag tr">O</span></td><td>Obstruction — massa, tumor ou edema supraglótico</td></tr>
+            <tr><td><span class="tag tr">D</span></td><td>Disrupted/Distorted airway — anatomia distorcida (trauma, cirurgia, queimadura)</td></tr>
+            <tr><td><span class="tag tr">S</span></td><td>Stiff neck/Spine — imobilidade cervical severa</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ULTRASSOM E OUTROS TESTES -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">07</span> Outros Testes Clínicos + Ultrassom de Via Aérea
+      </div>
+      <div class="card-body">
+
+        <div class="sh sh-teal">Teste de Mordida do Lábio Superior (Upper Lip Bite Test — ULBT)</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Classe</th><th>Achado</th><th>Significado</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tg">I</span></td><td>Incisivos inferiores mordem acima da borda do lábio superior</td><td>Subluxação mandibular adequada → IOT fácil</td></tr>
+            <tr><td><span class="tag ty">II</span></td><td>Incisivos inferiores mordem abaixo da borda do lábio superior</td><td>Subluxação parcial → IOT intermediária</td></tr>
+            <tr><td><span class="tag tr">III</span></td><td>Incisivos inferiores não alcançam o lábio superior</td><td>Subluxação ausente → IOT difícil</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-teal" style="margin:10px 0">O ULBT combina avaliação de abertura bucal + protrusão mandibular + estado dentário — é superior ao Mallampati isolado.</div>
+
+        <div class="sh sh-blue">Distância Tireomento (Patil)</div>
+        <div class="g2">
+          <div class="alert a-green"><strong>≥6,5 cm</strong> — Via aérea favorável. Espaço adequado para laringoscopia.</div>
+          <div class="alert a-red"><strong>&lt;6 cm</strong> — Sugestivo de IOT difícil. Laringe anteriorizada + língua grande relativa.</div>
+        </div>
+
+        <div class="sh sh-violet" style="margin-top:12px">Ultrassom de Via Aérea (POCUS)</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-v">1</span><div><strong>Identificação da membrana cricotireóidea:</strong> transdutor linear (7–12 MHz) longitudinal na linha média. Identificar cartilagem tireoide → membrana CT (hiperecogênica) → cartilagem cricoide. Essencial para cricotireotomia de emergência.</div></div>
+          <div class="proto-step"><span class="sn sn-v">2</span><div><strong>Predição de IOT difícil:</strong> espessura de tecido mole pré-traqueal &gt;28 mm (obesos) prediz laringoscopia difícil. Distância pele-epiglote &gt;25 mm associa-se a Cormack III–IV.</div></div>
+          <div class="proto-step"><span class="sn sn-v">3</span><div><strong>Confirmação de IOT:</strong> "ring-down artifact" (reverberação em cauda de cometa) traqueal confirma posição. Deslizamento pleural bilateral confirma ventilação bilateral.</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /iot-anatomia -->
+
+  <!-- TAB 2 — PREPARO E EQUIPAMENTO (SOAP-ME) -->
+  <div class="tab-panel" id="iot-preparo">
+
+    <!-- SOAP-ME INTRO -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">01</span> SOAP-ME — O Mnemônico do Preparo para IOT
+      </div>
+      <div class="card-body">
+        <div class="alert a-green">
+          <strong>SOAP-ME</strong> é o checklist estruturado adotado pela <em>Society for Airway Management</em> para garantir que todo equipamento e drogas necessários estão prontos <strong>antes</strong> de qualquer indução anestésica com IOT planejada.
+        </div>
+        <div class="g2" style="margin-top:12px">
+          <div class="alert a-blue"><strong>S</strong> — Suction (Aspiração)</div>
+          <div class="alert a-blue"><strong>O</strong> — Oxygen (Oxigenação)</div>
+          <div class="alert a-blue"><strong>A</strong> — Airway devices (Dispositivos de via aérea)</div>
+          <div class="alert a-blue"><strong>P</strong> — Position (Posicionamento)</div>
+          <div class="alert a-blue"><strong>M</strong> — Monitors (Monitores)</div>
+          <div class="alert a-blue"><strong>E</strong> — Equipment/Drugs (Equipamentos e drogas)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S — SUCTION -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">S</span> Suction — Aspiração
+      </div>
+      <div class="card-body">
+        <ul class="ck-list">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Aspirador de alto fluxo (≥40 L/min) ligado e testado ANTES de induzir</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Cânula Yankauer posicionada ao alcance da mão direita do anestesiologista</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Sonda de aspiração fina (n.14–16) disponível para aspiração pelo TOT após intubação</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Em RSI/estômago cheio: Yankauer na mão esquerda durante a laringoscopia (técnica de Sellick reverso)</span></li>
+        </ul>
+        <div class="alert a-red" style="margin-top:8px">
+          <strong>Nunca induza sem aspirador funcionando.</strong> Vômito durante a laringoscopia é causa evitável de aspiração e morte.
+        </div>
+      </div>
+    </div>
+
+    <!-- O — OXYGEN -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">O</span> Oxygen — Pré-oxigenação e Apneia Segura
+      </div>
+      <div class="card-body">
+        <div class="sh sh-blue">Pré-oxigenação Padrão</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-b">1</span><div>Máscara facial com FiO₂ 100% por <strong>3–5 minutos</strong> com ventilação espontânea normal</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div>Alternativa em urgência: <strong>8 respirações profundas máximas</strong> em 60 s com fluxo ≥10 L/min</div></div>
+          <div class="proto-step"><span class="sn sn-t">3</span><div><strong>Alvo SpO₂ ≥98%</strong> antes de induzir — isso maximiza o reservatório de O₂ (CRF) substituindo N₂ por O₂</div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div>Monitorar ETCO₂ durante pré-ox confirma que paciente está realmente respirando pela máscara</div></div>
+        </div>
+
+        <div class="sh sh-teal" style="margin-top:14px">HFNO — Oxigenoterapia de Alto Fluxo (Optiflow / AirVO)</div>
+        <div class="g2">
+          <div class="alert a-teal">
+            <strong>Parâmetros:</strong><br>Fluxo: 60–70 L/min<br>FiO₂: 100%<br>Iniciar 3–5 min antes da indução
+          </div>
+          <div class="alert a-teal">
+            <strong>Benefícios THRIVE:</strong><br>Apneia segura de até 10 min (saudável) → cria "apneia oxigenada". Lavagem de N₂ + efeito CPAP leve (~2–5 cmH₂O).
+          </div>
+        </div>
+        <div class="proto-steps" style="margin-top:10px">
+          <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Paciente saudável, normopeso:</strong> apneia segura ~8–10 min com HFNO</div></div>
+          <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Obeso (IMC &gt;35):</strong> CRF muito reduzida → apneia segura &lt;2–3 min mesmo com HFNO</div></div>
+          <div class="proto-step"><span class="sn sn-t">3</span><div><strong>Manutenção durante laringoscopia:</strong> deixar cânulas nasais a 15 L/min caso HFNO indisponível</div></div>
+        </div>
+
+        <div class="sh sh-red" style="margin-top:14px">Populações com Dessaturação Rápida</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Grupo</th><th>Risco</th><th>Estratégia</th></tr></thead>
+          <tbody>
+            <tr><td>Obesos (IMC &gt;35)</td><td>CRF muito ↓; dessaturam em &lt;90s após apneia</td><td>Posição semi-sentada 20–30°; HFNO obrigatório</td></tr>
+            <tr><td>Gestantes (&gt;20 sem)</td><td>CRF ↓ 20%; consumo O₂ ↑ 20%</td><td>DLE; pré-ox 5 min; HFNO se disponível</td></tr>
+            <tr><td>Pediátrico</td><td>Consumo O₂ relativo muito alto</td><td>Pré-ox rigorosa; não extubação se SpO₂ &lt;100%</td></tr>
+            <tr><td>Pneumonia/SDRA</td><td>Shunt intrapulmonar → pré-ox ineficaz</td><td>CPAP não invasivo 10 min pré-IOT; PEEP early</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- A — AIRWAY DEVICES -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">A</span> Airway Devices — Dispositivos de Via Aérea
+      </div>
+      <div class="card-body">
+
+        <div class="sh sh-blue">Laringoscópio Direto</div>
+        <div class="tbl-wrap wide"><table class="tbl">
+          <thead><tr><th>Lâmina</th><th>Tipo</th><th>Uso Principal</th><th>Tamanho Adulto</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tb">Macintosh</span></td><td>Curva</td><td>Adultos — posicionar na valécula (anterior à epiglote)</td><td>n.3 (mulheres) / n.4 (homens)</td></tr>
+            <tr><td><span class="tag tv">Miller</span></td><td>Reta</td><td>Pediátrico + adulto com epiglote flácida — elevar diretamente a epiglote</td><td>n.1–2 pediátrico</td></tr>
+            <tr><td><span class="tag ty">McCoy</span></td><td>Articulada</td><td>Cormack III — ponta articulável melhora visão sem troca de laringoscópio</td><td>n.3 / n.4</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-blue" style="margin-top:12px">Tubo Orotraqueal (TOT) — Seleção de Tamanho</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Paciente</th><th>Diâmetro Interno (DI)</th><th>Profundidade (cm)</th></tr></thead>
+          <tbody>
+            <tr><td>Homem adulto</td><td>8,0–9,0 mm</td><td>23–25 cm na comissura labial</td></tr>
+            <tr><td>Mulher adulta</td><td>7,0–8,0 mm</td><td>21–23 cm na comissura labial</td></tr>
+            <tr><td>Criança (fórmula)</td><td>DI = (Idade/4) + 4 mm</td><td>DI × 3 cm (aprox.)</td></tr>
+            <tr><td>Neonato a termo</td><td>3,5 mm</td><td>9–10 cm</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-gold" style="margin-top:8px">
+          <strong>Cuff:</strong> preferir TOT com cuff em todas as idades &gt;8 anos (SBA/ASA). Pressão do cuff: <strong>20–30 cmH₂O</strong> (medir com manômetro). Acima de 30 cmH₂O = risco de isquemia traqueal.
+        </div>
+
+        <div class="sh sh-violet" style="margin-top:12px">Videolaringoscopia — Quando Usar</div>
+        <div class="g2">
+          <div class="alert a-violet">
+            <strong>Indicações primárias:</strong><br>
+            • Cormack III–IV esperado<br>
+            • LEMON ≥3<br>
+            • IOT difícil prévia documentada<br>
+            • Imobilidade cervical (trauma, RA, EA)<br>
+            • Obesidade mórbida
+          </div>
+          <div class="alert a-violet">
+            <strong>Vantagens:</strong><br>
+            • Visão glótica sem alinhamento dos eixos<br>
+            • Permite instrução de assistente<br>
+            • Documentação em vídeo<br>
+            • Curva de aprendizado mais rápida<br>
+            • ↑ sucesso na primeira tentativa
+          </div>
+        </div>
+        <div class="alert a-orange" style="margin-top:8px">
+          <strong>Atenção:</strong> videolaringoscópio angulado (GlideScope, C-MAC D-Blade) exige estilete angulado com curvatura de 60–90° — ângulo de visão ≠ ângulo de inserção do TOT. Sem estilete, a introdução do TOT é impossível mesmo com excelente visão.
+        </div>
+
+        <div class="sh sh-teal" style="margin-top:12px">Bougie (Introdutor de Eschmann / Frova)</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-t">1</span><div>Usar em Cormack IIb–III quando glote parcialmente visível ou penas epiglote</div></div>
+          <div class="proto-step"><span class="sn sn-t">2</span><div>Introduzir com ponta angulada voltada anteriormente, deslizar sob a epiglote em direção à laringe</div></div>
+          <div class="proto-step"><span class="sn sn-t">3</span><div><strong>"Cliques traqueais":</strong> bougie passando pelos anéis cartilaginosos da traqueia confirma posição correta (sensação tátil). Se cliques ausentes → considerar posição esofágica</div></div>
+          <div class="proto-step"><span class="sn sn-t">4</span><div>Manter posição do bougie, deslizar TOT sobre ele com rotação anti-horária de 90° (desviar da aritenoide D)</div></div>
+          <div class="proto-step"><span class="sn sn-t">5</span><div>Retirar bougie enquanto mantém TOT na posição</div></div>
+        </div>
+
+        <div class="sh sh-red" style="margin-top:12px">Dispositivos de Resgate — MLA / Combitubo / cricotireotomia</div>
+        <ul class="ck-list">
+          <li class="ck-item ok"><span class="ck-box"></span><span class="ck-text">MLA ProSeal/Supreme: sempre disponível como resgate em CICO parcial</span></li>
+          <li class="ck-item ok"><span class="ck-box"></span><span class="ck-text">Kit cricotireotomia cirúrgica (técnica de Melker ou bisturi-dedo-tubo): obrigatório em sala de cirurgia</span></li>
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Cricotireotomia por punção (14G + jet ventilation): recurso temporário apenas — máx. 30–45 min</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- P — POSITION -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">P</span> Position — Posicionamento do Paciente
+      </div>
+      <div class="card-body">
+
+        <div class="sh sh-blue">Sniffing Position (Posição de Cheiro)</div>
+        <div class="alert a-blue" style="margin:8px 0">
+          Alinha os três eixos: <strong>oral, faríngeo e laríngeo</strong> — pré-requisito para laringoscopia direta eficaz.
+        </div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-b">1</span><div>Lençol ou coxim sob a cabeça: <strong>orelha no mesmo nível horizontal do esterno</strong> (referência visual rápida)</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div>Extensão atlanto-occipital (cabeça levemente extendida sobre o pescoço)</div></div>
+          <div class="proto-step"><span class="sn sn-b">3</span><div>Flexão cervical baixa (pescoço levemente fletido sobre o tórax)</div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div><strong>Altura da mesa:</strong> cotovelo do anestesiologista deve estar no nível do paciente — evita extensão desnecessária dos ombros</div></div>
+        </div>
+
+        <div class="sh sh-orange" style="margin-top:12px">Posição Rampa (Obesos e Gestantes)</div>
+        <div class="g2">
+          <div class="alert a-orange">
+            <strong>Indicação:</strong> IMC &gt;35 ou gestante &gt;20 sem — deslocamento superior do diafragma impede alinhamento ótimo com decúbito plano.
+          </div>
+          <div class="alert a-orange">
+            <strong>Técnica:</strong> elevação de ombros, tórax e cabeça em rampa até orelha-esterno alinhados. Pode usar coxins em rampa ou posição beach chair 20–30°.
+          </div>
+        </div>
+        <div class="alert a-red" style="margin-top:8px">
+          <strong>Erro frequente:</strong> elevar apenas a cabeça (hiperextensão) sem elevar ombros → piora a visualização glótica em obesos.
+        </div>
+      </div>
+    </div>
+
+    <!-- M — MONITORS -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">M</span> Monitors — Monitoração Mínima Obrigatória
+      </div>
+      <div class="card-body">
+        <ul class="ck-list">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">ECG contínuo de 3 derivações (mínimo) — avaliar FC e ritmo durante laringoscopia</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">SpO₂ contínua — referência para adequação da pré-oxigenação e alertas de dessaturação</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">ETCO₂ (capnografia em forma de onda) — obrigatório após IOT para confirmação</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">PA não invasiva a cada 2–3 min na indução</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">BIS (índice bispectral) — monitorar profundidade anestésica quando disponível</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Temperatura (cirurgias prolongadas ≥1h)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Neuromuscular (TOF watch) — confirmar bloqueio antes da laringoscopia e reversão antes da extubação</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- E — EQUIPMENT/DRUGS -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">E</span> Equipment &amp; Drugs — Equipamentos e Drogas
+      </div>
+      <div class="card-body">
+        <ul class="ck-list">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Agulha + seringa identificadas para cada droga de indução</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Hipnótico preparado e dose calculada (propofol, cetamina, etomidato, tiopental)</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Bloqueador neuromuscular (succinilcolina ou rocurônio) preparado</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Opioide (fentanil/sufentanil) preparado para co-indução</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Atropina preparada (0,5–1 mg) — resposta vagal, bradicardia por laringoscopia</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Vasopressor preparado: efedrina 25–50 mg/mL ou fenilefrina 100 mcg/mL</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Sugammadex disponível se rocurônio usado (dose CICO = 16 mg/kg)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Acesso venoso pérvio testado (Jelco 18G mínimo)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Ventilador configurado: VC 7 mL/kg PIT, FR 12, FiO₂ 100%, PEEP 5</span></li>
+        </ul>
+
+        <div class="alert a-gold" style="margin-top:10px">
+          <strong>Regra dos 3 checks:</strong> toda droga deve ser verificada 3× antes da administração: ao preparar, ao puxar a dose, ao injetar.
+        </div>
+      </div>
+    </div>
+
+    <!-- CHECKLIST SOAP-ME INTERATIVO -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">✓</span> Checklist SOAP-ME Interativo — Marque Antes de Qualquer IOT
+      </div>
+      <div class="card-body">
+        <div class="sh sh-blue">S — Suction</div>
+        <ul class="ck-list">
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Aspirador ligado e testado (≥40 L/min)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Yankauer posicionado ao alcance</span></li>
+        </ul>
+        <div class="sh sh-blue" style="margin-top:8px">O — Oxygen</div>
+        <ul class="ck-list">
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Pré-oxigenação iniciada (3–5 min FiO₂ 100%)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">SpO₂ ≥98% atingida</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">HFNO/cânula nasal preparados se disponível</span></li>
+        </ul>
+        <div class="sh sh-blue" style="margin-top:8px">A — Airway devices</div>
+        <ul class="ck-list">
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Laringoscópio testado (luz funcionando)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">TOT do tamanho correto preparado + cuff testado</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Estilete/bougie disponível</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">MLA de resgate disponível</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Kit cricotireotomia disponível</span></li>
+        </ul>
+        <div class="sh sh-blue" style="margin-top:8px">P — Position</div>
+        <ul class="ck-list">
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Paciente em sniffing position (orelha-esterno alinhados)</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Posição rampa se obeso/gestante</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Mesa na altura do cotovelo do anestesiologista</span></li>
+        </ul>
+        <div class="sh sh-blue" style="margin-top:8px">M — Monitors</div>
+        <ul class="ck-list">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">ECG, SpO₂, PA, ETCO₂ — todos funcionando</span></li>
+        </ul>
+        <div class="sh sh-blue" style="margin-top:8px">E — Equipment/Drugs</div>
+        <ul class="ck-list">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Hipnótico + BNM + opioide preparados e identificados</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Vasopressor disponível</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Ventilador configurado</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Acesso venoso pérvio confirmado</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /iot-preparo -->
+
+  <!-- TAB 3 — TÉCNICA PASSO A PASSO -->
+  <div class="tab-panel" id="iot-tecnica">
+
+    <!-- SEQUÊNCIA IOT DIRETA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">01</span> Intubação com Laringoscópio Direto — Sequência Completa
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue" style="margin-bottom:12px">
+          A IOT com laringoscópio direto é a técnica fundamental de todo anestesiologista. Domínio completo é obrigatório antes de aprender técnicas assistidas.
+        </div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-b">1</span>
+            <div>
+              <strong>Posicionamento — Sniffing position</strong><br>
+              Orelha-esterno alinhados. Mesa na altura do cotovelo. Confirmar alinhamento visual.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">2</span>
+            <div>
+              <strong>Pré-oxigenação finalizada</strong><br>
+              SpO₂ ≥98% confirmada. HFNO ou cânula nasal mantida para apneia oxigenada.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">3</span>
+            <div>
+              <strong>Indução</strong><br>
+              Hipnótico IV → aguardar perda de consciência (cílios, comandos verbais). Em seguida, BNM IV.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-y">4</span>
+            <div>
+              <strong>Aguardar relaxamento neuromuscular</strong><br>
+              Succinilcolina: fasciculações → 45–60 s para relaxamento máximo.<br>
+              Rocurônio 0,6 mg/kg: 60–90 s; rocurônio 1,2 mg/kg (RSI): 45–60 s.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-t">5</span>
+            <div>
+              <strong>Laringoscopia — técnica de abertura bucal cruzada</strong><br>
+              Laringoscópio na mão esquerda. Mão direita: polegar sobre os dentes superiores, indicador sob os dentes inferiores → cruzar os dedos abrindo a boca. Introduzir a lâmina pela comissura labial direita, deslocar língua para a esquerda.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-t">6</span>
+            <div>
+              <strong>Avançar a lâmina até a valécula (Macintosh)</strong><br>
+              Deslizar a lâmina sobre a língua até a ponta tocar a valécula (sulco entre epiglote e base da língua). Lâmina Miller: elevar diretamente a epiglote.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-t">7</span>
+            <div>
+              <strong>Tração no eixo do cabo — NÃO alavanca!</strong><br>
+              Tracionar o laringoscópio no eixo do cabo (45° em relação ao paciente), não apoiá-lo nos dentes. Movimento de alavanca fractura dentes e piora visão.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-y">8</span>
+            <div>
+              <strong>Otimização da visão — BURP se necessário</strong><br>
+              Se glote não visível: assistente aplica BURP (Backward-Upward-Rightward Pressure) na cartilagem tireoide. O próprio anestesiologista pode guiar com a mão direita antes de pegar o TOT.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">9</span>
+            <div>
+              <strong>Introdução do TOT — visão direta obrigatória</strong><br>
+              Manter visão da glote durante TODA a introdução. Introduzir o TOT pela comissura labial direita (NÃO pela lâmina — obstrui a visão). A cuff deve ser vista passando 1–2 cm abaixo das pregas vocais. Profundidade: 21–23 cm (mulher) | 23–25 cm (homem) na comissura labial.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">10</span>
+            <div>
+              <strong>Retirar estilete enquanto mantém posição do TOT</strong><br>
+              Segurar o TOT firmemente enquanto retira o estilete com a mão direita.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-t">11</span>
+            <div>
+              <strong>Insuflar cuff — manômetro obrigatório</strong><br>
+              Insuflar com seringa de 10 mL, verificar com manômetro: <strong>20–30 cmH₂O</strong>. Palpação do piloto não é suficientemente precisa.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-t">12</span>
+            <div>
+              <strong>Conectar ventilador e confirmar posição</strong><br>
+              ETCO₂ em forma de onda + ausculta bilateral + ausculta epigástrica + RX tórax. Fixar o TOT firmemente.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BURP e ELM -->
+    <div class="card">
+      <div class="card-header ch-gold">
+        <span class="card-num">02</span> BURP e ELM — Manobras de Otimização da Visão
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div>
+            <div class="sh sh-gold">BURP — Melhora Visão Laringoscópica</div>
+            <div class="alert a-gold">Pressão External Laríngea Otimizada pelo Assistente:</div>
+            <div class="proto-steps">
+              <div class="proto-step"><span class="sn sn-y">B</span><div><strong>Backward</strong> — posterior: empurrar cartilagem tireoide para trás (em direção à coluna)</div></div>
+              <div class="proto-step"><span class="sn sn-y">U</span><div><strong>Upward</strong> — superior: empurrar levemente para cima (cefálico)</div></div>
+              <div class="proto-step"><span class="sn sn-y">R</span><div><strong>Rightward</strong> — lateral direito: deslocar ligeiramente para a direita do paciente</div></div>
+              <div class="proto-step"><span class="sn sn-y">P</span><div><strong>Pressure</strong> — manter pressão firme mas não excessiva durante a IOT</div></div>
+            </div>
+            <div class="alert a-yellow" style="margin-top:6px">Indicado quando Cormack IIb ou III. Melhora visão em ~50% dos casos.</div>
+          </div>
+          <div>
+            <div class="sh sh-teal">ELM — Diferente do BURP</div>
+            <div class="alert a-teal">External Laryngeal Manipulation (Benumof):</div>
+            <p style="margin:8px 0">O <em>próprio anestesiologista</em> manipula a laringe com sua <strong>mão direita</strong> durante a laringoscopia, até encontrar a posição ótima — depois pede ao assistente para manter exatamente essa posição.</p>
+            <div class="alert a-teal" style="margin-top:8px">ELM é mais eficaz que BURP porque encontra a posição ideal individualizada antes de solicitar assistência.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEOLARINGOSCOPIA TÉCNICA -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">03</span> Videolaringoscopia — Técnica Específica
+      </div>
+      <div class="card-body">
+        <div class="alert a-violet" style="margin-bottom:12px">
+          A videolaringoscopia proporciona visão glótica superior à laringoscopia direta em até 95% dos casos, mas exige modificações técnicas importantes na introdução do TOT.
+        </div>
+
+        <div class="g2">
+          <div class="alert a-violet">
+            <strong>Videolaringoscópio de curvatura moderada (C-MAC n.3/4):</strong><br>
+            Técnica similar à laringoscopia direta, mas sem necessidade de alinhamento de eixos. TOT pode ser introduzido sem estilete em muitos casos.
+          </div>
+          <div class="alert a-violet">
+            <strong>Videolaringoscópio hiperangulado (GlideScope, C-MAC D-Blade):</strong><br>
+            Ângulo de visão 60°+. Exige estilete angulado (curvatura 60–90°). TOT introduzido pela comissura labial direita em direção à tela.
+          </div>
+        </div>
+
+        <div class="proto-steps" style="margin-top:12px">
+          <div class="proto-step"><span class="sn sn-v">1</span><div>Introduzir a lâmina na linha média (não pela comissura como na LD clássica)</div></div>
+          <div class="proto-step"><span class="sn sn-v">2</span><div>Avançar até obter visão da epiglote e glote na tela — não é necessário ver diretamente</div></div>
+          <div class="proto-step"><span class="sn sn-v">3</span><div>Introduzir o TOT com estilete pela comissura labial direita, angulado para a glote visível na tela</div></div>
+          <div class="proto-step"><span class="sn sn-v">4</span><div><strong>Desafio do "paradoxo óptico":</strong> quando a glote aparece perfeita na tela mas o TOT não avança — causa: estilete pouco angulado ou abordagem pelo centro da lâmina</div></div>
+          <div class="proto-step"><span class="sn sn-v">5</span><div>Após cuff passar as pregas: retirar estilete, avançar TOT mais 3–4 cm, confirmar profundidade</div></div>
+        </div>
+
+        <div class="alert a-orange" style="margin-top:10px">
+          <strong>Erro mais comum na videolaringoscopia:</strong> fixar os olhos na tela e perder a visão da via aérea do paciente — risco de trauma. Alternar olhar entre tela e paciente durante a inserção.
+        </div>
+      </div>
+    </div>
+
+    <!-- SVG: LARINGOSCOPIA -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">04</span> Visão Laringoscópica — Estruturas Identificáveis
+      </div>
+      <div class="card-body">
+        <img src="img-visao-laringoscopia.jpg" style="width:100%;max-width:560px;display:block;margin:12px auto;border-radius:10px;border:1px solid rgba(255,255,255,.1)" alt="Visão Laringoscópica — Estruturas Identificáveis">
+        <div class="alert a-blue" style="margin-top:8px">
+          <strong>Regra de ouro:</strong> nunca avance o TOT sem visualizar a cuff passando pelas pregas vocais. Confirmação visual é o primeiro e mais importante método de confirmação.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /iot-tecnica -->
+
+  <!-- TAB 4 — INDUÇÃO DE SEQUÊNCIA RÁPIDA (RSI) -->
+  <div class="tab-panel" id="iot-rsi">
+
+    <!-- CONCEITO RSI -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> RSI — Conceito e Indicações
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>Indução de Sequência Rápida (RSI)</strong> é uma técnica de IOT que minimiza o risco de <strong>aspiração pulmonar</strong> ao reduzir ao máximo o intervalo entre a perda de consciência e a proteção definitiva da via aérea com o TOT.
+        </div>
+
+        <div class="sh sh-red" style="margin-top:12px">Indicações de RSI</div>
+        <div class="g2">
+          <div>
+            <ul class="ck-list">
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Jejum insuficiente (&lt;6 h sólidos, &lt;4 h leite, &lt;2 h líquidos claros)</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Obstrução intestinal alta ou baixa</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Trauma abdominal / trauma em geral (&gt;6 h estômago cheio)</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Gestante &gt;18 semanas</span></li>
+            </ul>
+          </div>
+          <div>
+            <ul class="ck-list">
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">DRGE grave + hérnia de hiato volumosa</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Gastroparesia diabética</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Íleo paralítico prolongado</span></li>
+              <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Urgência/emergência com status de jejum desconhecido</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sh sh-blue" style="margin-top:12px">RSI Clássico vs RSI Modificado</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Componente</th><th>RSI Clássico</th><th>RSI Modificado</th></tr></thead>
+          <tbody>
+            <tr><td>Pré-oxigenação</td><td>5 min FiO₂ 100%</td><td>5 min FiO₂ 100% + HFNO se disponível</td></tr>
+            <tr><td>Pressão cricóidea</td><td>Sim, desde a inconsciência</td><td>Opcional / criteriosa</td></tr>
+            <tr><td>VBM após indução</td><td>NÃO — nem em emergência</td><td>Permitida se P ≤20 cmH₂O e SpO₂ cair</td></tr>
+            <tr><td>BNM</td><td>Succinilcolina 1,5 mg/kg</td><td>Rocurônio 1,2 mg/kg ou succinilcolina</td></tr>
+            <tr><td>Tentativas de IOT</td><td>1 tentativa — se falhar → CICO</td><td>Até 3 tentativas com otimização</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-gold" style="margin-top:10px">
+          A maioria dos anestesiologistas brasileiros pratica o RSI modificado — permite VBM leve se ocorrer dessaturação. A evidência para RSI clássico estrito é fraca.
+        </div>
+      </div>
+    </div>
+
+    <!-- DROGAS RSI -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Drogas para RSI — Esquemas Comparativos
+      </div>
+      <div class="card-body">
+
+        <div class="sh sh-blue">Pré-tratamento (3–5 min antes da indução)</div>
+        <div class="g2">
+          <div class="alert a-blue">
+            <strong>Fentanil 1–3 mcg/kg IV</strong><br>
+            Atenua resposta à laringoscopia (↑PA, ↑FC). Padrão no Brasil. Cuidado em instabilidade hemodinâmica.
+          </div>
+          <div class="alert a-blue">
+            <strong>Lidocaína 1,5 mg/kg IV</strong><br>
+            Atenua HIC reflexa à laringoscopia (TCE, aneurisma). Evidência limitada mas prática comum.
+          </div>
+        </div>
+
+        <div class="sh sh-red" style="margin-top:12px">Esquema 1 — Padrão Ouro no Brasil</div>
+        <div class="dr dr-b"><span class="dn">Cetamina</span><span class="dc">1,5–2 mg/kg IV</span><span class="dv">Hipnótico / analgésico — preserva reflexos, broncodilatador, hemodinâmica estável</span></div>
+        <div class="dr dr-r"><span class="dn">Succinilcolina</span><span class="dc">1,5 mg/kg IV</span><span class="dv">BNM despolarizante — início 45 s, duração 8–12 min. Condições ideais de intubação rapidamente</span></div>
+        <div class="alert a-green" style="margin-top:6px"><strong>Melhor escolha em:</strong> trauma, instabilidade hemodinâmica, broncoespasmo, emergências gerais. Cetamina + succinilcolina = RSI mais versátil.</div>
+
+        <div class="sh sh-violet" style="margin-top:12px">Esquema 2 — CICO Reversível com Sugammadex</div>
+        <div class="dr dr-b"><span class="dn">Propofol</span><span class="dc">1,5–2 mg/kg IV</span><span class="dv">Hipnótico sedativo — cuidado com hipotensão, broncodilatação leve</span></div>
+        <div class="dr dr-v"><span class="dn">Rocurônio</span><span class="dc">1,2 mg/kg IV</span><span class="dv">BNM não-despolarizante de alta dose — início 60 s, condições similares à succinilcolina</span></div>
+        <div class="alert a-violet" style="margin-top:6px"><strong>Vantagem:</strong> CICO = sugammadex 16 mg/kg reverte em 3 min. <strong>Desvantagem:</strong> propofol causa hipotensão; custo do sugammadex.</div>
+
+        <div class="sh sh-orange" style="margin-top:12px">Esquema 3 — Instabilidade Hemodinâmica Grave</div>
+        <div class="dr dr-b"><span class="dn">Etomidato</span><span class="dc">0,3 mg/kg IV</span><span class="dv">Hipnótico com mínimo efeito cardiovascular. Atenção: supressão adrenal após dose única (cuidado em sépticos)</span></div>
+        <div class="dr dr-r"><span class="dn">Succinilcolina</span><span class="dc">1,5 mg/kg IV</span><span class="dv">BNM padrão RSI</span></div>
+        <div class="alert a-orange" style="margin-top:6px"><strong>Indicação:</strong> choque séptico, choque hemorrágico grave, IAM com instabilidade. Alternativa: cetamina (menor supressão adrenal).</div>
+
+        <div class="sh sh-gold" style="margin-top:12px">Contraindicações da Succinilcolina</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Contraindicação</th><th>Motivo</th><th>Alternativa</th></tr></thead>
+          <tbody>
+            <tr><td>Hipercalemia documentada ou esperada</td><td>↑K+ → arritmia/PCR</td><td>Rocurônio 1,2 mg/kg</td></tr>
+            <tr><td>Queimadura &gt;48h, esmagamento, denervação</td><td>Upregulation de receptores → hipercalemia grave</td><td>Rocurônio 1,2 mg/kg</td></tr>
+            <tr><td>Hipertermia maligna (história pessoal ou familiar)</td><td>Gatilho para crise</td><td>Rocurônio 1,2 mg/kg</td></tr>
+            <tr><td>Miopatias musculares graves</td><td>Rabdomiólise / hipercalemia</td><td>Rocurônio 1,2 mg/kg</td></tr>
+            <tr><td>Pseudocolinesterase deficiente (familiar ou conhecida)</td><td>Bloqueio prolongado (horas)</td><td>Rocurônio 0,6–1,2 mg/kg</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- PRESSÃO DE CRICOIDE -->
+    <div class="card">
+      <div class="card-header ch-gold">
+        <span class="card-num">03</span> Pressão de Cricoide (Manobra de Sellick)
+      </div>
+      <div class="card-body">
+        <div class="alert a-gold">
+          Descrita por Sellick em 1961 como método para prevenir aspiração durante indução. Aplica-se pressão sobre a <strong>cartilagem cricoide</strong> (não tireoide), ocluindo o esôfago posterior.
+        </div>
+
+        <div class="sh sh-gold" style="margin-top:10px">Técnica Correta</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-y">1</span><div>Identificar a cartilagem cricoide (logo abaixo da membrana cricotireóidea)</div></div>
+          <div class="proto-step"><span class="sn sn-y">2</span><div>Aplicar 10 N (paciente acordado) → 30 N (após perda de consciência) com polegar e indicador</div></div>
+          <div class="proto-step"><span class="sn sn-y">3</span><div>Manter até confirmar IOT e insuflar cuff</div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div>Liberar imediatamente se impede laringoscopia ou piora Cormack</div></div>
+        </div>
+
+        <div class="g2" style="margin-top:10px">
+          <div class="alert a-green">
+            <strong>Argumentos a favor:</strong><br>
+            • Reduz regurgitação passiva em cadáveres<br>
+            • Amplamente adotada no Brasil e UK<br>
+            • Sem efeitos adversos se técnica correta
+          </div>
+          <div class="alert a-red">
+            <strong>Argumentos contra (evidência):</strong><br>
+            • Não há ECR demonstrando redução de aspiração<br>
+            • Pode piorar a visão laringoscópica<br>
+            • Aplicação incorreta é frequente (cartilagem tireoide)<br>
+            • Pode impedir vedação da MLA de resgate
+          </div>
+        </div>
+        <div class="alert a-blue" style="margin-top:8px">
+          <strong>Consenso atual (2024):</strong> a pressão de cricoide pode ser usada, mas deve ser liberada imediatamente se piorar a laringoscopia ou impedir a ventilação de resgate.
+        </div>
+      </div>
+    </div>
+
+    <!-- PROTOCOLO RSI COMPLETO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Protocolo RSI — Sequência Completa
+      </div>
+      <div class="card-body">
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-b">1</span><div><strong>Avaliar via aérea:</strong> LEMON, MOANS, SANE (Sniff position, Articulate, Neck, Evaluate CICO antes de induzir)</div></div>
+          <div class="proto-step"><span class="sn sn-b">2</span><div><strong>Preparar SOAP-ME:</strong> tudo pronto antes de tocar em droga</div></div>
+          <div class="proto-step"><span class="sn sn-b">3</span><div><strong>Pré-oxigenação:</strong> 5 min FiO₂ 100% — SpO₂ ≥98% antes de prosseguir</div></div>
+          <div class="proto-step"><span class="sn sn-y">4</span><div><strong>Pré-tratamento:</strong> fentanil 1–3 mcg/kg IV 3 min antes (opcional, mas recomendado)</div></div>
+          <div class="proto-step"><span class="sn sn-y">5</span><div><strong>Pressão de cricoide:</strong> assistente aplica 10 N quando instruído (paciente ainda acordado)</div></div>
+          <div class="proto-step"><span class="sn sn-r">6</span><div><strong>Hipnótico + BNM em sequência rápida:</strong> cetamina → succinilcolina (ou propofol → rocurônio 1,2 mg/kg). Aguardar 45–60 s sem VBM.</div></div>
+          <div class="proto-step"><span class="sn sn-r">7</span><div><strong>Laringoscopia e IOT:</strong> tentativa única no RSI clássico. Confirmar posição imediatamente.</div></div>
+          <div class="proto-step"><span class="sn sn-t">8</span><div><strong>Confirmar IOT:</strong> ETCO₂ + ausculta bilateral. Liberar pressão cricoide após confirmação.</div></div>
+          <div class="proto-step"><span class="sn sn-t">9</span><div><strong>Protocolos de falha:</strong> se IOT falha após 1–2 tentativas → ativar protocolo VAD (ver mod VAD)</div></div>
+        </div>
+
+        <div class="alert a-red" style="margin-top:12px">
+          <strong>CICO (Cannot Intubate Cannot Oxygenate):</strong> SpO₂ em queda progressiva, incapaz de intubar E incapaz de ventilar com MLA = emergência cricotireotomia imediata. Se rocurônio foi usado: sugammadex 16 mg/kg SIMULTANEAMENTE à cricotireotomia.
+        </div>
+      </div>
+    </div>
+
+    <!-- TABELA COMPARATIVA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">05</span> Comparativo de Esquemas RSI no Brasil
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap xwide"><table class="tbl">
+          <thead><tr><th>Esquema</th><th>Hipnótico</th><th>BNM</th><th>Prós</th><th>Contras</th><th>Melhor Para</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="tag tg">A</span></td>
+              <td>Cetamina 2 mg/kg</td>
+              <td>Succinilcolina 1,5 mg/kg</td>
+              <td>Estabilidade HD, broncodilatação, analgesia, barato</td>
+              <td>↑PA/FC (cardiopatas), alucinações (adultos sem BZD)</td>
+              <td>Trauma, hipotensão, broncoespasmo</td>
+            </tr>
+            <tr>
+              <td><span class="tag tb">B</span></td>
+              <td>Propofol 1,5 mg/kg</td>
+              <td>Rocurônio 1,2 mg/kg</td>
+              <td>CICO reversível (sugammadex), broncodilatação, sedação suave</td>
+              <td>Hipotensão, custo alto (sugammadex)</td>
+              <td>Eletivo com via aérea difícil, broncoespasmo</td>
+            </tr>
+            <tr>
+              <td><span class="tag ty">C</span></td>
+              <td>Etomidato 0,3 mg/kg</td>
+              <td>Succinilcolina 1,5 mg/kg</td>
+              <td>Mínima depressão cardiovascular</td>
+              <td>Supressão adrenal, mioclonias, náusea</td>
+              <td>Instabilidade hemodinâmica, sépticos (controverso)</td>
+            </tr>
+            <tr>
+              <td><span class="tag tv">D</span></td>
+              <td>Cetamina 1,5 mg/kg</td>
+              <td>Rocurônio 1,2 mg/kg</td>
+              <td>Estabilidade HD + CICO reversível</td>
+              <td>Custo alto (sugammadex necessário), ↑PA/FC</td>
+              <td>Melhor custo-benefício quando sugammadex disponível</td>
+            </tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-gold" style="margin-top:10px">
+          <strong>Profilaxia de náusea/vômito (Regla de 3 min antes do RSI):</strong> Metoclopramida 10 mg IV — evidência fraca para prevenir aspiração, mas prática cultural comum no Brasil. Não substitui RSI correta.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /iot-rsi -->
+
+  <!-- TAB 5 — CONFIRMAÇÃO E PÓS-INTUBAÇÃO -->
+  <div class="tab-panel" id="iot-confirmacao">
+
+    <!-- MÉTODOS DE CONFIRMAÇÃO -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">01</span> Confirmação da IOT — Hierarquia dos Métodos
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>Intubação esofágica não reconhecida é uma das principais causas de morte anestésica evitável.</strong> Nunca confie em um único método de confirmação.
+        </div>
+
+        <div class="proto-steps" style="margin-top:12px">
+          <div class="proto-step"><span class="sn sn-t">1°</span>
+            <div>
+              <strong>Capnografia em forma de onda — PADRÃO OURO</strong><br>
+              ETCO₂ positivo em ≥6 ciclos ventilatórios confirma posição traqueal com certeza virtual. Valor normal: 35–45 mmHg. Forma de onda quadrada regular confirma.
+              <div class="alert a-teal" style="margin-top:4px">Se ETCO₂ = 0 após a intubação: intubação esofágica até prova em contrário → retirar TOT imediatamente.</div>
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">2°</span>
+            <div>
+              <strong>Visualização do TOT passando pelas pregas vocais</strong><br>
+              Confirmação intraoperatória mais direta. A cuff deve ser vista 1–2 cm abaixo das pregas. Não disponível após retirar o laringoscópio.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">3°</span>
+            <div>
+              <strong>Ausculta bilateral simétrica</strong><br>
+              Murmurio vesicular bilateral simétrico — axilas e ápices. Isoladamente insuficiente (sons de esôfago podem parecer pulmão em pacientes obesos).
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-y">4°</span>
+            <div>
+              <strong>Ausculta epigástrica — EXCLUSÃO de IOT esofágica</strong><br>
+              Gorgolejo no epigástrio durante ventilação = intubação esofágica confirmada. Ausência de gorgolejo é tranquilizadora mas não confirma IOT.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-y">5°</span>
+            <div>
+              <strong>Detector esofágico (EDD — Eschenbach)</strong><br>
+              Seringa de 60 mL ou bulbo: esôfago colapsa (não aspira) → IOT esofágica. Traqueia é rígida (aspira livremente) → IOT traqueal. Útil quando ETCO₂ indisponível (RCP, ambiente pré-hospitalar).
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">6°</span>
+            <div>
+              <strong>Ultrassom de via aérea</strong><br>
+              Ring-down artifact ("cauda de cometa") bilateral na traqueia confirma. Deslizamento pleural bilateral confirma ventilação bilateral. Útil em ETCO₂ confiável mas como complemento.
+            </div>
+          </div>
+          <div class="proto-step"><span class="sn sn-b">7°</span>
+            <div>
+              <strong>Radiografia de Tórax</strong><br>
+              Confirma posição (2–3 cm acima da carina), não diferencia traqueia de esôfago. Solicitar em todo paciente intubado em UTI.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SVG CAPNOGRAMA -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Capnograma — IOT Correta vs Intubação Esofágica
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-top:8px">
+          <strong>ETCO₂ em queda progressiva</strong> (ex: 25→15→5) pode ocorrer em PCR ou baixo débito — não necessariamente esofágico. Mas ETCO₂ = 0 imediatamente após a intubação = esofágico.
+        </div>
+      </div>
+    </div>
+
+    <!-- IOT SELETIVA -->
+    <div class="card">
+      <div class="card-header ch-gold">
+        <span class="card-num">03</span> Intubação Seletiva / Endobrônquica
+      </div>
+      <div class="card-body">
+        <div class="alert a-gold">
+          Ocorre quando o TOT é avançado além da carina e entra no brônquio principal — geralmente o direito (mais vertical, ~25°). Causa ventilação unilobar com colapso contralateral.
+        </div>
+
+        <div class="sh sh-gold" style="margin-top:10px">Diagnóstico</div>
+        <ul class="ck-list">
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Ausculta assimétrica: MV ausente ou reduzido à esquerda</span></li>
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">SpO₂ caindo progressivamente após IOT</span></li>
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Pico de pressão inspiratória aumentado</span></li>
+          <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Radiografia: TOT abaixo da carina, colapso LIE</span></li>
+        </ul>
+
+        <div class="sh sh-green" style="margin-top:10px">Posicionamento Correto</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-g">1</span><div>Recuar TOT enquanto ausculta — parar quando MV bilateral simétrico aparecer</div></div>
+          <div class="proto-step"><span class="sn sn-g">2</span><div>Posição ideal: ponta do TOT <strong>2–3 cm acima da carina</strong> (confirmado por RX)</div></div>
+          <div class="proto-step"><span class="sn sn-g">3</span><div>Ajustar profundidade e refixar TOT com nova marcação de cm na comissura labial</div></div>
+        </div>
+
+        <div class="alert a-blue" style="margin-top:8px">
+          <strong>Profundidades corretas na comissura labial:</strong><br>
+          Mulher: 21–23 cm | Homem: 23–25 cm<br>
+          Mnemônico: "21 para a mulher, 23 para o homem"
+        </div>
+      </div>
+    </div>
+
+    <!-- PARÂMETROS VENTILATÓRIOS -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">04</span> Parâmetros Ventilatórios Iniciais e Manutenção
+      </div>
+      <div class="card-body">
+        <div class="sh sh-blue">Configuração Inicial do Ventilador</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Parâmetro</th><th>Valor Inicial</th><th>Justificativa</th></tr></thead>
+          <tbody>
+            <tr><td>Volume Corrente (VC)</td><td>6–8 mL/kg PIT</td><td>Ventilação protetora — evitar volutrauma</td></tr>
+            <tr><td>Frequência Respiratória</td><td>12–16 irpm</td><td>Normocapnia (ETCO₂ 35–45 mmHg)</td></tr>
+            <tr><td>PEEP</td><td>5 cmH₂O</td><td>Prevenir atelectasias; ajustar conforme necessidade</td></tr>
+            <tr><td>FiO₂</td><td>100% inicialmente</td><td>Titular para SpO₂ 94–98% — evitar hiperóxia</td></tr>
+            <tr><td>Fluxo inspiratório</td><td>40–60 L/min</td><td>Relação I:E 1:2 (evitar auto-PEEP)</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-blue" style="margin-top:12px">Monitorar em TODOS os Pacientes em VM</div>
+        <div class="g2">
+          <div class="alert a-blue">
+            <strong>Pressão de Platô (Pplat):</strong><br>
+            Medir com pausa inspiratória de 0,5 s.<br>
+            Alvo: <strong>&lt;30 cmH₂O</strong><br>
+            Elevada = distensão alveolar = risco de barotrauma
+          </div>
+          <div class="alert a-blue">
+            <strong>Driving Pressure (ΔP):</strong><br>
+            ΔP = Pplat − PEEP<br>
+            Alvo: <strong>&lt;15 cmH₂O</strong><br>
+            Melhor preditor de mortalidade em SDRA
+          </div>
+        </div>
+
+        <div class="sh sh-gold" style="margin-top:12px">Manutenção do Cuff</div>
+        <ul class="ck-list">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Medir pressão do cuff com manômetro: alvo 20–30 cmH₂O</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Verificar a cada 30 min em cirurgias prolongadas (posição/óxido nitroso aumentam pressão)</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Pressão &gt;30 cmH₂O: risco de isquemia da mucosa traqueal → estenose traqueal pós-IOT</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Pressão &lt;20 cmH₂O: risco de aspiração peritraqueal e microaspiração</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PROTEÇÃO E FIXAÇÃO -->
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">05</span> Fixação, Proteção e Cuidados Pós-IOT
+      </div>
+      <div class="card-body">
+        <ul class="ck-list">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Fixar TOT com esparadrapo hipoalergênico + cadarço de fixação dupla</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Proteger olhos com micropore ou oclusor — prevenção de abrasão de córnea</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Posicionar cabeça em posição neutra — evitar flexão/extensão excessiva do pescoço</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Pulsômetro e ETCO₂ contínuos durante toda a anestesia</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Registrar profundidade do TOT na comissura labial no prontuário e na ficha anestésica</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Confirmar RX de tórax (UTI, UCI, cirurgias prolongadas)</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /iot-confirmacao -->
+
+  <!-- TAB 6 — COMPLICAÇÕES + EXTUBAÇÃO -->
+  <div class="tab-panel" id="iot-complicacoes">
+
+    <!-- COMPLICAÇÕES DA IOT -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> Complicações da Intubação Orotraqueal
+      </div>
+      <div class="card-body">
+
+        <div class="sh sh-red">Durante a Laringoscopia</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Complicação</th><th>Mecanismo</th><th>Prevenção / Conduta</th></tr></thead>
+          <tbody>
+            <tr><td>Trauma dental</td><td>Uso do laringoscópio como alavanca sobre incisivos superiores</td><td>Técnica correta (tração no eixo); protetor dental em dentes frágeis</td></tr>
+            <tr><td>Laceração labial/gengival</td><td>Compressão dos tecidos moles pela lâmina</td><td>Introduzir pela comissura D; visualização durante inserção</td></tr>
+            <tr><td>Luxação de aritenóide</td><td>IOT forçada com estilete; introdução lateral</td><td>Introduzir TOT em linha média sob visão; estilete retirado antes de forçar</td></tr>
+            <tr><td>Dano às pregas vocais</td><td>TOT forçado com cuff inflado; laringoscopia repetida</td><td>Desinsuflar cuff antes de qualquer reposicionamento; máximo 3 tentativas</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-red" style="margin-top:12px">Intubação Esofágica — Reconhecimento Imediato</div>
+        <div class="alert a-red">
+          <strong>ETCO₂ = 0 + SpO₂ em queda + ausência de MV bilateral = intubação esofágica até prova em contrário.</strong>
+        </div>
+        <div class="proto-steps" style="margin-top:8px">
+          <div class="proto-step"><span class="sn sn-r">1</span><div>Retirar o TOT imediatamente — não tentar "corrigir" posição</div></div>
+          <div class="proto-step"><span class="sn sn-r">2</span><div>Ventilação com máscara + BVM até SpO₂ se recuperar</div></div>
+          <div class="proto-step"><span class="sn sn-r">3</span><div>Nova tentativa de IOT com o equipamento ótimo (videolaringoscópio, bougie)</div></div>
+          <div class="proto-step"><span class="sn sn-r">4</span><div>Manter tubo esofágico IN SITU durante a 2ª tentativa — serve como guia e separa o esôfago</div></div>
+        </div>
+
+        <div class="sh sh-orange" style="margin-top:12px">Broncoespasmo Pós-IOT</div>
+        <div class="g2">
+          <div class="alert a-orange">
+            <strong>Reconhecimento:</strong><br>
+            • Sibilos na ausculta<br>
+            • ↑ pico de pressão inspiratória<br>
+            • ↑ ETCO₂ progressivo<br>
+            • Capnograma em "tubarão" (platô inclinado)
+          </div>
+          <div class="alert a-orange">
+            <strong>Manejo:</strong><br>
+            • ↑ FiO₂ 100%<br>
+            • Propofol 0,5 mg/kg ou cetamina 0,5 mg/kg IV<br>
+            • Salbutamol 4–8 puffs no circuito<br>
+            • Lidocaína 1,5 mg/kg IV<br>
+            • Sulfato de Mg 2 g IV (refratário)<br>
+            • Adrenalina 0,1–0,3 mg SC (grave)
+          </div>
+        </div>
+
+        <div class="sh sh-gold" style="margin-top:12px">Resposta Hemodinâmica à Laringoscopia</div>
+        <div class="g2">
+          <div class="alert a-gold">
+            <strong>Mecanismo:</strong> estimulação simpática via glossofaríngeo + vago → ↑PA 20–30 mmHg, ↑FC 20 bpm, ↑PIC em 5–10 mmHg por 3–5 min.
+          </div>
+          <div class="alert a-gold">
+            <strong>Prevenção/tratamento:</strong><br>
+            • Fentanil 1–3 mcg/kg 3 min antes<br>
+            • Lidocaína 1,5 mg/kg IV 90 s antes<br>
+            • Esmolol 0,5–1 mg/kg IV 2 min antes<br>
+            • Aprofundar anestesia antes da laringoscopia
+          </div>
+        </div>
+
+        <div class="sh sh-red" style="margin-top:12px">Aspiração Pulmonar (Síndrome de Mendelson)</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Aspecto</th><th>Detalhe</th></tr></thead>
+          <tbody>
+            <tr><td>Incidência</td><td>1:3.000 a 1:10.000 — mais frequente em estômago cheio e gestantes</td></tr>
+            <tr><td>Risco</td><td>pH &lt;2,5 e volume &gt;25 mL = alta lesão</td></tr>
+            <tr><td>Reconhecimento</td><td>Conteúdo gástrico visível na laringoscopia; ↓SpO₂; crepitações</td></tr>
+            <tr><td>Manejo imediato</td><td>Aspiração imediata; posição Trendelenburg reverso; IOT se não intubado</td></tr>
+            <tr><td>Manejo VPM</td><td>PEEP 5–10; FiO₂ 100%; ventilação protetora; corticoide CONTROVERSO</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- EXTUBAÇÃO SEGURA -->
+    <div class="card">
+      <div class="card-header ch-green">
+        <span class="card-num">02</span> Extubação Segura — Critérios e Protocolo
+      </div>
+      <div class="card-body">
+        <div class="alert a-green">
+          A extubação é o momento de <strong>maior risco de via aérea perdida</strong> na anestesia. Deve ser planejada com o mesmo rigor da intubação.
+        </div>
+
+        <div class="sh sh-green" style="margin-top:10px">Critérios de Extubação Eletiva</div>
+        <ul class="ck-list">
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Paciente <strong>consciente e colaborativo</strong> — responde a comandos simples</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">SpO₂ ≥95% com FiO₂ ≤0,5</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">FR espontânea 8–25 irpm</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Volume corrente espontâneo &gt;5 mL/kg</span></li>
+          <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">TOF ratio ≥0,9 (monitoração neuromuscular) — ausência de bloqueio residual</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">ETCO₂ 35–45 mmHg — normocapnia durante VM espontânea</span></li>
+          <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Tosse eficaz ao comando</span></li>
+          <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text">Temperatura corporal ≥36°C (hipotermia → bloqueio residual aumentado)</span></li>
+        </ul>
+
+        <div class="sh sh-red" style="margin-top:12px">Extubação de Alto Risco</div>
+        <div class="g2">
+          <div class="alert a-red">
+            <strong>Indicadores de alto risco:</strong><br>
+            • VAD confirmada na intubação<br>
+            • Cirurgia de cabeça e pescoço<br>
+            • Intubação prolongada (&gt;24h)<br>
+            • Airway edema esperado (trauma, alérgico)<br>
+            • Teste de baloneto positivo (cuff-leak test)
+          </div>
+          <div class="alert a-red">
+            <strong>Protocolo extubação alto risco:</strong><br>
+            1. Airway exchange catheter (AEC) posicionado antes de extubar<br>
+            2. Oxigenar pelo AEC durante extubação<br>
+            3. Manter AEC 30–60 min como guia de re-intubação<br>
+            4. Equipe de re-intubação à beira do leito<br>
+            5. HFNO ao extubar
+          </div>
+        </div>
+
+        <!-- Fluxograma de extubação -->
+        <div class="sh sh-green" style="margin-top:12px">Protocolo de Extubação — Passo a Passo</div>
+        <div class="proto-steps">
+          <div class="proto-step"><span class="sn sn-g">1</span><div>Pré-oxigenar 3–5 min com FiO₂ 100%</div></div>
+          <div class="proto-step"><span class="sn sn-g">2</span><div>Aspirar secreções (boca + TOT se necessário)</div></div>
+          <div class="proto-step"><span class="sn sn-g">3</span><div>Reverter bloqueio neuromuscular: neostigmina + atropina OU sugammadex. Confirmar TOF ≥0,9</div></div>
+          <div class="proto-step"><span class="sn sn-g">4</span><div>Aguardar consciência plena: responde a comando, abre olhos, sustenta cabeça 5 s</div></div>
+          <div class="proto-step"><span class="sn sn-y">5</span><div>Desinsuflar cuff completamente</div></div>
+          <div class="proto-step"><span class="sn sn-y">6</span><div>Extubar em inspiração profunda ou expiração (tosse expulsiva)</div></div>
+          <div class="proto-step"><span class="sn sn-g">7</span><div>Oxigênio por máscara ou cateter nasal 3–5 L/min</div></div>
+          <div class="proto-step"><span class="sn sn-t">8</span><div>Observar 10–15 min: SpO₂, padrão respiratório, consciência</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LARINGOESPASMO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">03</span> Laringoespasmo Pós-Extubação
+      </div>
+      <div class="card-body">
+        <div class="alert a-red">
+          <strong>Laringoespasmo</strong> = fechamento reflexo das pregas vocais por estimulação do nervo laríngeo superior. Emergência que pode evoluir para anóxia em minutos se não tratado.
+        </div>
+
+        <div class="g2" style="margin-top:10px">
+          <div>
+            <div class="sh sh-red">Reconhecimento</div>
+            <ul class="ck-list">
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Estridor inspiratório agudo de "cortar o cheiro"</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Retração supraesternal e intercostal</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">SpO₂ em queda rápida</span></li>
+              <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Laringoespasmo completo = SILÊNCIO respiratório (gravíssimo)</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="sh sh-green">Manejo em Sequência</div>
+            <div class="proto-steps">
+              <div class="proto-step"><span class="sn sn-r">1</span><div>Remover estímulo + O₂ 100% por máscara</div></div>
+              <div class="proto-step"><span class="sn sn-r">2</span><div>CPAP firme com máscara (manobra de Larson): pressão positiva + ponto de Larson*</div></div>
+              <div class="proto-step"><span class="sn sn-r">3</span><div>Propofol 0,5 mg/kg IV — aprofundar anestesia</div></div>
+              <div class="proto-step"><span class="sn sn-r">4</span><div>Succinilcolina 0,1–0,5 mg/kg IV se refratário</div></div>
+              <div class="proto-step"><span class="sn sn-r">5</span><div>Dose de fasciculação (0,1 mg/kg) geralmente suficiente para laringoespasmo</div></div>
+              <div class="proto-step"><span class="sn sn-r">6</span><div>Re-intubar se SpO₂ &lt;85% sem resposta</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="alert a-violet" style="margin-top:8px">
+          <strong>* Ponto de Larson:</strong> pressão bilateral na fossa jugular posterior (ângulo da mandíbula atrás dos processos mastoide) — estimulação do nervo frênico → interrompe laringoespasmo em muitos casos.
+        </div>
+        <div class="alert a-blue" style="margin-top:6px">
+          <strong>Succinilcolina intramuscular (deltóide):</strong> 4 mg/kg se sem acesso venoso — início em 3–4 min (recurso de emergência pediátrica).
+        </div>
+      </div>
+    </div>
+
+    <!-- ESTRIDOR POS-EXTUBAÇÃO -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">04</span> Estridor Pós-Extubação e Re-intubação
+      </div>
+      <div class="card-body">
+
+        <div class="sh sh-orange">Diagnóstico Diferencial do Estridor Pós-Extubação</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Causa</th><th>Características</th><th>Manejo</th></tr></thead>
+          <tbody>
+            <tr><td>Laringoespasmo</td><td>Estridor agudo, SpO₂ queda rápida, sem estridor em CPAP</td><td>Ver card anterior</td></tr>
+            <tr><td>Edema subglótico (pediátrico)</td><td>Croup-like, crianças &lt;6 anos, IOT prolongada</td><td>Adrenalina nebulizada 0,5 mg/kg; dexametasona 0,5 mg/kg IV</td></tr>
+            <tr><td>Paralisia de cordas vocais</td><td>Estridor suave, rouquidão, cirurgia de tireoide prévia</td><td>Posição semi-sentada; O₂; laringoscopia diagnóstica</td></tr>
+            <tr><td>Sangramento de via aérea</td><td>Sangue visível, queda de Hb</td><td>Aspiração + re-intubação urgente + hemostasia</td></tr>
+            <tr><td>Hematoma cervical compressivo</td><td>Pós-cirurgia de pescoço, expansão visível</td><td>Abrir ferida imediatamente + re-intubação urgente</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="sh sh-red" style="margin-top:12px">Indicações de Re-intubação</div>
+        <ul class="ck-list">
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">SpO₂ &lt;90% refratária a O₂ suplementar</span></li>
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">FR &gt;35 ou &lt;6 irpm</span></li>
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Hipercapnia progressiva com acidose (pH &lt;7,20)</span></li>
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Deterioração do nível de consciência</span></li>
+          <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Obstrução de via aérea não responsiva ao tratamento clínico</span></li>
+        </ul>
+
+        <div class="alert a-gold" style="margin-top:10px">
+          <strong>Re-intubação eletiva sempre melhor que emergência:</strong> Se há dúvida sobre a capacidade do paciente de manter via aérea após a extubação → não extubar. Planejar wean gradual.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /iot-complicacoes -->
+
+  <!-- TAB 7 — CASOS CLÍNICOS -->
+  <!-- ═══ TAB: VENTILAÇÃO PROTETORA ═══ -->
+  <div class="tab-panel" id="iot-ventprot">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Lesão Pulmonar por Ventilação (VILI)</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7">VILI (Ventilator-Induced Lung Injury) ocorre mesmo em pulmões sãos durante anestesia geral. Mecanismos: <strong>volutrauma</strong> (VC excessivo), <strong>barotrauma</strong> (pressão alta), <strong>atelectrauma</strong> (colapso-reabertura cíclico), <strong>biotrauma</strong> (inflamação sistêmica). Anestesia ≥2h já produz atelectasias em 90% dos pacientes.</p>
+          <div class="algo-box algo-r">
+            <div class="algo-title">⚠ Parâmetros de risco</div>
+            VC &gt;10 mL/kg, Pplatô &gt;30 cmH₂O, PEEP zero, FiO₂ &gt;0.8 por tempo prolongado → ↑risco de complicações pulmonares pós-operatórias (CPP).
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">Estratégia Protetora — Parâmetros Alvo</span>
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Valor-alvo</th><th>Justificativa</th></tr></thead>
+            <tbody>
+              <tr><td>Volume corrente (VC)</td><td><strong>6–8 mL/kg</strong> (peso predito)</td><td>PROVE Network (2014): ↓CPP com VC baixo</td></tr>
+              <tr><td>PEEP</td><td><strong>5–8 cmH₂O</strong> (individualizar)</td><td>Previne atelectrauma; ↑ se obeso/Trendelenburg</td></tr>
+              <tr><td>Pressão de platô</td><td><strong>&lt;30 cmH₂O</strong></td><td>Barotrauma acima deste limite</td></tr>
+              <tr><td>Driving pressure</td><td><strong>&lt;13 cmH₂O</strong></td><td>Amato et al. NEJM 2015 — melhor preditor de mortalidade</td></tr>
+              <tr><td>FiO₂</td><td><strong>0.4–0.6</strong> (manter SpO₂ 95–99%)</td><td>Hiperoxia → atelectasias de absorção e toxicidade</td></tr>
+              <tr><td>FR</td><td><strong>10–14 ipm</strong></td><td>Ajustar para ETCO₂ 35–45 mmHg</td></tr>
+            </tbody>
+          </table></div>
+          <p style="font-size:11px;color:var(--muted);margin-top:6px">Peso predito (♂): 50 + 0.91 × (altura em cm − 152.4) | (♀): 45.5 + 0.91 × (altura em cm − 152.4)</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--violet)">
+          <span class="card-title">Manobras de Recrutamento e PEEP Individualizada</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7"><strong>Manobra de recrutamento:</strong> pressão sustentada 30–40 cmH₂O por 30–40 seg → reabre alvéolos colapsados. Indicação: após intubação, após aspiração, após desconexão acidental. Contraindicação: instabilidade hemodinâmica, pneumotórax.</p>
+          <div class="algo-box algo-g">
+            <div class="algo-title">✅ LAS VEGAS trial (2017) — 2.000 pacientes</div>
+            Ventilação protetora (VC 8 mL/kg + PEEP 5 + manobra de recrutamento) vs. convencional → ↓30% de CPP moderadas/graves. Confirma benefício mesmo em pulmões sãos.
+          </div>
+          <div class="algo-box algo-g" style="margin-top:6px">
+            <div class="algo-title">✅ PROVE Network meta-análise (2015)</div>
+            VC baixo intraoperatório → ↓infecção pulmonar, ↓IOT pós-op, ↓ATB, ↓tempo internação. NNT = 9.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--orange)">
+          <span class="card-title">Situações Especiais</span>
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Situação</th><th>Ajuste</th></tr></thead>
+            <tbody>
+              <tr><td>Obesidade (IMC &gt;35)</td><td>PEEP 8–12 cmH₂O, Trendelenburg reverso, manobra recrutamento após intubação</td></tr>
+              <tr><td>Laparoscopia</td><td>↑Pressão intra-abd → ↑Pplatô; ↑FR para compensar hipercapnia; PEEP 8–10</td></tr>
+              <tr><td>SARA intraoperatória</td><td>VC 6 mL/kg, Pplatô &lt;30, PEEP individualizada por P-V; decúbito prono se PaO₂/FiO₂ &lt;150</td></tr>
+              <tr><td>Pulmão único (OLV)</td><td>VC 4–6 mL/kg, Pplatô &lt;25, PEEP 5 no pulmão ventilado, CPAP 2–5 no colapsado</td></tr>
+              <tr><td>Pediatria</td><td>VC 6–8 mL/kg, PEEP 4–6, frequência maior (FR 20–30 em crianças)</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /iot-ventprot -->
+
+<!-- TAB — REVISÃO RÁPIDA IOT -->
+  <div class="tab-panel" id="iot-revisao">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">⚡ Revisão Rápida — Intubação Orotraqueal</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Para revisão pré-plantão ou pré-prova · 10 pontos essenciais</p>
+          <div class="algo-box algo-b" style="margin-bottom:8px">
+            <div class="algo-title">10 pontos que você não pode esquecer</div>
+            <ol style="font-size:12px;line-height:2;margin:6px 0 0 16px">
+              <li>Pré-oxigenação: O₂ 100% por 3–5 min (ou 8 respirações fundas) → FRC de 2,5 L → 8 min de apneia segura</li>
+              <li>RSI: succinilcolina 1,5 mg/kg (CI: hipercalemia, miopatias) OU rocúrônio 1,2 mg/kg · Sellick opcional</li>
+              <li>Confirmação de IOT: capnografia (gold standard) → 6 ondas de ETCO₂ · RX tórax confirma posição</li>
+              <li>Cormack I–II = IOT fácil · Cormack III = difícil → videolaringioscópio · Cormack IV = VAD</li>
+              <li>Mallampati III–IV + abertura bucal &lt;3 cm + DTM &lt;6 cm = VAD prevista (≥3 preditores)</li>
+              <li>Ventilação protetora: VC 6–8 mL/kg PBW · PEEP 5 · Pplatô &lt;30 · ΔP &lt;15 · I:E 1:2</li>
+              <li>PBW masculino: altura(cm) – 100 · PBW feminino: altura(cm) – 110 (fórmula simplificada)</li>
+              <li>Laringoespasmo pós-extubação: manobra de Larson → propofol 0,5 mg/kg → succinilcolina 0,1–0,5 mg/kg</li>
+              <li>Videolaringoscopia (C-MAC, Glidescope): ↑visualização em Cormack III–IV · curva de aprendizado curta</li>
+              <li>Extubação segura: responsivo + TOF ≥0,9 + SpO₂ &gt;95% em ar + FR 12–20 ipm + reflexo de deglução</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Revisão Rápida</div>
+    </div>
+  </div><!-- /iot-revisao -->
+
+<!-- TAB — QUESTÕES IOT -->
+  <div class="tab-panel" id="iot-questoes">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">📝 Questões — Intubação Orotraqueal</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">5 questões de múltipla escolha · Clique para revelar o gabarito</p>
+
+          <div class="caso-card" id="q1-iot">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">1</div>
+              <div class="caso-title">QUESTÃO 1 — Pré-Oxigenação Adequada</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente adulto hígido aguarda intubação eletiva. Qual o tempo mínimo recomendado de pré-oxigenação com FiO₂ 100% para garantir reserva funcional adequada e apneia segura de ~8 minutos?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) 30 segundos a 1 minuto<br>
+                B) 1 a 2 minutos<br>
+                C) 3 a 5 minutos<br>
+                D) 8 a 10 minutos<br>
+                E) Não é necessária em adultos hígidos
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A pré-oxigenação com FiO₂ 100% por <strong>3–5 minutos</strong> (ventição normal) ou 8 respirações de capacidade vital substitui o N₂ alveolar por O₂, elevando a CRF de ~2,5 L para reserva de oxigênio que sustenta até 8 min de apneia segura no adulto hígido. Tempos menores são insuficientes; tempos maiores não trazem benefício adicional significativo.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q2-iot">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">2</div>
+              <div class="caso-title">QUESTÃO 2 — RSI em Paciente com Hipercalemia</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente com insuficiência renal crônica e K⁺ sérico de 6,2 mEq/L necessita de intubação de emergência em sequência rápida. Qual bloqueador neuromuscular deve ser escolhido?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Succinilcolina 1,5 mg/kg — é o mais rápido e deve ser sempre usado em RSI<br>
+                B) Rocúrônio 1,2 mg/kg — contraindicada a succinilcolina por risco de hipercalemia grave<br>
+                C) Vecurônio 0,1 mg/kg — é o mais seguro em renais crônicos<br>
+                D) Pancurônio 0,1 mg/kg — sem risco de hipercalemia<br>
+                E) Não usar bloqueador neuromuscular em RSI
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: B)</strong> — A <strong>succinilcolina está contraindicada</strong> em pacientes com hipercalemia (K⁺ &gt;5,5 mEq/L), miopatias, queimados extensos ou imobilização prolongada, pois provoca liberação adicional de K⁺ de ~0,5–1,0 mEq/L, podendo desencadear arritmias fatais. O <strong>rocúrônio 1,2 mg/kg</strong> é a alternativa em RSI, com onset de 60–90s e reversível por sugamadex 16 mg/kg em emergência.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q3-iot">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">3</div>
+              <div class="caso-title">QUESTÃO 3 — Gold Standard de Confirmação de IOT</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Após intubação orotraqueal, qual método de confirmação de posição do tubo é considerado <strong>gold standard</strong> e exigido pelas diretrizes internacionais em qualquer cenário?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Ausculta pulmonar bilateral e epigástrica<br>
+                B) Visualização das cordas vocais durante a laringoscopia<br>
+                C) Capnografia com 6 ondas positivas de ETCO₂<br>
+                D) Radiografia de tórax com tubo acima da carina<br>
+                E) SpO₂ mantida acima de 95%
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A <strong>capnografia contínua</strong> (detecção de CO₂ expirado) é o gold standard para confirmar IOT traqueal, exigindo <strong>6 ondas positivas consecutivas</strong> de ETCO₂. A ausculta pode falhar (IOT esofágica com murmúrio aparente); a visualização das cordas não confirma progressão traqueal; SpO₂ demora minutos para cair. O RX confirma a <em>posição</em> (profundidade), não substitui a capnografia para confirmar intubação traqueal.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q4-iot">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">4</div>
+              <div class="caso-title">QUESTÃO 4 — Volume Corrente Protetor</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente do sexo masculino, 175 cm de altura, em ventilação mecânica intraoperatória. Calculando o PBW e aplicando ventilação protetora (6–8 mL/kg PBW), qual a faixa correta de volume corrente?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) 350–450 mL (5 mL/kg PBW)<br>
+                B) 450–600 mL (6–8 mL/kg PBW)<br>
+                C) 600–700 mL (8–10 mL/kg PBW)<br>
+                D) 700–900 mL (10–12 mL/kg PBW)<br>
+                E) 1000–1200 mL (peso real)
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: B)</strong> — PBW masculino = altura(cm) – 100 = 175 – 100 = <strong>75 kg</strong>. Volume corrente protetor: 6–8 mL/kg × 75 kg = <strong>450–600 mL</strong>. Utilizar o peso real (frequentemente maior) levaria a hiperinflação alveolar e lesão pulmonar induzida por ventilação (VILI). Pressão de platô deve ser mantida &lt;30 cmH₂O e pressão de driving (ΔP) &lt;15 cmH₂O.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q5-iot">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">5</div>
+              <div class="caso-title">QUESTÃO 5 — Cormack III na Laringoscopia</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Durante laringoscopia direta em paciente sob indução anestésica, você visualiza apenas a epiglote, sem visão de qualquer estrutura glótica (Cormack-Lehane grau III). Qual é a conduta mais adequada?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Insistir com múltiplas tentativas de laringoscopia direta<br>
+                B) Declarar CICO e realizar cricotireoidostomia imediata<br>
+                C) Utilizar videolaringioscópio como próxima tentativa<br>
+                D) Administrar mais relaxante muscular e tentar novamente<br>
+                E) Acordar o paciente e cancelar o procedimento
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — Cormack-Lehane grau III (apenas epiglote visível) caracteriza <strong>intubação difícil</strong>. O próximo passo é utilizar o <strong>videolaringioscópio</strong> (ex.: C-MAC, Glidescope), que melhora a visualização glótica sem necessidade de alinhamento de eixos e tem alta taxa de sucesso em Cormack III. Repetir laringoscopia direta sem mudança de dispositivo raramente muda o resultado. CICO só se declarado quando impossível ventilar <em>e</em> intubar.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Questões</div>
+    </div>
+  </div><!-- /iot-questoes -->
+
+  <div class="tab-panel" id="iot-casos">
+
+    <div class="alert a-blue" style="margin:0 0 14px">
+      Clique em cada caso para expandir a discussão detalhada.
+    </div>
+
+    <!-- CASO 1 -->
+    <div class="caso-card">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 1</span>
+        <span class="caso-title">Mallampati IV + Pescoço Curto — Estratégia de Abordagem</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Paciente:</strong> masculino, 58 anos, 112 kg, IMC 38. Agendar colecistectomia laparoscópica eletiva. Avaliação pré-anestésica: Mallampati IV, abertura bucal 3,5 cm, distância tireomento 5,5 cm, pescoço curto e grosso, LEMON score 4, MOANS 3 fatores positivos. Sem IOT prévia documentada.</p>
+
+        <div class="caso-question">Qual a estratégia de abordagem para este paciente com via aérea previsivelmente difícil?</div>
+        <div class="caso-answer">
+          <div class="sh sh-blue">Classificação do Caso</div>
+          <p>Via aérea previsivelmente difícil: LEMON 4, Mallampati IV, distância tireomento &lt;6 cm. MOANS 3 positivos = VBM difícil também. Este paciente é um <strong>CICO potencial</strong> — plan A falha + plan B (MLA) pode não funcionar.</p>
+
+          <div class="sh sh-blue" style="margin-top:10px">Plano A — Videolaringoscopia com Paciente Acordado ou Profundamente Sedado</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">1</span><div>Discussão com paciente: explicar plano e obter consentimento para IOT vigil se necessário</div></div>
+            <div class="proto-step"><span class="sn sn-b">2</span><div>Pré-oxigenação rigorosa: posição rampa 30°, HFNO 60 L/min por 5 min. SpO₂ ≥98% antes de qualquer sedação.</div></div>
+            <div class="proto-step"><span class="sn sn-b">3</span><div>Anestesia tópica da orofaringe: lidocaína spray 10% + gel 2% na língua e orofaringe. Aguardar 3–5 min.</div></div>
+            <div class="proto-step"><span class="sn sn-b">4</span><div>Sedação leve: dexmedetomidina 0,5–1 mcg/kg/h IV (preserva drive respiratório) OU midazolam 1–2 mg IV</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div>Videolaringoscópio (C-MAC D-Blade ou GlideScope): visualizar glote com paciente respirando espontaneamente</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div>Introduzir TOT 8,0 mm com estilete angulado, confirmar ETCO₂ → induzir anestesia após confirmação</div></div>
+          </div>
+
+          <div class="sh sh-orange" style="margin-top:10px">Plano B — MLA ProSeal (se Plano A falhar)</div>
+          <p>MLA de segunda geração (ProSeal ou Supreme) como ponte de ventilação. Lembrar: MOANS+ = MLA pode ser difícil também. Usar tamanho 5 (homem &gt;90 kg).</p>
+
+          <div class="sh sh-red" style="margin-top:10px">Plano C — CICO → Cricotireotomia</div>
+          <p>Kit cricotireotomia aberta à beira do campo. Identificar membrana cricotireóidea com US antes de induzir. Cirurgião de suporte em sala.</p>
+
+          <div class="alert a-red" style="margin-top:10px">
+            <strong>Erro a evitar:</strong> induzir anestesia geral (perda de consciência + BNM) sem plano B e C prontos em via aérea previsivelmente difícil. Se Plano A falhar após indução, o paciente pode não ser ventilável e não intubável → CICO → morte.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 2 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 2</span>
+        <span class="caso-title">Estômago Cheio em Urgência — RSI com Esquema Preferido</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Paciente:</strong> feminino, 34 anos, 68 kg. Apendicite aguda perfurada, dor há 8 h, última refeição há 5 h. Levada à sala de urgência. Via aérea: Mallampati II, abertura bucal adequada, pescoço móvel, LEMON 1. Hemodinamicamente estável: PA 118/72, FC 98 bpm, SpO₂ 97% em AA.</p>
+
+        <div class="caso-question">Qual o esquema de RSI preferido para esta paciente de urgência com estômago cheio?</div>
+        <div class="caso-answer">
+          <div class="sh sh-blue">Análise do Risco</div>
+          <ul class="ck-list">
+            <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Jejum insuficiente (5 h de sólidos) + peritonite → gastroparesia → estômago cheio CONFIRMADO</span></li>
+            <li class="ck-item ok"><span class="ck-box"></span><span class="ck-text">Via aérea aparentemente fácil (LEMON 1)</span></li>
+            <li class="ck-item ok"><span class="ck-box"></span><span class="ck-text">Hemodinamicamente estável</span></li>
+          </ul>
+
+          <div class="sh sh-red" style="margin-top:10px">Esquema RSI Preferido</div>
+          <div class="dr dr-b"><span class="dn">Fentanil 2 mcg/kg IV</span><span class="dc">136 mcg</span><span class="dv">Pré-tratamento 3 min antes — atenua resposta laringoscópica</span></div>
+          <div class="dr dr-b"><span class="dn">Cetamina 2 mg/kg IV</span><span class="dc">136 mg</span><span class="dv">Hipnótico de eleição: estabilidade HD, broncodilatador, analgésico</span></div>
+          <div class="dr dr-r"><span class="dn">Succinilcolina 1,5 mg/kg IV</span><span class="dc">102 mg</span><span class="dv">BNM RSI padrão — início 45 s, duração 8–12 min</span></div>
+
+          <div class="proto-steps" style="margin-top:10px">
+            <div class="proto-step"><span class="sn sn-b">1</span><div>Posição sniffing + pré-oxigenação 5 min FiO₂ 100%. SpO₂ ≥99%.</div></div>
+            <div class="proto-step"><span class="sn sn-b">2</span><div>Fentanil 136 mcg IV lento. Aguardar 3 min.</div></div>
+            <div class="proto-step"><span class="sn sn-y">3</span><div>Assistente aplica pressão de cricoide (10 N).</div></div>
+            <div class="proto-step"><span class="sn sn-r">4</span><div>Cetamina 136 mg IV → aguardar perda de consciência (cílios). Succinilcolina 102 mg IV imediatamente após.</div></div>
+            <div class="proto-step"><span class="sn sn-r">5</span><div>Aguardar 45–60 s (fasciculações + relaxamento). Sem VBM.</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div>Laringoscopia → IOT visualizando TOT pelas pregas. TOT 7,5 mm, profundidade 21 cm.</div></div>
+            <div class="proto-step"><span class="sn sn-t">7</span><div>Confirmar ETCO₂ + ausculta bilateral. Liberar pressão de cricoide.</div></div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Nota:</strong> ondansetrona 4 mg IV + metoclopramida 10 mg IV administrados ao chegar na sala. Metoclopramida tem evidência fraca para esvaziar estômago, mas mantida por protocolo institucional.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 3 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 3</span>
+        <span class="caso-title">IOT Esofágica — Reconhecimento Imediato e Manejo</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Cenário:</strong> R1 de anestesiologia realizando IOT supervisionada. Após indução com propofol + rocurônio, laringoscopia e introdução do TOT, o ETCO₂ marca 0 mmHg. Ausculta bilateral parece apresentar sons de ambos os lados, mas o epigástrio também parece "ventilar". SpO₂ começa a cair: 99%→96%→93%.</p>
+
+        <div class="caso-question">Como reconhecer e manejar a IOT esofágica neste momento crítico?</div>
+        <div class="caso-answer">
+          <div class="sh sh-red">Reconhecimento</div>
+          <div class="g2">
+            <div class="alert a-red">
+              <strong>ETCO₂ = 0 é diagnóstico:</strong><br>
+              Intubação esofágica até prova em contrário. Sons de "ausculta bilateral" no tórax podem ser transmitidos do estômago. A SpO₂ em queda confirma problema real de ventilação.
+            </div>
+            <div class="alert a-orange">
+              <strong>Falsa segurança:</strong><br>
+              Nunca confiar na ausculta isolada. "Sons bilaterais" no tórax são frequentes na IOT esofágica em pacientes com pouco tecido. ETCO₂ é mandatório.
+            </div>
+          </div>
+
+          <div class="sh sh-red" style="margin-top:10px">Manejo — Sequência IMEDIATA (próximos 30 segundos)</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-r">1</span><div><strong>ANUNCIAR em voz alta:</strong> "Suspeito de IOT esofágica, vou retirar o tubo"</div></div>
+            <div class="proto-step"><span class="sn sn-r">2</span><div>Desinsuflar cuff e retirar o TOT imediatamente — não tentar "corrigir"</div></div>
+            <div class="proto-step"><span class="sn sn-r">3</span><div><strong>MANTER O TUBO ESOFÁGICO IN SITU</strong> — serve como marcador e separa o esôfago. Não retirar ainda!</div></div>
+            <div class="proto-step"><span class="sn sn-b">4</span><div>VBM com 100% O₂ para recuperar SpO₂ ≥95% antes de nova tentativa</div></div>
+            <div class="proto-step"><span class="sn sn-b">5</span><div>Solicitar videolaringoscópio + bougie para 2ª tentativa otimizada</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div>Nova IOT sob videolaringoscopia — visão direta das pregas. TOT novo (não o mesmo)</div></div>
+            <div class="proto-step"><span class="sn sn-t">7</span><div>Confirmar ETCO₂ positivo em 6 ciclos + ausculta. Somente então retirar o tubo esofágico.</div></div>
+          </div>
+
+          <div class="alert a-red" style="margin-top:10px">
+            <strong>Regra dos 3 máximos:</strong> máximo 3 tentativas de laringoscopia. Se falha após 3 tentativas com otimização → ativar plano de resgate (MLA ProSeal) → se MLA falha → cricotireotomia. Cada tentativa piora edema de via aérea.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 4 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 4</span>
+        <span class="caso-title">Broncoespasmo Pós-IOT em Asmático — Diagnóstico e Tratamento</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Paciente:</strong> masculino, 27 anos, 72 kg. Asma moderada persistente, em uso de formoterol/budesonida inalatório. Programado para hérnia inguinal eletiva. Indução com propofol 150 mg + rocurônio 50 mg. IOT confirmada por ETCO₂. Ao iniciar ventilação mecânica: pico de pressão 38 cmH₂O (antes 18), sibilos difusos, SpO₂ caindo para 90%, ETCO₂ subindo para 52 mmHg, capnograma com platô inclinado ("tubarão").</p>
+
+        <div class="caso-question">Como diagnosticar e tratar o broncoespasmo pós-IOT neste caso?</div>
+        <div class="caso-answer">
+          <div class="sh sh-orange">Diagnóstico</div>
+          <div class="g2">
+            <div class="alert a-orange">
+              <strong>Critérios diagnósticos presentes:</strong><br>
+              ✓ ↑ Ppico (38 cmH₂O)<br>
+              ✓ Sibilos difusos (ausculta)<br>
+              ✓ SpO₂ ↓<br>
+              ✓ ETCO₂ ↑ (hiper CO₂ por hiperinsuflação)<br>
+              ✓ Capnograma em "tubarão" (slope ascendente no platô)
+            </div>
+            <div class="alert a-gold">
+              <strong>Diagnóstico diferencial:</strong><br>
+              • IOT seletiva? Checar ausculta bilateral<br>
+              • Obstrução mecânica do TOT? Passar sonda<br>
+              • Pneumotórax hipertensivo? Ausculta + US<br>
+              • Edema pulmonar? Ausculta + clínica
+            </div>
+          </div>
+
+          <div class="sh sh-green" style="margin-top:10px">Tratamento Escalonado</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">1</span><div>FiO₂ 100%. Reduzir FR para permitir expiração completa (FR 8–10, I:E 1:3). Evitar auto-PEEP.</div></div>
+            <div class="proto-step"><span class="sn sn-b">2</span><div><strong>Propofol 0,5 mg/kg IV (36 mg):</strong> broncodilatador + aprofundamento anestésico. Alternativa: cetamina 0,5 mg/kg IV.</div></div>
+            <div class="proto-step"><span class="sn sn-b">3</span><div><strong>Salbutamol 4–8 puffs via MDI no circuito:</strong> adaptador em Y no circuito do ventilador. Aguardar 10–15 min.</div></div>
+            <div class="proto-step"><span class="sn sn-y">4</span><div><strong>Lidocaína 1,5 mg/kg IV (108 mg):</strong> atenua reflexo brônquico à IOT. Efeito limitado se broncoespasmo já instalado.</div></div>
+            <div class="proto-step"><span class="sn sn-y">5</span><div><strong>Sulfato de Magnésio 2 g IV em 10 min:</strong> broncoespasmo moderado-grave refratário.</div></div>
+            <div class="proto-step"><span class="sn sn-r">6</span><div><strong>Adrenalina 0,3 mg SC ou 0,1 mg IV diluída:</strong> broncoespasmo grave com hipóxia refratária.</div></div>
+            <div class="proto-step"><span class="sn sn-r">7</span><div>Aminofilina 5 mg/kg IV em 20 min: último recurso (risco de arritmia).</div></div>
+          </div>
+
+          <div class="alert a-green" style="margin-top:10px">
+            <strong>Prevenção em cirurgia eletiva em asmático:</strong> inaloterapia 30 min pré-IOT, lidocaína IV 1,5 mg/kg 90 s antes da laringoscopia, aprofundar anestesia antes de instrumentar. Propofol &gt; tiopental para indução (menos broncoespasmo).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 5 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 5</span>
+        <span class="caso-title">Extubação de Paciente com VAD Confirmada</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Paciente:</strong> feminino, 52 anos. Cirurgia de tireoidectomia total. Durante a anestesia, IOT foi difícil: necessário videolaringoscópio + bougie, Cormack III, 2 tentativas. Via aérea difícil confirmada documentada na ficha. Cirurgia ocorreu sem intercorrências. Ao final, paciente apresenta: TOF 0,7 (bloqueio residual), temperatura 35,8°C, PA 102/64, desperta mas agitada.</p>
+
+        <div class="caso-question">Como planejar a extubação segura nesta paciente com VAD confirmada + fatores de risco adicionais?</div>
+        <div class="caso-answer">
+          <div class="sh sh-red">Fatores de Alto Risco para Extubação</div>
+          <ul class="ck-list">
+            <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">VAD confirmada (Cormack III, 2 tentativas) — re-intubação de emergência difícil</span></li>
+            <li class="ck-item crit"><span class="ck-box"></span><span class="ck-text">Bloqueio neuromuscular residual (TOF 0,7 — &lt;0,9)</span></li>
+            <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Hipotermia leve (35,8°C) — bloqueia eliminação de BNM</span></li>
+            <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Tireoidectomia: risco de hematoma cervical compressivo, lesão de nervo laríngeo</span></li>
+            <li class="ck-item warn"><span class="ck-box"></span><span class="ck-text">Agitação: extubação em estágio II = laringoespasmo</span></li>
+          </ul>
+
+          <div class="sh sh-green" style="margin-top:10px">Protocolo de Extubação Segura</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">1</span><div><strong>Aguardar critérios completos:</strong> TOF ≥0,9 (reverter com sugammadex 2 mg/kg se rocurônio), temperatura ≥36°C, paciente colaborativo e calmo.</div></div>
+            <div class="proto-step"><span class="sn sn-b">2</span><div><strong>Sugammadex 2 mg/kg IV:</strong> reversão eficaz do rocurônio. Confirmar TOF ≥0,9 com monitor.</div></div>
+            <div class="proto-step"><span class="sn sn-b">3</span><div><strong>Pré-oxigenar 5 min FiO₂ 100%</strong> com ventilação espontânea assistida.</div></div>
+            <div class="proto-step"><span class="sn sn-y">4</span><div><strong>Posicionar airway exchange catheter (AEC 14Fr) ANTES de extubar:</strong> introduzir pelo TOT, fixar na marca 25 cm na comissura. Avisar paciente.</div></div>
+            <div class="proto-step"><span class="sn sn-y">5</span><div>Desinsuflar cuff, extubar mantendo AEC in situ. Paciente respirará em torno do cateter (desconfortável mas tolerável com sedação leve).</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div>O₂ por cateter nasal. Observar SpO₂, padrão respiratório e fonação por 30–60 min.</div></div>
+            <div class="proto-step"><span class="sn sn-t">7</span><div>Manter AEC como guia de re-intubação. Retirar somente após certeza de via aérea estável.</div></div>
+            <div class="proto-step"><span class="sn sn-r">8</span><div>Se re-intubação necessária: passar TOT 6,5 mm sobre o AEC com rotação 90° anti-horária.</div></div>
+          </div>
+
+          <div class="alert a-red" style="margin-top:10px">
+            <strong>Hematoma cervical expansivo pós-tireoidectomia:</strong> sinais — dificuldade respiratória, estridor, expansão da ferida. Tratamento: abrir ferida imediatamente para liberar compressão + re-intubação urgente ANTES do edema progredir. Não aguardar piora da SpO₂.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 6 -->
+    <div class="caso-card" style="margin-top:8px">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <span class="caso-num">CASO 6</span>
+        <span class="caso-title">Laringoespasmo Pós-Extubação em Criança</span>
+      </div>
+      <div class="caso-body">
+        <p><strong>Paciente:</strong> masculino, 4 anos, 16 kg. Amigdalectomia + adenoidectomia sob anestesia geral com IOT. Extubado no fim da cirurgia com paciente em estágio intermediário (agitado, sem resposta a comandos mas com reflexos). Imediatamente após a extubação: estridor agudo inspiratório, retração supraesternal intensa, SpO₂ cai de 99% para 88% em 30 s, cianose perioral iniciando.</p>
+
+        <div class="caso-question">Como manejar este laringoespasmo pós-extubação pediátrico de forma rápida e eficaz?</div>
+        <div class="caso-answer">
+          <div class="sh sh-red">Reconhecimento e Gravidade</div>
+          <div class="alert a-red">
+            <strong>Laringoespasmo GRAVE:</strong> SpO₂ 88%, cianose, retração — risco de hipóxia cerebral em &lt;2 min. Velocidade de ação é crítica.
+          </div>
+
+          <div class="sh sh-green" style="margin-top:10px">Manejo em Sequência — Meta: resolver em &lt;60 segundos</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-r">T+0s</span><div><strong>Remover estímulo:</strong> parar aspiração, retirar secreções, manter paciente tranquilo. O₂ 100% máscara facial bem vedada.</div></div>
+            <div class="proto-step"><span class="sn sn-r">T+10s</span><div><strong>CPAP firmemente com máscara:</strong> pressão positiva contínua 10–20 cmH₂O. Frequentemente suficiente para laringoespasmo parcial.</div></div>
+            <div class="proto-step"><span class="sn sn-r">T+15s</span><div><strong>Ponto de Larson bilateral:</strong> pressão firme nas fossas jugulares posteriores (atrás do ângulo mandibular, entre mastoide e côndilo mandibular). Estimula o nervo frênico e interrompe o espasmo.</div></div>
+            <div class="proto-step"><span class="sn sn-r">T+20s</span><div>SpO₂ não melhora? <strong>Propofol 0,5 mg/kg IV = 8 mg:</strong> aprofundamento anestésico quebra o espasmo.</div></div>
+            <div class="proto-step"><span class="sn sn-r">T+30s</span><div>Ainda sem melhora (<strong>laringoespasmo completo — silêncio</strong>): <strong>Succinilcolina 0,2–1 mg/kg IV = 3–16 mg</strong>. Dose de fasciculação (0,2 mg/kg) é suficiente em 70% dos casos pediátricos.</div></div>
+            <div class="proto-step"><span class="sn sn-y">T+45s</span><div>Se sem acesso venoso: <strong>succinilcolina IM 4 mg/kg = 64 mg no deltóide</strong>. Início 3–4 min (recurso de emergência).</div></div>
+            <div class="proto-step"><span class="sn sn-b">T+60s</span><div>Após resolução: re-intubação ou VBM conforme SpO₂ + ventilação espontânea. Observar ≥30 min antes de nova extubação.</div></div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>Prevenção do laringoespasmo pediátrico:</strong><br>
+            • Extubar em estágio I (profundo, sem reflexos) ou estágio IV (completamente acordado, responsivo)<br>
+            • NUNCA extubar em estágio II–III<br>
+            • Lidocaína 1,5 mg/kg IV 90 s antes da extubação<br>
+            • Evitar sangue/secreções nas vias aéreas ao extubar (aspirar bem antes)<br>
+            • Propofol IV como agente de manutenção reduz incidência vs. agentes halogenados
+          </div>
+
+          <div class="alert a-blue" style="margin-top:8px">
+            <strong>Edema subglótico pós-extubação pediátrico</strong> (diferente de laringoespasmo): aparece 30–60 min após extubação, estridor progressivo, mais comum em &lt;5 anos com IOT repetida. Tratar com adrenalina nebulizada 0,5 mg/kg (máx 5 mg diluída em 3 mL SF) + dexametasona 0,5 mg/kg IV.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESUMO FLASH CARDS -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">★</span> Resumo Rápido — Pontos-Chave IOT
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div class="alert a-blue">
+            <strong>LEMON score ≥3</strong> = planejar via aérea difícil antes de induzir
+          </div>
+          <div class="alert a-blue">
+            <strong>Sniffing position</strong> = orelha alinhada ao esterno horizontalmente
+          </div>
+          <div class="alert a-teal">
+            <strong>SpO₂ ≥98%</strong> antes de qualquer indução com IOT
+          </div>
+          <div class="alert a-teal">
+            <strong>ETCO₂ = 0</strong> após IOT = esofágico até prova em contrário
+          </div>
+          <div class="alert a-red">
+            <strong>RSI padrão BR</strong> = cetamina 2 mg/kg + succinilcolina 1,5 mg/kg
+          </div>
+          <div class="alert a-red">
+            <strong>CICO + rocurônio</strong> = sugammadex 16 mg/kg + cricotireotomia simultânea
+          </div>
+          <div class="alert a-green">
+            <strong>Cuff</strong> = 20–30 cmH₂O sempre (manômetro obrigatório)
+          </div>
+          <div class="alert a-green">
+            <strong>Profundidade</strong> = 21–23 cm mulher | 23–25 cm homem
+          </div>
+          <div class="alert a-gold">
+            <strong>Laringoespasmo</strong> = Larson + propofol 0,5 mg/kg → succinilcolina se falha
+          </div>
+          <div class="alert a-gold">
+            <strong>TOF ≥0,9</strong> = critério mandatório antes de extubar
+          </div>
+          <div class="alert a-violet">
+            <strong>VAD na extubação</strong> = AEC in situ por 30–60 min pós-extubação
+          </div>
+          <div class="alert a-violet">
+            <strong>Bougie "cliques"</strong> = sensação tátil dos anéis cartilaginosos = traqueia confirmada
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /iot-casos -->
+</div>

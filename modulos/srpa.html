@@ -1,0 +1,1297 @@
+<div class="screen" id="screen-srpa">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">SRPA — Recuperação Pós-Anestésica</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="srpa-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('srpa','estrutura',this)">Estrutura</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','alta',this)">Critérios Alta</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','eventos',this)">Eventos Adversos</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','delirium',this)">Delirium/Cogn.</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','checklist',this)">Checklist</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','casos',this)">Casos</button>
+  </div>
+
+  <!-- TAB 1 — ESTRUTURA -->
+  <div class="tab-panel active" id="srpa-estrutura">
+    <div class="page-wrap">
+
+      <!-- DEFINIÇÃO E FUNÇÃO -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">01</span> Definição e Função da SRPA
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            A <strong>Sala de Recuperação Pós-Anestésica (SRPA)</strong> é uma unidade especializada destinada à monitorização e cuidados do paciente no período imediatamente após a anestesia e cirurgia, enquanto persistem os efeitos dos agentes anestésicos. Representa a transição essencial entre o <strong>Centro Cirúrgico (CO) e a enfermaria/UTI</strong>, com foco em segurança, detecção precoce de complicações e promoção do conforto.
+          </div>
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-teal">
+              <strong>OBJETIVOS PRIMÁRIOS</strong><br>
+              • Monitorização contínua durante a recuperação dos efeitos anestésicos<br>
+              • Detecção e manejo precoce de complicações pós-anestésicas<br>
+              • Controle de dor, NVPO e hipotermia<br>
+              • Confirmação de reversão do bloqueio neuromuscular<br>
+              • Garantia de via aérea pérvia e ventilação adequada<br>
+              • Estabilidade hemodinâmica antes da transferência
+            </div>
+            <div class="alert a-green">
+              <strong>REQUISITOS CFM RES. 2174/2017</strong><br>
+              • SRPA <strong>obrigatória</strong> em todo Centro Cirúrgico<br>
+              • Médico anestesiologista responsável <strong>disponível imediatamente</strong><br>
+              • Equipe de enfermagem especializada: <strong>1 enfermeiro para cada 2 pacientes</strong><br>
+              • Monitorização mínima padronizada para todos os pacientes<br>
+              • Prontuário de recuperação com registro cronológico
+            </div>
+          </div>
+
+          <div class="sh sh-orange">Monitorização Mínima Obrigatória na SRPA</div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Método</th><th>Frequência</th><th>Alerta</th></tr></thead>
+            <tbody>
+              <tr><td><strong>SpO₂</strong></td><td>Oximetria de pulso contínua</td><td>Contínua</td><td>&lt;92% → ação imediata</td></tr>
+              <tr><td><strong>ECG</strong></td><td>Monitor cardíaco</td><td>Contínuo</td><td>Arritmias, alterações ST</td></tr>
+              <tr><td><strong>PA Não-Invasiva</strong></td><td>Manguito automático</td><td>A cada ≤15 min</td><td>Variação &gt;20% do basal</td></tr>
+              <tr><td><strong>Temperatura</strong></td><td>Axilar / timpânica</td><td>Na admissão e cada 30 min</td><td>&lt;36°C → protocolo aquecimento</td></tr>
+              <tr><td><strong>Nível de consciência</strong></td><td>Escala de Ramsay / Aldrete</td><td>A cada 15 min</td><td>Sedação excessiva</td></tr>
+              <tr><td><strong>Dor (EVN)</strong></td><td>Escala Visual Numérica 0–10</td><td>A cada 15 min</td><td>EVN ≥4 → intervenção</td></tr>
+              <tr><td><strong>NVPO</strong></td><td>Avaliação clínica</td><td>A cada 15–30 min</td><td>Grau ≥2 → resgate antiemético</td></tr>
+              <tr><td><strong>Diurese</strong></td><td>Cateter vesical ou avaliação clínica</td><td>A cada hora</td><td>&lt;0.5 mL/kg/h → investigar</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- FASES DE RECUPERAÇÃO -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">02</span> Fases de Recuperação Pós-Anestésica
+        </div>
+        <div class="card-body">
+          <div class="g3" style="margin-bottom:14px">
+            <div class="algo-box algo-r">
+              <strong style="color:var(--orange)">FASE 1 — IMEDIATA</strong><br>
+              <strong>Local:</strong> SRPA<br>
+              <strong>Duração:</strong> 30–90 min<br>
+              <strong>Foco:</strong> Despertar, proteção de via aérea, estabilidade hemodinâmica<br>
+              <strong>Critérios de saída:</strong> Aldrete ≥9, SpO₂ &gt;92% em ar, PA estável, dor ≤3, sem NVPO<br>
+              <strong>Monitorização:</strong> Contínua, máxima atenção
+            </div>
+            <div class="algo-box algo-g">
+              <strong style="color:#2a7a4a">FASE 2 — INTERMEDIÁRIA</strong><br>
+              <strong>Local:</strong> Ala cirúrgica / enfermaria<br>
+              <strong>Duração:</strong> Horas a dias<br>
+              <strong>Foco:</strong> Mobilização progressiva, analgesia oral, tolerância hídrica e alimentar<br>
+              <strong>Critérios de saída:</strong> PADSS ≥9 (ambulatorial) ou critérios hospitalares<br>
+              <strong>Monitorização:</strong> Periódica, sinais vitais a cada 4–6h
+            </div>
+            <div class="alert a-teal">
+              <strong>FASE 3 — TARDIA</strong><br>
+              <strong>Local:</strong> Domicílio<br>
+              <strong>Duração:</strong> 24–48h pós-operatório<br>
+              <strong>Foco:</strong> Retorno às atividades, controle de dor oral, sinais de alarme<br>
+              <strong>Requisitos:</strong> Acompanhante responsável, instruções escritas, contato de emergência<br>
+              <strong>Monitorização:</strong> Orientações ao paciente e acompanhante
+            </div>
+          </div>
+
+          <!-- FAST-TRACK -->
+          <div class="sh sh-orange">Fast-Track Recovery — Bypass da SRPA Fase 1</div>
+          <div class="alert a-gold" style="margin-top:8px; margin-bottom:10px">
+            O conceito de <strong>fast-track recovery</strong> permite que pacientes selecionados "pulem" a SRPA fase 1 e sejam transferidos diretamente para a fase 2 (ala cirúrgica ou unidade de curta permanência). Reduz custos, otimiza fluxo do CO e melhora satisfação do paciente quando aplicado criteriosamente.
+          </div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Critério Fast-Track</th><th>Valor Exigido</th><th>Justificativa</th></tr></thead>
+            <tbody>
+              <tr><td>BIS (índice bispectral)</td><td>&gt;80</td><td>Consciência suficientemente recuperada</td></tr>
+              <tr><td>TOF ratio</td><td>&gt;0.9</td><td>Reversão completa do bloqueio neuromuscular</td></tr>
+              <tr><td>Dor (EVN)</td><td>≤3</td><td>Analgesia adequada sem opioides IV recentes</td></tr>
+              <tr><td>NVPO</td><td>Ausente</td><td>Sem necessidade de antieméticos IV de resgate</td></tr>
+              <tr><td>Hemodinâmica</td><td>PA ±20% basal, FC 50–100 bpm</td><td>Estabilidade cardiovascular confirmada</td></tr>
+              <tr><td>SpO₂</td><td>&gt;92% em ar ambiente</td><td>Ventilação espontânea adequada</td></tr>
+              <tr><td>Temperatura</td><td>≥36°C</td><td>Normotermia — sem tremores significativos</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="algo-box algo-r" style="margin-top:10px">
+            <strong>ATENÇÃO:</strong> Fast-track não é "alta apressada". Requer equipe de destino treinada, monitorização adequada na fase 2 e reavaliação médica em 30–60 min após transferência. Contraindicado em cirurgias de grande porte, instabilidade intraoperatória, bloqueio neuroaxial ainda ativo com bloqueio motor.
+          </div>
+        </div>
+      </div>
+
+      <!-- HANDOVER CO → SRPA -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">03</span> Protocolo de Handover CO → SRPA
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            A passagem de informações (handover) entre o anestesiologista do CO e a equipe da SRPA é um <strong>momento crítico de segurança</strong>. Falhas no handover estão associadas a erros de medicação, manejo inadequado de dor e atraso no reconhecimento de complicações. A comunicação deve ser estruturada, verbal + registro no prontuário.
+          </div>
+
+          <div class="sh sh-orange">10 Itens Obrigatórios no Handover CO → SRPA</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>#</th><th>Item</th><th>Detalhe Mínimo</th></tr></thead>
+            <tbody>
+              <tr><td><strong>1</strong></td><td>Tipo de cirurgia</td><td>Procedimento realizado, abordagem (laparoscópica/aberta), duração</td></tr>
+              <tr><td><strong>2</strong></td><td>Técnica anestésica</td><td>AG, raqui, peridural, bloqueio periférico, combinada; técnica de indução/manutenção</td></tr>
+              <tr><td><strong>3</strong></td><td>Intercorrências intraoperatórias</td><td>Hipotensão, arritmias, sangramento, dificuldade de IOT, broncoespasmo, etc.</td></tr>
+              <tr><td><strong>4</strong></td><td>Drogas administradas</td><td>Opioides (dose total), BNM (última dose + reversor), antibióticos, vasopressores, anticoagulantes</td></tr>
+              <tr><td><strong>5</strong></td><td>Alergias conhecidas</td><td>Medicamentos, látex, materiais; reação prévia documentada</td></tr>
+              <tr><td><strong>6</strong></td><td>Dor prevista</td><td>Tipo de cirurgia, plano de analgesia pós-operatória prescrito</td></tr>
+              <tr><td><strong>7</strong></td><td>Bloqueio regional ativo</td><td>Nível, tempo de administração, AL utilizado, duração esperada, cateter in situ</td></tr>
+              <tr><td><strong>8</strong></td><td>Acesso venoso e invasivo</td><td>Calibre/localização AVP, AVC, cateter arterial — perviedade confirmada</td></tr>
+              <tr><td><strong>9</strong></td><td>Balanço hídrico intraoperatório</td><td>Cristaloides, coloides, hemoderivados infundidos; perdas estimadas (sangue, urina)</td></tr>
+              <tr><td><strong>10</strong></td><td>Próxima dose de analgésico</td><td>Horário, dose e via da próxima medicação programada; PCA se disponível</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="algo-box algo-g" style="margin-top:10px">
+            <strong>BOAS PRÁTICAS:</strong> Use mnemônica <strong>SBAR</strong> (Situação — Background — Avaliação — Recomendação) para estruturar o handover. O anestesiologista não deve deixar a SRPA até que a equipe receptora confirme compreensão e o paciente esteja estável. Em casos complexos (instabilidade, vias aéreas difíceis), presença física obrigatória por ≥15 min pós-transferência.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /srpa-estrutura -->
+
+  <!-- TAB 2 — CRITÉRIOS DE ALTA -->
+  <div class="tab-panel" id="srpa-alta">
+    <div class="page-wrap">
+
+      <!-- ALDRETE MODIFICADO -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">01</span> Escala de Aldrete Modificada — Alta SRPA → Enfermaria
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            A <strong>Escala de Aldrete Modificada</strong> é o instrumento padrão para determinar a alta da SRPA para a enfermaria. Avalia 5 parâmetros fisiológicos, cada um pontuado de 0 a 2. A alta é autorizada com <strong>pontuação total ≥9</strong>, desde que nenhum parâmetro individual esteja com pontuação 0.
+          </div>
+
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px; margin-bottom:14px"><table class="tbl">
+            <thead>
+              <tr>
+                <th>Parâmetro</th>
+                <th style="text-align:center">Pontuação 0</th>
+                <th style="text-align:center">Pontuação 1</th>
+                <th style="text-align:center">Pontuação 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Atividade Motora</strong></td>
+                <td>Nenhum membro movimentado voluntariamente ou ao comando</td>
+                <td>2 membros movimentados voluntariamente ou ao comando</td>
+                <td>4 membros movimentados voluntariamente ou ao comando</td>
+              </tr>
+              <tr>
+                <td><strong>Respiração</strong></td>
+                <td>Apneia</td>
+                <td>Respiração superficial ou dispneia</td>
+                <td>Respiração profunda, tosse eficaz, choro (pediátrico)</td>
+              </tr>
+              <tr>
+                <td><strong>Circulação (PA)</strong></td>
+                <td>PA ±50% do valor basal pré-operatório</td>
+                <td>PA ±20–49% do valor basal</td>
+                <td>PA ±20% do valor basal pré-operatório</td>
+              </tr>
+              <tr>
+                <td><strong>Consciência</strong></td>
+                <td>Irresponsivo a estímulos</td>
+                <td>Acorda ao chamado, responde à voz</td>
+                <td>Totalmente alerta, orientado em tempo e espaço</td>
+              </tr>
+              <tr>
+                <td><strong>SpO₂</strong></td>
+                <td>&lt;90% mesmo com suplementação de O₂</td>
+                <td>90–92% com suplementação de O₂</td>
+                <td>&gt;92% em ar ambiente</td>
+              </tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="algo-box algo-g" style="margin-bottom:12px">
+            <strong>CRITÉRIO DE ALTA SRPA → ENFERMARIA:</strong> Aldrete ≥9 pontos, com SpO₂ pontuando 2 (≥92% em ar ambiente por ≥5 min), sem nenhum parâmetro zerado. Registrar pontuação, horário e responsável pela alta em prontuário. Em casos de pontuação 8 com estabilidade clínica sustentada &gt;30 min, discutir com anestesiologista responsável.
+          </div>
+
+          <div class="sh sh-orange">Condições Especiais — Modificadores da Alta</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="alert a-gold">
+              <strong>BLOQUEIO RAQUI/PERIDURAL AINDA ATIVO</strong><br>
+              • Aldrete pode ser ≥9 mesmo com bloqueio motor ainda presente<br>
+              • Verificar regressão do nível sensitivo (≥T10) antes de alta<br>
+              • Confirmar retorno da mobilidade de membros inferiores<br>
+              • Instruções obrigatórias ao paciente: risco de queda, proteção do membro, sinais de alarme<br>
+              • Acompanhante treinado no quarto — obrigatório
+            </div>
+            <div class="alert a-teal">
+              <strong>BLOQUEIO PERIFÉRICO ATIVO NA ALTA</strong><br>
+              • Orientar paciente sobre: fraqueza/anestesia do membro<br>
+              • Risco de queda → não deambular sem apoio<br>
+              • Proteção do membro anestesiado (calor, trauma, pressão)<br>
+              • Sinais de alarme: dor em queimação, fraqueza progressiva pós-retorno<br>
+              • Instruções escritas + acompanhante obrigatório<br>
+              • Contato de emergência para sintomas de toxicidade AL tardia
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PADSS -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">02</span> PADSS — Critérios de Alta Domiciliar (Cirurgia Ambulatorial)
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            O <strong>Post-Anesthetic Discharge Scoring System (PADSS)</strong> é utilizado para determinar a alta domiciliar após cirurgias ambulatoriais. Avalia 5 domínios, cada um pontuado de 0 a 2. Alta autorizada com <strong>pontuação total ≥9</strong>, sem nenhum parâmetro zerado.
+          </div>
+
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px; margin-bottom:14px"><table class="tbl">
+            <thead>
+              <tr>
+                <th>Critério</th>
+                <th style="text-align:center">0</th>
+                <th style="text-align:center">1</th>
+                <th style="text-align:center">2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sinais Vitais</strong></td>
+                <td>Variação &gt;40% do pré-op</td>
+                <td>Variação 20–40% do pré-op</td>
+                <td>Variação &lt;20% do pré-op</td>
+              </tr>
+              <tr>
+                <td><strong>Deambulação</strong></td>
+                <td>Incapaz de deambular</td>
+                <td>Deambula com assistência</td>
+                <td>Deambula independentemente (ou igual ao pré-op)</td>
+              </tr>
+              <tr>
+                <td><strong>NVPO</strong></td>
+                <td>Náusea/vômito grave (requer antieméticos IV)</td>
+                <td>Náusea/vômito moderado (tratável com medicação)</td>
+                <td>Ausência de náusea/vômito</td>
+              </tr>
+              <tr>
+                <td><strong>Dor</strong></td>
+                <td>Dor grave, não controlada (EVN ≥7)</td>
+                <td>Dor moderada (EVN 4–6), controlável com analgesia oral</td>
+                <td>Dor leve/ausente (EVN ≤3), controlada com analgesia oral</td>
+              </tr>
+              <tr>
+                <td><strong>Sangramento Cirúrgico</strong></td>
+                <td>Sangramento acima do esperado — cirurgião necessário</td>
+                <td>Sangramento moderado (≤2 trocas de curativo)</td>
+                <td>Sangramento mínimo (≤1 troca de curativo)</td>
+              </tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="algo-box algo-g" style="margin-bottom:12px">
+            <strong>ALTA DOMICILIAR SEGURA — REQUISITOS ADICIONAIS AO PADSS ≥9:</strong><br>
+            • Acompanhante adulto responsável confirmado para o domicílio<br>
+            • Tolerância a líquidos via oral (sem vômito por ≥30 min)<br>
+            • Micção espontânea (obrigatório em cirurgias pélvicas, bloqueio neuroaxial, idosos)<br>
+            • Instruções escritas entregues e compreendidas (paciente + acompanhante)<br>
+            • Analgesia pós-alta prescrita e dispensada<br>
+            • Número de contato de emergência fornecido<br>
+            • Consulta de retorno agendada
+          </div>
+
+          <div class="algo-box algo-r">
+            <strong>CONTRAINDICAÇÕES À ALTA DOMICILIAR:</strong> Paciente sem acompanhante adulto • Residência a &gt;1h de serviço de emergência sem ambulância disponível • Cirurgia de grande porte (laparotomia, toracotomia) • Instabilidade hemodinâmica no período pós-op • Dor não controlada com analgesia oral • Hipotermia &lt;36°C persistente • Paciente não apto a compreender instruções
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPARATIVO -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">03</span> Comparativo Aldrete vs. PADSS — Quando Usar Cada Escala
+        </div>
+        <div class="card-body">
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Aspecto</th><th>Aldrete Modificado</th><th>PADSS</th></tr></thead>
+            <tbody>
+              <tr><td>Contexto</td><td>SRPA → enfermaria (qualquer cirurgia)</td><td>SRPA → domicílio (ambulatorial)</td></tr>
+              <tr><td>Parâmetros</td><td>Motor, respiração, circulação, consciência, SpO₂</td><td>Sinais vitais, deambulação, NVPO, dor, sangramento</td></tr>
+              <tr><td>Pontuação para alta</td><td>≥9 pontos (máx 10)</td><td>≥9 pontos (máx 10)</td></tr>
+              <tr><td>Foco</td><td>Estabilidade fisiológica imediata</td><td>Aptidão funcional para ambiente domiciliar</td></tr>
+              <tr><td>Micção</td><td>Não exigida (exceto indicações específicas)</td><td>Exigida em cirurgias pélvicas / bloqueio neuroaxial</td></tr>
+              <tr><td>Acompanhante</td><td>Não mandatório para alta para enfermaria</td><td>Obrigatório para alta domiciliar</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /srpa-alta -->
+
+  <!-- TAB 3 — EVENTOS ADVERSOS -->
+  <div class="tab-panel" id="srpa-eventos">
+    <div class="page-wrap">
+
+      <!-- HIPOXEMIA -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">01</span> Hipoxemia — Evento Adverso Mais Comum na SRPA (≈30%)
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            A hipoxemia (SpO₂ &lt;92% ou PaO₂ &lt;60 mmHg em ar ambiente) acomete até <strong>30% dos pacientes na SRPA</strong> em algum grau. A maioria dos casos é leve e responde a medidas simples, mas a hipoxemia grave não tratada leva a lesão cerebral, parada cardíaca e morte.
+          </div>
+
+          <div class="sh sh-orange">Causas de Hipoxemia na SRPA</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+            <thead><tr><th>Causa</th><th>Mecanismo</th><th>Pista Diagnóstica</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Hipoventilação</strong></td><td>Depressão respiratória por opioides / sedativos residuais</td><td>FR &lt;10, SpO₂ ↓, CO₂ ↑, pupilas puntiformes</td></tr>
+              <tr><td><strong>Atelectasia</strong></td><td>Colapso alveolar por anestesia, decúbito, dor</td><td>Gradiente A-a aumentado, melhora com PEEP</td></tr>
+              <tr><td><strong>Broncoespasmo</strong></td><td>Hiper-reatividade brônquica, secretoma, reação alérgica</td><td>Wheezing, ↑resistência, capnograma "dente de tubarão"</td></tr>
+              <tr><td><strong>Laringoespasmo</strong></td><td>Fechamento reflexo das cordas vocais</td><td>Estridor, movimentos paradoxais, dessaturação súbita</td></tr>
+              <tr><td><strong>Aspiração</strong></td><td>Conteúdo gástrico nas vias aéreas</td><td>Precedida por vômito, crepitações, hipoxemia refratária</td></tr>
+              <tr><td><strong>Edema pós-obstrutivo</strong></td><td>Pressão negativa pós-laringoespasmo</td><td>Após episódio de laringoespasmo, edema pulmonar uni/bilateral</td></tr>
+              <tr><td><strong>Bloqueio residual (BNM)</strong></td><td>TOF &lt;0.9, fraqueza muscular respiratória</td><td>Respiração paradoxal, diplopia, fraqueza ao apertar a mão</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="sh sh-teal">Algoritmo de Abordagem da Hipoxemia na SRPA</div>
+          <div class="algo-box algo-r" style="margin-top:8px; margin-bottom:10px">
+            <strong>PASSO 1:</strong> O₂ suplementar → máscara facial 6–10 L/min → manter SpO₂ &gt;94%<br>
+            <strong>PASSO 2:</strong> Elevar cabeceira 30–45° → melhora volume corrente e ↓atelectasia<br>
+            <strong>PASSO 3:</strong> Estimulação verbal + tátil → despertar paciente sonolento<br>
+            <strong>PASSO 4:</strong> Medir TOF → se &lt;0.9, suspeitar bloqueio residual → sugamadex / neostigmina<br>
+            <strong>PASSO 5:</strong> Ausculta pulmonar → identificar broncoespasmo, laringoespasmo, aspiração<br>
+            <strong>PASSO 6:</strong> Se suspeita de opioides → <span class="drug-pill warn">Naloxona 40 mcg IV a cada 2–3 min</span> (diluir 0.4 mg em 10 mL → 40 mcg/mL)<br>
+            <strong>PASSO 7:</strong> Sem melhora → VNI (CPAP/BiPAP) ou reintubação + chamar anestesiologista sênior
+          </div>
+          <div class="algo-box algo-g">
+            <strong>NALOXONA — CUIDADOS:</strong> Titular em doses pequenas (40 mcg) para evitar reverso súbito com dor aguda intensa, taquicardia e EAP neurogênico. Duração da naloxona (30–60 min) &lt; duração do opioide → risco de ressedação → monitorizar 2h após naloxona.
+          </div>
+        </div>
+      </div>
+
+      <!-- LARINGOESPASMO -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">02</span> Laringoespasmo
+        </div>
+        <div class="card-body">
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-orange">
+              <strong>DIAGNÓSTICO</strong><br>
+              • Estridor inspiratório agudo (parcial) ou silêncio (total — pior)<br>
+              • Movimentos torácicos paradoxais ("seesaw")<br>
+              • Dessaturação súbita e progressiva<br>
+              • Frequentemente após extubação, estímulo orofaríngeo em plano leve<br>
+              • Fatores de risco: criança, fumante, IVAS recente, secreções, ORL
+            </div>
+            <div class="alert a-teal">
+              <strong>FISIOPATOLOGIA</strong><br>
+              • Fechamento reflexo das cordas vocais verdadeiras<br>
+              • Desencadeado por: sangue, secreções, vômito → estimulação laríngea<br>
+              • Estímulo aferente: nervo laríngeo superior (IX/X)<br>
+              • Extubação em plano superficial = maior risco<br>
+              • Pode evoluir para hipoxemia grave em 60–90 segundos
+            </div>
+          </div>
+
+          <div class="sh sh-orange">Manobra de Larson — Primeira Linha no Laringoespasmo</div>
+          <div class="algo-box algo-r" style="margin-top:8px; margin-bottom:12px">
+            <strong>MANOBRA DE LARSON (Larson's maneuver):</strong><br>
+            Pressão firme e sustentada com os dedos médios bilaterais nos <strong>processos mastoides</strong> (no recesso retroauricular, entre a mastóide e o ramo ascendente da mandíbula — "ponto de Larson"). A compressão estimula o nervo glossofaríngeo → inibição do espasmo laríngeo + abertura passiva das cordas vocais. Aplicar simultaneamente com subluxação da mandíbula.
+          </div>
+
+          <div class="sh sh-teal">Tratamento Escalonado do Laringoespasmo</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Passo</th><th>Intervenção</th><th>Detalhe</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>O₂ 100% com CPAP pressão positiva</td><td>Máscara facial bem vedada + pressão 20–30 cmH₂O → abre as cordas por pressão</td></tr>
+              <tr><td>2</td><td>Manobra de Larson</td><td>Compressão bilateral nos processos mastoides + subluxação mandibular</td></tr>
+              <tr><td>3</td><td>Propofol 0.5 mg/kg IV</td><td>Aprofunda anestesia → relaxa as cordas vocais; dose subanestésica eficaz</td></tr>
+              <tr><td>4 (refratário)</td><td>Succinilcolina 0.1–0.5 mg/kg IV</td><td>Dose baixa (0.1 mg/kg) suficiente para relaxar; 1 mg/kg para apneia controlada + intubação</td></tr>
+              <tr><td>5 (urgência)</td><td>Cricotireoidostomia</td><td>Laringoespasmo total refratário com "cannot intubate, cannot oxygenate"</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+      <!-- BRONCOESPASMO -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">03</span> Broncoespasmo na SRPA
+        </div>
+        <div class="card-body">
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-orange">
+              <strong>DIAGNÓSTICO</strong><br>
+              • Wheezing expiratório (às vezes bifásico)<br>
+              • ↑ pressão de pico nas vias aéreas (se em ventilação mecânica)<br>
+              • ↑ ETCO₂ com capnograma em "dente de tubarão" (shark fin)<br>
+              • SpO₂ ↓ progressiva<br>
+              • Fatores: DPOC, asma, tabagismo, aspiração, reação alérgica, extubação em plano leve
+            </div>
+            <div class="alert a-teal">
+              <strong>DIAGNÓSTICO DIFERENCIAL</strong><br>
+              • Laringoespasmo: estridor inspiratório vs. wheezing expiratório<br>
+              • Pneumotórax: ↓murmúrio unilateral, hipertimpanismo<br>
+              • Aspiração: história de vômito, hipoxemia refratária<br>
+              • Edema pulmonar: crepitações bibasais, secreção rósea<br>
+              • Anafilaxia: urticária, hipotensão, broncoespasmo simultâneo
+            </div>
+          </div>
+
+          <div class="sh sh-orange">Tratamento do Broncoespasmo</div>
+          <div class="algo-box algo-r" style="margin-top:8px; margin-bottom:10px">
+            <strong>PASSO 1 — O₂ 100%:</strong> máscara com reservatório ou ventilação assistida<br>
+            <strong>PASSO 2 — Broncodilatador inalatório:</strong> <span class="drug-pill good">Salbutamol (albuterol) 2.5–5 mg nebulização</span> ou 4–8 puffs inalador dose-medida via circuito<br>
+            <strong>PASSO 3 — Aprofundar anestesia (se ainda anestesiado):</strong> <span class="drug-pill good">Propofol 0.5–1 mg/kg IV</span> ou <span class="drug-pill good">Ketamina 0.5–1 mg/kg IV</span> (broncodilatador intrínseco)<br>
+            <strong>PASSO 4 — Corticoide:</strong> <span class="drug-pill warn">Hidrocortisona 200 mg IV</span> ou metilprednisolona 1–2 mg/kg IV (efeito em 4–6h)<br>
+            <strong>PASSO 5 — Broncoespasmo refratário:</strong> adrenalina 0.3 mg SC ou 10–50 mcg IV + sulfato de magnésio 2 g IV em 20 min<br>
+            <strong>PASSO 6 — Anafilaxia?</strong> adrenalina 0.5 mg IM (face anterolateral da coxa), fluidos, anti-histamínico
+          </div>
+        </div>
+      </div>
+
+      <!-- HIPOTENSÃO -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">04</span> Hipotensão na SRPA
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            Hipotensão pós-operatória é definida como <strong>PA sistólica &lt;90 mmHg</strong> ou <strong>queda &gt;20% da PA basal</strong>. Pode indicar desde vasodilatação residual dos inalatórios até tamponamento cardíaco ou sangramento interno.
+          </div>
+
+          <div class="sh sh-orange">Causas e Algoritmo Diagnóstico</div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+            <thead><tr><th>Causa</th><th>Mecanismo</th><th>Pista</th><th>Tratamento-alvo</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Hipovolemia</strong></td><td>Sangramento, perda de 3.º espaço, evaporação</td><td>FC ↑, veias colabadas, PP estreito, ↑lactat</td><td>Cristaloide 250–500 mL IV em bolus</td></tr>
+              <tr><td><strong>Vasodilatação</strong></td><td>Inalatórios residuais, raqui/peridural, sepse precoce</td><td>FC normal ou ↓, extremidades quentes, PP largo</td><td>Vasopressor (fenilefrina ou norepinefrina)</td></tr>
+              <tr><td><strong>Bloqueio simpático (neuroaxial)</strong></td><td>Raqui/peridural → ↓RVS + ↓retorno venoso</td><td>Coincide com raqui ativa, bradicardia possível</td><td>Fenilefrina 100–200 mcg IV + cristaloide</td></tr>
+              <tr><td><strong>Cardiodepressão</strong></td><td>Opioides, β-bloqueadores, IC descompensada</td><td>FC ↓ ou normal, ↓DC, B3, crepitações</td><td>Dobutamina 2.5–10 mcg/kg/min + ecocardiograma</td></tr>
+              <tr><td><strong>Arritmia</strong></td><td>Fibrilação atrial, BAV, taquicardia ventricular</td><td>Irregularidade, ECG anormal</td><td>Protocolo ACLS específico</td></tr>
+              <tr><td><strong>Tamponamento</strong></td><td>Hemopericárdio pós-cirurgia cardíaca ou trauma</td><td>Tríade de Beck, PVC ↑, pulso paradoxal</td><td>Pericardiocentese de emergência</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="sh sh-teal">Algoritmo de Vasopressores na SRPA</div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <strong>FC normal ou ↑ + hipotensão:</strong> <span class="drug-pill warn">Fenilefrina 100 mcg IV</span> (vasoconstritor puro α1) → repetir a cada 2–5 min se necessário; iniciar infusão contínua se &gt;3 doses<br><br>
+            <strong>FC baixa + hipotensão (bradicardia + hipotensão):</strong> <span class="drug-pill warn">Efedrina 10 mg IV</span> (α+β — ↑FC e ↑PA) → repetir a cada 3–5 min; máx 30 mg<br><br>
+            <strong>Hipotensão refratária + DC baixo confirmado:</strong> <span class="drug-pill warn">Dobutamina 2.5–10 mcg/kg/min</span> em infusão + norepinefrina 0.05–0.3 mcg/kg/min<br><br>
+            <strong>Suspeita de anafilaxia:</strong> <span class="drug-pill bad">Adrenalina 0.3–0.5 mg IM</span> imediatamente + fluidos 1 L cristaloide em bolus
+          </div>
+        </div>
+      </div>
+
+      <!-- NVPO -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">05</span> NVPO na SRPA — Manejo de Resgate
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            Náuseas e vômitos pós-operatórios (NVPO) afetam <strong>20–30%</strong> dos pacientes, chegando a <strong>70–80%</strong> nos de alto risco (score Apfel ≥3). O manejo na SRPA deve usar classes diferentes das utilizadas na profilaxia intraoperatória — não repetir o mesmo mecanismo.
+          </div>
+
+          <div class="sh sh-orange">Antieméticos de Resgate na SRPA</div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+            <thead><tr><th style="white-space:nowrap">Fármaco</th><th>Dose de Resgate</th><th>Mecanismo</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Ondansetrona</strong></td><td>4 mg IV lento (2 min)</td><td>5-HT3 antagonista</td><td>Usar somente se não recebeu profilaxia com ondansetrona. Intervalo mínimo 4h.</td></tr>
+              <tr><td><strong>Haloperidol</strong></td><td>0.5–1 mg IV/IM</td><td>D2 antagonista</td><td>Eficaz, baixo custo; monitorizar QTc se dose alta</td></tr>
+              <tr><td><strong>Prometazina</strong></td><td>12.5–25 mg IV/IM</td><td>H1 + D2 antagonista</td><td>Sedação significativa; usar com cautela em idosos</td></tr>
+              <tr><td><strong>Droperidol</strong></td><td>0.625–1.25 mg IV</td><td>D2 antagonista</td><td>Muito eficaz; monitorizar QTc; alerta FDA para arritmias (doses altas)</td></tr>
+              <tr><td><strong>Dexametasona</strong></td><td>4–8 mg IV</td><td>Anti-inflamatório / mecanismo incerto</td><td>Se não usada na indução; efeito em 30–60 min</td></tr>
+              <tr><td><strong>Escopolamina transdérmica</strong></td><td>1 patch retroauricular</td><td>Anticolinérgico</td><td>Aplicar antes ou no início da SRPA; efeito em 2–4h</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="algo-box algo-g">
+            <strong>PRINCÍPIO DO RESGATE:</strong> Não repetir a mesma classe farmacológica usada na profilaxia. Alternar mecanismos: 5-HT3 + D2 + corticoide + anticolinérgico. NVPO persistente &gt;30 min após 2 drogas → hidratação IV, investigar causa (hipotensão, dor, opioides), considerar anestesiologista.
+          </div>
+        </div>
+      </div>
+
+      <!-- DOR AGUDA -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">06</span> Dor Aguda Pós-Operatória na SRPA
+        </div>
+        <div class="card-body">
+          <div class="g2" style="margin-bottom:12px">
+            <div class="algo-box algo-r">
+              <strong>EVN ≥7 — DOR GRAVE</strong><br>
+              • <span class="drug-pill bad">Morfina 2–4 mg IV</span> a cada 5–10 min até EVN ≤3 (titulação)<br>
+              • Ou <span class="drug-pill warn">Fentanil 25–50 mcg IV</span> a cada 5 min (início mais rápido)<br>
+              • Máx: morfina 10 mg em 30 min sem supervisão médica<br>
+              • Monitorizar FR, SpO₂, nível de consciência durante titulação<br>
+              • Associar AINE IV (se não contraindicado) para poupança de opioide
+            </div>
+            <div class="algo-box algo-g">
+              <strong>EVN 4–6 — DOR MODERADA</strong><br>
+              • <span class="drug-pill good">Dipirona 1 g IV</span> + <span class="drug-pill good">Cetorolaco 30 mg IV</span> (ou ibuprofeno 400 mg VO)<br>
+              • Opioide fraco: tramadol 50–100 mg IV (cautela — ↑NVPO) ou codeína 30 mg VO<br>
+              • Reavaliar EVN em 20–30 min; se persistir ≥4, escalar para opioide forte<br>
+              • Considerar bloqueio regional (TAP block, infiltração local) se viável
+            </div>
+          </div>
+          <div class="algo-box algo-g">
+            <strong>ANALGESIA MULTIMODAL — SEMPRE:</strong> Associar diferentes mecanismos para reduzir consumo de opioides e seus efeitos adversos. Paracetamol 1 g IV (se não dado no CO) + AINE/dipirona + opioide de resgate (não como único agente). Em dor neuropática, considerar gabapentina 300 mg VO ou cetamina 0.1–0.2 mg/kg/h em infusão.
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUEIO RESIDUAL -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">07</span> Bloqueio Neuromuscular Residual na SRPA
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            O bloqueio neuromuscular residual (BNMR) — definido como <strong>TOF ratio &lt;0.9</strong> — está presente em até <strong>20–40%</strong> dos pacientes que chegam à SRPA quando não se usa monitorização quantitativa ou reversão sistemática. Associa-se a hipoxemia, aspiração, reintubação e maior mortalidade.
+          </div>
+
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+            <thead><tr><th>TOF Ratio</th><th>Manifestação Clínica</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td>&lt;0.4</td><td>Apneia ou FR muito baixa, sem tosse, sem força nas mãos</td><td>Suporte ventilatório + reversão urgente</td></tr>
+              <tr><td>0.4–0.7</td><td>Visão dupla, dificuldade de deglutir, fraqueza importante</td><td>Reversão imediata + suporte</td></tr>
+              <tr><td>0.7–0.9</td><td>Fraqueza sutil, risco de aspiração, hipoxemia ao esforço</td><td>Reversão farmacológica obrigatória</td></tr>
+              <tr><td>&gt;0.9</td><td>Recuperação completa — força normal, proteção de VA adequada</td><td>Nenhuma intervenção adicional necessária</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="sh sh-orange">Reversão do Bloqueio Neuromuscular</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="algo-box algo-r">
+              <strong>ROCURÔNIO / VECURÔNIO</strong><br>
+              <span class="drug-pill bad">Sugamadex 2 mg/kg</span> (TOF ≥2 respostas)<br>
+              <span class="drug-pill bad">Sugamadex 4 mg/kg</span> (TOF 0–1 resposta)<br>
+              <span class="drug-pill bad">Sugamadex 16 mg/kg</span> (reversão imediata — emergência)<br>
+              • Início: 2–3 min; reversão completa em 5 min<br>
+              • Monitorizar TOF ratio pós-reversão (alvo &gt;0.9)
+            </div>
+            <div class="algo-box algo-g">
+              <strong>ATRACÚRIO / CISATRACÚRIO</strong><br>
+              <span class="drug-pill warn">Neostigmina 50 mcg/kg IV</span> (máx 5 mg)<br>
+              + <span class="drug-pill warn">Atropina 20 mcg/kg IV</span> (para bloquear bradicardia)<br>
+              • Ou <span class="drug-pill warn">Glicopirrolato 10 mcg/kg</span> (menos taquicardia)<br>
+              • Aguardar mínimo de 15 min após dose para nova avaliação<br>
+              • Não reverter sem pelo menos TOF ≥4 respostas (neostigmina)
+            </div>
+          </div>
+          <div class="algo-box algo-r" style="margin-top:10px">
+            <strong>REGRA ABSOLUTA:</strong> Não dar alta da SRPA com suspeita clínica de bloqueio residual, mesmo que Aldrete ≥9. A fraqueza residual sutil não é captada pela escala de Aldrete. Medir TOF ratio (aceleromiografia quantitativa) antes da alta — alvo &gt;0.9 confirmado.
+          </div>
+        </div>
+      </div>
+
+      <!-- HIPOTERMIA E TREMORES -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">08</span> Hipotermia e Tremores Pós-Anestésicos
+        </div>
+        <div class="card-body">
+          <div class="g2" style="margin-bottom:12px">
+            <div class="alert a-orange">
+              <strong>HIPOTERMIA PÓS-ANESTÉSICA</strong><br>
+              • Temperatura central &lt;36°C ao chegar na SRPA<br>
+              • Causas: inalatórios (↓termogênese), ambiente frio, infusão IV fria, cavidades abertas<br>
+              • Consequências: tremores, ↑consumo O₂ (até 400%), coagulopatia, ↑infecção de sítio, demora na reversão de BNM<br>
+              • <strong>Aquecimento:</strong> cobertor de ar forçado (Bair Hugger) — mais eficaz; fluidos IV aquecidos (42°C); colchão térmico
+            </div>
+            <div class="alert a-teal">
+              <strong>TREMORES PÓS-ANESTÉSICOS</strong><br>
+              • Incidência: 5–65% (maior após anestesia inalatória, raqui, cirurgia longa)<br>
+              • Mecanismo: termorregulatório + efeito direto de inalatórios no SNC<br>
+              • Consequências: ↑consumo O₂, desconforto severo, ↑PIC, ↑PIO<br>
+              • Diferencial: tremores × convulsões × tremor extrapiramidal
+            </div>
+          </div>
+
+          <div class="sh sh-orange">Tratamento dos Tremores Pós-Anestésicos</div>
+<div class="tbl-wrap wide">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th style="white-space:nowrap">Fármaco</th><th>Dose</th><th>Mecanismo</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Meperidina (petidina)</strong></td><td>25 mg IV</td><td>κ-opioide agonista (mecanismo antitremore único)</td><td>Primeira escolha — eficácia comprovada; cuidado em ICC, convulsões</td></tr>
+              <tr><td><strong>Sulfato de Magnésio</strong></td><td>30 mg/kg IV em 15 min</td><td>Bloqueio de NMDA, estabilização de membrana</td><td>Excelente perfil de segurança; monitorizar reflexo patelar</td></tr>
+              <tr><td><strong>Dexmedetomidina</strong></td><td>0.5–1 mcg/kg IV em 10 min</td><td>α2-agonista central</td><td>Também reduz NVPO e agitação no despertar; monitorizar PA</td></tr>
+              <tr><td><strong>Clonidina</strong></td><td>75–150 mcg IV lento</td><td>α2-agonista</td><td>Alternativa à dexmedetomidina; hipotensão possível</td></tr>
+              <tr><td><strong>Tramadol</strong></td><td>1 mg/kg IV</td><td>Agonismo serotoninérgico + μ-opioide</td><td>Útil se dor concomitante; risco de NVPO</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /srpa-eventos -->
+
+  <!-- TAB 4 — DELIRIUM / DISFUNÇÃO COGNITIVA -->
+  <div class="tab-panel" id="srpa-delirium">
+    <div class="page-wrap">
+
+      <!-- DPO -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">01</span> Delirium Pós-Operatório (DPO)
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            O <strong>Delirium Pós-Operatório (DPO)</strong> é uma síndrome neuropsiquiátrica aguda caracterizada por distúrbio da atenção, consciência e cognição, com curso flutuante. Incide em <strong>10–60%</strong> dos idosos após cirurgia de grande porte, com pico entre <strong>24–72h pós-operatório</strong>. Associa-se a maior mortalidade, internação prolongada e progressão para demência.
+          </div>
+
+          <div class="sh sh-orange">Diagnóstico — CAM (Confusion Assessment Method)</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+            <thead><tr><th>#</th><th>Critério CAM</th><th>Como Avaliar</th></tr></thead>
+            <tbody>
+              <tr><td><strong>1</strong></td><td><strong>Início agudo + curso flutuante</strong></td><td>Mudança aguda do estado mental em relação ao basal + flutuação ao longo do dia</td></tr>
+              <tr><td><strong>2</strong></td><td><strong>Desatenção</strong></td><td>Dificuldade em focar atenção → pedir que memorize e repita 5 palavras ou contar de trás para frente</td></tr>
+              <tr><td><strong>3</strong></td><td><strong>Pensamento desorganizado</strong></td><td>Fala incoerente, mudança de assunto, fluxo ilógico de ideias</td></tr>
+              <tr><td><strong>4</strong></td><td><strong>Nível de consciência alterado</strong></td><td>Hiperalerta, lentificado, estuporoso ou em coma</td></tr>
+            </tbody>
+          </table></div>
+</div>
+          <div class="algo-box algo-g" style="margin-bottom:14px">
+            <strong>DIAGNÓSTICO DE DPO PELO CAM:</strong> Critérios <strong>1 + 2</strong> obrigatórios, <strong>MAIS</strong> critério <strong>3 OU 4</strong>. Sensibilidade 94–100%, especificidade 90–95% para delirium quando aplicado por examinadores treinados.
+          </div>
+
+          <div class="sh sh-orange">Subtipos de Delirium Pós-Operatório</div>
+          <div class="g3" style="margin-top:8px; margin-bottom:14px">
+            <div class="alert a-orange">
+              <strong>HIPERATIVO (20–25%)</strong><br>
+              • Agitação, agressividade<br>
+              • Vocalização inapropriada<br>
+              • Arranca acessos e cateteres<br>
+              • Alucinações visuais<br>
+              • Fácil diagnóstico — visível
+            </div>
+            <div class="alert a-teal">
+              <strong>HIPOATIVO (50%)</strong><br>
+              • Sonolência excessiva<br>
+              • Lentificação psicomotora<br>
+              • Resposta lentificada<br>
+              • Inatividade e quietude<br>
+              • Frequentemente não diagnosticado
+            </div>
+            <div class="alert a-gold">
+              <strong>MISTO (25–30%)</strong><br>
+              • Alternância entre hiper e hipoativo<br>
+              • Mais comum em idosos<br>
+              • Pior prognóstico<br>
+              • CAM positivo — confirma diagnóstico
+            </div>
+          </div>
+
+          <div class="sh sh-teal">Fatores de Risco para DPO</div>
+          <div class="g2" style="margin-top:8px; margin-bottom:12px">
+            <div class="alert a-teal">
+              <strong>FATORES PREDISPONENTES (pré-op)</strong><br>
+              • Idade &gt;65 anos<br>
+              • Demência ou comprometimento cognitivo basal<br>
+              • Polifarmácia (especialmente anticolinérgicos, benzodiazepínicos)<br>
+              • Depressão / ansiedade<br>
+              • Histórico de delirium prévio<br>
+              • Dependência de álcool<br>
+              • Déficit visual/auditivo não corrigido<br>
+              • Desnutrição e desidratação
+            </div>
+            <div class="alert a-orange">
+              <strong>FATORES PRECIPITANTES (peri-op)</strong><br>
+              • Hipotensão intraoperatória sustentada<br>
+              • Privação de sono<br>
+              • Dor não controlada<br>
+              • Retenção urinária / globo vesical<br>
+              • Constipação<br>
+              • Imobilidade prolongada<br>
+              • Cateter urinário (desorientação)<br>
+              • Desequilíbrio eletrolítico (Na⁺, Ca²⁺)<br>
+              • Infecção (ITU, pneumonia)
+            </div>
+          </div>
+
+          <div class="sh sh-orange">Prevenção — Protocolo HELP (Hospital Elder Life Program)</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+            <thead><tr><th>Domínio</th><th>Intervenção</th><th>Evidência</th></tr></thead>
+            <tbody>
+              <tr><td>Orientação temporal e espacial</td><td>Relógio visível, calendário, luz natural, reorientação verbal frequente</td><td>↓DPO 40% no estudo original Yale</td></tr>
+              <tr><td>Mobilização precoce</td><td>Sentar no leito em 6h, deambular com apoio em 24h</td><td>↓Duração de delirium, ↓mortalidade</td></tr>
+              <tr><td>Controle da dor</td><td>EVN ≤3, analgesia multimodal, evitar opioides em excesso</td><td>Dor não tratada é forte precipitante</td></tr>
+              <tr><td>Hidratação adequada</td><td>VO precoce, restrição de jejum desnecessário, monitorizar balanço</td><td>Desidratação associa-se a ↑DPO</td></tr>
+              <tr><td>Sono preservado</td><td>Reduzir ruídos noturnos, consolidar medicações noturnas, evitar verificações desnecessárias</td><td>Privação de sono precipita delirium</td></tr>
+              <tr><td>Órteses sensoriais</td><td>Devolver óculos, aparelho auditivo e dentadura precocemente</td><td>Déficit sensorial desencadeia DPO</td></tr>
+              <tr><td>Farmacológico</td><td>Evitar benzodiazepínicos, anticolinérgicos, anti-histamínicos em idosos</td><td>Critérios de Beers — medicamentos de alto risco</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="sh sh-orange">Tratamento do Delirium Pós-Operatório</div>
+          <div class="algo-box algo-g" style="margin-top:8px; margin-bottom:10px">
+            <strong>PRIMEIRO: MEDIDAS NÃO FARMACOLÓGICAS</strong><br>
+            • Reorientação verbal frequente ("Você está em recuperação, a cirurgia foi bem…")<br>
+            • Presença de familiar/acompanhante familiar<br>
+            • Reduzir estímulos excessivos + garantir silêncio noturno<br>
+            • Investigar e tratar causas precipitantes: dor, retenção urinária, hipóxia, eletrólitos<br>
+            • Retirar contenção física (piora agitação)
+          </div>
+          <div class="g2" style="margin-bottom:12px">
+            <div class="algo-box algo-r">
+              <strong>AGITAÇÃO GRAVE (DPO HIPERATIVO)</strong><br>
+              <span class="drug-pill bad">Haloperidol 0.5–1 mg IV/IM</span><br>
+              • Repetir a cada 30 min se necessário (máx 3 mg/24h)<br>
+              • Monitorizar QTc (evitar se QTc &gt;500 ms)<br>
+              • <strong>NOTA:</strong> Haloperidol NÃO reduz incidência de delirium (ESAIC 2024) — uso apenas para controle de agitação perigosa<br>
+              • Evitar benzodiazepínicos (pioram delirium — exceto abstinência alcoólica)
+            </div>
+            <div class="algo-box algo-g">
+              <strong>DELIRIUM HIPOATIVO / MISTO</strong><br>
+              <span class="drug-pill warn">Quetiapina 12.5–25 mg VO</span> se delirium &gt;24h<br>
+              • Início: 12.5 mg 2x/dia; aumentar lentamente<br>
+              • Alternativa: <span class="drug-pill warn">Olanzapina 2.5 mg VO/IM</span><br>
+              • Dexmedetomidina (se em VM): ↓duração de delirium em UTI<br>
+              • Tratar causa de base SEMPRE
+            </div>
+          </div>
+
+          <div class="algo-box algo-r">
+            <strong>ESAIC GUIDELINE 2024 — PONTOS PRINCIPAIS:</strong><br>
+            • Haloperidol profilático <strong>NÃO</strong> reduz incidência de DPO — não usar de rotina<br>
+            • Dexmedetomidina pode reduzir DPO em pacientes de UTI — evidência moderada<br>
+            • Ketamina em dose subanestésica: resultados conflitantes — não recomendada como rotina<br>
+            • Prevenção multimodal não farmacológica (HELP) tem MAIOR impacto na incidência e duração
+          </div>
+        </div>
+      </div>
+
+      <!-- DCPO -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">02</span> Disfunção Cognitiva Pós-Operatória (DCPO)
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:10px">
+            A <strong>Disfunção Cognitiva Pós-Operatória (DCPO)</strong> é um déficit cognitivo persistente detectado por testes neuropsicológicos em comparação ao estado pré-operatório, durando <strong>&gt;30 dias após a cirurgia</strong>. Difere do delirium (que é agudo e flutuante) e é frequentemente subclínico — paciente pode não perceber, mas familiares relatam mudanças.
+          </div>
+
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+            <thead><tr><th>Característica</th><th>Delirium Pós-Op (DPO)</th><th>Disfunção Cognitiva Pós-Op (DCPO)</th></tr></thead>
+            <tbody>
+              <tr><td>Início</td><td>Agudo (horas a dias)</td><td>Insidioso (semanas a meses)</td></tr>
+              <tr><td>Curso</td><td>Flutuante, geralmente reversível</td><td>Persistente (&gt;30 dias), pode ser permanente</td></tr>
+              <tr><td>Diagnóstico</td><td>Clínico — CAM</td><td>Testes neuropsicológicos (comparação pré/pós)</td></tr>
+              <tr><td>Incidência idosos</td><td>10–60% (cirurgia maior)</td><td>10–15% (não-cardíaca); até 30% cardíaca</td></tr>
+              <tr><td>Relação com delirium</td><td>—</td><td>Delirium pós-op aumenta risco de DCPO</td></tr>
+              <tr><td>Impacto</td><td>Internação, mortalidade a curto prazo</td><td>Perda de autonomia, progressão para demência</td></tr>
+            </tbody>
+          </table></div>
+</div>
+
+          <div class="sh sh-orange">Fatores de Risco para DCPO</div>
+          <div class="g2" style="margin-top:8px; margin-bottom:12px">
+            <div class="alert a-teal">
+              <strong>NÃO MODIFICÁVEIS</strong><br>
+              • Idade avançada (&gt;65 anos)<br>
+              • Baixa escolaridade<br>
+              • AVC / AIT prévio<br>
+              • Comprometimento cognitivo basal<br>
+              • Cirurgia cardíaca (maior risco)<br>
+              • Cirurgia de grande porte / prolongada
+            </div>
+            <div class="alert a-orange">
+              <strong>POTENCIALMENTE MODIFICÁVEIS</strong><br>
+              • Hipotensão intraoperatória sustentada (&gt;10 min &lt;65 mmHg)<br>
+              • Hipóxia intraoperatória (SpO₂ &lt;94% &gt;10 min)<br>
+              • Uso de benzodiazepínicos perioperatórios<br>
+              • Inflamação sistêmica pós-op (IL-6, TNF-α)<br>
+              • Microembolia (cirurgia cardíaca com CEC)<br>
+              • Dor não controlada + privação de sono
+            </div>
+          </div>
+
+          <div class="sh sh-teal">Estratégias de Prevenção da DCPO</div>
+<div class="tbl-wrap">
+          <div class="tbl-wrap" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Estratégia</th><th>Evidência</th><th>Aplicação Prática</th></tr></thead>
+            <tbody>
+              <tr><td>Anestesia regional (quando possível)</td><td>Moderada — menos exposição a agentes sistêmicos</td><td>Preferir raqui/peridural em cirurgias ortopédicas, obstétricas</td></tr>
+              <tr><td>Dexmedetomidina perioperatória</td><td>Moderada — ↓DCPO em estudos de cirurgia cardíaca</td><td>0.4–0.8 mcg/kg/h intraoperatório em idosos de alto risco</td></tr>
+              <tr><td>Evitar benzodiazepínicos</td><td>Forte — BZD aumentam risco de delirium e DCPO</td><td>Não usar midazolam de rotina em idosos (&gt;65 anos)</td></tr>
+              <tr><td>Controle estrito de PA intraoperatória</td><td>Moderada — hipotensão &gt;10 min associada a DCPO</td><td>Manter PAM ≥65 mmHg durante toda a cirurgia</td></tr>
+              <tr><td>Anestesia guiada por BIS</td><td>Moderada — ↓superdosagem de inalatórios</td><td>BIS 40–60; evitar surto-supressão em idosos</td></tr>
+              <tr><td>Controle glicêmico perioperatório</td><td>Moderada</td><td>Glicemia 140–180 mg/dL; evitar hipoglicemia</td></tr>
+            </tbody>
+          </table></div>
+</div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /srpa-delirium -->
+
+  <!-- TAB 5 — CHECKLIST -->
+  <div class="tab-panel" id="srpa-checklist">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">✓</span> Checklist SRPA — Alta Segura
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange" style="margin-bottom:14px">
+            Execute este checklist antes de autorizar a alta da SRPA. Toque em cada item para marcar como verificado. <strong>Todos os itens devem estar marcados</strong> ou justificados em prontuário antes da transferência.
+          </div>
+
+          <div class="sh sh-orange" style="margin-bottom:10px">Parâmetros Fisiológicos</div>
+
+          <ul class="ck-list" style="list-style:none; padding:0; margin:0 0 16px 0">
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>Aldrete ≥9 pontos registrado</strong> — pontuação documentada com horário em prontuário</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>SpO₂ &gt;92% em ar ambiente</strong> por no mínimo 5 minutos consecutivos (sem O₂ suplementar)</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>PA dentro de 20% do basal pré-operatório</strong> — PA sistólica e diastólica avaliadas</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>FC entre 50–100 bpm</strong> — ritmo sinusal ou arritmia conhecida e estável</span></li>
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>Temperatura ≥36°C</strong> — normotermia confirmada; se &lt;36°C, continuar aquecimento ativo</span></li>
+          </ul>
+
+          <div class="sh sh-teal" style="margin-bottom:10px">Controle de Sintomas</div>
+
+          <ul class="ck-list" style="list-style:none; padding:0; margin:0 0 16px 0">
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>Dor EVN ≤3</strong> — avaliada em repouso; plano de analgesia pós-alta definido</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>NVPO ausente ou controlado</strong> — sem vômito ativo; tolerância a líquidos por ≥15 min</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>Diurese adequada</strong> — &gt;0.5 mL/kg/h confirmada; bexiga não palpável clinicamente</span></li>
+          </ul>
+
+          <div class="sh sh-orange" style="margin-bottom:10px">Bloqueio Neuromuscular e Regional</div>
+
+          <ul class="ck-list" style="list-style:none; padding:0; margin:0 0 16px 0">
+            <li class="ck-item crit" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>TOF ratio ≥0.9 confirmado</strong> — medição quantitativa documentada; ou reversão completa com sugamadex/neostigmina registrada</span></li>
+            <li class="ck-item warn" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>Bloqueio regional: instruções dadas ao paciente e acompanhante</strong> — risco de queda, proteção do membro, sinais de alarme (dor em queimação, fraqueza progressiva após retorno)</span></li>
+          </ul>
+
+          <div class="sh sh-teal" style="margin-bottom:10px">Documentação e Organização da Alta</div>
+
+          <ul class="ck-list" style="list-style:none; padding:0; margin:0 0 16px 0">
+            <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>Analgesia pós-alta prescrita e dispensada</strong> — via oral; paciente instruído sobre horários e doses máximas</span></li>
+            <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box ck-chk"></span><span class="ck-text"><strong>Responsável pela alta identificado</strong> — anestesiologista ou médico assistente registrado em prontuário com CRM e horário</span></li>
+          </ul>
+
+          <div class="algo-box algo-g" style="margin-top:10px">
+            <strong>ALTA SEGURA:</strong> Todos os itens críticos (vermelhos) devem estar marcados. Itens de aviso (amarelos) devem estar marcados ou ter justificativa documentada. Itens informativos (verdes) confirmam completude do processo. Registrar Aldrete final, horário da alta e destino (enfermaria/domicílio).
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /srpa-checklist -->
+
+  <!-- TAB REVISÃO — SRPA -->
+  <div class="tab-panel" id="srpa-revisao">
+    <div class="page-wrap">
+      <div class="alert a-orange" style="margin-bottom:12px">
+        <strong>Revisão Rápida — 10 pontos-chave da SRPA</strong>
+      </div>
+      <ol style="font-size:13px;line-height:2;padding-left:18px">
+        <li><strong>Aldrete ≥9:</strong> critério de alta da SRPA para enfermaria · avaliar atividade motora, respiração, circulação, consciência e SpO₂</li>
+        <li><strong>PADSS ≥9:</strong> alta domiciliar em cirurgia ambulatorial · 5 critérios: sinais vitais, deambulação, NVPO, dor, sangramento</li>
+        <li><strong>Hipoxemia na SRPA:</strong> causa mais comum = hipoventilação por opioides · SpO₂ &lt;92% → estimular + oxigênio + checar TOF</li>
+        <li><strong>Laringoespasmo:</strong> manobra de Larson (pressão em processos mastoides) → propofol 0.5 mg/kg → succinilcolina 0.1 mg/kg</li>
+        <li><strong>Bloqueio residual pós-op:</strong> TOF &lt;0.9 → sugamadex 2 mg/kg (rocurônio/vecurônio) ou neostigmina (atracúrio)</li>
+        <li><strong>NVPO resgate na SRPA:</strong> usar classe diferente da profilaxia · haloperidol 0.5 mg ou prometazina 12.5 mg</li>
+        <li><strong>Hipotensão pós-op:</strong> algoritmo — volemiar (250 mL) → vasopressor (efedrina se bradicardia · fenilefrina se taquicardia)</li>
+        <li><strong>Delirium pós-operatório (DPO):</strong> CAM positivo = início agudo + flutuação + desatenção + consciência alterada</li>
+        <li><strong>ESAIC 2024:</strong> haloperidol NÃO reduz incidência de DPO — usar apenas para controle de agitação grave</li>
+        <li><strong>Fast-track:</strong> bypass de SRPA convencional → exige BIS &gt;80 + TOF &gt;0.9 + dor ≤3 + NVPO ausente + hemodinâmica estável</li>
+      </ol>
+    </div>
+  </div><!-- /srpa-revisao -->
+
+  <!-- TAB QUESTÕES — SRPA -->
+  <div class="tab-panel" id="srpa-questoes">
+    <div class="page-wrap">
+      <div class="alert a-orange" style="margin-bottom:12px">
+        <strong>Questões — SRPA</strong><br>
+        <span style="font-size:11px;font-weight:400">Clique em cada questão para revelar o gabarito.</span>
+      </div>
+
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">1</div>
+          <div class="caso-title">QUESTÃO 1 — CRITÉRIO DE ALTA ALDRETE</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Paciente no pós-operatório imediato na SRPA apresenta escore de Aldrete de 8 pontos após 30 minutos. A enfermeira pergunta se pode liberar para a enfermaria. Qual a conduta?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Sim — Aldrete ≥8 é suficiente para alta<br>B) Não — mínimo 9 pontos para alta da SRPA<br>C) Sim — se paciente estiver acordado e sem dor<br>D) Sim — Aldrete 8 com estabilidade clínica é equivalente a 9<br>E) Depende do tipo de cirurgia realizada</p>
+          <div class="caso-answer"><strong>Gabarito: B)</strong> — O critério de alta da SRPA para enfermaria é Aldrete ≥9 pontos, com SpO₂ pontuando 2 (≥92% em ar ambiente por ≥5 min) e sem nenhum parâmetro zerado. Aldrete 8 exige discussão com anestesiologista responsável e monitoração por mais tempo.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">2</div>
+          <div class="caso-title">QUESTÃO 2 — LARINGOESPASMO</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Paciente pós-extubação na SRPA apresenta laringoespasmo com estridor. Após CPAP com máscara e manobra de Larson sem resolução, qual o próximo passo?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Aumentar FiO₂ e aguardar resolução espontânea<br>B) Propofol 0.5 mg/kg IV imediatamente<br>C) Succinilcolina 1.5 mg/kg IV como primeiro passo<br>D) Reintubação imediata sem drogas<br>E) Adrenalina nebulizada</p>
+          <div class="caso-answer"><strong>Gabarito: B)</strong> — Sequência do laringoespasmo: (1) CPAP + manobra de Larson; (2) propofol 0.5 mg/kg IV; (3) se persistir → succinilcolina 0.1 mg/kg IV (ou 4 mg/kg IM se sem acesso). Propofol vem antes da succinilcolina pois pode resolver o espasmo sem necessidade de bloqueio neuromuscular.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">3</div>
+          <div class="caso-title">QUESTÃO 3 — BLOQUEIO RESIDUAL</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Paciente no pós-operatório apresenta fraqueza muscular residual com TOF 2 respostas (TOF ratio ~0.5) após uso de rocurônio. Qual a melhor opção de reversão?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Neostigmina 0.05 mg/kg + atropina<br>B) Aguardar metabolização espontânea<br>C) Sugamadex 2 mg/kg IV<br>D) Fisostigmina 1 mg IV<br>E) Sugamadex 16 mg/kg IV — dose de resgate</p>
+          <div class="caso-answer"><strong>Gabarito: C)</strong> — Para reversão de bloqueio residual por rocurônio ou vecurônio, o sugamadex 2 mg/kg é superior à neostigmina. TOF 2 respostas indica bloqueio moderado (TOF ratio ~0.5) — dose padrão: sugamadex 2 mg/kg. Bloqueio profundo (0 resposta): 4 mg/kg. Reversão imediata emergência: 16 mg/kg.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">4</div>
+          <div class="caso-title">QUESTÃO 4 — DELIRIUM PÓS-OPERATÓRIO</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Idoso de 78 anos no 1º dia pós-op de cirurgia de quadril. Equipe cogita administrar haloperidol profilático para prevenir delirium pós-operatório (DPO). Segundo as evidências mais recentes, isso está indicado?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Sim — haloperidol profilático reduz incidência de DPO<br>B) Sim — em idosos &gt;70 anos sempre indicado após cirurgia maior<br>C) Não — ESAIC 2024: haloperidol não reduz incidência de DPO<br>D) Sim — mas apenas se CAM positivo<br>E) Sim — dose baixa (0.5 mg) é segura e eficaz</p>
+          <div class="caso-answer"><strong>Gabarito: C)</strong> — Segundo as diretrizes ESAIC 2024, o haloperidol NÃO reduz a incidência de delirium pós-operatório. Seu uso se restringe ao controle de agitação grave em DPO estabelecido. Medidas preventivas eficazes: reorientação, mobilização precoce, evitar benzodiazepínicos, controle da dor, hidratação adequada.</div>
+        </div>
+      </div>
+
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <div class="caso-num">5</div>
+          <div class="caso-title">QUESTÃO 5 — PADSS SCORE</div>
+          <div class="caso-arrow">›</div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-question">Paciente submetido a colecistectomia laparoscópica ambulatorial. Qual escore utilizar para critério de alta domiciliar e qual a pontuação mínima?</div>
+          <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+          <p style="font-size:12px;line-height:1.8">A) Aldrete ≥9 — mesmo critério da alta para enfermaria<br>B) PADSS ≥9 — avalia sinais vitais, deambulação, NVPO, dor e sangramento<br>C) White ≥12 — escala de alta ambulatorial<br>D) Ramsay ≤2 — escala de sedação<br>E) Não há critério formal — decisão médica subjetiva</p>
+          <div class="caso-answer"><strong>Gabarito: B)</strong> — O PADSS (Post-Anesthetic Discharge Scoring System) é o critério de alta domiciliar em cirurgia ambulatorial. Pontua 5 domínios (0–2 cada): sinais vitais, deambulação, NVPO, dor e sangramento cirúrgico. Mínimo 9/10 pontos para alta. Diferente do Aldrete, que avalia alta da SRPA para enfermaria hospitalar.</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /srpa-questoes -->
+
+  <!-- TAB 6 — CASOS CLÍNICOS -->
+  <div class="tab-panel" id="srpa-casos">
+    <div class="page-wrap">
+
+      <!-- CASO 1 -->
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 1</span>
+          <span class="caso-title">Pós-Colecistectomia Laparoscópica — SpO₂ 88%, FR 6, Paciente Sonolento na SRPA</span>
+        </div>
+        <div class="caso-body">
+          <p><strong>Paciente:</strong> Feminino, 52 anos, 78 kg, IMC 28. Colecistectomia laparoscópica de urgência por colecistite aguda. Duração: 90 min. Anestesia geral balanceada: indução com propofol + fentanil 200 mcg + rocurônio 50 mg; manutenção com sevoflurano. Neostigmina + atropina ao fim. Chegou à SRPA 45 min atrás. Enfermeira alerta: SpO₂ 88%, FR 6, paciente difícil de acordar, com leve estridor ao respirar.</p>
+
+          <div class="caso-question">Quais são as hipóteses diagnósticas? Qual é a mais provável? Detalhe a conduta passo a passo.</div>
+          <div class="caso-answer">
+
+            <div class="sh sh-orange">Análise das Hipóteses Diagnósticas</div>
+<div class="tbl-wrap wide">
+            <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+              <thead><tr><th>Hipótese</th><th>A favor</th><th>Contra</th><th>Probabilidade</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Bloqueio residual (BNM)</strong></td><td>FR 6, sonolência, neostigmina usada (não sugamadex), rocurônio</td><td>—</td><td style="color:var(--orange)"><strong>Alta</strong></td></tr>
+                <tr><td><strong>Depressão por opioides</strong></td><td>Fentanil 200 mcg no intraoperatório, FR 6, sonolência</td><td>—</td><td style="color:var(--orange)"><strong>Alta</strong></td></tr>
+                <tr><td><strong>Sedativos residuais</strong></td><td>Propofol + sevoflurano na indução/manutenção, sonolência</td><td>90 min de cirurgia — deveriam estar eliminados</td><td>Moderada</td></tr>
+                <tr><td><strong>Laringoespasmo parcial</strong></td><td>Estridor leve relatado</td><td>SpO₂ progressivamente baixa (não abrupta), FR 6 (hipoventilação)</td><td>Baixa-moderada</td></tr>
+                <tr><td><strong>Aspiração</strong></td><td>Cirurgia urgência (estômago cheio)</td><td>Sem história de vômito relatado</td><td>Baixa</td></tr>
+              </tbody>
+            </table></div>
+</div>
+
+            <div class="sh sh-teal">Conduta — Passo a Passo</div>
+
+            <div class="algo-box algo-r" style="margin-top:8px; margin-bottom:10px">
+              <strong>PASSO 1 — IMEDIATO (0–2 min):</strong><br>
+              • Chamar anestesiologista imediatamente — não aguardar piora<br>
+              • O₂ 100% por máscara facial com reservatório (10–15 L/min)<br>
+              • Elevar cabeceira 30–45° — melhora mecânica respiratória<br>
+              • Estimulação verbal intensa: "Respire fundo! Abra os olhos! Aperte minha mão!"<br>
+              • Monitorização contínua: SpO₂, FR, PA, ECG
+            </div>
+
+            <div class="algo-box algo-g" style="margin-bottom:10px">
+              <strong>PASSO 2 — AVALIAR TOF (2–5 min):</strong><br>
+              • Aplicar monitorização TOF no músculo ulnar → se &lt;4 respostas ou ratio &lt;0.9 → <strong>bloqueio residual confirmado</strong><br>
+              • Para rocurônio: <span class="drug-pill bad">Sugamadex 4 mg/kg IV</span> (TOF 0–1 resposta) ou <span class="drug-pill bad">Sugamadex 2 mg/kg IV</span> (TOF ≥2)<br>
+              • Início da reversão: 1–3 min<br>
+              • Nota: neostigmina usada previamente NÃO contraindica sugamadex — sugamadex é superior e não interage
+            </div>
+
+            <div class="algo-box algo-r" style="margin-bottom:10px">
+              <strong>PASSO 3 — SUSPEITA DE DEPRESSÃO POR OPIOIDE (simultâneo):</strong><br>
+              • FR 6 + sonolência + fentanil 200 mcg → <strong>alta suspeita de depressão opioide</strong><br>
+              • <span class="drug-pill warn">Naloxona 40 mcg IV</span> — diluição: 0.4 mg em 10 mL SF → 40 mcg/mL<br>
+              • Aplicar 40 mcg IV a cada 2–3 min até FR ≥12 ou melhora da consciência<br>
+              • Evitar dose única alta (0.4 mg) → dor aguda intensa + taquicardia + EAP<br>
+              • Duração naloxona 30–60 min &lt; fentanil residual → monitorizar ressedação 2h
+            </div>
+
+            <div class="algo-box algo-g" style="margin-bottom:10px">
+              <strong>PASSO 4 — REAVALIAR O "ESTRIDOR LEVE":</strong><br>
+              • Se O₂ + sugamadex + naloxona → SpO₂ melhora → estridor era por hipoventilação/secreções<br>
+              • Se estridor persistir após melhora do drive → suspeitar laringoespasmo parcial → manobra de Larson + CPAP<br>
+              • Se propofol disponível: 0.5 mg/kg IV para relaxar laringe<br>
+              • Auscultar pulmões: descartar broncoespasmo ou aspiração
+            </div>
+
+            <div class="algo-box algo-r">
+              <strong>SE SEM MELHORA EM 10 MIN:</strong><br>
+              • Ventilação com máscara + Ambu<br>
+              • Chamar equipe de VA difícil<br>
+              • Preparar para reintubação (propofol 1 mg/kg + succinilcolina 1 mg/kg)<br>
+              • Investigar pneumotórax, embolia pulmonar, EAP
+            </div>
+
+            <div class="algo-box algo-g" style="margin-top:10px">
+              <strong>CONDUTA FINAL:</strong> Este caso combina provavelmente bloqueio residual (reversão com neostigmina — inferior a sugamadex para rocurônio) + depressão respiratória por opioide. Conduta: O₂ + sugamadex 4 mg/kg + naloxona 40 mcg titulada. Observação mínima 2h adicionais na SRPA após reversão. Alta somente com TOF &gt;0.9 e SpO₂ &gt;94% em ar ambiente sustentada.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 2 -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 2</span>
+          <span class="caso-title">Pós-Artroplastia Total de Joelho, 70 Anos — Acordou Agitado, Desorientado, Arrancou o Acesso Venoso</span>
+        </div>
+        <div class="caso-body">
+          <p><strong>Paciente:</strong> Masculino, 70 anos, 85 kg. Artroplastia total de joelho direito sob anestesia geral (propofol + fentanil + rocurônio + sevoflurano, duração 2h30min). Histórico: hipertensão, DM2 controlado, uso crônico de losartana + metformina. Sem demência conhecida no pré-operatório. Na SRPA há 30 min: acordou subitamente agitado, desorientado, não reconhece a equipe, arrancou o acesso venoso e está tentando sair da maca. PA 160/100, FC 95, SpO₂ 97%, temperatura 36.8°C.</p>
+
+          <div class="caso-question">Laringoespasmo vs. delirium? Como aplicar o CAM? Qual é a conduta imediata e o plano de tratamento?</div>
+          <div class="caso-answer">
+
+            <div class="sh sh-orange">Diagnóstico Diferencial — Agitação no Despertar</div>
+            <div class="g2" style="margin-top:8px; margin-bottom:12px">
+              <div class="algo-box algo-r">
+                <strong>LARINGOESPASMO — Improvável neste caso</strong><br>
+                • Estaria com SpO₂ &lt;92% e estridor inspiratório<br>
+                • SpO₂ 97% → via aérea pérvia → descartado<br>
+                • Laringoespasmo não provoca desorientação sem hipoxemia
+              </div>
+              <div class="algo-box algo-g">
+                <strong>DELIRIUM — Mais provável</strong><br>
+                • 70 anos + cirurgia ortopédica maior + DM + HAS<br>
+                • Início agudo de agitação + desorientação → critérios 1+2 CAM<br>
+                • Não reconhece equipe → pensamento desorganizado (critério 3)
+              </div>
+            </div>
+
+            <div class="sh sh-teal">Aplicação do CAM neste Paciente</div>
+<div class="tbl-wrap">
+            <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+              <thead><tr><th>Critério CAM</th><th>Avaliação</th><th>Presente?</th></tr></thead>
+              <tbody>
+                <tr><td><strong>1. Início agudo + flutuante</strong></td><td>Mudança aguda em relação ao estado pré-op: estava calmo → acordou agitado de repente</td><td style="color:var(--orange)"><strong>SIM</strong></td></tr>
+                <tr><td><strong>2. Desatenção</strong></td><td>Testar: pedir que repita 5 palavras ou seguir comando simples ("mostre-me sua mão esquerda") → incapaz de focar</td><td style="color:var(--orange)"><strong>SIM — verificar</strong></td></tr>
+                <tr><td><strong>3. Pensamento desorganizado</strong></td><td>Não reconhece equipe, fala incoerente, tenta sair sem explicação lógica</td><td style="color:var(--orange)"><strong>SIM</strong></td></tr>
+                <tr><td><strong>4. Consciência alterada</strong></td><td>Hiperalerta (agitado e tenso, não tranqüilo)</td><td style="color:var(--orange)"><strong>SIM (hiperalerta)</strong></td></tr>
+              </tbody>
+            </table></div>
+</div>
+            <div class="algo-box algo-g" style="margin-bottom:12px">
+              <strong>CAM POSITIVO</strong> — Critérios 1+2+3 presentes = DPO hiperativo confirmado. Tipo de delirium: hiperativo (agitação psicomotora intensa, hiperalerta). Diagnóstico: Delirium Pós-Operatório.
+            </div>
+
+            <div class="sh sh-orange">Conduta Imediata — Segurança Primeiro</div>
+            <div class="algo-box algo-r" style="margin-top:8px; margin-bottom:10px">
+              <strong>PASSO 1 — SEGURANÇA IMEDIATA:</strong><br>
+              • 2 profissionais para contenção segura da maca — sem deixar o paciente cair<br>
+              • NÃO contenção física com amarras (piora agitação e delirium)<br>
+              • Voz calma e firme: "Sr. [nome], você está bem. Está em recuperação. A cirurgia acabou. Estamos cuidando de você."<br>
+              • Reorientação repetida: local, data, o que aconteceu
+            </div>
+
+            <div class="algo-box algo-g" style="margin-bottom:10px">
+              <strong>PASSO 2 — EXCLUIR CAUSAS ORGÂNICAS TREINÁVEIS:</strong><br>
+              • Glicemia capilar imediata: DM2 → hipoglicemia? (objetivo: &gt;70 mg/dL)<br>
+              • SpO₂ e PA: já verificadas e normais<br>
+              • Investigar: dor (EVN — não verbaliza mas faz caretas?), retenção urinária (bexiga cheia?), hipotermia<br>
+              • Eletrólitos se disponível: Na⁺, K⁺<br>
+              • Medicações usadas: benzodiazepínico na MPA? Anticolinérgicos?
+            </div>
+
+            <div class="g2" style="margin-bottom:12px">
+              <div class="algo-box algo-r">
+                <strong>PASSO 3A — SE AGITAÇÃO GRAVE (risco de queda/autoextração de dispositivos):</strong><br>
+                • Reinserção de acesso venoso (obrigatório)<br>
+                • <span class="drug-pill bad">Haloperidol 0.5 mg IV</span> lentamente<br>
+                • Reavaliação em 20–30 min; repetir 0.5 mg se necessário<br>
+                • Máx: 2–3 mg nas primeiras 24h<br>
+                • Monitorizar QTc antes de dose adicional
+              </div>
+              <div class="algo-box algo-g">
+                <strong>PASSO 3B — MEDIDAS NÃO FARMACOLÓGICAS (simultâneas):</strong><br>
+                • Presença de familiar familiar (esposa/filho)<br>
+                • Devolver óculos e aparelho auditivo se disponíveis<br>
+                • Luz adequada no ambiente — não escurecer o quarto<br>
+                • Relógio visível, informações sobre o dia<br>
+                • Evitar contenção física — aumenta agitação
+              </div>
+            </div>
+
+            <div class="algo-box algo-g">
+              <strong>CONDUTA FINAL:</strong> DPO hiperativo por CAM positivo. Fatores precipitantes: idade, cirurgia ortopédica maior, DM, HAS, privação de sono, dor (joelho pós-operatório), ambiente estranho. Medidas: reorientação + familiar + haloperidol 0.5 mg IV se agitação grave. Observação prolongada na SRPA. Após estabilização: transferência para quarto com acompanhante, prescrição de analgesia adequada (controlar dor = resolver precipitante), mobi­lização precoce D+1. Investigar e corrigir eletrólitos. Notificar a equipe de enfermagem da enfermaria sobre DPO.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 3 -->
+      <div class="caso-card" style="margin-top:8px">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">CASO 3</span>
+          <span class="caso-title">Pós-Cesárea sob Raquianestesia — Hipotensão PA 80/50, FC 110, Náuseas Intensas</span>
+        </div>
+        <div class="caso-body">
+          <p><strong>Paciente:</strong> Feminino, 28 anos, 68 kg. Cesárea eletiva (gestação 39 semanas, apresentação pélvica). Raquianestesia com bupivacaína hiperbárica 10 mg + fentanil 20 mcg. Bloqueio sensorial atingiu T4 no CO. Bebê nascido com Apgar 9/10. Chegou à SRPA 15 min após o término da cirurgia. Enfermeira alerta: PA 80/50 mmHg, FC 110 bpm, SpO₂ 98%, temperatura 36.5°C. Paciente com náuseas intensas, apreensiva, diz sentir "coração acelerado".</p>
+
+          <div class="caso-question">Qual a causa mais provável da hipotensão? Qual vasopressor de escolha? Quando retornar ao CO? Que outras causas graves devem ser descartadas?</div>
+          <div class="caso-answer">
+
+            <div class="sh sh-orange">Causa Mais Provável — Bloqueio Simpático por Raquianestesia</div>
+            <div class="alert a-orange" style="margin-top:8px; margin-bottom:12px">
+              A hipotensão pós-raquianestesia em obstetrícia é <strong>extremamente comum</strong> (incidência 50–85% sem profilaxia). O bloqueio simpático promove vasodilatação sistêmica (↓RVS) + venodilatação (↓retorno venoso → ↓DC), resultando em hipotensão e taquicardia reflexa. O bloqueio T4 desta paciente é alto — aumenta significativamente o impacto hemodinâmico.
+            </div>
+
+            <div class="sh sh-teal">Diagnóstico Diferencial — Causas de Hipotensão Pós-Cesárea</div>
+<div class="tbl-wrap">
+            <div class="tbl-wrap" style="margin-top:8px; margin-bottom:12px"><table class="tbl">
+              <thead><tr><th>Causa</th><th>Probabilidade</th><th>Pista Diagnóstica</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Bloqueio simpático (raqui)</strong></td><td style="color:var(--orange)"><strong>Muito alta</strong></td><td>Raqui ativa, T4 atingido, taquicardia reflexa, início 15 min pós-raqui</td></tr>
+                <tr><td><strong>Hemorragia pós-parto (HPP)</strong></td><td>Alta — a descartar</td><td>Perda sanguínea &gt;500 mL, útero flácido, sangramento vaginal aumentado</td></tr>
+                <tr><td><strong>Compressão aortocava</strong></td><td>Baixa (pós-parto)</td><td>Bebê nascido — descompressão completa; útero vazio não comprime VCI</td></tr>
+                <tr><td><strong>Embolia pulmonar / LA</strong></td><td>Baixa</td><td>SpO₂ 98% torna improvável; embolia por LA teria colapso mais abrupto</td></tr>
+                <tr><td><strong>Reação anafilática</strong></td><td>Baixa</td><td>Sem urticária, angioedema, broncoespasmo relatado</td></tr>
+              </tbody>
+            </table></div>
+</div>
+
+            <div class="sh sh-orange">Vasopressor de Escolha — Fenilefrina vs. Efedrina em Obstetrícia</div>
+            <div class="g2" style="margin-top:8px; margin-bottom:12px">
+              <div class="algo-box algo-g">
+                <strong>FENILEFRINA — PRIMEIRA ESCOLHA</strong><br>
+                • Vasoconstritor puro α1 — ↑RVS sem efeito inotrópico/cronotrópico direto<br>
+                • <span class="drug-pill good">Fenilefrina 100–200 mcg IV</span> em bolus → repetir a cada 2–3 min<br>
+                • Ou infusão: 0.25–0.5 mcg/kg/min titulada<br>
+                • <strong>Vantagem:</strong> ↓acidose fetal (pH umbilical melhor vs. efedrina em múltiplos estudos)<br>
+                • <strong>Desvantagem:</strong> pode piorar bradicardia reflexa (mas FC 110 aqui — não é problema)
+              </div>
+              <div class="alert a-teal">
+                <strong>EFEDRINA — ALTERNATIVA SE BRADICARDIA</strong><br>
+                • Efeito α + β → ↑PA + ↑FC (ideal se FC &lt;60)<br>
+                • <span class="drug-pill warn">Efedrina 10–15 mg IV</span> se FC &lt;70 bpm + hipotensão<br>
+                • Neste caso: FC 110 → efedrina PIORARIA a taquicardia → evitar<br>
+                • Atravessa placenta → ↑metabolismo fetal → ↑lactato fetal (acidose metabólica fetal leve)
+              </div>
+            </div>
+
+            <div class="sh sh-orange">Conduta Passo a Passo</div>
+            <div class="algo-box algo-r" style="margin-top:8px; margin-bottom:10px">
+              <strong>PASSO 1 — IMEDIATO:</strong><br>
+              • Decúbito horizontal (se bloqueio sensorial ≤T4) ou leve Trendelenburg 15°<br>
+              • Cristaloide em bolus: SF 0.9% ou Ringer lactato <strong>500 mL IV rápido</strong> (15 min)<br>
+              • <span class="drug-pill bad">Fenilefrina 100 mcg IV</span> → avaliar resposta em 3–5 min<br>
+              • O₂ 4 L/min por cateter nasal (SpO₂ já 98% — manutenção)<br>
+              • Monitorização: PA cada 5 min, FC contínua
+            </div>
+            <div class="algo-box algo-g" style="margin-bottom:10px">
+              <strong>PASSO 2 — DESCARTAR HPP:</strong><br>
+              • Contactar cirurgião: verificar sangramento em curativo abdominal e débito pelo dreno<br>
+              • Palpar fundo uterino: involução? Útero amolecido → atonia → HPP → oxitocina 10–20 UI IM ou infusão IV<br>
+              • Avaliar sangramento vaginal: normal (&lt;500 mL em 24h) ou aumentado?<br>
+              • Se HPP confirmada: acionar protocolo de HPP + solicitar hemograma/coagulação urgente
+            </div>
+<div class="tbl-wrap">
+            <div class="tbl-wrap" style="margin-bottom:12px"><table class="tbl">
+              <thead><tr><th>Meta da Ressuscitação</th><th>Alvo</th></tr></thead>
+              <tbody>
+                <tr><td>PA sistólica</td><td>≥100 mmHg (ou ≥80% do basal)</td></tr>
+                <tr><td>FC</td><td>&lt;100 bpm</td></tr>
+                <tr><td>SpO₂</td><td>&gt;95%</td></tr>
+                <tr><td>Diurese</td><td>&gt;0.5 mL/kg/h</td></tr>
+              </tbody>
+            </table></div>
+</div>
+
+            <div class="sh sh-teal">Quando Retornar ao CO?</div>
+            <div class="algo-box algo-r" style="margin-top:8px">
+              <strong>INDICAÇÕES DE RETORNO IMEDIATO AO CO:</strong><br>
+              • HPP confirmada (&gt;1000 mL de perda ou instabilidade sem resposta a medidas) → revisão cirúrgica<br>
+              • Suspeita de hematoma de parede abdominal expansivo ou hemoperitoneu<br>
+              • Atonia uterina refratária a uterotônicos (oxitocina + misoprostol + metilergometrina) → histerectomia de emergência<br>
+              • Hipotensão refratária a 2 doses de vasopressor + 1 L de cristaloide → descartar causa cirúrgica<br><br>
+              <strong>NESTE CASO:</strong> Se hipotensão responde à fenilefrina + cristaloide e HPP descartada → etiologia é bloqueio simpático residual. Manter na SRPA com monitorização reforçada (PA cada 5 min) até PA estabilizar ≥100 mmHg por ≥20 min sem suporte vasopressor. Aldrete ≥9 + regressão do bloqueio motor (mobilidade MMII) = alta para alojamento conjunto.
+            </div>
+
+            <div class="algo-box algo-g" style="margin-top:10px">
+              <strong>CONDUTA FINAL:</strong> Hipotensão pós-raquianestesia por bloqueio simpático alto (T4). Vasopressor de escolha: fenilefrina 100–200 mcg IV (FC 110 — não indicar efedrina). Cristaloide 500 mL em bolus. Descartar HPP (palpar útero, avaliar sangramento). Monitorização PA 5/5 min. NVPO: provavelmente hipotensão-mediada → ondansetrona 4 mg após controlar PA. Não retornar ao CO se resposta adequada a fenilefrina + fluidos. Alta para alojamento conjunto somente com PA estável + regressão do bloqueio motor.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /srpa-casos -->
+</div>

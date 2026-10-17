@@ -1,0 +1,1579 @@
+<div class="screen" id="screen-vm">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Ventilação Mecânica</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="vm-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('vm','fisiologia',this)">Fisiologia</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','modos',this)">Modos</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','parametros',this)">Parâmetros</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','protetora',this)">Protetora</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','situacoes',this)">Situações</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','vili',this)">VILI</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','questoes',this)">Questões</button>
+  </div>
+
+  <!-- ============================================================
+       TAB 1 — FISIOLOGIA & MECÂNICA RESPIRATÓRIA
+       ============================================================ -->
+  <div class="tab-panel active" id="vm-fisiologia">
+    <div class="page-wrap">
+
+      <!-- CARD 01 — Volumes e Capacidades Pulmonares -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> Volumes e Capacidades Pulmonares
+        </div>
+        <div class="card-body">
+          <img src="vm_img_volumes.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Volumes e Capacidades Pulmonares">
+          <div class="alert a-blue">
+            Os <strong>volumes e capacidades pulmonares</strong> são a base para compreender a mecânica ventilatória e os efeitos da anestesia geral sobre a função respiratória. As capacidades são somas de dois ou mais volumes.
+          </div>
+
+          <div class="sh sh-teal">Volumes Pulmonares</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Volume</th><th>Definição</th><th>Valor Normal</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">VC</span></td><td>Volume Corrente — ar mobilizado em cada ciclo (~7 mL/kg)</td><td>~500 mL</td></tr>
+              <tr><td><span class="tag tg">VRI</span></td><td>Volume de Reserva Inspiratório — ar adicional inspirado além do VC</td><td>~3000 mL</td></tr>
+              <tr><td><span class="tag ty">VRE</span></td><td>Volume de Reserva Expiratório — ar adicional expirado além do VC</td><td>~1100 mL</td></tr>
+              <tr><td><span class="tag tr">VR</span></td><td>Volume Residual — ar que permanece no pulmão após expiração máxima (não expirável)</td><td>~1200 mL</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Capacidades Pulmonares</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Capacidade</th><th>Composição</th><th>Valor Normal</th><th>Importância Anestésica</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tr">CRF</span></td><td>VRE + VR</td><td>~2300 mL</td><td>CRÍTICA — reserva de O₂ durante apneia; reduz 15-20% em AG</td></tr>
+              <tr><td><span class="tag tg">CV</span></td><td>VRI + VC + VRE</td><td>~4600 mL</td><td>Avaliação de função pulmonar pré-op</td></tr>
+              <tr><td><span class="tag tb">CPT</span></td><td>CV + VR</td><td>~5800 mL</td><td>Volume total do sistema respiratório</td></tr>
+              <tr><td><span class="tag ty">CI</span></td><td>VC + VRI</td><td>~3500 mL</td><td>Capacidade de inspiração profunda (MRA)</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Alterações na Anestesia Geral</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Acordado</th><th>Anestesia + Supino</th><th>Obeso em AG</th></tr></thead>
+            <tbody>
+              <tr><td>CRF</td><td>~2300 mL</td><td>~1900 mL (↓15-20%)</td><td>~1200 mL (↓até 50%)</td></tr>
+              <tr><td>Capacidade de fechamento</td><td>&lt; CRF</td><td>Pode exceder CRF → atelectasia</td><td>Frequentemente &gt; CRF</td></tr>
+              <tr><td>Shunt intrapulmonar</td><td>2-5%</td><td>5-10%</td><td>10-25%</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-red" style="margin-top:12px">
+            <strong>CRF reduz 15-20% em supino sob AG; até 50% em obesos</strong> → predispõe atelectasia e shunt. Quando a capacidade de fechamento excede a CRF, os alvéolos colapsam durante a respiração corrente → hipoxemia.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 02 — Compliance Pulmonar e Resistência -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">02</span> Compliance Pulmonar e Resistência
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Compliance</strong> mede a distensibilidade do sistema respiratório (ΔV/ΔP). <strong>Resistência</strong> mede a oposição ao fluxo aéreo nas vias condutoras. Ambas determinam as pressões geradas durante a ventilação mecânica.
+          </div>
+
+          <div class="sh sh-teal">Tipos de Compliance</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Tipo</th><th>Fórmula</th><th>Normal</th><th>O que Reflete</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">Estática (Cst)</span></td><td>VC / (P platô - PEEP)</td><td>60-100 mL/cmH₂O</td><td>Elastância pulmão + parede torácica (sem fluxo)</td></tr>
+              <tr><td><span class="tag tg">Dinâmica (Cdyn)</span></td><td>VC / (P pico - PEEP)</td><td>50-80 mL/cmH₂O</td><td>Elastância + resistência (com fluxo)</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Resistência das Vias Aéreas</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Fórmula</th><th>Normal</th><th>Significado</th></tr></thead>
+            <tbody>
+              <tr><td>Raw = (P pico - P platô) / Fluxo</td><td>5-15 cmH₂O/L/s</td><td>P pico - P platô &lt; 10 cmH₂O em condições normais</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="g2" style="margin-top:12px">
+            <div>
+              <div class="sh sh-red">Fatores que ↓ Compliance</div>
+              <div class="proto-steps">
+                <div class="proto-step"><span class="sn sn-r">•</span><div>Obesidade (peso sobre tórax)</div></div>
+                <div class="proto-step"><span class="sn sn-r">•</span><div>Pneumoperitônio (laparoscopia)</div></div>
+                <div class="proto-step"><span class="sn sn-r">•</span><div>SDRA / Fibrose pulmonar</div></div>
+                <div class="proto-step"><span class="sn sn-r">•</span><div>Decúbito supino + anestesia</div></div>
+                <div class="proto-step"><span class="sn sn-r">•</span><div>Posição Trendelenburg</div></div>
+              </div>
+            </div>
+            <div>
+              <div class="sh sh-orange">Fatores que ↑ Resistência</div>
+              <div class="proto-steps">
+                <div class="proto-step"><span class="sn sn-o">•</span><div>Broncoespasmo</div></div>
+                <div class="proto-step"><span class="sn sn-o">•</span><div>Secreção nas vias aéreas</div></div>
+                <div class="proto-step"><span class="sn sn-o">•</span><div>TOT dobrado / kinking</div></div>
+                <div class="proto-step"><span class="sn sn-o">•</span><div>Tubo fino (diâmetro pequeno)</div></div>
+                <div class="proto-step"><span class="sn sn-o">•</span><div>Fluxo inspiratório elevado</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Como Calcular na Prática à Beira do Leito</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Ativar pausa inspiratória</strong> no ventilador (0,5-1 segundo com fluxo zero)</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Anotar P pico</strong> (pressão máxima durante a inspiração)</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>Anotar P platô</strong> (pressão estável no final da pausa inspiratória)</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>Cst = VC / (P platô - PEEP)</strong> → compliance estática</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div><strong>Cdyn = VC / (P pico - PEEP)</strong> → compliance dinâmica</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div><strong>Resistência = (P pico - P platô) / Fluxo</strong> → normal &lt; 10 cmH₂O com fluxo 1 L/s</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 03 — Espaço Morto e Relação V/Q -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">03</span> Espaço Morto e Relação V/Q
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            A relação entre ventilação e perfusão (V/Q) determina a eficiência da troca gasosa. A anestesia geral e a ventilação mecânica alteram profundamente essa relação.
+          </div>
+
+          <div class="sh sh-teal">Tipos de Espaço Morto</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Tipo</th><th>Definição</th><th>Volume</th><th>Relevância</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">Anatômico</span></td><td>Vias aéreas condutoras (sem troca gasosa)</td><td>~150 mL (~2 mL/kg)</td><td>Fixo; IOT reduz ligeiramente (bypass nariz/faringe)</td></tr>
+              <tr><td><span class="tag ty">Alveolar</span></td><td>Alvéolos ventilados mas não perfundidos</td><td>Variável</td><td>↑ em TEP, hipotensão, PEEP excessivo</td></tr>
+              <tr><td><span class="tag tr">Fisiológico</span></td><td>Anatômico + Alveolar</td><td>~30% do VC (VD/VT)</td><td>Equação de Bohr para cálculo</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Equação de Bohr:</strong> VD/VT = (PaCO₂ - PETCO₂) / PaCO₂<br>
+            Normal: VD/VT ≈ 0,3 (30%). Valores &gt; 0,5 indicam espaço morto patológico significativo.
+          </div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Relação V/Q — Espectro Clínico</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>V/Q</th><th>Condição</th><th>Exemplos</th><th>Resposta ao O₂</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">0,8</span></td><td>Normal</td><td>Pulmão saudável em posição ereta</td><td>Normal</td></tr>
+              <tr><td><span class="tag tr">0 (Shunt)</span></td><td>Perfundido mas não ventilado</td><td>Atelectasia, consolidação, SDRA</td><td>NÃO responde ao ↑ FiO₂</td></tr>
+              <tr><td><span class="tag ty">∞ (Espaço morto)</span></td><td>Ventilado mas não perfundido</td><td>TEP, hipotensão grave</td><td>Gradiente ETCO₂/PaCO₂ ↑↑</td></tr>
+              <tr><td><span class="tag to">Baixo (&lt;0,8)</span></td><td>Ventilação relativa insuficiente</td><td>Broncoespasmo, muco, atelectasia parcial</td><td>Responde parcialmente ao O₂</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-red" style="margin-top:12px">
+            <strong>Efeito da anestesia:</strong> ↑ espaço morto + ↑ shunt = hipoxemia frequente. A redistribuição do fluxo sanguíneo e o colapso alveolar em áreas dependentes são os principais mecanismos.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 04 — Efeitos da Anestesia Geral na Função Respiratória -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">04</span> Efeitos da Anestesia Geral na Função Respiratória
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            A anestesia geral afeta <strong>todos os aspectos</strong> da mecânica e da fisiologia respiratória. Compreender esses efeitos é fundamental para ajustar a ventilação mecânica de forma racional.
+          </div>
+
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-r">1</span><div><strong>Redução da CRF (15-20%)</strong> — até 50% em obesos. A CRF reduzida leva ao fechamento de vias aéreas de pequeno calibre e atelectasia</div></div>
+            <div class="proto-step"><span class="sn sn-r">2</span><div><strong>Atelectasia em ~90% dos pacientes anestesiados</strong> — principalmente nas bases (regiões dependentes), detectável em TC em 5 minutos após indução</div></div>
+            <div class="proto-step"><span class="sn sn-r">3</span><div><strong>Inibição dos reflexos hipóxico e hipercápnico</strong> — resposta ventilatória abolida por anestésicos inalatórios e IV; paciente não aumenta ventilação espontaneamente</div></div>
+            <div class="proto-step"><span class="sn sn-o">4</span><div><strong>Disfunção do surfactante</strong> — compressão das áreas dependentes + FiO₂ alta → colapso progressivo; inativação do surfactante nas áreas atelectasiadas</div></div>
+            <div class="proto-step"><span class="sn sn-o">5</span><div><strong>Posição supina + pneumoperitônio</strong> — deslocamento cefálico do diafragma → compressão diafragmática → ↓ volume torácico e ↓ compliance</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div><strong>PEEP como estratégia de mitigação</strong> — evidências do PROVE Network: PEEP ≥ 5 cmH₂O mantém CRF e previne colapso alveolar durante toda a cirurgia</div></div>
+          </div>
+
+          <div class="tbl-wrap" style="margin-top:12px"><table class="tbl">
+            <thead><tr><th>Efeito</th><th>Mecanismo</th><th>Consequência Clínica</th></tr></thead>
+            <tbody>
+              <tr><td>↓ CRF</td><td>Tônus diafragmático abolido + supino</td><td>Fechamento vias aéreas → shunt</td></tr>
+              <tr><td>Atelectasia</td><td>Compressão + absorção (FiO₂ alta)</td><td>Hipoxemia; ↑ gradiente P(A-a)O₂</td></tr>
+              <tr><td>↓ Compliance</td><td>Atelectasia + peso abdominal + BNM</td><td>↑ pressões de via aérea</td></tr>
+              <tr><td>↑ Espaço morto</td><td>PEEP excessiva + hipoperfusão + posição</td><td>↑ gradiente ETCO₂-PaCO₂</td></tr>
+              <tr><td>Abolição do drive</td><td>Anestésicos deprimem centros respiratórios</td><td>Necessidade de VM obrigatória em AG</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vm-fisiologia -->
+
+  <!-- ============================================================
+       TAB 2 — MODOS VENTILATÓRIOS
+       ============================================================ -->
+  <div class="tab-panel" id="vm-modos">
+    <div class="page-wrap">
+
+      <!-- CARD 01 — VCV -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> VCV — Ventilação com Volume Controlado
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>VCV:</strong> volume corrente FIXO, pressão VARIÁVEL. O ventilador entrega um volume pré-definido a cada ciclo, independentemente das mudanças de compliance ou resistência.
+          </div>
+
+          <div class="sh sh-teal">Parâmetros Ajustados pelo Operador</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Volume corrente (VC):</strong> 6-8 mL/kg PCP</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Frequência respiratória (FR):</strong> 10-14 irpm</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>PEEP:</strong> 5 cmH₂O inicial</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>FiO₂:</strong> 0,4 (mínima eficaz)</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div><strong>Relação I:E:</strong> 1:2 (padrão)</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div><strong>Pausa inspiratória:</strong> 10-20% do Ti (para medir P platô)</div></div>
+            <div class="proto-step"><span class="sn sn-t">7</span><div><strong>Curva de fluxo:</strong> quadrada (constante) ou desacelerante</div></div>
+          </div>
+
+          <div class="g2" style="margin-top:12px">
+            <div class="alert a-green"><strong>Vantagens:</strong> VC garantido independente de compliance → PaCO₂ previsível e estável; familiar e amplamente disponível</div>
+            <div class="alert a-orange"><strong>Desvantagens:</strong> Pressão pode aumentar se compliance piora (P pico ↑); risco de barotrauma se não monitorado</div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Indicações em anestesia:</strong> procedimentos curtos, pulmão normal, necessidade de VC preciso e PaCO₂ controlado. <strong>Monitorar P pico e P platô a cada mudança significativa.</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 02 — PCV -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">02</span> PCV — Ventilação com Pressão Controlada
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>PCV:</strong> pressão FIXA, volume VARIÁVEL. O ventilador mantém uma pressão constante durante toda a fase inspiratória; o volume resultante depende da compliance e resistência do paciente.
+          </div>
+
+          <div class="sh sh-teal">Parâmetros Ajustados pelo Operador</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Pressão de controle (P insp):</strong> ajustar para VC-alvo 6-8 mL/kg</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Frequência respiratória:</strong> 10-14 irpm</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>PEEP:</strong> 5 cmH₂O inicial</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>FiO₂:</strong> 0,4 (mínima eficaz)</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div><strong>Relação I:E / Tempo inspiratório:</strong> 1:2 ou Ti fixo</div></div>
+          </div>
+
+          <div class="g2" style="margin-top:12px">
+            <div class="alert a-green"><strong>Vantagens:</strong> Pico de pressão limitado → menor risco de barotrauma; curva de fluxo desacelerante → melhor distribuição alveolar</div>
+            <div class="alert a-orange"><strong>Desvantagens:</strong> VC muda com compliance → hipoventilação se compliance piora subitamente; requer monitorização atenta do VC expirado</div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Indicações:</strong> laparoscopia, posição Trendelenburg, obesos, compliance baixa — qualquer situação com risco de pico de pressão elevado.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 03 — PCV-VG -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">03</span> PCV-VG — Pressão Controlada com Volume Garantido
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Modo híbrido:</strong> o ventilador ajusta a pressão inspiratória automaticamente, ciclo a ciclo, para atingir o volume corrente alvo. Combina os benefícios do PCV (pressão limitada, fluxo desacelerante) com a segurança do VCV (VC garantido).
+          </div>
+
+          <div class="g2" style="margin-top:12px">
+            <div class="alert a-green"><strong>Vantagens:</strong> Pico de pressão ≤ PCV + VC garantido como VCV; adaptação automática a mudanças de posição ou compliance</div>
+            <div class="alert a-blue"><strong>Evidência (NMA 2025):</strong> Annals of Medicine, 2263 pacientes — PCV-VG superior em Cdyn e menor Ppeak vs VCV em cirurgias laparoscópicas</div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Tendência atual:</strong> uso crescente em cirurgias laparoscópicas e posição Trendelenburg. Alguns centros já adotam como modo padrão para todas as cirurgias sob AG.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 04 — SIMV -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">04</span> SIMV — Ventilação Mandatória Intermitente Sincronizada
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>SIMV:</strong> combina respirações mecânicas mandatórias com respirações espontâneas do paciente entre os ciclos controlados. A sincronização detecta o esforço inspiratório para evitar duplo disparo.
+          </div>
+
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Respirações mandatórias:</strong> FR definida pelo operador → entrega VC ou pressão fixa</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Respirações espontâneas:</strong> entre os ciclos mandatórios, paciente respira com ou sem PSV</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>Sincronização:</strong> ventilador detecta esforço → entrega mandatória no momento do trigger</div></div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Uso em anestesia:</strong> principalmente no desmame ventilatório no fim da cirurgia. <strong>Cuidado:</strong> trabalho respiratório pode aumentar entre as respirações mandatórias — monitorar conforto e VC espontâneo.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 05 — PSV -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">05</span> PSV — Ventilação com Suporte de Pressão
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>PSV:</strong> modo puramente assistido — o paciente inicia TODOS os ciclos respiratórios. O ventilador complementa cada inspiração com uma pressão de suporte pré-definida.
+          </div>
+
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Trigger:</strong> detecta esforço inspiratório (fluxo ou pressão)</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Pressão de suporte:</strong> 5-15 cmH₂O acima do PEEP</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>Ciclagem:</strong> termina quando fluxo cai a 25% do pico (variável)</div></div>
+          </div>
+
+          <div class="g2" style="margin-top:12px">
+            <div class="alert a-green"><strong>Uso em anestesia:</strong> sedação profunda com ventilação espontânea preservada; fase de desmame pré-extubação</div>
+            <div class="alert a-red"><strong>Alarme obrigatório:</strong> configurar alarme de apneia e backup rate — se paciente não dispara → ventilador deve assumir</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 06 — Comparativo dos Modos -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">06</span> Comparativo dos Modos Ventilatórios
+        </div>
+        <div class="card-body">
+          <img src="vm_img_modos_vcv_pcv.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Curvas VCV vs PCV">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead>
+              <tr>
+                <th>Modo</th>
+                <th>Controlada / Dependente</th>
+                <th>Fluxo</th>
+                <th>Vantagem</th>
+                <th>Indicação em Anestesia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tag tb">VCV</span></td>
+                <td>Volume fixo / Pressão variável</td>
+                <td>Quadrada</td>
+                <td>VC garantido</td>
+                <td>Pulmão normal, cirurgias curtas</td>
+              </tr>
+              <tr>
+                <td><span class="tag tg">PCV</span></td>
+                <td>Pressão fixa / Volume variável</td>
+                <td>Desacelerante</td>
+                <td>↓ Ppico</td>
+                <td>Laparoscopia, obeso, Trendel.</td>
+              </tr>
+              <tr>
+                <td><span class="tag ty">PCV-VG</span></td>
+                <td>P auto-ajustada / VC garantido</td>
+                <td>Desacelerante</td>
+                <td>Híbrido: ↓Ppico + VC certo</td>
+                <td>Padrão crescente geral</td>
+              </tr>
+              <tr>
+                <td><span class="tag to">SIMV</span></td>
+                <td>Vol/P mandatória + espontânea</td>
+                <td>Variável</td>
+                <td>Mand. + espontânea</td>
+                <td>Desmame ventilatório</td>
+              </tr>
+              <tr>
+                <td><span class="tag tv">PSV</span></td>
+                <td>Pressão suporte / Vol paciente</td>
+                <td>Desacelerante</td>
+                <td>Conforto, sincronia</td>
+                <td>Sedação c/ vent. espontânea</td>
+              </tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vm-modos -->
+
+  <!-- ============================================================
+       TAB 3 — PARÂMETROS & MONITORIZAÇÃO
+       ============================================================ -->
+  <div class="tab-panel" id="vm-parametros">
+    <div class="page-wrap">
+
+      <!-- CARD 01 — Configuração Inicial Padrão -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> Configuração Inicial Padrão da VM Intraoperatória
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            Checklist de configuração ao iniciar a ventilação mecânica após intubação orotraqueal. Usar <strong>peso corporal predito (PCP)</strong> para calcular o volume corrente.
+          </div>
+
+          <div class="sh sh-cyan">Cálculo do Peso Corporal Predito (PCP)</div>
+          <div class="g2" style="margin-top:8px">
+            <div class="alert a-blue"><strong>Masculino:</strong> PCP = Altura (cm) - 100</div>
+            <div class="alert a-violet"><strong>Feminino:</strong> PCP = Altura (cm) - 110</div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Sequência de Ajuste</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Modo:</strong> VCV ou PCV-VG (preferência crescente pelo PCV-VG)</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>VC:</strong> 6-8 mL/kg de peso corporal PREDITO (PCP)</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>FR:</strong> 10-14 irpm (ajustar por ETCO₂ / PaCO₂ — alvo 35-45 mmHg)</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>PEEP:</strong> 5 cmH₂O inicial → individualizar conforme contexto</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div><strong>FiO₂:</strong> 0,4 (mínima para SpO₂ ≥ 94%)</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div><strong>I:E:</strong> 1:2 (padrão) → ajustar conforme necessidade</div></div>
+            <div class="proto-step"><span class="sn sn-t">7</span><div><strong>Pausa inspiratória:</strong> 10-20% do Ti para medir P platô</div></div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Exemplo prático:</strong> Homem, 175 cm → PCP = 75 kg → VC = 450-600 mL (6-8 × 75). FR 12, PEEP 5, FiO₂ 0,4, I:E 1:2.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 02 — Pressão de Pico -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">02</span> Pressão de Pico (Ppico)
+        </div>
+        <div class="card-body">
+          <img src="vm_img_pressoes.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Ppico, Pplatô, ΔP e PEEP">
+          <div class="alert a-blue">
+            <strong>Ppico:</strong> pressão máxima nas vias aéreas durante a fase inspiratória. Depende de resistência + compliance + VC + fluxo inspiratório.
+          </div>
+
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>Alvo:</strong> Ppico &lt; 35 cmH₂O
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:12px">Diagnóstico Diferencial de Ppico Elevada</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Padrão</th><th>Ppico</th><th>Pplatô</th><th>Diagnóstico</th><th>Causas</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag to">Tipo 1</span></td><td>↑↑</td><td>Normal</td><td><strong>Problema de RESISTÊNCIA</strong></td><td>Broncoespasmo, secreção, TOT dobrado, tubo fino</td></tr>
+              <tr><td><span class="tag tr">Tipo 2</span></td><td>↑↑</td><td>↑↑</td><td><strong>Problema de COMPLIANCE</strong></td><td>Pneumotórax, SDRA, pneumoperitônio, broncoespasmo grave</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- CARD 03 — Pressão de Platô -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">03</span> Pressão de Platô (Pplat)
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>P platô:</strong> pressão alveolar ao final da inspiração, medida após pausa inspiratória de 0,5-1 segundo com fluxo zero. Reflete a compliance do sistema respiratório (pulmão + parede torácica).
+          </div>
+
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>Alvo:</strong> P platô &lt; 30 cmH₂O (ESAIC 2019, PROVE Network)
+          </div>
+
+          <div class="tbl-wrap" style="margin-top:12px"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Significado</th><th>Normal</th></tr></thead>
+            <tbody>
+              <tr><td>P platô</td><td>Pressão alveolar de distensão</td><td>&lt; 30 cmH₂O</td></tr>
+              <tr><td>Ppico - P platô</td><td>Resistência das vias aéreas</td><td>&lt; 10 cmH₂O</td></tr>
+              <tr><td>P platô ↑↑</td><td>Compliance reduzida → risco de VILI</td><td>Investigar causa</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-red" style="margin-top:12px">
+            <strong>P platô elevada = risco de VILI por sobredistensão (volutrauma).</strong> Se P platô ≥ 30 cmH₂O → reduzir VC, avaliar PEEP, excluir pneumotórax, considerar posição.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 04 — Drive Pressure -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">04</span> Drive Pressure (ΔP) — O Parâmetro Mais Importante
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>ΔP = P platô - PEEP</strong><br>
+            Representa a "pressão de distensão" efetiva do parênquima pulmonar. Equivale a: <strong>ΔP = VC / Crs</strong> (tensão = deformação / compliance).
+          </div>
+
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>Alvo:</strong> ΔP ≤ 15 cmH₂O
+          </div>
+
+          <div class="sh sh-cyan" style="margin-top:12px">Evidências Fundamentais</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Estudo</th><th>Resultado</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">Amato et al., NEJM 2015</span></td><td>ΔP foi o preditor INDEPENDENTE mais forte de sobrevida em SDRA — marco histórico</td></tr>
+              <tr><td><span class="tag tg">Neto et al., Lancet Respir Med 2016</span></td><td>Meta-análise: ΔP preditor independente mais forte de CPP (OR 1,41 por cada 5 cmH₂O)</td></tr>
+              <tr><td><span class="tag ty">DESIGNATION, JAMA 2026</span></td><td>PEEP guiado por ΔP vs PEEP 5 fixo → não reduziu CPP, mas ↑ hipotensão intraoperatória</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Importante:</strong> ΔP é mais confiável em ventilação passiva (sem esforço muscular do paciente). Em pacientes curarizado durante anestesia geral, é o cenário ideal para sua medição.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 05 — PEEP -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">05</span> PEEP — Pressão Positiva Expiratória Final
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>PEEP</strong> mantém pressão positiva no final da expiração → previne colapso alveolar, mantém CRF, melhora oxigenação e reduz atelectrauma.
+          </div>
+
+          <div class="sh sh-teal">Níveis de PEEP e Indicações</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>PEEP</th><th>Contexto</th><th>Observações</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">5 cmH₂O</span></td><td>Padrão inicial em toda AG</td><td>Previne atelectasia fisiológica; seguro hemodinamicamente</td></tr>
+              <tr><td><span class="tag ty">6-10 cmH₂O</span></td><td>Laparoscopia, Trendelenburg, obesos</td><td>Individualizar por ΔP ou compliance</td></tr>
+              <tr><td><span class="tag to">10-15 cmH₂O</span></td><td>SDRA, atelectasia refratária</td><td>Cuidado: efeitos hemodinâmicos (↓ RV, ↓ DC)</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Evidências dos Grandes Trials</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Estudo</th><th>Desenho</th><th>Resultado Principal</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">PROVHILO (Lancet 2014)</span></td><td>PEEP 12 + MRA vs PEEP 2 — cirurgia abdominal</td><td>Sem diferença em CPP</td></tr>
+              <tr><td><span class="tag tg">PROBESE (JAMA 2019)</span></td><td>PEEP 12 + MRA vs PEEP 4 — obesos</td><td>Sem diferença em CPP; mais hipotensão</td></tr>
+              <tr><td><span class="tag ty">DESIGNATION (JAMA 2026)</span></td><td>PEEP guiado por ΔP vs PEEP 5 fixo — 1435 pacientes</td><td>Sem diferença em CPP; mais hipotensão no grupo PEEP alto</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Conclusão atual:</strong> PEEP ≥ 5 SEMPRE; individualizar &gt; fixo; PEEP alto universal = sem benefício demonstrado. <strong>Situações com PEEP mais alto:</strong> obesidade, laparoscopia em Trendelenburg, SDRA, desaturação persistente.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 06 — FiO₂ -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">06</span> FiO₂ — Fração Inspirada de Oxigênio
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>Alvo intraoperatório:</strong> mínima FiO₂ para manter SpO₂ ≥ 94%. Recomendação: <strong>FiO₂ ≤ 0,4</strong>.
+          </div>
+
+          <div class="tbl-wrap" style="margin-top:12px"><table class="tbl">
+            <thead><tr><th>Situação</th><th>FiO₂ Recomendada</th><th>Justificativa</th></tr></thead>
+            <tbody>
+              <tr><td>Pré-oxigenação</td><td>FiO₂ 1,0 por 3-5 min</td><td>Reserva O₂ &gt; 8 min vs 2-3 min com ar ambiente</td></tr>
+              <tr><td>Pós-IOT (5 min)</td><td>FiO₂ 1,0 → reduzir para 0,4</td><td>Confirmar ventilação; depois desescalar</td></tr>
+              <tr><td>Manutenção</td><td>FiO₂ 0,3-0,4</td><td>Mínima para SpO₂ ≥ 94%; evita atelectasia de absorção</td></tr>
+              <tr><td>Hipoxemia refratária</td><td>FiO₂ ↑ transitório</td><td>Enquanto resolve causa (MRA, PEEP, posição)</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-red" style="margin-top:12px">
+            <strong>FiO₂ alta = atelectasia de absorção:</strong> O₂ substitui N₂ nos alvéolos → perda do "stent nitrogenado" → colapso alveolar progressivo. FiO₂ 0,8 intraoperatória para prevenção de ISC: NÃO comprovado benefício nas meta-análises modernas.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 07 — Relação I:E e Frequência Respiratória -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">07</span> Relação I:E e Frequência Respiratória
+        </div>
+        <div class="card-body">
+          <div class="sh sh-teal">Relação I:E</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Relação I:E</th><th>Aplicação</th><th>Observações</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">1:2 (padrão)</span></td><td>Rotina — maioria das cirurgias</td><td>Ti = 1/3 do ciclo → tempo expiratório adequado</td></tr>
+              <tr><td><span class="tag ty">1:1</span></td><td>SDRA moderada-grave</td><td>↑ tempo inspiratório → recrutamento; ↑ pressão média</td></tr>
+              <tr><td><span class="tag tr">&gt;1:1 (invertida)</span></td><td>Não recomendada em rotina</td><td>Risco de auto-PEEP; reservada para situações extremas</td></tr>
+              <tr><td><span class="tag tb">1:3 ou 1:4</span></td><td>DPOC, broncoespasmo</td><td>↑ tempo expiratório para esvaziamento completo</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-orange" style="margin-top:14px">Auto-PEEP (PEEP Intrínseca)</div>
+          <div class="alert a-orange">
+            <strong>Definição:</strong> ar residual preso no pulmão por esvaziamento incompleto → hiperinsuflação dinâmica → pressão positiva no final da expiração NÃO programada.
+          </div>
+          <div class="proto-steps" style="margin-top:8px">
+            <div class="proto-step"><span class="sn sn-o">1</span><div><strong>Causas:</strong> DPOC, broncoespasmo, I:E inadequada (Ti longo), FR alta, VC alto</div></div>
+            <div class="proto-step"><span class="sn sn-o">2</span><div><strong>Detecção:</strong> pausa expiratória → pressão &gt; PEEP ajustado. Também: fluxo expiratório não retorna a zero antes do próximo ciclo</div></div>
+            <div class="proto-step"><span class="sn sn-o">3</span><div><strong>Consequências:</strong> hiperinsuflação → ↓ retorno venoso → hipotensão; ↑ P pico; ↑ espaço morto</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>Tratamento:</strong> ↓ FR, ↑ tempo expiratório (I:E 1:3-1:4), ↓ VC, broncodilatadores, desconexão breve</div></div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Frequência Respiratória</div>
+          <div class="alert a-blue">
+            <strong>FR 10-16 irpm:</strong> ajustar por ETCO₂ (alvo 35-45 mmHg) ou gasometria arterial. Considerar que a absorção de CO₂ durante pneumoperitônio exige ↑ FR de 2-4 irpm.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 08 — Capnografia na VM -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">08</span> Capnografia na Ventilação Mecânica
+        </div>
+        <div class="card-body">
+          <img src="vm_img_capnograma.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Capnograma normal e padrões anormais">
+          <div class="alert a-teal">
+            A capnografia é a monitorização contínua do CO₂ expirado. O <strong>ETCO₂</strong> reflete a produção de CO₂, o transporte circulatório e a ventilação alveolar.
+          </div>
+
+          <div class="tbl-wrap" style="margin-top:12px"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Normal</th><th>Significado</th></tr></thead>
+            <tbody>
+              <tr><td>ETCO₂</td><td>35-45 mmHg</td><td>CO₂ alveolar ao final da expiração</td></tr>
+              <tr><td>Gradiente PaCO₂ - ETCO₂</td><td>~5 mmHg</td><td>↑ em shunt/espaço morto (TEP, hipotensão, SDRA)</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Padrões Clínicos do Capnograma</div>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Padrão</th><th>Achado</th><th>Causas</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tr">Queda súbita → zero</span></td><td>ETCO₂ desaparece abruptamente</td><td>Desconexão, extubação, PCR, embolia maciça</td><td>Verificar circuito → RCP se PCR</td></tr>
+              <tr><td><span class="tag ty">Subida progressiva</span></td><td>ETCO₂ sobe gradualmente</td><td>Hipoventilação, absorção CO₂ pneumoperitônio, febre, HM</td><td>↑ FR; avaliar causa metabólica</td></tr>
+              <tr><td><span class="tag to">Platô inclinado ("Sharknose")</span></td><td>Fase III com slope ascendente</td><td>Broncoespasmo, DPOC, obstrução parcial</td><td>Broncodilatadores; verificar TOT</td></tr>
+              <tr><td><span class="tag tb">ETCO₂ baixo persistente</span></td><td>ETCO₂ &lt; 30 mmHg constante</td><td>Hiperventilação, ↓ DC, TEP, hipotermia</td><td>↓ FR se hiperventilação; avaliar DC</td></tr>
+              <tr><td><span class="tag tr">CO₂ na inspiração</span></td><td>Baseline não retorna a zero</td><td>Reinalação (cal sodada esgotada, válvula defeituosa)</td><td>Trocar cal sodada; verificar válvulas</td></tr>
+              <tr><td><span class="tag tg">Subida abrupta</span></td><td>ETCO₂ sobe rapidamente</td><td>Liberação de torniquete, bicarbonato IV, MH</td><td>Avaliar contexto; se MH → protocolo</td></tr>
+              <tr><td><span class="tag ty">Queda gradual</span></td><td>ETCO₂ cai lentamente</td><td>Hipoperfusão, hipotermia, ↓ metabolismo</td><td>Avaliar DC e volemia</td></tr>
+              <tr><td><span class="tag to">Oscilações cardiogênicas</span></td><td>Ondulações no platô</td><td>Pulsações cardíacas transmitidas ao pulmão</td><td>Normal; mais visível em FR baixa</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vm-parametros -->
+
+  <!-- ============================================================
+       TAB 4 — VENTILAÇÃO PROTETORA
+       ============================================================ -->
+  <div class="tab-panel" id="vm-protetora">
+    <div class="page-wrap">
+
+      <!-- CARD 01 — Conceito e Justificativa -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> Conceito e Justificativa da Ventilação Protetora
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Ventilação protetora (VP):</strong> estratégia ventilatória que minimiza a lesão pulmonar induzida pelo ventilador (VILI) em pulmões normais e doentes. Princípios: <strong>baixo VC + PEEP adequado + FiO₂ mínima + ΔP controlado.</strong>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:12px">Epidemiologia e Impacto</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-r">1</span><div><strong>CPP (Complicações Pulmonares Pós-operatórias):</strong> ocorrem em 5-10% das cirurgias eletivas; 20-40% em alto risco</div></div>
+            <div class="proto-step"><span class="sn sn-r">2</span><div><strong>Impacto:</strong> cada CPP adiciona ~7 dias de internação e aumenta mortalidade em 3x</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>Evidência histórica:</strong> ARDSNet (NEJM 2000) — VC 6 vs 12 mL/kg → redução de mortalidade em 22% em SDRA. Conceito expandido para intraoperatório com IMPROVE (JAMA 2013)</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 02 — Protocolo de Ventilação Protetora -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">02</span> Protocolo de Ventilação Protetora Intraoperatória
+        </div>
+        <div class="card-body">
+          <img src="vm_img_protetora.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Síntese Ventilação Protetora">
+          <div class="alert a-blue">
+            Sequência prática para implementar ventilação protetora em toda cirurgia sob anestesia geral.
+          </div>
+
+          <div class="proto-steps" style="margin-top:12px">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Pré-operatório:</strong> avaliar risco com score ARISCAT (≥ 26 = alto risco). Posição 30° ou Trendelenburg reverso na indução. CPAP/VNIPP antes da intubação em pacientes de alto risco</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Pós-IOT:</strong> VC 6-8 mL/kg PCP + PEEP 5 cmH₂O + FiO₂ 0,4 + FR 10-14 + I:E 1:2</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>Monitorar:</strong> P platô &lt; 30 cmH₂O + ΔP &lt; 15 cmH₂O + SpO₂ ≥ 94%</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>MRA:</strong> indicar se SpO₂ &lt; 94% após exclusão de causas mecânicas, ou após desconexão acidental</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div><strong>FiO₂:</strong> mínima eficaz; evitar &gt; 0,8 exceto em emergência respiratória</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div><strong>Reversão BNM:</strong> guiada por TOF antes da extubação (TOF ratio ≥ 0,9)</div></div>
+            <div class="proto-step"><span class="sn sn-t">7</span><div><strong>Pós-operatório:</strong> CPAP nasal em alto risco; posição semi-sentada (30-45°); fisioterapia respiratória precoce</div></div>
+          </div>
+
+          <div class="alert a-green" style="margin-top:12px">
+            <strong>Resumo dos 5 Pilares:</strong> VC 6-8 mL/kg PCP + PEEP ≥ 5 + P platô &lt; 30 + ΔP &lt; 15 + FiO₂ mínima
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 03 — Manobras de Recrutamento Alveolar -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">03</span> Manobras de Recrutamento Alveolar (MRA)
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Objetivo:</strong> reabrir alvéolos colapsados aplicando pressão transpulmonar transitoriamente elevada, restaurando a aeração e melhorando a troca gasosa.
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:12px">Técnicas de MRA</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Técnica</th><th>Como Realizar</th><th>Segurança</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tb">Suspiro de volume</span></td><td>VC × 2-3 por 3-5 ciclos</td><td>Moderada — risco de barotrauma se Pplat &gt; 40</td></tr>
+              <tr><td><span class="tag ty">CPAP sustentado</span></td><td>30-40 cmH₂O por 30-40 segundos</td><td>Cuidado: hipotensão grave possível</td></tr>
+              <tr><td><span class="tag tg">Incremento gradual (FUTIER 2013)</span></td><td>Escalonamento +4 mL/kg até P platô 30-35 cmH₂O → 3-5 ciclos</td><td>Mais segura — recomendada</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="g2" style="margin-top:12px">
+            <div>
+              <div class="sh sh-green">Indicações</div>
+              <div class="proto-steps">
+                <div class="proto-step"><span class="sn sn-g">•</span><div>SpO₂ &lt; 92% inexplicada</div></div>
+                <div class="proto-step"><span class="sn sn-g">•</span><div>Após desconexão acidental do circuito</div></div>
+                <div class="proto-step"><span class="sn sn-g">•</span><div>Início da ventilação mecânica</div></div>
+                <div class="proto-step"><span class="sn sn-g">•</span><div>Após mudança de posição (supino → lateral)</div></div>
+              </div>
+            </div>
+            <div>
+              <div class="sh sh-red">Contraindicações Relativas</div>
+              <div class="proto-steps">
+                <div class="proto-step"><span class="sn sn-r">•</span><div>Hipovolemia não corrigida</div></div>
+                <div class="proto-step"><span class="sn sn-r">•</span><div>DPOC grave (risco de auto-PEEP)</div></div>
+                <div class="proto-step"><span class="sn sn-r">•</span><div>Instabilidade hemodinâmica</div></div>
+                <div class="proto-step"><span class="sn sn-r">•</span><div>Pneumotórax não drenado</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>REMAIN-1 (BMJ Open 2025, em andamento):</strong> MRA periódicas a cada 30 min vs sem MRA — aguardando resultados para definir uso de rotina.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 04 — Score ARISCAT -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">04</span> Score ARISCAT — Estratificação de Risco de CPP
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            O ARISCAT (Assess Respiratory Risk in Surgical Patients in Catalonia) estratifica o risco de complicações pulmonares pós-operatórias em cirurgias não cardíacas.
+          </div>
+
+          <div class="tbl-wrap" style="margin-top:12px"><table class="tbl">
+            <thead><tr><th>Fator de Risco</th><th>Pontos</th></tr></thead>
+            <tbody>
+              <tr><td>Idade 51-80 anos</td><td>+3</td></tr>
+              <tr><td>Idade &gt; 80 anos</td><td>+16</td></tr>
+              <tr><td>SpO₂ pré-operatória &lt; 96%</td><td>+8</td></tr>
+              <tr><td>Infecção respiratória no último mês</td><td>+17</td></tr>
+              <tr><td>Anemia pré-operatória (Hb &lt; 10 g/dL)</td><td>+11</td></tr>
+              <tr><td>Incisão intratórax</td><td>+24</td></tr>
+              <tr><td>Incisão abdominal superior</td><td>+15</td></tr>
+              <tr><td>Duração da cirurgia 2-3h</td><td>+16</td></tr>
+              <tr><td>Duração da cirurgia &gt; 3h</td><td>+23</td></tr>
+              <tr><td>Cirurgia de emergência</td><td>+8</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Interpretação</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Score</th><th>Risco</th><th>Incidência CPP</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag tg">&lt; 26</span></td><td>Baixo</td><td>~1,6%</td><td>VP padrão</td></tr>
+              <tr><td><span class="tag ty">26-44</span></td><td>Moderado</td><td>~13%</td><td>VP intensificada + monitorização</td></tr>
+              <tr><td><span class="tag tr">≥ 45</span></td><td>Alto</td><td>~42%</td><td>VP intensificada + MRA + CPAP pós-op</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-red" style="margin-top:12px">
+            <strong>Alto risco (ARISCAT ≥ 45):</strong> intensificar estratégia protetora + considerar CPAP/VNI no pós-operatório + posição semi-sentada + fisioterapia respiratória precoce.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 05 — Evidências Fundamentais -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">05</span> Evidências Fundamentais em Ventilação Protetora
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead>
+              <tr><th>Estudo</th><th>Ano / Journal</th><th>Desenho</th><th>Resultado Principal</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tag tr">ARDSNet</span></td>
+                <td>2000 / NEJM</td>
+                <td>VC 6 vs 12 mL/kg (SDRA)</td>
+                <td>Mortalidade -22% (31 vs 40%)</td>
+              </tr>
+              <tr>
+                <td><span class="tag tg">IMPROVE</span></td>
+                <td>2013 / JAMA</td>
+                <td>VP vs convencional — abdome</td>
+                <td>CPP -50% com VP intraoperatória</td>
+              </tr>
+              <tr>
+                <td><span class="tag tb">PROVHILO</span></td>
+                <td>2014 / Lancet</td>
+                <td>PEEP 12+MRA vs PEEP 2</td>
+                <td>Sem diferença em CPP</td>
+              </tr>
+              <tr>
+                <td><span class="tag ty">Amato et al.</span></td>
+                <td>2015 / NEJM</td>
+                <td>Meta-análise ΔP em SDRA</td>
+                <td>ΔP melhor preditor de sobrevida</td>
+              </tr>
+              <tr>
+                <td><span class="tag to">Guldner et al.</span></td>
+                <td>2015 / Anesthesiology</td>
+                <td>Meta-análise VP intraop</td>
+                <td>VC 6-8 + PEEP → ↓ CPP</td>
+              </tr>
+              <tr>
+                <td><span class="tag tb">PROBESE</span></td>
+                <td>2019 / JAMA</td>
+                <td>PEEP 12+MRA vs PEEP 4 (obesos)</td>
+                <td>Sem diferença em CPP; ↑ hipotensão</td>
+              </tr>
+              <tr>
+                <td><span class="tag tg">Consensus BJA</span></td>
+                <td>2019 / BJA</td>
+                <td>Consenso internacional VP</td>
+                <td>VC 6-8 + PEEP ≥ 5 + MRA seletiva</td>
+              </tr>
+              <tr>
+                <td><span class="tag tr">DESIGNATION</span></td>
+                <td>2026 / JAMA</td>
+                <td>PEEP guiado ΔP vs PEEP 5 fixo</td>
+                <td>Sem diferença em CPP; ↑ hipotensão</td>
+              </tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vm-protetora -->
+
+  <!-- ============================================================
+       TAB 5 — SITUAÇÕES ESPECIAIS
+       ============================================================ -->
+  <div class="tab-panel" id="vm-situacoes">
+    <div class="page-wrap">
+
+      <!-- CARD 01 — Laparoscopia e Pneumoperitônio -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> Laparoscopia e Pneumoperitônio
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            O pneumoperitônio com CO₂ (pressão intra-abdominal 12-15 mmHg) provoca alterações significativas na mecânica respiratória e na troca gasosa.
+          </div>
+
+          <div class="sh sh-teal">Efeitos do Pneumoperitônio</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-r">1</span><div><strong>↑ Pressões de via aérea:</strong> P pico e P platô elevam-se proporcionalmente à P intra-abdominal</div></div>
+            <div class="proto-step"><span class="sn sn-r">2</span><div><strong>↓ CRF e ↓ compliance:</strong> deslocamento cefálico do diafragma → atelectasia basal</div></div>
+            <div class="proto-step"><span class="sn sn-o">3</span><div><strong>↑ ETCO₂:</strong> absorção sistêmica do CO₂ insuflado (+5-10 mmHg vs basal)</div></div>
+            <div class="proto-step"><span class="sn sn-o">4</span><div><strong>Trendelenburg acentuado:</strong> compressão diafragmática adicional → necessidade de PEEP ainda maior</div></div>
+          </div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Ajustes Ventilatórios</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Ajuste</th><th>Justificativa</th></tr></thead>
+            <tbody>
+              <tr><td>Modo</td><td>PCV ou PCV-VG preferível</td><td>Melhor controle de Ppico com volume mantido</td></tr>
+              <tr><td>FR</td><td>↑ 2-4 irpm vs basal</td><td>Compensar absorção extra de CO₂</td></tr>
+              <tr><td>PEEP</td><td>6-10 cmH₂O (individualizar)</td><td>Contrapor atelectasia induzida pelo pneumoperitônio</td></tr>
+              <tr><td>VC</td><td>Manter 6-8 mL/kg PCP</td><td>Não compensar ETCO₂ aumentando VC</td></tr>
+              <tr><td>I:E</td><td>Manter 1:2 (avaliar 1:1,5)</td><td>Avaliar se necessário mais tempo inspiratório</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- CARD 02 — Paciente Obeso -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">02</span> Paciente Obeso (IMC ≥ 30)
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            A obesidade impõe desafios ventilatórios significativos: ↓ CRF, ↑ resistência, ↑ atelectasia, ↑ trabalho respiratório. O volume corrente deve ser SEMPRE baseado no <strong>peso corporal predito (PCP)</strong>, nunca no peso real.
+          </div>
+
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>PCP obeso ≠ peso real!</strong> Masculino: PCP = altura(cm) - 100. Feminino: PCP = altura(cm) - 110.
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:12px">Estratégia Ventilatória no Obeso</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Recomendação</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td>VC</td><td>6-8 mL/kg PCP</td><td>NUNCA usar peso real</td></tr>
+              <tr><td>PEEP</td><td>8-12 cmH₂O</td><td>Individualizar por ΔP ou compliance</td></tr>
+              <tr><td>Modo</td><td>PCV ou PCV-VG</td><td>Preferível ao VCV</td></tr>
+              <tr><td>MRA</td><td>Após IOT e após desconexão</td><td>Obesos têm maior tendência a atelectasia</td></tr>
+              <tr><td>Posição</td><td>Trendelenburg reverso na indução</td><td>↑ CRF vs supino plano</td></tr>
+              <tr><td>FiO₂</td><td>Mínima para SpO₂ ≥ 94%</td><td>Atelectasia de absorção mais grave em obesos</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Meta-análise 2024 (Int J Surgery):</strong> PEEP individualizado melhora oxigenação intraoperatória sem aumento significativo no uso de vasopressores em pacientes obesos.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 03 — SDRA Intraoperatória -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">03</span> SDRA Intraoperatória
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>Critérios de Berlin:</strong> P/F &lt; 300 + infiltrado bilateral + início &lt; 1 semana + PEEP ≥ 5 cmH₂O.
+          </div>
+
+          <div class="sh sh-cyan" style="margin-top:12px">Classificação de Gravidade</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Gravidade</th><th>P/F</th><th>Mortalidade</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag ty">Leve</span></td><td>200-300</td><td>27%</td></tr>
+              <tr><td><span class="tag to">Moderada</span></td><td>100-200</td><td>32%</td></tr>
+              <tr><td><span class="tag tr">Grave</span></td><td>&lt; 100</td><td>45%</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Estratégia Ventilatória na SDRA</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>VC:</strong> 4-6 mL/kg PCP (mais restritivo que rotina)</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>P platô:</strong> &lt; 30 cmH₂O (rigorosamente)</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>PEEP:</strong> personalizado (tabela ARDSNet ou guiado por Pes/EIT)</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>Hipercapnia permissiva:</strong> aceitar PaCO₂ 50-70 mmHg se pH &gt; 7,20</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div><strong>Decúbito prono:</strong> 16h/dia → mortalidade -17% na grave (PROSEVA, NEJM 2013)</div></div>
+            <div class="proto-step"><span class="sn sn-r">6</span><div><strong>ECMO-VV:</strong> última instância se refratária à VM otimizada</div></div>
+          </div>
+
+          <div class="alert a-orange" style="margin-top:12px">
+            <strong>SDRA intraoperatória é rara;</strong> mais comum na recuperação anestésica/pós-operatório. Se diagnosticada intraop → chamar equipe de UTI precocemente e planejar pós-operatório em CTI.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 04 — Ventilação com Um Pulmão (OLV) -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">04</span> Ventilação com Um Pulmão (OLV)
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            A <strong>ventilação monopulmonar (OLV)</strong> é utilizada em cirurgias torácicas para isolar um pulmão enquanto opera o outro. A principal complicação é a hipoxemia por shunt intrapulmonar.
+          </div>
+
+          <div class="sh sh-teal">Indicações</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">•</span><div>Cirurgia torácica (VATS, toracotomia)</div></div>
+            <div class="proto-step"><span class="sn sn-t">•</span><div>Ressecção pulmonar (lobectomia, pneumectomia)</div></div>
+            <div class="proto-step"><span class="sn sn-t">•</span><div>Esofagectomia</div></div>
+            <div class="proto-step"><span class="sn sn-t">•</span><div>Cirurgia de coluna torácica por via anterior</div></div>
+          </div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Dispositivos</div>
+          <div class="g2">
+            <div class="alert a-blue"><strong>TOT de duplo lúmen (DLT / Carlens):</strong> permite ventilação e aspiração independente de cada pulmão</div>
+            <div class="alert a-violet"><strong>Bloqueador brônquico:</strong> inserido por dentro de TOT convencional; ocluí brônquio seletivamente</div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Parâmetros em OLV</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Valor</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td>VC</td><td>4-6 mL/kg PCP</td><td>Pulmão ventilado recebe todo o VC</td></tr>
+              <tr><td>PEEP</td><td>5 cmH₂O</td><td>No pulmão ventilado</td></tr>
+              <tr><td>FiO₂</td><td>Titulada (iniciar 1,0 → reduzir)</td><td>Manter SpO₂ ≥ 92%</td></tr>
+              <tr><td>FR</td><td>↑ para compensar ↓ VC</td><td>Manter ETCO₂ 35-45</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Hipoxemia em OLV:</strong> PEEP no pulmão ventilado + CPAP 5 cmH₂O no pulmão não-ventilado se necessário + FiO₂ ↑ + verificar posição do DLT com broncoscopia.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 05 — Posição Prona em Cirurgia -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">05</span> Posição Prona em Cirurgia
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            A posição prona melhora a fisiologia respiratória ao redistribuir a ventilação e perfusão, mas exige atenção especial aos acessos e à monitorização.
+          </div>
+
+          <div class="g2" style="margin-top:12px">
+            <div>
+              <div class="sh sh-green">Efeitos Respiratórios</div>
+              <div class="proto-steps">
+                <div class="proto-step"><span class="sn sn-g">+</span><div>Melhora relação V/Q</div></div>
+                <div class="proto-step"><span class="sn sn-g">+</span><div>↑ CRF</div></div>
+                <div class="proto-step"><span class="sn sn-g">+</span><div>Melhora homogeneidade de ventilação</div></div>
+                <div class="proto-step"><span class="sn sn-g">+</span><div>Reduz atelectasias basais</div></div>
+              </div>
+            </div>
+            <div>
+              <div class="sh sh-orange">Cuidados Obrigatórios</div>
+              <div class="proto-steps">
+                <div class="proto-step"><span class="sn sn-o">!</span><div>Olhos: proteção + pressão intraocular</div></div>
+                <div class="proto-step"><span class="sn sn-o">!</span><div>Plexo braquial: posicionamento neutro</div></div>
+                <div class="proto-step"><span class="sn sn-o">!</span><div>Cotovelos e joelhos: acolchoamento</div></div>
+                <div class="proto-step"><span class="sn sn-o">!</span><div>TOT: fixação segura; risco de extubação</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>VM em prona:</strong> PEEP geralmente pode ser reduzido vs supino (melhora natural da CRF). Monitorar P platô após virada — compliance pode mudar significativamente. Efeitos hemodinâmicos: ↑ pressão venosa abdominal → pode comprimir VCS.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 06 — Gestante -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">06</span> Gestante — VM na Anestesia Obstétrica
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            A gestante apresenta alterações fisiológicas significativas que impactam diretamente a ventilação mecânica e a reserva de oxigênio.
+          </div>
+
+          <div class="sh sh-teal">Alterações Fisiológicas Respiratórias na Gestação</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Alteração</th><th>Implicação</th></tr></thead>
+            <tbody>
+              <tr><td>CRF</td><td>↓ 20-25%</td><td>Menor reserva de O₂; dessaturação rápida</td></tr>
+              <tr><td>Consumo de O₂</td><td>↑ 20%</td><td>Maior velocidade de consumo durante apneia</td></tr>
+              <tr><td>Volume-minuto</td><td>↑ 30-50%</td><td>Desnitrogenação mais rápida na pré-oxigenação</td></tr>
+              <tr><td>PaCO₂ basal</td><td>~30 mmHg (alcalose resp. compensada)</td><td>Manter ETCO₂ ~30-32 mmHg (não normalizar para 40)</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Ajustes de VM na Gestante</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Pré-oxigenação rigorosa:</strong> 3-5 min + CPAP — saturação cai em &lt; 2 min de apneia</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>VC:</strong> 6-8 mL/kg PCP (PCP = peso pré-gestacional)</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>PEEP:</strong> 5-8 cmH₂O; cautela com PEEP excessivo (↓ retorno venoso → hipotensão)</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>FiO₂:</strong> mínima para SpO₂ ≥ 95% (oxigenação fetal depende da materna)</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div><strong>FR:</strong> ajustar para ETCO₂ ~30-32 mmHg (normal da gestante, não 40)</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vm-situacoes -->
+
+  <!-- ============================================================
+       TAB 6 — VILI & COMPLICAÇÕES
+       ============================================================ -->
+  <div class="tab-panel" id="vm-vili">
+    <div class="page-wrap">
+
+      <!-- CARD 01 — Mecanismos de VILI -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> Mecanismos de Lesão Pulmonar Induzida pelo Ventilador (VILI)
+        </div>
+        <div class="card-body">
+          <img src="vm_img_vili.png" style="width:100%;max-width:500px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Mecanismos VILI">
+          <div class="alert a-red">
+            A <strong>VILI (Ventilator-Induced Lung Injury)</strong> é a lesão pulmonar causada pela própria ventilação mecânica. Compreender os mecanismos é fundamental para preveni-la.
+          </div>
+
+          <div class="tbl-wrap" style="margin-top:12px"><table class="tbl">
+            <thead><tr><th>Mecanismo</th><th>Definição</th><th>Gatilho</th><th>Prevenção</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><span class="tag tr">Barotrauma</span></td>
+                <td>Pressão excessiva → ruptura alveolar → pneumotórax, pneumomediastino</td>
+                <td>P platô &gt; 30, ΔP &gt; 15</td>
+                <td>Limitar pressões</td>
+              </tr>
+              <tr>
+                <td><span class="tag to">Volutrauma</span></td>
+                <td>Sobredistensão alveolar por volumes excessivos → lesão estrutural</td>
+                <td>VC alto em pulmão pequeno</td>
+                <td>VC 6-8 mL/kg PCP</td>
+              </tr>
+              <tr>
+                <td><span class="tag ty">Atelectrauma</span></td>
+                <td>Abre/fecha repetitivo de alvéolos colapsados → shear stress nas junções</td>
+                <td>PEEP insuficiente</td>
+                <td>PEEP adequado ("keep the lung open")</td>
+              </tr>
+              <tr>
+                <td><span class="tag tr">Biotrauma</span></td>
+                <td>Liberação de mediadores inflamatórios → SIRS pulmonar → disfunção orgânica sistêmica</td>
+                <td>Qualquer mecanismo acima</td>
+                <td>VP multicomponente</td>
+              </tr>
+            </tbody>
+          </table></div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Volutrauma é mais importante que barotrauma na prática</strong> (Dreyfuss &amp; Saumon, 1998) — a distensão alveolar excessiva causa mais lesão que a pressão em si. Por isso, ΔP (que reflete distensão) é melhor preditor que P platô isolada.
+          </div>
+
+          <div class="sh sh-cyan" style="margin-top:14px">Biotrauma — Mediadores Inflamatórios</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-r">•</span><div><strong>IL-1β, IL-6, TNF-α, IL-8:</strong> detectados no lavado broncoalveolar após VM lesiva</div></div>
+            <div class="proto-step"><span class="sn sn-r">•</span><div><strong>Translocação sistêmica:</strong> mediadores ultrapassam barreira alvéolo-capilar → SIRS → disfunção de órgãos à distância</div></div>
+            <div class="proto-step"><span class="sn sn-t">•</span><div><strong>VP previne biotrauma:</strong> VC baixo + PEEP adequado reduz significativamente a liberação de citocinas</div></div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Potência Mecânica (Mechanical Power — MP)</div>
+          <div class="alert a-blue">
+            <strong>Conceito unificador:</strong> MP = energia/ciclo × FR. Integra todos os componentes da VM em um único número.<br>
+            <strong>Fórmula simplificada:</strong> MP = 0,098 × FR × VC² × (Ppico + PEEP) / 2Cdyn<br>
+            <strong>Limite proposto:</strong> MP &lt; 17 J/min (acima → risco elevado de VILI de forma dose-dependente).
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 02 — Pneumotórax Hipertensivo -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">02</span> Pneumotórax Hipertensivo na VM
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>Emergência clínica!</strong> Diagnóstico CLÍNICO — não esperar imagem. Na VM, o pneumotórax hipertensivo se desenvolve mais rapidamente pela pressão positiva contínua.
+          </div>
+
+          <div class="sh sh-red">Diagnóstico Clínico</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-r">1</span><div><strong>Deterioração hemodinâmica súbita</strong> (hipotensão, taquicardia)</div></div>
+            <div class="proto-step"><span class="sn sn-r">2</span><div><strong>↑ Pressão de via aérea</strong> (Ppico e P platô elevados)</div></div>
+            <div class="proto-step"><span class="sn sn-r">3</span><div><strong>↓ MV unilateral</strong> (ausculta assimétrica)</div></div>
+            <div class="proto-step"><span class="sn sn-r">4</span><div><strong>↓ SpO₂ + ↑ ou ↓ ETCO₂</strong></div></div>
+            <div class="proto-step"><span class="sn sn-r">5</span><div><strong>Enfisema subcutâneo</strong> (crepitação à palpação do tórax/pescoço)</div></div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Tratamento Imediato</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>Descompressão com agulha:</strong> 2° EIC na linha medioclavicular (jelco 14G)</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Após estabilização:</strong> drenagem torácica em selo d'água (5° EIC LAM)</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>FiO₂ 1,0</strong> durante manejo</div></div>
+          </div>
+
+          <div class="alert a-orange" style="margin-top:12px">
+            <strong>Atenção:</strong> auto-PEEP pode mimetizar pneumotórax (↑ P via aérea + hipotensão). Excluir pneumotórax ANTES de simplesmente aumentar PEEP.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 03 — Broncoespasmo na VM -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">03</span> Broncoespasmo na Ventilação Mecânica
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Sinais na VM:</strong> ↑ Ppico com P platô NORMAL + capnograma "sharknose" (platô inclinado) + ↑ auto-PEEP + sibilos à ausculta.
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:12px">Tratamento Escalonado (Stepwise)</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>FiO₂ 1,0</strong> — garantir oxigenação durante o manejo</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Broncodilatador inalatório:</strong> salbutamol 4-8 puffs (com adaptador no circuito) ou nebulização</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>Ketamina IV:</strong> 1-1,5 mg/kg (broncodilatador sistêmico potente)</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>Sulfato de magnésio:</strong> 25-50 mg/kg IV (relaxamento musculatura lisa brônquica)</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div><strong>Adrenalina IV:</strong> 10-50 mcg em bolus (casos refratários)</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div><strong>Aprofundar anestesia:</strong> sevoflurano tem efeito broncodilatador dose-dependente</div></div>
+          </div>
+
+          <div class="alert a-gold" style="margin-top:12px">
+            <strong>Ajuste de VM no broncoespasmo:</strong> ↓ FR, ↑ tempo expiratório (I:E 1:3 ou 1:4), monitorar auto-PEEP. NÃO aumentar VC para compensar.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 04 — Atelectasia e Hipoxemia -->
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">04</span> Atelectasia e Hipoxemia Intraoperatória
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>Causa mais comum de hipoxemia intraoperatória.</strong> Ocorre em ~90% dos pacientes anestesiados, predominantemente nas regiões pulmonares dependentes (bases em supino).
+          </div>
+
+          <div class="sh sh-cyan">Fatores de Risco</div>
+          <div class="g2">
+            <div class="proto-steps">
+              <div class="proto-step"><span class="sn sn-r">•</span><div>FiO₂ alta (atelectasia de absorção)</div></div>
+              <div class="proto-step"><span class="sn sn-r">•</span><div>Anestesia geral (abolição do tônus)</div></div>
+              <div class="proto-step"><span class="sn sn-r">•</span><div>Posição supina</div></div>
+            </div>
+            <div class="proto-steps">
+              <div class="proto-step"><span class="sn sn-r">•</span><div>Obesidade</div></div>
+              <div class="proto-step"><span class="sn sn-r">•</span><div>Cirurgia abdominal</div></div>
+              <div class="proto-step"><span class="sn sn-r">•</span><div>Paralisia diafragmática (BNM)</div></div>
+            </div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Diagnóstico</div>
+          <div class="alert a-teal">
+            SpO₂ ↓ + relação P/F ↓ + ↑ gradiente ETCO₂-PaCO₂ + ↑ pressões de via aérea. Confirmar com gasometria e excluir outras causas.
+          </div>
+
+          <div class="sh sh-green" style="margin-top:14px">Tratamento Escalonado</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">1</span><div><strong>FiO₂ 1,0</strong> (garantir oxigenação enquanto investiga)</div></div>
+            <div class="proto-step"><span class="sn sn-t">2</span><div><strong>Excluir causas mecânicas:</strong> TOT (posição, obstrução), circuito (desconexão, vazamento)</div></div>
+            <div class="proto-step"><span class="sn sn-t">3</span><div><strong>MRA:</strong> CPAP 30 cmH₂O × 30s ou escalonamento gradual</div></div>
+            <div class="proto-step"><span class="sn sn-t">4</span><div><strong>↑ PEEP:</strong> 5 → 8 → 10 cmH₂O (escalonamento guiado por SpO₂ e ΔP)</div></div>
+            <div class="proto-step"><span class="sn sn-t">5</span><div><strong>Aspiração</strong> se secreção abundante nas vias aéreas</div></div>
+            <div class="proto-step"><span class="sn sn-t">6</span><div><strong>Posição:</strong> Trendelenburg reverso se possível; lateralizar se unilateral</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vm-vili -->
+
+  <!-- ============================================================
+       TAB 7 — REVISÃO RÁPIDA (FLASHCARDS)
+       ============================================================ -->
+  <div class="tab-panel" id="vm-revisao">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">★</span> Flashcards — Revisão Rápida de VM
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            Clique em cada pergunta para revelar a resposta. Use para revisão ativa antes de provas e plantões.
+          </div>
+
+          <!-- Flashcard 1 -->
+          <div class="acc" style="margin-top:12px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">1. Qual o VC padrão em ventilação protetora?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>6-8 mL/kg de PESO CORPORAL PREDITO (PCP)</strong><br>Masculino: PCP = altura(cm) - 100 | Feminino: PCP = altura(cm) - 110</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 2 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">2. Qual a fórmula da drive pressure (ΔP)?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>ΔP = P platô - PEEP</strong><br>Alvo: ΔP ≤ 15 cmH₂O. Equivale a VC/Crs (compliance do sistema respiratório).</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 3 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">3. O que a diferença Ppico - Pplatô representa?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>Resistência das vias aéreas.</strong><br>Normal: &lt; 10 cmH₂O. ↑ em broncoespasmo, secreção, TOT dobrado.</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 4 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">4. Qual o alvo de P platô?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>&lt; 30 cmH₂O</strong><br>Reflete a pressão alveolar de distensão. P platô elevada = risco de volutrauma e VILI.</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 5 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">5. Qual a FiO₂ alvo intraoperatória?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>≤ 0,4 (mínima para SpO₂ ≥ 94%)</strong><br>FiO₂ alta causa atelectasia de absorção. Exceção: pré-oxigenação (FiO₂ 1,0).</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 6 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">6. Qual o PEEP inicial padrão?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>5 cmH₂O, individualizar conforme contexto.</strong><br>Obesos e laparoscopia: 8-12 cmH₂O. PEEP alto universal: sem benefício demonstrado (PROVHILO, PROBESE, DESIGNATION).</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 7 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">7. Ppico ↑ com P platô normal = problema de?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>RESISTÊNCIA</strong><br>Causas: broncoespasmo, secreção, TOT dobrado, tubo fino, fluxo inspiratório elevado.</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 8 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">8. Ppico ↑ COM P platô ↑ = problema de?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>COMPLIANCE</strong><br>Causas: pneumotórax, SDRA, pneumoperitônio, broncoespasmo grave, edema pulmonar.</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 9 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">9. ETCO₂ queda súbita a zero — causas?</div>
+            <div class="acc-body">
+              <div class="alert a-red"><strong>Desconexão, extubação, PCR, TEP maciço.</strong><br>Ação imediata: verificar circuito → se paciente sem pulso → iniciar RCP.</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 10 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">10. Peso corporal predito (masculino)?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>PCP = Altura (cm) - 100</strong><br>Feminino: Altura (cm) - 110. Sempre usar PCP para calcular VC, nunca peso real.</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 11 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">11. Quais os 5 pilares da ventilação protetora?</div>
+            <div class="acc-body">
+              <div class="alert a-green">
+                <strong>1.</strong> VC 6-8 mL/kg PCP<br>
+                <strong>2.</strong> PEEP ≥ 5 cmH₂O<br>
+                <strong>3.</strong> P platô &lt; 30 cmH₂O<br>
+                <strong>4.</strong> ΔP &lt; 15 cmH₂O<br>
+                <strong>5.</strong> FiO₂ mínima (≤ 0,4)
+              </div>
+            </div>
+          </div>
+
+          <!-- Flashcard 12 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">12. ARISCAT ≥ 45 — o que significa?</div>
+            <div class="acc-body">
+              <div class="alert a-red"><strong>Alto risco de CPP (~42% incidência)</strong><br>Conduta: VP intensificada + MRA seletiva + CPAP pós-operatório + fisioterapia respiratória precoce.</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 13 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">13. MRA — quando indicar?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>SpO₂ &lt; 94% inexplicada, após desconexão acidental, início da VM.</strong><br>Contraindicação relativa: hipovolemia, DPOC grave, hemodinâmica instável.</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 14 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">14. Auto-PEEP — como detectar?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>Pausa expiratória → pressão medida &gt; PEEP programado.</strong><br>Também: fluxo expiratório não retorna a zero antes do próximo ciclo. Tratamento: ↓ FR, ↑ Te, broncodilatadores.</div>
+            </div>
+          </div>
+
+          <!-- Flashcard 15 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">15. Fórmula da compliance dinâmica?</div>
+            <div class="acc-body">
+              <div class="alert a-green"><strong>Cdyn = VC / (Ppico - PEEP)</strong><br>Normal: 50-80 mL/cmH₂O. Compliance estática: Cst = VC / (P platô - PEEP). Normal: 60-100 mL/cmH₂O.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /vm-revisao -->
+
+  <!-- ============================================================
+       TAB 8 — QUESTÕES TEA/TSA
+       ============================================================ -->
+  <div class="tab-panel" id="vm-questoes">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-cyan">
+          <span class="card-num">★</span> Questões Estilo TEA/TSA — Ventilação Mecânica
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            8 questões no padrão de provas de residência e especialização em anestesiologia. Clique para revelar a resposta e justificativa.
+          </div>
+
+          <!-- Q1 -->
+          <div class="acc" style="margin-top:12px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Q1. Paciente masculino, 170 cm, peso real 110 kg, cirurgia abdominal laparoscópica. O volume corrente CORRETO para ventilação protetora é:</div>
+            <div class="acc-body">
+              <div class="alert a-gold">
+                <strong>A)</strong> 550-660 mL<br>
+                <strong>B)</strong> 420-560 mL<br>
+                <strong>C)</strong> 660-880 mL<br>
+                <strong>D)</strong> 700-900 mL
+              </div>
+              <div class="alert a-green" style="margin-top:8px">
+                <strong>Resposta: B</strong><br>
+                PCP = 170 - 100 = 70 kg → VC = 6-8 mL/kg × 70 = <strong>420-560 mL</strong>.<br>
+                Usar peso real (110 kg) = erro comum → volumes excessivos → VILI.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Q2. Paciente em laparoscópica em Trendelenburg: Ppico = 38 cmH₂O, P platô = 22 cmH₂O. A conduta mais adequada é:</div>
+            <div class="acc-body">
+              <div class="alert a-gold">
+                <strong>A)</strong> Aumentar PEEP<br>
+                <strong>B)</strong> Realizar manobra de recrutamento<br>
+                <strong>C)</strong> Investigar causa de aumento de resistência<br>
+                <strong>D)</strong> Trocar para VCV
+              </div>
+              <div class="alert a-green" style="margin-top:8px">
+                <strong>Resposta: C</strong><br>
+                Ppico alto (38) com P platô NORMAL (22) = diferença de 16 cmH₂O = <strong>problema de RESISTÊNCIA</strong>.<br>
+                Investigar: tubo dobrado, secreção, broncoespasmo, posição do TOT. A compliance está preservada (P platô normal).
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Q3. Sobre drive pressure (ΔP), é CORRETO:</div>
+            <div class="acc-body">
+              <div class="alert a-gold">
+                <strong>A)</strong> É igual ao volume corrente dividido pela compliance<br>
+                <strong>B)</strong> É a diferença entre pressão de pico e PEEP<br>
+                <strong>C)</strong> Valor &gt; 20 cmH₂O é aceitável em pulmão normal<br>
+                <strong>D)</strong> Independe do PEEP ajustado
+              </div>
+              <div class="alert a-green" style="margin-top:8px">
+                <strong>Resposta: A</strong><br>
+                ΔP = P platô - PEEP = VC / Crs (compliance do sistema respiratório).<br>
+                B está errada (seria Ppico - PEEP, que não é ΔP). C está errada (alvo &lt; 15). D está errada (PEEP faz parte da fórmula).
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Q4. O estudo DESIGNATION (JAMA 2026), randomizando 1435 pacientes em cirurgia abdominal, PEEP guiado por ΔP vs PEEP 5 fixo, mostrou:</div>
+            <div class="acc-body">
+              <div class="alert a-gold">
+                <strong>A)</strong> Redução de 30% nas CPP<br>
+                <strong>B)</strong> Maior mortalidade no grupo PEEP alto<br>
+                <strong>C)</strong> Sem diferença em CPP, maior hipotensão no grupo PEEP alto<br>
+                <strong>D)</strong> PEEP individualizado superior apenas em obesos
+              </div>
+              <div class="alert a-green" style="margin-top:8px">
+                <strong>Resposta: C</strong><br>
+                DESIGNATION: PEEP guiado por ΔP NÃO reduziu CPP comparado a PEEP 5 fixo, mas resultou em mais hipotensão intraoperatória no grupo PEEP alto. Reforça que PEEP alto universal não tem benefício demonstrado.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Q5. Sinal capnográfico de "sharknose" (platô expiratório inclinado) indica:</div>
+            <div class="acc-body">
+              <div class="alert a-gold">
+                <strong>A)</strong> Intubação esofágica<br>
+                <strong>B)</strong> Broncoespasmo/DPOC<br>
+                <strong>C)</strong> Embolismo pulmonar<br>
+                <strong>D)</strong> Hipoperfusão pulmonar
+              </div>
+              <div class="alert a-green" style="margin-top:8px">
+                <strong>Resposta: B</strong><br>
+                O padrão "sharknose" (platô com slope ascendente na fase III) indica obstrução ao fluxo expiratório → esvaziamento desigual dos alvéolos. Típico de broncoespasmo e DPOC.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Q6. Paciente obesa (IMC 45), colecistectomia laparoscópica. TODAS são corretas sobre VM, EXCETO:</div>
+            <div class="acc-body">
+              <div class="alert a-gold">
+                <strong>A)</strong> VC baseado no peso corporal predito<br>
+                <strong>B)</strong> PEEP 8-12 cmH₂O geralmente necessário<br>
+                <strong>C)</strong> PCV ou PCV-VG preferível ao VCV<br>
+                <strong>D)</strong> Auto-PEEP é incomum nessa situação
+              </div>
+              <div class="alert a-green" style="margin-top:8px">
+                <strong>Resposta: D</strong><br>
+                Obesa + laparoscopia = alto risco de auto-PEEP! A obesidade aumenta a resistência das vias aéreas e o pneumoperitônio ↓ compliance, dificultando o esvaziamento completo. Auto-PEEP é uma complicação frequente nesse cenário.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Q7. Sobre manobras de recrutamento alveolar, é INCORRETO:</div>
+            <div class="acc-body">
+              <div class="alert a-gold">
+                <strong>A)</strong> São contraindicadas na presença de hipovolemia não corrigida<br>
+                <strong>B)</strong> Devem ser realizadas de rotina a cada 30 min em qualquer cirurgia<br>
+                <strong>C)</strong> Após desconexão acidental do circuito é indicação clássica<br>
+                <strong>D)</strong> Técnica de CPAP sustentado 30-40 cmH₂O por 30-40s é opção válida
+              </div>
+              <div class="alert a-green" style="margin-top:8px">
+                <strong>Resposta: B</strong><br>
+                MRA são eficazes quando <strong>combinadas a PEEP individualizado por ΔP</strong> (BJA 2025). MRA isoladas ou com PEEP alto fixo universal não reduzem CPP (DESIGNATION 2026). Indicar em: após desconexão, SpO₂ < 94% inexplicada, início da VM: desconexão, hipoxemia inexplicada, início da VM. O estudo REMAIN-1 ainda está em andamento para avaliar MRA periódicas.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="acc" style="margin-top:8px">
+            <div class="acc-hdr" onclick="toggleAcc(this)">Q8. Paciente em VCV: P platô caindo progressivamente ao longo da cirurgia. Interpretação mais correta:</div>
+            <div class="acc-body">
+              <div class="alert a-gold">
+                <strong>A)</strong> Desenvolvimento de pneumotórax<br>
+                <strong>B)</strong> Broncoespasmo progressivo<br>
+                <strong>C)</strong> Melhora da compliance pulmonar<br>
+                <strong>D)</strong> Sobredistensão alveolar iminente
+              </div>
+              <div class="alert a-green" style="margin-top:8px">
+                <strong>Resposta: C</strong><br>
+                P platô caindo com VC constante (VCV) = compliance MELHORANDO. Exemplos: desinsuflação do pneumoperitônio, mudança de posição favorável, resolução de atelectasia após MRA. Pneumotórax e broncoespasmo AUMENTARIAM a P platô.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+  </div><!-- /vm-questoes -->
+</div>

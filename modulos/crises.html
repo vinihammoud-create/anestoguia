@@ -1,0 +1,817 @@
+<div class="screen" id="screen-crises">
+  <div class="top-bar" style="border-bottom:3px solid var(--red)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--red)">🚨 Crises Intraoperatórias</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="crises-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('crise','hm',this)">HIPERT. MALIGNA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','anafilaxia',this)">ANAFILAXIA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','last',this)">LAST</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','vad',this)">VAD EMERGÊNCIA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','pcr',this)">PCR INTRAOP.</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','bronco',this)">BRONCOESPASMO</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 1 — HIPERTERMIA MALIGNA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel active" id="crise-hm">
+    <div class="page-wrap">
+
+    <!-- FLUXO DE FASES -->
+    <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ AGIR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
+    </div>
+
+    <!-- RECONHECER -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#C0392B)">
+        <span class="card-num">🚨</span> RECONHECER — Diagnóstico
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="font-size:14px;font-weight:700">
+          <strong>TRÍADE CLÁSSICA:</strong> ↑ETCO₂ + Rigidez muscular + ↑Temperatura
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="dr dr-r">
+            <div class="dn">↑ETCO₂ — Sinal mais precoce</div>
+            <div class="dc">Aumento inexplicado e progressivo do ETCO₂ &gt;55 mmHg apesar de hiperventilação. Primeiro sinal em 90% dos casos.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Rigidez Muscular</div>
+            <div class="dc">Trismo masseterino após succinilcolina, rigidez generalizada. Espasmo do masseter isolado: 50% associação com HM.</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">↑Temperatura</div>
+            <div class="dc">Pode subir &gt;1°C a cada 5 minutos em casos fulminantes. É sinal TARDIO — não esperar para agir.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Outros sinais</div>
+            <div class="dc">Taquicardia sinusal, acidose mista (respiratória + metabólica), rabdomiólise (↑CK, mioglobinúria), hipercalemia grave, arritmias.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AÇÃO IMEDIATA -->
+    <div style="background:linear-gradient(135deg,#7F0000,#C0392B);border-radius:10px;padding:14px;margin-bottom:10px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:white;letter-spacing:.8px;margin-bottom:8px">🚨 AÇÃO IMEDIATA — PROTOCOLO HM</div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">1</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>CHAMAR AJUDA</strong> — ativar protocolo HM do serviço. Mobilizar equipe e farmácia para Dantrolene</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">2</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>SUSPENDER</strong> o agente halogenado e succinilcolina <strong>IMEDIATAMENTE</strong>. Trocar circuito e cal sodada se possível.</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">3</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>HIPERVENTILAR</strong> com O₂ 100% — FR máxima, VC 10 mL/kg, fluxo alto (&gt;10 L/min)</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">4</span>
+        <div style="font-size:13px;color:white;line-height:1.5">
+          <strong>DANTROLENE</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">2.5 mg/kg IV rápido</span><br>
+          → Repetir a cada 5 min até resolução dos sinais (máx 10 mg/kg)<br>
+          <span style="font-size:12px;color:rgba(255,255,255,.7)">Preparo: cada frasco 20 mg + 60 mL água estéril → dissolver completamente antes de infundir</span><br>
+          <span style="font-size:12px;color:rgba(255,255,255,.7)">Contactar central HM: 1-800-MH-HYPER (EUA) / recursos do serviço local</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">5</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>BICARBONATO</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">1-2 mEq/kg IV</span> se pH &lt;7.2</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">6</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>RESFRIAR:</strong> solução salina gelada IV 15 mL/kg; compressas de gelo em axilas, virilhas e pescoço. Alvo: T° &lt;38.5°C (parar resfriamento para evitar hipotermia)</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">7</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>TRATAR HIPERCALEMIA:</strong> CaCl₂ <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">10 mg/kg IV</span> + glicose 50% 50 mL + insulina 10 UI + bicarbonato</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">8</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>MONITORIZAR:</strong> gasometria arterial e eletrólitos a cada 10-15 min. Débito urinário (alvo &gt;2 mL/kg/h). CK seriada.</span>
+      </div>
+    </div>
+
+    <!-- BOX ALERTA VERMELHO -->
+    <div class="card" style="border:2px solid var(--red)">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#B71C1C)">
+        <span class="card-num">⚠️</span> ALERTA CRÍTICO — DANTROLENE
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="border-left:4px solid #FF1744">
+          <strong>DANTROLENE é o único tratamento definitivo</strong> — NÃO ATRASAR sua administração por nenhuma outra medida.
+        </div>
+        <div style="margin-top:10px">
+          <div class="dr dr-r">
+            <div class="dn">Dose Total Média</div>
+            <div class="dc">2-3 mg/kg são suficientes na maioria dos casos. Raramente necessário &gt;10 mg/kg.</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Recrudescência</div>
+            <div class="dc">Ocorre em 25% dos casos — manter dantrolene <span style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--gold)">1 mg/kg IV 6/6h</span> por 24-48h após resolução.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Pós-Estabilização</div>
+            <div class="dc">Transferir OBRIGATORIAMENTE para UTI. Monitorar CK, eletrólitos, função renal, mioglobinúria por mínimo 72h.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 2 — ANAFILAXIA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="crise-anafilaxia">
+    <div class="page-wrap">
+
+    <!-- FLUXO DE FASES -->
+    <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ AGIR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
+    </div>
+
+    <!-- GRADING -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#C0392B)">
+        <span class="card-num">🚨</span> RECONHECER — Classificação Ring &amp; Messmer
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap wide"><table class="tbl">
+          <thead><tr><th>Grau</th><th>Manifestação</th><th>Conduta Chave</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag ty">I</span></td><td>Apenas cutâneo: urticária, eritema, flush</td><td>Anti-H1, observação</td></tr>
+            <tr><td><span class="tag to">II</span></td><td>Cutâneo + hemodinâmico leve (taquicardia, hipotensão leve)</td><td>Adrenalina IM/IV baixa dose</td></tr>
+            <tr><td><span class="tag tr">III</span></td><td>Colapso cardiovascular, broncoespasmo grave, hipotensão severa</td><td>Adrenalina IV bolus + volume</td></tr>
+            <tr><td><span class="tag tr" style="background:#7F0000">IV</span></td><td>Parada cardiorrespiratória</td><td>RCP + adrenalina altas doses</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- AÇÃO IMEDIATA -->
+    <div style="background:linear-gradient(135deg,#7F0000,#C0392B);border-radius:10px;padding:14px;margin-bottom:10px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:white;letter-spacing:.8px;margin-bottom:8px">🚨 AÇÃO IMEDIATA — PROTOCOLO ANAFILAXIA</div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">1</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>SUSPENDER</strong> o agente suspeito (curare, látex, ATB, coloides, hemoderivados)</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">2</span>
+        <div style="font-size:13px;color:white;line-height:1.5">
+          <strong>ADRENALINA — PILAR DO TRATAMENTO:</strong><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block;margin:4px 0">Grau II: 0.01 mg/kg IV (máx 0.5 mg) ou 0.5 mg IM vasto lateral</span><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#FF6B6B;background:rgba(192,57,43,.2);padding:2px 8px;border-radius:4px;display:inline-block;margin:4px 0">Grau III/IV: 0.1-1 mg IV bolus → infusão 0.1-1 mcg/kg/min</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">3</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>EXPANSÃO VOLÊMICA:</strong> SF 0.9% <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">1-2 L rápido</span> (adulto); 20 mL/kg (criança). Pode necessitar 4-8L no grau III.</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">4</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>POSIÇÃO:</strong> decúbito dorsal + MMII elevados (exceto se broncoespasmo grave → cabeceira elevada)</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">5</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>O₂ 100%</strong>, intubar se necessário (edema de glote pode progredir rapidamente)</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">6</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>CORTICOIDE:</strong> hidrocortisona <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">200 mg IV</span> (não é urgência imediata, mas previne reação bifásica)</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">7</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>ANTI-H1:</strong> difenidramina <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">1 mg/kg IV (máx 50 mg)</span> — papel secundário, não substitui adrenalina</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">8</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>BRONCOESPASMO REFRATÁRIO:</strong> salbutamol inalatório + ketamina <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">0.5-1 mg/kg IV</span></span>
+      </div>
+    </div>
+
+    <!-- BOX ALERTA -->
+    <div class="card" style="border:2px solid var(--red)">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#B71C1C)">
+        <span class="card-num">⚠️</span> ALERTA CRÍTICO
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="border-left:4px solid #FF1744">
+          <strong>Adrenalina é o único tratamento que salva vidas</strong> — não atrasar, não sub-dosar. Anti-histamínicos e corticoides são ADJUVANTES.
+        </div>
+        <div style="margin-top:10px">
+          <div class="dr dr-y">
+            <div class="dn">Reação Bifásica</div>
+            <div class="dc">Ocorre em 5-20% dos casos. Observar por 4-6h mesmo após resolução completa dos sintomas. Manter acesso venoso.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Alergia ao Látex</div>
+            <div class="dc">Se suspeita → remover TODOS os materiais com látex do campo cirúrgico imediatamente. Contaminação cruzada perpetua a crise.</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Coleta para Triptase</div>
+            <div class="dc">Coletar triptase sérica em 3 tempos: imediato, 1-2h e 24h após evento. Confirma diagnóstico e guia investigação alergo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 3 — LAST (TOXICIDADE POR ANESTÉSICO LOCAL)
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="crise-last">
+    <div class="page-wrap">
+
+    <!-- FLUXO DE FASES -->
+    <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ AGIR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
+    </div>
+
+    <!-- RECONHECER -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#C0392B)">
+        <span class="card-num">🚨</span> RECONHECER — Sinais em Ordem de Aparecimento
+      </div>
+      <div class="card-body">
+        <div class="dr dr-y">
+          <div class="dn">Pró-dromos (SNC leve)</div>
+          <div class="dc">Gosto metálico, zumbido, parestesia perioral, agitação, desorientação, dificuldade de fala</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">SNC grave</div>
+          <div class="dc">Convulsão tônico-clônica → inconsciência → depressão respiratória → PCR</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Cardiovascular</div>
+          <div class="dc">Taquicardia → bradicardia → assistolia. Alargamento progressivo do QRS. TV/FV refratária. Colapso cardiovascular pode ser o PRIMEIRO sinal (bupivacaína).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOSES MÁXIMAS -->
+    <div class="card">
+      <div class="card-header ch-gold" style="background:linear-gradient(135deg,#8B6914,#E8A020)">
+        <span class="card-num">💊</span> Limites de Dose Máxima
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap wide"><table class="tbl">
+          <thead><tr><th style="white-space:nowrap">Fármaco</th><th>Sem Vasoconst.</th><th>Com Vasoconst.</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Lidocaína</strong></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">4.5 mg/kg</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">7 mg/kg</span></td></tr>
+            <tr><td><strong>Bupivacaína</strong></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#FF6B6B">2 mg/kg</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#FF6B6B">2.5 mg/kg</span></td></tr>
+            <tr><td><strong>Ropivacaína</strong></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">3 mg/kg</span></td><td>—</td></tr>
+            <tr><td><strong>Levobupivacaína</strong></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">2.5 mg/kg</span></td><td>—</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-red" style="margin-top:10px;font-size:12px">
+          ⚠️ <strong>Bupivacaína</strong> tem a MAIOR cardiotoxicidade — liga-se mais firmemente ao canal Na⁺ cardíaco (relação CC/SNC mais baixa)
+        </div>
+      </div>
+    </div>
+
+    <!-- AÇÃO IMEDIATA -->
+    <div style="background:linear-gradient(135deg,#7F0000,#C0392B);border-radius:10px;padding:14px;margin-bottom:10px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:white;letter-spacing:.8px;margin-bottom:8px">🚨 AÇÃO IMEDIATA — PROTOCOLO ASRA 2023</div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">1</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>PARAR</strong> a injeção do anestésico local imediatamente</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">2</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>CHAMAR AJUDA</strong> — equipamento de emergência à beira-leito. Solicitar emulsão lipídica.</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">3</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>VIAS AÉREAS:</strong> O₂ 100%, intubar se convulsão ou inconsciência. Prevenir hipóxia e acidose.</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">4</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>CONVULSÃO:</strong> midazolam <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">2-4 mg IV</span> ou propofol 0.5-1 mg/kg (se hemodinâmica estável). Doses pequenas — evitar depressão CV.</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">5</span>
+        <div style="font-size:13px;color:white;line-height:1.5">
+          <strong>EMULSÃO LIPÍDICA 20% — ANTÍDOTO:</strong><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block;margin:4px 0">Bolus: 1.5 mL/kg IV em 2-3 min (~100 mL adulto 70 kg)</span><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:white;background:rgba(255,255,255,.1);padding:2px 8px;border-radius:4px;display:inline-block;margin:2px 0">Manutenção: 0.25 mL/kg/min por 30-60 min</span><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#FF6B6B;background:rgba(192,57,43,.2);padding:2px 8px;border-radius:4px;display:inline-block;margin:2px 0">Repetir bolus se PCR persistir (máx 12 mL/kg total)</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">6</span>
+        <div style="font-size:13px;color:white;line-height:1.5">
+          <strong>PCR por LAST — RCP contínua:</strong> pode levar 20-60 min para recuperar<br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold)">Adrenalina em DOSE REDUZIDA: ≤1 mcg/kg</span> (dose padrão pode piorar cardiotoxicidade)<br>
+          <span style="color:#FF6B6B;font-weight:700;font-size:12px">⛔ EVITAR: vasopressina, bloqueadores de canal de cálcio, betabloqueadores</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">7</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>REGISTRAR</strong> e notificar — caso para análise e registro no sistema de farmacovigilância</span>
+      </div>
+    </div>
+
+    <!-- BOX ALERTA -->
+    <div class="card" style="border:2px solid var(--red)">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#B71C1C)">
+        <span class="card-num">⚠️</span> ALERTA CRÍTICO
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="border-left:4px solid #FF1744">
+          <strong>Emulsão lipídica</strong> age como "sumidouro lipídico" — sequestra o AL do tecido cardíaco, restaurando a condução.
+        </div>
+        <div style="margin-top:10px">
+          <div class="dr dr-r">
+            <div class="dn">Bupivacaína = Maior Risco</div>
+            <div class="dc">Liga-se firmemente ao canal Na⁺ cardíaco (fast-in, slow-out). Colapso CV pode preceder sinais neurológicos.</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">RCP Prolongada</div>
+            <div class="dc">Manter RCP por tempo prolongado — o miocárdio PODE recuperar com emulsão lipídica. Considerar CEC se disponível.</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Prevenção</div>
+            <div class="dc">Aspiração frequente, injeção lenta e fracionada, dose-teste com adrenalina, monitorização verbal do paciente acordado.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 4 — VAD EMERGÊNCIA (CICV)
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="crise-vad">
+    <div class="page-wrap">
+
+    <!-- FLUXO DE FASES -->
+    <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ DECLARAR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🔪 AGIR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ CONFIRMAR</span>
+    </div>
+
+    <!-- DEFINIÇÃO CICV -->
+    <div class="card" style="border:2px solid var(--red)">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#C0392B)">
+        <span class="card-num">🚨</span> CICV — Can't Intubate, Can't Oxygenate
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="font-size:14px;font-weight:700;border-left:4px solid #FF1744">
+          <strong>Definição:</strong> SpO₂ &lt;90% em queda E impossibilidade de intubação após 3 tentativas otimizadas E falha de ventilação com dispositivo supraglótico.
+        </div>
+        <div class="alert a-gold" style="margin-top:8px;font-size:13px">
+          ⏱️ <strong>TEMPO É CÉREBRO</strong> — cada segundo sem oxigenação conta. Declare CICV CEDO, não espere SpO₂ cair abaixo de 75%.
+        </div>
+      </div>
+    </div>
+
+    <!-- FLUXOGRAMA DAS SEQUENCIAL -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#1B5E96,#2979C8)">
+        <span class="card-num">📋</span> Algoritmo DAS 2015 — Sequencial
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.3);border-radius:8px;padding:10px 12px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:#2ECC71;letter-spacing:.5px;margin-bottom:4px">PLAN A</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.9)">Laringoscopia direta/vídeo (máx 3 tentativas + 1 com otimização por operador sênior)</div>
+          </div>
+          <div style="text-align:center;color:rgba(255,255,255,.3);font-size:12px">↓ FALHOU</div>
+          <div style="background:rgba(232,160,32,.1);border:1px solid rgba(232,160,32,.3);border-radius:8px;padding:10px 12px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.5px;margin-bottom:4px">PLAN B</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.9)">Dispositivo supraglótico (iGel, LMA ProSeal) — máx 3 tentativas com 2º geração</div>
+          </div>
+          <div style="text-align:center;color:rgba(255,255,255,.3);font-size:12px">↓ FALHOU</div>
+          <div style="background:rgba(232,160,32,.15);border:1px solid rgba(232,160,32,.4);border-radius:8px;padding:10px 12px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.5px;margin-bottom:4px">PLAN C</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.9)">Intubação pelo supraglótico / VBM final / <strong>ACORDAR o paciente</strong> se possível</div>
+          </div>
+          <div style="text-align:center;color:rgba(255,255,255,.3);font-size:12px">↓ FALHOU — SpO₂ CAINDO</div>
+          <div style="background:rgba(192,57,43,.2);border:2px solid rgba(192,57,43,.6);border-radius:8px;padding:10px 12px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:#FF6B6B;letter-spacing:.5px;margin-bottom:4px">PLAN D — VIA AÉREA CIRÚRGICA</div>
+            <div style="font-size:13px;color:white;font-weight:700">CRICOTIREOIDOSTOMIA — ver protocolo abaixo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AÇÃO IMEDIATA — CRICOTIREOIDOSTOMIA -->
+    <div style="background:linear-gradient(135deg,#7F0000,#C0392B);border-radius:10px;padding:14px;margin-bottom:10px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:white;letter-spacing:.8px;margin-bottom:8px">🚨 PLAN D — CRICOTIREOIDOSTOMIA (scalpel-finger-bougie)</div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">1</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>DECLARAR:</strong> "Não consigo intubar, não consigo oxigenar — precisamos de via aérea cirúrgica AGORA"</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">2</span>
+        <div style="font-size:13px;color:white;line-height:1.5">
+          <strong>PALPAR</strong> membrana cricotireoidea (CTM) — entre cartilagem tireoide e cricoidea<br>
+          <span style="color:rgba(255,255,255,.7);font-size:12px">Laringe estabilizada com mão não dominante, pescoço em extensão</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">3</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>INCISÃO</strong> horizontal através da CTM com bisturi (lâmina 10 ou 20). Incisão firme e decidida.</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">4</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>DEDO INDICADOR</strong> inserido para identificar e manter abertura traqueal palpável</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">5</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>BOUGIE</strong> introduzido através do dedo → CTM → traqueia (sentir anéis traqueais)</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">6</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>TUBO 6.0</strong> com cuff sobre o bougie → avançar → inflar cuff → confirmar com <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">CAPNOGRAFIA</span></span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">⏱️</span>
+        <span style="font-size:13px;color:white;line-height:1.5;font-weight:700">TEMPO: esta técnica deve levar menos de 2 minutos do início à ventilação</span>
+      </div>
+    </div>
+
+    <!-- ALTERNATIVAS -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#5B21B6,#7C3AED)">
+        <span class="card-num">🔄</span> Alternativas (se disponíveis)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-y">
+          <div class="dn">Cricotireoidostomia por Punção + Manujet</div>
+          <div class="dc">Técnica temporária (máx 30 min). Jelco 14G na CTM → Manujet. Risco de barotrauma. NÃO é definitiva.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Percutânea guiada por Seldinger</div>
+          <div class="dc">Kit comercial (Melker, Portex). Técnica mais lenta, porém menos sangrenta. Treino necessário.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOX ALERTA -->
+    <div class="card" style="border:2px solid var(--red)">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#B71C1C)">
+        <span class="card-num">⚠️</span> ALERTA CRÍTICO
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="border-left:4px solid #FF1744">
+          <strong>NUNCA exceder 3 tentativas</strong> com o mesmo dispositivo. Cada tentativa causa edema e sangramento, dificultando a próxima.
+        </div>
+        <div style="margin-top:10px">
+          <div class="dr dr-r">
+            <div class="dn">Declare CICV Cedo</div>
+            <div class="dc">Não espere SpO₂ cair abaixo de 75%. Dano neurológico irreversível ocorre em 3-5 minutos de anóxia.</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Alvo Anatômico</div>
+            <div class="dc">A membrana cricotireoidea (CTM) está entre a cartilagem tireoide (acima) e a cricoidea (abaixo). Avascular na linha média.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Após Cricotireoidostomia</div>
+            <div class="dc">Solicitar traqueostomia definitiva pela equipe de cirurgia. A cricotireoidostomia é temporária (máx 72h).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 5 — PCR INTRAOPERATÓRIA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="crise-pcr">
+    <div class="page-wrap">
+
+    <!-- FLUXO DE FASES -->
+    <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 DIAGNOSTICAR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ RCP</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 DROGAS</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ PÓS-PCR</span>
+    </div>
+
+    <!-- CAUSAS REVERSÍVEIS -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#C0392B)">
+        <span class="card-num">🚨</span> Causas Reversíveis — 4H + 4T
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div style="background:rgba(192,57,43,.1);border:1px solid rgba(192,57,43,.3);border-radius:8px;padding:10px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:#FF6B6B;letter-spacing:.5px;margin-bottom:6px">4 H</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.9);line-height:1.8">
+              <strong>H</strong>ipóxia<br>
+              <strong>H</strong>ipovolemia<br>
+              <strong>H</strong>ipo/Hipercalemia<br>
+              <strong>H</strong>ipo/Hipertermia
+            </div>
+          </div>
+          <div style="background:rgba(232,160,32,.1);border:1px solid rgba(232,160,32,.3);border-radius:8px;padding:10px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.5px;margin-bottom:6px">4 T</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.9);line-height:1.8">
+              <strong>T</strong>ension pneumothorax<br>
+              <strong>T</strong>amponamento cardíaco<br>
+              <strong>T</strong>romboembolismo (TEP)<br>
+              <strong>T</strong>oxinas (LAST, HM, OD)
+            </div>
+          </div>
+        </div>
+        <div class="alert a-gold" style="margin-top:10px;font-size:12px">
+          💡 No centro cirúrgico: considerar SEMPRE agentes anestésicos, posicionamento, torniquetes, embolia gasosa e reação transfusional.
+        </div>
+      </div>
+    </div>
+
+    <!-- AÇÃO IMEDIATA -->
+    <div style="background:linear-gradient(135deg,#7F0000,#C0392B);border-radius:10px;padding:14px;margin-bottom:10px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:white;letter-spacing:.8px;margin-bottom:8px">🚨 RCP INTRAOPERATÓRIA — DIFERENÇAS DO ACLS CONVENCIONAL</div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">1</span>
+        <div style="font-size:13px;color:white;line-height:1.5">
+          <strong>DIAGNÓSTICO IMEDIATO:</strong> ECG, capnografia, pulso carotídeo<br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold)">↓ súbita do ETCO₂ = sinal precoce de PCR</span> (antes da perda de pulso)
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">2</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>COMPRESSÕES:</strong> suspender cirurgia, posição supina, comprimir centro do esterno, <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">100-120/min, 5-6 cm</span></span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">3</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>FiO₂ 100%</strong>, desligar halogenados, ETCO₂ alvo <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">&gt;10 mmHg</span> durante RCP (indica fluxo adequado)</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">4</span>
+        <div style="font-size:13px;color:white;line-height:1.5">
+          <strong>RITMOS E CHOQUES:</strong><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#FF6B6B;background:rgba(192,57,43,.2);padding:2px 8px;border-radius:4px;display:inline-block;margin:3px 0">FV/TV sem pulso: desfibrilar 200J bifásico → RCP 2 min → checar ritmo</span><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block;margin:3px 0">Assistolia/AESP: adrenalina 1 mg IV a cada 3-5 min, investigar causas</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">5</span>
+        <div style="font-size:13px;color:white;line-height:1.5">
+          <strong>DROGAS:</strong><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block;margin:3px 0">Adrenalina 1 mg IV a cada 3-5 min</span><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block;margin:3px 0">Amiodarona 300 mg IV para FV/TV refratária</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">6</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>REVERTIDO:</strong> assistência pós-PCR, ecocardiograma imediato, encaminhar para UTI, investigar causa</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">7</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>CONSIDERAR:</strong> cirurgia torácica aberta (toracotomia de emergência) se PCR refratária pós-trauma ou pós-cardiotomia — massagem cardíaca direta</span>
+      </div>
+    </div>
+
+    <!-- DICAS INTRAOPERATÓRIAS -->
+    <div class="card" style="border:2px solid var(--gold)">
+      <div class="card-header" style="background:linear-gradient(135deg,#8B6914,#E8A020)">
+        <span class="card-num">💡</span> Diferenças Cruciais no Intraoperatório
+      </div>
+      <div class="card-body">
+        <div class="dr dr-y">
+          <div class="dn">Via Aérea já Segura</div>
+          <div class="dc">Paciente geralmente já está intubado — concentrar em compressões e drogas imediatamente.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Acesso Venoso Garantido</div>
+          <div class="dc">Acessos venosos e arteriais já em posição. Drogas IV imediatas. Gasometria arterial instantânea.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Causas Cirúrgicas</div>
+          <div class="dc">Hemorragia maciça, embolia aérea, reflexo vagal (cirurgias oftalmológicas, cervicais), pneumotórax hipertensivo iatrogênico.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">ETCO₂ como Guia</div>
+          <div class="dc">ETCO₂ &gt;10 mmHg = compressões efetivas. Aumento súbito de ETCO₂ pode indicar retorno da circulação espontânea (ROSC).</div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 6 — BRONCOESPASMO GRAVE
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="crise-bronco">
+    <div class="page-wrap">
+
+    <!-- FLUXO DE FASES -->
+    <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 DIAGNOSTICAR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ DIFERENCIAR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
+      <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
+    </div>
+
+    <!-- DIAGNÓSTICO -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#C0392B)">
+        <span class="card-num">🚨</span> Diagnóstico Intraoperatório
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">↑Pressão de pico com platô normal</div>
+          <div class="dc">= Aumento de RESISTÊNCIA → broncoespasmo, secreção, tubo dobrado</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">↑Pressão de pico E platô elevado</div>
+          <div class="dc">= Diminuição de COMPLACÊNCIA → pneumotórax, intubação seletiva, edema pulmonar</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Capnograma</div>
+          <div class="dc">Fase III ascendente — padrão "dente de tubarão" (shark fin). Patognomônico de obstrução brônquica.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Sinais Clínicos</div>
+          <div class="dc">SpO₂ caindo + sibilância na ausculta + dificuldade de ventilar manualmente + pressões elevadas</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIAGNÓSTICO DIFERENCIAL URGENTE -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#8B6914,#E8A020)">
+        <span class="card-num">🔍</span> Diagnóstico Diferencial Urgente
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap wide"><table class="tbl">
+          <thead><tr><th>Causa</th><th>Pico</th><th>Platô</th><th>Manobra</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tr">Broncoespasmo</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#FF6B6B">↑↑</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#2ECC71">Normal</span></td><td>Salbutamol + aprofundar anestesia</td></tr>
+            <tr><td><span class="tag tr">Pneumotórax</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#FF6B6B">↑↑</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#FF6B6B">↑↑</span></td><td>Ag. torácica + descompressão</td></tr>
+            <tr><td><span class="tag to">Intub. seletiva</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#FF6B6B">↑↑</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#FF6B6B">↑↑</span></td><td>Recuar TOT 2-3 cm</td></tr>
+            <tr><td><span class="tag ty">Obstrução TOT</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#FF6B6B">↑↑</span></td><td><span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:#FF6B6B">↑↑</span></td><td>Aspirar / trocar TOT</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert a-gold" style="margin-top:10px;font-size:12px">
+          💡 <strong>Dica rápida:</strong> Se Ppico ↑ e Pplatô normal → é resistência (broncoespasmo). Se ambas ↑ → é complacência (pneumotórax, intubação seletiva).
+        </div>
+      </div>
+    </div>
+
+    <!-- AÇÃO IMEDIATA -->
+    <div style="background:linear-gradient(135deg,#7F0000,#C0392B);border-radius:10px;padding:14px;margin-bottom:10px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:white;letter-spacing:.8px;margin-bottom:8px">🚨 TRATAMENTO SEQUENCIAL — BRONCOESPASMO GRAVE</div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">1</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>FiO₂ 100%</strong> — prioridade é oxigenar. Desconectar do ventilador e ventilar manualmente se necessário.</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">2</span>
+        <div style="font-size:13px;color:white;line-height:1.5">
+          <strong>APROFUNDAR ANESTESIA:</strong><br>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block;margin:3px 0">Propofol 0.5-1 mg/kg IV</span> ou
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block;margin:3px 0">Ketamina 0.5-1 mg/kg IV</span><br>
+          <span style="color:rgba(255,255,255,.7);font-size:12px">Ketamina é BRONCODILATADORA — excelente escolha no broncoespasmo grave!</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">3</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>SALBUTAMOL:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">2-4 puffs pelo TOT</span> com espaçador (adaptador MDI) ou nebulização contínua no circuito</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">4</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>AMINOFILINA:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">5 mg/kg IV em 20-30 min</span> se refratário. Monitorar arritmias.</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">5</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>ADRENALINA:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:#FF6B6B;background:rgba(192,57,43,.2);padding:2px 8px;border-radius:4px;display:inline-block">0.1-0.3 mg SC ou IV</span> se suspeita de anafilaxia associada</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">6</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>SULFATO DE MAGNÉSIO:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">2 g IV em 20 min</span> — relaxamento da musculatura brônquica lisa</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">7</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>HIDROCORTISONA:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px;display:inline-block">200 mg IV</span> — efeito tardio (4-6h), mas previne recorrência</span>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">8</span>
+        <span style="font-size:13px;color:white;line-height:1.5"><strong>HEROIC MEASURES:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#FF6B6B">Circulação extracorpórea (ECMO)</span> se broncoespasmo totalmente refratário a todas as medidas acima. Contatar equipe de perfusão.</span>
+      </div>
+    </div>
+
+    <!-- BOX ALERTA -->
+    <div class="card" style="border:2px solid var(--gold)">
+      <div class="card-header" style="background:linear-gradient(135deg,#8B6914,#E8A020)">
+        <span class="card-num">💡</span> Lembrar — Causas Mecânicas Primeiro
+      </div>
+      <div class="card-body">
+        <div class="alert a-gold" style="border-left:4px solid var(--gold)">
+          Antes de tratar broncoespasmo farmacologicamente, <strong>excluir causas mecânicas:</strong> tubo dobrado, intubação seletiva, cuff herniado, rolha de secreção. Auscultar bilateralmente e verificar posição do TOT.
+        </div>
+        <div style="margin-top:10px">
+          <div class="dr dr-y">
+            <div class="dn">Auto-PEEP / Air Trapping</div>
+            <div class="dc">No broncoespasmo grave, aumentar o tempo expiratório (↓FR, ↑fluxo inspiratório). I:E de 1:3 ou 1:4. Tolerar hipercapnia permissiva.</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Sevoflurano como Broncodilatador</div>
+            <div class="dc">Halogenados (especialmente sevoflurano) têm potente efeito broncodilatador. Considerar manter ou aprofundar anestesia inalatória.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+    </div>
+  </div>
+</div>

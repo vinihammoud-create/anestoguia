@@ -1,0 +1,879 @@
+<div class="screen" id="screen-pocus">
+  <div class="top-bar" style="border-bottom:3px solid var(--teal)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--teal)">📡 POCUS + Regional USG</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="pocususg-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('pocus','pulmonar',this)">POCUS PULMONAR</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('pocus','gastrico',this)">ESTÔMAGO</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('pocus','fast',this)">FAST/ABDOME</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('pocus','cardiaco',this)">ECHO BÁSICO</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('pocus','regional',this)">REGIONAL USG</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('pocus','last-prev',this)">PREVENÇÃO LAST</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 1 — POCUS PULMONAR
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel active" id="pocus-pulmonar">
+    <div class="page-wrap">
+
+      <!-- SETUP -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> Setup — Transdutor e Técnica
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal" style="margin-bottom:10px">
+            <strong>Transdutor:</strong> Linear (alta frequência) para detalhamento pleural ou phased-array para visão mais ampla. Posicionar sobre espaços intercostais. Iniciar pela <strong>janela anterior</strong> (paciente supino).
+          </div>
+        </div>
+      </div>
+
+      <!-- SINAIS SONOGRÁFICOS -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">02</span> Sinais Sonográficos Fundamentais
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Linha Pleural</div>
+            <div class="dc">Linha hiperecogênica entre as costelas — identifica a pleura visceral.</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Sinal de Deslizamento (Lung Sliding)</div>
+            <div class="dc">Movimento sincronizado com a respiração = pulmão normal, pleura visceral deslizando sobre parietal.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Linhas A</div>
+            <div class="dc">Reflexos horizontais equidistantes abaixo da pleura = ar alveolar normal (artefato de reverberação).</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Linhas B (Cometas)</div>
+            <div class="dc">Linhas verticais que apagam as linhas A e vão até o fundo da tela = edema intersticial / consolidação alveolar.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROTOCOLO BLUE -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">03</span> Protocolo BLUE (Bedside Lung Ultrasound in Emergency)
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Achado</th><th>Interpretação</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td>Sliding + Linhas A</td><td>Pulmão normal / TEP</td><td>Investigar TEP se desconforto respiratório</td></tr>
+              <tr><td>Sliding + Linhas B difusas</td><td>Edema pulmonar</td><td>Diurético, avaliar fluidos</td></tr>
+              <tr style="background:rgba(192,57,43,.08)"><td><strong>Sem sliding + Linhas A</strong></td><td><strong>Pneumotórax</strong></td><td><strong>Descompressão urgente</strong></td></tr>
+              <tr><td>Sem sliding + Linhas B</td><td>Pneumonia</td><td>ATB</td></tr>
+              <tr><td>Consolidação + broncograma aéreo</td><td>Pneumonia</td><td>ATB</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- PNEUMOTÓRAX -->
+      <div class="card" style="border:2px solid var(--red)">
+        <div class="card-header ch-red">
+          <span class="card-num">⚠️</span> Pneumotórax — Diagnóstico Ultrassonográfico
+        </div>
+        <div class="card-body">
+          <div class="dr dr-r">
+            <div class="dn">Ausência de Lung Sliding</div>
+            <div class="dc">Sensibilidade 95%, especificidade 91%. Sinal mais importante — ausência de deslizamento pleural.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Sinal do Ponto Pulmonar</div>
+            <div class="dc">Transição entre sliding e não-sliding = <strong>diagnóstico definitivo</strong> de pneumotórax. Localiza exatamente o limite do pneumotórax.</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Modo M — Padrões</div>
+            <div class="dc"><strong>"Praia"</strong> (seashore sign) = pulmão normal — areia abaixo da linha pleural.<br><strong>"Estratosfera / Código de barras"</strong> = pneumotórax — linhas horizontais paralelas contínuas.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DERRAME PLEURAL -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">04</span> Derrame Pleural
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            Espaço <strong>anecoico</strong> (escuro) entre pleura visceral e parietal. Visualizado melhor em bases pulmonares posteriores com paciente sentado.
+          </div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">📏 Estimativa de Volume</div>
+            Imagem com <strong>3 cm de profundidade</strong> de líquido ≈ 500 mL de derrame. Medida simples e reprodutível para decisão clínica.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 2 — ESTÔMAGO / GÁSTRICO
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="pocus-gastrico">
+    <div class="page-wrap">
+
+      <!-- OBJETIVO -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> Objetivo — Avaliação de Risco de Aspiração
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            Avaliar o conteúdo gástrico por ultrassonografia antes de procedimentos anestésicos para <strong>identificar risco de aspiração</strong>. Fundamental em urgências e pacientes com fatores de risco para estômago cheio.
+          </div>
+        </div>
+      </div>
+
+      <!-- TÉCNICA -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">02</span> Técnica — Janela Antral
+        </div>
+        <div class="card-body">
+          <div style="background:linear-gradient(135deg,var(--blue),var(--teal));border-radius:10px;padding:14px;margin-bottom:10px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:white;letter-spacing:.8px;margin-bottom:8px">📋 PASSO A PASSO</div>
+
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:#7DD3FC;flex-shrink:0;min-width:24px">1</span>
+              <span style="font-size:13px;color:white;line-height:1.5">Paciente em <strong>decúbito supino</strong> ou <strong>lateral direito</strong> (↑sensibilidade)</span>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:#7DD3FC;flex-shrink:0;min-width:24px">2</span>
+              <span style="font-size:13px;color:white;line-height:1.5">Transdutor <strong>curvilíneo</strong> (baixa frequência) — sonda abdominal</span>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:#7DD3FC;flex-shrink:0;min-width:24px">3</span>
+              <span style="font-size:13px;color:white;line-height:1.5">Posição: <strong>epigástrio</strong> — entre xifóide e umbigo, levemente à direita</span>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:#7DD3FC;flex-shrink:0;min-width:24px">4</span>
+              <span style="font-size:13px;color:white;line-height:1.5">Identificar: <strong>aorta</strong> (posterior) + <strong>lobo hepático esquerdo</strong> (anterior)</span>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:#7DD3FC;flex-shrink:0;min-width:24px">5</span>
+              <span style="font-size:13px;color:white;line-height:1.5">O <strong>antro gástrico</strong> aparece entre eles como estrutura oval</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLASSIFICAÇÃO BOUVET -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">03</span> Classificação de Bouvet et al.
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Grau</th><th>Aspecto Antral</th><th>Interpretação</th><th>Risco</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tg" style="padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700">0</span></td><td>Vazio (colabado)</td><td>Estômago vazio</td><td><strong style="color:var(--green)">Baixo risco</strong></td></tr>
+              <tr><td><span class="ty" style="padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700">1</span></td><td>Líquido em 1 posição (DLD)</td><td>≤1.5 mL/kg</td><td><strong style="color:var(--green)">Baixo risco</strong></td></tr>
+              <tr style="background:rgba(192,57,43,.08)"><td><span class="tr" style="padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700">2</span></td><td>Líquido em ambas posições</td><td>&gt;1.5 mL/kg</td><td><strong style="color:var(--red)">ALTO RISCO</strong></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- FÓRMULA -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">04</span> Fórmula do Volume Gástrico
+        </div>
+        <div class="card-body">
+          <div style="background:var(--gray);border-radius:8px;padding:14px;text-align:center;margin-bottom:10px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--teal)">Volume (mL) = 27.0 + 14.6 × ACS − 1.28 × Idade</span>
+          </div>
+          <div class="alert a-teal">
+            <strong>ACS</strong> = Área de Cross-Section antral em cm² — calculada pelo USG no corte transversal do antro gástrico.
+          </div>
+        </div>
+      </div>
+
+      <!-- CLASSIFICAÇÃO QUALITATIVA -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">05</span> Classificação Qualitativa do Conteúdo
+        </div>
+        <div class="card-body">
+          <div class="dr dr-g">
+            <div class="dn">Anecoico (líquido claro)</div>
+            <div class="dc">Solução de glicose, água — conteúdo totalmente líquido. Menor risco desde que volume &lt;1.5 mL/kg.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Heterogêneo com partículas</div>
+            <div class="dc">Resíduo alimentar parcialmente digerido — <strong>ALTO RISCO</strong> de aspiração com conteúdo particulado.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Hiperecogênico (sólido)</div>
+            <div class="dc">Alimento sólido não digerido — <strong>ALTO RISCO</strong>. Adiar procedimento eletivo ou proteger via aérea (ISR).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INDICAÇÕES -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">06</span> Indicações Clínicas
+        </div>
+        <div class="card-body">
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Obesidade (esvaziamento gástrico retardado)</span></div>
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Diabetes com gastroparesia</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Cirurgia de urgência / estômago cheio</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Trauma</span></div>
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Gestante (progesterona → ↓motilidade gástrica)</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 3 — FAST / ABDOME
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="pocus-fast">
+    <div class="page-wrap">
+
+      <!-- INTRO FAST -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> FAST — Focused Assessment with Sonography in Trauma
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>4 janelas obrigatórias</strong> — avaliação completa em <strong>&lt;3 minutos</strong>. Objetivo: detectar líquido livre (hemoperitônio, hemopericárdio) no paciente traumatizado.
+          </div>
+        </div>
+      </div>
+
+      <!-- JANELA 1 — MORISON -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">J1</span> Morison (Hepatorrenal — LSD)
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Posição do Transdutor</div>
+            <div class="dc">Linha axilar média direita, 8ª-10ª costela.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Alvo</div>
+            <div class="dc">Interface fígado-rim (espaço hepatorrenal de Morison).</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Positivo</div>
+            <div class="dc">Líquido anecoico (preto) na interface fígado-rim.</div>
+          </div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">⚠ Significado Clínico</div>
+            Hemoperitônio — volume detectável &gt;200 mL. É o espaço mais sensível para líquido livre em supino.
+          </div>
+        </div>
+      </div>
+
+      <!-- JANELA 2 — KOLLER -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">J2</span> Koller (Esplenorrenal — LSE)
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Posição do Transdutor</div>
+            <div class="dc">Linha axilar posterior esquerda, 9ª-11ª costela.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Alvo</div>
+            <div class="dc">Interface baço-rim esquerdo.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Positivo</div>
+            <div class="dc">Líquido entre baço e rim esquerdo.</div>
+          </div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">💡 Nota</div>
+            Hemotórax esquerdo pode ser visualizado acima do diafragma nesta mesma janela.
+          </div>
+        </div>
+      </div>
+
+      <!-- JANELA 3 — SUPRAPÚBICA -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">J3</span> Suprapúbica / Pelve
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Posição do Transdutor</div>
+            <div class="dc">Suprapúbico, planos sagital e transversal.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Alvo</div>
+            <div class="dc">Espaço de Retzius + fundo de saco de Douglas (mulher) / espaço retovesical (homem).</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Positivo</div>
+            <div class="dc">Líquido anecoico posterior à bexiga.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JANELA 4 — SUBXIFÓIDE -->
+      <div class="card" style="border:2px solid var(--red)">
+        <div class="card-header ch-red">
+          <span class="card-num">J4</span> Subxifóide (Pericárdica)
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Posição do Transdutor</div>
+            <div class="dc">Ângulo de 20° abaixo do processo xifóide, apontando para ombro esquerdo.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Alvo</div>
+            <div class="dc">Pericárdio + cavidades cardíacas.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Positivo</div>
+            <div class="dc">Líquido anecoico ao redor do coração = <strong>tamponamento cardíaco</strong>.</div>
+          </div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">🚨 TAMPONAMENTO</div>
+            Líquido pericárdico + colapso diastólico de VD = tamponamento com indicação de pericardiocentese ou toracotomia de emergência.
+          </div>
+        </div>
+      </div>
+
+      <!-- eFAST -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">+</span> eFAST — Extended FAST (Adiciona Tórax)
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal" style="margin-bottom:8px">
+            Janela pulmonar bilateral adicionada ao FAST clássico para avaliação de pneumotórax.
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Lung Sliding Presente</div>
+            <div class="dc">Sem pneumotórax ipsilateral — pleura deslizando normalmente.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Ausência de Lung Sliding</div>
+            <div class="dc">Pneumotórax ipsilateral — indicar descompressão se instabilidade hemodinâmica.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 4 — ECHO BÁSICO PERIOPERATÓRIO
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="pocus-cardiaco">
+    <div class="page-wrap">
+
+      <!-- OBJETIVO -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">01</span> Objetivo — Echo Básico Perioperatório
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            Avaliar <strong>função ventricular</strong>, <strong>volemia</strong> e <strong>alterações hemodinâmicas</strong> em tempo real durante o perioperatório. Protocolo FEEL (Focused Echocardiographic Evaluation in Life Support).
+          </div>
+        </div>
+      </div>
+
+      <!-- JANELA 1 — PLAX -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">J1</span> Paraesternal Longo (PLAX)
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Posição</div>
+            <div class="dc">2ª-4ª costela esquerda, paraesternal.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Estruturas Visualizadas</div>
+            <div class="dc">VE, VD, valva mitral, aorta ascendente.</div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn">Avaliar</div>
+            <div class="dc">Contratilidade global, derrame pericárdico, espessura septal.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JANELA 2 — PSAX -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">J2</span> Paraesternal Curto (PSAX) — Nível Médio-Ventricular
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Posição</div>
+            <div class="dc">Rotacionar 90° da PLAX. VE aparece em "rosca de donut", VD em crescente.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Sinal "D" do Septo</div>
+            <div class="dc">Achatamento septal em "D" = sobrecarga de VD (TEP, HTAP). Septo desviado para a esquerda.</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Função Sistólica</div>
+            <div class="dc">VE deve reduzir &gt;50% da área (FAC) durante a sístole = contratilidade preservada.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JANELA 3 — APICAL 4C -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">J3</span> Apical 4 Câmaras
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Posição</div>
+            <div class="dc">Ápex cardíaco, linha axilar anterior esquerda.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Estruturas</div>
+            <div class="dc">Visão simultânea das 4 câmaras (VE, VD, AE, AD).</div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn">Avaliar</div>
+            <div class="dc">Assimetria VE/VD, efusão pericárdica, mobilidade septal, insuficiências valvares grosseiras.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JANELA 4 — SUBXIFÓIDE -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">J4</span> Subxifóide
+        </div>
+        <div class="card-body">
+          <div class="algo-box algo-r" style="margin-bottom:10px">
+            <div class="algo-title">🚨 Melhor janela para tamponamento cardíaco</div>
+            Líquido anecoico circundando coração + colapso diastólico de câmaras direitas = tamponamento.
+          </div>
+          <div class="sh sh-teal">Avaliação da VCI (Veia Cava Inferior)</div>
+          <div class="tbl-wrap wide" style="margin-top:8px"><table class="tbl">
+            <thead><tr><th>Achado VCI</th><th>Interpretação</th></tr></thead>
+            <tbody>
+              <tr><td>Colapso inspiratório &gt;50%</td><td>Pressão venosa baixa → <strong>hipovolemia</strong></td></tr>
+              <tr><td>VCI distendida + colapso &lt;50%</td><td>Sobrecarga de volume ou disfunção VD</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- VOLEMIA DINÂMICA -->
+      <div class="card" style="border:2px solid var(--teal)">
+        <div class="card-header ch-teal">
+          <span class="card-num">05</span> Avaliação de Volemia Dinâmica pela VCI
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Parâmetro VCI</th><th>Valor</th><th>Significado</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(26,122,74,.08)"><td>VCI &lt;15mm + colapso total</td><td>Hipovolemia</td><td><strong style="color:var(--green)">Fluidos responsivos</strong></td></tr>
+              <tr style="background:rgba(192,57,43,.08)"><td>VCI &gt;21mm + sem colapso</td><td>Sobrecarga / disfunção</td><td><strong style="color:var(--red)">NÃO dar fluidos</strong></td></tr>
+              <tr style="background:rgba(14,116,144,.08)"><td>ΔD VCI &gt;18% (respiração)</td><td>Responsivo a fluidos</td><td><strong style="color:var(--teal)">Equivalente a VPP elevado</strong></td></tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-g" style="margin-top:10px">
+            <div class="algo-title">✅ Regra Prática</div>
+            VCI colapsável = precisa de volume. VCI distendida = não precisa de volume (avaliar vasopressor ou inotrópico).
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 5 — REGIONAL GUIADA POR USG
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="pocus-regional">
+    <div class="page-wrap">
+
+      <!-- CONFIGURAÇÃO GERAL -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">01</span> Configuração Geral — Bloqueio Guiado por USG
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Transdutor</div>
+            <div class="dc"><strong>Linear</strong> para nervos superficiais (&lt;6 cm) / <strong>Curvilíneo</strong> para nervos profundos (&gt;6 cm).</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Preparo</div>
+            <div class="dc">Gel abundante; probe coberto em procedimentos estéreis.</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Técnica In-Plane</div>
+            <div class="dc">Agulha <strong>paralela</strong> ao transdutor: permite visualização total da agulha durante todo o trajeto.</div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn">Identificação de Estruturas</div>
+            <div class="dc"><strong>Nervo:</strong> textura "favo de mel" fascicular. <strong>Artéria:</strong> pulsátil, anecoica. <strong>Veia:</strong> compressível, não pulsátil.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERESCALÊNICO -->
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">Plexo Braquial — Interescalênico</span>
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Indicação</div>
+            <div class="dc">Ombro, úmero proximal.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Identificação</div>
+            <div class="dc">Músculos escalenos, raízes C5-C6-C7 como "semáforo" (estruturas redondas hipoecogênicas entre escaleno anterior e médio).</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Dose</div>
+            <div class="dc">Ropivacaína 0.5% — 20-30 mL | Bupivacaína 0.25-0.5% — 20 mL</div>
+          </div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">⚠ Cuidados Críticos</div>
+            <strong>Paresia frênica ipsilateral: 100%!</strong> → Contraindicado em paciente com 1 pulmão funcional, DPOC grave.<br>
+            Riscos: injeção intravascular (artéria vertebral), pneumotórax.
+          </div>
+        </div>
+      </div>
+
+      <!-- SUPRACLAVICULAR -->
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Plexo Braquial — Supraclavicular</span>
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Indicação</div>
+            <div class="dc">Braço, antebraço (exceto face medial).</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Identificação</div>
+            <div class="dc">Plexo como "cacho de uvas" lateral à artéria subclávia, acima da 1ª costela.</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Dose</div>
+            <div class="dc">Ropivacaína 0.5% — 25-30 mL</div>
+          </div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">⚠ Cuidados</div>
+            Pneumotórax (1-6%), injeção intravascular (artéria subclávia).
+          </div>
+        </div>
+      </div>
+
+      <!-- NERVO FEMORAL -->
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">Nervo Femoral</span>
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Indicação</div>
+            <div class="dc">Joelho, face anterior da coxa, fratura de fêmur.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Identificação</div>
+            <div class="dc">Lateral à artéria femoral, abaixo do ligamento inguinal. Nervo aparece como estrutura triangular/oval hiperecogênica.</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Dose</div>
+            <div class="dc">Ropivacaína 0.5% — 20 mL | Bupivacaína 0.25% — 20 mL</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Cuidados</div>
+            <div class="dc">Punção vascular, hematoma. Causa fraqueza do quadríceps — risco de queda.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CANAL DOS ADUTORES -->
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Canal dos Adutores (ACB)</span>
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Indicação</div>
+            <div class="dc">Joelho — <strong>superior ao femoral</strong> pois preserva a força do quadríceps.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Identificação</div>
+            <div class="dc">Nervo safeno no canal adutor, medial à artéria femoral superficial (terço médio da coxa).</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Dose</div>
+            <div class="dc">Ropivacaína 0.2% — 15-20 mL</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Cuidados</div>
+            <div class="dc">Punção vascular, hematoma.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CIÁTICO POPLÍTEO -->
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">Nervo Ciático — Abordagem Poplítea</span>
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Indicação</div>
+            <div class="dc">Tornozelo, pé, panturrilha.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Identificação</div>
+            <div class="dc">Bifurcação poplítea do nervo ciático — hiperecogênico, formato ovalado na fossa poplítea.</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Dose</div>
+            <div class="dc">Ropivacaína 0.5% — 20 mL</div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn">Cuidados</div>
+            <div class="dc">Início lento (40-60 minutos para bloqueio completo), hematoma poplíteo.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUEIO TAP -->
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Bloqueio TAP (Transversus Abdominis Plane)</span>
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Indicação</div>
+            <div class="dc">Analgesia pós-operatória: laparotomia, cesárea, herniorrafia.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Identificação</div>
+            <div class="dc">Plano entre oblíquo interno e transverso do abdome (3 camadas musculares).</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Dose</div>
+            <div class="dc">Bupivacaína 0.25% — 15-20 mL <strong>CADA LADO</strong> (bilateral)</div>
+          </div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">⚠ Atenção</div>
+            NÃO cobre dor visceral — combinar com analgésicos sistêmicos (opioides, dipirona, AINE).
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUEIO ESP -->
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">Bloqueio ESP (Erector Spinae Plane)</span>
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Indicação</div>
+            <div class="dc">Dor torácica, cirurgias abdominais, fraturas costais.</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn">Identificação</div>
+            <div class="dc">Processo transverso vertebral, músculo eretor da espinha. Agulha in-plane até contato com processo transverso.</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Dose</div>
+            <div class="dc">Ropivacaína 0.2-0.5% — 20 mL por nível</div>
+          </div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">✅ Vantagem</div>
+            Bloqueio <strong>seguro</strong>, baixo risco, cobertura ampla. Sem risco de pneumotórax (agulha não atravessa pleura). Ideal para ambiente de urgência.
+          </div>
+        </div>
+      </div>
+
+      <!-- QUADRADO LOMBAR -->
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Quadrado Lombar (QL Block)</span>
+        </div>
+        <div class="card-body">
+          <div class="dr dr-t">
+            <div class="dn">Indicação</div>
+            <div class="dc">Laparotomia, cirurgia abdominal inferior.</div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn">Dose</div>
+            <div class="dc">Ropivacaína 0.2% — 20 mL cada lado</div>
+          </div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">✅ Vantagem sobre TAP</div>
+            Maior cobertura que TAP — inclui componente visceral por difusão paravertebral (variantes QL1/QL2/QL3). Melhor para cirurgias com dor visceral significativa.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 6 — PREVENÇÃO LAST
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="pocus-last-prev">
+    <div class="page-wrap">
+
+      <!-- DOSE MÁXIMA -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">⚠️</span> Dose Máxima Segura por kg — Tabela Completa
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap xwide"><table class="tbl">
+            <thead>
+              <tr>
+                <th>Anestésico Local</th>
+                <th>Concentração</th>
+                <th>Sem Vasoconst.</th>
+                <th>Com Vasoconst.</th>
+                <th>Volume máx (70 kg)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Lidocaína</strong></td>
+                <td>1-2%</td>
+                <td>4.5 mg/kg (315 mg)</td>
+                <td>7 mg/kg (490 mg)</td>
+                <td>23 mL (1%) / 11.5 mL (2%) sem vasoconst.</td>
+              </tr>
+              <tr>
+                <td><strong>Bupivacaína</strong></td>
+                <td>0.25-0.5%</td>
+                <td>2 mg/kg (140 mg)</td>
+                <td>2.5 mg/kg (175 mg)</td>
+                <td>56 mL (0.25%) / 28 mL (0.5%)</td>
+              </tr>
+              <tr>
+                <td><strong>Ropivacaína</strong></td>
+                <td>0.2-1%</td>
+                <td>3 mg/kg (210 mg)</td>
+                <td>—</td>
+                <td>105 mL (0.2%) / 21 mL (1%)</td>
+              </tr>
+              <tr>
+                <td><strong>Levobupivacaína</strong></td>
+                <td>0.25-0.5%</td>
+                <td>2.5 mg/kg (175 mg)</td>
+                <td>—</td>
+                <td>70 mL (0.25%)</td>
+              </tr>
+              <tr>
+                <td><strong>Prilocaína</strong></td>
+                <td>0.5-3%</td>
+                <td>6 mg/kg (420 mg)</td>
+                <td>8 mg/kg (560 mg)</td>
+                <td>Menor risco cardíaco</td>
+              </tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-r" style="margin-top:10px">
+            <div class="algo-title">⚠ BUPIVACAÍNA — Cardiotoxicidade</div>
+            Bupivacaína tem o <strong>maior risco de cardiotoxicidade</strong> entre os AL. Dose máxima ABSOLUTA: 2 mg/kg sem vaso, 2.5 mg/kg com vaso. Nunca ultrapassar. Ropivacaína e levobupivacaína têm perfil mais seguro.
+          </div>
+        </div>
+      </div>
+
+      <!-- CHECKLIST PRÉ-BLOQUEIO -->
+      <div class="card" style="border:2px solid var(--teal)">
+        <div class="card-header ch-teal">
+          <span class="card-num">✅</span> Checklist Pré-Bloqueio — Segurança
+        </div>
+        <div class="card-body">
+          <div class="ck-item ok"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Dose calculada por peso e confirmada</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Emulsão lipídica 20% disponível à beira-leito (200 mL mínimo)</span></div>
+          <div class="ck-item ok"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Acesso venoso funcionante</span></div>
+          <div class="ck-item ok"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Monitorização ativa (SpO₂, ECG, PANi)</span></div>
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Agulha aspirada antes de cada injeção (descarta intravascular)</span></div>
+          <div class="ck-item crit"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Injeção FRACIONADA (3-5 mL, pausa, aspira, repete)</span></div>
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Paciente alerta para relatar sintomas (para bloqueios em vigília)</span></div>
+          <div class="ck-item warn"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Dose-teste com adrenalina 15 mcg (↑FC &gt;20 = intravascular)</span></div>
+          <div class="ck-item ok"><span class="ck-box ck-chk" onclick="toggleItem(this)"></span><span class="ck-text">Ultrassonografia confirmou visualização de spread correto</span></div>
+        </div>
+      </div>
+
+      <!-- ALERTA EMULSÃO -->
+      <div class="card" style="border:2px solid var(--red)">
+        <div class="card-header ch-red">
+          <span class="card-num">🚨</span> Protocolo de Resgate — Emulsão Lipídica 20%
+        </div>
+        <div class="card-body">
+          <div class="alert a-red" style="margin-bottom:10px">
+            <strong>Se sinais de LAST (toxicidade por AL):</strong> Parar injeção, chamar ajuda, ACLS + emulsão lipídica imediata.
+          </div>
+          <div style="background:linear-gradient(135deg,#7F0000,#C0392B);border-radius:10px;padding:14px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:white;letter-spacing:.8px;margin-bottom:8px">🚨 PROTOCOLO EMULSÃO LIPÍDICA 20% (Intralipid®)</div>
+
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">1</span>
+              <span style="font-size:13px;color:white;line-height:1.5"><strong>BOLUS:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px">1.5 mL/kg IV</span> em 1 minuto (~100 mL para 70 kg)</span>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">2</span>
+              <span style="font-size:13px;color:white;line-height:1.5"><strong>INFUSÃO:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px">0.25 mL/kg/min</span> por ≥10 minutos</span>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">3</span>
+              <span style="font-size:13px;color:white;line-height:1.5">Se instabilidade persistir: repetir bolus (máx 2×) e dobrar infusão para <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">0.5 mL/kg/min</span></span>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--gold);flex-shrink:0;min-width:24px">4</span>
+              <span style="font-size:13px;color:white;line-height:1.5"><strong>Dose máxima total:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">12 mL/kg</span> (~840 mL para 70 kg)</span>
+            </div>
+          </div>
+
+          <div class="algo-box algo-r" style="margin-top:10px">
+            <div class="algo-title">⚠ EVITAR na LAST</div>
+            <strong>NÃO usar:</strong> propofol como substituto de emulsão lipídica (dose insuficiente de lipídeo). NÃO usar vasopressina, bloqueadores de cálcio, ou beta-bloqueadores. Amiodarona e lidocaína contraindicadas.
+          </div>
+
+          <div class="algo-box algo-g" style="margin-top:6px">
+            <div class="algo-title">✅ Sinais de LAST — Reconhecimento Precoce</div>
+            <strong>SNC:</strong> zumbido, gosto metálico, parestesia perioral, agitação, convulsões.<br>
+            <strong>Cardíaco:</strong> bradicardia, hipotensão, arritmias ventriculares, assistolia.<br>
+            Sintomas do SNC geralmente precedem os cardíacos — janela de intervenção precoce.
+          </div>
+        </div>
+      </div>
+
+
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+    </div>
+  </div>
+</div>

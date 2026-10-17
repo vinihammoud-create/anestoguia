@@ -1,0 +1,2464 @@
+<div class="screen" id="screen-farma">
+  <div class="top-bar">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title">Farmacologia Anestésica</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="farm-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('farm','hipnoticos',this)">Hipnóticos</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','opioides',this)">Opioides</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','bnm',this)">BNM</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','reversores',this)">Reversores</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','locals',this)">Anest. Locais</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','vasoativos',this)">Vasoativos</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','adjuvantes',this)">Adjuvantes</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','mpa',this)">MPA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','revisao',this)">Revisão</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','questoes',this)">Questões</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('farm','casos',this)">Casos</button>
+  </div>
+
+  <!-- TAB 1 — HIPNÓTICOS IV + INALATÓRIOS -->
+  <div class="tab-panel active" id="farm-hipnoticos">
+    <div class="page-wrap">
+
+      <!-- CONCEITO GERAL -->
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">01</span> Hipnóticos: Conceito e Classificação
+        </div>
+        <div class="card-body">
+          <div class="alert a-violet">
+            <strong>Hipnóticos anestésicos</strong> são drogas que produzem perda de consciência reversível, compondo a "tríade anestésica" junto com analgesia e relaxamento muscular. Podem ser <strong>endovenosos (IV)</strong> — usados na indução e/ou manutenção — ou <strong>inalatórios</strong> — administrados por via aérea e usados principalmente na manutenção.
+          </div>
+          <div class="g2">
+            <div class="alert a-blue"><strong>HIPNÓTICOS IV</strong><br>Propofol · Etomidato · Cetamina · Midazolam · Tiopental</div>
+            <div class="alert a-teal"><strong>INALATÓRIOS</strong><br>Sevoflurano · Isoflurano · Desflurano · N₂O · (Halotano hist.)</div>
+          </div>
+          <div class="alert a-gold" style="margin-top:6px">
+            <strong>Tríade Anestésica:</strong> Hipnose + Analgesia + Relaxamento Muscular. Nenhum agente único fornece os três componentes de forma ideal — o manejo moderno é multimodal.
+          </div>
+        </div>
+      </div>
+
+      <!-- PROPOFOL -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">02</span> Propofol — O Hipnótico da Modernidade
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>Mecanismo:</strong> Potencializa o receptor <strong>GABA-A</strong> (agonista GABAérgico) → aumento da corrente de cloro → hiperpolarização neuronal → hipnose. Também inibe os receptores NMDA e canais de sódio dependentes de voltagem.
+          </div>
+
+          <div class="sh sh-blue">Farmacocinética</div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Parâmetro</th><th>Valor</th><th>Relevância</th></tr></thead>
+            <tbody>
+              <tr><td>Volume de distribuição (Vd)</td><td>~4 L/kg (grande)</td><td>Alta lipossolubilidade → redistribuição rápida</td></tr>
+              <tr><td>Meia-vida de eliminação (T½β)</td><td>4–7 horas</td><td>Longa, mas despertar rápido por redistribuição</td></tr>
+              <tr><td>Clearance hepático</td><td>~1,5–2,2 L/min</td><td>Alta extração hepática; metabolismo extra-hepático também</td></tr>
+              <tr><td>Ligação proteica</td><td>~98%</td><td>Efeito reduzido em hipoalbuminemia/idosos</td></tr>
+              <tr><td>Início de ação IV</td><td>30–60 s</td><td>Indução rápida e suave</td></tr>
+              <tr><td>Duração (dose única)</td><td>5–10 min</td><td>Redistribuição para músculo/gordura</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="sh sh-blue" style="margin-top:10px">Doses Clínicas</div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Indução adulto</strong><small>IV lento, titulado</small></div>
+            <div class="dc"><span class="dv">1,5–2,5 mg/kg</span><span class="dd">Reduzir para 1–1,5 mg/kg em idosos, ASA III/IV</span></div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Manutenção TIVA</strong><small>Infusão contínua</small></div>
+            <div class="dc"><span class="dv">4–12 mg/kg/h</span><span class="dd">Titulado pelo nível de profundidade anestésica (BIS)</span></div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Sedação</strong><small>Procedimentos, UTI</small></div>
+            <div class="dc"><span class="dv">0,5–4 mg/kg/h</span><span class="dd">Titular até sedação desejada (RASS -1 a -3)</span></div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Criança &gt;3 anos</strong><small>Indução</small></div>
+            <div class="dc"><span class="dv">2,5–4 mg/kg</span><span class="dd">Maior dose por maior Vd e clearance pediátrico</span></div>
+          </div>
+
+          <div class="sh sh-blue" style="margin-top:10px">Vantagens Clínicas</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-g">✔</span><div><strong>Antiemético intrínseco</strong> — reduz PONV significativamente; mecanismo ainda debatido (ação central em zona gatilho quimiorreceptora)</div></div>
+            <div class="proto-step"><span class="sn sn-g">✔</span><div><strong>Despertar rápido e qualitativo</strong> — sensação de bem-estar descrita pelos pacientes ("sonho agradável"); alta satisfação</div></div>
+            <div class="proto-step"><span class="sn sn-g">✔</span><div><strong>Efeito broncodilatador leve</strong> — útil em pacientes com hiperreatividade das vias aéreas</div></div>
+            <div class="proto-step"><span class="sn sn-g">✔</span><div><strong>Redução da PIC</strong> — diminui metabolismo cerebral e fluxo sanguíneo cerebral; útil em neurocirurgia</div></div>
+            <div class="proto-step"><span class="sn sn-g">✔</span><div><strong>Propriedade anticonvulsivante</strong> — útil no tratamento do estado de mal epiléptico refratário</div></div>
+          </div>
+
+          <div class="sh sh-blue" style="margin-top:10px">Efeitos Adversos e Alertas</div>
+          <div class="alert a-red">
+            <strong>Dor à injeção:</strong> Ocorre em 28–90% dos pacientes na veia dorsal da mão. Prevenção: administrar 40 mg de lidocaína IV 1 min antes ou usar veia antecubital; administrar com torniquete (técnica de Bier modificada). O propofol em formulação lipídica irrita a íntima venosa.
+          </div>
+          <div class="alert a-red">
+            <strong>Hipotensão arterial:</strong> Por vasodilatação periférica e redução do débito cardíaco. Mais pronunciada em hipovolêmicos, idosos e cardiopatas. Titular sempre! Velocidade de injeção importa muito.
+          </div>
+          <div class="alert a-red">
+            <strong>Apneia:</strong> Muito frequente na indução — sempre ter ventilação manual disponível. Reduzida com pré-oxigenação e injeção lenta.
+          </div>
+          <div class="alert a-orange">
+            <strong>PRIS — Propofol Infusion Syndrome:</strong> Síndrome rara mas potencialmente fatal. Critérios: acidose metabólica com ânion gap elevado + rabdomiólise + falência de múltiplos órgãos + alterações cardíacas (BRDHH, supradesnivelamento ST). Fatores de risco: dose &gt;4 mg/kg/h por &gt;48h, sepse, trauma craniano, esteatose hepática. Mecanismo: inibição mitocondrial do complexo II/IV da cadeia respiratória e da β-oxidação de ácidos graxos. <strong>Tratamento:</strong> suspensão imediata, suporte clínico.
+          </div>
+          <div class="alert a-red">
+            <strong>CI em crianças &lt;3 anos para sedação prolongada (UTI):</strong> Risco aumentado de PRIS. Para sedação de longa duração pediátrica, preferir dexmedetomidina ou midazolam.
+          </div>
+          <div class="alert a-yellow">
+            <strong>Veículo lipídico:</strong> Formulação 1% em emulsão lipídica (Intralipid). Conta como aporte calórico (1,1 kcal/mL). Risco de hipertrigliceridemia na infusão prolongada. Frasco aberto deve ser usado em até 12h (risco de contaminação bacteriana).
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:12px">
+  <div class="card-hdr" style="background:var(--red)">
+    <span class="card-title">⚠ PRIS — Síndrome de Infusão do Propofol</span>
+  </div>
+  <div class="card-body">
+    <p style="font-size:12px;line-height:1.7;margin-bottom:8px">Complicação rara mas potencialmente fatal associada a infusões prolongadas de propofol em altas doses. Incidência estimada: 1–4% em UTI; rara em anestesia de curta duração.</p>
+    <div class="algo-box algo-r">
+      <div class="algo-title">🚨 Critérios diagnósticos de PRIS</div>
+      <ul style="font-size:12px;line-height:1.8;margin:6px 0 0 16px">
+        <li><strong>Acidose metabólica</strong> com ânion gap elevado (lactato &gt;2 mmol/L)</li>
+        <li><strong>Rabdomiólise</strong> — CPK &gt;1000 UI/L, mioglobinúria</li>
+        <li><strong>Hepatomegalia</strong> com esteatose e ↑enzimas hepáticas</li>
+        <li><strong>Disfunção miocárdica</strong> — bloqueio de ramo direito, ST elevado (síndrome de Brugada-like)</li>
+        <li><strong>Insuficiência renal aguda</strong> oligúrica</li>
+        <li><strong>Lipemia</strong> — triglicerídeos &gt;500 mg/dL</li>
+      </ul>
+    </div>
+    <div class="tbl-wrap wide"><table class="tbl" style="margin-top:8px">
+      <thead><tr><th>Fator de risco</th><th>Threshold de alerta</th></tr></thead>
+      <tbody>
+        <tr><td>Dose de propofol</td><td>&gt;4–5 mg/kg/h por &gt;48h (UTI)</td></tr>
+        <tr><td>Paciente pediátrico</td><td>↑↑↑ risco — propofol CI em sedação pediátrica prolongada</td></tr>
+        <tr><td>TCE grave + corticoide</td><td>Combinação de maior risco</td></tr>
+        <tr><td>Dieta hipocalórica</td><td>↑catabolismo lipídico → ↑acil-carnitina tóxica</td></tr>
+      </tbody>
+    </table></div>
+    <div class="algo-box algo-g" style="margin-top:8px">
+      <div class="algo-title">✅ Conduta ao suspeitar de PRIS</div>
+      Suspender propofol imediatamente · Trocar por midazolam ou dexmedetomidina · Hemodiálise se acidose grave · Suporte cardiovascular · Controle glicêmico rigoroso · Em anestesia geral: PRIS é extremamente raro com doses e tempo habituais — não contraindica uso
+    </div>
+  </div>
+</div>
+
+      <!-- ETOMIDATO -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">03</span> Etomidato — O Hipnótico Cardiovascular
+        </div>
+        <div class="card-body">
+          <div class="alert a-green">
+            <strong>Mecanismo:</strong> Agonista seletivo do receptor <strong>GABA-A</strong> (sítio distinto ao do propofol). Modula o receptor na subunidade β2/β3. Maior seletividade SNC explicaria menor efeito cardiovascular.
+          </div>
+          <div class="alert a-blue" style="margin-bottom:12px">
+            <strong>Característica definidora:</strong> <em>Mínima interferência hemodinâmica</em> — não altera significativamente FC, PA ou DC. Escolha preferencial para indução em <strong>pacientes com instabilidade hemodinâmica, trauma, tamponamento cardíaco e valvopatias graves.</strong>
+          </div>
+
+          <div class="sh sh-green">Doses Clínicas</div>
+          <div class="dr dr-g">
+            <div class="dn"><strong>Indução adulto</strong><small>IV rápido</small></div>
+            <div class="dc"><span class="dv">0,2–0,3 mg/kg</span><span class="dd">Diluído em água destilada — 2 mg/mL. Não titular.</span></div>
+          </div>
+
+          <div class="sh sh-green" style="margin-top:10px">Efeitos Adversos Importantes</div>
+          <div class="alert a-red">
+            <strong>Supressão adrenal:</strong> Inibe a enzima 11β-hidroxilase na supra-renal → redução da síntese de cortisol por até <strong>24–72 horas</strong> após dose única de indução! O cortisol basal cai 40–50% nas primeiras 6h. Em pacientes sépticos, isso pode agravar o choque e aumentar mortalidade — discute-se a restrição do uso em sépsis grave. Em pacientes críticos que necessitam de sequência rápida de intubação, a decisão é individualizada.
+          </div>
+          <div class="alert a-orange">
+            <strong>Mioclonias:</strong> Movimentos involuntários em 10–80% dos pacientes durante a indução (correntes excitatórias subcorticais desinibidas). Prevenção eficaz: <strong>midazolam 0,03–0,05 mg/kg IV</strong> 1–2 min antes do etomidato. Também reduzidas por fentanil ou pré-condicionamento com propofol em baixa dose.
+          </div>
+          <div class="alert a-gold">
+            <strong>Dor à injeção e tromboflebite:</strong> Menos frequente que o propofol, mas ocorre (formulação em propilenoglicol). Nova formulação em sulfobutiléter-β-ciclodextrina (Etomidate-Lipuro) tem menor dor.
+          </div>
+          <div class="alert a-yellow">
+            <strong>Náuseas/vômitos pós-op:</strong> PONV maior do que propofol — relevante em cirurgias eletivas de curta duração.
+          </div>
+          <div class="alert a-blue">
+            <strong>NÃO fornece analgesia</strong> — sempre associar opioide ou outro analgésico na indução.
+          </div>
+        </div>
+      </div>
+
+      <!-- CETAMINA -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">04</span> Cetamina — Anestesia Dissociativa
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange">
+            <strong>Mecanismo:</strong> Antagonista <em>não-competitivo</em> do receptor <strong>NMDA</strong> (N-metil-D-aspartato) por bloqueio do canal iônico em estado aberto (<em>open-channel block</em>). Também ativa receptores opioides μ/κ/δ, inibe canais de Na⁺ e Ca²⁺, e bloqueia os receptores muscarínicos. O S(+)-cetamina (levocetamina) é 2–4× mais potente e tem menos efeitos dissociativos.
+          </div>
+
+          <div class="sh sh-orange">Anestesia Dissociativa</div>
+          <p style="font-size:12px;margin-bottom:8px;line-height:1.6">A cetamina produz um estado peculiar de <strong>"anestesia dissociativa"</strong>: o paciente parece acordado (olhos abertos, reflexos presentes) mas está profundamente anestesiado com analgesia intensa. Isso reflete a dissociação funcional entre o sistema límbico (consciência) e os centros talâmico-neocorticais.</p>
+
+          <div class="sh sh-orange">Doses Clínicas</div>
+          <div class="dr dr-o">
+            <div class="dn"><strong>Indução IV</strong><small>Adulto</small></div>
+            <div class="dc"><span class="dv">1–2 mg/kg IV</span><span class="dd">Início: 45–60s · Duração: 10–15 min</span></div>
+          </div>
+          <div class="dr dr-o">
+            <div class="dn"><strong>Indução IM</strong><small>Pediátrico/agitado</small></div>
+            <div class="dc"><span class="dv">4–6 mg/kg IM</span><span class="dd">Início: 3–5 min · Duração: 15–30 min · Muito útil em crianças</span></div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Subanestésica/Analgesia</strong><small>Adjuvante multimodal</small></div>
+            <div class="dc"><span class="dv">0,1–0,5 mg/kg IV</span><span class="dd">Reduz consumo de opioides, preemptive analgesia</span></div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Infusão contínua</strong><small>Analgesia pós-op</small></div>
+            <div class="dc"><span class="dv">0,1–0,2 mg/kg/h</span><span class="dd">Opioid-sparing em cirurgias dolorosas, dor crônica</span></div>
+          </div>
+
+          <div class="sh sh-orange" style="margin-top:10px">Efeitos Simpaticomimético — Vantagem Única</div>
+          <div class="alert a-green">
+            A cetamina estimula indiretamente o sistema simpático → <strong>↑ FC, ↑ PA, ↑ DC</strong>. Mecanismo: inibe a recaptação de catecolaminas (noradrenalina), estimula o eixo hipotálamo-hipófise-adrenal e ativa centros vasomotores centrais. Resultado: droga de escolha em <strong>trauma com hipovolemia, choque hemorrágico, tamponamento, broncoespasmo grave</strong>. Atenção: em pacientes com reserva simpática esgotada (choque refratário terminal), pode paradoxalmente causar depressão miocárdica (efeito direto negativo mascarado pelo simpático).
+          </div>
+
+          <div class="sh sh-orange" style="margin-top:10px">Broncodilatação</div>
+          <div class="alert a-teal">
+            Relaxa a musculatura lisa brônquica por estimulação adrenérgica β₂ e inibição do broncoespasmo mediado por NMDA. Indicada em <strong>asma grave, broncoespasmo intraoperatório</strong>. Dose: 0,5–1 mg/kg IV.
+          </div>
+
+          <div class="sh sh-orange" style="margin-top:10px">Efeitos Adversos e CI</div>
+          <div class="alert a-red">
+            <strong>Emergência dissociativa:</strong> Alucinações, pesadelos, agitação ao despertar em 5–30% dos adultos (muito menos em crianças). Prevenção: midazolam 0,05 mg/kg IV antes ou associação com propofol. A dexmedetomidina também reduz esse fenômeno.
+          </div>
+          <div class="alert a-orange">
+            <strong>CI relativas:</strong> HAS grave não controlada (risco de crise hipertensiva) · IAM recente · Hipertensão intracraniana (aumenta PIC e PIO — relativo, há evidências conflitantes) · Psicose ativa · Tireotoxicose · Aneurisma aórtico não corrigido.
+          </div>
+          <div class="alert a-gold">
+            <strong>Preserva reflexos laríngeos</strong> — mas não elimina risco de aspiração! Paciente com estômago cheio precisa de proteção de via aérea mesmo com cetamina.
+          </div>
+          <div class="alert a-yellow">
+            <strong>Hipersecreção salivar:</strong> Estimula glândulas salivares. Pré-medicar com atropina (0,01 mg/kg IV) ou glicopirrolato quando usar cetamina IM em crianças.
+          </div>
+        </div>
+      </div>
+
+      <!-- MIDAZOLAM -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">05</span> Midazolam — Benzodiazepínico da Anestesia
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>Mecanismo:</strong> Liga-se ao receptor <strong>GABA-A</strong> no sítio de benzodiazepínicos (interface α/γ), potenciando a ação do GABA endógeno → aumento da frequência de abertura do canal de cloro → hiperpolarização. Dependente da presença de GABA — por isso é modulador, não agonista direto.
+          </div>
+
+          <div class="sh sh-teal">Doses e Indicações</div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Pré-medicação</strong><small>VO 30–60 min antes</small></div>
+            <div class="dc"><span class="dv">7,5–15 mg VO</span><span class="dd">Adulto · 0,3–0,5 mg/kg pediátrico VO</span></div>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Pré-medicação IV</strong><small>2–3 min antes indução</small></div>
+            <div class="dc"><span class="dv">1–3 mg IV</span><span class="dd">0,03–0,05 mg/kg · Reduz ansiedade, previne mioclonias</span></div>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Sedação procedureal</strong><small>Titulado</small></div>
+            <div class="dc"><span class="dv">1–5 mg IV</span><span class="dd">Titular 1 mg/min · Monitorar SpO₂</span></div>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Indução anestésica</strong><small>Associado a outros hipnóticos</small></div>
+            <div class="dc"><span class="dv">0,1–0,3 mg/kg IV</span><span class="dd">Raramente usado isolado — lento e imprevisível</span></div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:10px">Características Especiais</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-t">→</span><div><strong>Amnésia anterógrada</strong> — paciente não forma memórias novas por 20–40 min após dose IV. Útil na pré-medicação; reduz recall intraoperatório.</div></div>
+            <div class="proto-step"><span class="sn sn-t">→</span><div><strong>Anticonvulsivante</strong> — droga de primeira linha em convulsões ativas (dose 0,1 mg/kg IV ou 5–10 mg IM). Status epiléptico: 0,2 mg/kg IV.</div></div>
+            <div class="proto-step"><span class="sn sn-t">→</span><div><strong>Hidrossolúvel em pH ácido</strong> — formulação estável em solução aquosa (não lipídica). Em pH fisiológico, torna-se lipossolúvel e atravessa a BHE rapidamente.</div></div>
+            <div class="proto-step"><span class="sn sn-t">→</span><div><strong>Metabolismo hepático CYP3A4</strong> — metabolito ativo (1-OH-midazolam) com 50% da potência. Acúmulo em insuficiência hepática/renal ou uso de inibidores do CYP3A4 (fluconazol, eritromicina).</div></div>
+          </div>
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>Reversão: Flumazenil</strong> — antagonista competitivo dos receptores benzodiazepínicos. Dose: 0,2 mg IV lento, repetir a cada 1 min até resposta, máximo 1 mg total. Meia-vida 45–90 min (mais curta que o midazolam!) → risco de re-sedação. Monitorar por 2–4h após reversão.
+          </div>
+        </div>
+      </div>
+
+      <!-- TIOPENTAL -->
+      <div class="card">
+        <div class="card-header ch-navy">
+          <span class="card-num">06</span> Tiopental — Barbitúrico Histórico
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>Mecanismo:</strong> Agonista direto do receptor <strong>GABA-A</strong> (sítio dos barbitúricos, diferente dos BZD) → aumenta a <em>duração</em> de abertura do canal de cloro (BZD aumentam a frequência). Em altas doses, abre o canal independentemente do GABA.
+          </div>
+          <div class="g2">
+            <div class="alert a-blue"><strong>Vantagens</strong><br>Início rápido (20–30s) · Forte neuroprotetor · Reduz PIC e CMRO₂ · Ainda usado em craniectomia e status epiléptico refratário (coma barbitúrico)</div>
+            <div class="alert a-red"><strong>Desvantagens</strong><br>Hipotensão marcante · Broncoespasmo (libera histamina) · Sem analgesia · Acúmulo em infusão · Necrose tecidual extravasamento</div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Indução adulto</strong><small>IV rápido</small></div>
+            <div class="dc"><span class="dv">3–5 mg/kg IV</span><span class="dd">Formulação 2,5%: 25 mg/mL. Reduzir em idosos e hipovolêmicos.</span></div>
+          </div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>CI ABSOLUTA — Porfiria Aguda:</strong> Tiopental (e outros barbitúricos) induz a enzima ALA-sintetase → acúmulo de porfirinas → crise com neuropatia, dor abdominal, parálise e colapso cardiovascular. Pode ser fatal. Em portadores de porfiria, usar propofol, etomidato ou cetamina.
+          </div>
+          <div class="alert a-orange">
+            <strong>Nota histórica:</strong> Foi o hipnótico IV padrão-ouro por décadas. Atualmente substituído quase completamente pelo propofol na maioria dos centros. No Brasil, pode ainda ser encontrado em neurocirurgia e coma barbitúrico.
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA COMPARATIVA HIPNÓTICOS IV -->
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">07</span> Tabela Comparativa — Hipnóticos IV
+        </div>
+        <div class="card-body">
+          <div style="overflow-x:auto">
+            <div class="tbl-wrap xwide"><table class="tbl">
+              <thead>
+                <tr>
+                  <th style="white-space:nowrap">Fármaco</th><th>Mecanismo</th><th>Início/Duração</th><th>Hemodinâmica</th><th>Vantagem</th><th>Desvantagem</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Propofol</strong></td>
+                  <td>GABA-A (potenciador)</td>
+                  <td>30s / 5–10min</td>
+                  <td><span class="tag tr">↓ PA</span><span class="tag ty">↓ FC</span></td>
+                  <td>Antiemético, despertar rápido, TIVA</td>
+                  <td>Dor injeção, apneia, PRIS (raro)</td>
+                </tr>
+                <tr>
+                  <td><strong>Etomidato</strong></td>
+                  <td>GABA-A (sítio β)</td>
+                  <td>30–60s / 3–8min</td>
+                  <td><span class="tag tg">Estável</span></td>
+                  <td>Mínimo efeito CV, trauma/choque</td>
+                  <td>Mioclonias, supressão adrenal</td>
+                </tr>
+                <tr>
+                  <td><strong>Cetamina</strong></td>
+                  <td>NMDA antagonista</td>
+                  <td>45s IV / 3–5min IM</td>
+                  <td><span class="tag tg">↑ PA, ↑ FC</span></td>
+                  <td>Broncodilatação, trauma, dissociativa</td>
+                  <td>Emergência dissociativa, ↑ secreções</td>
+                </tr>
+                <tr>
+                  <td><strong>Midazolam</strong></td>
+                  <td>GABA-A (BZD site)</td>
+                  <td>2–3min / 15–30min</td>
+                  <td><span class="tag ty">Leve ↓ PA</span></td>
+                  <td>Amnésia, pré-medicação, reversível</td>
+                  <td>Lento, acúmulo, sedação prolongada</td>
+                </tr>
+                <tr>
+                  <td><strong>Tiopental</strong></td>
+                  <td>GABA-A (barbitúrico)</td>
+                  <td>20–30s / 5–15min</td>
+                  <td><span class="tag tr">↓ PA marcante</span></td>
+                  <td>Neuroproteção, ↓ PIC</td>
+                  <td>CI porfiria, acúmulo, broncoespasmo</td>
+                </tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INALATÓRIOS -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">08</span> Anestésicos Inalatórios — Princípios
+        </div>
+        <div class="card-body">
+          <div class="alert a-teal">
+            <strong>CAM (Concentração Alveolar Mínima):</strong> Concentração alveolar de anestésico inalatório que previne movimento em 50% dos pacientes na incisão cirúrgica. É a medida padronizada de potência anestésica (quanto menor a CAM, mais potente). Para garantir imobilidade em &gt;95% dos pacientes, usa-se <strong>1,3 × CAM</strong>. Para supressão do BIS, 0,5–1,0 CAM.
+          </div>
+          <div class="alert a-blue">
+            <strong>Coeficiente de partição sangue/gás (λ s/g):</strong> Determina a <strong>velocidade de indução e despertar</strong>. Quanto <strong>menor</strong> o coeficiente → menor solubilidade no sangue → o anestésico chega rapidamente ao SNC → <strong>indução e despertar mais rápidos</strong>. Analogia: se o anestésico "não gosta" do sangue, logo satura o sangue e passa para o cérebro.
+          </div>
+
+          <!-- SVG Comparação Velocidade Inalatórios -->
+          <div style="text-align:center;margin:14px 0">
+            <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;border-radius:10px">
+              <rect width="480" height="280" fill="#0D1B2A" rx="10"/>
+              <text x="240" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#38B6E0" font-weight="700">VELOCIDADE DE INDUÇÃO/DESPERTAR</text>
+              <text x="240" y="36" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#5A6880">Proporção FA/FI ao longo do tempo (↑ curva = mais rápido)</text>
+
+              <!-- Axes -->
+              <line x1="50" y1="240" x2="440" y2="240" stroke="#3A4A5C" stroke-width="1.5"/>
+              <line x1="50" y1="240" x2="50" y2="55" stroke="#3A4A5C" stroke-width="1.5"/>
+              <text x="245" y="265" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#5A6880">Tempo (minutos)</text>
+              <text x="15" y="155" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#5A6880" transform="rotate(-90,15,155)">FA/FI</text>
+              <!-- Y ticks -->
+              <text x="44" y="243" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">0</text>
+              <text x="44" y="193" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">0.5</text>
+              <text x="44" y="148" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">0.75</text>
+              <text x="44" y="103" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">0.9</text>
+              <text x="44" y="65" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">1.0</text>
+              <!-- X ticks -->
+              <text x="130" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">5</text>
+              <text x="210" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">10</text>
+              <text x="290" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">15</text>
+              <text x="370" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">20</text>
+
+              <!-- Desflurano: λ=0.45 — sobe muito rápido -->
+              <polyline points="50,240 70,165 90,120 115,95 145,78 185,68 240,62 320,59 430,58" fill="none" stroke="#E8A020" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="435" y="55" font-family="JetBrains Mono,monospace" font-size="9" fill="#E8A020">Des (λ=0,45)</text>
+
+              <!-- N2O: λ=0.47 -->
+              <polyline points="50,240 68,168 88,125 112,98 142,80 180,70 235,64 315,61 425,60" fill="none" stroke="#38B6E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="435" y="66" font-family="JetBrains Mono,monospace" font-size="9" fill="#38B6E0">N₂O (λ=0,47)</text>
+
+              <!-- Sevoflurano: λ=0.65 -->
+              <polyline points="50,240 75,178 100,140 130,112 165,92 205,78 260,68 340,62 430,60" fill="none" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="435" y="77" font-family="JetBrains Mono,monospace" font-size="9" fill="#4ADE80">Sevo (λ=0,65)</text>
+
+              <!-- Isoflurano: λ=1.4 -->
+              <polyline points="50,240 80,200 115,172 155,148 200,128 250,112 310,98 380,88 435,82" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="435" y="93" font-family="JetBrains Mono,monospace" font-size="9" fill="#A78BFA">Iso (λ=1,4)</text>
+
+              <!-- Halotano: λ=2.5 (histórico) -->
+              <polyline points="50,240 90,215 130,195 175,177 225,160 280,145 340,132 400,122 440,116" fill="none" stroke="#F87171" stroke-width="1.5" stroke-dasharray="5,3" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="435" y="115" font-family="JetBrains Mono,monospace" font-size="9" fill="#F87171">Halo (λ=2,5)†</text>
+
+              <text x="240" y="275" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#3A4A5C">† Halotano: uso histórico, não mais disponível no Brasil</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA INALATÓRIOS -->
+      <div class="card">
+        <div class="card-header ch-teal">
+          <span class="card-num">09</span> Inalatórios — Tabela Comparativa Completa
+        </div>
+        <div class="card-body">
+          <div style="overflow-x:auto">
+            <div class="tbl-wrap xwide"><table class="tbl">
+              <thead>
+                <tr>
+                  <th style="white-space:nowrap">Agente</th><th>CAM</th><th>λ s/g</th><th>Indução</th><th>Vantagem</th><th>Desvantagem</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Sevoflurano</strong></td>
+                  <td>2,0%</td>
+                  <td>0,65</td>
+                  <td><span class="tag tg">Rápida</span></td>
+                  <td>Odor agradável → indução inalatória pediátrica; broncodilatador leve</td>
+                  <td>Composto A (nefrotóxico em circuito fechado &lt;2L/min); custo alto</td>
+                </tr>
+                <tr>
+                  <td><strong>Isoflurano</strong></td>
+                  <td>1,15%</td>
+                  <td>1,4</td>
+                  <td><span class="tag ty">Moderada</span></td>
+                  <td>Barateio, boa relaxamento muscular, vasodilata coronárias</td>
+                  <td>Odor pungente, irrita via aérea, roubo coronariano (debate)</td>
+                </tr>
+                <tr>
+                  <td><strong>Desflurano</strong></td>
+                  <td>6,0%</td>
+                  <td>0,45</td>
+                  <td><span class="tag tg">Muito rápida</span></td>
+                  <td>Despertar ultra-rápido; ideal em cirurgias longas, obesos</td>
+                  <td>Irrita vias aéreas (CI indução inalatória), exige vaporizador aquecido especial, custo alto; contribui para efeito estufa</td>
+                </tr>
+                <tr>
+                  <td><strong>N₂O</strong> (Óxido nitroso)</td>
+                  <td>104%</td>
+                  <td>0,47</td>
+                  <td><span class="tag tg">Rápida</span></td>
+                  <td>Analgesia, reduz CAM dos outros, barato, coadjuvante excelente</td>
+                  <td>Expande cavidades fechadas (pneumotórax, íleo, ouvido médio), náuseas, inativa vitamina B12, CI gestantes e laparoscopia longa</td>
+                </tr>
+                <tr>
+                  <td><strong>Halotano</strong> (hist.)</td>
+                  <td>0,75%</td>
+                  <td>2,5</td>
+                  <td><span class="tag tr">Lenta</span></td>
+                  <td>Não irrita vias aéreas, pediátrico (hist.)</td>
+                  <td>Hepatotoxicidade halotana (necrose hepática fulminante em 1:30.000), sensibiliza miocárdio a catecolaminas, gatilho HM</td>
+                </tr>
+              </tbody>
+            </table></div>
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:14px">Hipertermia Maligna (HM) — Alerta Crítico</div>
+          <div class="alert a-red">
+            <strong>Todos os inalatórios halogenados + succinilcolina</strong> são gatilhos da Hipertermia Maligna. HM é uma miopatia farmacogenética potencialmente fatal: mutação no receptor rianodina (RYR1) → liberação descontrolada de Ca²⁺ do RS → contração muscular sustentada → hipertermia, acidose, rabdomiólise, CIVD. Sinais: ↑ EtCO₂ inexplicável + rigidez muscular + febre de evolução rápida + instabilidade hemodinâmica. Tratamento: <strong>dantrolene 2,5 mg/kg IV</strong> (repetir até 10 mg/kg), suspender gatilho, resfriamento ativo, bicarbonato, suporte orgânico.
+          </div>
+
+          <div class="sh sh-teal" style="margin-top:10px">Toxicidade Renal do Sevoflurano — Composto A</div>
+          <div class="alert a-yellow">
+            O sevoflurano reage com o absorvedor de CO₂ (NaOH/Ca(OH)₂) em altas temperaturas → forma <strong>Composto A</strong> (fluorometil-2,2-difluoro-1-(trifluorometil)vinil éter), nefrotóxico em ratos mas sem evidência de nefrotoxicidade clinicamente relevante em humanos com fluxos &gt;2 L/min. A FDA recomenda fluxo de gás fresco ≥2 L/min com sevoflurano.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">Efeito do Segundo Gás e Wash-in/Wash-out — TEA/TSA</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px"><strong>Efeito do Segundo Gás (Concentration Effect):</strong> N₂O em alta concentração é absorvido pelo sangue muito rapidamente no início → volume alveolar ↓ → concentração relativa do 2° agente (halogenado) no alvéolo ↑ além do esperado → onset mais rápido do halogenado.</p>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px"><strong>Wash-in (FA/FI):</strong> Razão entre concentração alveolar (FA) e inspirada (FI). Quanto mais rápido FA → FI = wash-in mais rápido = onset mais rápido. Depende do coeficiente de partição sangue/gás.</p>
+          <p style="font-size:12px;line-height:1.7;margin-bottom:8px"><strong>Wash-out:</strong> Velocidade de eliminação pós-descontinuação. Determina o tempo de despertar. Quanto menor o coeficiente, mais rápido o wash-out.</p>
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th style="white-space:nowrap">Agente</th><th>Coef. sangue/gás</th><th>FA/FI a 30 min</th><th>Despertar</th></tr></thead>
+            <tbody>
+              <tr><td>Desflurano</td><td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--green)">0.42</td><td>~0.91</td><td>Mais rápido (~5 min)</td></tr>
+              <tr><td>Sevoflurano</td><td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--cyan)">0.65</td><td>~0.85</td><td>Rápido (~10 min)</td></tr>
+              <tr><td>Isoflurano</td><td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--gold)">1.4</td><td>~0.60</td><td>Moderado (~20 min)</td></tr>
+              <tr><td>Halotano (histórico)</td><td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--orange)">2.3</td><td>~0.40</td><td>Lento (&gt;30 min)</td></tr>
+              <tr><td>N₂O</td><td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--violet)">0.47</td><td>~0.90</td><td>Muito rápido</td></tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-g" style="margin-top:8px">
+            <div class="algo-title">✅ Pérola TEA/TSA — Perguntas frequentes</div>
+            <ul style="font-size:12px;line-height:1.8;margin:4px 0 0 16px">
+              <li>Qual halogenado tem wash-in mais rápido? → Desflurano (menor coef. sangue/gás)</li>
+              <li>Qual tem despertar mais previsível após cirurgia longa? → Desflurano &gt; Sevoflurano</li>
+              <li>O efeito do segundo gás ocorre com qual agente? → N₂O (absorção maciça inicial)</li>
+              <li>Por que N₂O é útil para acelerar a indução? → Efeito de concentração + efeito segundo gás</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</div><!-- /tab-panel hipnoticos -->
+
+  <!-- TAB 2 — OPIOIDES PERIOPERATÓRIOS -->
+  <div class="tab-panel" id="farm-opioides">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">01</span> Receptores Opioides e Funções
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            Os opioides exercem seus efeitos via receptores acoplados à proteína G<sub>i</sub>, presentes em SNC (encéfalo, medula), SNP e trato GI. A ativação inibe a adenilil ciclase, reduz condutância ao Ca²⁺ e aumenta condutância ao K⁺ → hiperpolarização neuronal → inibição da transmissão dolorosa.
+          </div>
+          <div style="overflow-x:auto">
+            <div class="tbl-wrap wide"><table class="tbl">
+              <thead><tr><th>Receptor</th><th>Endógeno</th><th>Efeitos Principais</th><th>Relevância Clínica</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><strong>μ (Mu)</strong></td>
+                  <td>Endorfinas β</td>
+                  <td>Analgesia supra-espinal, euforia, depressão respiratória, bradicardia, diminuição TGI, miose</td>
+                  <td>Alvo principal dos opioides anestésicos. Fentanil, morfina, sufentanil agonistas μ puros</td>
+                </tr>
+                <tr>
+                  <td><strong>κ (Kappa)</strong></td>
+                  <td>Dinorfinas</td>
+                  <td>Analgesia espinal, sedação, disforia, miose</td>
+                  <td>Nalbufina: agonista κ, antagonista μ. Menor risco de depressão resp. Prurido intratecal</td>
+                </tr>
+                <tr>
+                  <td><strong>δ (Delta)</strong></td>
+                  <td>Encefalinas</td>
+                  <td>Analgesia espinal/supra-espinal, modulação humor, efeitos CV</td>
+                  <td>Menor papel clínico direto; modulação dos efeitos dos μ-agonistas</td>
+                </tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Efeitos colaterais comuns a todos os μ-agonistas:</strong> Náuseas e vômitos (pós-op) · Constipação intestinal · Depressão respiratória (dose-dependente) · Retenção urinária · Prurido (especialmente intratecal) · Bradicardia · Miose · Tolerância e dependência.
+          </div>
+        </div>
+      </div>
+
+      <!-- FENTANIL -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--red)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">FENTANIL</div>
+            <div class="drug-class">Opioide sintético · Agonista μ puro · 100× mais potente que morfina</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-red">
+            <strong>Alta lipossolubilidade</strong> → início de ação rápido (2–4 min IV). Metabolizado pelo CYP3A4 em norfentanil (inativo). Volume de distribuição elevado (4–6 L/kg) → acúmulo em gordura com infusões prolongadas.
+          </div>
+          <div class="sh sh-red">Doses</div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Analgesia periop.</strong><small>Bolus IV</small></div>
+            <div class="dc"><span class="dv">1–3 mcg/kg</span><span class="dd">Início: 2–4 min · Duração: 30–60 min</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Infusão TIVA</strong><small>Manutenção</small></div>
+            <div class="dc"><span class="dv">1–5 mcg/kg/h</span><span class="dd">Titular pelo BIS e sinais de dor</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Intubação/laringoscopia</strong><small>Antes de laringoscopia</small></div>
+            <div class="dc"><span class="dv">2–3 mcg/kg IV</span><span class="dd">3–5 min antes. Atenua resposta simpática à IOT</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Epidural/intratecal</strong><small>Adicionado ao AL</small></div>
+            <div class="dc"><span class="dv">25–100 mcg</span><span class="dd">Potencializa e prolonga bloqueio neuroaxial</span></div>
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Rigidez Torácica ("Thoracic Rigidity"):</strong> Em altas doses IV rápidas (&gt;5 mcg/kg em bolus), fentanil pode causar rigidez dos músculos respiratórios (tórax em "madeira") por estimulação de núcleos caudais. Impossibilita a ventilação manual! Tratamento: succinilcolina ou rocurônio + naloxona. Prevenir com injeção lenta.
+          </div>
+          <div class="alert a-yellow" style="margin-top:8px">
+            <strong>Meia-vida contexto-sensitiva:</strong> Após infusões longas (&gt;3h), a meia-vida funcional aumenta muito por acúmulo nos tecidos periféricos. Para cirurgias longas, preferir remifentanil (ou sufentanil).
+          </div>
+        </div>
+      </div>
+
+      <!-- SUFENTANIL -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--violet)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">SUFENTANIL</div>
+            <div class="drug-class">Opioide sintético · Agonista μ puro · 500–1000× morfina · 10× fentanil</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-violet">
+            Altíssima lipossolubilidade e ligação proteica (92%) → melhor perfil farmacocinético em infusões longas do que o fentanil. Estabilidade cardiovascular superior. Metabolizado no fígado e intestino delgado.
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Analgesia/Adjuvante</strong><small>Bolus IV</small></div>
+            <div class="dc"><span class="dv">0,1–0,3 mcg/kg</span><span class="dd">Equivalente a ~10–30 mcg fentanil</span></div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Infusão TIVA</strong><small>Manutenção</small></div>
+            <div class="dc"><span class="dv">0,1–0,5 mcg/kg/h</span><span class="dd">Excelente para cirurgias longas (&gt;4h)</span></div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Intratecal</strong><small>Raqui/peridural</small></div>
+            <div class="dc"><span class="dv">2,5–5 mcg</span><span class="dd">Intensa analgesia com menor prurido que morfina</span></div>
+          </div>
+          <div class="alert a-blue" style="margin-top:8px">
+            <strong>Cirurgia cardíaca:</strong> Classicamente usado em altas doses (5–20 mcg/kg) como componente analgésico principal em cirurgia cardíaca com CEC — proporciona estabilidade hemodinâmica.
+          </div>
+        </div>
+      </div>
+
+      <!-- REMIFENTANIL -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--teal)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">REMIFENTANIL</div>
+            <div class="drug-class">Opioide sintético · Éster metabolizado por esterases plasmáticas · T½ 4 min (ZERO acúmulo)</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-teal">
+            <strong>Metabolismo único:</strong> Hidrólise por esterases inespecíficas do plasma e tecidos (não depende de pseudocolinesterase nem metabolismo hepático). Isso garante meia-vida ultra-curta e <strong>predizível independente da duração da infusão</strong>. Metabolito principal (GI90291) é inativo clinicamente.
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Infusão anestésica</strong><small>Manutenção padrão</small></div>
+            <div class="dc"><span class="dv">0,1–0,3 mcg/kg/min</span><span class="dd">Titular pela intensidade do estímulo cirúrgico</span></div>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Momentos de dor intensa</strong><small>(Intubação, estímulo incisão)</small></div>
+            <div class="dc"><span class="dv">0,3–1,0 mcg/kg/min</span><span class="dd">Transitório. Sempre em infusão — NUNCA bolus isolado!</span></div>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Sedação/analgesia procedimento</strong></div>
+            <div class="dc"><span class="dv">0,05–0,1 mcg/kg/min</span><span class="dd">Com monitorização respiratória rigorosa</span></div>
+          </div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>ATENÇÃO — Bolus único PROIBIDO:</strong> Administrar remifentanil em bolus único rápido causa bradicardia grave e rigidez torácica. Usar <em>exclusivamente em infusão contínua</em>. Se o acesso venoso for periférico, garantir boa patência.
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Hiperalgesia Opioide Induzida (HOI):</strong> O uso prolongado ou em altas doses de remifentanil pode paradoxalmente sensibilizar o sistema nociceptivo → dor pós-op aumentada (hyperalgesia). Mecanismo: ativação de receptores NMDA espinais. Prevenção: dose baixa de cetamina (0,1–0,2 mg/kg/h), pregabalina perioperatória, evitar infusões muito altas por muito tempo.
+          </div>
+          <div class="alert a-blue" style="margin-top:8px">
+            <strong>Vantagem prática:</strong> Como desaparece em 4–8 min após suspensão, ideal para cirurgias em que despertar rápido é crucial (neurocirurgia, ambulatorial), e para titular analgesia intraoperatória finamente.
+          </div>
+        </div>
+      </div>
+
+      <!-- MORFINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--navy)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">MORFINA</div>
+            <div class="drug-class">Opioide natural · Agonista μ/κ/δ · Padrão-ouro analgesia</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-blue">
+            <strong>Hidrofílica</strong> → início lento IV (15–30 min) mas duração longa (4–6h). Metabolismo hepático → morfina-6-glucuronídeo (M6G, ativo, potente) e morfina-3-glucuronídeo (M3G, antagonista paradoxal). M6G acumula na insuficiência renal → sedação prolongada.
+          </div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Analgesia IV</strong><small>Titulação</small></div>
+            <div class="dc"><span class="dv">0,05–0,1 mg/kg IV</span><span class="dd">2–4 mg a cada 5–10 min. Titular cuidadosamente.</span></div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Intratecal</strong><small>Raquianestesia</small></div>
+            <div class="dc"><span class="dv">50–150 mcg</span><span class="dd">Analgesia pós-op 12–24h! Risco depressão resp. tardio (~12h)</span></div>
+          </div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>Liberação de histamina:</strong> A morfina libera histamina de mastócitos → eritema, prurido, broncoespasmo (especialmente na via aérea hiperativa). Evitar em asmáticos ou preferir fentanil.
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Depressão respiratória tardia (intratecal):</strong> A morfina intratecal é hidrofílica → migra no LCR cranialmente → depressão dos centros respiratórios do bulbo. Risco máximo entre 6–24h. Pacientes precisam de monitoramento de SpO₂ e nível de consciência por 24h após morfina intratecal.
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAMADOL -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--green)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">TRAMADOL</div>
+            <div class="drug-class">Opioide + Inibidor de recaptação · Mecanismo dual · Menor potencial de abuso</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-green">
+            <strong>Duplo mecanismo:</strong> (1) Agonismo fraco μ (fraco) + (2) Inibição da recaptação de serotonina e noradrenalina (semelhante a ISRSN). Ambos contribuem para analgesia. Metabolito O-desmetil-tramadol (M1, CYP2D6) é o principal agonista μ ativo.
+          </div>
+          <div class="dr dr-g">
+            <div class="dn"><strong>Dor moderada</strong><small>IV/IM</small></div>
+            <div class="dc"><span class="dv">50–100 mg IV/IM</span><span class="dd">A cada 6–8h. Máximo 400 mg/dia. Infundir lento IV (15 min)</span></div>
+          </div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>CI absoluta com IMAOs:</strong> Risco de síndrome serotoninérgica fatal (hipertermia, tremor, confusão, instabilidade autonômica). Intervalo mínimo de 14 dias após suspensão do IMAO.
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Metabolizadores lentos (CYP2D6):</strong> ~10% da população caucasiana é metabolizador lento → menor eficácia. Outros são metabolizadores ultrarrápidos → toxicidade opioide inesperada.
+          </div>
+        </div>
+      </div>
+
+      <!-- NALBUFINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--orange)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">NALBUFINA</div>
+            <div class="drug-class">Agonista κ / Antagonista μ · Teto analgésico · Reverter prurido morfina</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-orange">
+            <strong>Agonista-antagonista:</strong> Agonista κ (analgesia espinal, sedação) + antagonista/agonista parcial μ. Teto de depressão respiratória (~0,3 mg/kg — após isso, não aumenta mais). Competição com morfina/fentanil no receptor μ → reverte o prurido intratecal sem reverter completamente a analgesia.
+          </div>
+          <div class="dr dr-o">
+            <div class="dn"><strong>Analgesia</strong><small>IV/IM/SC</small></div>
+            <div class="dc"><span class="dv">10–20 mg IV</span><span class="dd">A cada 3–6h. Máx 160 mg/dia.</span></div>
+          </div>
+          <div class="dr dr-o">
+            <div class="dn"><strong>Reverter prurido</strong><small>Após morfina intratecal</small></div>
+            <div class="dc"><span class="dv">2,5–5 mg IV</span><span class="dd">Antagonismo μ parcial → reverte prurido, preserva analgesia</span></div>
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Atenção à "precipitação de abstinência":</strong> Em dependentes de opioides μ, a nalbufina pode precipitar síndrome de abstinência aguda pelo antagonismo μ. Usar com cautela em pacientes com uso crônico de opioides.
+          </div>
+        </div>
+      </div>
+
+      <!-- NALOXONA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--red)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">NALOXONA</div>
+            <div class="drug-class">Antagonista puro μ/κ/δ · Reversor de depressão respiratória opioide</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-red">
+            <strong>Antagonista competitivo puro</strong> — desloca o opioide do receptor sem atividade intrínseca. Meia-vida 60–90 min (mais curta que a maioria dos opioides!) → risco de re-narcotização após reversão. Monitorar por 2–4h.
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Reversão depressão resp.</strong><small>Titulado</small></div>
+            <div class="dc"><span class="dv">0,04–0,4 mg IV</span><span class="dd">Titular 0,04–0,08 mg a cada 2–3 min. Efeito em 1–2 min.</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Overdose severa</strong><small>Emergência</small></div>
+            <div class="dc"><span class="dv">0,4–2 mg IV/IM/IN</span><span class="dd">Pode repetir a cada 2–3 min. Máx ~10 mg total.</span></div>
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>CUIDADO — não titular rápido demais:</strong> Reversão brusca do opioide → dor aguda intensa + descarga simpática (taquicardia, HAS, edema pulmonar, arritmias, PCR em pacientes cardiopatas). SEMPRE titular em doses pequenas (0,04 mg) exceto em PCR por opioide.
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Infusão contínua:</strong> Em pacientes com intoxicação por opioides de longa duração (metadona, parches), pode ser necessária infusão contínua de naloxona (0,4–0,8 mg/h IV) para manter reversão.
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG CONTEXTO-SENSITIVA -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">02</span> Meia-Vida Contexto-Sensitiva dos Opioides
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>Meia-vida contexto-sensitiva:</strong> Tempo para redução de 50% da concentração plasmática após <em>encerramento</em> de uma infusão de duração variável. Diferente da T½ farmacocinética clássica. Contextual porque depende do tempo de infusão ("contexto").
+          </div>
+          <div style="text-align:center;margin:14px 0">
+            <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;border-radius:10px">
+              <rect width="480" height="280" fill="#0D1B2A" rx="10"/>
+              <text x="240" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#38B6E0" font-weight="700">MEIA-VIDA CONTEXTO-SENSITIVA</text>
+              <text x="240" y="36" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#5A6880">Tempo para queda de 50% da [C] após encerramento da infusão</text>
+
+              <!-- Axes -->
+              <line x1="50" y1="240" x2="440" y2="240" stroke="#3A4A5C" stroke-width="1.5"/>
+              <line x1="50" y1="240" x2="50" y2="55" stroke="#3A4A5C" stroke-width="1.5"/>
+              <text x="245" y="265" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#5A6880">Duração da infusão (horas)</text>
+              <text x="16" y="155" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#5A6880" transform="rotate(-90,16,155)">T½ cs (min)</text>
+
+              <!-- Y ticks -->
+              <text x="44" y="243" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">0</text>
+              <text x="44" y="203" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">50</text>
+              <text x="44" y="163" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">100</text>
+              <text x="44" y="123" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">150</text>
+              <text x="44" y="83" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">200</text>
+
+              <!-- X ticks 1-8h -->
+              <text x="98" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">1</text>
+              <text x="147" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">2</text>
+              <text x="196" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">3</text>
+              <text x="245" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">4</text>
+              <text x="294" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">5</text>
+              <text x="343" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">6</text>
+              <text x="392" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">7</text>
+              <text x="430" y="253" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#5A6880">8</text>
+
+              <!-- Remifentanil: quase plano, ~4 min para qualquer duração -->
+              <polyline points="50,236 100,234 150,233 200,233 250,232 300,232 350,232 400,231 440,231" fill="none" stroke="#38B6E0" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="445" y="230" font-family="JetBrains Mono,monospace" font-size="8" fill="#38B6E0">Remi ≈4min</text>
+
+              <!-- Sufentanil: sobe levemente então plateau baixo -->
+              <polyline points="50,238 100,232 150,220 200,210 250,205 300,200 350,198 400,197 440,196" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/>
+              <text x="445" y="195" font-family="JetBrains Mono,monospace" font-size="8" fill="#A78BFA">Sufen</text>
+
+              <!-- Fentanil: sobe muito -->
+              <polyline points="50,238 100,220 150,200 200,178 250,160 300,140 350,120 400,102 440,90" fill="none" stroke="#E8A020" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="445" y="89" font-family="JetBrains Mono,monospace" font-size="8" fill="#E8A020">Fentanil</text>
+
+              <text x="240" y="272" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#3A4A5C">Remifentanil: único opioide com T½cs verdadeiramente independente do contexto</text>
+            </svg>
+          </div>
+          <div class="alert a-gold">
+            <strong>Conclusão prática:</strong> Para cirurgias &lt;2h → fentanil, sufentanil ou remifentanil adequados. Para &gt;4h → remifentanil é superior (sem acúmulo), mas requer analgesia pós-op planejada ANTES do despertar (dipirona, AINE, bloqueio regional, paracetamol).
+          </div>
+        </div>
+      </div>
+
+      <!-- SÍNDROME DE ABSTINÊNCIA E OPIOID-SPARING -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">03</span> Opioid-Sparing e Síndrome de Abstinência
+        </div>
+        <div class="card-body">
+          <div class="sh sh-red">Estratégia Opioid-Sparing</div>
+          <p style="font-size:12px;margin-bottom:8px;line-height:1.6">Consiste em minimizar o uso de opioides perioperatórios através de analgesia multimodal, reduzindo seus efeitos adversos (PONV, íleo, depressão respiratória, tolerância):</p>
+          <div class="g2">
+            <div class="alert a-teal"><strong>AINE/COX-2</strong><br>Cetoprofeno, cetorolaco, tenoxicam · Inibem ciclooxigenase → reduz prostaglandinas</div>
+            <div class="alert a-green"><strong>Paracetamol IV</strong><br>1g IV · Mecanismo central (canabinóide?) · Seguro em hepatopatas com doses corretas</div>
+            <div class="alert a-orange"><strong>Cetamina suban.</strong><br>0,1–0,3 mg/kg · Bloqueia receptor NMDA → anti-hiperalgesia espinal</div>
+            <div class="alert a-violet"><strong>Alfa-2 agonistas</strong><br>Dexmedetomidina · Clonidina · Reduzem CAM e consumo de opioides</div>
+            <div class="alert a-blue"><strong>Lidocaína IV</strong><br>Infusão sistêmica · Anti-inflamatória · Íleo paralítico pós-op</div>
+            <div class="alert a-gold"><strong>Magnésio</strong><br>Anti-NMDA · Opioid-sparing sem efeitos dissociativos</div>
+          </div>
+          <div class="sh sh-red" style="margin-top:12px">Síndrome de Abstinência Aguda</div>
+          <div class="alert a-orange">
+            Ocorre em pacientes dependentes de opioides quando o medicamento é suspenso abruptamente ou um antagonista é administrado. Sintomas: agitação, ansiedade, taquicardia, diaforese, piloereção, diarreia, dor muscular, midríase, insônia. Tratamento: desmame gradual, clonidina (0,1–0,3 mg 8/8h — reduz componente simpático), metadona ou buprenorfina para substituição.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tab-panel opioides -->
+
+  <!-- TAB 3 — BLOQUEADORES NEUROMUSCULARES -->
+  <div class="tab-panel" id="farm-bnm">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">01</span> Fisiologia da Placa Neuromuscular
+        </div>
+        <div class="card-body">
+          <img src="img-placa-neuromuscular.jpg" style="width:100%;max-width:560px;display:block;margin:12px auto;border-radius:10px;border:1px solid rgba(255,255,255,.1)" alt="Placa Neuromuscular — Junção Neuromuscular">
+
+          
+
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-b">1</span><div>Potencial de ação chega ao terminal nervoso</div></div>
+            <div class="proto-step"><span class="sn sn-b">2</span><div>Influxo de Ca²⁺ → exocitose de vesículas de ACh na fenda sináptica</div></div>
+            <div class="proto-step"><span class="sn sn-b">3</span><div>ACh difunde para membrana pós-sináptica e liga-se a dois receptores nicotínicos (nAChR)</div></div>
+            <div class="proto-step"><span class="sn sn-b">4</span><div>Abertura do canal iônico → influxo de Na⁺ e K⁺ → potencial de placa motora</div></div>
+            <div class="proto-step"><span class="sn sn-b">5</span><div>Potencial de ação muscular → liberação de Ca²⁺ do retículo sarcoplasmático → contração</div></div>
+            <div class="proto-step"><span class="sn sn-b">6</span><div>AChE (acetilcolinesterase) hidrolisa a ACh → encerrando o estímulo</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUCCINILCOLINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--red)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">SUCCINILCOLINA (Suxametônio)</div>
+            <div class="drug-class">Despolarizante · Fasiculações → bloqueio sustentado · RSI padrão-ouro</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-red">
+            <strong>Único despolarizante em uso clínico.</strong> Composta por duas moléculas de ACh unidas. Liga-se ao nAChR e o ativa → fasciculações → depolarização sustentada (não permite repolarização porque a AChE não a hidrolisa rapidamente) → paralisia flácida (bloqueio fase I). Com doses repetidas → bloqueio fase II (duplo bloqueio, muda caráter para não-despolarizante).
+          </div>
+          <div class="sh sh-red">Doses</div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>RSI (adulto)</strong><small>Intubação de sequência rápida</small></div>
+            <div class="dc"><span class="dv">1,0–1,5 mg/kg IV</span><span class="dd">Início: 45–60s · Duração: 8–12 min · Intubação em 60s</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Via intramuscular</strong><small>Sem acesso venoso</small></div>
+            <div class="dc"><span class="dv">3–4 mg/kg IM</span><span class="dd">Início: 3–4 min (deltóide ou lingual) · Emergência</span></div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Criança &lt;2 anos</strong><small>Pediatria</small></div>
+            <div class="dc"><span class="dv">2 mg/kg IV</span><span class="dd">Maior dose pela maior Vd relativa. Máx 150 mg total.</span></div>
+          </div>
+
+          <div class="sh sh-red" style="margin-top:10px">Contraindicações e Riscos Graves</div>
+          <div class="alert a-red">
+            <strong>Hipercalemia letal:</strong> A succinilcolina causa liberação de K⁺ intracelular pelo músculo (~0,5–1 mEq/L normalmente). Em pacientes com proliferação anormal de receptores nicotínicos extra-junctionais (desnervação, imobilização &gt;5 dias, queimados, rabdomiólise, miopatias, lesão medular &gt;72h), a liberação de K⁺ pode ser maciça (&gt;5 mEq/L) → PCR por FV/assistolia. Banir nessas situações.
+          </div>
+          <div class="alert a-red">
+            <strong>Hipertermia Maligna:</strong> A succinilcolina é gatilho de HM (ver Aba Hipnóticos). Se história familiar de HM ou miopatias, usar rocurônio + sugammadex para RSI.
+          </div>
+          <div class="alert a-orange">
+            <strong>Déficit de pseudocolinesterase:</strong> A succinilcolina é metabolizada pela butirilcolinesterase (pseudocolinesterase) plasmática. Déficit genético (homozigoto ~1:3.500) → paralisia prolongada por horas (bloqueio fase II). Número dibucaínico mede atividade.
+          </div>
+          <div class="alert a-orange">
+            <strong>Outras CI relativas:</strong> Olho aberto (↑ PIO), HIC grave (↑ PIC transitória), cirrose/hepatite grave, hiperK preexistente (&gt;5,5), gestação (redução de pseudocolinesterase — duração levemente prolongada).
+          </div>
+        </div>
+      </div>
+
+      <!-- ROCURÔNIO -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--violet)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">ROCURÔNIO</div>
+            <div class="drug-class">Não-despolarizante · Aminoesteroide · RSI quando SC contraindicada</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-violet">
+            Antagonista competitivo do nAChR. Menor duração de ação que vecurônio e pancurônio entre os aminoesteroides. Excreção principalmente biliar/hepática (15–30% renal). Único BNM não-despolarizante com início suficientemente rápido para RSI quando associado ao sugammadex.
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Intubação eletiva</strong><small>Relaxamento cirúrgico</small></div>
+            <div class="dc"><span class="dv">0,6 mg/kg IV</span><span class="dd">Condições de intubação em 60–90s · Duração: 30–40 min</span></div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>RSI (dose alta)</strong><small>Quando SC contraindicada</small></div>
+            <div class="dc"><span class="dv">1,2 mg/kg IV</span><span class="dd">Início: 45–60s (semelhante à SC!) · Duração: 60–70 min</span></div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Manutenção</strong><small>Doses incrementais</small></div>
+            <div class="dc"><span class="dv">0,1–0,2 mg/kg IV</span><span class="dd">Quando TOF conta ≥2 twitch. Guiar por neuroestimulador.</span></div>
+          </div>
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>RSI com rocurônio 1,2 mg/kg + sugammadex 16 mg/kg:</strong> A combinação permite intubação tão rápida quanto a SC, com a segurança de reversão imediata em &lt;3 min. Protocolo "RSI reversível" ideal para pacientes com CI à succinilcolina.
+          </div>
+        </div>
+      </div>
+
+      <!-- CISATRACÚRIO -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--teal)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">CISATRACÚRIO</div>
+            <div class="drug-class">Não-despolarizante · Eliminação de Hofmann · Ideal em hepatopatas e nefropatas</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-teal">
+            <strong>Eliminação de Hofmann:</strong> Degradação espontânea por pH e temperatura fisiológicos (sem necessidade de enzimas hepáticas ou renais). Metabolito laudanosina (potencialmente convulsivante em doses muito altas, mas irrelevante clinicamente). É o BNM de escolha em <strong>insuficiência hepática e renal graves, UTI, pacientes críticos.</strong>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Intubação</strong></div>
+            <div class="dc"><span class="dv">0,15–0,2 mg/kg IV</span><span class="dd">Início: 3–5 min · Duração: 45–60 min (menor que vecurônio)</span></div>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Manutenção/Infusão</strong><small>UTI ou cirurgia longa</small></div>
+            <div class="dc"><span class="dv">1–3 mcg/kg/min</span><span class="dd">Infusão contínua guiada por TOF monitoring</span></div>
+          </div>
+          <div class="alert a-blue" style="margin-top:8px">
+            <strong>Liberação de histamina:</strong> Mínima (muito menos que atracúrio) — preferência sobre atracúrio em pacientes atópicos, asmáticos ou com instabilidade hemodinâmica.
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA COMPARATIVA BNM -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">02</span> Tabela Comparativa — BNM
+        </div>
+        <div class="card-body">
+          <div style="overflow-x:auto">
+            <div class="tbl-wrap xwide"><table class="tbl">
+              <thead>
+                <tr><th>BNM</th><th>Tipo</th><th>Dose intub.</th><th>Início</th><th>Duração</th><th>Metabolismo</th><th>Observação</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Succinilcolina</strong></td>
+                  <td><span class="tag tr">Despol.</span></td>
+                  <td>1–1,5 mg/kg</td>
+                  <td>45–60s</td>
+                  <td>8–12min</td>
+                  <td>Pseudocolinesterase</td>
+                  <td>RSI; CI hipercalemia, HM</td>
+                </tr>
+                <tr>
+                  <td><strong>Rocurônio</strong></td>
+                  <td><span class="tag tv">N-Desp.</span></td>
+                  <td>0,6 / 1,2 mg/kg</td>
+                  <td>60–90s / 45s</td>
+                  <td>30–70min</td>
+                  <td>Biliar/renal</td>
+                  <td>RSI alternativa; reverter com sugammadex</td>
+                </tr>
+                <tr>
+                  <td><strong>Vecurônio</strong></td>
+                  <td><span class="tag tv">N-Desp.</span></td>
+                  <td>0,1 mg/kg</td>
+                  <td>3–5min</td>
+                  <td>25–40min</td>
+                  <td>Biliar (80%)</td>
+                  <td>Similar rocurônio; acúmulo hepatopatia</td>
+                </tr>
+                <tr>
+                  <td><strong>Cisatracúrio</strong></td>
+                  <td><span class="tag tv">N-Desp.</span></td>
+                  <td>0,15–0,2 mg/kg</td>
+                  <td>3–5min</td>
+                  <td>45–60min</td>
+                  <td>Hofmann + esterases</td>
+                  <td>Ideal hepatopatia/nefropatia; UTI</td>
+                </tr>
+                <tr>
+                  <td><strong>Pancurônio</strong></td>
+                  <td><span class="tag tv">N-Desp.</span></td>
+                  <td>0,08–0,1 mg/kg</td>
+                  <td>3–5min</td>
+                  <td>60–100min</td>
+                  <td>Renal (60%)</td>
+                  <td>Taquicardia (vagolítico); histórico</td>
+                </tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FATORES QUE PROLONGAM BLOQUEIO -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">03</span> Fatores que Prolongam o Bloqueio Neuromuscular
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange">
+            <strong>Bloqueio residual pós-operatório</strong> é definido como TOF ratio &lt;0,9 no acordar. Ocorre em até 40% dos pacientes sem monitoramento adequado e está associado a atelectasias, obstrução de vias aéreas, pneumonia aspirativa e hipóxia.
+          </div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Fator</th><th>Mecanismo</th><th>Conduta</th></tr></thead>
+            <tbody>
+              <tr><td>Acidose (↓ pH)</td><td>Aumenta ligação do BNM ao receptor</td><td>Corrigir pH antes de reverter</td></tr>
+              <tr><td>Hipotermia (&lt;35°C)</td><td>Reduz metabolismo/excreção do BNM</td><td>Aquecimento ativo; aguardar normotermia</td></tr>
+              <tr><td>Hipocalemia (&lt;3,5 mEq/L)</td><td>Hiperpolarização muscular potencializa bloqueio</td><td>Corrigir antes; reposição de K⁺</td></tr>
+              <tr><td>Aminoglicosídeos</td><td>Inibem liberação pré-sináptica de ACh + ação pós-sináptica</td><td>Monitorar TOF rigoroso</td></tr>
+              <tr><td>Magnésio (hiperMg)</td><td>Compete com Ca²⁺ na liberação de ACh</td><td>Cuidado em pré-eclâmpsia/magnésio tocolítico</td></tr>
+              <tr><td>Insuficiência renal/hepática</td><td>Reduz eliminação (variável por BNM)</td><td>Preferir cisatracúrio; monitoramento contínuo</td></tr>
+              <tr><td>Fluoretos voláteis</td><td>Reduzem sensibilidade do receptor; potencializam BNM</td><td>Reduzir dose de BNM durante anestesia volátil</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tab-panel bnm -->
+
+  <!-- TAB 4 — REVERSORES -->
+  <div class="tab-panel" id="farm-reversores">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">01</span> Por Que Reverter o Bloqueio Neuromuscular?
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>Bloqueio residual</strong> (TOF ratio &lt;0,9) no acordar → 5× maior risco de atelectasia, 3× maior risco de pneumonia, hipoxemia, obstrução de VAS, regurgitação/aspiração, dessaturação pós-extubação. É uma causa subestimada de complicações pós-anestésicas. <strong>Meta: TOF ratio ≥0,9 antes da extubação.</strong>
+          </div>
+          <div class="g2">
+            <div class="alert a-blue"><strong>MONITORIZACÃO (TOF)</strong><br>Train-of-Four: 4 estímulos supramáximos a 2 Hz. TOF ratio = T4/T1 &lt;0,9 = bloqueio residual clinicamente relevante</div>
+            <div class="alert a-teal"><strong>ACELEROMIOGRAFIA</strong><br>Sensor no polegar (addutor do polegar). Mais preciso que avaliação clínica. Disponível como TOF-Watch, NMT-module.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEOSTIGMINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--green)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">NEOSTIGMINA</div>
+            <div class="drug-class">Inibidor de AChE · Reversão clássica · Sempre + antimuscarínico</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-green">
+            <strong>Mecanismo:</strong> Inibe a acetilcolinesterase (AChE) → acúmulo de ACh na fenda sináptica → competição com o BNM no nAChR → reversão do bloqueio. A ACh acumulada também estimula receptores muscarínicos (bradicardia, broncoespasmo, hipersecreção, peristaltismo excessivo) → necessidade de antimuscarínico.
+          </div>
+          <div class="dr dr-g">
+            <div class="dn"><strong>Dose de reversão</strong><small>IV lento</small></div>
+            <div class="dc"><span class="dv">0,04–0,07 mg/kg IV</span><span class="dd">Máximo 5 mg total. Administrar lentamente (30–60s)</span></div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Atropina (associar)</strong><small>Antimuscarínico</small></div>
+            <div class="dc"><span class="dv">0,01–0,02 mg/kg IV</span><span class="dd">Ou glicopirrolato 0,2 mg/mg neostigmina. Antes ou junto!</span></div>
+          </div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>Janela de uso — NÃO reverter bloqueio profundo!</strong> A neostigmina é eficaz apenas quando há TOF count ≥2 twitches (bloqueio moderado). Com bloqueio profundo (TOF count 0 ou 1), a neostigmina pode ser insuficiente e ainda causar efeitos colaterais muscarínicos sem benefício. O "ceiling" da neostigmina é ~70% de reversão do bloqueio.
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Efeitos muscarínicos:</strong> Bradicardia · Sialorréia · Broncoespasmo · Náuseas/vômitos · Miose · Diminuição do tônus vesical (retenção urinária) · Hipermotilidade intestinal (pode dificultar anastomoses, debate na literatura).
+          </div>
+        </div>
+      </div>
+
+      <!-- SUGAMMADEX -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--violet)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">SUGAMMADEX</div>
+            <div class="drug-class">γ-Ciclodextrina modificada · Encapsula rocurônio/vecurônio · Sem efeitos muscarínicos</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-violet">
+            <strong>Mecanismo único:</strong> Molécula em forma de tonel (γ-ciclodextrina modificada com grupos carboxilas) que <strong>encapsula seletivamente</strong> o rocurônio (e vecurônio) formando um complexo 1:1 muito estável (K<sub>d</sub> 10⁻²⁵ mol/L para rocurônio). O complexo é inerte e excretado por via renal. Sem estimulação colinérgica → sem efeitos muscarínicos.
+          </div>
+          <div class="sh sh-violet">Doses por Profundidade de Bloqueio (TOF Monitoring)</div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Bloqueio moderado</strong><small>TOF count ≥2 twitches</small></div>
+            <div class="dc"><span class="dv">2 mg/kg IV</span><span class="dd">Reversão em ~2 min. Mais comum no perioperatório.</span></div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Bloqueio profundo</strong><small>TOF count 1–2 + PTC 1–2</small></div>
+            <div class="dc"><span class="dv">4 mg/kg IV</span><span class="dd">Reversão em ~3 min. Após cirurgia laparoscópica com relaxamento profundo.</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Reversão imediata</strong><small>Emergência — "can't intubate"</small></div>
+            <div class="dc"><span class="dv">16 mg/kg IV</span><span class="dd">Reverter rocurônio 1,2 mg/kg em &lt;3 min! Protocolo CICO.</span></div>
+          </div>
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>Vantagens sobre neostigmina:</strong><br>
+            ① Reverte qualquer profundidade de bloqueio (inclusive profundo)<br>
+            ② Sem efeitos muscarínicos — não precisa de atropina<br>
+            ③ Mais rápido e mais completo<br>
+            ④ Pode reverter bloqueio profundo intencional (relaxamento máximo para laparoscopia)<br>
+            ⑤ Protocolo CICO: segurança adicional com rocurônio na via aérea difícil
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Reintubação após sugammadex:</strong> Se necessitar de novo BNM após reversão com sugammadex, aguardar ≥5 min e usar succinilcolina ou cisatracúrio (que não é encapsulado pelo sugammadex). Rocurônio repetido pode ter ação reduzida nas primeiras horas.
+          </div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>CI relativa:</strong> Reações de hipersensibilidade (raras, &lt;0,3%) · Insuficiência renal grave (acúmulo do complexo, mas sem toxicidade reportada) · NÃO reverte succinilcolina, cisatracúrio, atracúrio, vecurônio (reverte vecurônio mas menos eficientemente que rocurônio).
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA DECISIONAL -->
+      <div class="card">
+        <div class="card-header ch-green">
+          <span class="card-num">02</span> Tabela Decisional — Quando Usar Cada Reversor
+        </div>
+        <div class="card-body">
+          <div style="overflow-x:auto">
+            <div class="tbl-wrap wide"><table class="tbl">
+              <thead>
+                <tr><th>Situação (TOF)</th><th>BNM usado</th><th>Reversor Preferido</th><th>Dose</th><th>Alternativa</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TOF ratio ≥0,9 (bloq. mínimo)</td>
+                  <td>Qualquer</td>
+                  <td><span class="tag tg">Aguardar</span></td>
+                  <td>—</td>
+                  <td>Extubação segura sem reversor</td>
+                </tr>
+                <tr>
+                  <td>TOF count 3–4 (bloq. leve)</td>
+                  <td>Rocurônio/Vecurônio</td>
+                  <td><span class="tag tv">Sugammadex</span></td>
+                  <td>2 mg/kg</td>
+                  <td>Neostigmina 0,04 mg/kg + atropina</td>
+                </tr>
+                <tr>
+                  <td>TOF count 1–2 (bloq. moderado)</td>
+                  <td>Rocurônio/Vecurônio</td>
+                  <td><span class="tag tv">Sugammadex</span></td>
+                  <td>2–4 mg/kg</td>
+                  <td>Neostigmina APENAS se TOF≥2 (risco!)</td>
+                </tr>
+                <tr>
+                  <td>TOF count 0 + PTC 1–5 (bloq. profundo)</td>
+                  <td>Rocurônio</td>
+                  <td><span class="tag tv">Sugammadex</span></td>
+                  <td>4 mg/kg</td>
+                  <td>Neostigmina: NÃO funciona</td>
+                </tr>
+                <tr>
+                  <td>Imediatamente pós-RSI (emergência)</td>
+                  <td>Rocurônio 1,2 mg/kg</td>
+                  <td><span class="tag tr">Sugammadex</span></td>
+                  <td>16 mg/kg</td>
+                  <td>Sem alternativa — protocolo CICO</td>
+                </tr>
+                <tr>
+                  <td>Cisatracúrio/Atracúrio</td>
+                  <td>Cisatracúrio</td>
+                  <td><span class="tag tg">Neostigmina</span></td>
+                  <td>0,04–0,07 mg/kg</td>
+                  <td>Sugammadex: ineficaz para benzilisoquinolinas</td>
+                </tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="alert a-gold" style="margin-top:10px">
+            <strong>PTC (Post-Tetanic Count):</strong> Quando TOF count = 0, aplica-se estímulo tetânico (50 Hz por 5s) → conta-se os twitches pós-tetânicos. PTC 1–5 = bloqueio profundo reversível com sugammadex 4 mg/kg. PTC = 0 = bloqueio máximo (sugammadex 4–16 mg/kg).
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tab-panel reversores -->
+
+  <!-- TAB 5 — ANESTÉSICOS LOCAIS SISTÊMICOS -->
+  <div class="tab-panel" id="farm-locals">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">01</span> Mecanismo de Ação — Canal de Na⁺ Voltagem-Dependente
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange">
+            Os anestésicos locais (AL) atuam bloqueando os <strong>canais de sódio voltagem-dependentes (Nav)</strong> na membrana neuronal. A molécula ionizada (BH⁺) penetra no canal pelo lado interno quando o canal está aberto ou em estado inativo, ligando-se ao sítio S6 do segmento IV → bloqueia fisicamente o poro → impossibilita influxo de Na⁺ → sem potencial de ação → bloqueio reversível.
+          </div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn sn-o">1</span><div><strong>pH extracelular</strong> determina equilíbrio: forma ionizada (BH⁺, ativa no canal) vs forma base livre (B, atravessa membrana). pKa elevado → mais ionizado em pH fisiológico → início mais lento</div></div>
+            <div class="proto-step"><span class="sn sn-o">2</span><div><strong>Acidose local</strong> (inflamação, infecção) → mais forma ionizada → menor penetração da membrana → AL menos efetivo em tecidos inflamados</div></div>
+            <div class="proto-step"><span class="sn sn-o">3</span><div><strong>Fibras bloqueadas em ordem</strong>: menor diâmetro e menor mielinização → bloqueadas primeiro. B (simpático) → C (dor/temperatura) → Aδ → Aβ → Aα (motor)</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">02</span> Classificação e Propriedades Farmacocinéticas
+        </div>
+        <div class="card-body">
+          <div class="g2">
+            <div class="alert a-orange">
+              <strong>AMINO-ÉSTERES</strong><br>
+              Cocaína · Procaína · Tetracaína · Benzocaína<br>
+              Metabolismo: <em>pseudocolinesterase plasmática</em><br>
+              Metabólito PABA → alergias mais comuns<br>
+              Menos usados atualmente (exceto tetracaína intratecal)
+            </div>
+            <div class="alert a-blue">
+              <strong>AMINO-AMIDAS</strong><br>
+              Lidocaína · Bupivacaína · Ropivacaína · Levobupivacaína · Mepivacaína<br>
+              Metabolismo: <em>CYP450 hepático</em><br>
+              Alergias verdadeiras raras (PABA-free)<br>
+              <strong>Maioria dos AL modernos</strong>
+            </div>
+          </div>
+
+          <div style="overflow-x:auto;margin-top:10px">
+            <div class="tbl-wrap xwide"><table class="tbl">
+              <thead>
+                <tr><th>AL</th><th>pKa</th><th>Lipossolub.</th><th>Lig. Proteica</th><th>Início</th><th>Duração</th><th>Potência Relativa</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Lidocaína</strong></td><td>7,9</td><td>Moderada</td><td>65%</td><td>Rápido (5–10 min)</td><td>1–2h</td><td>1×</td></tr>
+                <tr><td><strong>Bupivacaína</strong></td><td>8,1</td><td>Alta</td><td>95%</td><td>Lento (15–30 min)</td><td>4–8h</td><td>4×</td></tr>
+                <tr><td><strong>Ropivacaína</strong></td><td>8,1</td><td>Alta</td><td>94%</td><td>Lento (15–30 min)</td><td>4–6h</td><td>3×</td></tr>
+                <tr><td><strong>Levobupivacaína</strong></td><td>8,1</td><td>Alta</td><td>97%</td><td>Lento (15–30 min)</td><td>4–8h</td><td>4×</td></tr>
+                <tr><td><strong>Mepivacaína</strong></td><td>7,6</td><td>Moderada</td><td>77%</td><td>Rápido (5–15 min)</td><td>2–4h</td><td>1,5×</td></tr>
+                <tr><td><strong>Tetracaína</strong></td><td>8,5</td><td>Alta</td><td>80%</td><td>Lento (15–30 min)</td><td>3–5h (raqui)</td><td>8×</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOSES MÁXIMAS -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">03</span> Doses Máximas Sistêmicas
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>As doses máximas são para infiltração/bloqueio</strong> — não para uso intratecal ou epidural (onde doses muito menores são usadas). Estas doses evitam atingir concentrações plasmáticas cardiotóxicas/neurotóxicas.
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Lidocaína</strong><small>Sem vasoconstritor</small></div>
+            <div class="dc"><span class="dv">3–4 mg/kg</span><span class="dd">Máx absoluto ~300 mg total</span></div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn"><strong>Lidocaína + VC</strong><small>Com adrenalina 1:200.000</small></div>
+            <div class="dc"><span class="dv">7 mg/kg</span><span class="dd">Máx ~500 mg total. VC reduz absorção sistêmica.</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Bupivacaína</strong><small>Sem ou com VC</small></div>
+            <div class="dc"><span class="dv">2 mg/kg</span><span class="dd">Máx ~150 mg. NUNCA usar 0,75% em obstetrícia IV</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Ropivacaína</strong><small>Sem ou com VC</small></div>
+            <div class="dc"><span class="dv">3 mg/kg</span><span class="dd">Máx 200–250 mg. Menos cardiotóxica que bupivacaína.</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Levobupivacaína</strong></div>
+            <div class="dc"><span class="dv">2–3 mg/kg</span><span class="dd">Máx ~150 mg. Enantiômero S(-) — menos cardiotóxico.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VASOCONSTRITOR -->
+      <div class="card">
+        <div class="card-header ch-orange">
+          <span class="card-num">04</span> Vasoconstritor — Adrenalina e Indicações
+        </div>
+        <div class="card-body">
+          <div class="alert a-orange">
+            <strong>Adrenalina 1:200.000 (5 mcg/mL)</strong> é o vasoconstritor padrão adicionado aos AL. Mecanismo: ação α₁ → vasoconstricção local → reduz absorção sistêmica do AL → prolonga duração e aumenta dose máxima segura + efeito hemodinâmico (dose intravascular inadvertida fica evidente pela taquicardia → dose-teste de segurança).
+          </div>
+          <div class="g2">
+            <div class="alert a-green">
+              <strong>Benefícios do VC</strong><br>
+              Prolonga duração 30–50%<br>
+              Reduz absorção sistêmica<br>
+              Aumenta dose máxima<br>
+              Dose-teste IV (FC ↑ 20%)<br>
+              Reduz sangramento local
+            </div>
+            <div class="alert a-red">
+              <strong>CI do vasoconstritor</strong><br>
+              Extremidades terminais: <br>
+              dedo, pênis, orelha, nariz<br>
+              (risco de isquemia/gangrena)<br>
+              HAS grave descontrolada<br>
+              Uso com IMAO (crise HAS)<br>
+              Arritmias graves
+            </div>
+          </div>
+          <div class="alert a-gold">
+            <strong>Nota obstetrícia:</strong> Bupivacaína 0,5% com VC é usada em peridural para cesárea. Nunca injetar IV — pode causar colapso cardiovascular resistente. Concentrações &lt;0,5% têm menor toxicidade cardíaca.
+          </div>
+        </div>
+      </div>
+
+      <!-- LAST -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">05</span> LAST — Toxicidade Sistêmica de Anestésico Local
+        </div>
+        <div class="card-body">
+          <div class="alert a-red">
+            <strong>LAST (Local Anesthetic Systemic Toxicity)</strong> ocorre quando a concentração plasmática de AL atinge níveis tóxicos — por injeção intravascular inadvertida, superdose, absorção rápida de grande área vascularizada ou em pacientes com comprometimento hepático/cardíaco.
+          </div>
+
+          <div class="sh sh-red">Reconhecimento — Sequência Clínica</div>
+          <div class="proto-steps">
+            <div class="proto-step"><span class="sn">1</span><div><strong>SNC (menor limiar):</strong> Gosto metálico, dormência perioral, zumbido, diplopia, ansiedade, agitação, tonteira</div></div>
+            <div class="proto-step"><span class="sn">2</span><div><strong>SNC — Excitação:</strong> Nistagmo, tremores, contrações musculares, convulsão tônico-clônica</div></div>
+            <div class="proto-step"><span class="sn">3</span><div><strong>SNC — Depressão:</strong> Coma, apneia, inconsciência</div></div>
+            <div class="proto-step"><span class="sn">4</span><div><strong>Cardiovascular (maior concentração):</strong> Bloqueio AV, taquicardia/fibrilação ventricular, colapso circulatório</div></div>
+          </div>
+          <div class="alert a-yellow" style="margin-top:8px">
+            <strong>Bupivacaína:</strong> Alta afinidade pelos canais Na⁺ cardíacos → toxicidade CV pode ocorrer sem sinais prévios de SNC! PCR em FV/FVP resistente é a apresentação mais grave. "Double Toxicity" da bupivacaína (SNC + CV simultâneos).
+          </div>
+
+          <div class="sh sh-red" style="margin-top:10px">Tratamento com Intralipid 20%</div>
+          <div class="alert a-green">
+            <strong>Emulsão Lipídica 20% (Intralipid)</strong> — tratamento específico e definido para LAST grave. Mecanismo proposto: "lipid sink" (captura o AL lipossolúvel da circulação e tecido cardíaco), + efeito cardiotônico direto (melhora metabolismo miocárdico).
+          </div>
+          <div class="dr dr-g">
+            <div class="dn"><strong>Bolus inicial</strong><small>Imediato — IV</small></div>
+            <div class="dc"><span class="dv">1,5 mL/kg IV</span><span class="dd">Rápido em 1 min. Pode repetir 1–2× a cada 3–5 min.</span></div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn"><strong>Infusão manutenção</strong></div>
+            <div class="dc"><span class="dv">0,25 mL/kg/min</span><span class="dd">Contínua por 30–60 min. Máx total ~12 mL/kg na primeira hora.</span></div>
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Algoritmo de ação no LAST:</strong><br>
+            1. Pedir ajuda, avisar equipe<br>
+            2. ABC — garantir via aérea, O₂ 100%<br>
+            3. Convulsão: midazolam ou propofol (dose baixa, cuidado com depressão CV)<br>
+            4. PCR → RCP conforme protocolo (compressões, adrenalina em DOSES BAIXAS 1 mcg/kg — não usar vasopressina, vasopressores em altas doses, bloqueadores de Ca²⁺)<br>
+            5. Intralipid 20% conforme doses acima<br>
+            6. ECMO se disponível em colapso refratário<br>
+            7. Monitorar por &gt;4–6h (risco de recidiva)
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tab-panel locals -->
+
+  <!-- TAB 6 — VASOATIVOS + EMERGÊNCIAS FARMACOLÓGICAS -->
+  <div class="tab-panel" id="farm-vasoativos">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">01</span> Conceitos: Receptores Adrenérgicos
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Receptor</th><th>Localização</th><th>Efeito ao Ativar</th><th>Droga Exemplo</th></tr></thead>
+            <tbody>
+              <tr><td><strong>α₁</strong></td><td>Vasos periféricos</td><td>Vasoconstricção → ↑ RVS → ↑ PA</td><td>Fenilefrina, noradrenalina</td></tr>
+              <tr><td><strong>α₂</strong></td><td>Pré-sináptico (SNC/SNP)</td><td>↓ liberação NE (feedback negativo), sedação</td><td>Clonidina, dexmedetomidina</td></tr>
+              <tr><td><strong>β₁</strong></td><td>Coração</td><td>↑ FC (cronotrópico) + ↑ contratilidade (inotrópico)</td><td>Adrenalina, dobutamina, dopamina</td></tr>
+              <tr><td><strong>β₂</strong></td><td>Músculo liso brônquico e vascular</td><td>Broncodilatação, vasodilatação periférica</td><td>Salbutamol, adrenalina (baixa dose)</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- EFEDRINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--blue)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">EFEDRINA</div>
+            <div class="drug-class">α+β (indireto) · Mecanismo simpatomimético indireto · FC baixa preferível</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-blue">
+            <strong>Mecanismo indireto:</strong> Estimula liberação de noradrenalina endógena dos terminais nervosos simpáticos → ação α₁+β₁+β₂. Por ser dependente das reservas de NE endógena, sofre <strong>taquifilaxia</strong> com doses repetidas (esgotamento de NE). Ação duradoura (15–30 min).
+          </div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Hipotensão anestésica</strong></div>
+            <div class="dc"><span class="dv">5–10 mg IV</span><span class="dd">Bolus. Repetir a cada 3–5 min conforme resposta. Ação em 1–2 min.</span></div>
+          </div>
+          <div class="alert a-blue" style="margin-top:8px">
+            <strong>Preferir quando:</strong> Bradicardia associada à hipotensão (ação β₁ corrige FC) · Hipotensão em pacientes com FC normal-baixa · Raquianestesia sem gestante (em gestantes, fenilefrina é preferida).
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Taquifilaxia:</strong> Após 3–4 doses repetidas, a resposta diminui (estoques de NE esgotados). Nessa situação, mudar para fenilefrina (ação direta α₁) ou noradrenalina.
+          </div>
+        </div>
+      </div>
+
+      <!-- FENILEFRINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--teal)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">FENILEFRINA</div>
+            <div class="drug-class">α₁ puro (agonista direto) · Bradicardia reflexa · Cesárea / taquicardia</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-teal">
+            <strong>Agonista α₁ puro direto</strong> → vasoconstricção → ↑ PA → bradicardia reflexa (barorreflexo). Sem efeito β₁ → não aumenta FC.
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Bolus hipotensão</strong></div>
+            <div class="dc"><span class="dv">50–100 mcg IV</span><span class="dd">Equivalente ~0,5–1 mcg/kg. Início 30–60s. Duração 10–15min.</span></div>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Infusão contínua</strong></div>
+            <div class="dc"><span class="dv">25–100 mcg/min</span><span class="dd">Preferida na cesárea sob raqui para manutenção da PA.</span></div>
+          </div>
+          <div class="alert a-teal" style="margin-top:8px">
+            <strong>Cesárea sob raquianestesia:</strong> Fenilefrina é o vasopressor de primeira escolha segundo evidências atuais (SOAP 2017, Kinsella 2018). Mantém melhor o pH e pO₂ fetal em relação à efedrina (que causa maior acidose fetal por β₂ → metabolismo fetal aumentado). Infusão profilática reduz incidência e gravidade da hipotensão.
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Cuidado com bradicardia reflexa:</strong> Se FC já baixa (&lt;60) ou bloqueio alto com bradicardia → preferir efedrina. Fenilefrina pode agravar bradicardia com comprometimento cardíaco.
+          </div>
+        </div>
+      </div>
+
+      <!-- NORADRENALINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--navy)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">NORADRENALINA (Norepinefrina)</div>
+            <div class="drug-class">α₁+α₂+β₁ fraco · Choque vasoplégico · Primeira linha em choque séptico</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-blue">
+            Potente vasoconstritor por α₁+α₂. Mínimo β₂ (sem broncodilatação). β₁ fraco (leve aumento de contratilidade). Resposta à noradrenalina: ↑↑ RVS → ↑ PA → bradicardia reflexa (barorreflexo). Metabolizado pela MAO e COMT.
+          </div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Choque vasoplégico</strong><small>Infusão IV central</small></div>
+            <div class="dc"><span class="dv">0,01–0,5 mcg/kg/min</span><span class="dd">Titular pela PAM alvo (≥65 mmHg no séptico)</span></div>
+          </div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>Via acesso central preferida:</strong> Noradrenalina em veia periférica causa necrose tissular por extravasamento. Em emergências, pode ser iniciada em central de grande calibre por curto período, mas transferir para CVC o mais rápido possível.
+          </div>
+        </div>
+      </div>
+
+      <!-- ADRENALINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--red)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">ADRENALINA (Epinefrina)</div>
+            <div class="drug-class">α+β₁+β₂ · PCR · Anafilaxia · Broncoespasmo intraop · Dose-dependente</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-red">
+            Catecolamina endógena com ação em todos os receptores adrenérgicos. A predominância α ou β varia com a dose: <strong>Dose baixa (&lt;0,1 mcg/kg/min):</strong> β₂ predomina → vasodilatação e broncodilatação. <strong>Dose alta (&gt;0,3 mcg/kg/min):</strong> α₁ predomina → vasoconstricção intensa.
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>PCR</strong><small>FV/TVsp/Assistolia/AESP</small></div>
+            <div class="dc"><span class="dv">1 mg IV/IO</span><span class="dd">A cada 3–5 min durante RCP. Dilução: 1:10.000 (0,1 mg/mL)</span></div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn"><strong>Anafilaxia</strong><small>IM de escolha</small></div>
+            <div class="dc"><span class="dv">0,3–0,5 mg IM</span><span class="dd">Face anterolateral da coxa. Repetir a 5–15 min se necessário. Auto-injetor 0,3 mg.</span></div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Broncoespasmo intraop</strong><small>IV titulado</small></div>
+            <div class="dc"><span class="dv">1–4 mcg IV bolus</span><span class="dd">Doses ultra-baixas. Efeito β₂ broncodilatador.</span></div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Hipotensão refratária</strong><small>Infusão</small></div>
+            <div class="dc"><span class="dv">0,01–0,5 mcg/kg/min</span><span class="dd">Titular pelo alvo hemodinâmico. Monitoramento rigoroso.</span></div>
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Anafilaxia perioperatória:</strong> Diagnóstico diferencial urgente com hipotensão anestésica comum. Marcadores: urticária/eritema + broncoespasmo + hipotensão + angioedema. Agentes causadores comuns: BNM (rocurônio, succinilcolina), látex, antibióticos, coloides. Dosar triptase sérica 0–2h, 2–4h e 24h após o evento.
+          </div>
+        </div>
+      </div>
+
+      <!-- VASOPRESSINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--violet)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">VASOPRESSINA (AVP)</div>
+            <div class="drug-class">ADH · Receptor V1/V2 · Choque refratário · Complementa noradrenalina</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-violet">
+            Hormônio antidiurético (ADH) com ação vasoconstritora via receptor V1 (musculatura lisa vascular) independente de receptores adrenérgicos. Eficaz em choque por vasopressores adrenérgicos esgotados (depleção de receptores). Complementa a noradrenalina — permite reduzir as doses de noradrenalina.
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Choque séptico refratário</strong></div>
+            <div class="dc"><span class="dv">0,03–0,04 UI/min</span><span class="dd">Infusão fixa (não titular). Dose "vasoplégica".</span></div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>PCR (alternativo)</strong></div>
+            <div class="dc"><span class="dv">40 UI IV</span><span class="dd">Dose única. Pode substituir 1ª ou 2ª dose de adrenalina (RCP avançado).</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ATROPINA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--gold)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">ATROPINA</div>
+            <div class="drug-class">Antimuscarínico · Bradicardia · Pré-medicação antissialagoga</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-gold" style="color:var(--navy)">
+            <strong>Antagonista competitivo dos receptores muscarínicos (M₁, M₂, M₃).</strong> No coração: bloqueia M₂ → elimina tônus vagal → ↑ FC. Na glândula salivar: bloqueia M₃ → reduz secreção. Bronquial: broncodilatação. TGI: reduz peristaltismo. Olho: midríase e cicloplegia.
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Bradicardia sinusal</strong></div>
+            <div class="dc"><span class="dv">0,5–1 mg IV</span><span class="dd">Repetir a cada 3–5 min. Máx 3 mg total (dose plena vagolítica).</span></div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Antissialagogo</strong><small>Pré-op cetamina</small></div>
+            <div class="dc"><span class="dv">0,01 mg/kg IV/IM</span><span class="dd">Mín 0,1 mg (paradoxal em doses menores).</span></div>
+          </div>
+          <div class="dr dr-y">
+            <div class="dn"><strong>Junto à neostigmina</strong></div>
+            <div class="dc"><span class="dv">0,02 mg/kg IV</span><span class="dd">Previne efeitos muscarínicos da neostigmina.</span></div>
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>CI relativas:</strong> Glaucoma de ângulo fechado (midríase → hipertensão ocular) · Taquiarritmias (taquicardia) · Íleo paralítico (↓ motilidade) · Obstrução urinária (↓ tônus vesical) · Hipertireoidismo.
+          </div>
+        </div>
+      </div>
+
+      <!-- ALGORITMO -->
+      <div class="card">
+        <div class="card-header ch-red">
+          <span class="card-num">02</span> Algoritmo: Qual Vasopressor em Cada Situação?
+        </div>
+        <div class="card-body">
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">💉</span> Hipotensão por raquianestesia (sem taquicardia)</div>
+            <div class="acc-body">
+              <strong>1ª linha: Fenilefrina</strong> 50–100 mcg IV bolus ou infusão 25–50 mcg/min<br>
+              <em>Rationale:</em> raqui causa vasopleglia simpática → corrigir com α₁ puro. Se FC estiver alta, fenilefrina a corrige pelo barorreflexo.<br>
+              <strong>Se bradicardia associada:</strong> efedrina 5–10 mg IV (efeito β₁ corrige FC) OU atropina 0,5 mg IV.<br>
+              <strong>Cesárea:</strong> fenilefrina em infusão profilática iniciada junto com raqui.
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">💉</span> Hipotensão por indução com propofol/tiopental</div>
+            <div class="acc-body">
+              <strong>1ª linha: Efedrina</strong> 5–10 mg IV — especialmente se FC normal<br>
+              <strong>Alternativa: Fenilefrina</strong> 50–100 mcg se FC elevada<br>
+              <strong>Não esquecer:</strong> repor volume (250–500 mL cristaloide) se hipovolemia suspeita.
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🚨</span> Anafilaxia perioperatória</div>
+            <div class="acc-body">
+              <strong>ADRENALINA</strong> — base do tratamento!<br>
+              → IM coxa: 0,3–0,5 mg (ou 0,01 mg/kg pediátrico) IM se ainda não intubado<br>
+              → IV: bolus 10–100 mcg IV titulado se já monitorado com acesso<br>
+              → Infusão: 0,1–1 mcg/kg/min se colapso persistente<br>
+              + Afastar agente causal + Volume (1–2L cristaloide rápido) + Corticoide + Anti-H1/H2
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">💔</span> Bradicardia sintomática isolada</div>
+            <div class="acc-body">
+              <strong>Atropina 0,5 mg IV</strong> — primeira linha<br>
+              Se resistente: <strong>adrenalina 1–10 mcg IV</strong> ou <strong>efedrina 5–10 mg IV</strong><br>
+              Bradicardia grave refratária: marcapasso transcutâneo / transvenoso
+            </div>
+          </div>
+          <div class="acc">
+            <div class="acc-hdr" onclick="toggleAcc(this)"><span class="acc-icon">🏥</span> Choque séptico/vasoplégico (UTI/CC)</div>
+            <div class="acc-body">
+              <strong>Noradrenalina</strong> — primeira linha (0,01–0,5 mcg/kg/min) via acesso central<br>
+              Se refratário: adicionar <strong>vasopressina 0,03 UI/min</strong> (reduz dose de NE)<br>
+              Se choque misto (vasoplégico + cardiogênico): adicionar <strong>dobutamina</strong> (β₁ inotrópico)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:12px">
+  <div class="card-hdr" style="background:var(--navy);border:1px solid var(--cyan)">
+    <span class="card-title" style="color:var(--cyan)">Algoritmo de Escolha de DVA por Perfil Hemodinâmico</span>
+  </div>
+  <div class="card-body">
+    <div class="tbl-wrap xwide"><table class="tbl">
+      <thead><tr><th>Perfil clínico</th><th>PA</th><th>DC/FC</th><th>SVR</th><th>DVA 1ª linha</th><th>Se refratário</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Choque séptico / vasoplegia</strong></td><td>↓</td><td>↑ ou N</td><td>↓↓</td><td>Noradrenalina 0.05–0.5 mcg/kg/min</td><td>+ Vasopressina 0.03–0.04 UI/min</td></tr>
+        <tr><td><strong>Choque cardiogênico</strong></td><td>↓</td><td>↓↓</td><td>↑</td><td>Dobutamina 2–20 mcg/kg/min</td><td>+ Noradrenalina se PA muito baixa</td></tr>
+        <tr><td><strong>Hipotensão pós-indução (tônus vascular ↓)</strong></td><td>↓</td><td>N ou ↓</td><td>↓</td><td>Fenilefrina 50–200 mcg bolus IV</td><td>Efedrina 10 mg IV se bradicardia</td></tr>
+        <tr><td><strong>Hipotensão pós-raqui / peridural</strong></td><td>↓</td><td>↓ ou N</td><td>↓</td><td>Fenilefrina 100 mcg IV (preserva FC)</td><td>Noradrenalina infusão se mantida</td></tr>
+        <tr><td><strong>Bradicardia + hipotensão</strong></td><td>↓</td><td>↓↓</td><td>N</td><td>Efedrina 10–30 mg IV</td><td>Atropina 0.5–1 mg IV</td></tr>
+        <tr><td><strong>Hipertensão intraoperatória</strong></td><td>↑↑</td><td>↑</td><td>↑</td><td>Aprofundar anestesia + esmolol</td><td>Nitroprussiato / nitroglicerina</td></tr>
+      </tbody>
+    </table></div>
+    <div class="algo-box algo-g" style="margin-top:8px">
+      <div class="algo-title">✅ Regra prática — escolha de DVA intraoperatório</div>
+      <strong>FC normal + PA↓</strong> → Fenilefrina (pura vasoconstritora) · <strong>FC↓ + PA↓</strong> → Efedrina (α+β) · <strong>Sepse/vasoplegia</strong> → Noradrenalina · <strong>Disfunção sistólica</strong> → Dobutamina · <strong>Vasopressina</strong>: reserva para choque séptico refratário ou cirurgia cardíaca (poupar noradrenalina)
+    </div>
+  </div>
+</div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tab-panel vasoativos -->
+
+  <!-- TAB 7 — ADJUVANTES -->
+  <div class="tab-panel" id="farm-adjuvantes">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">01</span> PONV — Náuseas e Vômitos Pós-Operatórios
+        </div>
+        <div class="card-body">
+          <div class="alert a-violet">
+            <strong>PONV</strong> (Post-Operative Nausea and Vomiting) afeta 20–30% dos pacientes cirúrgicos e até 80% nos de alto risco. É uma das causas mais frequentes de insatisfação com a anestesia, prolongamento de internação e readmissão hospitalar.
+          </div>
+
+          <div class="sh sh-violet">Escore de Apfel — Estratificação de Risco</div>
+          <div class="g2">
+            <div>
+              <p style="font-size:12px;font-weight:600;margin-bottom:8px">4 fatores de risco:</p>
+              <ul class="ck-list">
+                <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box"><span class="ck-chk">✓</span></span><span class="ck-text"><strong>Sexo feminino</strong><span class="ck-sub">Maior sensibilidade a opioides e estrógenos influenciam</span></span></li>
+                <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box"><span class="ck-chk">✓</span></span><span class="ck-text"><strong>Não fumante</strong><span class="ck-sub">Fumantes têm menor risco (mecanismo não totalmente elucidado)</span></span></li>
+                <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box"><span class="ck-chk">✓</span></span><span class="ck-text"><strong>PONV prévio ou cinetose</strong><span class="ck-sub">Predisposição constitucional ao vômito</span></span></li>
+                <li class="ck-item ok" onclick="toggleItem(this)"><span class="ck-box"><span class="ck-chk">✓</span></span><span class="ck-text"><strong>Uso pós-op de opioides</strong><span class="ck-sub">Estimula CTZ (zona gatilho quimiorreceptora) via receptor μ</span></span></li>
+              </ul>
+            </div>
+            <div class="alert a-violet">
+              <strong>Risco por pontuação:</strong><br>
+              0 pontos: 10% PONV<br>
+              1 ponto: 21% PONV<br>
+              2 pontos: 39% PONV<br>
+              3 pontos: 61% PONV<br>
+              4 pontos: 79% PONV<br><br>
+              <strong>≥2 fatores: profilaxia multimodal</strong>
+            </div>
+          </div>
+          <div class="alert a-blue" style="margin-top:8px">
+            <strong>Estratégia multimodal (alto risco):</strong> 1. Propofol TIVA (em vez de inalatório) 2. Evitar N₂O 3. Minimizar opioides 4. Dexametasona 4–8 mg na indução 5. Ondansetrona 4 mg no fim da cirurgia 6. Droperidol 0,625–1,25 mg (se alto risco refratário) 7. Escopolamina patch (cirurgia &gt;1h)
+          </div>
+        </div>
+      </div>
+
+      <!-- DEXAMETASONA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--green)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">DEXAMETASONA</div>
+            <div class="drug-class">Glicocorticoide potente · Anti-PONV · Analgesia pós-op · Bloqueia regional</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-green">
+            Glicocorticoide de ação prolongada (T½ 36–54h). Anti-PONV: mecanismo não totalmente elucidado — provavelmente ação central em CTZ + inibição da síntese de serotonina. Analgesia: reduz fosfolipase A₂ → menor síntese de prostaglandinas + reduz edema perineural.
+          </div>
+          <div class="dr dr-g">
+            <div class="dn"><strong>Anti-PONV</strong><small>Na indução</small></div>
+            <div class="dc"><span class="dv">4–8 mg IV</span><span class="dd">Efeito máximo 12–24h após. Administrar na indução.</span></div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn"><strong>Analgesia pós-op</strong><small>Adjuvante</small></div>
+            <div class="dc"><span class="dv">8–10 mg IV</span><span class="dd">Reduz consumo de opioides, edema, dor pós-op. Efeito 24–48h.</span></div>
+          </div>
+          <div class="dr dr-g">
+            <div class="dn"><strong>Prolongar bloqueio regional</strong><small>Perineural</small></div>
+            <div class="dc"><span class="dv">4–8 mg IV ou perineural</span><span class="dd">Prolonga duração do bloqueio periférico em 4–6h. IV é tão eficaz quanto perineural.</span></div>
+          </div>
+          <div class="alert a-yellow" style="margin-top:8px">
+            <strong>Hiperglicemia:</strong> Dose única 8 mg causa ↑ glicemia de 30–50 mg/dL em 4–6h. Relevante em diabéticos — monitorar glicemia pós-op. Em dose única, o benefício clínico supera o risco em não-diabéticos.
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Dose única vs. preocupação infecciosa:</strong> Dose única de dexametasona perioperatória NÃO aumenta risco de infecção de sítio cirúrgico — evidência consolidada (metanálises 2015–2023).
+          </div>
+        </div>
+      </div>
+
+      <!-- ONDANSETRONA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--teal)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">ONDANSETRONA</div>
+            <div class="drug-class">Antagonista 5-HT₃ · Anti-PONV padrão · Administrar no fim da cirurgia</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-teal">
+            Bloqueia seletivamente os receptores 5-HT₃ (serotonina) na CTZ (zona gatilho quimiorreceptora), aferentes vagais do TGI e no núcleo do trato solitário. Esses receptores são ativados pela serotonina liberada pelas células enterocromafins durante manipulação cirúrgica.
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Profilaxia PONV</strong></div>
+            <div class="dc"><span class="dv">4 mg IV</span><span class="dd">No <strong>fim da cirurgia</strong> (30 min antes do término). Efeito 6–8h.</span></div>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Tratamento PONV instaurado</strong></div>
+            <div class="dc"><span class="dv">4 mg IV lento</span><span class="dd">Se não usou profilaxia. Efeito em 15–30 min.</span></div>
+          </div>
+          <div class="alert a-gold" style="margin-top:8px">
+            <strong>Timing importa!</strong> Administrar no início da cirurgia (junto com indução) é subótimo — a ondansetrona tem efeito de 6–8h. Administrar no fim garante cobertura máxima no período de maior risco (SRPA).
+          </div>
+          <div class="alert a-yellow" style="margin-top:8px">
+            <strong>Prolongamento QT:</strong> Risco dose-dependente em altas doses (&gt;32 mg/dia IV). Em doses perioperatórias (4 mg), o risco é clinicamente desprezível em pacientes sem outras causas de QTc prolongado.
+          </div>
+        </div>
+      </div>
+
+      <!-- DROPERIDOL -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--orange)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">DROPERIDOL</div>
+            <div class="drug-class">Antidopaminérgico D₂ · Anti-PONV · Black box FDA QT · Ainda útil em PONV refratário</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-orange">
+            Butirofenona que bloqueia receptores D₂ na CTZ. Muito eficaz contra PONV, com potência comparável à ondansetrona. A FDA emitiu um "black box warning" em 2001 por risco de prolongamento QT e arritmias — mas as doses perioperatórias são 5–20× menores que as psiquiátricas. Meta-análises confirmam segurança em doses baixas.
+          </div>
+          <div class="dr dr-o">
+            <div class="dn"><strong>Profilaxia PONV</strong></div>
+            <div class="dc"><span class="dv">0,625–1,25 mg IV</span><span class="dd">No fim da cirurgia. Efeito 12–24h (mais longo que ondansetrona!)</span></div>
+          </div>
+          <div class="alert a-blue" style="margin-top:8px">
+            Útil em combinação com ondansetrona e dexametasona para PONV de alto risco. Vantagem: duração de ação mais longa.
+          </div>
+        </div>
+      </div>
+
+      <!-- CETAMINA SUBANESTÉSICA -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--violet)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">CETAMINA SUBANESTÉSICA</div>
+            <div class="drug-class">Anti-NMDA · Opioid-sparing · Preemptive analgesia · Anti-hiperalgesia</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-violet">
+            Em doses subanestésicas, a cetamina não causa dissociação mas exerce analgesia potente através do bloqueio de receptores NMDA espinais, prevenindo a sensibilização central e a hiperalgesia induzida por opioides. É peça-chave da analgesia multimodal moderna.
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Indução (bolus)</strong><small>Pré-incisão</small></div>
+            <div class="dc"><span class="dv">0,1–0,5 mg/kg IV</span><span class="dd">Reduz consumo de opioides nas primeiras 24h pós-op</span></div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Infusão intraoperatória</strong></div>
+            <div class="dc"><span class="dv">0,1–0,2 mg/kg/h</span><span class="dd">Manutenção durante cirurgia. Opioid-sparing de 20–40%.</span></div>
+          </div>
+          <div class="dr dr-v">
+            <div class="dn"><strong>Infusão pós-operatória</strong><small>24–48h</small></div>
+            <div class="dc"><span class="dv">0,05–0,1 mg/kg/h</span><span class="dd">Dor crônica pós-op, cirurgias de grande porte, pacientes com uso crônico de opioides.</span></div>
+          </div>
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>Evidências:</strong> Metanálise (2019, N=70 ECRs) demonstrou redução de 25–40% no consumo de morfina nas primeiras 24h com cetamina perioperatória. Particularmente benéfica em cirurgias de coluna, toracotomia, grandes articulações e pacientes com dependência de opioides.
+          </div>
+        </div>
+      </div>
+
+      <!-- LIDOCAÍNA IV -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--blue)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">LIDOCAÍNA SISTÊMICA IV</div>
+            <div class="drug-class">AL sistêmico · Opioid-sparing · Anti-inflamatório · Reduz íleo paralítico</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-blue">
+            Em doses subbloquedoras sistêmicas, a lidocaína IV exerce analgesia por múltiplos mecanismos: bloqueio de canais Nav sistêmicos, inibição de receptores NMDA, modulação de citocinas pró-inflamatórias e efeito inibidor sobre neurônios ectópicos. Evidência forte para cirurgia abdominal (laparotomia/laparoscopia).
+          </div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Bolus inicial</strong><small>Na indução</small></div>
+            <div class="dc"><span class="dv">1,5 mg/kg IV</span><span class="dd">Em 10 min. Atenua resposta à intubação.</span></div>
+          </div>
+          <div class="dr dr-b">
+            <div class="dn"><strong>Infusão intraop</strong></div>
+            <div class="dc"><span class="dv">1,5 mg/kg/h</span><span class="dd">Contínua durante cirurgia. Máx 4,5 mg/kg/h.</span></div>
+          </div>
+          <div class="alert a-green" style="margin-top:8px">
+            Benefícios demonstrados: ↓ dor pós-op, ↓ consumo de opioides, ↓ PONV, ↓ íleo pós-op, alta hospitalar mais precoce em cirurgias colorretais. Parte do protocolo ERAS (Enhanced Recovery After Surgery).
+          </div>
+        </div>
+      </div>
+
+      <!-- MAGNÉSIO -->
+      <div class="drug-card">
+        <div class="drug-hdr" style="background:var(--teal)" onclick="toggleDrug(this)">
+          <div class="drug-hdr-inner">
+            <div class="drug-name">SULFATO DE MAGNÉSIO</div>
+            <div class="drug-class">Anti-NMDA · Opioid-sparing · Reduz CAM · Pré-eclâmpsia · CI Miastenia</div>
+          </div>
+          <span class="drug-arrow">›</span>
+        </div>
+        <div class="drug-body">
+          <div class="alert a-teal">
+            O magnésio é antagonista fisiológico dos receptores NMDA (bloqueia o canal pela ocupação do sítio do Mg²⁺) e dos canais de cálcio voltagem-dependentes. Reduz a excitabilidade da placa neuromuscular (potencializa BNM). Efeito opioid-sparing bem documentado.
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Analgesia periop.</strong><small>Pré-indução</small></div>
+            <div class="dc"><span class="dv">30–50 mg/kg IV</span><span class="dd">Em 10–15 min antes da indução. Reduz CAM 15–20% e consumo de opioides.</span></div>
+          </div>
+          <div class="dr dr-t">
+            <div class="dn"><strong>Pré-eclâmpsia</strong><small>Profilaxia/tratamento</small></div>
+            <div class="dc"><span class="dv">4–6 g IV (ataque)</span><span class="dd">Em 20 min + manutenção 1–2 g/h. Alvo Mg 4–7 mEq/L.</span></div>
+          </div>
+          <div class="alert a-red" style="margin-top:8px">
+            <strong>CI: Miastenia gravis</strong> — potencializa o bloqueio neuromuscular → crise miastênica e apneia. Também: bradicardia grave, bloqueio AV. Monitorar: reflexo patelar (perda indica Mg ≈7–10), SpO₂ (apneia indica Mg &gt;15), débito urinário.
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Potencialização de BNM:</strong> Em pacientes em uso de magnésio (pré-eclâmpsia, pré-operatório), reduzir dose de BNM em 30–50% e monitorar TOF rigorosamente.
+          </div>
+        </div>
+      </div>
+
+      <!-- ALFA-2 AGONISTAS -->
+      <div class="card">
+        <div class="card-header ch-navy">
+          <span class="card-num">02</span> Alfa-2 Agonistas — Clonidina e Dexmedetomidina
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            Os α₂-agonistas produzem sedação, analgesia e simpatólise por ativação dos receptores α₂-adrenérgicos centrais (núcleo coeruleus — sedação/analgesia descendente) e periféricos (inibição pré-sináptica da liberação de NE → vasodilatação, bradicardia).
+          </div>
+          <div class="g2">
+            <div class="alert a-blue">
+              <strong>CLONIDINA</strong><br>
+              Selectividade α₂/α₁ = 200:1<br>
+              VO: 0,1–0,3 mg (MPA) 60–90 min antes<br>
+              IV: 1–2 mcg/kg em 15 min<br>
+              Peridural: 75–150 mcg<br>
+              T½ 12–16h. Menos potente que dexmed.<br>
+              Usado como MPA (ansiolítico + analgésico) e adjuvante em bloqueios regionais
+            </div>
+            <div class="alert a-teal">
+              <strong>DEXMEDETOMIDINA</strong><br>
+              Selectividade α₂/α₁ = 1.600:1<br>
+              Sedação "despertável" (ICU/procedureal)<br>
+              Infusão 0,2–1,4 mcg/kg/h IV<br>
+              Bolus 0,5–1 mcg/kg IV em 10 min<br>
+              T½ 2h. Sem depressão respiratória clinicamente relevante.<br>
+              Reduz necessidade de propofol em 30–50%, de opioides em 25–40%
+            </div>
+          </div>
+          <div class="alert a-orange" style="margin-top:8px">
+            <strong>Bradicardia e hipotensão:</strong> Efeito adverso principal dos α₂-agonistas — simpatólise + bradicardia reflexa. Atropina reverte. Cuidado em bloqueios neuraxiais (efeito sinérgico com bloqueio simpático).
+          </div>
+          <div class="alert a-green" style="margin-top:8px">
+            <strong>Dexmedetomidina na anestesia regional:</strong> Quando adicionada ao AL em bloqueios periféricos, prolonga a duração sensitiva e motora em 2–4h. Mecanismo: hiperpolarização de neurônios HCN e ação diretamente no axônio.
+          </div>
+        </div>
+      </div>
+
+      <!-- MPA -->
+      <div class="card">
+        <div class="card-header ch-blue">
+          <span class="card-num">03</span> MPA — Medicação Pré-Anestésica
+        </div>
+        <div class="card-body">
+          <div class="alert a-blue">
+            <strong>MPA</strong> visa: ansiolise · sedação · amnésia anterógrada · analgesia preemptiva · antissialagogo · redução de PONV · redução do volume gástrico. Não é obrigatória em todos os pacientes — individualizar.
+          </div>
+          <div style="overflow-x:auto">
+            <div class="tbl-wrap wide"><table class="tbl">
+              <thead><tr><th style="white-space:nowrap">Droga</th><th>Dose / Via</th><th>Timing</th><th>Objetivo Principal</th><th>Observação</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><strong>Midazolam VO</strong></td>
+                  <td>7,5–15 mg VO (0,3–0,5 mg/kg pediátrico)</td>
+                  <td>30–60 min antes</td>
+                  <td>Ansiolise + amnésia</td>
+                  <td>Mais usado no Brasil. Pode atrasar despertar se tardio.</td>
+                </tr>
+                <tr>
+                  <td><strong>Midazolam IV</strong></td>
+                  <td>1–3 mg IV</td>
+                  <td>5–10 min antes</td>
+                  <td>Ansiolise + previne mioclonias</td>
+                  <td>Na sala. Monitoração obrigatória.</td>
+                </tr>
+                <tr>
+                  <td><strong>Clonidina VO</strong></td>
+                  <td>0,1–0,3 mg VO</td>
+                  <td>60–90 min antes</td>
+                  <td>Ansiolise + analgesia preemptiva + opioid-sparing</td>
+                  <td>Cuidado com hipotensão e bradicardia.</td>
+                </tr>
+                <tr>
+                  <td><strong>Dexmedetomidina IN</strong></td>
+                  <td>1–2 mcg/kg intranasal</td>
+                  <td>30–45 min antes</td>
+                  <td>Sedação + ansiólise pediátrica</td>
+                  <td>Excelente para crianças. Sem agulha.</td>
+                </tr>
+                <tr>
+                  <td><strong>Paracetamol VO/IV</strong></td>
+                  <td>1 g VO/IV</td>
+                  <td>1 h antes ou indução</td>
+                  <td>Analgesia preemptiva</td>
+                  <td>Componente do protocolo ERAS.</td>
+                </tr>
+                <tr>
+                  <td><strong>Pregabalina VO</strong></td>
+                  <td>75–150 mg VO</td>
+                  <td>1 h antes</td>
+                  <td>Analgesia preemptiva · opioid-sparing</td>
+                  <td>Cirurgias dolorosas, dor neuropática.</td>
+                </tr>
+                <tr>
+                  <td><strong>Dexametasona</strong></td>
+                  <td>4–8 mg IV (indução)</td>
+                  <td>Na indução</td>
+                  <td>Anti-PONV + analgesia</td>
+                  <td>Padrão na maioria dos protocolos ERAS.</td>
+                </tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tab-panel adjuvantes -->
+
+
+  <!-- ═══ TAB: MPA ═══ -->
+  <div class="tab-panel" id="farm-mpa">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--violet)">
+          <span class="card-title">Medicação Pré-Anestésica — Objetivos</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7">A MPA visa reduzir a ansiedade, promover amnésia, complementar analgesia preventiva, reduzir NVPO e atenuar respostas autonômicas à laringoscopia. A tendência ERAS é minimizar sedativos que atrasem recuperação.</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Objetivo</th><th>Fármaco de escolha</th><th>Alternativa</th></tr></thead>
+            <tbody>
+              <tr><td>Ansiolítico / amnésia</td><td>Midazolam</td><td>Lorazepam</td></tr>
+              <tr><td>Analgesia preventiva</td><td>Cetamina 0.3 mg/kg IV</td><td>Paracetamol VO</td></tr>
+              <tr><td>↓ Resposta hemodinâmica</td><td>Clonidina 2–4 mcg/kg VO</td><td>Dexmedetomidina</td></tr>
+              <tr><td>Antiemético</td><td>Dexametasona 8 mg IV</td><td>Ondansetrona</td></tr>
+              <tr><td>↓ Secreção / sialagogo</td><td>Atropina (pediátrico)</td><td>Glicopirrolato</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--blue)">
+          <span class="card-title">Midazolam</span>
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th>Via</th><th>Dose adulto</th><th>Dose pediátrica</th><th>Onset</th></tr></thead>
+            <tbody>
+              <tr><td>VO</td><td>7.5–15 mg</td><td>0.3–0.5 mg/kg (máx 15 mg)</td><td>20–30 min</td></tr>
+              <tr><td>IV</td><td>1–2 mg titulado</td><td>0.05 mg/kg</td><td>2–3 min</td></tr>
+              <tr><td>IM</td><td>0.05–0.1 mg/kg</td><td>0.1–0.2 mg/kg</td><td>10–15 min</td></tr>
+              <tr><td>Intranasal</td><td>—</td><td>0.2–0.3 mg/kg</td><td>10 min</td></tr>
+            </tbody>
+          </table></div>
+          <div class="algo-box algo-r" style="margin-top:8px">
+            <div class="algo-title">⚠ Cuidados</div>
+            Evitar em idosos &gt;70 anos (↑risco delirium), DPOC grave, apneia obstrutiva não tratada. Reversor: <strong>flumazenil</strong> 0.2 mg IV (repetir até 1 mg).
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--teal)">
+          <span class="card-title">α₂-Agonistas: Clonidina e Dexmedetomidina</span>
+        </div>
+        <div class="card-body">
+          <div class="tbl-wrap wide"><table class="tbl">
+            <thead><tr><th style="white-space:nowrap">Fármaco</th><th>Dose MPA</th><th>Vantagens</th><th>Efeitos adversos</th></tr></thead>
+            <tbody>
+              <tr><td>Clonidina</td><td>2–4 mcg/kg VO, 60–90 min antes</td><td>↓MAC 15–25%, ↓dor pós-op, ↓NVPO</td><td>Hipotensão, bradicardia, sedação prolongada</td></tr>
+              <tr><td>Dexmedetomidina</td><td>0.5–1 mcg/kg IV em 10 min (pré-indução)</td><td>Sedação sem depressão resp., analgesia, ↓agitação pediátrica</td><td>Bradicardia, hipotensão, ↑custo</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr" style="background:var(--green)">
+          <span class="card-title">Tendência ERAS — Racionalização da MPA</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;line-height:1.7">Protocolos ERAS recomendam <strong>reduzir ou eliminar benzodiazepínicos</strong> de rotina — especialmente em idosos e cirurgias ambulatoriais. O foco muda para <strong>analgesia preventiva</strong> (AINEs, paracetamol, cetamina em dose subanestésica) associada a técnicas regionais.</p>
+          <div class="algo-box algo-g">
+            <div class="algo-title">✅ Estratégia ERAS recomendada (pré-operatório)</div>
+            Paracetamol 1g VO + celecoxibe 400 mg VO + pregabalina 75–150 mg VO (em selecionados) → 1–2h antes da cirurgia. Reduz consumo de opioides pós-op em 20–40%.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /farm-mpa -->
+
+  <!-- <!-- TAB — REVISÃO RÁPIDA --> -->
+  <div class="tab-panel" id="farm-revisao">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--violet)">
+          <span class="card-title">⚡ Revisão Rápida — Farmacologia Anestésica</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Para revisão pré-plantão ou pré-prova · 10 pontos essenciais</p>
+          <div class="algo-box algo-b" style="margin-bottom:8px">
+            <div class="algo-title">10 pontos que você não pode esquecer</div>
+            <ol style="font-size:12px;line-height:2;margin:6px 0 0 16px">
+              <li>Propofol: indução 1.5–2.5 mg/kg IV · manutenção TIVA 4–12 mg/kg/h · PRIS: raro, CI em pediátrico prolongado</li>
+              <li>Cetamina: único hipnótico que preserva tônus simpático · dose subanestésica 0.3–0.5 mg/kg = analgesia</li>
+              <li>Etomidato: menor depressão cardiovascular · inibe cortisol (dose única aceitável, infusão CI)</li>
+              <li>Sugamadex: reversão rocurônio/vecurônio · dose 2 mg/kg (TOF 2 respostas) · 16 mg/kg (emergência)</li>
+              <li>Neostigmina: máximo 0.07 mg/kg · CI se TOF &lt;2 respostas · sempre com atropina 0.02 mg/kg</li>
+              <li>Bupivacaína: dT maior da família · hiperbárica desce, isobárica sobe/permanece · máximo 3 mg/kg</li>
+              <li>Ropivacaína: menos cardiotóxica que bupivacaína · bloqueia C antes de Aδ (diferencial sensitivo-motor)</li>
+              <li>Fentanil: 100× mais potente que morfina · bolus 1–2 mcg/kg · sem efeito teto para analgesia</li>
+              <li>Noradrenalina: 1ª linha no choque séptico · fenilefrina: hipotensão com taquicardia · efedrina: bradicardia + hipotensão</li>
+              <li>LAST (toxicidade AL): sinais CNS primeiro (zumbido, convulsão) → cardiovascular · tratamento: Intralipid 20% 1.5 mL/kg</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Revisão Rápida</div>
+    </div>
+  </div><!-- /farm-revisao -->
+
+<!-- TAB — QUESTÕES -->
+  <div class="tab-panel" id="farm-questoes">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-hdr" style="background:var(--violet)">
+          <span class="card-title">📝 Questões — Farmacologia Anestésica</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">5 questões de múltipla escolha · Clique para revelar o gabarito</p>
+
+          <div class="caso-card" id="q1-farm">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">1</div>
+              <div class="caso-title">QUESTÃO 1 — Sugamadex: Dose de Emergência</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Durante indução em sequência rápida com rocurônio 1,2 mg/kg, ocorre dificuldade inesperada de ventilação e intubação (situação "cannot intubate, cannot oxygenate"). Qual é a dose de sugamadex para reversão de <strong>emergência</strong> nesta situação?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) 0.5 mg/kg<br>
+                B) 2 mg/kg<br>
+                C) 4 mg/kg<br>
+                D) 8 mg/kg<br>
+                E) 16 mg/kg
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: E)</strong> — A dose de <strong>16 mg/kg</strong> é recomendada para reversão imediata (emergência) do bloqueio por rocurônio ou vecurônio, independentemente do grau de bloqueio. Doses menores: 2 mg/kg se TOF com ≥2 respostas; 4 mg/kg se TOF com 0-1 resposta (bloqueio profundo). Na situação CICO, o sugamadex pode reverter o bloqueio em 1–3 minutos com dose de 16 mg/kg.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q2-farm">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">2</div>
+              <div class="caso-title">QUESTÃO 2 — Mecanismo de Ação da Cetamina</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">A cetamina é descrita como um anestésico "dissociativo" com propriedades analgésicas únicas. Qual é seu <strong>principal mecanismo de ação</strong> responsável pela analgesia?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Agonismo em receptores GABA-A<br>
+                B) Antagonismo em receptores NMDA<br>
+                C) Agonismo em receptores opioide μ<br>
+                D) Bloqueio de canais de sódio<br>
+                E) Agonismo em receptores α2-adrenérgicos
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: B)</strong> — A cetamina age principalmente como <strong>antagonista não competitivo dos receptores NMDA</strong> (N-metil-D-aspartato), bloqueando o canal iônico e impedindo a despolarização induzida pelo glutamato. Esse mecanismo explica sua potente analgesia (incluindo dor crônica e hiperalgesia opioide), broncodilatação, efeito simpaticomimético e — em doses altas — o estado dissociativo. A dose subanestésica (0.3–0.5 mg/kg) é usada como co-analgésico sem perda de consciência.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q3-farm">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">3</div>
+              <div class="caso-title">QUESTÃO 3 — PRIS (Propofol Infusion Syndrome)</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Em qual situação clínica o risco de <strong>PRIS (Propofol Infusion Syndrome)</strong> é maior e deve ser evitada a infusão contínua de propofol?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Adulto em TIVA por 6 horas, dose 6 mg/kg/h<br>
+                B) Adulto em UTI com dose &lt;4 mg/kg/h por 24 horas<br>
+                C) Pediátrico em sedação prolongada (&gt;48h) em dose &gt;4–5 mg/kg/h<br>
+                D) Idoso em anestesia ambulatorial de 2 horas<br>
+                E) Paciente com alergia ao ovo usando propofol com fosfolipídeos de soja
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — O PRIS é uma síndrome rara mas potencialmente fatal caracterizada por acidose metabólica, rabdomiólise, arritmias e falência de múltiplos órgãos. O risco é maior em <strong>pacientes pediátricos</strong> recebendo propofol em doses &gt;4–5 mg/kg/h por períodos &gt;48h (sedação prolongada em UTI). Por esse motivo, propofol é <strong>contraindicado para sedação prolongada em crianças</strong>. Em adultos, doses até 4 mg/kg/h em curto prazo são geralmente seguras.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q4-farm">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">4</div>
+              <div class="caso-title">QUESTÃO 4 — Bupivacaína Hiperbárica vs Isobárica</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Paciente em decúbito dorsal horizontal recebe raquianestesia com bupivacaína <strong>hiperbárica</strong> 15 mg. Considerando a baridade da solução e a posição do paciente, qual é o comportamento esperado do bloqueio?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Bloqueia apenas raízes sacrais (S1–S5), independente da posição<br>
+                B) Tende a subir cranialmente por ser hiperbárica<br>
+                C) Tende a descer em direção às regiões mais baixas (caudal) por ser mais densa que o LCR<br>
+                D) Distribui-se uniformemente no espaço subaracnoide<br>
+                E) Sem diferença em relação à isobárica na posição horizontal
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A bupivacaína <strong>hiperbárica</strong> tem densidade maior que o LCR (baridade &gt;1), portanto <strong>desce</strong> para as regiões mais baixas sob influência da gravidade. Em decúbito dorsal horizontal, ela tende a se acumular na lordose lombar e descer para as regiões sacral e dorsal baixa. A bupivacaína isobárica tem densidade similar ao LCR e distribui-se mais uniformemente ou segue menos a gravidade. O conhecimento dessa diferença é fundamental para controlar o nível do bloqueio espinhal.
+              </div>
+            </div>
+          </div>
+
+          <div class="caso-card" id="q5-farm">
+            <div class="caso-hdr" onclick="toggleCaso(this)">
+              <div class="caso-num">5</div>
+              <div class="caso-title">QUESTÃO 5 — DVA em Hipotensão Pós-raqui</div>
+              <div class="caso-arrow">›</div>
+            </div>
+            <div class="caso-body">
+              <div class="caso-question">Após raquianestesia para cesariana, paciente desenvolve hipotensão (PAM 50 mmHg) com <strong>taquicardia compensatória</strong> (FC 118 bpm). Qual vasopressor é a escolha de PRIMEIRA LINHA nesta situação?</div>
+              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
+              <p style="font-size:12px;line-height:1.8">
+                A) Efedrina 10 mg IV<br>
+                B) Noradrenalina 0.1 mcg/kg/min em infusão<br>
+                C) Fenilefrina 100–200 mcg IV em bolus<br>
+                D) Dopamina 5 mcg/kg/min<br>
+                E) Adrenalina 0.5 mg IM
+              </p>
+              <div class="caso-answer">
+                <strong>Gabarito: C)</strong> — A <strong>fenilefrina</strong> (agonista α1 puro) é a primeira linha na hipotensão pós-raqui com taquicardia reflexa, pois aumenta a RVP sem estimulação cardíaca β, corrigindo a hipotensão e permitindo que a FC retorne ao normal. A efedrina (α + β) causaria taquicardia adicional e é preferida quando há <em>bradicardia + hipotensão</em>. Em obstetricia, a fenilefrina é preferida por melhor preservação do pH fetal em comparação à efedrina.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia R1 · Questões</div>
+    </div>
+  </div><!-- /farm-questoes -->
+
+  <!-- TAB 8 — CASOS CLÍNICOS INTERATIVOS
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="farm-casos">
+    <div class="page-wrap">
+
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">01</span> Casos Clínicos — Farmacologia Anestésica
+        </div>
+        <div class="card-body">
+          <div class="alert a-violet">
+            Cinco casos clínicos cobrindo as principais decisões farmacológicas perioperatórias. Clique em cada caso para expandir e revelar a resposta.
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 1 -->
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">1</span>
+          <span class="caso-title">Hipnótico em Paciente Hemodinamicamente Instável</span>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.6;margin-bottom:10px">
+            Masculino, 58 anos, 75 kg, admitido em choque hemorrágico por politrauma (TAS 70 mmHg, FC 130 bpm, Hb 6,2 g/dL). Necessita de laparotomia exploradora de emergência. Acesso venoso calibroso obtido. Glasgow 12. Sem alergias conhecidas.
+          </p>
+          <div class="caso-question">Qual hipnótico para indução anestésica? Justifique e detalhe o protocolo de indução.</div>
+          <div class="caso-answer">
+            <strong>Escolha: ETOMIDATO 0,3 mg/kg IV + CETAMINA 1 mg/kg IV</strong> (associação "cardioestável")
+            <br><br>
+            <strong>Justificativa do Etomidato:</strong> Mínima interferência hemodinâmica. Mantém frequência cardíaca e pressão arterial por não deprimir o sistema nervoso simpático. Indução rápida (30–60s). Ideal em tamponamento, valvopatias estenóticas, choque hemorrágico.
+            <br><br>
+            <strong>Justificativa da Cetamina:</strong> Efeito simpatomimético indireto → libera noradrenalina → mantém ou eleva PA. Broncodilatação (útil em trauma torácico). Dissociativa → mesmo em doses reduzidas garante hipnose.
+            <br><br>
+            <strong>Por que NÃO usar Propofol?</strong> Vasodilatação periférica + redução do débito cardíaco → colapso cardiovascular em hipovolêmicos. Mesmo doses "reduzidas" de propofol podem ser fatais em TAS 70 mmHg.
+            <br><br>
+            <strong>Protocolo completo:</strong><br>
+            1. Pré-oxigenar 3 min com O₂ 100%<br>
+            2. Ketamina 1 mg/kg IV (mantém PA, fornece hipnose) + Etomidato 0,2 mg/kg IV<br>
+            3. Succinilcolina 1,5 mg/kg RSI (ou rocurônio 1,2 mg/kg se CI à SC)<br>
+            4. Pressão cricoide durante laringoscopia (estômago provavelmente cheio)<br>
+            5. Manutenção: cetamina 0,5–1 mg/kg/h + fentanil conforme tolerância hemodinâmica<br>
+            6. Evitar propofol e tiopental durante instabilidade<br>
+            7. Corrigir hipovolemia em paralelo: cristaloides aquecidos, hemoderivados, protocolo de transfusão maciça
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 2 -->
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">2</span>
+          <span class="caso-title">Gestante em Cesárea Urgente — SC vs Rocurônio</span>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.6;margin-bottom:10px">
+            Gestante, 32 anos, 88 kg, 38 semanas, DPP com sofrimento fetal agudo. Não aceitou raquianestesia (agitação, não colabora). Indicação de anestesia geral com intubação orotraqueal de sequência rápida (RSI). Mallampati III, abertura de boca 3 cm. Sem alergias conhecidas.
+          </p>
+          <div class="caso-question">Succinilcolina ou Rocurônio 1,2 mg/kg para a RSI? Quais precauções específicas na gestante?</div>
+          <div class="caso-answer">
+            <strong>Ambos são aceitáveis.</strong> A decisão é contextual:
+            <br><br>
+            <strong>SUCCINILCOLINA 1,5 mg/kg:</strong> Padrão histórico na gestante. Inicio em 45–60s. Duração 8–12 min. A gestante tem pseudocolinesterase reduzida (~25%) → duração levemente prolongada mas clinicamente irrelevante. Não existe CI obstétrica absoluta à succinilcolina em dose única de RSI.
+            <br><br>
+            <strong>ROCURÔNIO 1,2 mg/kg:</strong> Inicio em 45–60s (equivalente à SC nessa dose). Vantagem: se via aérea for difícil ("cannot intubate, cannot oxygenate"), reverter com SUGAMMADEX 16 mg/kg em &lt;3 min. Desvantagem: duração muito maior (60–70 min), menos "sair do bloqueio sozinho" se não conseguir intubar.
+            <br><br>
+            <strong>RECOMENDAÇÃO ATUAL (DIFFICULT AIRWAY SOCIETY 2022):</strong> Quando há suspeita de via aérea difícil, o protocolo Rocurônio RSI + Sugammadex 16 mg/kg disponível na mão é preferido — permite reversão em &lt;3 min. SEMPRE ter o sugammadex preparado e à beira do leito ANTES de administrar o rocurônio.
+            <br><br>
+            <strong>Precauções específicas na gestante:</strong><br>
+            1. Posição em cunha esquerda 15° (desvio uterino → descompressão aortocava)<br>
+            2. Pré-oxigenação mais rigorosa (CRF reduzida, consumo O₂ aumentado → dessatura mais rápido)<br>
+            3. Pressão cricoide durante RSI (risco aspiração aumentado — esvaziamento gástrico retardado)<br>
+            4. Propofol 2–2,5 mg/kg OU Cetamina 1–1,5 mg/kg para indução<br>
+            5. Vasopressor profilático se hipotensão: fenilefrina (preferida sobre efedrina na gestante — menos acidose fetal)<br>
+            6. Após indução: FiO₂ 50%, CAM mínima para não deprimir feto (sevoflurano 0,5 CAM é aceitável)
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 3 -->
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">3</span>
+          <span class="caso-title">LAST pós-Bloqueio de Nervo Femoral</span>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.6;margin-bottom:10px">
+            Masculino, 65 anos, 70 kg, hernioplastia inguinal sob sedação + bloqueio do nervo ilioinguinal com 30 mL de bupivacaína 0,5% (150 mg total). Dois minutos após o bloqueio, relata gosto metálico na boca, depois tremores e agitação. Em seguida: convulsão tônico-clônica generalizada.
+          </p>
+          <div class="caso-question">O que está ocorrendo? Descreva o manejo imediato passo a passo.</div>
+          <div class="caso-answer">
+            <strong>Diagnóstico: LAST — Toxicidade Sistêmica de Anestésico Local</strong>
+            <br>
+            Provavelmente por injeção intravascular inadvertida ou absorção rápida de área vascularizada. Dose total: 150 mg de bupivacaína = 2,1 mg/kg → próxima ao limite máximo (2 mg/kg) em tecido altamente vascularizado.
+            <br><br>
+            <strong>MANEJO IMEDIATO:</strong>
+            <br><br>
+            <strong>1. PEDIR AJUDA</strong> — acionar equipe de emergência, anunciando "LAST"<br>
+            <strong>2. PARAR</strong> a injeção do anestésico local imediatamente<br>
+            <strong>3. VIA AÉREA:</strong> O₂ 100% → se apneia/inconsciência → IOT + ventilação assistida<br>
+            <strong>4. CONTROLE DA CONVULSÃO:</strong> Midazolam 5 mg IV (ou propofol 1 mg/kg IV — dose baixa, cuidado com hipotensão) → Não usar diazepam (menor eficácia e mais lento)<br>
+            <strong>5. INTRALIPID 20%:</strong><br>
+            → Bolus: 1,5 mL/kg IV em 1 min = <strong>105 mL</strong> (para 70 kg)<br>
+            → Infusão: 0,25 mL/kg/min = <strong>17,5 mL/min</strong> por 30–60 min<br>
+            → Pode repetir bolus 1–2× a cada 3–5 min se colapso persistente<br>
+            → Máximo total primeira hora: ~12 mL/kg = 840 mL<br>
+            <strong>6. SE PCR:</strong> RCP contínua — adrenalina em DOSE BAIXA (1 mcg/kg — não 1 mg!) — altas doses de adrenalina pioram taquiarritmias ventriculares por bupivacaína<br>
+            <strong>7. Monitorar</strong> por mínimo 4–6h após estabilização (risco de recidiva por redistribuição)<br>
+            <strong>8. Notificar</strong> o incidente e documentar no prontuário<br><br>
+            <strong>Prevenção:</strong> Usar ultrassom guiado, aspirar antes de cada injeção, dose-teste com adrenalina 1:200.000 (FC ↑ 20% indica IV), injetar fracionado (5 mL/vez), observar 30 min após bloqueio.
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 4 -->
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">4</span>
+          <span class="caso-title">Alto Risco de PONV — Estratégia Profilática</span>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.6;margin-bottom:10px">
+            Feminina, 38 anos, não fumante, com histórico de PONV em cirurgia anterior (colecistectomia — vomitou por 8h na SRPA). Programada para laparoscopia ginecológica eletiva (1h30 estimado) com opioide pós-operatório. Escore Apfel: 4 fatores de risco.
+          </p>
+          <div class="caso-question">Qual a estratégia anestésica e farmacológica para reduzir ao máximo o risco de PONV?</div>
+          <div class="caso-answer">
+            <strong>Escore Apfel 4 = risco ~79% de PONV → profilaxia máxima multimodal obrigatória.</strong>
+            <br><br>
+            <strong>MODIFICAÇÕES NA TÉCNICA ANESTÉSICA:</strong><br>
+            ✓ <strong>TIVA com propofol</strong> (em vez de anestesia inalatória) — propofol reduz PONV por ação antiemética intrínseca<br>
+            ✓ <strong>Evitar N₂O</strong> — contribui significativamente para PONV<br>
+            ✓ <strong>Minimizar opioides</strong> — estratégia opioid-sparing: cetamina subanestésica + AINE + paracetamol IV + anestesia local<br>
+            ✓ <strong>Hidratação adequada</strong> — jejum prolongado + hipovolemia aumentam PONV<br>
+            <br>
+            <strong>PROFILAXIA FARMACOLÓGICA — 3 DROGAS:</strong><br>
+            1. <strong>Dexametasona 8 mg IV</strong> na indução anestésica → efeito anti-PONV 24–48h<br>
+            2. <strong>Ondansetrona 4 mg IV</strong> 30 min antes do término da cirurgia → efeito 6–8h (período de maior risco)<br>
+            3. <strong>Droperidol 0,625 mg IV</strong> ou <strong>Escopolamina patch</strong> (1,5 mg) → cobertura adicional<br>
+            <br>
+            <strong>PÓS-OPERATÓRIO:</strong><br>
+            • Analgesia multimodal: paracetamol 1g 6/6h + cetorolaco 15–30 mg 8/8h → evitar morfina<br>
+            • Se PONV ocorrer na SRPA: ondansetrona 4 mg IV (se não usou profilaxia) ou metoclopramida 10 mg IV (se usou ondansetrona)<br>
+            • Monitorar hipotensão (droperidol pode causar) e QTc (paciente jovem, cardio saudável — baixo risco)<br>
+            <br>
+            <strong>Eficácia esperada:</strong> Cada intervenção antiemética reduz PONV em ~26%. Com 3 intervenções + TIVA, risco reduz de 79% para ~20–25%.
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 5 -->
+      <div class="caso-card">
+        <div class="caso-hdr" onclick="toggleCaso(this)">
+          <span class="caso-num">5</span>
+          <span class="caso-title">Reverter Bloqueio Residual — Neostigmina ou Sugammadex?</span>
+          <span class="caso-arrow">›</span>
+        </div>
+        <div class="caso-body">
+          <p style="font-size:12px;line-height:1.6;margin-bottom:10px">
+            Paciente ao fim de colecistectomia laparoscópica (45 min) com rocurônio 0,6 mg/kg IV (45 mg para 75 kg). Cirurgia concluída. Sevoflurano suspenso. SpO₂ 99%. Paciente abrindo os olhos. TOF-Watch medido no adutor do polegar: <strong>TOF ratio 0,5 (ou seja, T4/T1 = 0,5)</strong>.
+          </p>
+          <div class="caso-question">Pode extubar? Qual reversor usar e em qual dose? Por que não pode usar apenas a neostigmina?</div>
+          <div class="caso-answer">
+            <strong>NÃO pode extubar com TOF ratio 0,5 — bloqueio residual significativo!</strong>
+            <br>
+            TOF ratio &lt;0,9 = bloqueio neuromuscular residual clinicamente relevante. Mesmo com olhos abertos, a força muscular está comprometida — especialmente músculos faríngeos (deglutição, proteção de VAS) e diafragma (volume corrente reduzido).
+            <br><br>
+            <strong>ESCOLHA: SUGAMMADEX 2 mg/kg IV = 150 mg</strong>
+            <br><br>
+            <strong>Por que sugammadex e não neostigmina?</strong>
+            <br>
+            TOF ratio 0,5 indica bloqueio moderado. A neostigmina PODE ser usada quando TOF count ≥2 twitches (e este paciente tem 4 twitches visíveis — TOF count = 4), <em>mas</em>:
+            <br>
+            • Com TOF ratio 0,5 a neostigmina levaria 10–15 min para atingir TOF 0,9 (incompleta e lenta)<br>
+            • Neostigmina tem teto de reversão — pode não chegar a TOF 0,9 se bloqueio ainda intenso<br>
+            • Sugammadex 2 mg/kg em TOF ratio 0,5 → TOF 0,9 em &lt;2 min, de forma confiável<br>
+            • Sugammadex não causa efeitos muscarínicos (não precisa de atropina, sem bradicardia, sem broncoespasmo)<br>
+            <br>
+            <strong>Se escolher Neostigmina (aceitável com TOF count ≥2):</strong><br>
+            → 0,05 mg/kg IV = 3,75 mg + Atropina 0,02 mg/kg = 1,5 mg IV<br>
+            → Aguardar 10–15 min e remensurar TOF antes de extubar<br>
+            → NUNCA extubar antes de confirmar TOF ratio ≥0,9<br>
+            <br>
+            <strong>Critérios clínicos de extubação (após reversor):</strong><br>
+            ✓ TOF ratio ≥0,9 por aceleromiografia<br>
+            ✓ Sustenta cabeça por 5s<br>
+            ✓ Aperto de mão forte e sustentado<br>
+            ✓ SpO₂ ≥95% em ar ambiente<br>
+            ✓ Ventilação espontânea com Volume Corrente ≥6 mL/kg<br>
+            ✓ Consciente e responsivo a comandos
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
+</div><!-- /tab-panel casos -->
+</div>

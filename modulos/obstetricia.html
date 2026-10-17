@@ -1,0 +1,1142 @@
+<div class="screen" id="screen-obstetricia">
+  <div class="top-bar" style="border-bottom:3px solid var(--pink)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--pink)">🤰 Anestesia Obstétrica</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" id="obstetricia-tabbar">
+    <button class="tab-btn active" aria-selected="true" onclick="showTab('obs','fisiologia',this)">ADAPTAÇÕES</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','raqui',this)">RAQUI/CESÁREA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','peridural',this)">PERIDURAL/PARTO</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','preeclampsia',this)">PRÉ-ECLÂMPSIA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','farmaco',this)">FARMACOLOGIA</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','emergencias',this)">EMERGÊNCIAS</button>
+    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','casos',this)">CASOS</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 1 — ADAPTAÇÕES FISIOLÓGICAS
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel active" id="obs-fisiologia">
+    <div class="page-wrap">
+
+    <!-- INTRO -->
+    <div class="alert a-violet" style="margin-bottom:12px">
+      <strong>Ponto-chave TEA/TSA:</strong> A gestação altera TODOS os sistemas — o anestesiologista deve adaptar cada etapa do plano anestésico. As mudanças são progressivas, com pico no 3º trimestre e periparto.
+    </div>
+
+    <!-- CARDIOVASCULAR -->
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">01</span> Sistema Cardiovascular
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Débito Cardíaco ↑40-50%</div>
+          <div class="dc">Aumento por ↑volume sistólico + ↑FC (10-20 bpm). Pico entre a 20ª-28ª semana. No periparto, cada contração uterina autotransfunde 300-500 mL → picos adicionais de DC.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Pressão Arterial — queda no 2º trimestre</div>
+          <div class="dc">PA sistólica cai ~5-10 mmHg no 2º trimestre por vasodilatação mediada por progesterona. Retorna ao basal no 3º trimestre. PAD cai mais que PAS (até 15 mmHg).</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Compressão Aortocaval</div>
+          <div class="dc">Em decúbito dorsal, o útero gravídico comprime aorta e veia cava inferior. A partir de 20 semanas: <strong>deslocar o útero para a esquerda (15-30°)</strong> com coxim ou inclinação da mesa. Obrigatório durante cesárea e RCP.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Síndrome Hipotensiva Supina</div>
+          <div class="dc">↓DC 25-30% + bradicardia reflexa (estímulo vagal). Pode causar náusea, palidez, lipotímia. Tratamento: DLE imediato + volume.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">RVS ↓ 20-30%</div>
+          <div class="dc">Resistência Vascular Sistêmica cai por vasodilatação periférica (progesterona, prostaciclinas, NO endotelial). Explica a queda da PA apesar de DC elevado.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESPIRATÓRIO -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Sistema Respiratório
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">CRF ↓ 20-30%</div>
+          <div class="dc">Útero gravídico empurra o diafragma cefalicamente. Consequência: <strong>apneia segura encurtada (2-3 min vs 5-8 min em não grávidas)</strong>. Pré-oxigenação rigorosa é obrigatória.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Ventilação-Minuto ↑ 50%</div>
+          <div class="dc">Volume corrente ↑ 40% (500→700 mL) + FR ligeiramente ↑. Resultado: VM ↑ 50%. Causado pelo drive ventilatório mediado por progesterona.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">PaCO₂ cai para 30-34 mmHg</div>
+          <div class="dc">Alcalose respiratória fisiológica compensada por ↑ excreção renal de HCO₃⁻ (HCO₃⁻ ~20 mEq/L). pH permanece 7.40-7.45. PaO₂ pode ↑ levemente → alvo SpO₂ ≥95%.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Via Aérea Edemaciada</div>
+          <div class="dc">Mallampati piora em ~30% durante o trabalho de parto (edema + ingurgitamento vascular). Usar TET 6.0-6.5 mm. Sangramento nasal frequente — evitar intubação nasal. <strong>Videolaringoscópio de 1ª escolha.</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GASTROINTESTINAL -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Sistema Gastrointestinal
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">↑ Risco de Broncoaspiração</div>
+          <div class="dc">Progesterona reduz tônus do esfíncter esofágico inferior (EEI) → refluxo gastroesofágico aumentado. Pressão intragástrica ↑ pelo útero gravídico.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Esvaziamento Gástrico Atrasado</div>
+          <div class="dc">Normal no 1º/2º trimestre, mas <strong>significativamente atrasado durante o trabalho de parto</strong> (dor + opioides agravam). Fora do TP, esvaziamento pode ser normal.</div>
+        </div>
+        <div class="alert a-red" style="margin-top:10px">
+          <strong>REGRA TEA/TSA:</strong> Toda gestante &gt;18-20 semanas = <strong>considerar estômago cheio</strong>. Se AG necessária → RSI (Indução em Sequência Rápida) com cricóide.
+        </div>
+      </div>
+    </div>
+
+    <!-- HEMATOLÓGICO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Sistema Hematológico
+      </div>
+      <div class="card-body">
+        <div class="dr dr-y">
+          <div class="dn">Anemia Dilucional</div>
+          <div class="dc">Volume plasmático ↑ 50% vs eritrócitos ↑ 20% → Hb normal 10-11 g/dL na gestante. Hb &lt;10 g/dL necessita investigação.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Leucocitose Fisiológica</div>
+          <div class="dc">Leucócitos até 15.000/mm³ são normais na gestação. No periparto pode chegar a 25.000-30.000 — não confundir com infecção.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Hipercoagulabilidade</div>
+          <div class="dc">↑Fibrinogênio (400-600 mg/dL), ↑fatores VII, VIII, X, XII. Proteína S ↓. Risco elevado de TVP e TEP — 5-10x maior. Pico no puerpério imediato.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Plaquetas</div>
+          <div class="dc">Podem cair levemente: <strong>trombocitopenia gestacional benigna</strong> (plaquetas 100.000-150.000 em até 8% das gestantes). Plaq &lt;100.000 necessita investigação (pré-eclâmpsia, HELLP, PTI).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FARMACOLÓGICO -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">05</span> Implicações Farmacológicas
+      </div>
+      <div class="card-body">
+        <div class="dr dr-v">
+          <div class="dn">Albumina ↓ → ↑Fração Livre</div>
+          <div class="dc">Hipoalbuminemia dilucional → maior fração livre de drogas ligadas a proteínas (tiopental, diazepam, bupivacaína). Efeito clínico potencializado.</div>
+        </div>
+        <div class="dr dr-v">
+          <div class="dn">Volume de Distribuição ↑</div>
+          <div class="dc">Vd aumentado para drogas hidrossolúveis (rocurônio, succinilcolina). Pode necessitar ajuste de dose inicial.</div>
+        </div>
+        <div class="dr dr-v">
+          <div class="dn">Clearance Renal ↑</div>
+          <div class="dc">TFG aumenta 50% → maior eliminação de drogas com excreção renal (antibióticos, magnésio).</div>
+        </div>
+        <div class="alert a-red" style="margin-top:10px">
+          <strong>MAC Reduzida 28-40%:</strong> Progesterona e endorfinas endógenas ↓ necessidade de agentes inalatórios. Cuidado com sobredosagem de halogenados — risco de atonia uterina e depressão neonatal.
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /obs-fisiologia -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 2 — RAQUIANESTESIA PARA CESÁREA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="obs-raqui">
+    <div class="page-wrap">
+
+    <div class="alert a-green" style="margin-bottom:12px">
+      <strong>Técnica de escolha para cesárea eletiva e urgência relativa.</strong> Rápida, confiável, evita via aérea difícil, analgesia excelente. Reservar AG para contraindicações absolutas ao bloqueio neuraxial.
+    </div>
+
+    <!-- INDICAÇÃO E NÍVEL -->
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">01</span> Nível Sensitivo e Protocolo
+      </div>
+      <div class="card-body">
+        <div class="alert a-gold" style="margin-bottom:10px">
+          <strong>Nível alvo: T4 (linha mamilar) bilateral</strong> — indispensável para bloquear tração peritoneal e dor visceral. Testar bilateralmente com pinprick ou gelo antes de iniciar.
+        </div>
+
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--pink);letter-spacing:.6px;margin:14px 0 8px">PROTOCOLO PADRÃO — EVIDÊNCIA NÍVEL A (SOAP/SAESP)</div>
+
+        <div style="background:rgba(233,30,123,.08);border:1px solid rgba(233,30,123,.2);border-radius:8px;padding:12px;margin-bottom:10px">
+          <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:800;color:var(--pink);background:rgba(233,30,123,.15);padding:2px 10px;border-radius:4px">INTRATECAL</span>
+          </div>
+          <div style="font-size:13px;line-height:1.7;color:var(--text)">
+            <strong>Bupivacaína hiperbárica 0.5%:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">10-12 mg</span> (2-2.4 mL)<br>
+            <strong>Morfina intratecal:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">50-100 mcg</span> → analgesia pós-op 18-24h<br>
+            <strong>Fentanil:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">15-25 mcg</span> → onset rápido, melhora qualidade do bloqueio
+          </div>
+        </div>
+
+        <div class="dr dr-g">
+          <div class="dn">Posição</div>
+          <div class="dc">Sentada ou decúbito lateral esquerdo. Punção em L3-L4 ou L4-L5. Agulha ponta-de-lápis 25-27G (Whitacre/Sprotte) — menor incidência de CPPD.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILAXIA DA HIPOTENSÃO -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Profilaxia da Hipotensão — Evidência Nível A
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>Incidência:</strong> 70-80% SEM profilaxia → &lt;20% COM fenilefrina profilática. Iniciar ANTES da punção.
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">1</span>
+          <div style="font-size:13px;line-height:1.6">
+            <strong>Fenilefrina infusão profilática</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px">25-50 mcg/min</span><br>
+            <span style="font-size:12px;color:var(--muted)">1ª escolha — preserva pH fetal, mantém pós-carga. Titular conforme PA. Norepinefrina 4-8 mcg/min é alternativa (NYSORA 2023).</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">2</span>
+          <div style="font-size:13px;line-height:1.6">
+            <strong>Cristaloide co-loading</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold);background:rgba(232,160,32,.15);padding:2px 8px;border-radius:4px">500-1000 mL</span><br>
+            <span style="font-size:12px;color:var(--muted)">No momento da punção (co-loading) — NÃO pré-loading isolado (evidência fraca, redistribui antes do bloqueio).</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">3</span>
+          <div style="font-size:13px;line-height:1.6">
+            <strong>Deslocamento uterino esquerdo SEMPRE</strong><br>
+            <span style="font-size:12px;color:var(--muted)">Inclinação lateral esquerda 15-30° ou coxim sob quadril direito. Manter até extração fetal.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HIPOTENSÃO PÓS-RAQUI -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Manejo da Hipotensão Pós-Raqui
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Definição</div>
+          <div class="dc">PAS &lt;100 mmHg ou queda &gt;20% do basal. Acompanhada de náusea/vômito, tontura, bradicardia reflexa.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Tratamento — Janela &lt;2 minutos</div>
+          <div class="dc">
+            <strong>1ª linha:</strong> Fenilefrina 100 mcg IV bolus (repetir a cada 1-2 min se necessário).<br>
+            <strong>Se FC &lt;60 + hipotensão:</strong> Efedrina 5-10 mg IV (ação β₁ cronotrópica).<br>
+            <strong>Se bradicardia grave (FC &lt;50):</strong> Atropina 0.5-1 mg IV.<br>
+            <strong>Tratar em &lt;2 min</strong> para evitar acidose fetal (↓perfusão uteroplacentária).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUEIO ALTO E TOTAL -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Bloqueio Alto / Raqui Total
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>Raro (&lt;1:5000)</strong> — extensão inadvertida para C3-C4 ou bloqueio do tronco encefálico.
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Sinais de Alerta</div>
+          <div class="dc">Dispneia, dificuldade de falar, fraqueza de membros superiores (bloqueio C5-C6), sensação de "não consigo respirar", bradicardia grave, hipotensão refratária.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Tratamento</div>
+          <div class="dc">
+            1) Manter calma e comunicar à paciente<br>
+            2) Decúbito dorsal com deslocamento uterino<br>
+            3) Vasopressores agressivos (fenilefrina + efedrina)<br>
+            4) Se apneia → ventilação com BVM + O₂ 100%<br>
+            5) Intubação orotraqueal se necessário<br>
+            6) Suporte ABC completo até regressão do bloqueio
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLICAÇÕES -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">05</span> Complicações Específicas
+      </div>
+      <div class="card-body">
+        <div class="dr dr-v">
+          <div class="dn">CPPD (Cefaleia Pós-Punção Dural)</div>
+          <div class="dc">Agulhas 25-27G Whitacre/Sprotte → incidência &lt;1%. Cefaleia postural (piora em pé, melhora deitada), frontal-occipital, 24-72h após. <strong>Tratamento:</strong> repouso + hidratação + cafeína 300 mg VO a cada 8h → se &gt;24h sem melhora: <strong>blood patch epidural</strong> (15-20 mL de sangue autólogo) — taxa de sucesso &gt;90%.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Lombalgia Pós-Raqui</div>
+          <div class="dc">Mais associada a posicionamento cirúrgico e relaxamento ligamentar (relaxina) do que à técnica neuraxial em si. Tratamento: analgesia simples + fisioterapia.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Hematoma Epidural</div>
+          <div class="dc">Raríssimo (&lt;1:150.000). Fatores de risco: coagulopatia, uso recente de LMWH, plaquetas &lt;75.000. Sinais: dor lombar intensa + déficit neurológico progressivo. <strong>Emergência neurocirúrgica — laminectomia em &lt;8h.</strong></div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /obs-raqui -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 3 — PERIDURAL DE PARTO
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="obs-peridural">
+    <div class="page-wrap">
+
+    <div class="alert a-blue" style="margin-bottom:12px">
+      <strong>Indicações:</strong> Analgesia de trabalho de parto (padrão-ouro), possibilidade de extensão para cesárea de urgência. A analgesia peridural <strong>NÃO aumenta taxa de cesariana</strong> (Cochrane 2018, metanálise).
+    </div>
+
+    <!-- CSE -->
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">01</span> Técnica CSE (Combined Spinal-Epidural) — Padrão-Ouro
+      </div>
+      <div class="card-body">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--pink);letter-spacing:.6px;margin-bottom:10px">NEEDLE-THROUGH-NEEDLE EM L3-L4 OU L4-L5</div>
+
+        <div style="background:rgba(233,30,123,.08);border:1px solid rgba(233,30,123,.2);border-radius:8px;padding:12px;margin-bottom:10px">
+          <div style="font-size:12px;font-weight:700;color:var(--pink);margin-bottom:6px">COMPONENTE RAQUI (analgesia rápida — onset 2-5 min)</div>
+          <div style="font-size:13px;line-height:1.7">
+            <strong>Bupivacaína isobárica:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">1.25-2.5 mg</span><br>
+            <strong>Fentanil:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">15-25 mcg</span><br>
+            <span style="font-size:11px;color:var(--muted)">Dose baixa intratecal = analgesia sem bloqueio motor significativo → walking epidural</span>
+          </div>
+        </div>
+
+        <div style="background:rgba(52,152,219,.08);border:1px solid rgba(52,152,219,.2);border-radius:8px;padding:12px">
+          <div style="font-size:12px;font-weight:700;color:var(--blue);margin-bottom:6px">COMPONENTE PERIDURAL (manutenção contínua)</div>
+          <div style="font-size:13px;line-height:1.7">
+            <strong>Solução:</strong> Bupivacaína <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">0.0625-0.125%</span> + Fentanil <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">2 mcg/mL</span><br>
+            <span style="font-size:11px;color:var(--muted)">Cateter avançado 3-5 cm no espaço peridural. Aspiração negativa obrigatória.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERIDURAL CONTÍNUA -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Analgesia Peridural Contínua
+      </div>
+      <div class="card-body">
+        <div class="dr dr-b">
+          <div class="dn">Solução Padrão</div>
+          <div class="dc">Bupivacaína 0.0625-0.125% + Fentanil 1-2 mcg/mL (ou sufentanil 0.3-0.5 mcg/mL).</div>
+        </div>
+        <div class="dr dr-b">
+          <div class="dn">Infusão Basal</div>
+          <div class="dc">8-12 mL/h. Ajustar conforme dor e progressão do TP.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">PCEA (Patient-Controlled Epidural Analgesia)</div>
+          <div class="dc">Bolus: <strong>5-8 mL</strong> | Lockout: <strong>10-15 min</strong> | Limite horário: 20-30 mL/h. PCEA reduz consumo total de AL e melhora satisfação materna.</div>
+        </div>
+        <div class="dr dr-b">
+          <div class="dn">PIEB (Programmed Intermittent Epidural Bolus)</div>
+          <div class="dc">Bolus automáticos de 6-10 mL a cada 30-60 min. Melhor distribuição no espaço peridural que infusão contínua. Tendência atual: PIEB + PCEA &gt; infusão contínua + PCEA.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXTENSÃO PARA CESÁREA -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Extensão para Cesárea de Urgência
+      </div>
+      <div class="card-body">
+        <div class="alert a-orange" style="margin-bottom:10px">
+          <strong>Cateter peridural funcionante = grande vantagem.</strong> Evita AG e seus riscos (via aérea difícil, broncoaspiração).
+        </div>
+
+        <div style="background:rgba(232,160,32,.08);border:1px solid rgba(232,160,32,.2);border-radius:8px;padding:12px;margin-bottom:10px">
+          <div style="font-size:13px;line-height:1.7">
+            <strong>Lidocaína 2% com adrenalina 1:200.000:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">15-20 mL</span><br>
+            → Nível T4 em <strong>10-15 minutos</strong><br>
+            <strong>Bicarbonato:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">1 mL para cada 10 mL de lidocaína</span> → alcaliniza e acelera onset<br>
+            <span style="font-size:11px;color:var(--muted)">Alternativa: 2-cloroprocaína 3% 15-20 mL — onset mais rápido (5-7 min), menor cardiotoxicidade</span>
+          </div>
+        </div>
+
+        <div class="dr dr-r">
+          <div class="dn">Se Falha do Cateter</div>
+          <div class="dc">
+            <strong>Opção 1:</strong> Raquianestesia de emergência (dose reduzida se bloqueio parcial existente)<br>
+            <strong>Opção 2:</strong> Anestesia geral (RSI) — indicada em emergência extrema (DIP grave, prolapso de cordão)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FALHA DO CATETER -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Falha do Cateter Peridural
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>Falha técnica:</strong> 15-20% dos partos (NYSORA 2023). Analgesia inadequada, assimétrica ou ausente.
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Causas de Falha</div>
+          <div class="dc">Cateter extravascular (migração), inserção intratecal inadvertida, espaço subdural, cateter com nó/kink, espaço peridural septado (analgesia unilateral).</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Teste de Dose</div>
+          <div class="dc">
+            <strong>Lidocaína 1.5% + Adrenalina 15 mcg (3 mL):</strong><br>
+            • ↑FC &gt;20 bpm em 30-60 seg = <strong>intravascular</strong> → retirar e reposicionar<br>
+            • Bloqueio motor rápido bilateral = <strong>intratecal</strong> → parar infusão, monitorar nível<br>
+            • Sem efeito = cateter extravascular → considerar repassar
+          </div>
+        </div>
+
+        <div class="dr dr-g">
+          <div class="dn">Efeitos sobre o Parto</div>
+          <div class="dc">
+            Peridural <strong>NÃO aumenta taxa de cesariana</strong> (Cochrane 2018).<br>
+            Pode prolongar 2º estágio levemente (15-30 min).<br>
+            Ocitocina pode ser necessária para manter dinâmica uterina.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /obs-peridural -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 4 — PRÉ-ECLÂMPSIA / HELLP
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="obs-preeclampsia">
+    <div class="page-wrap">
+
+    <div class="alert a-red" style="margin-bottom:12px">
+      <strong>Pré-eclâmpsia:</strong> Principal causa de morbimortalidade materna relacionada à hipertensão. O anestesiologista tem papel central no manejo hemodinâmico, anticonvulsivante e na escolha da técnica anestésica.
+    </div>
+
+    <!-- DEFINIÇÃO -->
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">01</span> Definição — ACOG 2023
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Critérios Diagnósticos</div>
+          <div class="dc">
+            PAS ≥140 ou PAD ≥90 mmHg em <strong>2 medidas</strong> (intervalo de 4h) após 20 semanas, em paciente previamente normotensa.<br>
+            <strong>Mais:</strong> Proteinúria ≥300 mg/24h OU razão P/Cr ≥0.3 OU marcadores de dano orgânico (plaquetas ↓, creatinina ↑, transaminases ↑, edema pulmonar, sintomas cerebrais/visuais).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CRITÉRIOS DE GRAVIDADE -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Critérios de Gravidade — Qualquer um = GRAVE
+      </div>
+      <div class="card-body">
+        <div style="display:grid;gap:6px">
+          <div class="dr dr-r">
+            <div class="dn">PAS ≥160 ou PAD ≥110 mmHg</div>
+            <div class="dc">Em 2 medidas com intervalo de 15 min (urgência hipertensiva). Tratar em &lt;30-60 min.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Plaquetas &lt;100.000</div>
+            <div class="dc">Sugere consumo plaquetário — excluir HELLP, CIVD, PTT.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Creatinina &gt;1.1 mg/dL</div>
+            <div class="dc">Ou dobro do basal. Indica disfunção renal.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Transaminases &gt;2x normal</div>
+            <div class="dc">AST/ALT elevadas — dano hepatocelular. Dor em barra epigástrica = sinal de alerta.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Edema Pulmonar</div>
+            <div class="dc">Multifatorial: permeabilidade capilar ↑, sobrecarga volêmica iatrogênica, disfunção diastólica.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Cefaleia Intensa / Distúrbios Visuais</div>
+            <div class="dc">Cefaleia nova, intensa, não responsiva a analgésicos. Escotomas, fosfenas, amaurose transitória → iminência de eclâmpsia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HELLP -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#C0392B)">
+        <span class="card-num">03</span> Síndrome HELLP
+      </div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:start;margin-bottom:10px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--red)">H</span>
+          <span style="font-size:13px"><strong>Hemolysis</strong> — esquizócitos em esfregaço, ↑bilirrubina indireta, ↑DHL &gt;600, haptoglobina ↓</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--red)">EL</span>
+          <span style="font-size:13px"><strong>Elevated Liver enzymes</strong> — AST/ALT &gt;70-100 U/L (2x limite superior)</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--red)">LP</span>
+          <span style="font-size:13px"><strong>Low Platelets</strong> — &lt;100.000 (grave &lt;50.000)</span>
+        </div>
+        <div class="alert a-red">
+          <strong>Implicação anestésica:</strong> HELLP com plaquetas &lt;75.000 → CI relativa a bloqueio neuraxial. Avaliar coagulograma completo (fibrinogênio, TP, TTPa). Considerar tromboelastografia se disponível.
+        </div>
+      </div>
+    </div>
+
+    <!-- ANTI-HIPERTENSIVOS -->
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">04</span> Anti-Hipertensivos Agudos — 1ª Linha
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Labetalol — 1ª escolha para muitos protocolos</div>
+          <div class="dc">20 mg IV inicial, dobrar a cada 10 min (40→80→80 mg). Máximo 300 mg. Bloqueador α1 e β. Evitar em asma, ICC descompensada, FC &lt;60.</div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Hidralazina</div>
+          <div class="dc">5 mg IV a cada 20 min (máx 20 mg). Vasodilatação direta arteriolar. Risco: hipotensão brusca + taquicardia reflexa → cuidado com perfusão uteroplacentária.</div>
+        </div>
+        <div class="dr dr-g">
+          <div class="dn">Nifedipina</div>
+          <div class="dc">10-20 mg VO (liberação imediata). Eficaz, mas absorção variável. Evitar sublingual (queda PA imprevisível). Não usar com MgSO₄ em altas doses (potencialização).</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Nitroprussiato</div>
+          <div class="dc">Apenas em emergência hipertensiva refratária a todos os demais. Risco de toxicidade por cianeto fetal. Dose: 0.25-5 mcg/kg/min. Monitorar tiocianato.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SULFATO DE MAGNÉSIO -->
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">05</span> Sulfato de Magnésio — Anticonvulsivante
+      </div>
+      <div class="card-body">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--violet);letter-spacing:.6px;margin-bottom:10px">PROTOCOLO ZUSPAN</div>
+
+        <div style="background:rgba(155,89,182,.08);border:1px solid rgba(155,89,182,.2);border-radius:8px;padding:12px;margin-bottom:12px">
+          <div style="font-size:13px;line-height:1.7">
+            <strong>Dose de ataque:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">4-6 g IV</span> em 15-20 min<br>
+            <strong>Manutenção:</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">1-2 g/h</span> em infusão contínua<br>
+            <strong>Monitorar:</strong> reflexo patelar (1º sinal de toxicidade), FR (&gt;12 irpm), diurese (&gt;0.5 mL/kg/h)
+          </div>
+        </div>
+
+        <!-- TABELA TOXICIDADE -->
+        <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px">Toxicidade por Magnésio — Níveis Séricos:</div>
+        <div style="overflow-x:auto;margin-bottom:12px">
+<div class="tbl-wrap">
+          <table class="tbl" style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead>
+              <tr style="background:rgba(155,89,182,.15)">
+                <th style="padding:8px 10px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--violet);border-bottom:2px solid rgba(155,89,182,.3)">Nível Mg²⁺</th>
+                <th style="padding:8px 10px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--violet);border-bottom:2px solid rgba(155,89,182,.3)">Efeito Clínico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:8px 10px;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--green)">4-7 mEq/L</td>
+                <td style="padding:8px 10px">Nível terapêutico anticonvulsivante</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:8px 10px;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--gold)">7-10 mEq/L</td>
+                <td style="padding:8px 10px">Perda do reflexo patelar ⚠️</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:8px 10px;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--orange)">10-13 mEq/L</td>
+                <td style="padding:8px 10px">Paralisia respiratória 🚨</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 10px;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--red)">&gt;15 mEq/L</td>
+                <td style="padding:8px 10px">Parada cardiorrespiratória (PCR) ☠️</td>
+              </tr>
+            </tbody>
+          </table>
+</div>
+        </div>
+
+        <div style="background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.2);border-radius:8px;padding:12px;margin-bottom:10px">
+          <div style="font-size:12px;font-weight:700;color:var(--red);margin-bottom:4px">ANTÍDOTO:</div>
+          <div style="font-size:13px;line-height:1.6">
+            <strong>Gluconato de Cálcio</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">1 g IV (10 mL de solução 10%)</span> em 3 min.<br>
+            Manter cálcio disponível à beira-leito sempre que MgSO₄ estiver em uso.
+          </div>
+        </div>
+
+        <div class="alert a-orange">
+          <strong>Interação anestésica:</strong> Magnésio potencializa BNM (bloqueadores neuromusculares). Dose de rocurônio reduzida em <strong>30-50%</strong>. Monitorar TOF obrigatório. Sugamadex funciona normalmente.
+        </div>
+      </div>
+    </div>
+
+    <!-- TÉCNICA ANESTÉSICA -->
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">06</span> Técnica Anestésica na Pré-Eclâmpsia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-g">
+          <div class="dn">Raqui — Preferida (mesmo com plaquetas 75.000-100.000)</div>
+          <div class="dc">Se coagulograma global normal (TP, TTPa, fibrinogênio OK). Vantagem: controle hemodinâmico gradual, reduz PA progressivamente. Usar dose padrão de bupivacaína. Fenilefrina profilática.</div>
+        </div>
+        <div class="dr dr-b">
+          <div class="dn">Peridural — Alternativa</div>
+          <div class="dc">Reduz pressão arterial progressivamente com titulação. Útil em TP prolongado. Mesmas restrições plaquetárias para inserção e retirada do cateter.</div>
+        </div>
+        <div class="dr dr-r">
+          <div class="dn">Anestesia Geral — Reservada para CI Neuraxiais</div>
+          <div class="dc">
+            <strong>Risco principal:</strong> Spike hipertensivo na laringoscopia → hemorragia cerebral (principal causa de morte em eclâmpsia).<br><br>
+            <strong>Pré-tratar:</strong><br>
+            • Labetalol 1 mg/kg IV 5 min antes da indução<br>
+            • OU Remifentanil 1-2 mcg/kg bolus antes da laringoscopia<br><br>
+            <strong>RSI:</strong> Etomidato 0.3 mg/kg + Succinilcolina 1.5 mg/kg (ou Rocurônio 1.2 mg/kg + sugamadex disponível)<br><br>
+            <strong>Via aérea difícil:</strong> incidência maior (edema laríngeo acentuado). <strong>Videolaringoscópio de 1ª escolha.</strong> TET 6.0-6.5 mm.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /obs-preeclampsia -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 5 — FARMACOLOGIA OBSTÉTRICA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="obs-farmaco">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px">
+      <strong>Passagem placentária:</strong> Favorecida por baixo peso molecular, alta lipossolubilidade, baixa ligação proteica e forma não-ionizada. Quase todos os anestésicos cruzam a placenta — o que varia é a velocidade e magnitude.
+    </div>
+
+    <!-- TABELA TRANSFERÊNCIA -->
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">01</span> Drogas Anestésicas e Transferência Placentária
+      </div>
+      <div class="card-body">
+        <div style="overflow-x:auto">
+<div class="tbl-wrap wide">
+          <table class="tbl" style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead>
+              <tr style="background:rgba(233,30,123,.12)">
+                <th style="padding:8px 6px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3);overflow-wrap:anywhere;word-break:normal">Droga</th>
+                <th style="padding:8px 6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3)">Transf.</th>
+                <th style="padding:8px 6px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3)">Efeito Fetal/Neonatal</th>
+                <th style="padding:8px 6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3)">Segurança</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Tiopental / Propofol</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--red);font-weight:700">Alta</span></td>
+                <td style="padding:6px">Depressão neonatal transitória</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green)">✓ dose única</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Cetamina</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--red);font-weight:700">Alta</span></td>
+                <td style="padding:6px">Tônus aumentado neonatal</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--orange)">⚠ evitar &gt;1 mg/kg</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Opioides IV</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--red);font-weight:700">Alta</span></td>
+                <td style="padding:6px">Depressão respiratória, APGAR ↓</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--orange)">⚠ monitorar RN</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Morfina intratecal</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green);font-weight:700">Mínima</span></td>
+                <td style="padding:6px">Segura (dose sistêmica desprezível)</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green)">✓ prurido materno</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Lidocaína / Bupivacaína</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--gold);font-weight:700">Moderada</span></td>
+                <td style="padding:6px">Bradicardia fetal (doses altas ALs)</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green)">✓ dose padrão</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Sulfato de Magnésio</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--red);font-weight:700">Alta</span></td>
+                <td style="padding:6px">Hipotonia neonatal</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--orange)">⚠ monitorar RN</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Labetalol</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--gold);font-weight:700">Moderada</span></td>
+                <td style="padding:6px">Bradicardia, hipoglicemia neonatal</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--orange)">⚠ monitorar RN</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Diazepam</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--red);font-weight:700">Alta</span></td>
+                <td style="padding:6px">Síndrome do bebê flácido</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--red)">✗ EVITAR</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">BNM (não-desp.)</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green);font-weight:700">Mínima</span></td>
+                <td style="padding:6px">Seguro (quaternários ionizados)</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green)">✓ OK</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Succinilcolina</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green);font-weight:700">Mínima</span></td>
+                <td style="padding:6px">Seguro (CI rápida por pseudoCoE)</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green)">✓ OK</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:6px;font-weight:600">Neostigmina</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green);font-weight:700">Baixa</span></td>
+                <td style="padding:6px">Bradicardia fetal possível</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--orange)">⚠ usar c/ atropina</span></td>
+              </tr>
+              <tr>
+                <td style="padding:6px;font-weight:600">Vasopressina</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--green);font-weight:700">Não</span></td>
+                <td style="padding:6px">Vasoespasmo uterino → sofrimento fetal</td>
+                <td style="padding:6px;text-align:center"><span style="color:var(--red)">✗ CI</span></td>
+              </tr>
+            </tbody>
+          </table>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UTEROTÔNICOS -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Uterotônicos — Pós-Parto
+      </div>
+      <div class="card-body">
+        <div class="dr dr-g">
+          <div class="dn">Ocitocina — 1ª LINHA</div>
+          <div class="dc">
+            <strong>5-10 UI IV lento (&gt;30 seg)</strong> ou infusão 10-40 UI/L de cristaloide.<br>
+            Risco: hipotensão se bolus rápido (vasodilatação + efeito antidiurético).<br>
+            <span style="font-size:11px;color:var(--muted)">Bolus rápido de ocitocina pode causar colapso cardiovascular — SEMPRE infundir lentamente.</span>
+          </div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Metilergometrina (Ergot) — 2ª LINHA</div>
+          <div class="dc">
+            <strong>0.2 mg IM</strong> — potente vasoconstritor, contração uterina sustentada.<br>
+            <span style="color:var(--red);font-weight:700">CI: hipertensas (pré-eclâmpsia), doença coronariana, Raynaud.</span> Risco de crise hipertensiva grave.
+          </div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Carboprost (Hemabate® — PGF2α) — 3ª LINHA</div>
+          <div class="dc">
+            <strong>250 mcg IM</strong> a cada 15-90 min (máx 2 mg).<br>
+            <span style="color:var(--red);font-weight:700">CI: asma (broncoespasmo grave).</span> Efeitos colaterais: náusea, diarreia, febre, broncoconstrição.
+          </div>
+        </div>
+        <div class="dr dr-y">
+          <div class="dn">Misoprostol — RESERVA</div>
+          <div class="dc">
+            <strong>800-1000 mcg retal ou sublingual.</strong> Reservado quando demais falham.<br>
+            Efeitos: tremores, febre (até 40°C), diarreia. Menos previsível que carboprost.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOCOLÍTICOS -->
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">03</span> Tocolíticos Intraoperatórios
+      </div>
+      <div class="card-body">
+        <div class="alert a-blue" style="margin-bottom:10px">
+          <strong>Indicação:</strong> Relaxamento uterino rápido para extração fetal em apresentação anômala, versão interna, retenção placentária.
+        </div>
+        <div class="dr dr-b">
+          <div class="dn">Nitroglicerina IV</div>
+          <div class="dc">
+            <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">50-200 mcg IV</span> em bolus. Onset: 30-60 seg. Duração: 1-2 min.<br>
+            Efeito transitório e previsível. Pode repetir. Risco: hipotensão materna transitória.<br>
+            <span style="font-size:11px;color:var(--muted)">Alternativa: halogenados (sevoflurano 2-3%) aumentam relaxamento uterino mas também sangramento.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /obs-farmaco -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 6 — EMERGÊNCIAS OBSTÉTRICAS
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="obs-emergencias">
+    <div class="page-wrap">
+
+    <!-- HPP -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#C0392B)">
+        <span class="card-num">🚨</span> Hemorragia Pós-Parto (HPP)
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>Definição:</strong> Perda &gt;500 mL (parto vaginal) ou &gt;1000 mL (cesárea), ou qualquer perda com instabilidade hemodinâmica. Principal causa de mortalidade materna no mundo.
+        </div>
+
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--red);letter-spacing:.6px;margin-bottom:8px">CAUSAS — 4 Ts</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:14px">
+          <div style="background:rgba(192,57,43,.1);border-radius:6px;padding:8px 10px;text-align:center">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--red)">TÔNUS</div>
+            <div style="font-size:11px;color:var(--muted)">80% dos casos — atonia uterina</div>
+          </div>
+          <div style="background:rgba(232,160,32,.1);border-radius:6px;padding:8px 10px;text-align:center">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--gold)">TECIDO</div>
+            <div style="font-size:11px;color:var(--muted)">Restos placentários</div>
+          </div>
+          <div style="background:rgba(52,152,219,.1);border-radius:6px;padding:8px 10px;text-align:center">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--blue)">TRAUMA</div>
+            <div style="font-size:11px;color:var(--muted)">Lacerações, ruptura uterina</div>
+          </div>
+          <div style="background:rgba(155,89,182,.1);border-radius:6px;padding:8px 10px;text-align:center">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--violet)">TROMBINA</div>
+            <div style="font-size:11px;color:var(--muted)">CIVD, coagulopatia</div>
+          </div>
+        </div>
+
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--red);letter-spacing:.6px;margin-bottom:8px">MANEJO ESCALONADO</div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">1</span>
+          <span style="font-size:13px;line-height:1.6"><strong>Ocitocina</strong> 10-40 UI em infusão contínua + massagem uterina bimanual</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">2</span>
+          <div style="font-size:13px;line-height:1.6">
+            <strong>Ácido Tranexâmico</strong> <span style="font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--gold)">1 g IV em 10 min</span><br>
+            <span style="font-size:11px;color:var(--muted)">WOMAN Trial — ↓mortalidade por HPP se administrado em &lt;3h do início do sangramento</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">3</span>
+          <span style="font-size:13px;line-height:1.6"><strong>Metilergometrina</strong> 0.2 mg IM (se não hipertensa) + <strong>Misoprostol</strong> 800 mcg retal</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">4</span>
+          <span style="font-size:13px;line-height:1.6"><strong>Carboprost</strong> 250 mcg IM (se não asmática)</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">5</span>
+          <span style="font-size:13px;line-height:1.6"><strong>Balão de Bakri</strong> intrauterino — tamponamento mecânico (verificar com 300-500 mL)</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">6</span>
+          <span style="font-size:13px;line-height:1.6"><strong>Ligadura de artérias uterinas</strong> / Embolização por radiologia intervencionista</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--pink);flex-shrink:0;min-width:24px">7</span>
+          <span style="font-size:13px;line-height:1.6"><strong>Histerectomia de emergência</strong> — decisão final se refratária a todas as medidas</span>
+        </div>
+
+        <div class="alert a-gold" style="margin-top:12px">
+          <strong>Protocolo de Transfusão Maciça (PTM):</strong> Ativar quando perda estimada &gt;1500 mL ou instabilidade. Relação CH:PFC:Plaquetas = 1:1:1. Fibrinogênio alvo &gt;200 mg/dL (crioprecipitado).
+        </div>
+      </div>
+    </div>
+
+    <!-- ELA -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#4A0080,#9B59B6)">
+        <span class="card-num">🚨</span> Embolia do Líquido Amniótico (ELA)
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:10px">
+          <strong>Raríssima (1:20.000-80.000) mas mortalidade 20-60%.</strong> Diagnóstico de exclusão — sem teste confirmatório.
+        </div>
+
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--violet);letter-spacing:.6px;margin-bottom:8px">TRÍADE CLÁSSICA</div>
+        <div style="display:grid;gap:6px;margin-bottom:12px">
+          <div class="dr dr-r">
+            <div class="dn">Hipóxia Aguda</div>
+            <div class="dc">Dessaturação súbita, dispneia intensa, cianose. Pode simular TEP ou broncoespasmo grave.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">Colapso Cardiovascular</div>
+            <div class="dc">Hipotensão grave → PCR. Insuficiência ventricular direita aguda (sobrecarga pressórica) seguida de falência biventricular.</div>
+          </div>
+          <div class="dr dr-r">
+            <div class="dn">CIVD (Coagulopatia Intravascular Disseminada)</div>
+            <div class="dc">Sangramento incoercível de múltiplos sítios. Consumo de fatores + fibrinólise. Pode ser a apresentação inicial em até 30% dos casos.</div>
+          </div>
+        </div>
+
+        <div class="dr dr-v">
+          <div class="dn">Tratamento — Suporte Máximo</div>
+          <div class="dc">
+            1) IOT + ventilação mecânica com O₂ 100%<br>
+            2) Vasopressores agressivos (noradrenalina, vasopressina)<br>
+            3) Hemoderivados: PTM imediato, fibrinogênio, crioprecipitado<br>
+            4) Cesárea perimortem se feto in útero e colapso materno<br>
+            5) Considerar ECMO em casos refratários (se disponível)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLACENTA PRÉVIA/ACRETA -->
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">🚨</span> Placenta Prévia / Acreta
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r">
+          <div class="dn">Placenta Acreta — Espectro de Invasão</div>
+          <div class="dc">
+            <strong>Acreta:</strong> aderida ao miométrio (mais comum)<br>
+            <strong>Increta:</strong> invade o miométrio<br>
+            <strong>Percreta:</strong> ultrapassa serosa ± invade bexiga/estruturas adjacentes<br>
+            Principal fator de risco: cesárea prévia + placenta prévia (risco até 60% após 3+ cesáreas).
+          </div>
+        </div>
+        <div class="alert a-red" style="margin-top:10px;margin-bottom:10px">
+          <strong>Planejamento obrigatório para acretismo:</strong>
+        </div>
+        <div style="font-size:13px;line-height:1.8;padding-left:12px">
+          • Acesso venoso duplo calibroso (14-16G) + acesso central considerado<br>
+          • Banco de sangue alertado — mínimo 4 CH, 4 PFC, 1 pool de plaquetas<br>
+          • PTM preparado e disponível na sala<br>
+          • Equipe multidisciplinar: obstetra sênior + urologista ± radiologia intervencionista<br>
+          • Possibilidade de histerectomia discutida previamente<br>
+          • Cell saver pode ser considerado (filtro leucocitário)
+        </div>
+        <div class="dr dr-y" style="margin-top:10px">
+          <div class="dn">Técnica Anestésica</div>
+          <div class="dc">Geralmente <strong>anestesia geral</strong> (sangramento imprevisível e potencialmente catastrófico). Alguns centros iniciam com neuraxial + conversão para AG se necessário. Decisão institucional.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PCR OBSTÉTRICA -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#7F0000,#C0392B)">
+        <span class="card-num">🚨</span> PCR Obstétrica — RCP Modificada
+      </div>
+      <div class="card-body">
+        <div class="alert a-red" style="margin-bottom:12px">
+          <strong>Modificações cruciais na gestante:</strong> A fisiologia gestacional exige adaptações no ACLS padrão.
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--red);flex-shrink:0;min-width:24px">1</span>
+          <div style="font-size:13px;line-height:1.6">
+            <strong>Deslocamento uterino manual para ESQUERDA</strong> durante compressões torácicas<br>
+            <span style="font-size:11px;color:var(--muted)">Mão firme empurrando útero para a esquerda — obrigatório a partir de 20 semanas.</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--red);flex-shrink:0;min-width:24px">2</span>
+          <div style="font-size:13px;line-height:1.6">
+            <strong>IOT precoce</strong> — estômago cheio, edema de via aérea. Considerar tubo 6.0-6.5.<br>
+            <span style="font-size:11px;color:var(--muted)">Ventilação com BVM enquanto prepara material. Cricotireoidostomia como backup.</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:var(--red);flex-shrink:0;min-width:24px">3</span>
+          <div style="font-size:13px;line-height:1.6">
+            <strong>Acesso IV acima do diafragma</strong> (veia cava inferior pode estar comprimida)<br>
+          </div>
+        </div>
+
+        <div style="background:rgba(192,57,43,.15);border:2px solid rgba(192,57,43,.4);border-radius:8px;padding:14px;margin-top:12px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:800;color:var(--red);letter-spacing:.6px;margin-bottom:6px">⏱️ CESÁREA PERIMORTEM — 5 MINUTOS</div>
+          <div style="font-size:13px;line-height:1.6">
+            Se ausência de ROSC após 4 minutos de RCP adequada → <strong>cesárea perimortem imediata</strong>.<br>
+            Objetivo: <strong>salva MÃE e BEBÊ</strong> — o esvaziamento uterino remove a compressão aortocaval e melhora o retorno venoso e DC materno em até 25-30%.<br>
+            <span style="font-size:11px;color:var(--muted)">Não esperar confirmação fetal. A cesárea perimortem é um procedimento de RESSUSCITAÇÃO MATERNA.</span>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;font-size:12px;font-weight:700;color:var(--text)">Causas obstétricas de PCR:</div>
+        <div style="font-size:12px;line-height:1.8;padding-left:12px;color:var(--muted)">
+          • Embolia do líquido amniótico<br>
+          • Eclâmpsia → convulsões → hipóxia<br>
+          • Hemorragia pós-parto maciça<br>
+          • Anestesia geral: falha de VA, broncoaspiração<br>
+          • Raqui total / anestesia local sistêmica (LAST)<br>
+          • Cardiomiopatia periparto<br>
+          • TEP maciço
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /obs-emergencias -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TAB 7 — CASOS CLÍNICOS
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="obs-casos">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px">
+      <strong>3 Cenários TEA/TSA</strong> — clique no cabeçalho para expandir a discussão e resolução.
+    </div>
+
+    <!-- CASO 1 -->
+    <div class="caso-card" id="obcaso1">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <div class="caso-num">1</div>
+        <div class="caso-title">Hipotensão Pós-Raqui em Cesárea Eletiva</div>
+        <div class="caso-arrow">›</div>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">
+          Gestante 32 anos, 38 semanas, ASA II (gestação), cesárea eletiva por apresentação pélvica, sem comorbidades. Raquianestesia realizada com bupivacaína hiperbárica 12 mg + morfina 80 mcg + fentanil 20 mcg. Nível T4 confirmado bilateralmente. Fenilefrina profilática <strong>não foi iniciada</strong>. Após 5 minutos: PA 80/50 mmHg, FC 105 bpm, náuseas intensas. Como manejar?
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:var(--pink);margin:12px 0 8px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px">RESOLUÇÃO</div>
+
+        <div style="font-size:13px;line-height:1.8">
+          <strong>1. Diagnóstico:</strong> Hipotensão pós-raqui por bloqueio simpático extenso (T4) + compressão aortocaval. Incidência 70-80% sem profilaxia.<br><br>
+
+          <strong>2. Tratamento imediato (janela &lt;2 min):</strong><br>
+          • <strong>Fenilefrina 100 mcg IV bolus</strong> — 1ª escolha (agonista α₁ puro, preserva pH fetal)<br>
+          • Repetir a cada 1-2 min se PA não normalizar<br>
+          • Confirmar <strong>deslocamento uterino esquerdo</strong> (coxim sob quadril D ou inclinação 15°)<br>
+          • Cristaloide em bolus rápido 500 mL<br><br>
+
+          <strong>3. Se FC cair para &lt;60 bpm + hipotensão persistente:</strong><br>
+          • <strong>Efedrina 5-10 mg IV</strong> (ação β₁ cronotrópica positiva)<br>
+          • Se bradicardia grave (&lt;50 bpm) → Atropina 0.5 mg IV<br><br>
+
+          <strong>4. Prevenção — lição do caso:</strong><br>
+          • Fenilefrina profilática em infusão <strong>25-50 mcg/min</strong> deveria ter sido iniciada antes/durante a punção (nível A de evidência — SOAP 2023)<br>
+          • Co-loading de cristaloide 500-1000 mL no momento da punção<br>
+          • A omissão da profilaxia resultou em hipotensão sintomática com risco de acidose fetal
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 2 -->
+    <div class="caso-card" id="obcaso2">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <div class="caso-num">2</div>
+        <div class="caso-title">Pré-Eclâmpsia Grave — Cesárea de Urgência</div>
+        <div class="caso-arrow">›</div>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">
+          Primigesta 28 anos, 36 semanas, admitida com PA 165/110 mmHg (confirmada em 2 medidas), plaquetas 78.000, cefaleia frontal intensa e escotomas. AST 145, DHL 680. Diagnóstico: pré-eclâmpsia grave + HELLP. Indicada cesárea de urgência. Qual técnica anestésica? Como manejar o pico hipertensivo? Quais cuidados com MgSO₄?
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:var(--pink);margin:12px 0 8px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px">RESOLUÇÃO</div>
+
+        <div style="font-size:13px;line-height:1.8">
+          <strong>1. Técnica anestésica — plaquetas 78.000:</strong><br>
+          • Plaquetas &lt;75.000 = CI relativa para neuraxial. Com 78.000 → <strong>zona cinzenta</strong><br>
+          • Avaliar: tendência (estão caindo?), coagulograma (TP, TTPa, fibrinogênio), tromboelastografia se disponível<br>
+          • Se coagulograma normal e plaquetas estáveis → <strong>raqui pode ser realizada</strong> (benefício supera risco — evita AG em pré-eclâmpsia)<br>
+          • Se plaquetas em queda rápida ou coagulograma alterado → <strong>Anestesia Geral (RSI)</strong><br><br>
+
+          <strong>2. Manejo hipertensivo ANTES da indução:</strong><br>
+          • <strong>Labetalol 20 mg IV</strong> → repetir 40→80 mg a cada 10 min se PA persistir ≥160/110<br>
+          • Alvo: PAS 140-150, PAD 90-100 (não normalizar — risco de hipoperfusão placentária)<br>
+          • Se AG necessária: <strong>Labetalol 1 mg/kg IV 5 min antes</strong> da laringoscopia para atenuar spike hipertensivo<br>
+          • OU <strong>Remifentanil 1-2 mcg/kg</strong> bolus antes da indução<br><br>
+
+          <strong>3. Se AG (RSI):</strong><br>
+          • Etomidato 0.3 mg/kg (estável hemodinamicamente) + Succinilcolina 1.5 mg/kg<br>
+          • Videolaringoscópio de 1ª escolha (edema laríngeo ↑)<br>
+          • TET 6.0-6.5 mm<br>
+          • Manter sevoflurano &lt;1 MAC (MAC reduzida + risco de atonia uterina)<br><br>
+
+          <strong>4. MgSO₄ — cuidados perioperatórios:</strong><br>
+          • Manter infusão (Zuspan: 1-2 g/h) durante e após cesárea<br>
+          • Magnésio <strong>potencializa BNM</strong> → dose de rocurônio reduzida 30-50%<br>
+          • Monitorar TOF obrigatório<br>
+          • Reflexo patelar: testar antes de cada bolus<br>
+          • Manter gluconato de cálcio 1 g à beira-leito (antídoto)<br>
+          • Pós-op: MgSO₄ por 24-48h. Monitorar diurese, FR, reflexos
+        </div>
+      </div>
+    </div>
+
+    <!-- CASO 3 -->
+    <div class="caso-card" id="obcaso3">
+      <div class="caso-hdr" onclick="toggleCaso(this)">
+        <div class="caso-num">3</div>
+        <div class="caso-title">Cesárea Urgente com Peridural In Situ</div>
+        <div class="caso-arrow">›</div>
+      </div>
+      <div class="caso-body">
+        <div class="caso-question">
+          Multípara 35 anos em trabalho de parto com peridural funcionante há 3 horas (bupivacaína 0.1% + fentanil 2 mcg/mL, PCEA). CTG mostra desacelerações tardias repetitivas. Decisão de cesárea urgente (categoria 2 — em 30 min). Cateter peridural in situ, última dose há 20 min. Como proceder? E se o cateter falhar?
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:var(--pink);margin:12px 0 8px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px">RESOLUÇÃO</div>
+
+        <div style="font-size:13px;line-height:1.8">
+          <strong>1. Extensão do bloqueio peridural (1ª opção):</strong><br>
+          • <strong>Lidocaína 2% com adrenalina 1:200.000: 15-20 mL</strong> pelo cateter peridural<br>
+          • Adicionar <strong>bicarbonato 1 mL/10 mL</strong> de lidocaína → alcaliniza e acelera onset<br>
+          • Alternativa: 2-Cloroprocaína 3% 15-20 mL (onset mais rápido: 5-7 min)<br>
+          • Alvo: nível T4 bilateral em 10-15 min<br>
+          • Monitorar PA e nível sensitivo a cada 2 min durante extensão<br><br>
+
+          <strong>2. Avaliação do cateter ANTES de injetar:</strong><br>
+          • Aspirar: verificar se não há sangue (intravascular) ou líquor (intratecal)<br>
+          • Avaliar funcionamento prévio: a analgesia estava adequada?<br>
+          • Se cateter com analgesia assimétrica ou inadequada → suspeitar falha<br><br>
+
+          <strong>3. Se cateter falhar (analgesia insuficiente em 10-15 min):</strong><br>
+          • <strong>Opção A — Raquianestesia:</strong> dose REDUZIDA (já há algum nível de bloqueio) — bupivacaína 7.5-10 mg hiperbárica. Risco de bloqueio alto se somar ao peridural residual.<br>
+          • <strong>Opção B — Anestesia Geral (RSI):</strong> Indicada se urgência extrema (categoria 1), falha completa do cateter, ou contraindicação a nova punção neuraxial.<br><br>
+
+          <strong>4. Pontos-chave da decisão:</strong><br>
+          • Categoria 2 (30 min) → tempo suficiente para tentar extensão peridural<br>
+          • Se fosse categoria 1 (DIP prolongada, prolapso de cordão) → AG imediata sem tentar extensão<br>
+          • Sempre ter material de AG pronto na sala mesmo quando usando extensão peridural<br>
+          • Comunicação com obstetra: informar tempo estimado para nível cirúrgico
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · SOAP 2023 · ACOG 2023 · Uso educacional</div>
+</div><!-- /obs-casos -->
+</div>
