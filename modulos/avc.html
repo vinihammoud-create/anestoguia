@@ -12,17 +12,17 @@
   </div>
 
   <!-- TAB BAR -->
-  <div class="tab-bar" id="avc-tabbar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('avc','fundamentos',this)">FUNDAMENTOS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','seldinger',this)">SELDINGER</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','vias',this)">VIAS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','ultrassom',this)">ULTRASSOM</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','cuidados',this)">CUIDADOS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','complicacoes',this)">COMPLIC.</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','hemo',this)">HEMODINÂMICA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','revisao',this)">Revisão</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','questoes',this)">Questões</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('avc','casos',this)">CASOS</button>
+  <div class="tab-bar" role="tablist" id="avc-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('avc','fundamentos',this)">FUNDAMENTOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('avc','seldinger',this)">SELDINGER</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('avc','vias',this)">VIAS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('avc','ultrassom',this)">ULTRASSOM</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('avc','cuidados',this)">CUIDADOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('avc','complicacoes',this)">COMPLIC.</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('avc','hemo',this)">HEMODINÂMICA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('avc','revisao',this)">Revisão</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('avc','questoes',this)">Questões</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('avc','casos',this)">CASOS</button>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
@@ -433,10 +433,10 @@
             <div class="tbl-wrap wide"><table class="tbl" style="width:100%;border-collapse:collapse;font-size:11px">
               <thead>
                 <tr style="background:var(--navy);color:white">
-                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px">VIA</th>
-                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px">VANTAGENS</th>
-                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px">DESVANTAGENS</th>
-                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px">INDICAÇÃO PREFERENCIAL</th>
+                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.5px">VIA</th>
+                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.5px">VANTAGENS</th>
+                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.5px">DESVANTAGENS</th>
+                  <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.5px">INDICAÇÃO PREFERENCIAL</th>
                 </tr>
               </thead>
               <tbody>
@@ -673,9 +673,9 @@
           <div class="tbl-wrap"><table style="width:100%;border-collapse:collapse;font-size:12px">
             <thead>
               <tr style="background:var(--navy);color:white">
-                <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px">VIA</th>
-                <th style="padding:7px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px">ADULTO MÉDIO</th>
-                <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px">REFERÊNCIA RX</th>
+                <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px">VIA</th>
+                <th style="padding:7px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px">ADULTO MÉDIO</th>
+                <th style="padding:7px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px">REFERÊNCIA RX</th>
               </tr>
             </thead>
             <tbody>
@@ -975,34 +975,34 @@
                 <div style="background:#7C3AED;border-radius:4px;padding:6px;margin-bottom:4px">
                   <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">N</span>
                 </div>
-                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Nervo<br>Femoral</div>
+                <div style="font-size:11px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Nervo<br>Femoral</div>
               </div>
               <div style="flex:1;min-width:50px;text-align:center">
                 <div style="background:#C0392B;border-radius:4px;padding:6px;margin-bottom:4px">
                   <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">A</span>
                 </div>
-                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Artéria<br>Femoral</div>
+                <div style="font-size:11px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Artéria<br>Femoral</div>
               </div>
               <div style="flex:1;min-width:50px;text-align:center">
                 <div style="background:#1B5E96;border-radius:4px;padding:6px;margin-bottom:4px">
                   <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">V</span>
                 </div>
-                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Veia<br>Femoral</div>
+                <div style="font-size:11px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Veia<br>Femoral</div>
               </div>
               <div style="flex:1;min-width:50px;text-align:center">
                 <div style="background:#5A6880;border-radius:4px;padding:6px;margin-bottom:4px">
                   <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">E</span>
                 </div>
-                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Espaço<br>Morto</div>
+                <div style="font-size:11px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Espaço<br>Morto</div>
               </div>
               <div style="flex:1;min-width:50px;text-align:center">
                 <div style="background:#1A7A4A;border-radius:4px;padding:6px;margin-bottom:4px">
                   <span style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:800;color:white">L</span>
                 </div>
-                <div style="font-size:10px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Linfáticos</div>
+                <div style="font-size:11px;color:rgba(255,255,255,.7);font-family:'Inter',sans-serif">Linfáticos</div>
               </div>
             </div>
-            <div style="font-size:10px;color:rgba(255,255,255,.5);text-align:center;font-family:'Inter',sans-serif">← Lateral &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Medial →</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);text-align:center;font-family:'Inter',sans-serif">← Lateral &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Medial →</div>
           </div>
 
           <div class="sh sh-gold">Técnica</div>
@@ -1092,15 +1092,15 @@
           <div class="g3">
             <div style="background:rgba(14,116,144,.08);border:1px solid rgba(14,116,144,.25);border-radius:6px;padding:8px;text-align:center">
               <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:800;color:var(--teal)">↓86%</div>
-              <div style="font-size:10px;color:var(--muted)">Falha de punção JI</div>
+              <div style="font-size:11px;color:var(--muted)">Falha de punção JI</div>
             </div>
             <div style="background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.25);border-radius:6px;padding:8px;text-align:center">
               <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:800;color:var(--red)">↓57%</div>
-              <div style="font-size:10px;color:var(--muted)">Punção arterial</div>
+              <div style="font-size:11px;color:var(--muted)">Punção arterial</div>
             </div>
             <div style="background:rgba(26,122,74,.08);border:1px solid rgba(26,122,74,.25);border-radius:6px;padding:8px;text-align:center">
               <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:800;color:var(--green)">↓78%</div>
-              <div style="font-size:10px;color:var(--muted)">Hematoma</div>
+              <div style="font-size:11px;color:var(--muted)">Hematoma</div>
             </div>
           </div>
         </div>
@@ -1167,9 +1167,9 @@
           <div class="tbl-wrap"><table style="width:100%;border-collapse:collapse;font-size:11px">
             <thead>
               <tr style="background:var(--navy);color:white">
-                <th style="padding:7px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:left">CARACTERÍSTICA</th>
-                <th style="padding:7px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:center;color:#38B6E0">VEIA</th>
-                <th style="padding:7px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:center;color:#E57373">ARTÉRIA</th>
+                <th style="padding:7px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;text-align:left">CARACTERÍSTICA</th>
+                <th style="padding:7px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center;color:#38B6E0">VEIA</th>
+                <th style="padding:7px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center;color:#E57373">ARTÉRIA</th>
               </tr>
             </thead>
             <tbody>
@@ -1632,36 +1632,36 @@
           <div class="tbl-wrap"><table style="width:100%;border-collapse:collapse;font-size:11px">
             <thead>
               <tr style="background:var(--navy);color:white">
-                <th style="padding:6px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:left">AGENTE</th>
-                <th style="padding:6px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:center">FREQ.</th>
-                <th style="padding:6px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;text-align:left">COMENTÁRIO</th>
+                <th style="padding:6px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;text-align:left">AGENTE</th>
+                <th style="padding:6px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center">FREQ.</th>
+                <th style="padding:6px 8px;font-family:'JetBrains Mono',monospace;font-size:11px;text-align:left">COMENTÁRIO</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom:1px solid var(--border)">
                 <td style="padding:6px 8px;font-weight:600">S. epidermidis (coag-neg)</td>
                 <td style="padding:6px 8px;text-align:center;color:var(--orange);font-weight:700">37%</td>
-                <td style="padding:6px 8px;font-size:10px">Flora cutânea · biofilme · resistente a oxacilina (ORSA)</td>
+                <td style="padding:6px 8px;font-size:11px">Flora cutânea · biofilme · resistente a oxacilina (ORSA)</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.02)">
                 <td style="padding:6px 8px;font-weight:600">S. aureus</td>
                 <td style="padding:6px 8px;text-align:center;color:var(--red);font-weight:700">23%</td>
-                <td style="padding:6px 8px;font-size:10px">Mais virulento · endocardite 25% casos · mortalidade alta</td>
+                <td style="padding:6px 8px;font-size:11px">Mais virulento · endocardite 25% casos · mortalidade alta</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border)">
                 <td style="padding:6px 8px;font-weight:600">Enterococcus spp.</td>
                 <td style="padding:6px 8px;text-align:center;color:var(--gold);font-weight:700">13%</td>
-                <td style="padding:6px 8px;font-size:10px">E. faecium pode ser VRE · trato GI como fonte</td>
+                <td style="padding:6px 8px;font-size:11px">E. faecium pode ser VRE · trato GI como fonte</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.02)">
                 <td style="padding:6px 8px;font-weight:600">Candida spp.</td>
                 <td style="padding:6px 8px;text-align:center;color:var(--violet);font-weight:700">9%</td>
-                <td style="padding:6px 8px;font-size:10px">Imunossuprimido · NPT · antibióticos prolongados</td>
+                <td style="padding:6px 8px;font-size:11px">Imunossuprimido · NPT · antibióticos prolongados</td>
               </tr>
               <tr>
                 <td style="padding:6px 8px;font-weight:600">GNR (Klebsiella, P. aeruginosa)</td>
                 <td style="padding:6px 8px;text-align:center;color:var(--blue);font-weight:700">18%</td>
-                <td style="padding:6px 8px;font-size:10px">Hospital · resistência frequente · mortalidade elevada</td>
+                <td style="padding:6px 8px;font-size:11px">Hospital · resistência frequente · mortalidade elevada</td>
               </tr>
             </tbody>
           </table></div>
@@ -2115,7 +2115,7 @@
   
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
 </div><!-- /avc-casos -->

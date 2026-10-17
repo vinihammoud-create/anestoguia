@@ -6,13 +6,13 @@
     <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
   </div>
 
-  <div class="tab-bar" id="fisiologia-tabbar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('fisio','cv',this)">CARDIOVASCULAR</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','resp',this)">RESPIRATÓRIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','farmaco',this)">FARMACOCINÉTICA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','renal',this)">RENAL/HEPÁTICA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','neuro',this)">NEUROLÓGICA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('fisio','casos',this)">CASOS/QUIZ</button>
+  <div class="tab-bar" role="tablist" id="fisiologia-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('fisio','cv',this)">CARDIOVASCULAR</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('fisio','resp',this)">RESPIRATÓRIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('fisio','farmaco',this)">FARMACOCINÉTICA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('fisio','renal',this)">RENAL/HEPÁTICA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('fisio','neuro',this)">NEUROLÓGICA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('fisio','casos',this)">CASOS/QUIZ</button>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════
@@ -1034,7 +1034,7 @@
   
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · Morgan & Mikhail · Miller · Uso educacional</div>
 </div><!-- /fisio-casos -->

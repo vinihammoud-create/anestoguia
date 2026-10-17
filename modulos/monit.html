@@ -6,17 +6,17 @@
     <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
   </div>
 
-  <div class="tab-bar" id="monit-tabbar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('monit','basica',this)">Básica</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','bis',this)">Profundidade</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','tof',this)">TOF/BNM</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','pai',this)">PAI/Hemo</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','gas',this)">Gasometria</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','ecotte',this)">EcoTTE</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','capno',this)">Capno/VM</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','revisao',this)">Revisão</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','questoes',this)">Questões</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('monit','casos',this)">Casos</button>
+  <div class="tab-bar" role="tablist" id="monit-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('monit','basica',this)">Básica</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('monit','bis',this)">Profundidade</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('monit','tof',this)">TOF/BNM</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('monit','pai',this)">PAI/Hemo</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('monit','gas',this)">Gasometria</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('monit','ecotte',this)">EcoTTE</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('monit','capno',this)">Capno/VM</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('monit','revisao',this)">Revisão</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('monit','questoes',this)">Questões</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('monit','casos',this)">Casos</button>
   </div>
 
   <!-- TAB 1 — MONITORIZAÇÃO BÁSICA (CFM 2021 — OBRIGATÓRIA) -->
@@ -1296,7 +1296,7 @@
         <div class="card-header ch-teal">
           <span class="card-num">02</span> Janelas Ecocardiográficas Básicas
         </div>
-        <img src="img-janelas-eco.jpg" style="width:100%;max-width:100%;display:block;margin:12px auto 0;border-radius:10px;border:1px solid rgba(255,255,255,.1)" alt="Janelas Ecocardiográficas — Abordagens TTE">
+        <img src="img/img-janelas-eco.webp" width="644" height="930" loading="lazy" decoding="async" style="width:100%;max-width:100%;display:block;margin:12px auto 0;border-radius:10px;border:1px solid rgba(255,255,255,.1)" alt="Janelas Ecocardiográficas — Abordagens TTE">
       </div>
 
       <!-- PROTOCOLO FATE -->
@@ -2033,7 +2033,7 @@
   
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
 </div><!-- /monit-casos -->

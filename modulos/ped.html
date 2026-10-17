@@ -5,17 +5,17 @@
   
     <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
   </div>
-  <div class="tab-bar" id="ped-tabbar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('ped','calc',this)">Calculadora</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','fisiologia',this)">Fisiologia</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','equipamentos',this)">Equipamentos</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','farmacologia',this)">Farmacologia</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','tecnica',this)">Técnica</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','situacoes',this)">Situações</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','vni',this)">VNI / Agitação</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','revisao',this)">Revisão</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','questoes',this)">Questões</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ped','casos',this)">Casos</button>
+  <div class="tab-bar" role="tablist" id="ped-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('ped','calc',this)">Calculadora</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ped','fisiologia',this)">Fisiologia</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ped','equipamentos',this)">Equipamentos</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ped','farmacologia',this)">Farmacologia</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ped','tecnica',this)">Técnica</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ped','situacoes',this)">Situações</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ped','vni',this)">VNI / Agitação</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ped','revisao',this)">Revisão</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ped','questoes',this)">Questões</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ped','casos',this)">Casos</button>
   </div>
 
   <!-- ABA 1 — CALCULADORA PEDIÁTRICA -->
@@ -849,7 +849,7 @@
               <tr><td>Naloxona</td><td>0,01 mg/kg</td><td>0,05 mg</td><td>0,1 mg</td><td>0,2 mg</td><td>0,3 mg</td></tr>
             </tbody>
           </table></div>
-          <p style="font-size:10px;color:var(--muted);margin-top:4px">* Atropina dose mínima: 0,1 mg (atropina sub-terapêutica pode causar bradicardia paradoxal) | ** Dose máxima 0,5 mg em crianças</p>
+          <p style="font-size:11px;color:var(--muted);margin-top:4px">* Atropina dose mínima: 0,1 mg (atropina sub-terapêutica pode causar bradicardia paradoxal) | ** Dose máxima 0,5 mg em crianças</p>
         </div>
       </div>
 
@@ -917,7 +917,7 @@
               <tr><td>Refeição principal / sólidos com gordura</td><td><strong>8h</strong></td><td>Carne, frituras, alimentos pesados</td></tr>
             </tbody>
           </table></div>
-          <p style="font-size:10px;color:var(--muted);margin-top:4px">* Líquidos claros = sem partículas, sem gordura, sem álcool. Excluem: leite, suco com polpa, bebidas com álcool.</p>
+          <p style="font-size:11px;color:var(--muted);margin-top:4px">* Líquidos claros = sem partículas, sem gordura, sem álcool. Excluem: leite, suco com polpa, bebidas com álcool.</p>
 
           <div class="alert a-blue" style="margin-top:10px">
             <strong>Hipoglicemia no jejum pediátrico:</strong> Neonatos e lactentes &lt;6 meses têm risco de hipoglicemia com jejum &gt;4h por estoques de glicogênio reduzidos. Verificar glicemia capilar pré-operatória em &lt;6 meses e iniciar SG 1–2% IV se glicemia &lt;60 mg/dL ou jejum prolongado inadvertido.
@@ -1352,7 +1352,7 @@
             </tbody>
           </table></div>
 
-          <div style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase">Escala PAED (Pediatric Anesthesia Emergence Delirium)</div>
+          <div style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase">Escala PAED (Pediatric Anesthesia Emergence Delirium)</div>
           <div class="tbl-wrap xwide"><table class="tbl" style="margin-top:4px">
             <thead><tr><th>Item avaliado</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead>
             <tbody>
@@ -1705,7 +1705,7 @@
 
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
     </div>

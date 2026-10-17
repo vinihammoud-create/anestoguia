@@ -6,13 +6,13 @@
     <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
   </div>
 
-  <div class="tab-bar" id="cirurgias-esp-tabbar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('cesp','cardiaca',this)">CARDÍACA/CEC</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','neuro',this)">NEUROCIRURGIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','toracica',this)">TORÁCICA/OLV</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','trauma',this)">TRAUMA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','laparosc',this)">LAPAROSCOPIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('cesp','casos',this)">CASOS</button>
+  <div class="tab-bar" role="tablist" id="cirurgias-esp-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('cesp','cardiaca',this)">CARDÍACA/CEC</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('cesp','neuro',this)">NEUROCIRURGIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('cesp','toracica',this)">TORÁCICA/OLV</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('cesp','trauma',this)">TRAUMA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('cesp','laparosc',this)">LAPAROSCOPIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('cesp','casos',this)">CASOS</button>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════
@@ -1045,7 +1045,7 @@
   
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · Miller 9ª ed. · Morgan & Mikhail · Uso educacional</div>
 </div><!-- /cesp-casos -->

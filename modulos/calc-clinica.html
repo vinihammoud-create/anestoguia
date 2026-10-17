@@ -5,12 +5,12 @@
   
     <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
   </div>
-  <div class="tab-bar" id="calcc-tabbar">
-    <button class="tab-btn active" onclick="showTab('calcc','tci',this)">TCI/TIVA</button>
-    <button class="tab-btn" onclick="showTab('calcc','vol',this)">Volêmica</button>
-    <button class="tab-btn" onclick="showTab('calcc','eletro',this)">Eletrólitos</button>
-    <button class="tab-btn" onclick="showTab('calcc','gas',this)">Gasometria</button>
-    <button class="tab-btn" onclick="showTab('calcc','peso',this)">Doses/Peso</button>
+  <div class="tab-bar" role="tablist" id="calcc-tabbar">
+    <button role="tab" class="tab-btn active" onclick="showTab('calcc','tci',this)">TCI/TIVA</button>
+    <button role="tab" class="tab-btn" onclick="showTab('calcc','vol',this)">Volêmica</button>
+    <button role="tab" class="tab-btn" onclick="showTab('calcc','eletro',this)">Eletrólitos</button>
+    <button role="tab" class="tab-btn" onclick="showTab('calcc','gas',this)">Gasometria</button>
+    <button role="tab" class="tab-btn" onclick="showTab('calcc','peso',this)">Doses/Peso</button>
   </div>
 
 <div class="tab-panel" id="calcc-tci">
@@ -47,26 +47,26 @@
           <div class="result-label">MODELO SCHNIDER — PROPOFOL</div>
           <div class="g2">
             <div>
-              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">PESO MAGRO (LBM)</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">PESO MAGRO (LBM)</div>
               <div id="tci-lbm" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--cyan)"></div>
             </div>
             <div>
-              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">VOLUME DIST. V1</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">VOLUME DIST. V1</div>
               <div id="tci-v1" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--cyan)"></div>
             </div>
           </div>
           <div class="g2" style="margin-top:10px">
-            <div><div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">BOLUS Ce 4 mcg/mL (≈ Cp×V1)</div><div id="tci-bolus" style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--cyan)"></div></div>
-            <div><div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">EQUILÍBRIO Ce/Cp</div><div id="tci-ke0" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--cyan)"></div></div>
+            <div><div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">BOLUS Ce 4 mcg/mL (≈ Cp×V1)</div><div id="tci-bolus" style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--cyan)"></div></div>
+            <div><div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">EQUILÍBRIO Ce/Cp</div><div id="tci-ke0" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--cyan)"></div></div>
           </div>
           <div style="margin-top:12px">
-            <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:6px">DOSES RECOMENDADAS — Ce-alvo</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:6px">DOSES RECOMENDADAS — Ce-alvo</div>
 <div class="tbl-wrap">
             <table style="width:100%;font-size:11px;border-collapse:collapse">
               <tr style="background:rgba(255,255,255,.06)">
-                <th style="padding:6px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.5)">Fase</th>
-                <th style="padding:6px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.5)">Ce-alvo</th>
-                <th style="padding:6px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.5)">Infusão aprox.</th>
+                <th style="padding:6px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.5)">Fase</th>
+                <th style="padding:6px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.5)">Ce-alvo</th>
+                <th style="padding:6px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.5)">Infusão aprox.</th>
               </tr>
               <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
                 <td style="padding:6px 8px;color:rgba(255,255,255,.7)">Indução</td>
@@ -194,11 +194,11 @@
           <div class="result-label">PERDA SANGUÍNEA</div>
           <div class="g2">
             <div>
-              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">VOLUME SANGUÍNEO</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">VOLUME SANGUÍNEO</div>
               <div id="mabl-vsang" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--cyan)"></div>
             </div>
             <div>
-              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">MABL (Ht alvo 25%)</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">MABL (Ht alvo 25%)</div>
               <div id="mabl-val" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--gold)"></div>
             </div>
           </div>
@@ -244,11 +244,11 @@
           <div class="result-label">CORREÇÃO DE SÓDIO</div>
           <div class="g2">
             <div>
-              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">DÉFICIT DE Na⁺</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">DÉFICIT DE Na⁺</div>
               <div id="na-deficit" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--cyan)"></div>
             </div>
             <div>
-              <div style="font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">VOLUME NECESSÁRIO</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">VOLUME NECESSÁRIO</div>
               <div id="na-vol" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--gold)"></div>
             </div>
           </div>
@@ -342,7 +342,7 @@
 
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
 </div><!-- /calcc-peso -->

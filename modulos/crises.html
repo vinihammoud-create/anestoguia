@@ -6,13 +6,13 @@
     <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
   </div>
 
-  <div class="tab-bar" id="crises-tabbar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('crise','hm',this)">HIPERT. MALIGNA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','anafilaxia',this)">ANAFILAXIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','last',this)">LAST</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','vad',this)">VAD EMERGÊNCIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','pcr',this)">PCR INTRAOP.</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('crise','bronco',this)">BRONCOESPASMO</button>
+  <div class="tab-bar" role="tablist" id="crises-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('crise','hm',this)">HIPERT. MALIGNA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('crise','anafilaxia',this)">ANAFILAXIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('crise','last',this)">LAST</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('crise','vad',this)">VAD EMERGÊNCIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('crise','pcr',this)">PCR INTRAOP.</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('crise','bronco',this)">BRONCOESPASMO</button>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════
@@ -23,13 +23,13 @@
 
     <!-- FLUXO DE FASES -->
     <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
-      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ AGIR</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ AGIR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
     </div>
 
     <!-- RECONHECER -->
@@ -150,13 +150,13 @@
 
     <!-- FLUXO DE FASES -->
     <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
-      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ AGIR</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ AGIR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
     </div>
 
     <!-- GRADING -->
@@ -263,13 +263,13 @@
 
     <!-- FLUXO DE FASES -->
     <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
-      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ AGIR</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ AGIR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
     </div>
 
     <!-- RECONHECER -->
@@ -400,13 +400,13 @@
 
     <!-- FLUXO DE FASES -->
     <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
-      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 RECONHECER</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ DECLARAR</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ DECLARAR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🔪 AGIR</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🔪 AGIR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ CONFIRMAR</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ CONFIRMAR</span>
     </div>
 
     <!-- DEFINIÇÃO CICV -->
@@ -432,22 +432,22 @@
       <div class="card-body">
         <div style="display:flex;flex-direction:column;gap:8px">
           <div style="background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.3);border-radius:8px;padding:10px 12px">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:#2ECC71;letter-spacing:.5px;margin-bottom:4px">PLAN A</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:#2ECC71;letter-spacing:.5px;margin-bottom:4px">PLAN A</div>
             <div style="font-size:13px;color:rgba(255,255,255,.9)">Laringoscopia direta/vídeo (máx 3 tentativas + 1 com otimização por operador sênior)</div>
           </div>
           <div style="text-align:center;color:rgba(255,255,255,.3);font-size:12px">↓ FALHOU</div>
           <div style="background:rgba(232,160,32,.1);border:1px solid rgba(232,160,32,.3);border-radius:8px;padding:10px 12px">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.5px;margin-bottom:4px">PLAN B</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:var(--gold);letter-spacing:.5px;margin-bottom:4px">PLAN B</div>
             <div style="font-size:13px;color:rgba(255,255,255,.9)">Dispositivo supraglótico (iGel, LMA ProSeal) — máx 3 tentativas com 2º geração</div>
           </div>
           <div style="text-align:center;color:rgba(255,255,255,.3);font-size:12px">↓ FALHOU</div>
           <div style="background:rgba(232,160,32,.15);border:1px solid rgba(232,160,32,.4);border-radius:8px;padding:10px 12px">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.5px;margin-bottom:4px">PLAN C</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:var(--gold);letter-spacing:.5px;margin-bottom:4px">PLAN C</div>
             <div style="font-size:13px;color:rgba(255,255,255,.9)">Intubação pelo supraglótico / VBM final / <strong>ACORDAR o paciente</strong> se possível</div>
           </div>
           <div style="text-align:center;color:rgba(255,255,255,.3);font-size:12px">↓ FALHOU — SpO₂ CAINDO</div>
           <div style="background:rgba(192,57,43,.2);border:2px solid rgba(192,57,43,.6);border-radius:8px;padding:10px 12px">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:#FF6B6B;letter-spacing:.5px;margin-bottom:4px">PLAN D — VIA AÉREA CIRÚRGICA</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:#FF6B6B;letter-spacing:.5px;margin-bottom:4px">PLAN D — VIA AÉREA CIRÚRGICA</div>
             <div style="font-size:13px;color:white;font-weight:700">CRICOTIREOIDOSTOMIA — ver protocolo abaixo</div>
           </div>
         </div>
@@ -551,13 +551,13 @@
 
     <!-- FLUXO DE FASES -->
     <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
-      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 DIAGNOSTICAR</span>
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 DIAGNOSTICAR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ RCP</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ RCP</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 DROGAS</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 DROGAS</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ PÓS-PCR</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ PÓS-PCR</span>
     </div>
 
     <!-- CAUSAS REVERSÍVEIS -->
@@ -568,7 +568,7 @@
       <div class="card-body">
         <div class="g2">
           <div style="background:rgba(192,57,43,.1);border:1px solid rgba(192,57,43,.3);border-radius:8px;padding:10px">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:#FF6B6B;letter-spacing:.5px;margin-bottom:6px">4 H</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:#FF6B6B;letter-spacing:.5px;margin-bottom:6px">4 H</div>
             <div style="font-size:12px;color:rgba(255,255,255,.9);line-height:1.8">
               <strong>H</strong>ipóxia<br>
               <strong>H</strong>ipovolemia<br>
@@ -577,7 +577,7 @@
             </div>
           </div>
           <div style="background:rgba(232,160,32,.1);border:1px solid rgba(232,160,32,.3);border-radius:8px;padding:10px">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.5px;margin-bottom:6px">4 T</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;color:var(--gold);letter-spacing:.5px;margin-bottom:6px">4 T</div>
             <div style="font-size:12px;color:rgba(255,255,255,.9);line-height:1.8">
               <strong>T</strong>ension pneumothorax<br>
               <strong>T</strong>amponamento cardíaco<br>
@@ -679,13 +679,13 @@
 
     <!-- FLUXO DE FASES -->
     <div style="display:flex;gap:4px;padding:8px 0 14px;flex-wrap:wrap">
-      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 DIAGNOSTICAR</span>
+      <span style="background:rgba(192,57,43,.25);color:#FF6B6B;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">🚨 DIAGNOSTICAR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ DIFERENCIAR</span>
+      <span style="background:rgba(232,160,32,.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">⚡ DIFERENCIAR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
+      <span style="background:rgba(46,204,113,.2);color:#2ECC71;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">💊 TRATAR</span>
       <span style="color:rgba(255,255,255,.3);font-size:14px;align-self:center">→</span>
-      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
+      <span style="background:rgba(52,152,219,.2);color:#5DADE2;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px">✅ MONITORAR</span>
     </div>
 
     <!-- DIAGNÓSTICO -->
@@ -809,7 +809,7 @@
 
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
     </div>

@@ -6,15 +6,15 @@
     <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
   </div>
 
-  <div class="tab-bar" id="vm-tabbar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('vm','fisiologia',this)">Fisiologia</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','modos',this)">Modos</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','parametros',this)">Parâmetros</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','protetora',this)">Protetora</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','situacoes',this)">Situações</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','vili',this)">VILI</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','revisao',this)">Revisão</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('vm','questoes',this)">Questões</button>
+  <div class="tab-bar" role="tablist" id="vm-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('vm','fisiologia',this)">Fisiologia</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('vm','modos',this)">Modos</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('vm','parametros',this)">Parâmetros</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('vm','protetora',this)">Protetora</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('vm','situacoes',this)">Situações</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('vm','vili',this)">VILI</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('vm','revisao',this)">Revisão</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('vm','questoes',this)">Questões</button>
   </div>
 
   <!-- ============================================================
@@ -29,7 +29,7 @@
           <span class="card-num">01</span> Volumes e Capacidades Pulmonares
         </div>
         <div class="card-body">
-          <img src="vm_img_volumes.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Volumes e Capacidades Pulmonares">
+          <img src="img/vm_img_volumes.webp" width="1200" height="800" loading="lazy" decoding="async" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Volumes e Capacidades Pulmonares">
           <div class="alert a-blue">
             Os <strong>volumes e capacidades pulmonares</strong> são a base para compreender a mecânica ventilatória e os efeitos da anestesia geral sobre a função respiratória. As capacidades são somas de dois ou mais volumes.
           </div>
@@ -351,7 +351,7 @@
           <span class="card-num">06</span> Comparativo dos Modos Ventilatórios
         </div>
         <div class="card-body">
-          <img src="vm_img_modos_vcv_pcv.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Curvas VCV vs PCV">
+          <img src="img/vm_img_modos_vcv_pcv.webp" width="1200" height="800" loading="lazy" decoding="async" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Curvas VCV vs PCV">
           <div class="tbl-wrap wide"><table class="tbl">
             <thead>
               <tr>
@@ -451,7 +451,7 @@
           <span class="card-num">02</span> Pressão de Pico (Ppico)
         </div>
         <div class="card-body">
-          <img src="vm_img_pressoes.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Ppico, Pplatô, ΔP e PEEP">
+          <img src="img/vm_img_pressoes.webp" width="1200" height="800" loading="lazy" decoding="async" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Ppico, Pplatô, ΔP e PEEP">
           <div class="alert a-blue">
             <strong>Ppico:</strong> pressão máxima nas vias aéreas durante a fase inspiratória. Depende de resistência + compliance + VC + fluxo inspiratório.
           </div>
@@ -634,7 +634,7 @@
           <span class="card-num">08</span> Capnografia na Ventilação Mecânica
         </div>
         <div class="card-body">
-          <img src="vm_img_capnograma.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Capnograma normal e padrões anormais">
+          <img src="img/vm_img_capnograma.webp" width="1200" height="800" loading="lazy" decoding="async" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Capnograma normal e padrões anormais">
           <div class="alert a-teal">
             A capnografia é a monitorização contínua do CO₂ expirado. O <strong>ETCO₂</strong> reflete a produção de CO₂, o transporte circulatório e a ventilação alveolar.
           </div>
@@ -698,7 +698,7 @@
           <span class="card-num">02</span> Protocolo de Ventilação Protetora Intraoperatória
         </div>
         <div class="card-body">
-          <img src="vm_img_protetora.png" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Síntese Ventilação Protetora">
+          <img src="img/vm_img_protetora.webp" width="1200" height="800" loading="lazy" decoding="async" style="width:100%;max-width:560px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Síntese Ventilação Protetora">
           <div class="alert a-blue">
             Sequência prática para implementar ventilação protetora em toda cirurgia sob anestesia geral.
           </div>
@@ -1107,7 +1107,7 @@
           <span class="card-num">01</span> Mecanismos de Lesão Pulmonar Induzida pelo Ventilador (VILI)
         </div>
         <div class="card-body">
-          <img src="vm_img_vili.png" style="width:100%;max-width:500px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Mecanismos VILI">
+          <img src="img/vm_img_vili.webp" width="1200" height="800" loading="lazy" decoding="async" style="width:100%;max-width:500px;display:block;margin:12px auto 4px;border-radius:10px;border:1px solid rgba(255,255,255,.08)" alt="Mecanismos VILI">
           <div class="alert a-red">
             A <strong>VILI (Ventilator-Induced Lung Injury)</strong> é a lesão pulmonar causada pela própria ventilação mecânica. Compreender os mecanismos é fundamental para preveni-la.
           </div>
@@ -1572,7 +1572,7 @@
 
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
   </div><!-- /vm-questoes -->

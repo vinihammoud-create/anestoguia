@@ -65,6 +65,7 @@ function render() {
   var ready = (seg[0] === 'e' && seg[1]) ? ensureModule(seg[1]) : Promise.resolve(true);
   ready.then(function (ok) {
     var el = activateScreen(ok ? id : 'screen-home');
+    updateNav(seg[0] || 'launcher');
     if (seg[2] && ok) activateTab(el, seg[2]);
     if (id === 'screen-treino' && typeof showTreinoHome === 'function') showTreinoHome();
   });
@@ -99,6 +100,11 @@ function showTab(prefix, id, btn, silent) {
     if (seg.length >= 2) history.replaceState(null, '', '#/' + seg[0] + '/' + seg[1] + '/' + id);
   }
   window.scrollTo(0, 0);
+}
+
+function updateNav(mode) {
+  document.body.dataset.mode = mode;
+  document.querySelectorAll('.bottom-nav button').forEach(function (b) { b.classList.toggle('on', b.dataset.mode === mode); b.setAttribute('aria-current', b.dataset.mode === mode ? 'page' : 'false'); });
 }
 
 function mostrarAviso(msg, ms) {

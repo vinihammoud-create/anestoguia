@@ -6,15 +6,15 @@
     <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
   </div>
 
-  <div class="tab-bar" id="srpa-tabbar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('srpa','estrutura',this)">Estrutura</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','alta',this)">Critérios Alta</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','eventos',this)">Eventos Adversos</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','delirium',this)">Delirium/Cogn.</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','checklist',this)">Checklist</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','revisao',this)">Revisão</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','questoes',this)">Questões</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('srpa','casos',this)">Casos</button>
+  <div class="tab-bar" role="tablist" id="srpa-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('srpa','estrutura',this)">Estrutura</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('srpa','alta',this)">Critérios Alta</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('srpa','eventos',this)">Eventos Adversos</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('srpa','delirium',this)">Delirium/Cogn.</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('srpa','checklist',this)">Checklist</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('srpa','revisao',this)">Revisão</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('srpa','questoes',this)">Questões</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('srpa','casos',this)">Casos</button>
   </div>
 
   <!-- TAB 1 — ESTRUTURA -->
@@ -1290,7 +1290,7 @@
   
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · ESAIC 2025 · ERAS 2025 · Uso educacional</div>
 </div><!-- /srpa-casos -->

@@ -6,14 +6,14 @@
     <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
   </div>
 
-  <div class="tab-bar" id="obstetricia-tabbar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('obs','fisiologia',this)">ADAPTAÇÕES</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','raqui',this)">RAQUI/CESÁREA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','peridural',this)">PERIDURAL/PARTO</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','preeclampsia',this)">PRÉ-ECLÂMPSIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','farmaco',this)">FARMACOLOGIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','emergencias',this)">EMERGÊNCIAS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('obs','casos',this)">CASOS</button>
+  <div class="tab-bar" role="tablist" id="obstetricia-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('obs','fisiologia',this)">ADAPTAÇÕES</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('obs','raqui',this)">RAQUI/CESÁREA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('obs','peridural',this)">PERIDURAL/PARTO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('obs','preeclampsia',this)">PRÉ-ECLÂMPSIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('obs','farmaco',this)">FARMACOLOGIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('obs','emergencias',this)">EMERGÊNCIAS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('obs','casos',this)">CASOS</button>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════
@@ -651,10 +651,10 @@
           <table class="tbl" style="width:100%;border-collapse:collapse;font-size:12px">
             <thead>
               <tr style="background:rgba(233,30,123,.12)">
-                <th style="padding:8px 6px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3);overflow-wrap:anywhere;word-break:normal">Droga</th>
-                <th style="padding:8px 6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3)">Transf.</th>
-                <th style="padding:8px 6px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3)">Efeito Fetal/Neonatal</th>
-                <th style="padding:8px 6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3)">Segurança</th>
+                <th style="padding:8px 6px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3);overflow-wrap:anywhere;word-break:normal">Droga</th>
+                <th style="padding:8px 6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3)">Transf.</th>
+                <th style="padding:8px 6px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3)">Efeito Fetal/Neonatal</th>
+                <th style="padding:8px 6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--pink);border-bottom:2px solid rgba(233,30,123,.3)">Segurança</th>
               </tr>
             </thead>
             <tbody>
@@ -1135,7 +1135,7 @@
   
   <div style="padding:16px 12px 4px;text-align:center">
     <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
-    <span style="font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Médico Residente em Anestesiologia</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia R1 · SBA 2025 · SOAP 2023 · ACOG 2023 · Uso educacional</div>
 </div><!-- /obs-casos -->

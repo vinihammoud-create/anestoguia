@@ -17,3 +17,13 @@
 - Modo "Revisar erros", estatísticas por tema (melhor resultado) persistentes, subtema exibido por questão.
 ### Arquivo
 - `arquivo/anestoguia-v1.zip`: cópia do repositório v1 (`anestoguia`), cujo conteúdo já estava todo incorporado aqui.
+
+### Mobile (fase C, mesma versão)
+- Barra inferior fixa (Início · Prático · Estudos · Treino) com área segura do iPhone; alvos de toque ≥ 44 px em abas, accordions, checklists e cartões de droga.
+- Tamanho mínimo de fonte 11 px (eram 8–10 px em 145 lugares); inputs com 16 px (sem zoom automático no iOS); `100dvh`, `viewport-fit=cover`.
+- Tabelas largas com sombra indicando rolagem lateral; tabelas compactas de 2 colunas passam a quebrar linha em vez de rolar.
+- Imagens convertidas para WebP (3,3 MB → 373 KB), com `loading="lazy"` e dimensões fixas.
+- Fontes Inter e JetBrains Mono locais (offline), sem dependência do Google Fonts.
+- Novos ícones do app (normal e maskable); `role="tablist"/"tab"`, `aria-expanded` nos accordions, foco visível, `prefers-reduced-motion`.
+- Launcher sem efeitos só de mouse; badges de diretrizes desatualizadas substituídos pela versão do app.
+- `tools/shots.js` (capturas 390×844 + detecção de rolagem horizontal) e `tools/make-icons.js`.

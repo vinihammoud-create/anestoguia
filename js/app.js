@@ -40,6 +40,7 @@ function toggleAcc(hdr) {
   }
   if (!body) return;
   var isOpen = body.classList.contains('show');
+  if (hdrEl) hdrEl.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
   if (isOpen) {
     body.classList.remove('show');
     if (hdrEl) hdrEl.classList.remove('open-r','open-o','open-v','open-t','open-g','open-y','open-b','open-p');
@@ -65,7 +66,7 @@ function toggleDrug(hdr) {
     body.style.display = wasOpen ? 'none' : 'block';
   });
 }
-function toggleCaso(hdr) { hdr.parentElement.classList.toggle('open'); }
+function toggleCaso(hdr) { var open = hdr.parentElement.classList.toggle('open'); hdr.setAttribute('aria-expanded', open ? 'true' : 'false'); }
 
 // ── CALCULADORA PEDIÁTRICA ──
 function calcPed() {

@@ -18,13 +18,13 @@
 <body>
 
 <div id="screen-launcher" class="screen active">
-  <div style="background:var(--bg);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 20px">
+  <div class="launcher-wrap" style="background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 20px">
 
     <!-- Logo -->
     <div style="text-align:center;margin-bottom:36px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;color:rgba(0,212,255,.4);letter-spacing:.25em;text-transform:uppercase;margin-bottom:8px">Anestesiologia · Guia clínico · Estudo · Treino</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:rgba(0,212,255,.4);letter-spacing:.25em;text-transform:uppercase;margin-bottom:8px">Anestesiologia · Guia clínico · Estudo · Treino</div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--cyan);letter-spacing:3px;line-height:1">ANESTOGUIA</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(0,212,255,.35);letter-spacing:.15em;margin-top:6px">por Vinicius Hammoud</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(0,212,255,.35);letter-spacing:.15em;margin-top:6px">por Vinicius Hammoud</div>
       <div style="width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);margin:14px auto 0"></div>
     </div>
 
@@ -32,45 +32,39 @@
     <div style="display:flex;flex-direction:column;gap:12px;width:100%;max-width:380px">
 
       <!-- PRÁTICO -->
-      <div onclick="enterMode('pratico')" style="background:linear-gradient(135deg,rgba(0,207,187,.08),rgba(0,207,187,.04));border:1px solid rgba(0,207,187,.2);border-radius:16px;padding:18px 20px;cursor:pointer;display:flex;align-items:center;gap:16px;transition:all .2s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 12px rgba(0,0,0,.3)" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='rgba(0,207,187,.5)';this.style.boxShadow='0 6px 24px rgba(0,207,187,.12)'" onmouseout="this.style.transform='';this.style.borderColor='rgba(0,207,187,.2)';this.style.boxShadow='0 2px 12px rgba(0,0,0,.3)'" onmousedown="this.style.transform='scale(.98)'" onmouseup="this.style.transform='translateY(-2px)'">
+      <div class="launch-card launch-pratico" role="button" tabindex="0" onclick="enterMode('pratico')" style="background:linear-gradient(135deg,rgba(0,207,187,.08),rgba(0,207,187,.04));border:1px solid rgba(0,207,187,.2);border-radius:16px;padding:18px 20px;cursor:pointer;display:flex;align-items:center;gap:16px;transition:all .2s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 12px rgba(0,0,0,.3)">
         <div style="font-size:32px;flex-shrink:0">⚡</div>
         <div style="flex:1">
           <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:#00CFBB;letter-spacing:.06em;margin-bottom:3px">PRÁTICO</div>
           <div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">Calculadoras · Checklists · Crises · Escalas</div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#00CFBB;background:rgba(0,207,187,.1);border:1px solid rgba(0,207,187,.2);border-radius:5px;padding:3px 8px;letter-spacing:.05em;white-space:nowrap">PLANTÃO</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#00CFBB;background:rgba(0,207,187,.1);border:1px solid rgba(0,207,187,.2);border-radius:5px;padding:3px 8px;letter-spacing:.05em;white-space:nowrap">PLANTÃO</div>
       </div>
 
       <!-- ESTUDOS -->
-      <div onclick="enterMode('estudos')" style="background:linear-gradient(135deg,rgba(124,58,237,.08),rgba(124,58,237,.04));border:1px solid rgba(124,58,237,.2);border-radius:16px;padding:18px 20px;cursor:pointer;display:flex;align-items:center;gap:16px;transition:all .2s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 12px rgba(0,0,0,.3)" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='rgba(124,58,237,.5)';this.style.boxShadow='0 6px 24px rgba(124,58,237,.12)'" onmouseout="this.style.transform='';this.style.borderColor='rgba(124,58,237,.2)';this.style.boxShadow='0 2px 12px rgba(0,0,0,.3)'" onmousedown="this.style.transform='scale(.98)'" onmouseup="this.style.transform='translateY(-2px)'">
+      <div class="launch-card launch-estudos" role="button" tabindex="0" onclick="enterMode('estudos')" style="background:linear-gradient(135deg,rgba(124,58,237,.08),rgba(124,58,237,.04));border:1px solid rgba(124,58,237,.2);border-radius:16px;padding:18px 20px;cursor:pointer;display:flex;align-items:center;gap:16px;transition:all .2s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 12px rgba(0,0,0,.3)">
         <div style="font-size:32px;flex-shrink:0">📚</div>
         <div style="flex:1">
           <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:#A78BFF;letter-spacing:.06em;margin-bottom:3px">ESTUDOS</div>
           <div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">19 Módulos · Casos Clínicos · Revisão Rápida</div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#A78BFF;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:5px;padding:3px 8px;letter-spacing:.05em;white-space:nowrap">TEA/TSA</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A78BFF;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:5px;padding:3px 8px;letter-spacing:.05em;white-space:nowrap">TEA/TSA</div>
       </div>
 
       <!-- TREINO -->
-      <div onclick="enterMode('treino')" style="background:linear-gradient(135deg,rgba(255,71,87,.08),rgba(255,71,87,.04));border:1px solid rgba(255,71,87,.2);border-radius:16px;padding:18px 20px;cursor:pointer;display:flex;align-items:center;gap:16px;transition:all .2s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 12px rgba(0,0,0,.3)" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='rgba(255,71,87,.5)';this.style.boxShadow='0 6px 24px rgba(255,71,87,.12)'" onmouseout="this.style.transform='';this.style.borderColor='rgba(255,71,87,.2)';this.style.boxShadow='0 2px 12px rgba(0,0,0,.3)'" onmousedown="this.style.transform='scale(.98)'" onmouseup="this.style.transform='translateY(-2px)'">
+      <div class="launch-card launch-treino" role="button" tabindex="0" onclick="enterMode('treino')" style="background:linear-gradient(135deg,rgba(255,71,87,.08),rgba(255,71,87,.04));border:1px solid rgba(255,71,87,.2);border-radius:16px;padding:18px 20px;cursor:pointer;display:flex;align-items:center;gap:16px;transition:all .2s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 12px rgba(0,0,0,.3)">
         <div style="font-size:32px;flex-shrink:0">🎯</div>
         <div style="flex:1">
           <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:#FF6B7A;letter-spacing:.06em;margin-bottom:3px">TREINO</div>
           <div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">Questões comentadas · Simulado por tema</div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#FF6B7A;background:rgba(255,71,87,.1);border:1px solid rgba(255,71,87,.2);border-radius:5px;padding:3px 8px;letter-spacing:.05em;white-space:nowrap">600 Q</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#FF6B7A;background:rgba(255,71,87,.1);border:1px solid rgba(255,71,87,.2);border-radius:5px;padding:3px 8px;letter-spacing:.05em;white-space:nowrap">QUESTÕES</div>
       </div>
 
     </div>
 
-    <!-- Info badges -->
-    <div style="display:flex;gap:6px;margin-top:28px;flex-wrap:wrap;justify-content:center">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.2);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:3px 8px;letter-spacing:.05em">SBA 2025</span>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.2);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:3px 8px;letter-spacing:.05em">ESAIC 2025</span>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.2);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:3px 8px;letter-spacing:.05em">DAS 2015</span>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.2);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:3px 8px;letter-spacing:.05em">ERAS 2025</span>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(255,255,255,.2);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:3px 8px;letter-spacing:.05em">Uso Educacional</span>
-    </div>
+    <div style="margin-top:28px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.05em;text-align:center"><span class="app-version"></span> · uso educacional · não substitui o julgamento clínico</div>
+
 
   </div>
 </div>
@@ -130,12 +124,12 @@
   </div><div class="topbar-sub">Fases 1–5 · Guia de uso rápido</div></div>
     <button class="back-btn" onclick="goToLauncher()">← Início</button>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('p','pre',this)">PRÉ-OP</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('p','preparo',this)">PREPARO</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('p','inducao',this)">INDUÇÃO</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('p','manut',this)">MANUTENÇÃO</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('p','extub',this)">EXTUBAÇÃO</button>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('p','pre',this)">PRÉ-OP</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('p','preparo',this)">PREPARO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('p','inducao',this)">INDUÇÃO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('p','manut',this)">MANUTENÇÃO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('p','extub',this)">EXTUBAÇÃO</button>
   </div>
   <div class="page-wrap">
     <!-- PESO GLOBAL STRIP -->
@@ -152,7 +146,7 @@
         <div class="card-header ch-orange"><div class="card-num">1</div>AVALIAÇÃO PRÉ-ANESTÉSICA</div>
         <div class="card-body">
           <div class="sh sh-gold">Risco cirúrgico cardiovascular</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>ECG obrigatório</td><td class="vw">&gt;45a (♂) / &gt;55a (♀) ou cardiopatia</td></tr>
             <tr><td>METs funcionais</td><td class="vg">≥4 METs = baixo risco (sobe escadas)</td></tr>
@@ -179,7 +173,7 @@
       <div class="card">
         <div class="card-header ch-navy"><div class="card-num">2</div>VIA AÉREA — AVALIAÇÃO</div>
         <div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Mallampati I-II</td><td class="vg">Via aérea favorável</td></tr>
             <tr><td>Mallampati III-IV</td><td class="vb">VAD provável → preparar</td></tr>
@@ -195,7 +189,7 @@
       <div class="card">
         <div class="card-header ch-navy"><div class="card-num">3</div>JEJUM E MEDICAÇÕES</div>
         <div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Líquidos claros (adulto)</td><td class="vg">2h (ESAIC 2023)</td></tr>
             <tr><td>Líquidos claros (crianças)</td><td class="vg">1h (ESAIC 2023 — NOVO)</td></tr>
@@ -209,8 +203,8 @@
           <div class="alert a-red" style="margin-top:8px"><strong>Urgência:</strong> considerar estômago cheio → RSI obrigatório.</div>
           <div class="sh sh-blue">Medicações pré-op (MPA)</div>
           <div class="g2">
-            <div><strong>Midazolam</strong><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--blue)">0,02–0,05 mg/kg IV</div><div style="font-size:10px;color:var(--muted)">VO: 7,5–15 mg</div></div>
-            <div><strong>Dexametasona</strong><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--blue)">4–8 mg IV na indução</div><div style="font-size:10px;color:var(--muted)">PONV profilaxia</div></div>
+            <div><strong>Midazolam</strong><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--blue)">0,02–0,05 mg/kg IV</div><div style="font-size:11px;color:var(--muted)">VO: 7,5–15 mg</div></div>
+            <div><strong>Dexametasona</strong><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--blue)">4–8 mg IV na indução</div><div style="font-size:11px;color:var(--muted)">PONV profilaxia</div></div>
           </div>
         </div>
       </div>
@@ -241,11 +235,11 @@
         <div class="card-body">
           <div class="g2">
             <div style="background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.2);border-radius:7px;padding:8px">
-              <div style="font-size:10px;font-weight:700;color:var(--red);font-family:'JetBrains Mono',monospace;margin-bottom:5px">EMERGÊNCIA</div>
+              <div style="font-size:11px;font-weight:700;color:var(--red);font-family:'JetBrains Mono',monospace;margin-bottom:5px">EMERGÊNCIA</div>
               <div style="font-size:11.5px;line-height:1.8">Adrenalina 1mg/mL<br>Atropina 0,5mg/mL<br>Efedrina 50mg/mL<br>Succinilcolina 100mg</div>
             </div>
             <div style="background:rgba(26,122,74,.06);border:1px solid rgba(26,122,74,.2);border-radius:7px;padding:8px">
-              <div style="font-size:10px;font-weight:700;color:var(--green);font-family:'JetBrains Mono',monospace;margin-bottom:5px">INDUÇÃO</div>
+              <div style="font-size:11px;font-weight:700;color:var(--green);font-family:'JetBrains Mono',monospace;margin-bottom:5px">INDUÇÃO</div>
               <div style="font-size:11.5px;line-height:1.8">Propofol/Etomidato<br>Fentanil/Sufentanil<br>Rocurônio<br>Midazolam</div>
             </div>
           </div>
@@ -331,7 +325,7 @@
             <div class="result-box"><div class="result-label">TOF</div><div class="result-value">0/4</div></div>
           </div>
           <div class="sh sh-blue">Ventilação protetora (PROVE 2024)</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Volume corrente</td><td class="vg">6–8 mL/kg peso ideal</td></tr>
             <tr><td>PEEP</td><td class="vg">5–8 cmH₂O</td></tr>
@@ -373,7 +367,7 @@
 
           <div class="acc">
             <div class="acc-hdr" onclick="toggleAcc('c-pcr-m')"><span class="acc-icon">💔</span>PCR — PARADA CARDIORRESPIRATÓRIA
-              <button class="crisis-timer-btn" onclick="event.stopPropagation();startCrisisTimer('PCR')" style="font-size:10px;padding:4px 10px;margin-left:auto">⏱ CRONÔMETRO</button>
+              <button class="crisis-timer-btn" onclick="event.stopPropagation();startCrisisTimer('PCR')" style="font-size:11px;padding:4px 10px;margin-left:auto">⏱ CRONÔMETRO</button>
             </div>
             <div class="acc-body" id="c-pcr-m">
               <div class="alert a-red"><strong>AHA 2020:</strong> RCP alta qualidade · mínimo de interrupções · compressões 100-120/min · profundidade 5-6cm</div>
@@ -392,7 +386,7 @@
 
           <div class="acc">
             <div class="acc-hdr" onclick="toggleAcc('c-hm-m')"><span class="acc-icon">🌡</span>HIPERTERMIA MALIGNA
-              <button class="crisis-timer-btn" onclick="event.stopPropagation();startCrisisTimer('HM')" style="font-size:10px;padding:4px 10px;margin-left:auto">⏱ CRONÔMETRO</button>
+              <button class="crisis-timer-btn" onclick="event.stopPropagation();startCrisisTimer('HM')" style="font-size:11px;padding:4px 10px;margin-left:auto">⏱ CRONÔMETRO</button>
             </div>
             <div class="acc-body" id="c-hm-m">
               <div class="alert a-red"><strong>EtCO₂↑↑ + rigidez + febre &gt;38,5°C + acidose após halogenado/sux</strong></div>
@@ -407,7 +401,7 @@
 
           <div class="acc">
             <div class="acc-hdr" onclick="toggleAcc('c-anafi-m')"><span class="acc-icon">⚡</span>ANAFILAXIA
-              <button class="crisis-timer-btn" onclick="event.stopPropagation();startCrisisTimer('ANAFILAXIA')" style="font-size:10px;padding:4px 10px;margin-left:auto">⏱ CRONÔMETRO</button>
+              <button class="crisis-timer-btn" onclick="event.stopPropagation();startCrisisTimer('ANAFILAXIA')" style="font-size:11px;padding:4px 10px;margin-left:auto">⏱ CRONÔMETRO</button>
             </div>
             <div class="acc-body" id="c-anafi-m">
               <ul class="proto-steps">
@@ -452,7 +446,7 @@
             <li class="ck-item warn" onclick="toggleItem(this)"><div class="ck-box"><span class="ck-chk">✓</span></div><span class="ck-text">EVA ≤ 4 — evitar extubação em dor intensa <span class="tag ty">IMPORTANTE</span></span></li>
           </ul>
           <div class="sh sh-gold">Aldrete ≥ 9 = alta da SRPA</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Atividade motora</td><td class="vg">Move 4 extremidades = 2 pts</td></tr>
             <tr><td>Respiração</td><td class="vg">Tosse livre = 2 pts</td></tr>
@@ -476,14 +470,14 @@
   </div><div class="topbar-sub">Diferenças em relação ao padrão</div></div>
     <button class="back-btn" onclick="goToLauncher()">← Início</button>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('e','vad',this)">VAD</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('e','ped',this)">PEDIATRIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('e','gest',this)">GESTANTE</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('e','obeso',this)">OBESO</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('e','idoso',this)">IDOSO</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('e','urg',this)">URGÊNCIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('e','last',this)">LAST ↗</button>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('e','vad',this)">VAD</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('e','ped',this)">PEDIATRIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('e','gest',this)">GESTANTE</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('e','obeso',this)">OBESO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('e','idoso',this)">IDOSO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('e','urg',this)">URGÊNCIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('e','last',this)">LAST ↗</button>
   </div>
   <div class="page-wrap">
     <!-- VAD Tab - Updated to DAS 2025 -->
@@ -527,7 +521,7 @@
         <div class="card-header ch-pink"><div class="card-num">👶</div>PEDIATRIA — DIFERENÇAS ANATÔMICAS</div>
         <div class="card-body">
           <div class="alert a-blue"><strong>O que muda:</strong> via aérea anterior e cefálica, laringe C3-C4, epiglote maior, menor reserva funcional.</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Laringe mais anterior/cefálica</td><td class="vb">IOT mais difícil</td></tr>
             <tr><td>Occiput proeminente</td><td class="vw">Posição sniffing sem travesseiro</td></tr>
@@ -549,7 +543,7 @@
           <div class="dr dr-r"><div class="dn"><strong>Adrenalina PCR</strong><small>Parada</small></div><div class="dc"><span class="dv" id="pd-epi">— mg</span><span class="dd">0,01 mg/kg (máx 1mg)</span></div></div>
           <div class="dr dr-g"><div class="dn"><strong>Sugammadex</strong><small>Reversão</small></div><div class="dc"><span class="dv" id="pd-sug">— mg</span><span class="dd">2–4 mg/kg IV</span></div></div>
           <div class="sh sh-blue">Jejum pediátrico (ESAIC 2023)</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Líquidos claros</td><td class="vg">1h (ESAIC 2023 — NOVO)</td></tr>
             <tr><td>Leite materno</td><td class="vg">3h (ESAIC 2023 — NOVO)</td></tr>
@@ -568,7 +562,7 @@
         <div class="card-header ch-pink"><div class="card-num">🤰</div>GESTANTE — ALTERAÇÕES FISIOLÓGICAS</div>
         <div class="card-body">
           <div class="alert a-blue"><strong>O que muda:</strong> via aérea edemaciada, estômago cheio funcional, CRF reduzida 20%, débito cardíaco aumentado.</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Via aérea</td><td class="vb">Edema laringe → TOT 6,0–6,5</td></tr>
             <tr><td>Estômago</td><td class="vb">Sempre cheio → RSI</td></tr>
@@ -576,7 +570,7 @@
           </table>
 </div>
           <div class="sh sh-pink">Cesárea — Raquianestesia (1ª escolha)</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Bupivacaína hiperbárica 0,5%</td><td class="vg">10–12,5 mg IT</td></tr>
             <tr><td>Morfina intratecal</td><td class="vg">100 mcg (analgesia 12–24h)</td></tr>
@@ -598,7 +592,7 @@
         <div class="card-header ch-orange"><div class="card-num">🏋</div>OBESO (IMC ≥ 35) — O QUE MUDA</div>
         <div class="card-body">
           <div class="sh sh-orange">Qual peso usar em cada droga?</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Propofol (indução)</td><td class="vw">Peso magro (LBW)</td></tr>
             <tr><td>Propofol (manutenção)</td><td class="vw">Peso ajustado</td></tr>
@@ -623,7 +617,7 @@
         <div class="card-body">
           <div class="alert a-yellow"><strong>Princípio:</strong> "Start low, go slow."</div>
           <div class="sh sh-teal">Redução de doses</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Propofol (indução)</td><td class="vb">Reduzir 30–50% → 1–1,5 mg/kg</td></tr>
             <tr><td>Opioides</td><td class="vb">Reduzir 30–50% → titular</td></tr>
@@ -633,7 +627,7 @@
           </table>
 </div>
           <div class="sh sh-teal">Delirium pós-operatório</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Evitar</td><td class="vb">Benzodiazepínicos (risco delirium)</td></tr>
             <tr><td>Preferir</td><td class="vg">Dexmedetomidina para sedação</td></tr>
@@ -652,7 +646,7 @@
         <div class="card-body">
           <div class="alert a-red"><strong>Princípio:</strong> estômago sempre cheio + paciente instável + RSI obrigatório + ABCDE</div>
           <div class="sh sh-red">Indução no paciente instável</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Hipnótico preferencial</td><td class="vg">Cetamina 1–2 mg/kg</td></tr>
             <tr><td>Etomidato</td><td class="vg">0,3 mg/kg (estabilidade HD)</td></tr>
@@ -662,7 +656,7 @@
 </div>
           <div class="sh sh-orange">Massive Transfusion Protocol (MTP)</div>
           <div class="alert a-orange"><strong>Gatilho:</strong> hemorragia &gt;150 mL/min. Meta: CH:PFC:PLT = 1:1:1</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Ácido tranexâmico</td><td class="vb">1 g IV em 10 min (nas 1as 3h)</td></tr>
             <tr><td>Fibrinogênio alvo</td><td class="vw">&gt;2 g/L</td></tr>
@@ -697,7 +691,7 @@
             <li class="proto-step"><span class="sn">08</span><span>Dose máxima Intralipid: 12 mL/kg</span></li>
           </ul>
           <div class="sh sh-orange">Doses máximas de AL</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <table class="pt">
             <tr><td>Lidocaína simples</td><td class="vb">4,5 mg/kg</td></tr>
             <tr><td>Lidocaína c/ epi</td><td class="vw">7 mg/kg</td></tr>
@@ -722,15 +716,15 @@
   </div><div class="topbar-sub">Adulto · Pediátrico · Idoso · Obeso</div></div>
     <button class="back-btn" onclick="goToLauncher()">← Início</button>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('c','inducao',this)">INDUÇÃO</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('c','bnm',this)">BNM</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('c','opio',this)">OPIOIDES</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('c','vaso',this)">VASOPRESSORES</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('c','anal',this)">ANALGESIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('c','emerg',this)">EMERGÊNCIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('c','al',this)">AL</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('c','infusao',this)">INFUSÃO</button>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('c','inducao',this)">INDUÇÃO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('c','bnm',this)">BNM</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('c','opio',this)">OPIOIDES</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('c','vaso',this)">VASOPRESSORES</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('c','anal',this)">ANALGESIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('c','emerg',this)">EMERGÊNCIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('c','al',this)">AL</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('c','infusao',this)">INFUSÃO</button>
   </div>
   <div class="page-wrap">
     <div class="peso-strip">
@@ -903,15 +897,15 @@
   </div><div class="topbar-sub">Mecanismo · Doses · CI · Pérolas clínicas</div></div>
     <button class="back-btn" onclick="goToLauncher()">← Início</button>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('f','hipno',this)">HIPNÓTICOS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('f','opiof',this)">OPIOIDES</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('f','halo',this)">HALOGENADOS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('f','bnmf',this)">BNM</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('f','alf',this)">AL</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('f','vasof',this)">VASOPRESSORES</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('f','adjf',this)">ADJUVANTES</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('f','o2',this)">O₂</button>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('f','hipno',this)">HIPNÓTICOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('f','opiof',this)">OPIOIDES</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('f','halo',this)">HALOGENADOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('f','bnmf',this)">BNM</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('f','alf',this)">AL</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('f','vasof',this)">VASOPRESSORES</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('f','adjf',this)">ADJUVANTES</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('f','o2',this)">O₂</button>
   </div>
   <div class="page-wrap">
 
@@ -919,21 +913,21 @@
     <div id="f-hipno" class="tab-panel active">
       <div class="drug-card" id="dc-prop"><div class="drug-hdr" style="background:linear-gradient(135deg,#0E7490,#38B6E0)" onclick="toggleDrug('dc-prop')"><div class="drug-hdr-inner"><div class="drug-name">PROPOFOL</div><div class="drug-class">Hipnótico IV · Agonista GABA-A</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Potencializa receptor GABA-A → hiperpolarização neuronal. Sem analgesia. Ação ultra-rápida (30-40s).</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Indução adulto</td><td class="vg">1,5–2,5 mg/kg IV</td></tr><tr><td>Indução idoso</td><td class="vb">1–1,5 mg/kg (reduzir 30-50%)</td></tr><tr><td>Infusão TIVA</td><td class="vg">4–12 mg/kg/h</td></tr><tr><td>Sedação</td><td class="vg">25–75 mcg/kg/min</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Antiemético intrínseco</span><span class="drug-pill good">Reduz PIC</span><span class="drug-pill bad">Hipotensão dose-dependente</span><span class="drug-pill bad">Dor à injeção (lidocaína 20mg previne)</span><span class="drug-pill warn">Sd. infusão propofol em uso prolongado (&gt;48h)</span></div></div>
         </div>
       </div>
       <div class="drug-card" id="dc-etom"><div class="drug-hdr" style="background:linear-gradient(135deg,#1B5E96,#0D1B2A)" onclick="toggleDrug('dc-etom')"><div class="drug-hdr-inner"><div class="drug-name">ETOMIDATO</div><div class="drug-class">Hipnótico IV · Agonista GABA-A</div></div><span class="drug-arrow">›</span></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Indução</td><td class="vg">0,3 mg/kg IV</td></tr><tr><td>RSI</td><td class="vg">0,3 mg/kg (estabilidade HD)</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Estabilidade hemodinâmica — excelente</span><span class="drug-pill good">Ideal para cardiopata/instável</span><span class="drug-pill bad">Supressão adrenal (dose única = sem impacto clínico)</span><span class="drug-pill warn">Mioclonias na indução</span></div></div>
         </div>
       </div>
       <div class="drug-card" id="dc-keta"><div class="drug-hdr" style="background:linear-gradient(135deg,#7C3AED,#BE185D)" onclick="toggleDrug('dc-keta')"><div class="drug-hdr-inner"><div class="drug-name">CETAMINA</div><div class="drug-class">Dissociativo · Antagonista NMDA</div></div><span class="drug-arrow">›</span></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Indução IV</td><td class="vg">1–2 mg/kg</td></tr><tr><td>Indução IM</td><td class="vg">4–8 mg/kg</td></tr><tr><td>Sub-anestésica (analgesia)</td><td class="vg">0,1–0,3 mg/kg bolus</td></tr><tr><td>Infusão anti-hiperalgesia</td><td class="vg">0,1–0,2 mg/kg/h</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Mantém drive respiratório e reflexos VA</span><span class="drug-pill good">Broncodilatador</span><span class="drug-pill good">Analgesia + hipnose + amnésia</span><span class="drug-pill warn">Alucinações (prevenir com midazolam/propofol)</span><span class="drug-pill bad">Aumenta PIC (relativo — controvérsia)</span></div></div>
@@ -942,7 +936,7 @@
       <!-- MIDAZOLAM -->
       <div class="drug-card" id="dc-mida"><div class="drug-hdr" style="background:linear-gradient(135deg,#3B1F8C,#7C3AED)" onclick="toggleDrug('dc-mida')"><div class="drug-hdr-inner"><div class="drug-name">MIDAZOLAM</div><div class="drug-class">Benzodiazepínico · Ansiolítico / Hipnótico</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Potencializa GABA-A → ↑ frequência de abertura do canal Cl⁻ → hiperpolarização. Ansiolítico, hipnótico, anticonvulsivante, amnesiante. SEM analgesia.</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Pré-medicação VO</td><td class="vg">7,5–15 mg VO (0,3–0,5 mg/kg pediátrico)</td></tr><tr><td>Pré-medicação IV</td><td class="vg">1–3 mg IV (titulado)</td></tr><tr><td>Indução IV</td><td class="vb">0,1–0,35 mg/kg IV (raramente usado isolado)</td></tr><tr><td>Sedação procedimento</td><td class="vg">1–2,5 mg IV titulado</td></tr><tr><td>Infusão UTI</td><td class="vb">0,02–0,1 mg/kg/h (risco acúmulo)</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Amnésia anterógrada confiável</span><span class="drug-pill good">Reversível com flumazenil</span><span class="drug-pill warn">Pode atrasar despertar em idosos</span><span class="drug-pill bad">Depressão respiratória dose-dependente</span><span class="drug-pill warn">Metabolismo hepático (CYP3A4) — interações</span></div></div>
@@ -952,7 +946,7 @@
       <!-- DEXMEDETOMIDINA -->
       <div class="drug-card" id="dc-dexmed"><div class="drug-hdr" style="background:linear-gradient(135deg,#065F46,#00CFC1)" onclick="toggleDrug('dc-dexmed')"><div class="drug-hdr-inner"><div class="drug-name">DEXMEDETOMIDINA</div><div class="drug-class">α2-agonista · Sedativo / Analgésico</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Agonista α2-adrenérgico seletivo (α2:α1 = 1620:1). Age no locus coeruleus → sedação tipo sono NREM (fácil despertar). Analgesia espinal e supraspinal. Seletividade 8× maior que clonidina.</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Sedação UCI</td><td class="vg">0,2–0,7 mcg/kg/h IV (sem bolus)</td></tr><tr><td>Sedação cirúrgica</td><td class="vg">0,5–1 mcg/kg/h IV</td></tr><tr><td>Carga IV (cuidado)</td><td class="vb">0,5–1 mcg/kg em 10 min (↑ risco bradicardia)</td></tr><tr><td>Adjuvante raqui/peridural</td><td class="vg">0,5 mcg/kg IN pediátrico</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Sedação cooperativa — paciente desperta ao estímulo</span><span class="drug-pill good">Opioid-sparing significativo</span><span class="drug-pill good">Sem depressão respiratória clinicamente relevante</span><span class="drug-pill bad">Bradicardia e hipotensão (principais EA)</span><span class="drug-pill warn">Sem antídoto específico</span></div></div>
@@ -965,7 +959,7 @@
     <div id="f-opiof" class="tab-panel">
       <div class="drug-card" id="dc-fent"><div class="drug-hdr" style="background:linear-gradient(135deg,#7C3AED,#1B5E96)" onclick="toggleDrug('dc-fent')"><div class="drug-hdr-inner"><div class="drug-name">FENTANIL</div><div class="drug-class">Opioide sintético · Agonista μ puro</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Farmacologia</div><div class="drug-text">Potência: 100× morfina. Onset IV: 1-2 min. Duração: 30-60 min. Metabolismo hepático (CYP3A4). Acumula em uso prolongado (contexto-sensitivo).</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Indução</td><td class="vg">2–5 mcg/kg IV</td></tr><tr><td>Manutenção</td><td class="vg">1–2 mcg/kg IV</td></tr><tr><td>Resgate SRPA</td><td class="vg">25–50 mcg IV</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Excelente estabilidade HD</span><span class="drug-pill warn">Rigidez torácica em dose alta rápida</span><span class="drug-pill warn">Depressão respiratória dose-dependente</span></div></div>
@@ -977,7 +971,7 @@
       <!-- MORFINA -->
       <div class="drug-card" id="dc-morf"><div class="drug-hdr" style="background:linear-gradient(135deg,#7C1D1D,#DC2626)" onclick="toggleDrug('dc-morf')"><div class="drug-hdr-inner"><div class="drug-name">MORFINA</div><div class="drug-class">Opioide μ · Analgésico padrão-ouro</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Agonista μ-opioide. Analgesia espinal e supraspinal. Metabólito ativo M6G (acúmulo em IR). Libera histamina (broncoespasmo potencial).</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Analgesia IV</td><td class="vg">2–4 mg IV titulado a cada 5 min</td></tr><tr><td>Intratecal (raqui)</td><td class="vg">100–200 mcg IT (analgesia 12–24h)</td></tr><tr><td>Peridural</td><td class="vg">3–5 mg (início 30–60 min, pico 90 min)</td></tr><tr><td>PCA</td><td class="vg">1 mg/bolus, lock-out 5–8 min</td></tr><tr><td>Redução em idosos</td><td class="vb">50% dose adulto (acúmulo M6G)</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Gold standard para dor moderada-intensa</span><span class="drug-pill good">Intratecal: analgesia pós-op prolongada (12-24h)</span><span class="drug-pill bad">Prurido (especialmente intratecal)</span><span class="drug-pill bad">Náusea/vômito frequentes</span><span class="drug-pill warn">Evitar em IR (acúmulo M6G) — preferir hidromorfona</span></div></div>
@@ -987,7 +981,7 @@
       <!-- SUFENTANIL -->
       <div class="drug-card" id="dc-sufe"><div class="drug-hdr" style="background:linear-gradient(135deg,#7C1D6F,#BE185D)" onclick="toggleDrug('dc-sufe')"><div class="drug-hdr-inner"><div class="drug-name">SUFENTANIL</div><div class="drug-class">Opioide μ · 5–10× mais potente que fentanil</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Agonista μ-opioide com alta afinidade (Kd 0,14 nM vs 1,7 nM do fentanil). Potência ~5–10× fentanil. Alta lipossolubilidade → início rápido. Sem liberação de histamina.</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Analgesia IV (adjuvante)</td><td class="vg">0,1–0,3 mcg/kg IV</td></tr><tr><td>Indução TIVA (complemento)</td><td class="vg">0,3–1 mcg/kg IV</td></tr><tr><td>Intratecal (raqui)</td><td class="vg">5–10 mcg IT (início rápido, 4–6h)</td></tr><tr><td>Infusão TIVA</td><td class="vg">0,3–1 mcg/kg/h</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Alta potência: permite doses muito menores</span><span class="drug-pill good">Sem histamina — preferível em broncoespásticos</span><span class="drug-pill good">Intratecal: início mais rápido que morfina</span><span class="drug-pill warn">Rigidez torácica dose-dependente</span><span class="drug-pill bad">Depressão respiratória intensa em altas doses</span></div></div>
@@ -1007,7 +1001,7 @@
       <!-- ISOFLURANO -->
       <div class="drug-card" id="dc-iso"><div class="drug-hdr" style="background:linear-gradient(135deg,#1B4332,#2D6A4F)" onclick="toggleDrug('dc-iso')"><div class="drug-hdr-inner"><div class="drug-name">ISOFLURANO</div><div class="drug-class">Halogenado · CAM 1,15% · Uso em UTI</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Anestésico halogenado inalatório. Potencializa GABA-A, bloqueia NMDA. CAM = 1,15% (adulto 40a). Coeficiente sangue:gás = 1,4 (recuperação intermediária). Menos usado para indução (pungente).</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses / CAM</div><table class="pt"><tr><td>CAM adulto (40a)</td><td class="vg">1,15%</td></tr><tr><td>CAM + N₂O 60%</td><td class="vg">~0,5%</td></tr><tr><td>Manutenção típica</td><td class="vg">0,8–1,5% (ajustar por clínica)</td></tr><tr><td>CAM idoso (80a)</td><td class="vb">~0,75% (redução ~35%)</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Sedação inalatória em UTI (AnaConDa™)</span><span class="drug-pill good">Broncodilatador — útil em broncoespasmo</span><span class="drug-pill good">Menor custo que sevoflurano/desflurano</span><span class="drug-pill warn">Pungente — não usar para indução inalatória</span><span class="drug-pill bad">Metabolismo fluoretado (2–5%): evitar em IR</span></div></div>
@@ -1027,7 +1021,7 @@
       <!-- SUGAMMADEX -->
       <div class="drug-card" id="dc-suga"><div class="drug-hdr" style="background:linear-gradient(135deg,#065F46,#059669)" onclick="toggleDrug('dc-suga')"><div class="drug-hdr-inner"><div class="drug-name">SUGAMMADEX</div><div class="drug-class">Ciclodextrina · Reversor de BNM aminoesteroidal</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Ciclodextrina γ modificada que encapsula (quelação) seletivamente rocurônio e vecurônio, formando complexo inativo excretado pela urina. Reversão independente do nível de bloqueio — único reversor para bloqueio profundo.</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses (escalonadas pelo TOF)</div><table class="pt"><tr><td>TOF ratio ≥0,1-0,9 (moderado)</td><td class="vg">2 mg/kg IV</td></tr><tr><td>PTC 1–2 (bloqueio profundo)</td><td class="vg">4 mg/kg IV</td></tr><tr><td>Reversão imediata (pós-ISR)</td><td class="vb">16 mg/kg IV (≥3 min após rocurônio)</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Único reversor eficaz para bloqueio profundo (TOF=0)</span><span class="drug-pill good">Reversão em 2–3 min após dose correta</span><span class="drug-pill good">Sem efeitos colinérgicos (não precisa de atropina)</span><span class="drug-pill warn">Ineficaz para benzilisoquinolinas (cisatracúrio)</span><span class="drug-pill bad">Pode interferir com contraceptivos hormonais (24h)</span><span class="drug-pill warn">Reintubação: aguardar 24h ou usar succinilcolina</span></div></div>
@@ -1037,7 +1031,7 @@
       <!-- CISATRACÚRIO -->
       <div class="drug-card" id="dc-cisa"><div class="drug-hdr" style="background:linear-gradient(135deg,#1B3A5C,#2563EB)" onclick="toggleDrug('dc-cisa')"><div class="drug-hdr-inner"><div class="drug-name">CISATRACÚRIO</div><div class="drug-class">BNM não despolarizante · Eliminação de Hofmann</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">BNM benzilisoquinolinário — bloqueio competitivo dos receptores nicotínicos. Eliminação de Hofmann (degradação espontânea pH/temperatura-dependente) + hidrólise esterásica. Não depende de função hepática ou renal.</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Intubação</td><td class="vg">0,15–0,2 mg/kg IV (3–5 min)</td></tr><tr><td>Manutenção</td><td class="vg">0,03 mg/kg IV (bolus)</td></tr><tr><td>Infusão</td><td class="vg">1–3 mcg/kg/min</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Preferência em insuficiência hepática E renal grave</span><span class="drug-pill good">Sem liberação de histamina (mais seguro que atracúrio)</span><span class="drug-pill warn">NÃO revertido pelo sugammadex — usar neostigmina</span><span class="drug-pill warn">Laudanosina (metabólito): potencial pró-convulsivante em doses altas/prolongadas</span></div></div>
@@ -1047,7 +1041,7 @@
       <!-- ATRACÚRIO -->
       <div class="drug-card" id="dc-atra"><div class="drug-hdr" style="background:linear-gradient(135deg,#1E3A5F,#2563EB)" onclick="toggleDrug('dc-atra')"><div class="drug-hdr-inner"><div class="drug-name">ATRACÚRIO</div><div class="drug-class">BNM não despolarizante · Benzilisoquinolinário</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">BNM benzilisoquinolinário — bloqueio competitivo nicotínico. Eliminação de Hofmann (pH/temperatura) + hidrólise esterásica. Independente de fígado e rim, mas libera histamina (mais que cisatracúrio).</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Intubação</td><td class="vg">0,4–0,5 mg/kg IV (onset 2–3 min)</td></tr><tr><td>Manutenção</td><td class="vg">0,1 mg/kg IV (bolus)</td></tr><tr><td>Infusão</td><td class="vg">5–9 mcg/kg/min</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Preferido em IR e IH grave (Hofmann)</span><span class="drug-pill warn">Libera histamina: broncoespasmo, hipotensão</span><span class="drug-pill warn">NÃO revertido pelo sugammadex — usar neostigmina</span><span class="drug-pill bad">Laudanosina (metabólito): convulsões em doses altas</span></div></div>
@@ -1080,7 +1074,7 @@
       <!-- EFEDRINA -->
       <div class="drug-card" id="dc-efedr"><div class="drug-hdr" style="background:linear-gradient(135deg,#7C3A00,#D97706)" onclick="toggleDrug('dc-efedr')"><div class="drug-hdr-inner"><div class="drug-name">EFEDRINA</div><div class="drug-class">Simpatomimético misto (α+β) · Vasopressor</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Agonismo α1 (vasoconstrição), β1 (inotropia/cronotropia) e β2 (broncodilatação). Mecanismo misto: direto + liberação de noradrenalina endógena. Taquifilaxia com doses repetidas.</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Hipotensão raqui/peridural</td><td class="vg">5–15 mg IV bolus</td></tr><tr><td>Profilaxia (IC/bradicardia)</td><td class="vg">5–10 mg IV</td></tr><tr><td>Infusão</td><td class="vg">10–20 mg/h IV</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Preferida na hipotensão com bradicardia (β1 aumenta FC)</span><span class="drug-pill warn">Em obstetrícia: fenilefrina é preferida (↓ acidose fetal)</span><span class="drug-pill warn">Taquifilaxia: evitar mais de 3-4 bolus repetidos</span><span class="drug-pill bad">Taquicardia e HAS em doses excessivas</span></div></div>
@@ -1090,7 +1084,7 @@
       <!-- FENILEFRINA -->
       <div class="drug-card" id="dc-fenil"><div class="drug-hdr" style="background:linear-gradient(135deg,#1B5E96,#1D4ED8)" onclick="toggleDrug('dc-fenil')"><div class="drug-hdr-inner"><div class="drug-name">FENILEFRINA</div><div class="drug-class">Agonista α1 puro · Vasopressor de escolha em raqui</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Agonista α1 adrenérgico seletivo → vasoconstrição arteriolar e venosa → ↑ RVP → ↑ PA. Sem atividade β → reflexo bradicárdico por ativação do barorreceptor. Sem efeito β1: não aumenta DC.</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Bolus raqui (adulto)</td><td class="vg">50–100 mcg IV bolus</td></tr><tr><td>Infusão profilática (raqui)</td><td class="vg">25–50 mcg/min IV (initiar no bloqueio)</td></tr><tr><td>Hipotensão intraoperatória</td><td class="vg">50–200 mcg IV titulado</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Preferida na hipotensão da raquianestesia para cesárea</span><span class="drug-pill good">Preserva pH fetal melhor que efedrina (ESAIC 2023)</span><span class="drug-pill warn">Bradicardia reflexa: reduzir dose ou alternar com efedrina</span><span class="drug-pill bad">Evitar em hipotensão com bradicardia — preferir efedrina</span><span class="drug-pill warn">Efeito curto (5–10 min): infusão prophilática mais estável</span></div></div>
@@ -1100,7 +1094,7 @@
       <!-- METARAMINOL -->
       <div class="drug-card" id="dc-meta"><div class="drug-hdr" style="background:linear-gradient(135deg,#3B1F6B,#6D28D9)" onclick="toggleDrug('dc-meta')"><div class="drug-hdr-inner"><div class="drug-name">METARAMINOL</div><div class="drug-class">α1-agonista misto · Vasopressor</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Agonismo α1 direto + liberação indireta de noradrenalina endógena. Potência vasopressora intermediária entre efedrina e fenilefrina. Efeito mais prolongado que fenilefrina (meia-vida ~1h).</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt"><tr><td>Bolus IV (hipotensão)</td><td class="vg">0,5–2 mg IV bolus (titulado)</td></tr><tr><td>Infusão IV</td><td class="vg">0,5–5 mg/h IV</td></tr><tr><td>Ampola</td><td class="vg">10 mg/mL — diluir: 10 mg em 100 mL SF = 0,1 mg/mL</td></tr></table></div>
 </div>
           <div class="drug-section"><div class="drug-section-title">Pérolas</div><div><span class="drug-pill good">Duração intermediária (mais que fenilefrina)</span><span class="drug-pill good">Alternativa quando fenilefrina não disponível</span><span class="drug-pill warn">Bradicardia reflexa (via α1)</span><span class="drug-pill warn">Taquifilaxia por depleção de NA endógena</span><span class="drug-pill bad">Evitar em HAS grave e feocromocitoma</span></div></div>
@@ -1116,7 +1110,7 @@
       </div>
 
       <div class="drug-card" id="dc-dexa"><div class="drug-hdr" style="background:linear-gradient(135deg,#E8A020,#1A7A4A)" onclick="toggleDrug('dc-dexa')"><div class="drug-hdr-inner"><div class="drug-name">DEXAMETASONA</div><div class="drug-class">Adjuvante multiuso · Corticoide</div></div><span class="drug-arrow">›</span></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Indicações e doses</div><table class="pt">
           <tr><td>PONV profilaxia</td><td class="vg">4–8 mg IV na indução</td></tr>
           <tr><td>Analgesia adjuvante</td><td class="vg">0,1–0,2 mg/kg (até 8mg) — reduz dor até 24h</td></tr>
@@ -1129,7 +1123,7 @@
 
       <div class="drug-card" id="dc-gaba"><div class="drug-hdr" style="background:linear-gradient(135deg,#7C3AED,#BE185D)" onclick="toggleDrug('dc-gaba')"><div class="drug-hdr-inner"><div class="drug-name">GABAPENTINA</div><div class="drug-class">Adjuvante · Gabapentinoide</div></div><span class="drug-arrow">›</span></div>
         <div class="drug-body"><div class="drug-section"><div class="drug-section-title">Mecanismo</div><div class="drug-text">Liga-se à subunidade α2δ de canais de cálcio voltagem-dependentes → reduz neurotransmissão excitatória.</div></div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="drug-section"><div class="drug-section-title">Doses</div><table class="pt">
           <tr><td>Pré-op</td><td class="vg">300–600 mg VO 1h antes</td></tr>
           <tr><td>Pós-op</td><td class="vg">300 mg VO 8/8h por 48-72h</td></tr>
@@ -1170,12 +1164,12 @@
   </div><div class="topbar-sub">Modos · Parâmetros · Patologias · Gasometria</div></div>
     <button class="back-btn" onclick="goToLauncher()">← Início</button>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('v','param',this)">PARÂMETROS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('v','modos',this)">MODOS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('v','patol',this)">POR PATOLOGIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('v','desmame',this)">DESMAME</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('v','gaso',this)">GASOMETRIA</button>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('v','param',this)">PARÂMETROS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('v','modos',this)">MODOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('v','patol',this)">POR PATOLOGIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('v','desmame',this)">DESMAME</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('v','gaso',this)">GASOMETRIA</button>
   </div>
   <div class="page-wrap">
     <div class="peso-strip">
@@ -1191,10 +1185,10 @@
         <div class="card-body">
           <div class="vm-gauge"><div class="vm-gauge-label">PARÂMETROS ATIVOS</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-              <div class="result-box"><div class="result-label">VC</div><div class="result-value" id="vm-vc">— mL</div><div style="font-size:9px;color:rgba(255,255,255,.3)">6–8 mL/kg PI</div></div>
-              <div class="result-box"><div class="result-label">PEEP</div><div class="result-value gold">5–8</div><div style="font-size:9px;color:rgba(255,255,255,.3)">cmH₂O</div></div>
-              <div class="result-box"><div class="result-label">FR</div><div class="result-value">12–16</div><div style="font-size:9px;color:rgba(255,255,255,.3)">irpm</div></div>
-              <div class="result-box"><div class="result-label">I:E</div><div class="result-value">1:2</div><div style="font-size:9px;color:rgba(255,255,255,.3)">relação</div></div>
+              <div class="result-box"><div class="result-label">VC</div><div class="result-value" id="vm-vc">— mL</div><div style="font-size:11px;color:rgba(255,255,255,.3)">6–8 mL/kg PI</div></div>
+              <div class="result-box"><div class="result-label">PEEP</div><div class="result-value gold">5–8</div><div style="font-size:11px;color:rgba(255,255,255,.3)">cmH₂O</div></div>
+              <div class="result-box"><div class="result-label">FR</div><div class="result-value">12–16</div><div style="font-size:11px;color:rgba(255,255,255,.3)">irpm</div></div>
+              <div class="result-box"><div class="result-label">I:E</div><div class="result-value">1:2</div><div style="font-size:11px;color:rgba(255,255,255,.3)">relação</div></div>
             </div>
           </div>
           <div class="acc"><div class="acc-hdr" onclick="toggleAcc('vm-vc-acc')"><span class="acc-icon">📊</span>VOLUME CORRENTE (VC)</div>
@@ -1211,11 +1205,11 @@
     <div id="v-modos" class="tab-panel">
       <div class="card"><div class="card-header ch-navy"><div class="card-num">M</div>MODOS VENTILATÓRIOS</div><div class="card-body">
         <div class="acc"><div class="acc-hdr" onclick="toggleAcc('m-vcv')"><span class="acc-icon">📐</span>VCV — Volume Controlado</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="acc-body" id="m-vcv"><table class="pt"><tr><td>Fixo</td><td class="vg">Volume corrente</td></tr><tr><td>Variável</td><td class="vw">Pressão de pico</td></tr><tr><td>Quando usar</td><td class="vg">Padrão intraop · ARDS</td></tr></table></div></div>
 </div>
         <div class="acc"><div class="acc-hdr" onclick="toggleAcc('m-pcv')"><span class="acc-icon">📐</span>PCV — Pressão Controlada</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
           <div class="acc-body" id="m-pcv"><table class="pt"><tr><td>Fixo</td><td class="vg">Pressão inspiratória</td></tr><tr><td>Variável</td><td class="vw">Volume corrente</td></tr><tr><td>Quando usar</td><td class="vg">ARDS · torácica · pediatria</td></tr></table></div></div>
 </div>
         <div class="acc"><div class="acc-hdr" onclick="toggleAcc('m-psv')"><span class="acc-icon">📐</span>PSV — Pressão de Suporte</div>
@@ -1237,33 +1231,33 @@
       </div>
       <div id="path-ards" class="path-detail show"><div class="card"><div class="card-header ch-red"><div class="card-num">!</div>ARDS</div><div class="card-body">
         <div class="alert a-red"><strong>Berlin 2012:</strong> P/F ≤300 leve · 101-200 moderado · ≤100 grave</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt"><tr><td>VC</td><td class="vb">4–6 mL/kg PI</td></tr><tr><td>Driving pressure</td><td class="vb">&lt;15 cmH₂O</td></tr><tr><td>Pplat</td><td class="vb">&lt;30 cmH₂O</td></tr><tr><td>PEEP grave</td><td class="vb">12–18 cmH₂O</td></tr></table>
 </div>
         <div class="alert a-orange" style="margin-top:8px"><strong>Prona 16h/dia</strong> se P/F &lt;150 (PROSEVA). <strong>BNM 48h</strong> se P/F &lt;150 (ACURASYS).</div>
       </div></div></div>
       <div id="path-dpoc" class="path-detail"><div class="card"><div class="card-header ch-teal"><div class="card-num">💨</div>DPOC</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt"><tr><td>FR</td><td class="vb">10–14 irpm</td></tr><tr><td>I:E</td><td class="vb">1:3 a 1:4</td></tr><tr><td>PEEP</td><td class="vw">3–5 cmH₂O</td></tr><tr><td>FiO₂</td><td class="vb">SpO₂ 88–92%</td></tr></table>
 </div>
       </div></div></div>
       <div id="path-asma" class="path-detail"><div class="card"><div class="card-header ch-orange"><div class="card-num">⚡</div>ASMA GRAVE</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt"><tr><td>FR</td><td class="vb">8–12 irpm</td></tr><tr><td>I:E</td><td class="vb">1:4 a 1:5</td></tr><tr><td>PEEP</td><td class="vb">3–5 ou ZEEP</td></tr><tr><td>PaCO₂</td><td class="vg">Aceitar até 80 se pH &gt;7,15</td></tr></table>
 </div>
       </div></div></div>
       <div id="path-tce" class="path-detail"><div class="card"><div class="card-header ch-violet"><div class="card-num">🧠</div>TCE GRAVE</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt"><tr><td>EtCO₂/PaCO₂</td><td class="vb">35–40 mmHg</td></tr><tr><td>PAM</td><td class="vb">≥80 mmHg (PPC≥60)</td></tr><tr><td>Hiperventilação</td><td class="vb">CONTRAINDICADA profilática</td></tr></table>
 </div>
       </div></div></div>
       <div id="path-obpat" class="path-detail"><div class="card"><div class="card-header ch-orange"><div class="card-num">🏋</div>OBESO EM VM</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt"><tr><td>VC</td><td class="vb">6–8 mL/kg PESO IDEAL</td></tr><tr><td>PEEP</td><td class="vb">8–12 cmH₂O</td></tr><tr><td>Posição</td><td class="vg">Trendelenburg reverso 30°</td></tr></table>
 </div>
       </div></div></div>
       <div id="path-sep" class="path-detail"><div class="card"><div class="card-header ch-red"><div class="card-num">🦠</div>CHOQUE SÉPTICO</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt"><tr><td>VC</td><td class="vb">4–6 mL/kg PI</td></tr><tr><td>Noradrenalina</td><td class="vb">PAM ≥65 (SSC 2021)</td></tr><tr><td>Hidrocortisona</td><td class="vw">200 mg/dia se refratário</td></tr></table>
 </div>
       </div></div></div>
@@ -1280,7 +1274,7 @@
           <li class="ck-item" onclick="toggleItem(this)"><div class="ck-box"><span class="ck-chk">✓</span></div><span class="ck-text">Temperatura &gt;35,5°C</span></li>
         </ul>
         <div class="sh sh-green">IRRS (Yang-Tobin) = FR / VC (L)</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt"><tr><td>IRRS &lt;80</td><td class="vg">Alta probabilidade de sucesso</td></tr><tr><td>IRRS &gt;105</td><td class="vb">Alta probabilidade de falha</td></tr></table>
 </div>
       </div></div>
@@ -1313,11 +1307,11 @@
   </div><div class="topbar-sub">Raqui · Peridural · Bloqueios · Complicações</div></div>
     <button class="back-btn" onclick="goToLauncher()">← Início</button>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('r','raqui',this)">RAQUI</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('r','peridural',this)">PERIDURAL</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('r','bloqueios',this)">BLOQUEIOS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('r','rcomp',this)">COMPLICAÇÕES</button>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('r','raqui',this)">RAQUI</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('r','peridural',this)">PERIDURAL</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('r','bloqueios',this)">BLOQUEIOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('r','rcomp',this)">COMPLICAÇÕES</button>
   </div>
   <div class="page-wrap">
     <div class="peso-strip">
@@ -1347,7 +1341,7 @@
       </div></div>
 
       <div class="card"><div class="card-header ch-blue"><div class="card-num">📊</div>NÍVEL DE BLOQUEIO POR DERMÁTOMO</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>T4 (mamilos)</td><td class="vg">Cesárea, abdominal alta</td></tr>
           <tr><td>T6 (xifoide)</td><td class="vg">Abdominal alta</td></tr>
@@ -1360,7 +1354,7 @@
       </div></div>
 
       <div class="card"><div class="card-header ch-teal"><div class="card-num">💊</div>DOSES RAQUIANESTESIA</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>Cesárea</td><td class="vg">Bupivacaína hiperbárica 10–12 mg</td></tr>
           <tr><td>Abdominal inferior</td><td class="vg">10–12,5 mg</td></tr>
@@ -1370,7 +1364,7 @@
         </table>
 </div>
         <div class="sh sh-teal">Adjuvantes intratecais</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>Morfina IT</td><td class="vg">100–200 mcg (analgesia 12-24h)</td></tr>
           <tr><td>Fentanil IT</td><td class="vg">20–25 mcg (melhora onset)</td></tr>
@@ -1390,7 +1384,7 @@
         <div class="sh sh-blue">Dose teste</div>
         <div class="alert a-yellow"><strong>Lidocaína 1,5% com epi 1:200.000 — 3mL.</strong><br>Se epidural: sem efeito. Se intravascular: taquicardia (&gt;20bpm). Se intratecal: bloqueio motor rápido.</div>
         <div class="sh sh-blue">Manutenção</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>Ropivacaína 0,1-0,2%</td><td class="vg">+ Fentanil 2 mcg/mL</td></tr>
           <tr><td>Bupivacaína 0,0625-0,125%</td><td class="vg">+ Fentanil 2 mcg/mL</td></tr>
@@ -1448,10 +1442,10 @@
   </div><div class="topbar-sub">Cardiovascular · Neurológico · Cirúrgico</div></div>
     <button class="back-btn" onclick="goToLauncher()">← Início</button>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('sc','cardio',this)">CARDIOVASCULAR</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('sc','neuro',this)">NEUROLÓGICO</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('sc','ciranest',this)">CIRÚRGICO</button>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('sc','cardio',this)">CARDIOVASCULAR</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('sc','neuro',this)">NEUROLÓGICO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('sc','ciranest',this)">CIRÚRGICO</button>
   </div>
   <div class="page-wrap">
 
@@ -1472,7 +1466,7 @@
 
       <!-- METs -->
       <div class="card"><div class="card-header ch-orange"><div class="card-num">🏃</div>METs — CAPACIDADE FUNCIONAL</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>1 MET</td><td class="vb">Cuidados pessoais básicos</td></tr>
           <tr><td>4 METs</td><td class="vg">Subir 1 lance escadas, andar plano rápido</td></tr>
@@ -1485,10 +1479,10 @@
 
       <!-- Killip -->
       <div class="card"><div class="card-header ch-red"><div class="card-num">K</div>KILLIP — CLASSIFICAÇÃO IC NO IAM</div><div class="card-body">
-        <div class="scale-item" onclick="selectKillip(this,1)"><div class="scale-num">I</div><div><strong>Sem IC</strong><br><span style="font-size:10px;color:var(--muted)">Mortalidade: 6%</span></div></div>
-        <div class="scale-item" onclick="selectKillip(this,2)"><div class="scale-num">II</div><div><strong>B3 + estertores basais</strong><br><span style="font-size:10px;color:var(--muted)">Mortalidade: 17%</span></div></div>
-        <div class="scale-item" onclick="selectKillip(this,3)"><div class="scale-num">III</div><div><strong>EAP franco</strong><br><span style="font-size:10px;color:var(--muted)">Mortalidade: 38%</span></div></div>
-        <div class="scale-item" onclick="selectKillip(this,4)"><div class="scale-num">IV</div><div><strong>Choque cardiogênico</strong><br><span style="font-size:10px;color:var(--muted)">Mortalidade: 81%</span></div></div>
+        <div class="scale-item" onclick="selectKillip(this,1)"><div class="scale-num">I</div><div><strong>Sem IC</strong><br><span style="font-size:11px;color:var(--muted)">Mortalidade: 6%</span></div></div>
+        <div class="scale-item" onclick="selectKillip(this,2)"><div class="scale-num">II</div><div><strong>B3 + estertores basais</strong><br><span style="font-size:11px;color:var(--muted)">Mortalidade: 17%</span></div></div>
+        <div class="scale-item" onclick="selectKillip(this,3)"><div class="scale-num">III</div><div><strong>EAP franco</strong><br><span style="font-size:11px;color:var(--muted)">Mortalidade: 38%</span></div></div>
+        <div class="scale-item" onclick="selectKillip(this,4)"><div class="scale-num">IV</div><div><strong>Choque cardiogênico</strong><br><span style="font-size:11px;color:var(--muted)">Mortalidade: 81%</span></div></div>
       </div></div>
     </div>
 
@@ -1602,15 +1596,15 @@
   </div><div class="topbar-sub">Fórmulas visíveis · Resultados automáticos</div></div>
     <button class="back-btn" onclick="goToLauncher()">← Início</button>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('ca','pesos',this)">PESOS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ca','infbomba',this)">INFUSÃO</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ca','gasoadv',this)">GASOMETRIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ca','fluidos',this)">FLUIDOS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ca','clearance',this)">CLEARANCE</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ca','raquicalc',this)">RAQUI-CALC</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ca','apfel',this)">APFEL</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('ca','outros',this)">OUTROS</button>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('ca','pesos',this)">PESOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ca','infbomba',this)">INFUSÃO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ca','gasoadv',this)">GASOMETRIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ca','fluidos',this)">FLUIDOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ca','clearance',this)">CLEARANCE</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ca','raquicalc',this)">RAQUI-CALC</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ca','apfel',this)">APFEL</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('ca','outros',this)">OUTROS</button>
   </div>
   <div class="page-wrap">
 
@@ -1701,7 +1695,7 @@
         </div>
         <div id="cr-results" style="margin-top:10px"></div>
         <div class="sh sh-violet" style="margin-top:12px">Ajuste de dose por CrCl</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>Morfina</td><td class="vb">CrCl &lt;30: reduzir 50-75%</td></tr>
           <tr><td>Atracúrio/Cisatracúrio</td><td class="vg">Sem ajuste (Hofmann)</td></tr>
@@ -1763,7 +1757,7 @@
 
       <!-- Conversão opioides -->
       <div class="card"><div class="card-header ch-violet"><div class="card-num">💊</div>CONVERSÃO DE OPIOIDES (MORFINA EQUIVALENTES)</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>Morfina IV 10 mg</td><td class="vg">= referência</td></tr>
           <tr><td>Fentanil IV</td><td class="vg">100 mcg</td></tr>
@@ -1785,11 +1779,11 @@
   </div><div class="topbar-sub">Protocolo ERAS 2023 · PONV · Analgesia · SRPA</div></div>
     <button class="back-btn" onclick="goToLauncher()">← Início</button>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" aria-selected="true" onclick="showTab('er','erasproto',this)">ERAS</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('er','ponv',this)">PONV</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('er','analgesia',this)">ANALGESIA</button>
-    <button class="tab-btn" aria-selected="false" onclick="showTab('er','srpa',this)">SRPA</button>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('er','erasproto',this)">ERAS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('er','ponv',this)">PONV</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('er','analgesia',this)">ANALGESIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('er','srpa',this)">SRPA</button>
   </div>
   <div class="page-wrap">
 
@@ -1848,7 +1842,7 @@
         <div id="er-apfel-result" style="margin-top:10px"></div>
       </div></div>
       <div class="card"><div class="card-header ch-teal"><div class="card-num">💊</div>ANTIEMÉTICOS — 5th Consensus 2025</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>Ondansetrona</td><td class="vg">4 mg IV (final cirurgia)</td></tr>
           <tr><td>Dexametasona</td><td class="vg">4-8 mg IV (indução)</td></tr>
@@ -1858,7 +1852,7 @@
         </table>
 </div>
         <div class="sh sh-red">Resgate PONV</div>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>Metoclopramida</td><td class="vg">10 mg IV</td></tr>
           <tr><td>Haloperidol</td><td class="vg">0,5-1 mg IV</td></tr>
@@ -1879,7 +1873,7 @@
           <div class="acc-body" id="eva-int">+ <strong>Morfina</strong> 2-4mg IV q5min até EVA&lt;4 ou <strong>Fentanil</strong> 25-50mcg IV</div></div>
       </div></div>
       <div class="card"><div class="card-header ch-teal"><div class="card-num">💊</div>ADJUVANTES</div><div class="card-body">
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px">
+<div class="tbl-wrap">
         <table class="pt">
           <tr><td>Cetamina</td><td class="vg">0,1-0,3 mg/kg bolus (anti-hiperalgesia)</td></tr>
           <tr><td>Lidocaína IV</td><td class="vg">1,5 mg/kg + 1-2 mg/kg/h (abd)</td></tr>
@@ -1919,17 +1913,17 @@
     <div>
       <div style="display:flex;align-items:baseline;gap:10px">
         <div class="topbar-brand">ANESTOGUIA R1</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(56,182,224,.55);letter-spacing:.6px">por Vinicius Hammoud</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(56,182,224,.55);letter-spacing:.6px">por Vinicius Hammoud</div>
       </div>
       <div class="topbar-sub">Guia Clínico de Anestesiologia · 19 Módulos · Baseado em Evidências</div>
     </div>
     <div style="display:flex;align-items:center;gap:8px">
-      <button onclick="goToLauncher()" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);padding:4px 10px;border-radius:5px;font-family:'JetBrains Mono',monospace;font-size:9px;cursor:pointer;letter-spacing:.3px">← Início</button>
+      <button onclick="goToLauncher()" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);padding:4px 10px;border-radius:5px;font-family:'JetBrains Mono',monospace;font-size:11px;cursor:pointer;letter-spacing:.3px">← Início</button>
       <span class="badge" style="background:rgba(56,182,224,.15);border:1px solid rgba(56,182,224,.35);color:var(--cyan)">ESTUDOS</span>
     </div>
   </div>
 
-  <div style="padding:12px 12px 4px;color:var(--cyan);font-size:.68rem;letter-spacing:.12em;font-family:'JetBrains Mono',monospace;opacity:.65">
+  <div style="padding:12px 12px 4px;color:var(--cyan);font-size:.78rem;letter-spacing:.12em;font-family:'JetBrains Mono',monospace;opacity:.65">
     TRILHA DE APRENDIZADO · SEQUÊNCIA PEDAGÓGICA RECOMENDADA
   </div>
 
@@ -1940,7 +1934,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">📋</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 1</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 1</div>
           <div class="home-card-title">AVALIAÇÃO PRÉ-ANESTÉSICA</div>
           <div class="home-card-sub">ASA · RCRI · Jejum ASA 2023 · Apfel · Caprini · Sistemas</div>
         </div>
@@ -1953,7 +1947,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">💊</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 2</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 2</div>
           <div class="home-card-title">FARMACOLOGIA ANESTÉSICA</div>
           <div class="home-card-sub">Hipnóticos · Opioides · BNM · Reversores · ALs · MPA</div>
         </div>
@@ -1966,7 +1960,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🫁</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 3</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 3</div>
           <div class="home-card-title">VENTILAÇÃO MECÂNICA</div>
           <div class="home-card-sub">VCV · PCV · PEEP · Drive Pressure · Protetora · VILI</div>
         </div>
@@ -1979,7 +1973,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">📊</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 4</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 4</div>
           <div class="home-card-title">MONITORIZAÇÃO ANESTÉSICA</div>
           <div class="home-card-sub">BIS · TOF · PAI · EcoTTE · Gasometria · Capnografia</div>
         </div>
@@ -1992,7 +1986,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">💉</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 5</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 5</div>
           <div class="home-card-title">ANESTESIA GERAL E SEDAÇÃO</div>
           <div class="home-card-sub">MPA · Sedação · TIVA/TCI · Inalatória · Balanceada</div>
         </div>
@@ -2005,7 +1999,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🫁</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 6</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 6</div>
           <div class="home-card-title">INTUBAÇÃO OROTRAQUEAL</div>
           <div class="home-card-sub">Anatomia · Técnica · RSI · Confirmação · Vent. Protetora</div>
         </div>
@@ -2018,7 +2012,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">⚠️</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 7</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 7</div>
           <div class="home-card-title">VIA AÉREA DIFÍCIL</div>
           <div class="home-card-sub">DAS 2015 · CAFG 2016 · CICV · Cricotireoidostomia · VNI</div>
         </div>
@@ -2031,7 +2025,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🩻</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 8</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 8</div>
           <div class="home-card-title">RAQUIANESTESIA</div>
           <div class="home-card-sub">Anatomia · Técnica · Farmacologia · Complicações · 10 Casos</div>
         </div>
@@ -2044,7 +2038,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🩺</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 9</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 9</div>
           <div class="home-card-title">ANALGESIA MULTIMODAL</div>
           <div class="home-card-sub">ERAS · AINEs · Opioides · Bloqueios · DCPC · PCA</div>
         </div>
@@ -2057,7 +2051,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🩸</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 10</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 10</div>
           <div class="home-card-title">REPOSIÇÃO VOLÊMICA E HEMOTERAPIA</div>
           <div class="home-card-sub">Cristaloides · GDT · Transfusão · PPV/SVV · Ácido Tranexâmico</div>
         </div>
@@ -2070,7 +2064,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🩹</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 11</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 11</div>
           <div class="home-card-title">ACESSO VASCULAR CENTRAL</div>
           <div class="home-card-sub">Seldinger · Ultrassom · Jugular · Subclávia · Hemodinâmica</div>
         </div>
@@ -2083,7 +2077,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">👶</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 12</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 12</div>
           <div class="home-card-title">ANESTESIA PEDIÁTRICA</div>
           <div class="home-card-sub">Fisiologia · Cálculos · Farmacologia · VNI · Emergence Agitation</div>
         </div>
@@ -2096,7 +2090,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🏥</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 13</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">MÓDULO 13</div>
           <div class="home-card-title">SRPA — RECUPERAÇÃO PÓS-ANESTÉSICA</div>
           <div class="home-card-sub">Aldrete · Eventos Adversos · Delirium · ESAIC 2024 · Checklist</div>
         </div>
@@ -2110,7 +2104,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🚨</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">EMERGÊNCIA</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">EMERGÊNCIA</div>
           <div class="home-card-title">GESTÃO DE CRISES</div>
           <div class="home-card-sub">HM · Anafilaxia · LAST · CICV · PCR · Broncoespasmo</div>
         </div>
@@ -2123,7 +2117,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🔬</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">POCUS + REGIONAL</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">POCUS + REGIONAL</div>
           <div class="home-card-title">ULTRASSONOGRAFIA</div>
           <div class="home-card-sub">Pulmonar · Gástrico · FAST · Echo · Regional USG · LAST</div>
         </div>
@@ -2136,7 +2130,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🧮</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">CALCULADORAS</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">CALCULADORAS</div>
           <div class="home-card-title">CÁLCULOS CLÍNICOS</div>
           <div class="home-card-sub">TCI/TIVA · Volémica · Eletrólitos · Gasometria · Doses</div>
         </div>
@@ -2149,7 +2143,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🤰</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">TIER A · TEA/TSA</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">TIER A · TEA/TSA</div>
           <div class="home-card-title">OBSTETRÍCIA</div>
           <div class="home-card-sub">Adaptações · Raqui/Cesárea · Peridural · Pré-Eclâmpsia · Emergências</div>
         </div>
@@ -2162,7 +2156,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🫀</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">TIER S · TEA/TSA</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">TIER S · TEA/TSA</div>
           <div class="home-card-title">FISIOLOGIA APLICADA</div>
           <div class="home-card-sub">CV · Respiratória · Farmacocinética · Renal · Neurológica</div>
         </div>
@@ -2175,7 +2169,7 @@
       <div class="home-card-inner">
         <div class="home-card-icon">🏥</div>
         <div>
-          <div style="font-size:.58rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">TIER B · TEA/TSA</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-bottom:2px;font-family:'JetBrains Mono',monospace">TIER B · TEA/TSA</div>
           <div class="home-card-title">CIRURGIAS ESPECIAIS</div>
           <div class="home-card-sub">CEC · Neurocirurgia · Torácica/OLV · Trauma · Laparoscopia</div>
         </div>
@@ -2184,7 +2178,7 @@
     </div>
   </div>
   <div class="footnote" style="padding:12px 12px 4px">AnestoGuia <span class="app-version"></span> · uso educacional · referências em cada módulo</div>
-  <div style="text-align:center;padding:2px 12px 24px;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.5px">Desenvolvido por <span style="color:rgba(56,182,224,.7);font-weight:600">Vinicius Hammoud</span> · R1 Anestesiologia</div>
+  <div style="text-align:center;padding:2px 12px 24px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.5px">Desenvolvido por <span style="color:rgba(56,182,224,.7);font-weight:600">Vinicius Hammoud</span> · R1 Anestesiologia</div>
 </div>
 
 <div class="screen" id="screen-treino">
@@ -2251,6 +2245,13 @@
 </div>
 
 </div>
+
+<nav class="bottom-nav" aria-label="Navegação principal">
+  <button data-mode="launcher" onclick="goToLauncher()"><span class="ic">🏠</span>INÍCIO</button>
+  <button data-mode="p" onclick="enterMode('pratico')"><span class="ic">⚡</span>PRÁTICO</button>
+  <button data-mode="e" onclick="enterMode('estudos')"><span class="ic">📚</span>ESTUDOS</button>
+  <button data-mode="t" onclick="enterMode('treino')"><span class="ic">🎯</span>TREINO</button>
+</nav>
 
 <!-- Módulos de estudo são carregados sob demanda aqui (modulos/<id>.html) -->
 <div id="modulos-container"></div>
