@@ -40,3 +40,20 @@
 - Correções de estrutura: no módulo VAD, uma `<div>` sem fechar escondia as abas a partir de "Técnicas"; no módulo Intubação, o cartão "03 Mallampati" estava fundido ao de Cormack-Lehane (restaurado) e as abas ficavam fora da tela do módulo.
 - `tools/check.js` agora acusa `<div>` desbalanceadas e abas aninhadas.
 - Rodapés de todos os módulos padronizados (autor "Anestesiologista", versão do app no lugar de "R1 · SBA 2025 · ESAIC 2025…"); a versão agora aparece também nos módulos carregados sob demanda.
+
+## 3.1.0 — 2026-10-18 (fase D2 — Farmacologia)
+- Revisão médica completa do módulo Farmacologia (167 trechos):
+  - **Hipnóticos:** ensaio RSI (NEJM 2025), etomidato × cetamina no crítico; etomidato vem pronto (não "diluído em água destilada"); escetamina S(+) com ~2× a potência (era "levocetamina 2–4×"); propofol pediátrico 2,5–3,5 mg/kg; alergia a ovo não contraindica o propofol; novo cartão de remimazolam.
+  - **Inalatórios:** CAM-acordado/CAM-BAR e fatores que alteram a CAM; coeficientes padronizados; efeito de concentração separado do efeito do segundo gás; hipóxia por difusão; N₂O (gás intraocular; deixou de constar como "CI em gestantes"); Composto A pela bula atual; impacto ambiental; HM pelo MHAUS.
+  - **Opioides:** fentanil intratecal 10–25 mcg; remifentanil (bolus lento permitido, glicina, espaço morto do equipo); tramadol (FDA 2017); dipirona e gabapentinoides na analgesia multimodal; buprenorfina perioperatória.
+  - **BNM e reversão:** diretriz ASA 2023 (monitorização quantitativa; neostigmina só com TOFR ≥0,4); sugamadex com afinidade correta, contraceptivos, anafilaxia e reintubação; número de dibucaína; duração do rocurônio e do cisatracúrio corrigida.
+  - **Anestésicos locais:** doses máximas pela bula; vasoconstritor em dedos (WALANT); LAST pelo ASRA 2020.
+  - **Vasoativos:** noradrenalina periférica (SSC 2021); vasopressina fora da PCR; atropina 1 mg; anafilaxia pelo NAP6; choque cardiogênico.
+  - **Adjuvantes e MPA:** lidocaína IV (consenso Foo 2021, ALLEGRO 2025); dexametasona (PADDI); midazolam no idoso (I-PROMOTE); NVPO pelos consensos 2020/2025; disponibilidade no Brasil.
+- Questões com 4 alternativas. A da raqui hiperbárica dizia que a solução "se acumula na lordose lombar" (corrigido: escorre para T5–T6 e o sacro). A do sugamadex deixou de tratá-lo como resgate de CICO.
+- Casos clínicos:
+  - Choque: um único indutor em dose reduzida (antes, etomidato e cetamina em dose cheia).
+  - Cesárea: "DAS 2022" inexistente trocada pela OAA/DAS 2015, e ~1 CAM até o nascimento (NAP5).
+  - LAST: o bloqueio do caso é ilioinguinal, não femoral.
+  - Reversão: classificação de profundidade do bloqueio pela ASA 2023.
+- Cartões "Pérolas de prova", "Como é no Brasil" e "Referências" (16 fontes).
