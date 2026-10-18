@@ -38,6 +38,8 @@ function ensureModule(id) {
     return r.text();
   }).then(function (html) {
     document.getElementById('modulos-container').insertAdjacentHTML('beforeend', html);
+    var scr = document.getElementById('screen-' + id);
+    if (scr) scr.querySelectorAll('.app-version').forEach(function (e) { e.textContent = 'v' + APP_VERSION; });
     if (typeof afterModuleLoad === 'function') afterModuleLoad(id);
     return true;
   }).catch(function (e) {

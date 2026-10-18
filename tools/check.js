@@ -41,6 +41,19 @@ function scanIds(name, html) {
 scanIds('index.html', index);
 for (const [m, html] of Object.entries(modules)) scanIds('modulos/' + m + '.html', html);
 
+// ── <div> balanceadas: todas as abas no mesmo nível (uma div aberta a mais esconde as abas seguintes) ──
+for (const [m, html] of Object.entries(modules)) {
+  let d = 0; const nivel = {};
+  for (const t of html.replace(/<!--[\s\S]*?-->/g, '').matchAll(/<(\/?)div\b[^>]*>/g)) {
+    if (t[1]) { d--; continue; }
+    if (/class="tab-panel/.test(t[0])) nivel[(t[0].match(/id="([^"]+)"/) || [, '?'])[1]] = d;
+    d++;
+  }
+  if (d !== 0) err(`modulos/${m}.html: ${d > 0 ? d + ' <div> sem fechar' : -d + ' </div> a mais'}`);
+  const niveis = Object.entries(nivel); const base = niveis.length && niveis[0][1];
+  for (const [id, n] of niveis) if (n !== base) { err(`modulos/${m}.html: aba ${id} aninhada dentro de outra (nível ${n}, esperado ${base})`); break; }
+}
+
 // ── handlers inline → função existe? ──
 const defs = new Set([...js.matchAll(/function\s+([A-Za-z_$][\w$]*)\s*\(/g)].map(m => m[1]));
 [...js.matchAll(/(?:var|let|const)\s+([A-Za-z_$][\w$]*)\s*=\s*(?:function|\(|\w+\s*=>)/g)].forEach(m => defs.add(m[1]));
