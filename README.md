@@ -10,7 +10,7 @@ Feito por **Vinicius Hammoud** (anestesiologista). Uso educacional: não substit
 
 ## Usar
 
-Site publicado: https://vinihammoud-create.github.io/anestoguiar1/
+Site publicado: https://vinihammoud-create.github.io/anestoguia/
 
 No celular, abra o link e use "Adicionar à tela inicial" (Safari) ou "Instalar app" (Chrome). Funciona offline após a primeira visita.
 

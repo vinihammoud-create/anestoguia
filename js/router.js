@@ -3,7 +3,7 @@
    • botão "voltar" do celular volta de tela (history nativo)
    • módulos de estudo carregados sob demanda de modulos/<id>.html
    ══════════════════════════════════════════════════════════════ */
-var APP_VERSION = '3.0.0';
+var APP_VERSION = '3.1.0';
 var MODULOS = ['preop','farma','vm','monit','anesgeral','iot','vad','raqui','analgesia','volemia','avc','ped','srpa','crises','pocus','calc-clinica','obstetricia','fisiologia','cirurgias-esp'];
 var _modCache = {};
 
