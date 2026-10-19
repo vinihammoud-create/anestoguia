@@ -100,3 +100,14 @@
 - **Peridural:** teste de dose (↑FC ≥10 bpm), LOR com ar ou soro, plaquetas ≥70.000 na torácica, morfina peridural 1–3 mg.
 - Questões com 4 alternativas; correção de erros de digitação ("cesaréa", "painé", "prunído", "orificio", "tracção").
 - Cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
+
+## 3.1.0 — 2026-10-19 (fase D8 — Analgesia multimodal)
+- **Equianalgesia:** a tabela e a questão 1 davam "tramadol 100–120 mg ≈ morfina IV 10 mg" e um gabarito de 30 mg/dia IV com explicação que calculava 10 mg; agora tramadol VO 300 mg ≈ morfina VO 30 mg ≈ morfina IV ~10 mg (gabarito B, início com 25–50% da dose calculada).
+- **Doses de anestésico local:** o protocolo de artroplastia somava bloqueio bilateral (2 × 20 mL de ropivacaína 0,5%) com 200 mL a 0,2% de infiltração (>600 mg). Agora a dose total de AL (bloqueio + infiltração) fica ≤3 mg/kg.
+- **Lidocaína IV:** doses de 2–3 mg/kg/h saem; limite 1,5 mg/kg/h (peso ideal), ≤24 h, sem associar bloqueio regional (consenso Foo 2021). O benefício no íleo vem de metanálises antigas; o ensaio ALLEGRO (JAMA 2025) foi negativo — a questão 3 foi reescrita em torno dele.
+- **Gabapentinoides:** removidos como parte de rotina (Verret 2020: efeito abaixo do clinicamente relevante, sem redução consistente de dor crônica); o texto dizia "evidência forte/moderada-forte" e o caso de SAOS combinava pregabalina com opioide.
+- **AAS e neuroaxe:** o caso de toracotomia dizia "AAS: aguardar 7 dias para epidural"; AAS isolado não contraindica (ASRA). Paravertebral segue as regras do neuroaxe.
+- **Dipirona:** risco de agranulocitose apresentado com a variação real das estimativas e a situação regulatória atual (não "decisão política").
+- **Opioides:** morfina IT 50–150 mcg, alta sem codeína/tramadol de rotina, hidromorfona (H3G), buprenorfina mantida no perioperatório, cetamina "fortemente recomendada" (não "obrigatória"); paracetamol sem "COX-3"; coxibes e CABG corrigidos; ranitidina retirada.
+- **Revisão rápida:** "fentanil 0,01 mg = 1 mcg" (falso) → 0,1 mg = 100 mcg.
+- Questões com 4 alternativas; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
