@@ -194,3 +194,13 @@
 - **Neuro:** PIC >20–22 (BTF 4ª ed.); autorregulação 50–150 como limites clássicos; hipotermia para PIC desfavorável (Eurotherm3235); hipotermia a 28 °C ~50–60%.
 - **Casos:** shunt do caso 1 recalculado (≈44%); dopamina (SOAP II: mais arritmias); vasopressina e hidrocortisona nos limiares da SSC 2021; propofol TCI de Marsh com alvo plasmático; halogenados "evitar" (MEP exige TIVA).
 - **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
+
+## 3.1.0 — 2026-10-19 (fase D13e — POCUS e Regional por US)
+- **Dose de lidocaína 1%/2% na tabela de LAST estava errada:** 315 mg = 31 mL de lidocaína 1% (e 16 mL de 2%), não 23/11,5 mL.
+- **Emulsão lipídica (ASRA 2020):** bolus 1,5 mL/kg (peso magro) em 2–3 min; infusão por ≥10 min após estabilidade; reduzir adrenalina; vasopressina, bloqueadores de canal de cálcio e β-bloqueadores evitados; amiodarona pode ser usada; propofol não substitui a emulsão. Dose-teste com adrenalina com ressalvas; US não elimina injeção intravascular.
+- **Pneumotórax por US:** sensibilidade/especificidade corrigidas (91%/98%; Alrajhi, Chest 2012; RX supino ~50%).
+- **Derrame pleural:** regra "3 cm ≈ 500 mL" trocada pela estimativa de Balik (20 × mm).
+- **POCUS gástrico:** fórmula de Perlas com ressalvas; GLP-1 incluído como indicação; justificativas de obesidade/gestação corrigidas.
+- **VCI:** "colapsável = precisa de volume" trocado por "sugere responsividade", com limitações.
+- **Regional:** interescalênico com 10–20 mL e paresia frênica ~100%; supraclavicular sem "pneumotórax 1–6%"; safeno no canal adutor anterolateral (não medial) à artéria; ESP deixa de ser "sem risco de pneumotórax"; QL com evidência limitada; início do bloqueio poplíteo.
+- **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
