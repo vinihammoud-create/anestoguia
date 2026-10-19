@@ -92,6 +92,9 @@ if (temas) {
       if (!q.justificativa || q.justificativa.length < 80) err(`${q.id}: justificativa ausente ou curta`);
       if (!q.enunciado || q.enunciado.length < 30) err(`${q.id}: enunciado curto`);
       for (const k of ['resposta_correta', 'explicacao']) if (k in q) err(`${q.id}: campo legado ${k}`);
+      if (!modules[q.modulo || t.modulo]) err(`${q.id}: módulo inexistente "${q.modulo || t.modulo}"`);
+      if (!['conceito', 'caso clínico', 'cálculo', 'negativa'].includes(q.tipo)) err(`${q.id}: tipo inválido "${q.tipo}"`);
+      const alt4 = Object.values(q.alternativas || {}); if (new Set(alt4).size !== alt4.length) err(`${q.id}: alternativas repetidas`);
       dist[q.resposta] = (dist[q.resposta] || 0) + 1;
     }
   }

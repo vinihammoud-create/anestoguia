@@ -2316,7 +2316,7 @@
   <div class="tr-home-hero">
     <div class="tr-home-badge">AnestoGuia</div>
     <h1 class="tr-home-title">TREINO <span>TEA/TSA</span></h1>
-    <p class="tr-home-subtitle">600 Questões Comentadas · 15 Temas · 40 por Tema</p>
+    <p class="tr-home-subtitle">Questões comentadas · simulado · revisão de erros</p>
   </div>
   <div class="tr-temas-grid" id="tr-temas-grid">
     <!-- gerado por JS -->
@@ -2342,10 +2342,48 @@
     <div class="tr-progress-bar-bg">
       <div class="tr-progress-bar-fill" id="tr-progress-fill"></div>
     </div>
+    <div class="tr-questao-meta" id="tr-questao-meta"></div>
     <div class="tr-enunciado-card" id="tr-enunciado"></div>
     <div class="tr-alternativas" id="tr-alternativas"></div>
     <div class="tr-justificativa" id="tr-justificativa"></div>
     <button class="tr-btn-proxima" id="tr-btn-proxima" onclick="tr_proxima()">PRÓXIMA →</button>
+  </div>
+</div>
+
+<!-- TELA CONFIG DO SIMULADO -->
+<div id="tr-tela-sim-config" class="tr-tela">
+  <div class="tr-global-header">
+    <div class="tr-global-header-inner">
+      <button class="tr-btn-voltar" onclick="tr_voltarHome()">← Treino</button>
+      <div><div class="tr-header-titulo">Simulado TEA</div></div>
+    </div>
+  </div>
+  <div class="tr-resultado-wrap" id="tr-sim-config-wrap"></div>
+</div>
+
+<!-- TELA SIMULADO -->
+<div id="tr-tela-simulado" class="tr-tela">
+  <div class="tr-global-header">
+    <div class="tr-global-header-inner">
+      <button class="tr-btn-voltar" onclick="tr_simSair()">← Sair</button>
+      <div><div class="tr-header-titulo">Simulado TEA</div></div>
+      <div class="tr-sim-timer" id="tr-sim-timer" aria-live="off">0:00</div>
+    </div>
+  </div>
+  <div class="tr-questao-wrap">
+    <div class="tr-questao-progress">
+      <span class="tr-questao-progress-label" id="tr-sim-num"></span>
+      <button type="button" class="tr-sim-mapa-btn" onclick="tr_simMapaAlternar()">▦ Mapa</button>
+    </div>
+    <div class="tr-progress-bar-bg"><div class="tr-progress-bar-fill" id="tr-sim-fill"></div></div>
+    <div class="tr-sim-mapa" id="tr-sim-mapa"></div>
+    <div class="tr-enunciado-card" id="tr-sim-enunciado"></div>
+    <div class="tr-alternativas" id="tr-sim-alternativas"></div>
+    <div class="tr-sim-nav">
+      <button type="button" class="tr-resultado-btn tr-secondary" id="tr-sim-anterior" onclick="tr_simIr(-1)">← ANTERIOR</button>
+      <button type="button" class="tr-resultado-btn tr-primary" id="tr-sim-proxima">PRÓXIMA →</button>
+    </div>
+    <button type="button" class="tr-sim-finalizar" onclick="tr_simFinalizar(false)">Finalizar simulado</button>
   </div>
 </div>
 

@@ -69,7 +69,7 @@ function render() {
     var el = activateScreen(ok ? id : 'screen-home');
     updateNav(seg[0] || 'launcher');
     if (seg[2] && ok) activateTab(el, seg[2]);
-    if (id === 'screen-treino' && typeof showTreinoHome === 'function') showTreinoHome();
+    if (id === 'screen-treino' && typeof showTreinoHome === 'function') showTreinoHome(seg[1]);
   });
 }
 

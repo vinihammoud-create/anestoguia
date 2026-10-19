@@ -279,3 +279,17 @@
 - **Neuroanestesia** (novo): CBF/CMRO₂ e efeito dos anestésicos, PIC e PPC, HIC, craniotomia, posição sentada e embolia aérea, craniotomia acordado, neuromonitorização, hipófise, HSA/aneurisma, trombectomia. 41 questões.
 ### Treino
 - Banco de questões: 850 → 1005 (25 temas), com gabaritos balanceados (25% por letra).
+
+## 3.3.0 — 2026-10-19 (fase E — Treino: simulado, revisão espaçada, migração e metadados)
+### Treino
+- **Simulado TEA** (novo): 40, 60 ou 100 questões em proporção aos temas, cronômetro (2,5 min por questão), sem gabarito durante a prova, mapa de questões, voltar e trocar respostas, encerramento automático ao fim do tempo, retomar simulado em andamento, resultado por tema, revisão das erradas com justificativa e histórico dos últimos simulados.
+- **Revisão de erros com repetição espaçada**: cada erro entra na caixa 0 e volta em 1, 3, 7, 14 e 30 dias a cada acerto; a home mostra quantas vencem hoje e quando volta a próxima.
+- **Exportar e importar progresso** em arquivo JSON (troca de aparelho).
+- Resumo na home (respondidas, % de acerto, simulados) e % de acerto por tema.
+- Atalho "Abrir o módulo de estudo" na justificativa; rota `#/t/<tema>` abre o tema direto, e a aba "Questões" de cada módulo passou a levar ao Treino.
+### Banco de questões
+- As 68 questões de múltipla escolha que estavam fixas nas abas dos módulos foram migradas para o banco único (ids `<tema>_mNN`), com gabaritos balanceados; novo tema **Acesso Vascular Central**. Os casos discursivos de avc e ped continuam nas abas "Casos".
+- Metadados em todas as questões: `modulo` (para o atalho) e `tipo` (conceito, caso clínico, cálculo, negativa), exibido como etiqueta. Total: 1073 questões em 26 temas, 25% por letra.
+- `tools/check.js` passou a validar módulo, tipo e alternativas repetidas; novo `tools/test-treino.js` (25 verificações no navegador).
+### Correções
+- **Treino no celular:** o estilo do cartão do enunciado e dos botões de alternativa estava dentro de um `@media (min-width: 600px)` e só valia em telas largas; em telas de celular as alternativas apareciam sem estilo. Corrigido.

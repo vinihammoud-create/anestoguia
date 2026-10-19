@@ -1683,122 +1683,12 @@
   <div class="tab-panel" id="monit-questoes">
     <div class="page-wrap">
       <div class="card">
-        <div class="card-hdr" style="background:var(--orange)">
-          <span class="card-title">📝 Questões — Monitorização Anestésica</span>
+        <div class="card-header ch-violet">
+          <span class="card-num">📝</span> Questões — Monitorização
         </div>
         <div class="card-body">
-          <p style="font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">5 questões de múltipla escolha · Clique para revelar o gabarito</p>
-
-          <div class="caso-card" id="q1-monit">
-            <div class="caso-hdr" onclick="toggleCaso(this)">
-              <div class="caso-num">1</div>
-              <div class="caso-title">QUESTÃO 1 — BIS e Risco de Awareness</div>
-              <div class="caso-arrow">›</div>
-            </div>
-            <div class="caso-body">
-              <div class="caso-question">Durante anestesia geral balanceada para colecistectomia laparoscópica, o monitor BIS exibe valor de <strong>72</strong>. O paciente está em ventilação mecânica, com sinais vitais estáveis. Qual é a interpretação CORRETA e a conduta mais adequada?</div>
-              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
-              <p style="font-size:12px;line-height:1.8">
-                A) BIS 72 está dentro do alvo ideal (60–80), conduta: manter<br>
-                B) BIS 72 indica anestesia excessivamente profunda, reduzir agentes<br>
-                C) BIS 72 está acima do alvo (40–60), indicando anestesia insuficiente — risco de awareness; aprofundar<br>
-                D) BIS 72 só é relevante se o paciente apresentar movimento<br>
-                
-              </p>
-              <div class="caso-answer">
-                <strong>Gabarito: C)</strong> — O alvo de BIS intraoperatório é <strong>40–60</strong>. BIS = 72 está <strong>acima do alvo</strong>, indicando nível de sedação potencialmente insuficiente com <strong>risco de consciência intraoperatória (awareness)</strong>. A conduta correta é aprofundar a anestesia (aumentar concentração do agente inalatório ou dose do hipnótico IV). BIS &lt;40 indica anestesia excessivamente profunda, associada a hipotensão e recuperação lenta.
-              </div>
-            </div>
-          </div>
-
-          <div class="caso-card" id="q2-monit">
-            <div class="caso-hdr" onclick="toggleCaso(this)">
-              <div class="caso-num">2</div>
-              <div class="caso-title">QUESTÃO 2 — Queda Súbita do ETCO2</div>
-              <div class="caso-arrow">›</div>
-            </div>
-            <div class="caso-body">
-              <div class="caso-question">Durante cirurgia ortopédica de longa duração, o ETCO2 cai abruptamente de <strong>38 para 8 mmHg</strong> em menos de 1 minuto, com SpO2 caindo para 88% e hipotensão súbita. O que essa apresentação sugere como diagnóstico MAIS provável?</div>
-              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
-              <p style="font-size:12px;line-height:1.8">
-                A) Hipoventilação aguda<br>
-                B) Extubação acidental<br>
-                C) Embolia pulmonar maciça ou parada cardiorrespiratória<br>
-                D) Hipercapnia por reinalação<br>
-                
-              </p>
-              <div class="caso-answer">
-                <strong>Gabarito: C)</strong> — A queda súbita do ETCO2 para valores muito baixos (&lt;10 mmHg) com instabilidade hemodinâmica sugere <strong>embolia pulmonar maciça</strong> (embolia gasosa, gordurosa ou trombótica) ou <strong>PCR</strong>. Nesses casos, o débito cardíaco cai drasticamente, reduzindo o transporte de CO2 para os pulmões. Extubação causaria ETCO2 = zero com alarme de circuito; hipoventilação elevaria o ETCO2; broncoespasmo elevaria levemente o ETCO2 com padrão em platô ascendente.
-              </div>
-            </div>
-          </div>
-
-          <div class="caso-card" id="q3-monit">
-            <div class="caso-hdr" onclick="toggleCaso(this)">
-              <div class="caso-num">3</div>
-              <div class="caso-title">QUESTÃO 3 — TOF e Extubação</div>
-              <div class="caso-arrow">›</div>
-            </div>
-            <div class="caso-body">
-              <div class="caso-question">Ao final de uma colectomia com uso de cisatracúrio, a aceleromiografia exibe <strong>TOF com 2 twitch</strong>. O paciente abre os olhos a estímulo verbal. É seguro extubá-lo?</div>
-              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
-              <p style="font-size:12px;line-height:1.8">
-                A) Sim, pois o paciente responde a estímulos verbais<br>
-                B) Sim, pois 2 twitch indica recuperação adequada<br>
-                C) Não — bloqueio profundo/moderado; aguardar recuperação espontânea até TOF 4/4 e TOFR ≥0,4, então neostigmina + antimuscarínico, e confirmar TOFR ≥0,9<br>
-                D) Não — o cisatracúrio pode ser revertido imediatamente com sugamadex<br>
-                
-              </p>
-              <div class="caso-answer">
-                <strong>Gabarito: C)</strong> — TOF com 2 respostas corresponde a bloqueio moderado a profundo. Para extubação segura, o TOF ratio deve ser ≥0,9, medido (aceleromiografia ou EMG). A responsividade verbal não exclui bloqueio residual. O sugamadex não reverte o cisatracúrio, e a neostigmina é ineficaz até que o TOF tenha 4 respostas com TOFR ≥0,4 (ASA 2023): aguardar a recuperação espontânea, então 30–50 mcg/kg + antimuscarínico, e confirmar TOFR ≥0,9.
-              </div>
-            </div>
-          </div>
-
-          <div class="caso-card" id="q4-monit">
-            <div class="caso-hdr" onclick="toggleCaso(this)">
-              <div class="caso-num">4</div>
-              <div class="caso-title">QUESTÃO 4 — PPV e Fluido-responsividade</div>
-              <div class="caso-arrow">›</div>
-            </div>
-            <div class="caso-body">
-              <div class="caso-question">Paciente em ventilação mecânica (modo VCV, volume corrente 8 mL/kg, sem arritmia) apresenta <strong>PPV = 18%</strong> e PAM = 58 mmHg durante cirurgia abdominal. Qual é a interpretação e conduta CORRETA?</div>
-              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
-              <p style="font-size:12px;line-height:1.8">
-                A) PPV 18% indica sobrecarga volêmica; usar furosemida<br>
-                B) PPV 18% é normal; tratar apenas com vasopressor<br>
-                C) PPV &gt;13% = fluido-responsivo; infundir 250 mL de cristaloide e reavaliar<br>
-                D) PPV não é confiável em modo VCV<br>
-                
-              </p>
-              <div class="caso-answer">
-                <strong>Gabarito: C)</strong> — PPV (Pulse Pressure Variation) &gt;13% em paciente em VCV sem arritmias e FC regular indica <strong>fluido-responsividade</strong> (o coração está operando na parte ascendente da curva de Frank-Starling). A conduta padrão é um <strong>fluid challenge</strong> com 250 mL de cristaloide isotônico e reavaliação do PPV e PAM. Se PPV cair abaixo de 10% e PAM melhorar, confirma resposta ao fluido. Se não houver melhora, considerar vasopressor.
-              </div>
-            </div>
-          </div>
-
-          <div class="caso-card" id="q5-monit">
-            <div class="caso-hdr" onclick="toggleCaso(this)">
-              <div class="caso-num">5</div>
-              <div class="caso-title">QUESTÃO 5 — Capnograma e Broncoespasmo</div>
-              <div class="caso-arrow">›</div>
-            </div>
-            <div class="caso-body">
-              <div class="caso-question">Durante anestesia geral, o capnograma exibe <strong>fase III (platô alveolar) progressivamente ascendente</strong>, formando o padrão conhecido como "sinal do tubarão" ou "upsloping plateau". Qual é o diagnóstico MAIS provável?</div>
-              <p style="font-size:12px;font-weight:600;margin:8px 0 4px">Alternativas:</p>
-              <p style="font-size:12px;line-height:1.8">
-                A) Hipoventilação alveolar global<br>
-                B) Embolia pulmonar<br>
-                C) Broncoespasmo ou obstrução de via aérea (ex.: DPOC)<br>
-                D) Desconexão do circuito<br>
-                
-              </p>
-              <div class="caso-answer">
-                <strong>Gabarito: C)</strong> — A fase III ascendente (platô com inclinação positiva ao invés de horizontal plana) é o sinal capnográfico clássico de <strong>broncoespasmo</strong> ou obstrução das vias aéreas (DPOC, asma). Ocorre por distribuição desigual da ventilação: alvéolos com maior resistência esvaziam mais lentamente, liberando CO2 de forma gradual ao longo do tempo expiratório. Em casos graves, o padrão evolui para "dente de tubarão" com pico expiratório tardio. Tratar com broncodilatador (salbutamol inalado ou IV) e aprofundar anestesia.
-              </div>
-            </div>
-          </div>
-
+          <p style="font-size:12.5px;line-height:1.6;margin:0 0 12px">As questões deste módulo ficam no <strong>banco único do Treino</strong>: 45 questões comentadas de Monitorização, com revisão de erros, simulado e estatísticas por tema.</p>
+          <button type="button" onclick="abrirTreinoTema('monit')" style="width:100%;padding:14px;border:none;border-radius:10px;background:var(--cyan);color:#06202a;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:13px;cursor:pointer;letter-spacing:.4px">PRATICAR MONITORIZAÇÃO →</button>
         </div>
       </div>
       <div class="footnote">AnestoGuia <span class="app-version"></span> · Questões</div>

@@ -9,6 +9,7 @@
   <div class="tab-bar" role="tablist" id="traumaqueim-tabbar">
     <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('tq','trauma',this)">TRAUMA</button>
     <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('tq','queim',this)">QUEIMADOS</button>
+      <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('tq','questoes',this)">QUESTÕES</button>
   </div>
 
   <div class="tab-panel active" id="tq-trauma">
@@ -294,4 +295,19 @@
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
   </div><!-- /tq-queim -->
+
+  <div class="tab-panel" id="tq-questoes">
+    <div class="page-wrap">
+      <div class="card">
+        <div class="card-header ch-violet">
+          <span class="card-num">📝</span> Questões — Trauma e Queimados
+        </div>
+        <div class="card-body">
+          <p style="font-size:12.5px;line-height:1.6;margin:0 0 12px">As questões deste módulo ficam no <strong>banco único do Treino</strong>: 38 questões comentadas de Trauma e Queimados, com revisão de erros, simulado e estatísticas por tema.</p>
+          <button type="button" onclick="abrirTreinoTema('traumaqueim')" style="width:100%;padding:14px;border:none;border-radius:10px;background:var(--cyan);color:#06202a;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:13px;cursor:pointer;letter-spacing:.4px">PRATICAR TRAUMA E QUEIMADOS →</button>
+        </div>
+      </div>
+      <div class="footnote">AnestoGuia <span class="app-version"></span> · Questões</div>
+    </div>
+  </div>
 </div>
