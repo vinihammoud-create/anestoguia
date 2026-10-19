@@ -303,3 +303,9 @@
 - **Favoritos:** botão ★ em qualquer tela, módulo, aba ou cartão; os favoritos aparecem no início e no Prático.
 ### Qualidade
 - Novo `tools/test-plantao.js` (36 verificações no navegador: cartões, doses por peso, cronômetros, checklist, pediatria e favoritos).
+
+## 3.3.0 — 2026-10-19 (fase E — equalização do tamanho das alternativas)
+### Banco de questões
+- Em ~86% das questões a alternativa correta era a mais longa, o que permitia acertar sem saber o conteúdo. 799 questões tiveram as alternativas reescritas: respostas corretas muito longas foram encurtadas e os distratores ganharam detalhes plausíveis, porém falsos. O gabarito (letra) de nenhuma questão mudou.
+- Resultado: nenhuma questão tem mais a correta 40% maior que o maior distrator (antes, 187 tinham); a correta continua sendo a mais longa em ~65% por margem pequena, a ser reduzida em revisões futuras.
+- Corrigida a justificativa de `vad_iot_37` (broncoscopia rígida pediátrica: manutenção com TIVA, não com volátil) e a de `farma_36`.
