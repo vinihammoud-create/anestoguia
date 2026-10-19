@@ -204,3 +204,12 @@
 - **VCI:** "colapsável = precisa de volume" trocado por "sugere responsividade", com limitações.
 - **Regional:** interescalênico com 10–20 mL e paresia frênica ~100%; supraclavicular sem "pneumotórax 1–6%"; safeno no canal adutor anterolateral (não medial) à artéria; ESP deixa de ser "sem risco de pneumotórax"; QL com evidência limitada; início do bloqueio poplíteo.
 - **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
+
+## 3.1.0 — 2026-10-19 (fase D13f — Cirurgias especiais)
+- **ECG:** "DII + V5 detecta até 90%" → ~80% (e ~96% com V4+V5; London 1988).
+- **Neuroanestesia:** desflurano deixa de ser "evitar sempre" (preferência condicionada à PIC/complacência); autorregulação com limites clássicos; NaCl hipertônico sem a regra de correção "12 mEq/24h" (aplicável à hiponatremia); extubação com reversão do bloqueio (TOF ≥0,9) em vez de "não reverter"; rastreio de FOP na posição sentada.
+- **Tórax:** VC em OLV 4–6 mL/kg PBW; profundidade do DLT pela fórmula 12,5 + 0,1 × altura; peridural "padrão-ouro" → "tradicional" (paravertebral equivalente).
+- **Trauma:** cetamina com dose reduzida no choque grave; metas de PAS do BTF 4ª ed. no TCE.
+- **Bariátrica:** "VAD em 15–20%" removido; PEEP individualizada e recrutamento seletivo (PROBESE); gabapentinoides com cautela.
+- **Ortografia:** "Ketamina" → "Cetamina".
+- **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
