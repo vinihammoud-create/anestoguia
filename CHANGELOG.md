@@ -120,3 +120,12 @@
 - **HES:** EMA recomendou a suspensão da comercialização em 2022 (o texto dizia "restringiu em 2018"); removido o "uso aceitável"; a citação "GUY Trial 2022" (inexistente) saiu; albumina na HRS-AKI com a dose atual (1 g/kg D1, depois 20–40 g/dia).
 - **Cell saver:** câncer deixou de ser contraindicação absoluta (filtro leucocitário). **Ácido tranexâmico:** convulsão com doses altas em cirurgia cardíaca.
 - Questões com 4 alternativas; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
+
+## 3.1.0 — 2026-10-19 (fase D4 — Ventilação mecânica)
+- **Peso predito:** a fórmula "altura − 100 (♂) / − 110 (♀)" foi substituída pela do ARDSNet (♂ 50 + 0,91 × (altura − 152,4); ♀ 45,5 + …); o exemplo (175 cm → 70,6 kg, VC 420–565 mL) e a questão 1 (170 cm → 66 kg, 400–530 mL) foram refeitos. Na gestante o VC usa a altura, não o peso.
+- **Evidências:** IMPROVE foi publicado no NEJM (não JAMA); Amato 2015 é análise de mediação (não metanálise); a "Neto 2016: OR 1,41" não era confirmável e foi trocada pela descrição verificada; a "NMA 2025 Annals of Medicine, 2263 pacientes" saiu. DESIGNATION (JAMA 2026; [DOI](https://doi.org/10.1001/jama.2025.23373)) corrigido: PEEP **alto** guiado por ΔP + MRA vs PEEP baixo, cirurgia abdominal **aberta**, CPP 19,8% × 17,4% (P=0,23), mais hipotensão e vasopressor, menos dessaturação.
+- **ARISCAT:** SpO₂ pré-operatória 91–95% = +8 e ≤90% = +24 (o módulo dava +8 para "<96%").
+- **Potência mecânica:** a fórmula estava dimensionalmente errada; agora a de Gattinoni (0,098 × FR × VC × (Ppico − ΔP/2)).
+- **Pneumotórax:** descompressão no 5º EIC na linha axilar anterior (ATLS 10) ou 2º EIC; **broncoespasmo:** cetamina 0,5–1 mg/kg e adrenalina 5–20 mcg; **FiO₂ 0,8 e infecção:** OMS 2016 recomendou, mas ensaios posteriores não confirmaram.
+- **Questão 6** sobre obesidade fundamentava a resposta em "auto-PEEP frequente em obesa" (sem base); foi reescrita em torno do volume corrente pelo peso predito.
+- Cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
