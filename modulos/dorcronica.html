@@ -1,0 +1,444 @@
+<div class="screen" id="screen-dorcronica">
+  <div class="top-bar" style="border-bottom:3px solid var(--orange)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--orange)">🩹 Dor Crônica e Intervencionista</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="dorcronica-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('dorc','conceito',this)">CONCEITOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('dorc','farma',this)">FÁRMACOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('dorc','sindromes',this)">SÍNDROMES</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('dorc','interv',this)">INTERVENÇÃO</button>
+  </div>
+
+  <div class="tab-panel active" id="dorc-conceito">
+    <div class="page-wrap">
+
+    <div class="alert a-orange" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> classificar a dor (nociceptiva, neuropática, nociplástica), avaliar com escalas e reconhecer a transição da dor aguda para crônica.</div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">01</span> Definições e classificação
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Dor crônica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor que persiste ou recorre por mais de 3 meses (IASP/CID-11). Pode ser primária (fibromialgia, cefaleias, lombalgia crônica primária) ou secundária (câncer, pós-cirúrgica, neuropática, musculoesquelética, visceral).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Nociceptiva</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Lesão de tecido: somática (bem localizada) ou visceral (difusa, referida). Responde a AINEs, opioides e tratamento da causa.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Neuropática</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Lesão ou doença do sistema somatossensorial (queimação, choque, alodinia, hiperalgesia). Questionários: DN4 (≥ 4/10), LANSS, PainDETECT. Responde mal a AINEs e opioides.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Nociplástica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sensibilização central sem lesão evidente (fibromialgia, síndrome do intestino irritável). Tratamento: exercício, educação, TCC e neuromoduladores.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Alodinia e hiperalgesia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Alodinia: dor por estímulo normalmente indolor. Hiperalgesia: resposta aumentada a estímulo doloroso. Hiperalgesia induzida por opioide: piora da dor com a escalada da dose.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">02</span> Avaliação
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">História e exame</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Localização, intensidade, qualidade, irradiação, fatores de piora/alívio, impacto funcional, sono e humor. Exame neurológico, sinais de alerta (febre, perda de peso, déficit neurológico progressivo, câncer prévio, trauma, síndrome da cauda equina).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Escalas</div>
+          <div class="dc" style="text-align:left;line-height:1.6">EVA e escala numérica (0–10); escala de faces em crianças ou idosos com cognição reduzida; questionário de dor McGill; BPI (impacto). O objetivo é função, não apenas número.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fatores psicossociais</div>
+          <div class="dc" style="text-align:left;line-height:1.6">"Bandeiras amarelas": catastrofização, medo-evitação, depressão, ansiedade, litígio, trabalho. Preveem cronificação e pior resposta a procedimentos.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Modelo biopsicossocial</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Tratamento multidisciplinar (médico, fisioterapia, psicologia, terapia ocupacional) tem melhor evidência que a abordagem puramente intervencionista.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Dor pós-cirúrgica persistente
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Definição e incidência</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor que persiste por mais de 3 meses após a cirurgia. Ocorre em 10–50% nas operações de risco (amputação, toracotomia, mastectomia, hernioplastia, cesariana).</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fatores de risco</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor pré-operatória intensa, dor aguda pós-operatória intensa, lesão nervosa, ansiedade e catastrofização, idade jovem, sexo feminino e radioterapia.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Prevenção</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Técnicas poupadoras de nervo, analgesia multimodal, bloqueios regionais, evitar hiperalgesia por opioide; gabapentinoides têm benefício duvidoso; cetamina e lidocaína têm evidência mista.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /dorc-conceito -->
+
+  <div class="tab-panel" id="dorc-farma">
+    <div class="page-wrap">
+
+    <div class="alert a-orange" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> primeira linha na dor neuropática, segurança dos opioides em dor crônica não oncológica e rotação de opioides.</div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">01</span> Dor neuropática: escolhas (NeuPSIG 2015)
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Linha</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Fármacos</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Observações</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">1ª</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Gabapentina 900–3600 mg/dia; pregabalina 150–600 mg/dia; duloxetina 60–120 mg/dia; venlafaxina 150–225 mg/dia; amitriptilina/nortriptilina 25–150 mg/dia</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Titular lentamente; ajustar função renal (gabapentinoides); TCA: cuidado em idosos e cardiopatas (arritmia, anticolinérgicos)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">2ª</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Emplastro de lidocaína 5%; capsaicina 8% (emplastro); tramadol</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Lidocaína: dor localizada (neuralgia pós-herpética); tramadol: risco de serotoninérgica</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">3ª</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Opioides fortes; toxina botulínica A (neuralgias localizadas)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Opioides: só em casos selecionados e com monitorização</td></tr>
+          </tbody>
+        </table></div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Neuralgia do trigêmeo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Carbamazepina (200–1200 mg/dia) ou oxcarbazepina; rastrear HLA-B*1502 em ascendência asiática. Refratária: descompressão microvascular, radiocirurgia ou rizotomia percutânea.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Evitar</div>
+          <div class="dc" style="text-align:left;line-height:1.6">AINEs e opioides têm pouca eficácia em dor neuropática; carbamazepina é a primeira linha só na neuralgia do trigêmeo.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">02</span> Opioides em dor crônica não oncológica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Princípios</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Primeiro, terapias não opioides e não farmacológicas. Opioides apenas se benefício funcional superar riscos; menor dose efetiva; revisão frequente; metas funcionais (CDC 2022).</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Riscos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Tolerância, dependência, hiperalgesia induzida por opioide, constipação, hipogonadismo, depressão respiratória (sobretudo com benzodiazepínicos), quedas, uso indevido, overdose. Dose ≥ 50 MME/dia aumenta o risco; considerar naloxona.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hiperalgesia por opioide</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor difusa que piora com a dose, alodinia: reduzir ou rotacionar, adicionar não opioides.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tramadol e tapentadol</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Efeitos mu e inibição de recaptação monoaminérgica. Risco de convulsão e síndrome serotoninérgica (tramadol); tapentadol com menor risco serotoninérgico.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Metadona</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Agonista mu e antagonista NMDA, meia-vida longa e variável (24–36 h); prolonga o QTc; ECG antes e após o início; titulação lenta, risco de acúmulo.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Rotação de opioides (valores aproximados)
+      </div>
+      <div class="card-body">
+        <div class="alert a-orange" style="margin-bottom:10px"><strong>Atenção:</strong> as tabelas são aproximadas e a tolerância cruzada é incompleta: ao trocar, reduzir a dose calculada em 25–50% e titular pela resposta.</div>
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Opioide</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Dose oral ≈ 30 mg de morfina VO</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Morfina VO</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">30 mg (IV: 10 mg; relação 3:1)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Oxicodona VO</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">15–20 mg</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Hidromorfona VO</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">6 mg</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Fentanil transdérmico</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">12 mcg/h ≈ 30 mg/dia (25 mcg/h ≈ 60 mg/dia)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Tramadol VO</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">~150 mg (relação ≈ 5:1)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Metadona VO</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Razão variável com a dose (de 4:1 a 12:1 ou mais): conversão por especialista</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">04</span> Adjuvantes
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Antidepressivos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Duloxetina (neuropática, fibromialgia, dor musculoesquelética), amitriptilina baixa dose. Evitar associar com tramadol sem cautela.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Anticonvulsivantes</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Gabapentina e pregabalina; sedação, tontura e edema; risco de depressão respiratória com opioides.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cetamina</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Infusões em dor refratária: evidência limitada e de curta duração; efeitos psicomiméticos e hepatotoxicidade em uso prolongado.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Canabinoides</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Evidência modesta e variável; regulados no Brasil pela ANVISA e pelo CFM: conferir a norma vigente antes de prescrever.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Prescrição no Brasil</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Opioides e tramadol exigem Notificação de Receita A (amarela) pela Portaria SVS/MS 344/98, validade de 30 dias; benzodiazepínicos, B (azul). Confirmar a lista atualizada.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /dorc-farma -->
+
+  <div class="tab-panel" id="dorc-sindromes">
+    <div class="page-wrap">
+
+    <div class="alert a-orange" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> reconhecer as síndromes dolorosas mais cobradas e o tratamento de primeira linha.</div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">01</span> Síndromes neuropáticas e cefaleias
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Neuralgia pós-herpética</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor persistente por mais de 3 meses após o herpes-zóster. Prevenção: vacina contra zóster e antiviral precoce. Tratamento: gabapentinoides, TCA, lidocaína 5%, capsaicina 8%.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Neuropatia diabética dolorosa</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Controle glicêmico; duloxetina, pregabalina, gabapentina e amitriptilina são de primeira linha.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">SDRC (síndrome dolorosa regional complexa)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Critérios de Budapeste: dor desproporcional + sinais/sintomas sensoriais, vasomotores, sudomotores e motores/tróficos. Tratamento: reabilitação precoce, bisfosfonatos, corticoide curto, gabapentinoides e bloqueios simpáticos; estimulação medular se refratária.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Dor do membro fantasma</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Comum (50–80%) após amputação; bloqueio perineural perioperatório e analgesia multimodal podem reduzir. Tratamento: gabapentinoides, TCA, terapia em espelho.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cefaleia em salvas</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Crise: O₂ 100% a 12–15 L/min por 15 min e sumatriptano 6 mg SC. Profilaxia: verapamil.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Enxaqueca</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Crise: AINE, triptano (contraindicado na doença coronariana). Profilaxia: betabloqueador, amitriptilina, topiramato e anticorpos anti-CGRP.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">02</span> Dor musculoesquelética e fibromialgia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fibromialgia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor difusa (&gt; 3 meses) com fadiga, sono não reparador e distúrbios cognitivos. Primeira linha: exercício aeróbico, educação e TCC; fármacos: duloxetina, pregabalina, amitriptilina. Opioides não são recomendados.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Lombalgia crônica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Mais de 90% é inespecífica. Exercício, terapia cognitivo-comportamental, AINE curto; investigar sinais de alerta. Imagem não correlaciona bem com a dor.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Dor miofascial</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pontos-gatilho dolorosos; tratamento: alongamento, agulhamento seco ou infiltração com lidocaína sem vasoconstritor.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Osteoartrite</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Exercício, perda de peso, AINE tópico/oral, duloxetina; infiltração de corticoide intra-articular em crises.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Dor aguda no paciente com dor crônica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Princípios</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Manter o tratamento de base (opioides, gabapentinoides, antidepressivos), evitar abstinência, usar multimodal e bloqueios regionais, cetamina e lidocaína IV conforme o caso; esperar necessidade maior de opioide e tolerância.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Buprenorfina</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Em geral, manter no perioperatório e acrescentar analgesia multimodal e regional; reduzir a dose só em doses altas, segundo orientação do especialista.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Naltrexona</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Suspender antes da cirurgia eletiva (formulação oral 72 h; injetável 4 semanas).</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /dorc-sindromes -->
+
+  <div class="tab-panel" id="dorc-interv">
+    <div class="page-wrap">
+
+    <div class="alert a-orange" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> indicações, riscos e fármacos de bloqueios, neurólise e neuromodulação; dor oncológica e escada da OMS.</div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">01</span> Bloqueios e procedimentos
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Epidural de esteroide</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Radiculopatia lombar/cervical. Interlaminar ou transforaminal. <strong>Transforaminal:</strong> risco de embolização de partículas de esteroide e infarto medular; preferir dexametasona não particulada e usar contraste com fluoroscopia e angiografia digital.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Facetas e ramos mediais</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor facetária: dois bloqueios diagnósticos dos ramos mediais com alívio ≥ 50–80% antes da radiofrequência convencional (~80 °C). Radiofrequência pulsada (≤ 42 °C) para gânglio da raiz dorsal e nervos periféricos.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Gânglio estrelado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor simpática de cabeça, pescoço e membro superior (SDRC); Horner esperado. Complicações: injeção intravascular (convulsão), pneumotórax, bloqueio do nervo laríngeo recorrente e frênico.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Plexo celíaco</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor visceral do abdome superior (câncer de pâncreas); neurólise com álcool 50–100% ou fenol. Complicações: hipotensão, diarreia, raros déficit neurológicos (artéria de Adamkiewicz).</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Plexo hipogástrico superior e gânglio ímpar</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dor pélvica oncológica (hipogástrico) e dor perineal (gânglio ímpar).</div>
+        </div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Neurolíticos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Álcool (50–100%) e fenol (6–10%); risco de neurite e lesão de estruturas adjacentes. Uso em câncer/espasticidade.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">02</span> Neuromodulação e bomba intratecal
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Estimulação medular (EME)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Síndrome pós-laminectomia, SDRC, angina refratária, doença vascular periférica. Fase de teste antes do implante definitivo. Complicações: migração de eletrodo, infecção, hematoma, falha do sistema.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Bomba intratecal</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Morfina, ziconotida (efeitos psiquiátricos e neurológicos), bupivacaína, clonidina e baclofeno (espasticidade). Relação de doses oral : IV : epidural : intratecal = 300 : 100 : 10 : 1 para a morfina.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Baclofeno intratecal</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A interrupção abrupta provoca síndrome de abstinência grave (hipertermia, rigidez, convulsão): recarregar ou substituir a bomba no prazo; tratar com baclofeno oral/IV e benzodiazepínicos.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cuidados anestésicos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Em pacientes com dispositivos implantados: desligar o neuroestimulador antes do cautério; evitar ressonância sem confirmação de compatibilidade.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-orange">
+        <span class="card-num">03</span> Dor oncológica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Escada analgésica da OMS</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Degrau 1: não opioide ± adjuvante; degrau 2: opioide fraco; degrau 3: opioide forte (morfina, oxicodona, fentanil, metadona). A escada original já foi revista: pode-se começar diretamente com opioide forte em dor intensa.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Dor irruptiva</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Exacerbação súbita sobre dor basal controlada. Dose de resgate = 10–15% (ou 1/6) da dose total diária de opioide, de ação rápida (morfina VO imediata, fentanil transmucoso).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Adjuvantes</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Corticoide (compressão neural, metástase óssea), AINE, bisfosfonatos e denosumabe (osso), radioterapia paliativa, gabapentinoides (neuropática).</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Emergências</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Compressão medular (dor e déficit: corticoide, RM urgente, radioterapia/cirurgia), crise de dor refratária: sedação paliativa quando necessário.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Efeitos adversos de opioides</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Constipação (laxante profilático sempre), náuseas, sedação, prurido, retenção urinária, mioclonia, neurotoxicidade por metabólitos (morfina-3 e 6-glicuronídeo em insuficiência renal: preferir hidromorfona, fentanil ou metadona).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>Dor crônica:</strong> &gt; 3 meses. <strong>Neuropática:</strong> DN4 ≥ 4; primeira linha: gabapentinoide, duloxetina/venlafaxina, TCA.</li>
+          <li><strong>Neuralgia do trigêmeo:</strong> carbamazepina (rastrear HLA-B*1502 em asiáticos); refratária: descompressão microvascular.</li>
+          <li><strong>Fibromialgia:</strong> exercício + duloxetina/pregabalina/amitriptilina; opioides não.</li>
+          <li><strong>SDRC:</strong> critérios de Budapeste; reabilitação precoce, bisfosfonato, bloqueio simpático.</li>
+          <li><strong>Rotação de opioides:</strong> reduzir a dose calculada em 25–50% (tolerância cruzada incompleta). Morfina VO : IV = 3 : 1; VO : epidural : IT = 300 : 100 : 10 : 1 (IV).</li>
+          <li><strong>Metadona:</strong> prolonga QTc, meia-vida longa; conversão por especialista.</li>
+          <li><strong>Epidural transforaminal:</strong> dexametasona não particulada; risco de infarto medular por êmbolo de partículas.</li>
+          <li><strong>Facetas:</strong> dois bloqueios diagnósticos positivos antes da radiofrequência.</li>
+          <li><strong>Plexo celíaco:</strong> câncer pancreático; hipotensão e diarreia são frequentes.</li>
+          <li><strong>Baclofeno intratecal:</strong> a suspensão abrupta causa abstinência grave.</li>
+          <li><strong>Dor irruptiva:</strong> resgate com 10–15% da dose diária total.</li>
+          <li><strong>Naltrexona:</strong> suspender 72 h (oral) ou 4 semanas (injetável) antes de cirurgia eletiva.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>Notificação de Receita A (amarela)</strong> para morfina, metadona, oxicodona, fentanil e tramadol (Portaria SVS/MS 344/98); validade de 30 dias e quantidade para até 30 dias; benzodiazepínicos usam a B (azul). Conferir a lista atualizada.</li>
+          <li><strong>Morfina oral</strong> (comprimidos e solução) e <strong>metadona</strong> estão disponíveis no SUS em serviços de cuidados paliativos; acesso variável por região.</li>
+          <li><strong>Duloxetina, pregabalina e gabapentina</strong> existem em genéricos; <strong>lidocaína 5% e capsaicina 8%</strong> em emplastro têm acesso limitado.</li>
+          <li><strong>Neuromodulação e radiofrequência</strong> são concentradas em centros de dor; consulte um serviço de dor para encaminhamentos.</li>
+          <li><strong>Cannabis medicinal</strong> é regulada pela ANVISA e pelo CFM; confira o texto vigente.</li>
+          <li>A <strong>SBED</strong> (Sociedade Brasileira para o Estudo da Dor) e a <strong>SBA</strong> publicam diretrizes de dor; o <strong>TEA</strong> cobra bloqueios, fármacos adjuvantes e dor oncológica.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>Finnerup NB, Attal N, Haroutounian S, et al. Pharmacotherapy for neuropathic pain in adults: a systematic review and meta-analysis. Lancet Neurol 2015;14:162–73.</li>
+          <li>Dowell D, Ragan KR, Jones CM, et al. CDC Clinical Practice Guideline for Prescribing Opioids for Pain — United States, 2022. MMWR Recomm Rep 2022;71(3):1–95.</li>
+          <li>Treede RD, Rief W, Barke A, et al. Chronic pain as a symptom or a disease: the IASP classification of chronic pain for ICD-11. Pain 2019;160:19–27.</li>
+          <li>Macfarlane GJ, Kronisch C, Dean LE, et al. EULAR revised recommendations for the management of fibromyalgia. Ann Rheum Dis 2017;76:318–28.</li>
+          <li>Harden RN, Bruehl S, Perez RSGM, et al. Validation of proposed diagnostic criteria (the Budapest Criteria) for complex regional pain syndrome. Pain 2010;150:268–74.</li>
+          <li>Rathmell JP, Benzon HT, Dreyfuss P, et al. Safeguards to prevent neurologic complications after epidural steroid injections. Anesthesiology 2015;122:974–84.</li>
+          <li>Bennett MI, Attal N, Backonja MM, et al. Using screening tools to identify neuropathic pain (DN4). Pain 2007;127:199–203.</li>
+          <li>Deer TR, Pope JE, Hayek SM, et al. The Polyanalgesic Consensus Conference (PACC). Neuromodulation 2017;20:96–132.</li>
+          <li>Swarm RA, Paice JA, Anghelescu DL, et al. Adult cancer pain. NCCN Clinical Practice Guidelines in Oncology. J Natl Compr Canc Netw 2019;17:977–1007.</li>
+          <li>Brasil. Agência Nacional de Vigilância Sanitária. Portaria SVS/MS nº 344/1998 e atualizações (controle de substâncias sujeitas a controle especial).</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /dorc-interv -->
+</div>

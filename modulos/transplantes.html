@@ -1,0 +1,337 @@
+<div class="screen" id="screen-transplantes">
+  <div class="top-bar" style="border-bottom:3px solid var(--pink)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--pink)">🫀 Transplantes e Doador</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="transplantes-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('tx','doador',this)">DOADOR</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('tx','receptor',this)">RECEPTOR</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('tx','brasil',this)">BRASIL</button>
+  </div>
+
+  <div class="tab-panel active" id="tx-doador">
+    <div class="page-wrap">
+
+    <div class="alert a-pink" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> critérios de morte encefálica (Resolução CFM 2.173/2017), fisiologia da morte encefálica e metas de manutenção do doador.</div>
+
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">01</span> Diagnóstico de morte encefálica (CFM 2.173/2017)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pré-requisitos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Lesão encefálica de causa conhecida, irreversível e capaz de causar a ME; exclusão de confundidores (hipotermia, hipotensão grave, intoxicação, sedativos e bloqueadores neuromusculares, distúrbios metabólicos graves); temperatura &gt; 35 °C, SpO₂ &gt; 94%, PAS ≥ 100 mmHg ou PAM ≥ 65 mmHg; observação mínima de 6 h (24 h em anóxia).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Exame clínico</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Coma aperceptivo, ausência de reflexos de tronco (fotomotor, corneopalpebral, oculocefálico, vestibulocalórico, tosse) e apneia. Dois exames por médicos diferentes, capacitados e que não integrem a equipe de transplante.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Intervalo entre exames</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Acima de 2 anos: 1 h; 2 meses a 2 anos: 12 h; 7 dias a 2 meses: 24 h. Recém-nascido com menos de 7 dias: critérios não se aplicam.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Teste de apneia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Em um dos exames, com pré-oxigenação e O₂ por cateter traqueal; positivo se PaCO₂ final &gt; 55 mmHg sem movimento respiratório. Interromper se instabilidade.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Exame complementar</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Obrigatório: demonstra ausência de atividade elétrica, perfusão ou metabolismo cerebral (angiografia, Doppler transcraniano, EEG, cintilografia).</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Notificação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Notificação compulsória à CNCDO (Central de Notificação, Captação e Distribuição de Órgãos). A autorização para doação é da família (Lei 10.211/2001).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">02</span> Fisiologia da morte encefálica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tempestade simpática</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hipertensão, taquicardia, arritmias, lesão miocárdica e edema pulmonar neurogênico (herniação, isquemia do tronco).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Perda do tônus simpático</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Vasoplegia, hipotensão e bradicardia; resposta à atropina ausente (denervação vagal).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Endócrino</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Diabetes insípido (poliúria, hipernatremia), queda de T3/T4, cortisol e insulina → hiperglicemia.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Outros</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hipotermia (perda do centro termorregulador), coagulopatia/CIVD (liberação de tromboplastina cerebral), perda de reflexos, mas persistem reflexos espinhais.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">03</span> Metas de manutenção do doador
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hemodinâmica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">PAM ≥ 65 mmHg; euvolemia (evitar excesso que prejudica o pulmão); noradrenalina e vasopressina (0,01–0,04 U/min, também trata o diabetes insípido); evitar doses altas de catecolaminas.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ventilação protetora</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VC 6–8 mL/kg de peso predito, PEEP 8–10 cmH₂O, menor FiO₂ para SpO₂ &gt; 94–95%, manobras de recrutamento e aspiração controlada.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Metabólico e endócrino</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Na 135–145 mEq/L; glicemia 140–180 mg/dL (insulina em infusão); Hb &gt; 7–10 g/dL; temperatura ≥ 35 °C; diurese 1–3 mL/kg/h. Terapia hormonal: metilprednisolona 15 mg/kg (protocolos), tiroxina em doadores instáveis e DDAVP/vasopressina no diabetes insípido.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Coagulopatia e eletrólitos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Corrigir plaquetas, fibrinogênio e INR conforme sangramento; evitar hipocalemia, hipofosfatemia e hipomagnesemia.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hipotermia do doador</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A hipotermia moderada (34–35 °C) reduz a função retardada do enxerto renal (Niemann, NEJM 2015).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">04</span> Cirurgia de captação
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Reflexos espinhais</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A incisão pode causar hipertensão e taquicardia por reflexos medulares; usar bloqueador neuromuscular, opioide, volátil em dose baixa e vasodilatadores; o doador não sente dor.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Preparo do enxerto</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Heparina antes do clampeamento aórtico; perfusão fria com solução de preservação (UW, HTK, Celsior); manter ventilação até o clampeamento; pulmão é inflado e liberado.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tempo de isquemia fria tolerado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Coração 4–6 h; pulmão 6–8 h; fígado até 12 h; pâncreas 12–18 h; rim 24–36 h (até 48 h).</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tx-doador -->
+
+  <div class="tab-panel" id="tx-receptor">
+    <div class="page-wrap">
+
+    <div class="alert a-pink" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> particularidades do transplante hepático (fases, reperfusão), renal, cardíaco e pulmonar.</div>
+
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">01</span> Transplante hepático
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fisiopatologia do cirrótico</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Circulação hiperdinâmica (↑DC, ↓RVS), ascite, síndrome hepatopulmonar (hipoxemia, ↑ com ortostase), hipertensão portopulmonar (PAPm &gt; 35 mmHg de risco; &gt; 50 contraindica), síndrome hepatorrenal, encefalopatia, coagulopatia de equilíbrio frágil (INR não reflete risco).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fase pré-anepática</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dissecção hepática; perda sanguínea; hipocalcemia; paracentese; evitar hipovolemia.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fase anepática</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Clampeamento do fígado e/ou da veia cava (técnica piggyback mantém parte do retorno). Sem metabolismo do citrato: hipocalcemia; acidose; hipotermia; fibrinólise. Repor Ca²⁺ iônico, controlar glicemia e K⁺.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Reperfusão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hipotensão, bradicardia, hipercalemia, acidose, ↑PAP (síndrome pós-reperfusão). Tratar com cálcio, adrenalina em baixa dose, vasopressor, bicarbonato; remover a solução de preservação (lavagem) antes de liberar o clampe.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hemostasia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Guiar por TEG/ROTEM; fibrinogênio, plaquetas e plasma conforme alvos; TXA em hiperfibrinólise; estratégia restritiva de transfusão e PVC baixa reduzem o sangramento.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fármacos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cisatracúrio ou atracúrio (sem dependência de fígado ou rim); rocurônio com prolongamento; remifentanil e propofol; sevoflurano; evitar morfina e benzodiazepínicos de longa ação.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">02</span> Transplante renal
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pré-operatório</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dialisar até 24 h antes quando K⁺ alto; checar K⁺ (&lt; 5,5 mEq/L); volume e cardiopatia. Evitar punção da fístula arteriovenosa e do membro.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hemodinâmica e fluidos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Manter PAM alta (evitar hipotensão que compromete a perfusão do enxerto), volume com cristaloide balanceado e PVC ~10–12 mmHg; manitol e furosemida são usados por muitos serviços antes da reperfusão; vasopressores (noradrenalina) quando necessário.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fármacos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Succinilcolina com K⁺ normal; atracúrio ou cisatracúrio; evitar morfina, meperidina e AINEs; sugamadex pode ser usado, com atenção ao acúmulo em IR; evitar nefrotóxicos.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Imunossupressão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Indução com basiliximab ou timoglobulina e metilprednisolona 500 mg; manutenção com tacrolimo + micofenolato + corticoide.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">03</span> Transplante cardíaco e pulmonar
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Coração denervado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sem tônus vagal: FC de repouso 90–110 bpm; a atropina não acelera; resposta apenas a catecolaminas diretas (adrenalina, isoprenalina). Anticolinesterásicos e anticolinérgicos têm efeito mínimo ou imprevisível sobre a FC. Resposta lenta ao exercício e à hipovolemia; dependente da pré-carga.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Disfunção do VD do enxerto</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hipertensão pulmonar do receptor sobrecarrega o VD: óxido nítrico inalado, milrinona, epoprostenol, evitar hipercapnia e hipoxemia; marca-passo epicárdico; considerar ECMO.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Transplante pulmonar</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Ventilação monopulmonar ou ECMO intraoperatória; evitar sobrecarga de volume e FiO₂ alta; ventilação protetora; reperfusão com cuidado; risco de disfunção primária do enxerto.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Infecção e profilaxia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Técnica asséptica rigorosa; antibioticoprofilaxia e profilaxia de CMV e pneumocystis conforme protocolo.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">04</span> Anestesia em paciente transplantado (cirurgia não relacionada)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Imunossupressores</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Manter os imunossupressores no perioperatório (tacrolimo, micofenolato) e checar o corticoide (risco de insuficiência adrenal: dose de estresse). Ciclosporina e tacrolimo são nefrotóxicos e têm interações via CYP3A4.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Rim transplantado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Evitar hipotensão, nefrotóxicos e AINEs; manter diurese; ajustar fármacos com eliminação renal.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Coração transplantado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Denervação: sem resposta à atropina; usar isoprenalina/adrenalina se bradicardia; vasculopatia do enxerto pode causar isquemia silenciosa.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Infecções</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pacientes imunossuprimidos; técnica asséptica rigorosa; atenção a cateteres e bloqueios.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tx-receptor -->
+
+  <div class="tab-panel" id="tx-brasil">
+    <div class="page-wrap">
+
+    <div class="alert a-pink" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> organização do Sistema Nacional de Transplantes e aspectos legais.</div>
+
+    <div class="card">
+      <div class="card-header ch-pink">
+        <span class="card-num">01</span> Sistema Nacional de Transplantes (SNT)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Estrutura</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Coordenação do SNT (Ministério da Saúde); Centrais Estaduais (CNCDO); Organizações de Procura de Órgãos (OPO) e Comissões Intra-hospitalares de Doação (CIHDOTT). O SUS financia a maioria dos transplantes.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Lista única</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Receptores em lista única por estado/região; fígado por MELD (PELD em crianças); rim por compatibilidade e tempo; coração e pulmão por gravidade e compatibilidade.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Legislação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Lei 9.434/1997 (regulamenta a remoção) e 10.211/2001 (autorização familiar). Decreto 9.175/2017. Doador vivo: parentes até 4º grau e cônjuge; não parentes mediante autorização judicial.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Recusa familiar</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A recusa da família é a principal causa de perda de potencial doador; a entrevista é feita por equipe treinada, após o diagnóstico de ME.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Doação após morte circulatória (DCD)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Prevista em alguns países (Maastricht); no Brasil ainda é pouco utilizada.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>ME (CFM 2.173/2017):</strong> coma aperceptivo + ausência de reflexos de tronco + apneia (PaCO₂ &gt; 55 mmHg); dois exames clínicos por médicos distintos; um exame complementar; notificação à CNCDO.</li>
+          <li><strong>Intervalo entre exames:</strong> &gt; 2 anos: 1 h; 2 m–2 a: 12 h; 7 d–2 m: 24 h.</li>
+          <li><strong>ME:</strong> tempestade simpática, depois vasoplegia; diabetes insípido (vasopressina/DDAVP); hipotermia; coagulopatia.</li>
+          <li><strong>Manutenção do doador:</strong> PAM ≥ 65, Na 135–145, glicemia 140–180, ventilação protetora, vasopressina e metilprednisolona.</li>
+          <li><strong>Reflexos espinhais</strong> na captação: usar relaxante e opioide; o doador não sente dor.</li>
+          <li><strong>Isquemia fria:</strong> coração 4–6 h; pulmão 6–8 h; fígado até 12 h; rim 24–36 h.</li>
+          <li><strong>Fígado:</strong> fases pré-anepática, anepática e reperfusão; hipocalcemia por citrato; síndrome pós-reperfusão (hipotensão, hipercalemia, acidose).</li>
+          <li><strong>Hipertensão portopulmonar:</strong> PAPm &gt; 35 mmHg exige tratamento; &gt; 50 contraindica o transplante.</li>
+          <li><strong>Rim:</strong> K⁺ &lt; 5,5; evitar hipotensão; cristaloide balanceado; atracúrio/cisatracúrio.</li>
+          <li><strong>Coração denervado:</strong> atropina ineficaz; responde a isoprenalina e adrenalina.</li>
+          <li><strong>Imunossupressão:</strong> tacrolimo + micofenolato + corticoide; manter no perioperatório.</li>
+          <li><strong>Doador vivo:</strong> parentes até 4º grau e cônjuge; não parentes exigem autorização judicial.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>O Brasil possui um dos maiores programas públicos de transplantes do mundo</strong>, financiado pelo SUS; a doação depende da autorização familiar (Lei 10.211/2001).</li>
+          <li>A <strong>CNCDO</strong> de cada estado recebe a notificação de ME, organiza a captação e a distribuição dos órgãos pela lista única.</li>
+          <li>O diagnóstico de morte encefálica segue a <strong>Resolução CFM 2.173/2017</strong>; a equipe que declara a ME não participa do transplante.</li>
+          <li>A <strong>ABTO</strong> (Associação Brasileira de Transplante de Órgãos) publica o Registro Brasileiro de Transplantes e diretrizes.</li>
+          <li>Serviços de <strong>transplante hepático e cardíaco</strong> concentram-se em centros de referência; verificar o protocolo da instituição (bomba de infusão, ECMO, ROTEM).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>Conselho Federal de Medicina. Resolução CFM nº 2.173/2017: define os critérios do diagnóstico de morte encefálica. DOU de 15/12/2017.</li>
+          <li>Brasil. Lei nº 9.434/1997 e Lei nº 10.211/2001 (remoção de órgãos); Decreto nº 9.175/2017.</li>
+          <li>Niemann CU, Feiner J, Swain S, et al. Therapeutic hypothermia in deceased organ donors and kidney-graft function. N Engl J Med 2015;373:405–14.</li>
+          <li>Kotloff RM, Blosser S, Fulda GJ, et al. Management of the potential organ donor in the ICU. Crit Care Med 2015;43:1291–325.</li>
+          <li>Schnuelle P, Gottmann U, Hoeger S, et al. Effects of donor pretreatment with dopamine on graft function after kidney transplantation. JAMA 2009;302:1067–75.</li>
+          <li>Feltracco P, Carollo C, Barbieri S, et al. Early respiratory complications after liver transplantation. World J Gastroenterol 2013;19:9271–81.</li>
+          <li>Krowka MJ, Fallon MB, Kawut SM, et al. International Liver Transplant Society practice guidelines: diagnosis and management of hepatopulmonary syndrome and portopulmonary hypertension. Transplantation 2016;100:1440–52.</li>
+          <li>Slinger P, Campos JH. Anesthesia for thoracic surgery. Miller's Anesthesia, 10ª ed., 2025.</li>
+          <li>Associação Brasileira de Transplante de Órgãos. Registro Brasileiro de Transplantes (RBT), relatórios anuais.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /tx-brasil -->
+</div>

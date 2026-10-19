@@ -261,3 +261,12 @@
 - Cada módulo tem "Pérolas de prova — TEA/TSA", "Como é no Brasil" e referências.
 ### Treino
 - Banco de questões: 600 → 689 (17 temas), com gabaritos balanceados.
+
+## 3.2.0 — 2026-10-19 (fase D14 — módulos novos, parte 2)
+### Estudos
+- **Estatística e MBE** (novo): sensibilidade, especificidade, VPP/VPN e razões de verossimilhança, curva ROC, desenhos de estudo, vieses, GRADE, RR/OR/NNT, IC e valor de p, escolha de testes, regressão, não inferioridade, com exemplos resolvidos. 41 questões.
+- **Dor Crônica e Intervencionista** (novo): classificação e avaliação, dor neuropática (NeuPSIG), opioides em dor não oncológica (CDC 2022), rotação de opioides, síndromes (SDRC, neuralgia do trigêmeo, fibromialgia, cefaleias), bloqueios, radiofrequência, neuromodulação, bomba intratecal e dor oncológica. 43 questões.
+- **Fora do CC e Ambulatorial** (novo): níveis de sedação (ASA), fármacos, requisitos para locais remotos, endoscopia, radiologia/RM, contraste, proteção radiológica, ECT, cardiologia e cirurgia ambulatorial (seleção, técnica, PADSS). 38 questões.
+- **Transplantes e Doador** (novo): morte encefálica (CFM 2.173/2017), fisiologia e manutenção do doador, captação, transplante hepático, renal, cardíaco e pulmonar, imunossupressão, anestesia no transplantado e SNT. 39 questões.
+### Treino
+- Banco de questões: 689 → 850 (21 temas), gabaritos balanceados.

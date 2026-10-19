@@ -9780,5 +9780,2291 @@
     "justificativa": "A divulgação transparente melhora a confiança, é dever ético e reduz litígios. Deve ser realizada por profissional treinado, com apoio institucional, descrevendo fatos, desculpas e medidas."
    }
   ]
+ },
+ {
+  "id": "estatistica",
+  "titulo": "Estatística e MBE",
+  "cor": "#14B8A6",
+  "icone": "📊",
+  "questoes": [
+   {
+    "id": "estatistica_01",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes diagnósticos",
+    "enunciado": "Um teste foi aplicado a 200 pacientes: 80 com a doença (70 positivos) e 120 sem a doença (24 positivos). Qual é a sensibilidade?",
+    "alternativas": {
+     "A": "87,5%",
+     "B": "70%",
+     "C": "80%",
+     "D": "92,6%"
+    },
+    "resposta": "A",
+    "justificativa": "Sensibilidade = verdadeiros positivos / todos os doentes = 70/80 = 87,5%. Os falsos negativos são 10. A especificidade seria 96/120 = 80%, e o VPP, 70/94 = 74,5%. Não confundir com o percentual de positivos entre todos."
+   },
+   {
+    "id": "estatistica_02",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes diagnósticos",
+    "enunciado": "Com os mesmos dados (80 doentes: 70 positivos; 120 sadios: 24 positivos), qual é a especificidade?",
+    "alternativas": {
+     "A": "87,5%",
+     "B": "20%",
+     "C": "74,5%",
+     "D": "80%"
+    },
+    "resposta": "D",
+    "justificativa": "Especificidade = verdadeiros negativos / todos os sadios = 96/120 = 80%. Houve 24 falsos positivos. A sensibilidade é 87,5% e o VPP é 70/94 = 74,5%."
+   },
+   {
+    "id": "estatistica_03",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes diagnósticos",
+    "enunciado": "Um teste tem sensibilidade de 95% e especificidade de 60%. Qual é a razão de verossimilhança positiva (LR+)?",
+    "alternativas": {
+     "A": "0,08",
+     "B": "1,58",
+     "C": "2,4",
+     "D": "15,8"
+    },
+    "resposta": "C",
+    "justificativa": "LR+ = sensibilidade / (1 − especificidade) = 0,95 / 0,40 = 2,4. O LR− seria 0,05/0,60 = 0,08. Um LR+ de 2,4 altera pouco a probabilidade pós-teste; para confirmar, é preciso LR+ > 10."
+   },
+   {
+    "id": "estatistica_04",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes diagnósticos",
+    "enunciado": "Em uma população com prevalência muito baixa da doença, o que ocorre com o valor preditivo positivo (VPP) de um teste?",
+    "alternativas": {
+     "A": "Aumenta, pois a especificidade fica maior.",
+     "B": "Cai, mesmo com boa sensibilidade e especificidade, pois há muitos falsos positivos em relação aos verdadeiros.",
+     "C": "Permanece igual, pois depende só do teste.",
+     "D": "Fica sempre acima de 90%."
+    },
+    "resposta": "B",
+    "justificativa": "VPP e VPN dependem da prevalência: com baixa prevalência, o VPP diminui e o VPN aumenta. Sensibilidade e especificidade são propriedades do teste e não mudam com a prevalência. Por isso rastreamentos em população geral geram muitos falsos positivos."
+   },
+   {
+    "id": "estatistica_05",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes diagnósticos",
+    "enunciado": "Um teste de triagem tem sensibilidade de 99% e especificidade de 70%. Qual afirmativa descreve melhor sua utilidade?",
+    "alternativas": {
+     "A": "Um resultado positivo confirma a doença (SpPin).",
+     "B": "Um resultado negativo exclui bem a doença (SnNout), mas o positivo exige confirmação.",
+     "C": "Um resultado negativo não tem valor.",
+     "D": "É o melhor teste para confirmar o diagnóstico."
+    },
+    "resposta": "B",
+    "justificativa": "Testes muito sensíveis têm poucos falsos negativos, então o resultado negativo afasta a doença (SnNout). A especificidade de 70% gera muitos falsos positivos e exige exame confirmatório. Para confirmação, o ideal é um teste muito específico (SpPin)."
+   },
+   {
+    "id": "estatistica_06",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes diagnósticos",
+    "enunciado": "Qual das medidas NÃO depende da prevalência da doença na população estudada?",
+    "alternativas": {
+     "A": "Sensibilidade e especificidade",
+     "B": "Valor preditivo positivo",
+     "C": "Valor preditivo negativo",
+     "D": "Acurácia global"
+    },
+    "resposta": "A",
+    "justificativa": "Sensibilidade e especificidade são propriedades do teste, e razões de verossimilhança derivam delas. VPP, VPN e a acurácia total variam com a prevalência."
+   },
+   {
+    "id": "estatistica_07",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes diagnósticos",
+    "enunciado": "A área sob a curva ROC (AUC) de 0,5 indica:",
+    "alternativas": {
+     "A": "Discriminação perfeita.",
+     "B": "Excelente discriminação.",
+     "C": "Que o teste só tem falsos negativos.",
+     "D": "Capacidade discriminativa nula, equivalente ao acaso."
+    },
+    "resposta": "D",
+    "justificativa": "A AUC varia de 0,5 (sem discriminação, igual a jogar uma moeda) a 1,0 (discriminação perfeita). Valores entre 0,7 e 0,8 são aceitáveis, 0,8–0,9 bons e > 0,9 excelentes."
+   },
+   {
+    "id": "estatistica_08",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes diagnósticos",
+    "enunciado": "Ao diminuir o ponto de corte de um teste cuja positividade aumenta com o valor (por exemplo, um biomarcador), o que ocorre em geral?",
+    "alternativas": {
+     "A": "A sensibilidade diminui e a especificidade aumenta.",
+     "B": "Ambas aumentam.",
+     "C": "A sensibilidade aumenta e a especificidade diminui.",
+     "D": "Nenhuma se altera."
+    },
+    "resposta": "C",
+    "justificativa": "Um corte mais baixo classifica mais pacientes como positivos: mais verdadeiros positivos (↑ sensibilidade) e mais falsos positivos (↓ especificidade). Na triagem prefere-se o corte mais sensível, na confirmação, o mais específico."
+   },
+   {
+    "id": "estatistica_09",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes diagnósticos",
+    "enunciado": "Qual estatística é a mais adequada para avaliar a concordância entre dois examinadores em uma variável categórica?",
+    "alternativas": {
+     "A": "Correlação de Pearson",
+     "B": "Teste t de Student",
+     "C": "Coeficiente kappa",
+     "D": "Curva ROC"
+    },
+    "resposta": "C",
+    "justificativa": "O kappa mede a concordância além do acaso para variáveis categóricas. Para variáveis contínuas, usam-se Bland–Altman e o coeficiente de correlação intraclasse. Pearson mede associação, não concordância."
+   },
+   {
+    "id": "estatistica_10",
+    "tema": "Estatística e MBE",
+    "subtopico": "Risco",
+    "enunciado": "Em um ensaio, a taxa de infecção foi de 12% no grupo controle e 8% no grupo tratamento. Qual é o NNT?",
+    "alternativas": {
+     "A": "4",
+     "B": "25",
+     "C": "8",
+     "D": "33"
+    },
+    "resposta": "B",
+    "justificativa": "RAR = 12% − 8% = 4 pontos percentuais (0,04). NNT = 1 / 0,04 = 25. O RR é 0,67 e a RRR, 33%; o NNT usa a redução absoluta."
+   },
+   {
+    "id": "estatistica_11",
+    "tema": "Estatística e MBE",
+    "subtopico": "Risco",
+    "enunciado": "No mesmo ensaio (infecção 12% no controle e 8% no tratamento), qual é a redução relativa do risco (RRR)?",
+    "alternativas": {
+     "A": "33%",
+     "B": "4%",
+     "C": "67%",
+     "D": "50%"
+    },
+    "resposta": "A",
+    "justificativa": "RR = 8/12 = 0,67. RRR = 1 − 0,67 = 0,33, isto é, 33%. A redução absoluta (RAR) é 4 pontos percentuais. A RRR costuma impressionar mais que a RAR."
+   },
+   {
+    "id": "estatistica_12",
+    "tema": "Estatística e MBE",
+    "subtopico": "Risco",
+    "enunciado": "Um tratamento reduz a incidência de um evento de 4% para 2%. Qual alternativa é correta?",
+    "alternativas": {
+     "A": "RRR = 2%; RAR = 50%; NNT = 2.",
+     "B": "RRR = 50%; RAR = 50%; NNT = 2.",
+     "C": "RRR = 2%; RAR = 2%; NNT = 50.",
+     "D": "RRR = 50%; RAR = 2 pontos percentuais; NNT = 50."
+    },
+    "resposta": "D",
+    "justificativa": "RR = 2/4 = 0,5, então RRR = 50%. RAR = 4% − 2% = 2 pontos (0,02). NNT = 1/0,02 = 50. Quando o risco basal é baixo, uma RRR grande corresponde a um benefício absoluto pequeno."
+   },
+   {
+    "id": "estatistica_13",
+    "tema": "Estatística e MBE",
+    "subtopico": "Risco",
+    "enunciado": "O que o odds ratio (OR) de 0,44 e o risco relativo (RR) de 0,50 do mesmo estudo ilustram?",
+    "alternativas": {
+     "A": "Que o OR é sempre igual ao RR.",
+     "B": "Que o RR superestima o efeito.",
+     "C": "Que os dois só diferem quando o evento é raro.",
+     "D": "Que o OR se afasta mais de 1 que o RR quando o evento é comum."
+    },
+    "resposta": "D",
+    "justificativa": "O OR aproxima o RR apenas quando o evento é raro (< 10%). Quando o evento é comum, o OR exagera o efeito e fica mais distante de 1. Em estudos de caso-controle, o OR é a única medida possível."
+   },
+   {
+    "id": "estatistica_14",
+    "tema": "Estatística e MBE",
+    "subtopico": "Risco",
+    "enunciado": "Qual medida de efeito é obtida diretamente em um estudo de caso-controle?",
+    "alternativas": {
+     "A": "Risco relativo",
+     "B": "Incidência",
+     "C": "Odds ratio",
+     "D": "Prevalência de período"
+    },
+    "resposta": "C",
+    "justificativa": "No caso-controle os investigadores selecionam pelo desfecho, então não é possível calcular incidência nem risco relativo. O OR é a medida calculável e aproxima o RR em doenças raras."
+   },
+   {
+    "id": "estatistica_15",
+    "tema": "Estatística e MBE",
+    "subtopico": "Risco",
+    "enunciado": "O que significa uma razão de risco instantâneo (HR) de 0,70 com IC 95% de 0,55 a 0,90 em um estudo de sobrevida?",
+    "alternativas": {
+     "A": "O tratamento aumenta o risco em 30%.",
+     "B": "O tratamento reduz em 30% o risco instantâneo do evento e o resultado é estatisticamente significativo.",
+     "C": "O resultado não é significativo, pois o IC é amplo.",
+     "D": "O tratamento reduz em 70% a mortalidade absoluta."
+    },
+    "resposta": "B",
+    "justificativa": "HR < 1 favorece o tratamento; 0,70 equivale a 30% de redução do risco instantâneo em qualquer momento. O IC não inclui 1, portanto p < 0,05. HR é uma medida relativa e não corresponde à redução absoluta da mortalidade."
+   },
+   {
+    "id": "estatistica_16",
+    "tema": "Estatística e MBE",
+    "subtopico": "Risco",
+    "enunciado": "Qual dos seguintes intervalos de confiança a 95% de um risco relativo indica resultado estatisticamente significativo?",
+    "alternativas": {
+     "A": "0,55 a 0,90",
+     "B": "0,80 a 1,40",
+     "C": "0,95 a 1,20",
+     "D": "0,40 a 1,02"
+    },
+    "resposta": "A",
+    "justificativa": "Um IC 95% do RR que não inclui 1 equivale a p < 0,05. Intervalos que contêm 1 (0,80–1,40; 0,95–1,20; 0,40–1,02) não excluem ausência de efeito."
+   },
+   {
+    "id": "estatistica_17",
+    "tema": "Estatística e MBE",
+    "subtopico": "Inferência",
+    "enunciado": "Qual é a definição correta do valor de p?",
+    "alternativas": {
+     "A": "A probabilidade de observar um resultado igual ou mais extremo se a hipótese nula for verdadeira.",
+     "B": "A probabilidade de a hipótese nula ser verdadeira.",
+     "C": "A probabilidade de o resultado ser clinicamente relevante.",
+     "D": "A magnitude do efeito do tratamento."
+    },
+    "resposta": "A",
+    "justificativa": "O valor de p é calculado supondo que a hipótese nula seja verdadeira. Ele não é a probabilidade de a hipótese ser verdadeira, nem mede o tamanho do efeito ou a importância clínica. Um p < 0,05 é apenas um limiar convencional."
+   },
+   {
+    "id": "estatistica_18",
+    "tema": "Estatística e MBE",
+    "subtopico": "Inferência",
+    "enunciado": "O erro tipo II (β) consiste em:",
+    "alternativas": {
+     "A": "Rejeitar a hipótese nula quando ela é verdadeira.",
+     "B": "Aceitar a hipótese alternativa por acaso.",
+     "C": "Escolher o teste estatístico errado.",
+     "D": "Não rejeitar a hipótese nula quando ela é falsa (falso negativo)."
+    },
+    "resposta": "D",
+    "justificativa": "Erro tipo I (α) é rejeitar uma hipótese nula verdadeira (falso positivo), em geral fixado em 5%. Erro tipo II (β) é não detectar um efeito real; o poder do estudo é 1 − β, em geral 80–90%."
+   },
+   {
+    "id": "estatistica_19",
+    "tema": "Estatística e MBE",
+    "subtopico": "Inferência",
+    "enunciado": "Um estudo não encontrou diferença significativa entre dois anestésicos (p = 0,20), com apenas 12 pacientes por grupo. A melhor interpretação é:",
+    "alternativas": {
+     "A": "Os anestésicos são equivalentes.",
+     "B": "A diferença é de 20%.",
+     "C": "O estudo pode ter poder insuficiente (erro tipo II); a ausência de significância não prova equivalência.",
+     "D": "O valor de p prova que não há efeito."
+    },
+    "resposta": "C",
+    "justificativa": "Em amostras pequenas o poder é baixo, e um efeito clinicamente relevante pode não ser detectado. Ausência de evidência não é evidência de ausência. Para demonstrar equivalência ou não inferioridade, é preciso um desenho próprio com margem pré-definida."
+   },
+   {
+    "id": "estatistica_20",
+    "tema": "Estatística e MBE",
+    "subtopico": "Inferência",
+    "enunciado": "Qual fator AUMENTA o tamanho de amostra necessário em um ensaio clínico?",
+    "alternativas": {
+     "A": "Efeito esperado maior.",
+     "B": "Efeito esperado menor ou maior variabilidade do desfecho.",
+     "C": "Aceitar um α maior (por exemplo, 0,10).",
+     "D": "Reduzir o poder para 50%."
+    },
+    "resposta": "B",
+    "justificativa": "O número de pacientes aumenta com a variabilidade, com a redução do tamanho do efeito a detectar, com α menor e com maior poder. Aceitar α maior ou poder menor reduz o N, mas piora a qualidade do estudo."
+   },
+   {
+    "id": "estatistica_21",
+    "tema": "Estatística e MBE",
+    "subtopico": "Inferência",
+    "enunciado": "Em uma meta-análise, qual estatística quantifica a heterogeneidade entre os estudos?",
+    "alternativas": {
+     "A": "Kappa",
+     "B": "I²",
+     "C": "AUC",
+     "D": "Índice de Youden"
+    },
+    "resposta": "B",
+    "justificativa": "O I² estima a proporção da variabilidade devida à heterogeneidade e não ao acaso (> 50% sugere heterogeneidade importante). Nesses casos usa-se o modelo de efeitos aleatórios e procuram-se as fontes. O funil (funnel plot) avalia viés de publicação."
+   },
+   {
+    "id": "estatistica_22",
+    "tema": "Estatística e MBE",
+    "subtopico": "Inferência",
+    "enunciado": "A análise por intenção de tratar (ITT) em um ensaio clínico randomizado:",
+    "alternativas": {
+     "A": "Analisa os pacientes nos grupos para os quais foram randomizados, independentemente de terem recebido o tratamento.",
+     "B": "Exclui os pacientes que abandonaram o tratamento.",
+     "C": "Analisa apenas quem completou o protocolo.",
+     "D": "Reclassifica os pacientes segundo o tratamento realmente recebido."
+    },
+    "resposta": "A",
+    "justificativa": "A ITT preserva a randomização e evita vieses por exclusões seletivas; é a análise principal em estudos de superioridade. A análise por protocolo (per protocol) considera quem cumpriu o tratamento e é complementar, importante em estudos de não inferioridade."
+   },
+   {
+    "id": "estatistica_23",
+    "tema": "Estatística e MBE",
+    "subtopico": "Desenhos",
+    "enunciado": "Qual desenho é mais adequado para estudar uma doença muito rara com múltiplas exposições possíveis?",
+    "alternativas": {
+     "A": "Coorte prospectiva",
+     "B": "Ensaio clínico randomizado",
+     "C": "Estudo transversal",
+     "D": "Caso-controle"
+    },
+    "resposta": "D",
+    "justificativa": "O caso-controle parte dos doentes e compara exposições passadas com controles, o que é eficiente quando o desfecho é raro. Coortes exigem acompanhar muitos pacientes por muito tempo. Transversais não estabelecem a temporalidade."
+   },
+   {
+    "id": "estatistica_24",
+    "tema": "Estatística e MBE",
+    "subtopico": "Desenhos",
+    "enunciado": "Qual desenho de estudo pode estimar a incidência de um desfecho?",
+    "alternativas": {
+     "A": "Caso-controle",
+     "B": "Série de casos",
+     "C": "Coorte",
+     "D": "Transversal"
+    },
+    "resposta": "C",
+    "justificativa": "A coorte acompanha expostos e não expostos no tempo, calculando incidência e risco relativo. O caso-controle calcula OR, o transversal calcula prevalência e as séries de casos apenas descrevem."
+   },
+   {
+    "id": "estatistica_25",
+    "tema": "Estatística e MBE",
+    "subtopico": "Desenhos",
+    "enunciado": "A ocultação da alocação (allocation concealment) em um ECR serve para:",
+    "alternativas": {
+     "A": "Impedir que o paciente saiba qual tratamento recebe.",
+     "B": "Evitar perdas de seguimento.",
+     "C": "Impedir que quem recruta saiba a que grupo o próximo paciente será designado, evitando viés de seleção.",
+     "D": "Garantir a análise por intenção de tratar."
+    },
+    "resposta": "C",
+    "justificativa": "A ocultação da alocação (por exemplo, envelopes opacos ou central de randomização) protege a sequência de randomização. Cegamento diz respeito a quem conhece o tratamento depois da alocação (paciente, avaliador). São conceitos distintos."
+   },
+   {
+    "id": "estatistica_26",
+    "tema": "Estatística e MBE",
+    "subtopico": "Desenhos",
+    "enunciado": "Qual alternativa descreve corretamente um ensaio de não inferioridade?",
+    "alternativas": {
+     "A": "Testa se o novo tratamento é superior ao placebo.",
+     "B": "Testa se um novo tratamento não é pior que o padrão por mais que uma margem pré-especificada.",
+     "C": "Dispensa a definição de margem.",
+     "D": "Só é válido se o valor de p for menor que 0,001."
+    },
+    "resposta": "B",
+    "justificativa": "O desenho define uma margem de não inferioridade clinicamente aceitável; o limite do IC do efeito deve ficar dentro dela. A margem deve ser definida antes do estudo. Esses estudos exigem tamanho de amostra adequado e análise ITT e per protocol."
+   },
+   {
+    "id": "estatistica_27",
+    "tema": "Estatística e MBE",
+    "subtopico": "Desenhos",
+    "enunciado": "O acrônimo CONSORT refere-se à diretriz de relato de:",
+    "alternativas": {
+     "A": "Ensaios clínicos randomizados",
+     "B": "Revisões sistemáticas",
+     "C": "Estudos observacionais",
+     "D": "Estudos de acurácia diagnóstica"
+    },
+    "resposta": "A",
+    "justificativa": "CONSORT: ensaios clínicos randomizados; PRISMA: revisões sistemáticas e meta-análises; STROBE: estudos observacionais; STARD: acurácia diagnóstica; CARE: relatos de caso."
+   },
+   {
+    "id": "estatistica_28",
+    "tema": "Estatística e MBE",
+    "subtopico": "Desenhos",
+    "enunciado": "Qual das opções representa um viés de seleção?",
+    "alternativas": {
+     "A": "Avaliação do desfecho por observador cego.",
+     "B": "Randomização com ocultação da alocação.",
+     "C": "Uso de análise ITT.",
+     "D": "Perda de seguimento diferente entre grupos por razões relacionadas ao desfecho."
+    },
+    "resposta": "D",
+    "justificativa": "Perdas diferenciais comprometem a comparabilidade dos grupos. Cegamento, randomização oculta e ITT são medidas que reduzem vieses. O viés de memória é de aferição."
+   },
+   {
+    "id": "estatistica_29",
+    "tema": "Estatística e MBE",
+    "subtopico": "Desenhos",
+    "enunciado": "No sistema GRADE, a evidência de ensaios clínicos randomizados começa com qualidade:",
+    "alternativas": {
+     "A": "Baixa, e só aumenta com meta-análise.",
+     "B": "Moderada, sem possibilidade de alteração.",
+     "C": "Muito baixa, a menos que o estudo tenha mais de 1000 pacientes.",
+     "D": "Alta, podendo ser rebaixada por risco de viés, inconsistência, evidência indireta, imprecisão ou viés de publicação."
+    },
+    "resposta": "D",
+    "justificativa": "No GRADE, ECR começam como alta qualidade e estudos observacionais como baixa; os primeiros são rebaixados por limitações e os segundos podem subir por grande efeito, gradiente dose-resposta ou confundidores que reduziriam o efeito."
+   },
+   {
+    "id": "estatistica_30",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes estatísticos",
+    "enunciado": "Para comparar a média de pressão arterial entre dois grupos independentes com distribuição normal, o teste adequado é:",
+    "alternativas": {
+     "A": "Qui-quadrado",
+     "B": "Wilcoxon",
+     "C": "t de Student para amostras independentes",
+     "D": "McNemar"
+    },
+    "resposta": "C",
+    "justificativa": "Duas médias de grupos independentes com distribuição normal: teste t de Student. O Mann–Whitney é o equivalente não paramétrico. Qui-quadrado compara proporções; Wilcoxon e McNemar são para dados pareados."
+   },
+   {
+    "id": "estatistica_31",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes estatísticos",
+    "enunciado": "Para comparar a dor em escala numérica (0–10), com distribuição assimétrica, entre dois grupos independentes, o teste adequado é:",
+    "alternativas": {
+     "A": "t de Student",
+     "B": "Mann–Whitney",
+     "C": "ANOVA",
+     "D": "Qui-quadrado"
+    },
+    "resposta": "B",
+    "justificativa": "Dados ordinais ou numéricos assimétricos pedem testes não paramétricos. Para dois grupos independentes: Mann–Whitney. Para dados pareados: Wilcoxon. Os resultados são descritos por mediana e intervalo interquartil."
+   },
+   {
+    "id": "estatistica_32",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes estatísticos",
+    "enunciado": "Para comparar a frequência de náusea (sim/não) entre dois grupos pequenos, com valores esperados menores que 5 em alguma célula, usa-se:",
+    "alternativas": {
+     "A": "Teste exato de Fisher",
+     "B": "t de Student",
+     "C": "ANOVA",
+     "D": "Correlação de Pearson"
+    },
+    "resposta": "A",
+    "justificativa": "O qui-quadrado exige valores esperados ≥ 5 em todas as células; quando alguma célula tem valor esperado < 5, o teste exato de Fisher é preferível. t e ANOVA comparam médias, e Pearson mede correlação."
+   },
+   {
+    "id": "estatistica_33",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes estatísticos",
+    "enunciado": "Para comparar a PAM de um mesmo grupo de pacientes antes e depois da indução (distribuição normal), o teste adequado é:",
+    "alternativas": {
+     "A": "t de Student pareado",
+     "B": "t de Student para amostras independentes",
+     "C": "Mann–Whitney",
+     "D": "Qui-quadrado"
+    },
+    "resposta": "A",
+    "justificativa": "Medidas repetidas nos mesmos indivíduos são dados pareados: t pareado (normal) ou Wilcoxon (não normal). Para três ou mais momentos, usa-se ANOVA de medidas repetidas (ou Friedman)."
+   },
+   {
+    "id": "estatistica_34",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes estatísticos",
+    "enunciado": "Em um ensaio com três grupos de analgesia e comparação da dose total de morfina (distribuição normal), o teste inicial mais adequado é:",
+    "alternativas": {
+     "A": "Vários testes t entre os pares, sem correção",
+     "B": "Qui-quadrado",
+     "C": "Kappa",
+     "D": "ANOVA de um fator"
+    },
+    "resposta": "D",
+    "justificativa": "A ANOVA compara três ou mais médias; comparações múltiplas por testes t sucessivos aumentam o erro tipo I. Após uma ANOVA significativa, testes post hoc (Tukey, Bonferroni) identificam os grupos diferentes. O equivalente não paramétrico é o Kruskal–Wallis."
+   },
+   {
+    "id": "estatistica_35",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes estatísticos",
+    "enunciado": "Qual medida de tendência central e dispersão é mais adequada para uma variável numérica com distribuição assimétrica?",
+    "alternativas": {
+     "A": "Média e desvio padrão",
+     "B": "Moda e amplitude",
+     "C": "Mediana e intervalo interquartil",
+     "D": "Média e erro padrão"
+    },
+    "resposta": "C",
+    "justificativa": "Em distribuições assimétricas (por exemplo, tempo de internação), a média é influenciada por valores extremos. Mediana e intervalo interquartil descrevem melhor. Média e desvio padrão são para distribuições normais; o erro padrão descreve a precisão da média, não a dispersão dos dados."
+   },
+   {
+    "id": "estatistica_36",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes estatísticos",
+    "enunciado": "O que representa o erro padrão da média?",
+    "alternativas": {
+     "A": "A dispersão dos valores individuais na amostra",
+     "B": "A precisão da estimativa da média da amostra (DP/√n)",
+     "C": "A diferença entre os dois grupos",
+     "D": "O valor de p do teste"
+    },
+    "resposta": "B",
+    "justificativa": "EP = DP/√n e diminui com o aumento da amostra. O IC 95% da média é ≈ média ± 1,96 × EP. O desvio padrão descreve a variabilidade entre os indivíduos."
+   },
+   {
+    "id": "estatistica_37",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes estatísticos",
+    "enunciado": "Qual teste compara curvas de sobrevida de Kaplan–Meier entre dois grupos?",
+    "alternativas": {
+     "A": "t de Student",
+     "B": "Log-rank",
+     "C": "Qui-quadrado de Pearson",
+     "D": "Mann–Whitney"
+    },
+    "resposta": "B",
+    "justificativa": "O teste log-rank compara as curvas de sobrevida de dois ou mais grupos. A regressão de Cox estima o HR ajustado por covariáveis. Esses métodos lidam com dados censurados."
+   },
+   {
+    "id": "estatistica_38",
+    "tema": "Estatística e MBE",
+    "subtopico": "Testes estatísticos",
+    "enunciado": "A regressão logística múltipla é apropriada quando:",
+    "alternativas": {
+     "A": "O desfecho é binário e se deseja estimar odds ratio ajustados por variáveis de confusão.",
+     "B": "O desfecho é contínuo e normal.",
+     "C": "Há apenas uma variável e o desfecho é o tempo até o evento.",
+     "D": "Se quer comparar duas medianas."
+    },
+    "resposta": "A",
+    "justificativa": "A regressão logística modela probabilidade de um evento binário e fornece OR ajustados. A regressão linear é para desfechos contínuos e a de Cox para tempo até o evento (HR)."
+   },
+   {
+    "id": "estatistica_39",
+    "tema": "Estatística e MBE",
+    "subtopico": "Ética em pesquisa",
+    "enunciado": "No Brasil, projetos de pesquisa com seres humanos devem ser submetidos ao:",
+    "alternativas": {
+     "A": "Conselho Federal de Medicina, sem outra aprovação.",
+     "B": "Comitê de Ética Animal.",
+     "C": "Diretor clínico da instituição apenas.",
+     "D": "Comitê de Ética em Pesquisa (CEP), via Plataforma Brasil, conforme a Resolução CNS 466/2012."
+    },
+    "resposta": "D",
+    "justificativa": "A Resolução CNS 466/2012 exige aprovação do CEP, com acompanhamento da CONEP quando necessário, e o termo de consentimento livre e esclarecido. O registro do ensaio em ReBEC ou ClinicalTrials.gov é recomendado antes do recrutamento."
+   },
+   {
+    "id": "estatistica_40",
+    "tema": "Estatística e MBE",
+    "subtopico": "Estatística",
+    "enunciado": "Em um estudo com 10 desfechos secundários testados com α = 0,05 cada, qual é o principal problema estatístico?",
+    "alternativas": {
+     "A": "Aumento do erro tipo II, pois o poder cai a zero.",
+     "B": "Impossibilidade de calcular p.",
+     "C": "Aumento do erro tipo I por múltiplas comparações; é preciso corrigir (Bonferroni) ou pré-especificar.",
+     "D": "Perda de validade externa."
+    },
+    "resposta": "C",
+    "justificativa": "Com 10 testes independentes, a chance de ao menos um falso positivo a 5% é de cerca de 40%. A correção de Bonferroni (α/10) ou a análise hierárquica pré-especificada controlam o erro tipo I. Desfechos secundários geram hipóteses, não confirmam."
+   },
+   {
+    "id": "estatistica_41",
+    "tema": "Estatística e MBE",
+    "subtopico": "Estatística",
+    "enunciado": "Qual das opções representa melhor a diferença entre significância estatística e relevância clínica?",
+    "alternativas": {
+     "A": "Todo p < 0,05 implica efeito clinicamente importante.",
+     "B": "Um IC amplo prova que o efeito é grande.",
+     "C": "Um estudo muito grande pode achar p < 0,001 para diferença clinicamente irrelevante.",
+     "D": "A relevância clínica só depende do valor de p."
+    },
+    "resposta": "C",
+    "justificativa": "O valor de p depende do tamanho do efeito e da amostra. Com milhares de pacientes, diferenças pequenas viram significativas. É preciso avaliar a magnitude do efeito, o IC, o NNT e a importância clínica do desfecho."
+   }
+  ]
+ },
+ {
+  "id": "dorcronica",
+  "titulo": "Dor Crônica e Intervencionista",
+  "cor": "#F97316",
+  "icone": "🩹",
+  "questoes": [
+   {
+    "id": "dorcronica_01",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Conceitos",
+    "enunciado": "Qual é a definição de dor crônica segundo a IASP/CID-11?",
+    "alternativas": {
+     "A": "Dor que persiste ou recorre por mais de 3 meses.",
+     "B": "Dor com mais de 6 semanas sem causa identificada.",
+     "C": "Dor que persiste por mais de 1 mês após a lesão.",
+     "D": "Dor que não responde a opioides."
+    },
+    "resposta": "A",
+    "justificativa": "A dor crônica é definida de forma operacional pelo tempo: mais de 3 meses. A CID-11 classifica em primária e secundária (oncológica, pós-cirúrgica, neuropática, musculoesquelética, visceral e cefaleias). A resposta a opioides não faz parte da definição."
+   },
+   {
+    "id": "dorcronica_02",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Conceitos",
+    "enunciado": "Um paciente relata queimação, choque e alodinia no território do nervo ulnar após fratura. O questionário DN4 deu 6/10. Qual o tipo de dor mais provável?",
+    "alternativas": {
+     "A": "Nociceptiva somática",
+     "B": "Nociceptiva visceral",
+     "C": "Nociplástica sem lesão nervosa",
+     "D": "Neuropática"
+    },
+    "resposta": "D",
+    "justificativa": "O DN4 ≥ 4/10 indica dor neuropática. Queimação, choque elétrico e alodinia em território de nervo lesado são característicos. A dor nociceptiva é descrita como pulsátil/dolorida e responde a AINEs, enquanto a nociplástica não apresenta lesão nervosa."
+   },
+   {
+    "id": "dorcronica_03",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Conceitos",
+    "enunciado": "Qual fator é um forte preditor de dor pós-cirúrgica persistente?",
+    "alternativas": {
+     "A": "Uso de analgesia multimodal.",
+     "B": "Idade avançada.",
+     "C": "Dor intensa no pré-operatório e no pós-operatório imediato, ansiedade e catastrofização.",
+     "D": "Cirurgias minimamente invasivas sem lesão nervosa."
+    },
+    "resposta": "C",
+    "justificativa": "São fatores de risco: dor pré-operatória intensa, dor aguda intensa, lesão nervosa, ansiedade, catastrofização, idade jovem, sexo feminino e radioterapia. Analgesia multimodal é medida protetora."
+   },
+   {
+    "id": "dorcronica_04",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Conceitos",
+    "enunciado": "Hiperalgesia induzida por opioide caracteriza-se por:",
+    "alternativas": {
+     "A": "Alívio completo da dor com o aumento da dose.",
+     "B": "Piora ou difusão da dor com o aumento da dose de opioide, geralmente com alodinia.",
+     "C": "Apenas náusea e constipação.",
+     "D": "Necessidade de reduzir o intervalo da dose por abstinência."
+    },
+    "resposta": "B",
+    "justificativa": "Na hiperalgesia induzida por opioide a sensibilização do sistema nociceptivo faz a dor piorar ou se espalhar apesar do aumento da dose. Manejo: reduzir ou rotacionar o opioide, usar não opioides e antagonistas NMDA em casos selecionados. A tolerância se manifesta como perda de efeito sem dor difusa nova."
+   },
+   {
+    "id": "dorcronica_05",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Neuropática",
+    "enunciado": "Qual das classes abaixo é considerada primeira linha para dor neuropática segundo o NeuPSIG (2015)?",
+    "alternativas": {
+     "A": "Opioides fortes, como morfina e fentanil.",
+     "B": "Gabapentinoides, antidepressivos tricíclicos e inibidores de recaptação de serotonina e noradrenalina.",
+     "C": "AINEs e corticoides orais.",
+     "D": "Benzodiazepínicos."
+    },
+    "resposta": "B",
+    "justificativa": "O NeuPSIG recomenda como primeira linha gabapentina/pregabalina, TCA (amitriptilina) e IRSN (duloxetina, venlafaxina). A segunda linha inclui lidocaína tópica, capsaicina 8% e tramadol; opioides fortes e toxina botulínica ficam na terceira linha."
+   },
+   {
+    "id": "dorcronica_06",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Neuropática",
+    "enunciado": "Qual é o fármaco de primeira escolha na neuralgia do trigêmeo?",
+    "alternativas": {
+     "A": "Carbamazepina",
+     "B": "Morfina",
+     "C": "Gabapentina isolada",
+     "D": "Paracetamol e dipirona"
+    },
+    "resposta": "A",
+    "justificativa": "A carbamazepina (ou oxcarbazepina) é a primeira linha. Em pacientes de ascendência asiática, rastrear HLA-B*1502 pelo risco de Stevens–Johnson. Casos refratários: descompressão microvascular, radiocirurgia ou rizotomia percutânea."
+   },
+   {
+    "id": "dorcronica_07",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Neuropática",
+    "enunciado": "Em um paciente com neuralgia pós-herpética localizada e intolerância a gabapentinoides, uma opção tópica recomendada é:",
+    "alternativas": {
+     "A": "Diclofenaco gel",
+     "B": "Morfina tópica",
+     "C": "Corticoide tópico potente",
+     "D": "Emplastro de lidocaína 5% ou capsaicina 8%."
+    },
+    "resposta": "D",
+    "justificativa": "Lidocaína 5% em emplastro e capsaicina 8% têm evidência na neuralgia pós-herpética localizada, com poucos efeitos sistêmicos. AINE tópico é útil na dor musculoesquelética, não na neuropática."
+   },
+   {
+    "id": "dorcronica_08",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Neuropática",
+    "enunciado": "Qual o efeito adverso mais relevante de antidepressivos tricíclicos em idosos?",
+    "alternativas": {
+     "A": "Hiperglicemia grave",
+     "B": "Hiperalgesia",
+     "C": "Efeitos anticolinérgicos, hipotensão ortostática e arritmias.",
+     "D": "Fibrose pulmonar"
+    },
+    "resposta": "C",
+    "justificativa": "A amitriptilina tem ação anticolinérgica (confusão, retenção urinária, boca seca), bloqueio alfa (hipotensão ortostática) e cardiotoxicidade (QRS prolongado). Em idosos, preferir nortriptilina, doses baixas ou duloxetina."
+   },
+   {
+    "id": "dorcronica_09",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Neuropática",
+    "enunciado": "Qual é a dose usual inicial de duloxetina na dor neuropática diabética?",
+    "alternativas": {
+     "A": "10 mg duas vezes ao dia",
+     "B": "300 mg uma vez ao dia",
+     "C": "30–60 mg uma vez ao dia, com possibilidade de aumento até 60–120 mg.",
+     "D": "600 mg dividido em três doses"
+    },
+    "resposta": "C",
+    "justificativa": "A duloxetina é iniciada com 30 mg/dia por uma semana para reduzir náuseas e depois 60 mg/dia (dose de manutenção usual). Evitar em hepatopatia grave e com IMAO. A gabapentina é que atinge doses de 900–3600 mg/dia."
+   },
+   {
+    "id": "dorcronica_10",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Opioides",
+    "enunciado": "Segundo as diretrizes do CDC de 2022, em dor crônica não oncológica, os opioides:",
+    "alternativas": {
+     "A": "São a primeira linha e devem ser iniciados em doses altas.",
+     "B": "Devem ser usados em caso de benefício funcional superior aos riscos, na menor dose efetiva e com reavaliação frequente.",
+     "C": "São contraindicados em qualquer situação.",
+     "D": "Devem ser associados a benzodiazepínicos para melhorar o sono."
+    },
+    "resposta": "B",
+    "justificativa": "O CDC recomenda terapia não opioide e não farmacológica primeiro; opioides se o benefício superar os riscos, com menor dose, revisão frequente, avaliação de riscos e uso de naloxona. A combinação com benzodiazepínicos aumenta o risco de depressão respiratória."
+   },
+   {
+    "id": "dorcronica_11",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Opioides",
+    "enunciado": "Qual é a relação aproximada entre morfina oral e morfina intravenosa?",
+    "alternativas": {
+     "A": "3 : 1",
+     "B": "1 : 1",
+     "C": "1 : 3",
+     "D": "10 : 1"
+    },
+    "resposta": "A",
+    "justificativa": "A biodisponibilidade oral da morfina é baixa por metabolismo de primeira passagem: 30 mg orais equivalem a cerca de 10 mg IV. Para epidural, a relação IV : epidural é 10 : 1 e epidural : intratecal, 10 : 1 (oral : IV : epidural : IT = 300 : 100 : 10 : 1)."
+   },
+   {
+    "id": "dorcronica_12",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Opioides",
+    "enunciado": "Ao realizar rotação de opioides, qual cuidado é recomendado?",
+    "alternativas": {
+     "A": "Usar 150% da dose equianalgésica para garantir analgesia.",
+     "B": "Manter exatamente a dose calculada em qualquer situação.",
+     "C": "Trocar sem calcular a dose, pois todos os opioides têm a mesma potência.",
+     "D": "Reduzir a dose equianalgésica calculada em 25–50% e titular conforme resposta, pela tolerância cruzada incompleta."
+    },
+    "resposta": "D",
+    "justificativa": "A tolerância cruzada entre opioides é incompleta; a dose total equianalgésica calculada pode causar sobredose. Recomenda-se reduzir a dose em 25–50% e titular. Em metadona, a conversão é complexa e exige especialista."
+   },
+   {
+    "id": "dorcronica_13",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Opioides",
+    "enunciado": "Qual das opções descreve características da metadona?",
+    "alternativas": {
+     "A": "Meia-vida curta de 1–2 horas e sem efeito no QTc.",
+     "B": "Metabolizada por esterases plasmáticas, sem acúmulo.",
+     "C": "É agonista parcial mu e tem efeito teto para depressão respiratória.",
+     "D": "Agonista mu e antagonista NMDA, meia-vida longa e variável, prolonga o QTc e pode acumular."
+    },
+    "resposta": "D",
+    "justificativa": "A metadona liga-se ao receptor mu e bloqueia o NMDA; sua meia-vida é de 24–36 h (variável) e o acúmulo causa depressão respiratória tardia. Prolonga o QTc, exigindo ECG. A buprenorfina é o agonista parcial com teto ventilatório."
+   },
+   {
+    "id": "dorcronica_14",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Opioides",
+    "enunciado": "Em insuficiência renal, qual opioide deve ser preferido?",
+    "alternativas": {
+     "A": "Morfina",
+     "B": "Codeína",
+     "C": "Fentanil, hidromorfona ou metadona",
+     "D": "Meperidina"
+    },
+    "resposta": "C",
+    "justificativa": "A morfina forma morfina-6-glicuronídeo (ativo) e morfina-3-glicuronídeo (neuroexcitatório), que se acumulam na insuficiência renal. Codeína e meperidina têm metabólitos tóxicos (norpetidina causa convulsões). Fentanil e metadona têm eliminação hepática, e a hidromorfona tem metabólito de menor toxicidade."
+   },
+   {
+    "id": "dorcronica_15",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Opioides",
+    "enunciado": "Qual é o risco específico do tramadol em pacientes em uso de ISRS?",
+    "alternativas": {
+     "A": "Agranulocitose",
+     "B": "Síndrome serotoninérgica e redução do limiar convulsivo.",
+     "C": "Fibrose pulmonar",
+     "D": "Hipoglicemia grave"
+    },
+    "resposta": "B",
+    "justificativa": "O tramadol inibe a recaptação de serotonina e noradrenalina e, associado a ISRS/IRSN, IMAO ou tricíclicos, pode causar síndrome serotoninérgica e convulsões. Tapentadol tem menor atividade serotoninérgica."
+   },
+   {
+    "id": "dorcronica_16",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Opioides",
+    "enunciado": "Um paciente usa fentanil transdérmico 25 mcg/h. Qual é a dose aproximada equivalente de morfina oral por dia?",
+    "alternativas": {
+     "A": "≈ 60 mg",
+     "B": "≈ 10 mg",
+     "C": "≈ 25 mg",
+     "D": "≈ 300 mg"
+    },
+    "resposta": "A",
+    "justificativa": "Pela tabela de conversão em uso (CDC), 1 mcg/h de fentanil transdérmico equivale a ≈ 2,4 mg/dia de morfina oral, então 25 mcg/h ≈ 60 mg/dia. A conversão é aproximada e a dose deve ser ajustada clinicamente."
+   },
+   {
+    "id": "dorcronica_17",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Fármacos",
+    "enunciado": "Gabapentinoides em associação a opioides aumentam o risco de:",
+    "alternativas": {
+     "A": "Sedação e depressão respiratória",
+     "B": "Hipertensão grave",
+     "C": "Hipercalemia",
+     "D": "Hiperglicemia"
+    },
+    "resposta": "A",
+    "justificativa": "Gabapentina e pregabalina são depressores do SNC e potencializam a sedação e a depressão respiratória dos opioides. A dose deve ser ajustada na doença renal e a associação em idosos exige cautela."
+   },
+   {
+    "id": "dorcronica_18",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Fármacos",
+    "enunciado": "Qual é a medida mais importante ao se prescrever opioide a paciente com dor crônica oncológica?",
+    "alternativas": {
+     "A": "Associar um benzodiazepínico.",
+     "B": "Evitar totalmente o resgate.",
+     "C": "Aumentar a dose sem reavaliar.",
+     "D": "Associar laxante profilático."
+    },
+    "resposta": "D",
+    "justificativa": "A constipação por opioides não desenvolve tolerância; laxante osmótico ou estimulante deve ser prescrito junto. O uso de benzodiazepínicos aumenta o risco de depressão respiratória e o resgate faz parte do manejo da dor irruptiva."
+   },
+   {
+    "id": "dorcronica_19",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Síndromes",
+    "enunciado": "Os critérios de Budapeste são usados para o diagnóstico de:",
+    "alternativas": {
+     "A": "Fibromialgia",
+     "B": "Neuralgia do trigêmeo",
+     "C": "Síndrome dolorosa regional complexa",
+     "D": "Dor miofascial"
+    },
+    "resposta": "C",
+    "justificativa": "Os critérios de Budapeste exigem dor contínua desproporcional ao evento e sintomas em ≥ 3 de 4 categorias (sensorial, vasomotora, sudomotora/edema, motora/trófica) e sinais em ≥ 2. Fibromialgia usa os critérios do ACR."
+   },
+   {
+    "id": "dorcronica_20",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Síndromes",
+    "enunciado": "Qual é o tratamento mais importante na SDRC?",
+    "alternativas": {
+     "A": "Imobilização prolongada do membro.",
+     "B": "Reabilitação funcional precoce associada a analgesia multimodal.",
+     "C": "Opioides em altas doses isolados.",
+     "D": "Cirurgia de amputação precoce."
+    },
+    "resposta": "B",
+    "justificativa": "A mobilização e a terapia de reabilitação (incluindo terapia em espelho e dessensibilização) são pilares. Medicações: gabapentinoides, corticoide curto, bisfosfonatos; bloqueios simpáticos como ponte para fisioterapia. Imobilizar piora o quadro."
+   },
+   {
+    "id": "dorcronica_21",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Síndromes",
+    "enunciado": "Qual das opções constitui tratamento de primeira linha para fibromialgia?",
+    "alternativas": {
+     "A": "Morfina e benzodiazepínicos",
+     "B": "Exercício físico aeróbico, educação e terapia cognitivo-comportamental, com duloxetina, pregabalina ou amitriptilina como fármacos",
+     "C": "Corticoide sistêmico contínuo",
+     "D": "Cirurgia de pontos-gatilho"
+    },
+    "resposta": "B",
+    "justificativa": "As diretrizes EULAR e ACR recomendam tratamento não farmacológico em primeiro lugar. Opioides fortes não são recomendados. Medicações: duloxetina, pregabalina, amitriptilina em baixa dose."
+   },
+   {
+    "id": "dorcronica_22",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Síndromes",
+    "enunciado": "O tratamento da crise de cefaleia em salvas inclui:",
+    "alternativas": {
+     "A": "Oxigênio a 100% (12–15 L/min por 15 minutos) e sumatriptano 6 mg SC.",
+     "B": "Morfina oral e repouso.",
+     "C": "Propranolol endovenoso.",
+     "D": "Cetamina intranasal como primeira linha."
+    },
+    "resposta": "A",
+    "justificativa": "O O₂ de alto fluxo e o triptano subcutâneo são os tratamentos de primeira linha. A profilaxia utiliza verapamil. Opioides não são recomendados."
+   },
+   {
+    "id": "dorcronica_23",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Síndromes",
+    "enunciado": "O membro fantasma doloroso após amputação:",
+    "alternativas": {
+     "A": "É sempre psicogênico.",
+     "B": "Só ocorre após amputação de membro inferior.",
+     "C": "Não responde a nenhum tratamento.",
+     "D": "É comum e pode ser reduzido por bloqueios regionais e analgesia multimodal perioperatória; tratamento com gabapentinoides e antidepressivos."
+    },
+    "resposta": "D",
+    "justificativa": "A dor fantasma ocorre em até 50–80% dos amputados. Não é psicogênica. O controle da dor aguda pré e pós-operatória pode reduzir o risco. Tratamentos incluem gabapentinoides, tricíclicos, terapia em espelho e neuromodulação."
+   },
+   {
+    "id": "dorcronica_24",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Síndromes",
+    "enunciado": "Paciente com diagnóstico de enxaqueca e doença arterial coronariana. Qual medicação deve ser evitada na crise?",
+    "alternativas": {
+     "A": "Paracetamol",
+     "B": "Antiemético",
+     "C": "Triptano",
+     "D": "Naproxeno, desde que sem contraindicação"
+    },
+    "resposta": "C",
+    "justificativa": "Os triptanos são vasoconstritores e contraindicados em doença coronariana, AVC, hipertensão não controlada e enxaqueca hemiplégica. Analgésicos simples, AINEs (se não contraindicados) e antieméticos podem ser usados."
+   },
+   {
+    "id": "dorcronica_25",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Intervenção",
+    "enunciado": "Em epidural transforaminal de esteroide, para reduzir o risco de infarto medular por embolização, recomenda-se:",
+    "alternativas": {
+     "A": "Usar metilprednisolona em partículas, mais efetiva.",
+     "B": "Injetar sem imagem para reduzir o tempo do procedimento.",
+     "C": "Usar dexametasona (esteroide não particulado) e injetar contraste com fluoroscopia antes da medicação.",
+     "D": "Usar triancinolona em maior volume."
+    },
+    "resposta": "C",
+    "justificativa": "Esteroides particulados (metilprednisolona, triancinolona, betametasona) podem formar agregados que ocluem arteríolas radiculares/medulares. Recomenda-se dexametasona não particulada, contraste com angiografia digital e agulha de ponta romba. O uso de fluoroscopia é indispensável."
+   },
+   {
+    "id": "dorcronica_26",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Intervenção",
+    "enunciado": "Antes de realizar radiofrequência convencional dos ramos mediais para dor facetária lombar, recomenda-se:",
+    "alternativas": {
+     "A": "Nenhum bloqueio diagnóstico prévio.",
+     "B": "Dois bloqueios diagnósticos dos ramos mediais com alívio significativo da dor (≥ 50–80%).",
+     "C": "Um único bloqueio com alívio de 20%.",
+     "D": "Ressonância normal e ausência de dor ao exame."
+    },
+    "resposta": "B",
+    "justificativa": "Para melhorar a seleção dos pacientes e a taxa de sucesso, exige-se resposta a dois bloqueios diagnósticos controlados dos ramos mediais (≥ 50–80% de alívio) antes da ablação por radiofrequência. Imagem não identifica a fonte da dor facetária."
+   },
+   {
+    "id": "dorcronica_27",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Intervenção",
+    "enunciado": "O bloqueio do plexo celíaco é indicado principalmente para:",
+    "alternativas": {
+     "A": "Dor visceral do abdome superior, como no câncer de pâncreas.",
+     "B": "Dor pélvica oncológica",
+     "C": "Dor perineal",
+     "D": "Dor cervical radicular"
+    },
+    "resposta": "A",
+    "justificativa": "O plexo celíaco inerva pâncreas, fígado, vesícula, estômago e intestino até o cólon transverso. Dor pélvica: plexo hipogástrico superior; dor perineal: gânglio ímpar. Complicações: hipotensão ortostática, diarreia e, raramente, paraplegia."
+   },
+   {
+    "id": "dorcronica_28",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Intervenção",
+    "enunciado": "Qual complicação é típica do bloqueio do gânglio estrelado?",
+    "alternativas": {
+     "A": "Hipertensão intracraniana",
+     "B": "Síndrome da cauda equina",
+     "C": "Hipotensão grave por simpatectomia sacral",
+     "D": "Síndrome de Horner (esperada), além de risco de injeção intravascular na artéria vertebral e pneumotórax."
+    },
+    "resposta": "D",
+    "justificativa": "O gânglio estrelado (cervicotorácico) fornece inervação simpática da cabeça, pescoço e membro superior. O bloqueio causa miose, ptose e enoftalmia (Horner). Riscos: injeção em artéria vertebral (convulsão), pneumotórax, paralisia do laríngeo recorrente e do frênico."
+   },
+   {
+    "id": "dorcronica_29",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Intervenção",
+    "enunciado": "Qual é a relação aproximada de dose da morfina oral : intravenosa : epidural : intratecal?",
+    "alternativas": {
+     "A": "30 : 10 : 3 : 1",
+     "B": "3 : 2 : 1 : 0,5",
+     "C": "1000 : 100 : 10 : 1",
+     "D": "300 : 100 : 10 : 1"
+    },
+    "resposta": "D",
+    "justificativa": "A potência aumenta 3× ao evitar a primeira passagem hepática (VO para IV) e mais 10× por cada passo seguinte (IV para epidural e epidural para intratecal). Essa relação é a base para converter a dose de bomba intratecal, sempre com redução de segurança."
+   },
+   {
+    "id": "dorcronica_30",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Intervenção",
+    "enunciado": "A interrupção abrupta da infusão intratecal de baclofeno pode causar:",
+    "alternativas": {
+     "A": "Hipotermia e sedação profunda.",
+     "B": "Apenas aumento temporário de espasticidade leve.",
+     "C": "Síndrome de abstinência grave com hipertermia, rigidez, espasmos, alteração mental e convulsões.",
+     "D": "Bradicardia isolada."
+    },
+    "resposta": "C",
+    "justificativa": "A suspensão do baclofeno (falha da bomba, esvaziamento, obstrução do cateter) provoca rebote de espasticidade e quadro semelhante à hipertermia maligna ou à sepse, podendo evoluir para falência de múltiplos órgãos. Tratar com baclofeno enteral/IV (quando possível), benzodiazepínicos e reprogramar a bomba."
+   },
+   {
+    "id": "dorcronica_31",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Intervenção",
+    "enunciado": "Qual das opções é uma indicação aceita de estimulação medular?",
+    "alternativas": {
+     "A": "Lombalgia aguda de 2 semanas",
+     "B": "Síndrome dolorosa pós-laminectomia refratária e SDRC",
+     "C": "Dor visceral abdominal difusa sem causa definida",
+     "D": "Neuralgia do trigêmeo como primeira linha"
+    },
+    "resposta": "B",
+    "justificativa": "A estimulação medular tem melhor evidência na síndrome pós-laminectomia, na SDRC, na angina refratária e na doença vascular periférica. Exige teste prévio, avaliação psicológica e falha do tratamento conservador."
+   },
+   {
+    "id": "dorcronica_32",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Intervenção",
+    "enunciado": "Em portador de neuroestimulador medular submetido a cirurgia com eletrocautério monopolar, a conduta recomendada é:",
+    "alternativas": {
+     "A": "Desativar o estimulador, usar cautério bipolar quando possível e posicionar a placa longe do gerador.",
+     "B": "Manter o estimulador ligado no máximo.",
+     "C": "Usar o cautério monopolar sem alterar nada.",
+     "D": "Realizar ressonância magnética de rotina antes da cirurgia."
+    },
+    "resposta": "A",
+    "justificativa": "A corrente do cautério pode interferir com o estimulador, danificar o gerador ou provocar lesões nos eletrodos. Recomenda-se desligar o dispositivo, preferir bipolar ou ajustar a energia e checar o funcionamento no pós-operatório. A ressonância só pode ser feita em dispositivos compatíveis."
+   },
+   {
+    "id": "dorcronica_33",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Oncológica",
+    "enunciado": "Qual descreve melhor o tratamento da dor irruptiva oncológica?",
+    "alternativas": {
+     "A": "Doses de resgate de opioide de ação rápida, em geral 10–15% da dose total diária.",
+     "B": "Dobrar a dose do opioide de base a cada episódio.",
+     "C": "Evitar opioides de resgate.",
+     "D": "Usar apenas anti-inflamatórios."
+    },
+    "resposta": "A",
+    "justificativa": "A dor irruptiva é transitória e de início rápido. O resgate usa opioide de ação rápida (morfina VO imediata ou fentanil transmucoso) em 10–15% da dose diária total, com reavaliação e ajuste do esquema basal se houver mais de 3–4 resgates por dia."
+   },
+   {
+    "id": "dorcronica_34",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Oncológica",
+    "enunciado": "A escada analgésica da OMS para dor oncológica preconiza, no degrau 3:",
+    "alternativas": {
+     "A": "Apenas AINE.",
+     "B": "Opioide fraco isolado.",
+     "C": "Bloqueio neurolítico em todos os casos.",
+     "D": "Opioide forte, com ou sem não opioide e adjuvantes."
+    },
+    "resposta": "D",
+    "justificativa": "O degrau 1 usa não opioides; o 2, opioide fraco; o 3, opioide forte (morfina, oxicodona, fentanil, metadona). Em dor intensa, pode-se iniciar diretamente no degrau 3. Adjuvantes são acrescentados em qualquer degrau."
+   },
+   {
+    "id": "dorcronica_35",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Oncológica",
+    "enunciado": "Paciente com câncer de próstata apresenta dor lombar intensa e fraqueza nos membros inferiores. A conduta imediata é:",
+    "alternativas": {
+     "A": "Apenas aumentar o opioide e reavaliar em 1 semana.",
+     "B": "Prescrever repouso e fisioterapia.",
+     "C": "Suspeitar de compressão medular: corticoide, ressonância urgente e avaliação para radioterapia ou cirurgia.",
+     "D": "Solicitar apenas radiografia simples."
+    },
+    "resposta": "C",
+    "justificativa": "Dor nova com déficit neurológico em paciente oncológico sugere compressão medular, uma emergência: dexametasona, RM de toda a coluna e radioterapia ou descompressão cirúrgica. Atrasos reduzem a chance de recuperar a marcha."
+   },
+   {
+    "id": "dorcronica_36",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Dor aguda no crônico",
+    "enunciado": "Paciente em uso crônico de morfina oral será operado. Qual é a conduta mais adequada?",
+    "alternativas": {
+     "A": "Suspender o opioide no dia da cirurgia para evitar sedação.",
+     "B": "Manter a dose basal de opioide, associar analgesia multimodal e regional e esperar maior necessidade de resgate.",
+     "C": "Substituir por AINE isolado.",
+     "D": "Reduzir a dose basal a 10% e evitar bloqueios regionais."
+    },
+    "resposta": "B",
+    "justificativa": "A suspensão causa abstinência e piora da dor. Continuar o opioide de base, associar paracetamol, AINE (se possível), bloqueios regionais, gabapentinoides e cetamina em dose baixa. A tolerância exige doses maiores de opioides de resgate."
+   },
+   {
+    "id": "dorcronica_37",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Dor aguda no crônico",
+    "enunciado": "Paciente em uso de naltrexona oral deve ser operado de forma eletiva. Qual a orientação?",
+    "alternativas": {
+     "A": "Manter até a manhã da cirurgia.",
+     "B": "Suspender cerca de 72 horas antes da cirurgia (formulação injetável: cerca de 4 semanas).",
+     "C": "Dobrar a dose na véspera.",
+     "D": "Suspender 2 horas antes."
+    },
+    "resposta": "B",
+    "justificativa": "A naltrexona bloqueia competitivamente os receptores opioides e prejudica a analgesia com opioides. A formulação oral deve ser suspensa 72 h antes; a injetável de ação prolongada, cerca de 4 semanas. Em urgência, usar analgesia multimodal e regional."
+   },
+   {
+    "id": "dorcronica_38",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Dor aguda no crônico",
+    "enunciado": "Em paciente em uso de buprenorfina sublingual para dor crônica ou dependência que será operado:",
+    "alternativas": {
+     "A": "Em geral, manter a buprenorfina e acrescentar analgesia multimodal e regional, com ajuste conforme o especialista.",
+     "B": "Suspender 1 mês antes sempre.",
+     "C": "Aplicar naloxona para reverter.",
+     "D": "Substituir por naltrexona."
+    },
+    "resposta": "A",
+    "justificativa": "A buprenorfina tem alta afinidade, mas mantê-la evita recaída e abstinência. Doses altas podem exigir redução. Associar bloqueios, cetamina, lidocaína, paracetamol e AINE. A naloxona e a naltrexona precipitam abstinência."
+   },
+   {
+    "id": "dorcronica_39",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Prescrição",
+    "enunciado": "No Brasil, a prescrição de morfina, metadona, oxicodona e fentanil exige:",
+    "alternativas": {
+     "A": "Receita simples em duas vias.",
+     "B": "Receituário azul B1.",
+     "C": "Prescrição verbal registrada no prontuário.",
+     "D": "Notificação de Receita A (amarela), conforme a Portaria SVS/MS 344/98."
+    },
+    "resposta": "D",
+    "justificativa": "Opioides agonistas da lista A1/A2 exigem Notificação de Receita A, numerada e fornecida pela vigilância sanitária; validade de 30 dias. Benzodiazepínicos e hipnóticos usam a notificação B (azul)."
+   },
+   {
+    "id": "dorcronica_40",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Prescrição",
+    "enunciado": "Qual das opções caracteriza a pregabalina e a gabapentina?",
+    "alternativas": {
+     "A": "São agonistas do receptor GABA-A.",
+     "B": "Eliminação hepática exclusiva.",
+     "C": "Ligam-se à subunidade α2δ dos canais de cálcio voltagem-dependentes; eliminação renal e necessidade de ajuste na insuficiência renal.",
+     "D": "Antagonistas NMDA."
+    },
+    "resposta": "C",
+    "justificativa": "Os gabapentinoides atuam na subunidade α2δ, reduzindo a liberação de neurotransmissores excitatórios. São eliminados pelos rins sem metabolização; a dose deve ser reduzida conforme o clearance de creatinina. Efeitos: sedação, tontura, edema."
+   },
+   {
+    "id": "dorcronica_41",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Prescrição",
+    "enunciado": "Qual das opções descreve corretamente o uso de cetamina em dor crônica refratária?",
+    "alternativas": {
+     "A": "Tem evidência robusta de efeito duradouro.",
+     "B": "É isenta de efeitos adversos.",
+     "C": "Evidência limitada e de curta duração, com efeitos psicomiméticos e risco de hepatotoxicidade e cistite com uso prolongado.",
+     "D": "É contraindicada em qualquer dose."
+    },
+    "resposta": "C",
+    "justificativa": "Infusões de cetamina têm benefício moderado, em geral por semanas, na dor neuropática e SDRC; os efeitos adversos incluem alucinações, hipertensão, taquicardia, e, com uso prolongado, hepatotoxicidade e cistite ulcerativa."
+   },
+   {
+    "id": "dorcronica_42",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Avaliação",
+    "enunciado": "Em paciente com lombalgia crônica, qual dos achados constitui sinal de alerta (\"red flag\") que exige investigação imediata?",
+    "alternativas": {
+     "A": "Piora com o esforço",
+     "B": "Síndrome da cauda equina (retenção urinária, anestesia em sela) ou déficit neurológico progressivo",
+     "C": "Dor há 6 meses sem irradiação",
+     "D": "Dor que melhora com repouso"
+    },
+    "resposta": "B",
+    "justificativa": "Os sinais de alerta incluem: cauda equina, déficit neurológico progressivo, febre, perda de peso, história de câncer, trauma importante e uso de corticoide ou imunossupressão. A maioria das lombalgias é inespecífica."
+   },
+   {
+    "id": "dorcronica_43",
+    "tema": "Dor Crônica e Intervencionista",
+    "subtopico": "Avaliação",
+    "enunciado": "Qual instrumento é utilizado para rastrear dor neuropática?",
+    "alternativas": {
+     "A": "DN4",
+     "B": "Escala de Aldrete",
+     "C": "Escala de Ramsay",
+     "D": "Escore de Apfel"
+    },
+    "resposta": "A",
+    "justificativa": "O DN4 (Douleur Neuropathique 4) combina quatro perguntas e exame clínico; ≥ 4/10 sugere dor neuropática. LANSS e painDETECT são alternativas. Aldrete avalia recuperação, Ramsay sedação e Apfel risco de náusea e vômito."
+   }
+  ]
+ },
+ {
+  "id": "nora",
+  "titulo": "Fora do CC e Ambulatorial",
+  "cor": "#3B82F6",
+  "icone": "🚑",
+  "questoes": [
+   {
+    "id": "nora_01",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Sedação",
+    "enunciado": "Segundo a ASA, na sedação moderada o paciente:",
+    "alternativas": {
+     "A": "Responde de forma proposital a comandos verbais ou toque leve, mantém a via aérea pérvia e a ventilação espontânea adequada.",
+     "B": "Só responde a estímulo doloroso e precisa de suporte de via aérea.",
+     "C": "Responde normalmente a comandos e não tem alteração cognitiva.",
+     "D": "Não responde mesmo a estímulos dolorosos."
+    },
+    "resposta": "A",
+    "justificativa": "Na sedação moderada (consciente) a resposta é proposital a comandos verbais, isolados ou acompanhados de estímulo tátil leve, sem necessidade de intervenção na via aérea. Na sedação profunda, só há resposta após estímulo repetido ou doloroso e a ventilação pode ser inadequada; na minimal (ansiólise), a cognição está preservada."
+   },
+   {
+    "id": "nora_02",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Sedação",
+    "enunciado": "Qual é a monitorização de ventilação considerada padrão em sedação moderada e profunda?",
+    "alternativas": {
+     "A": "Apenas inspeção visual do tórax.",
+     "B": "Apenas oximetria, pois detecta hipoventilação precocemente.",
+     "C": "Gasometria arterial contínua.",
+     "D": "Capnografia, além da oximetria de pulso e da observação clínica."
+    },
+    "resposta": "D",
+    "justificativa": "A capnografia detecta apneia e hipoventilação antes da queda da SpO₂, sobretudo com O₂ suplementar, que atrasa a dessaturação. Por isso as diretrizes da ASA recomendam o uso de CO₂ expirado em sedação moderada e profunda."
+   },
+   {
+    "id": "nora_03",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Sedação",
+    "enunciado": "Qual das opções caracteriza a dexmedetomidina na sedação procedural?",
+    "alternativas": {
+     "A": "Causa apneia dose-dependente de forma semelhante ao propofol.",
+     "B": "Tem efeito analgésico nulo e causa taquicardia.",
+     "C": "Preserva a ventilação, mas pode causar bradicardia e hipotensão; início de ação mais lento.",
+     "D": "É antagonizada pelo flumazenil."
+    },
+    "resposta": "C",
+    "justificativa": "A dexmedetomidina, agonista α2, produz sedação com despertar fácil e preserva a respiração. Seus efeitos hemodinâmicos incluem bradicardia, hipotensão e, em doses altas, hipertensão transitória. O flumazenil reverte apenas benzodiazepínicos."
+   },
+   {
+    "id": "nora_04",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Sedação",
+    "enunciado": "Qual dos sedativos preserva melhor os reflexos de via aérea e a ventilação espontânea?",
+    "alternativas": {
+     "A": "Propofol em bolus",
+     "B": "Cetamina em dose sedativa-analgésica",
+     "C": "Midazolam em dose alta",
+     "D": "Tiopental"
+    },
+    "resposta": "B",
+    "justificativa": "A cetamina mantém o tônus da via aérea e o estímulo ventilatório, mas pode causar sialorreia e laringoespasmo raro, além de emergência psicomimética (mitigada por benzodiazepínico). Propofol, midazolam e barbitúricos causam depressão respiratória dose-dependente."
+   },
+   {
+    "id": "nora_05",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Sedação",
+    "enunciado": "Qual é a dose do antagonista de benzodiazepínico (flumazenil) para reversão em adultos?",
+    "alternativas": {
+     "A": "2 mg IV em bolus único",
+     "B": "0,2 mg IV, repetida a cada minuto até a dose total de 1 mg",
+     "C": "0,04 mg IV, dose única",
+     "D": "10 mg IV lentamente"
+    },
+    "resposta": "B",
+    "justificativa": "O flumazenil é dado em doses de 0,2 mg, com repetições, até 1 mg (a meia-vida é curta, 40–80 min, menor que a do benzodiazepínico; pode ocorrer re-sedação). Evitar em dependentes de benzodiazepínicos e epilépticos pelo risco de convulsão."
+   },
+   {
+    "id": "nora_06",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Sedação",
+    "enunciado": "A avaliação para risco de apneia obstrutiva do sono antes de uma sedação pode ser feita com o questionário:",
+    "alternativas": {
+     "A": "STOP-BANG",
+     "B": "Apfel",
+     "C": "Aldrete",
+     "D": "Caprini"
+    },
+    "resposta": "A",
+    "justificativa": "O STOP-BANG (ronco, cansaço, apneia observada, pressão alta, IMC > 35, idade > 50, pescoço > 40 cm, sexo masculino) tem boa sensibilidade para SAOS. Apfel avalia risco de náusea e vômito, Aldrete avalia recuperação e Caprini, tromboembolismo."
+   },
+   {
+    "id": "nora_07",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Locais remotos",
+    "enunciado": "Segundo as normas da ASA para anestesia fora do centro cirúrgico (NORA), qual das opções NÃO é um requisito?",
+    "alternativas": {
+     "A": "Fonte confiável de O₂ com reserva.",
+     "B": "Aspiração adequada e remoção de gases.",
+     "C": "Monitorização padrão, carrinho de emergência e meios de pedir ajuda.",
+     "D": "Dispensar a fonte de O₂ de reserva se a sala for de uso breve."
+    },
+    "resposta": "D",
+    "justificativa": "Os locais remotos devem ter os mesmos padrões de segurança do centro cirúrgico: O₂ com fonte reserva, aspiração, remoção de gases, aparelho de anestesia e monitores adequados, energia de emergência, iluminação e acesso à ajuda. Não existe exceção para procedimentos curtos."
+   },
+   {
+    "id": "nora_08",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Endoscopia",
+    "enunciado": "Em uma endoscopia digestiva alta com sedação, quais pacientes devem preferir anestesia geral com via aérea protegida?",
+    "alternativas": {
+     "A": "Pacientes ASA I sem comorbidades.",
+     "B": "Pacientes em jejum adequado e sem refluxo.",
+     "C": "Estômago cheio por obstrução ou sangramento, via aérea difícil ou ASA IV.",
+     "D": "Exames de rastreamento de rotina."
+    },
+    "resposta": "C",
+    "justificativa": "A proteção da via aérea é indicada quando há risco elevado de aspiração (obstrução gástrica, hemorragia digestiva, gastroparesia) ou de via aérea comprometida. Em pacientes de baixo risco, a sedação com propofol e capnografia é segura."
+   },
+   {
+    "id": "nora_09",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Endoscopia",
+    "enunciado": "Qual é a dose máxima de lidocaína tópica recomendada em broncoscopia, segundo diretrizes britânicas (BTS)?",
+    "alternativas": {
+     "A": "1 mg/kg",
+     "B": "2 mg/kg",
+     "C": "8,2 mg/kg",
+     "D": "20 mg/kg"
+    },
+    "resposta": "C",
+    "justificativa": "A BTS indica dose máxima de 8,2 mg/kg de lidocaína topicamente em broncoscopia (cerca de 9 mg/kg em DAS para intubação acordada), por causa da absorção variável pela mucosa. Os sinais de toxicidade são zumbido, parestesias e convulsão."
+   },
+   {
+    "id": "nora_10",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Radiologia",
+    "enunciado": "Qual é a conduta para anafilaxia grave por contraste iodado?",
+    "alternativas": {
+     "A": "Apenas difenidramina IV.",
+     "B": "Adrenalina IM 0,3–0,5 mg (adulto), O₂, reposição de volume, e suporte avançado.",
+     "C": "Corticoide oral e observação.",
+     "D": "Atropina e esperar 30 minutos."
+    },
+    "resposta": "B",
+    "justificativa": "A adrenalina é o tratamento de primeira linha, administrada IM no adulto (0,3–0,5 mg da solução 1 mg/mL na face lateral da coxa); anti-histamínicos e corticoides são adjuvantes. Em hipotensão grave, repetir doses, iniciar infusão e expandir volume."
+   },
+   {
+    "id": "nora_11",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Radiologia",
+    "enunciado": "Qual das opções descreve a pré-medicação para paciente com reação moderada prévia a contraste iodado (protocolo ACR)?",
+    "alternativas": {
+     "A": "Prednisona 50 mg VO 13, 7 e 1 hora antes, associada a difenidramina 50 mg 1 hora antes.",
+     "B": "Hidrocortisona 100 mg IV 30 minutos antes isolada.",
+     "C": "Apenas observação sem medicação.",
+     "D": "Atropina 0,5 mg 1 hora antes."
+    },
+    "resposta": "A",
+    "justificativa": "O esquema oral do ACR usa prednisona 50 mg 13, 7 e 1 h antes mais difenidramina 50 mg 1 h antes. Em urgência, usa-se esquema IV (hidrocortisona ou metilprednisolona 40 mg e difenidramina). A pré-medicação reduz, mas não elimina, o risco."
+   },
+   {
+    "id": "nora_12",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Radiologia",
+    "enunciado": "Em relação à metformina e ao contraste iodado, segundo o ACR:",
+    "alternativas": {
+     "A": "Deve ser suspensa em todos os pacientes diabéticos.",
+     "B": "Deve ser mantida mesmo em lesão renal aguda grave.",
+     "C": "O contraste iodado é contraindicado em usuários de metformina.",
+     "D": "Só é necessário suspender a metformina se a TFG for < 30 mL/min/1,73 m² ou houver lesão renal aguda."
+    },
+    "resposta": "D",
+    "justificativa": "O risco de acidose láctica ocorre com insuficiência renal. O ACR recomenda não suspender a metformina em TFG ≥ 30, e suspendê-la por 48 h se TFG < 30 ou LRA. A avaliação da função renal antes do contraste é recomendada em pacientes de risco."
+   },
+   {
+    "id": "nora_13",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "RM",
+    "enunciado": "Qual das opções é uma precaução essencial na sala de ressonância magnética?",
+    "alternativas": {
+     "A": "Usar cilindro de aço comum ao lado do magneto.",
+     "B": "Desligar o magneto antes de entrar com o aparelho.",
+     "C": "Manter marca-passo convencional se o paciente estiver sedado.",
+     "D": "Usar apenas equipamentos MR Conditional/Safe e evitar alças de cabos para prevenir queimaduras por radiofrequência."
+    },
+    "resposta": "D",
+    "justificativa": "O campo estático é permanente: objetos ferromagnéticos são atraídos e se tornam projéteis. Cabos em alça e contato com a pele podem causar queimaduras por radiofrequência. O desligamento do magneto (quench) é uma emergência rara, reservada a risco de vida na sala."
+   },
+   {
+    "id": "nora_14",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "RM",
+    "enunciado": "O que significa \"quench\" em ressonância magnética?",
+    "alternativas": {
+     "A": "Falha do sistema de ar-condicionado.",
+     "B": "Aquecimento do paciente durante o exame.",
+     "C": "Perda súbita da supercondutividade com liberação de hélio, exigindo evacuação da sala.",
+     "D": "Interferência no ECG por gradiente."
+    },
+    "resposta": "C",
+    "justificativa": "No quench, o hélio líquido que resfria o magneto evapora rapidamente e pode deslocar o oxigênio da sala, com risco de asfixia; pode ser acionado manualmente em emergência. Todos devem sair e a sala deve ser ventilada."
+   },
+   {
+    "id": "nora_15",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "RM",
+    "enunciado": "Para sedação em RM em criança de 4 anos, uma opção considerada segura e usual é:",
+    "alternativas": {
+     "A": "Hidrato de cloral em dose alta sem monitorização.",
+     "B": "Dexmedetomidina ou propofol com monitorização de CO₂ e via aérea disponível.",
+     "C": "Opioide em bolus sem vigilância.",
+     "D": "Nenhuma sedação, apenas contenção física."
+    },
+    "resposta": "B",
+    "justificativa": "Dexmedetomidina (intranasal 2–3 mcg/kg ou IV) e propofol são usados com monitorização completa e acesso rápido à via aérea. Em casos de risco ou lesões de via aérea, usar anestesia geral com máscara laríngea ou tubo. A contenção física isolada é inadequada."
+   },
+   {
+    "id": "nora_16",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Proteção radiológica",
+    "enunciado": "O que diz a lei do inverso do quadrado da distância na proteção radiológica?",
+    "alternativas": {
+     "A": "Dobrar a distância da fonte reduz a dose para um quarto.",
+     "B": "Dobrar a distância reduz a dose pela metade.",
+     "C": "A dose não depende da distância.",
+     "D": "Dobrar a distância aumenta a dose quatro vezes."
+    },
+    "resposta": "A",
+    "justificativa": "A intensidade da radiação diminui com o quadrado da distância: se a distância dobra, a dose cai para 1/4. Os três pilares da proteção são tempo (menos exposição), distância e blindagem (avental de chumbo, óculos, protetor de tireoide)."
+   },
+   {
+    "id": "nora_17",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Proteção radiológica",
+    "enunciado": "A espessura mínima habitual do equivalente de chumbo nos aventais de proteção para fluoroscopia é de:",
+    "alternativas": {
+     "A": "0,5 mm",
+     "B": "0,05 mm",
+     "C": "5 mm",
+     "D": "10 mm"
+    },
+    "resposta": "A",
+    "justificativa": "Aventais de 0,5 mm de chumbo atenuam a maior parte da radiação espalhada em diagnóstico por imagem. Complementar com protetor de tireoide, óculos e dosímetro, mantendo distância e minimizando o tempo."
+   },
+   {
+    "id": "nora_18",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Cardiologia",
+    "enunciado": "Em um paciente submetido a ablação de fibrilação atrial, qual cuidado é importante?",
+    "alternativas": {
+     "A": "Dispensar a monitorização invasiva.",
+     "B": "Evitar totalmente a heparina durante o procedimento.",
+     "C": "Usar anestesia regional neuroaxial, sem controle de via aérea.",
+     "D": "Monitorizar ACT e pressão arterial invasiva, com atenção à heparinização e ao risco de tamponamento."
+    },
+    "resposta": "D",
+    "justificativa": "A ablação exige heparina em dose plena (ACT 300–400 s), vigilância hemodinâmica para tamponamento, controle da movimentação do paciente e, muitas vezes, anestesia geral. Raquianestesia é inadequada pela anticoagulação."
+   },
+   {
+    "id": "nora_19",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "ECT",
+    "enunciado": "Qual é o hipnótico tradicional de escolha na eletroconvulsoterapia, quando disponível?",
+    "alternativas": {
+     "A": "Propofol em doses altas",
+     "B": "Midazolam",
+     "C": "Metoexital",
+     "D": "Tiopental em infusão contínua"
+    },
+    "resposta": "C",
+    "justificativa": "O metoexital tem efeito pró-convulsivante mínimo e recuperação rápida. Propofol reduz a duração da convulsão; midazolam é anticonvulsivante; etomidato e cetamina são alternativas que mantêm ou aumentam a convulsão. A disponibilidade no Brasil é limitada."
+   },
+   {
+    "id": "nora_20",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "ECT",
+    "enunciado": "Qual é o objetivo do uso de succinilcolina na ECT?",
+    "alternativas": {
+     "A": "Aumentar a duração da convulsão.",
+     "B": "Atenuar a convulsão motora e evitar lesões, sem abolir a convulsão cerebral (isolando o membro, monitora-se a atividade).",
+     "C": "Evitar a descarga simpática.",
+     "D": "Substituir a anestesia."
+    },
+    "resposta": "B",
+    "justificativa": "A dose de 0,5–1 mg/kg de succinilcolina evita fraturas e luxações, mas não deve eliminar a convulsão no EEG. Para monitorar, uma \"torniquete\" isola um membro. Não substitui o hipnótico e não impede a descarga simpática."
+   },
+   {
+    "id": "nora_21",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "ECT",
+    "enunciado": "Qual é a resposta hemodinâmica típica à eletroconvulsoterapia?",
+    "alternativas": {
+     "A": "Hipotensão e bradicardia durante todo o período.",
+     "B": "Breve bradicardia parassimpática inicial, seguida de taquicardia e hipertensão pela descarga simpática.",
+     "C": "Ausência de alterações hemodinâmicas.",
+     "D": "Hipotensão grave seguida de assistolia obrigatória."
+    },
+    "resposta": "B",
+    "justificativa": "A ECT provoca resposta parassimpática breve (bradicardia, até assistolia curta) seguida de ativação simpática intensa (taquicardia, hipertensão). Betabloqueadores e labetalol são usados em pacientes de risco; cuidado em feocromocitoma, HIC e infarto recente."
+   },
+   {
+    "id": "nora_22",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "ECT",
+    "enunciado": "Qual das condições representa maior risco relativo para eletroconvulsoterapia?",
+    "alternativas": {
+     "A": "Infarto do miocárdio recente, aneurisma cerebral e hipertensão intracraniana",
+     "B": "Depressão grave",
+     "C": "Idade acima de 60 anos",
+     "D": "Uso de lítio em dose terapêutica estável"
+    },
+    "resposta": "A",
+    "justificativa": "A ECT aumenta pressão arterial, frequência cardíaca, fluxo cerebral e pressão intracraniana. Cardiopatia instável, aneurisma, tumor cerebral com HIC e feocromocitoma exigem avaliação especializada. A idade avançada não é contraindicação."
+   },
+   {
+    "id": "nora_23",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "Qual paciente é candidato inadequado à cirurgia ambulatorial?",
+    "alternativas": {
+     "A": "Adulto ASA II com hipertensão controlada",
+     "B": "Paciente ASA III estável com diabetes controlado",
+     "C": "Criança de 3 anos saudável para hérnia inguinal",
+     "D": "Ex-prematuro de 45 semanas de idade pós-concepcional"
+    },
+    "resposta": "D",
+    "justificativa": "Prematuros com idade pós-concepcional < 60 semanas (alguns serviços usam 55) têm risco de apneia pós-anestésica e exigem observação por 12–24 h. Pacientes ASA III bem controlados podem ser operados no ambulatório, assim como adultos com comorbidades estáveis."
+   },
+   {
+    "id": "nora_24",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "Quais critérios sociais são exigidos para alta no mesmo dia?",
+    "alternativas": {
+     "A": "Não há critérios sociais.",
+     "B": "Residir a mais de 100 km do hospital.",
+     "C": "Acompanhante adulto responsável nas primeiras 24 horas, compreensão das instruções e acesso a contato telefônico.",
+     "D": "Dirigir o próprio carro no retorno."
+    },
+    "resposta": "C",
+    "justificativa": "O paciente deve ter um adulto responsável que o leve para casa e fique com ele por 24 h, entender as instruções e poder retornar se houver complicações. Dirigir é proibido nas primeiras 24 h."
+   },
+   {
+    "id": "nora_25",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "Qual das seguintes estratégias reduz a dor e o uso de opioides em cirurgia ambulatorial?",
+    "alternativas": {
+     "A": "Opioide intravenoso em altas doses no intraoperatório.",
+     "B": "Gabapentinoides rotineiros em doses altas.",
+     "C": "Analgesia multimodal com bloqueios regionais, paracetamol, AINE, dexametasona e infiltração local.",
+     "D": "Evitar qualquer analgésico não opioide."
+    },
+    "resposta": "C",
+    "justificativa": "A estratégia multimodal reduz dor, náusea e sedação. Gabapentinoides em dose alta aumentam sedação, tontura e riscos respiratórios e não são recomendados de rotina. Opioides em altas doses prolongam a recuperação."
+   },
+   {
+    "id": "nora_26",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "O PADSS (Post-Anesthetic Discharge Scoring System) considera o paciente apto a ir para casa quando:",
+    "alternativas": {
+     "A": "A pontuação é ≥ 3 de 10.",
+     "B": "A pontuação é ≥ 9 de 10, com acompanhante presente.",
+     "C": "O paciente urinou e ingeriu líquidos, independentemente da pontuação.",
+     "D": "A pontuação é 5 e o paciente deseja ir embora."
+    },
+    "resposta": "B",
+    "justificativa": "O PADSS avalia sinais vitais, atividade, náusea/vômito, dor e sangramento cirúrgico (0 a 2 pontos cada). A alta ocorre com ≥ 9 pontos. Urinar e ingerir líquidos não são exigidos de rotina."
+   },
+   {
+    "id": "nora_27",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "A necessidade obrigatória de micção antes da alta ambulatorial:",
+    "alternativas": {
+     "A": "Não é rotina, mas deve ser verificada em pacientes de risco de retenção urinária (cirurgia urológica, raquianestesia, história prévia).",
+     "B": "É sempre obrigatória, sem exceção.",
+     "C": "Nunca deve ser avaliada.",
+     "D": "É exigida apenas em crianças."
+    },
+    "resposta": "A",
+    "justificativa": "Estudos mostram que exigir micção rotineira não reduz complicações e atrasa a alta. Em grupos com risco de retenção (cirurgia urológica ou pélvica, raquianestesia, retenção prévia), deve ser verificada ou orientada."
+   },
+   {
+    "id": "nora_28",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "Qual estratégia é mais indicada para prevenir náusea e vômito em paciente ambulatorial com Apfel 3?",
+    "alternativas": {
+     "A": "Nenhuma profilaxia.",
+     "B": "Somente metoclopramida 10 mg.",
+     "C": "Apenas observar e tratar os sintomas.",
+     "D": "Dexametasona 4–8 mg e ondansetrona 4 mg, considerando TIVA com propofol."
+    },
+    "resposta": "D",
+    "justificativa": "Com 3 ou 4 fatores de risco, recomenda-se profilaxia combinada com 2 a 3 agentes e redução de fatores basais (TIVA, regional, minimizar opioides). A metoclopramida 10 mg isolada tem eficácia limitada."
+   },
+   {
+    "id": "nora_29",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "Qual das orientações de alta é correta?",
+    "alternativas": {
+     "A": "Dirigir normalmente se houver bem-estar.",
+     "B": "Consumir álcool para dormir melhor.",
+     "C": "Dispensar instruções por escrito.",
+     "D": "Não dirigir, não operar máquinas e não tomar decisões legais por 24 horas, e evitar álcool."
+    },
+    "resposta": "D",
+    "justificativa": "Os efeitos residuais dos anestésicos e sedativos podem comprometer o julgamento e a coordenação por 24 h. As instruções devem ser dadas por escrito, incluindo o plano de analgesia, os sinais de alerta e o telefone de contato."
+   },
+   {
+    "id": "nora_30",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "A raquianestesia de curta duração com cloroprocaína em dose baixa tem como vantagem:",
+    "alternativas": {
+     "A": "Duração de bloqueio superior a 6 h.",
+     "B": "Maior risco de sintomas neurológicos transitórios que a lidocaína.",
+     "C": "Recuperação mais rápida do bloqueio com menor risco de retenção e sem neurotoxicidade clínica relevante em dose baixa.",
+     "D": "Contraindicada em adultos."
+    },
+    "resposta": "C",
+    "justificativa": "A cloroprocaína 1% (40–50 mg) fornece bloqueio de 60–90 min sem sintomas neurológicos transitórios comparáveis à lidocaína. Bupivacaína em dose baixa com fentanil é alternativa. A disponibilidade depende do país."
+   },
+   {
+    "id": "nora_31",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Locais remotos",
+    "enunciado": "A principal razão para a maior morbidade de anestesia fora do centro cirúrgico, segundo análises de sinistros, é:",
+    "alternativas": {
+     "A": "Uso excessivo de monitorização.",
+     "B": "Monitorização inadequada, em locais com pouca estrutura e equipe pouco familiarizada.",
+     "C": "Presença de equipe de enfermagem treinada em todos os casos.",
+     "D": "Disponibilidade imediata de ajuda."
+    },
+    "resposta": "B",
+    "justificativa": "Os dados do ASA Closed Claims mostram que eventos em NORA ocorrem mais por depressão respiratória e monitorização inadequada, com maior mortalidade. Manter padrões iguais ao centro cirúrgico é a principal medida."
+   },
+   {
+    "id": "nora_32",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Locais remotos",
+    "enunciado": "Em um paciente com marca-passo submetido a ressonância magnética, a conduta correta é:",
+    "alternativas": {
+     "A": "Confirmar se o sistema é MR Conditional e programá-lo conforme protocolo, com monitorização e equipe de cardiologia disponível.",
+     "B": "Realizar o exame sem checagem, pois todo marca-passo é compatível.",
+     "C": "Desligar a bateria sem programar.",
+     "D": "Substituir o marca-passo antes de qualquer RM."
+    },
+    "resposta": "A",
+    "justificativa": "Somente sistemas MR Conditional (gerador e eletrodos) podem ser expostos sob condições definidas pelo fabricante. A programação do modo (assíncrono ou desligado), monitorização contínua e equipamentos de ressuscitação devem estar disponíveis."
+   },
+   {
+    "id": "nora_33",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Sedação",
+    "enunciado": "Uma sedação com propofol para colonoscopia evolui com apneia, SpO₂ 88% e ronco. A primeira conduta é:",
+    "alternativas": {
+     "A": "Manobras de via aérea (extensão da cabeça, elevação da mandíbula), O₂ e ventilação com máscara, interrompendo o propofol.",
+     "B": "Aumentar a dose de propofol.",
+     "C": "Aplicar flumazenil.",
+     "D": "Aguardar 1 minuto observando."
+    },
+    "resposta": "A",
+    "justificativa": "O propofol não tem antagonista; o tratamento da apneia é o suporte de via aérea e ventilação. Flumazenil reverte só benzodiazepínicos. A obstrução resolve com manobras e, se persistir, dispositivos de via aérea ou intubação."
+   },
+   {
+    "id": "nora_34",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Sedação",
+    "enunciado": "Qual o jejum recomendado para sedação eletiva segundo a ASA (adultos)?",
+    "alternativas": {
+     "A": "12 horas para líquidos e sólidos.",
+     "B": "Nenhum jejum em qualquer situação.",
+     "C": "4 horas para qualquer alimento.",
+     "D": "2 horas para líquidos claros e 6 horas para refeição leve (8 h para refeição gordurosa)."
+    },
+    "resposta": "D",
+    "justificativa": "A ASA recomenda líquidos claros até 2 h antes, refeição leve até 6 h e refeição gordurosa ou carne até 8 h. O jejum deve ser individualizado em pacientes com risco de esvaziamento gástrico lento (diabetes, gastroparesia, GLP-1)."
+   },
+   {
+    "id": "nora_35",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Sedação",
+    "enunciado": "Qual das opções corresponde à sedação profunda segundo a ASA?",
+    "alternativas": {
+     "A": "Resposta normal a comandos verbais.",
+     "B": "Resposta proposital a comando verbal, com ventilação sempre adequada.",
+     "C": "O paciente responde de forma proposital apenas após estímulo repetido ou doloroso, e a ventilação pode ser inadequada.",
+     "D": "Ausência de resposta a qualquer estímulo, com ventilação sempre preservada."
+    },
+    "resposta": "C",
+    "justificativa": "A sedação profunda situa-se entre a moderada e a anestesia geral: o paciente não é facilmente despertável, a ventilação pode exigir assistência e a via aérea pode necessitar intervenção. O sedativista deve ser apto a resgatar."
+   },
+   {
+    "id": "nora_36",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "Uma criança saudável de 3 anos recebeu anestesia geral para hérnia inguinal e está bem recuperada. O que é essencial na alta?",
+    "alternativas": {
+     "A": "Alta sem orientação, pois a criança está bem.",
+     "B": "Orientações por escrito aos pais, analgesia oral prescrita e retorno se houver sinais de alerta.",
+     "C": "Prescrever opioide forte em todos os casos.",
+     "D": "Manter jejum por 12 h após a cirurgia."
+    },
+    "resposta": "B",
+    "justificativa": "A alta pediátrica exige acompanhante, instruções claras, analgesia adequada (paracetamol e anti-inflamatório quando possível), alimentação gradual, sinais de alerta (febre, sangramento, vômitos, dispneia) e contato com o serviço."
+   },
+   {
+    "id": "nora_37",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Locais remotos",
+    "enunciado": "Qual é a principal vantagem do uso de capnografia em locais remotos?",
+    "alternativas": {
+     "A": "Substituir a oximetria de pulso.",
+     "B": "Detectar apneia, obstrução e hipoventilação antes da queda da saturação, principalmente em pacientes com O₂ suplementar.",
+     "C": "Medir diretamente a PaO₂.",
+     "D": "Medir o débito cardíaco."
+    },
+    "resposta": "B",
+    "justificativa": "O O₂ suplementar retarda a dessaturação, mascarando apneia na oximetria. A capnografia reconhece a ausência de CO₂ expirado de forma imediata. Ela complementa, não substitui, a oximetria."
+   },
+   {
+    "id": "nora_38",
+    "tema": "Fora do CC e Ambulatorial",
+    "subtopico": "Ambulatorial",
+    "enunciado": "Em adulto ASA III com DPOC grave descompensado e SpO₂ de 88% em ar ambiente, a cirurgia ambulatorial eletiva:",
+    "alternativas": {
+     "A": "Deve ser adiada para otimização, pois a condição não é estável.",
+     "B": "Pode prosseguir sem alterações.",
+     "C": "É indicada, pois ambulatório é sempre mais seguro.",
+     "D": "Só é contraindicada em crianças."
+    },
+    "resposta": "A",
+    "justificativa": "Pacientes ASA III podem ser operados no ambulatório quando as doenças estão estáveis e otimizadas. A DPOC descompensada com hipoxemia aumenta o risco de complicações respiratórias e exige otimização ou internação."
+   }
+  ]
+ },
+ {
+  "id": "transplantes",
+  "titulo": "Transplantes e Doador",
+  "cor": "#EC4899",
+  "icone": "🫀",
+  "questoes": [
+   {
+    "id": "transplantes_01",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Morte encefálica",
+    "enunciado": "Qual é o conjunto de achados que caracteriza o exame clínico de morte encefálica segundo a Resolução CFM 2.173/2017?",
+    "alternativas": {
+     "A": "Coma aperceptivo, ausência de reflexos de tronco encefálico e apneia.",
+     "B": "Coma aperceptivo e ausência de reflexos espinhais.",
+     "C": "Ausência de pupilas reativas isoladamente.",
+     "D": "EEG isoelétrico e persistência da respiração espontânea."
+    },
+    "resposta": "A",
+    "justificativa": "A ME requer coma aperceptivo, ausência dos reflexos de tronco (fotomotor, corneopalpebral, oculocefálico, vestibulocalórico e de tosse) e apneia no teste. Os reflexos espinhais podem persistir e não afastam o diagnóstico."
+   },
+   {
+    "id": "transplantes_02",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Morte encefálica",
+    "enunciado": "Segundo a mesma resolução, qual é o intervalo mínimo entre os dois exames clínicos em um adulto?",
+    "alternativas": {
+     "A": "6 horas",
+     "B": "12 horas",
+     "C": "24 horas",
+     "D": "1 hora"
+    },
+    "resposta": "D",
+    "justificativa": "Para pacientes com mais de 2 anos, o intervalo mínimo é de 1 h; entre 2 meses e 2 anos incompletos é de 12 h; entre 7 dias e 2 meses incompletos, 24 h. Recém-nascidos com menos de 7 dias de vida estão fora dos critérios."
+   },
+   {
+    "id": "transplantes_03",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Morte encefálica",
+    "enunciado": "No teste de apneia para diagnóstico de morte encefálica, considera-se positivo quando:",
+    "alternativas": {
+     "A": "A PaCO₂ final é menor que 40 mmHg.",
+     "B": "Há movimentos respiratórios a partir de 45 mmHg.",
+     "C": "Não há movimento respiratório com PaCO₂ final acima de 55 mmHg.",
+     "D": "A saturação cai abaixo de 90% em 1 minuto."
+    },
+    "resposta": "C",
+    "justificativa": "O teste é feito com pré-oxigenação e fornecimento de O₂ por cateter traqueal; o resultado é positivo (compatível com ME) se PaCO₂ > 55 mmHg sem movimento respiratório. Se houver instabilidade (hipotensão grave, hipoxemia), interrompe-se e se faz exame complementar."
+   },
+   {
+    "id": "transplantes_04",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Morte encefálica",
+    "enunciado": "Qual das condições abaixo impede o início do protocolo de diagnóstico de morte encefálica?",
+    "alternativas": {
+     "A": "PAM de 70 mmHg com vasopressor.",
+     "B": "Temperatura corporal de 33 °C e uso recente de sedativos em doses que podem confundir o exame.",
+     "C": "SpO₂ de 96% com ventilação mecânica.",
+     "D": "Temperatura de 36 °C."
+    },
+    "resposta": "B",
+    "justificativa": "São pré-requisitos: temperatura > 35 °C, SpO₂ > 94%, PAS ≥ 100 ou PAM ≥ 65 mmHg, ausência de distúrbios metabólicos graves e de efeito de drogas depressoras ou bloqueadores neuromusculares. Vasopressor para manter PAM é aceitável."
+   },
+   {
+    "id": "transplantes_05",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Morte encefálica",
+    "enunciado": "Quem pode realizar o exame clínico de morte encefálica no Brasil?",
+    "alternativas": {
+     "A": "Um único médico, desde que intensivista.",
+     "B": "Dois médicos diferentes, capacitados e que não participem da equipe de transplante.",
+     "C": "Um médico da equipe de transplante e outro da UTI.",
+     "D": "O médico da família, com autorização do hospital."
+    },
+    "resposta": "B",
+    "justificativa": "A resolução exige médicos capacitados em curso reconhecido; pelo menos um deve ser especialista (por exemplo, neurologia, neurocirurgia, medicina intensiva, emergência ou pediatria), e nenhum integra a equipe de transplante, para evitar conflito de interesses."
+   },
+   {
+    "id": "transplantes_06",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Morte encefálica",
+    "enunciado": "Qual das opções constitui exame complementar aceito para confirmar morte encefálica?",
+    "alternativas": {
+     "A": "Angiografia cerebral, Doppler transcraniano, EEG ou cintilografia cerebral",
+     "B": "Tomografia de crânio sem contraste, isoladamente",
+     "C": "Dosagem de lactato",
+     "D": "Ecocardiograma transtorácico"
+    },
+    "resposta": "A",
+    "justificativa": "Os exames complementares comprovam ausência de perfusão, atividade elétrica ou metabolismo cerebral. A tomografia sem contraste não prova ausência de fluxo; lactato e ecocardiograma não se prestam ao diagnóstico."
+   },
+   {
+    "id": "transplantes_07",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Morte encefálica",
+    "enunciado": "No Brasil, a doação de órgãos de falecido depende de:",
+    "alternativas": {
+     "A": "Registro prévio na carteira de motorista, que dispensa a família.",
+     "B": "Decisão do médico assistente.",
+     "C": "Autorização judicial obrigatória em todos os casos.",
+     "D": "Autorização da família, após o diagnóstico de ME e notificação à CNCDO."
+    },
+    "resposta": "D",
+    "justificativa": "A Lei 10.211/2001 eliminou a doação presumida; a família é consultada por equipe treinada. A notificação de ME à CNCDO é compulsória, independentemente da doação."
+   },
+   {
+    "id": "transplantes_08",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Fisiologia da ME",
+    "enunciado": "Qual alteração é típica da fase inicial da morte encefálica (tempestade simpática)?",
+    "alternativas": {
+     "A": "Hipotensão e bradicardia isoladas.",
+     "B": "Hipertermia e poliúria.",
+     "C": "Hipertensão, taquicardia, arritmias e lesão miocárdica.",
+     "D": "Apenas hipercalemia."
+    },
+    "resposta": "C",
+    "justificativa": "A herniação do tronco libera catecolaminas em excesso: hipertensão, taquicardia, arritmias e disfunção miocárdica (cardiomiopatia neurogênica), além de edema pulmonar neurogênico. Em seguida, a perda do tônus simpático causa vasoplegia e hipotensão."
+   },
+   {
+    "id": "transplantes_09",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Fisiologia da ME",
+    "enunciado": "Um doador em ME apresenta diurese de 800 mL/h e sódio de 160 mEq/L. O diagnóstico mais provável e a melhor conduta são:",
+    "alternativas": {
+     "A": "Hiperglicemia; infundir mais soro fisiológico.",
+     "B": "Insuficiência renal aguda; furosemida em doses altas.",
+     "C": "Diabetes insípido; vasopressina ou desmopressina e reposição de água livre.",
+     "D": "Síndrome de secreção inapropriada de ADH; restrição hídrica."
+    },
+    "resposta": "C",
+    "justificativa": "A perda da função hipotalâmica-hipofisária causa deficiência de ADH: poliúria diluída e hipernatremia. Tratamento: vasopressina (0,01–0,04 U/min) ou DDAVP 1–2 mcg IV e correção da hipernatremia com água livre. Hipernatremia no doador prejudica o enxerto hepático."
+   },
+   {
+    "id": "transplantes_10",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Fisiologia da ME",
+    "enunciado": "Qual é o mecanismo da coagulopatia que pode ocorrer em doadores de morte encefálica?",
+    "alternativas": {
+     "A": "Deficiência isolada de vitamina K.",
+     "B": "Liberação de tromboplastina tecidual do cérebro lesado, levando a coagulação intravascular disseminada.",
+     "C": "Excesso de plaquetas.",
+     "D": "Efeito do bloqueador neuromuscular."
+    },
+    "resposta": "B",
+    "justificativa": "O tecido cerebral necrótico é rico em fator tecidual; sua liberação ativa a coagulação e consome fatores e plaquetas. Corrigir conforme sangramento e testes de coagulação."
+   },
+   {
+    "id": "transplantes_11",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Manutenção",
+    "enunciado": "Qual é a estratégia ventilatória recomendada para manutenção do doador de pulmão?",
+    "alternativas": {
+     "A": "Ventilação protetora com VC 6–8 mL/kg de peso predito, PEEP 8–10 cmH₂O e menor FiO₂ possível.",
+     "B": "VC de 12–15 mL/kg para evitar atelectasia.",
+     "C": "PEEP zero para evitar barotrauma.",
+     "D": "FiO₂ de 100% obrigatória em todos os casos."
+    },
+    "resposta": "A",
+    "justificativa": "A ventilação protetora aumenta a taxa de aproveitamento pulmonar. Recomenda-se PEEP 8–10, manobras de recrutamento (cuidadosas) e aspiração controlada, evitando sobrecarga hídrica. A hiperóxia sustentada pode lesar o pulmão."
+   },
+   {
+    "id": "transplantes_12",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Manutenção",
+    "enunciado": "Qual vasopressor é considerado de escolha, associado à noradrenalina, na vasoplegia do doador em ME?",
+    "alternativas": {
+     "A": "Dopamina em dose alta (> 10 mcg/kg/min)",
+     "B": "Fenilefrina isolada em infusão contínua",
+     "C": "Isoproterenol",
+     "D": "Vasopressina"
+    },
+    "resposta": "D",
+    "justificativa": "A vasopressina (0,01–0,04 U/min) restaura o tônus vascular, reduz a necessidade de catecolaminas e trata o diabetes insípido. Doses altas de catecolaminas prejudicam os enxertos cardíaco e renal."
+   },
+   {
+    "id": "transplantes_13",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Manutenção",
+    "enunciado": "O que a hipotermia moderada do doador (34–35 °C) demonstrou em estudo randomizado (Niemann, NEJM 2015)?",
+    "alternativas": {
+     "A": "Aumentou a taxa de rejeição aguda.",
+     "B": "Não teve efeito em desfechos.",
+     "C": "Aumentou a mortalidade do receptor.",
+     "D": "Reduziu a função retardada do enxerto renal."
+    },
+    "resposta": "D",
+    "justificativa": "O estudo mostrou redução da disfunção tardia do enxerto renal (de 39% para 28%) com hipotermia de 34–35 °C em doadores falecidos. A hipotermia não controlada, por outro lado, causa arritmias e coagulopatia."
+   },
+   {
+    "id": "transplantes_14",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Manutenção",
+    "enunciado": "Qual é a meta de pressão arterial média para o doador em ME?",
+    "alternativas": {
+     "A": "PAM ≥ 100 mmHg",
+     "B": "PAM de 40–50 mmHg",
+     "C": "PAM ≥ 65 mmHg",
+     "D": "PAM < 60 mmHg para proteger os pulmões"
+    },
+    "resposta": "C",
+    "justificativa": "A perfusão dos órgãos exige PAM ≥ 65 mmHg, com euvolemia e vasopressor quando necessário. Metas mais altas aumentam a lesão pulmonar e cardíaca por catecolaminas."
+   },
+   {
+    "id": "transplantes_15",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Captação",
+    "enunciado": "Durante a captação de órgãos em doador em ME, hipertensão e taquicardia à incisão devem ser:",
+    "alternativas": {
+     "A": "Ignoradas, pois o doador está morto.",
+     "B": "Tratadas com bloqueador neuromuscular, opioide, volátil em dose baixa ou vasodilatadores, pois decorrem de reflexos espinhais.",
+     "C": "Tratadas com dose alta de adrenalina.",
+     "D": "Interpretadas como sinal de consciência e interrupção da captação."
+    },
+    "resposta": "B",
+    "justificativa": "Os reflexos medulares persistem após a ME e provocam respostas autonômicas e movimentos. O controle hemodinâmico melhora a perfusão dos órgãos; a anestesia não é necessária por razões de dor, e sim de estabilidade."
+   },
+   {
+    "id": "transplantes_16",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Captação",
+    "enunciado": "Qual é o tempo máximo habitual de isquemia fria tolerado pelo coração?",
+    "alternativas": {
+     "A": "4–6 horas",
+     "B": "12–24 horas",
+     "C": "24–36 horas",
+     "D": "48–72 horas"
+    },
+    "resposta": "A",
+    "justificativa": "Coração: 4–6 h; pulmão: 6–8 h; fígado: até 12 h; pâncreas: 12–18 h; rim: 24–36 h (até 48 h). A isquemia prolongada piora a função primária do enxerto."
+   },
+   {
+    "id": "transplantes_17",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Fígado",
+    "enunciado": "Qual é uma alteração típica da fase anepática do transplante hepático?",
+    "alternativas": {
+     "A": "Hipocalcemia por falta de metabolismo do citrato, acidose metabólica e hipotermia.",
+     "B": "Hipercalcemia e alcalose metabólica.",
+     "C": "Aumento da produção de fatores de coagulação.",
+     "D": "Hipoglicemia por produção excessiva de insulina."
+    },
+    "resposta": "A",
+    "justificativa": "Sem fígado, o citrato do sangue transfundido não é metabolizado, causando queda do cálcio ionizado; o lactato não é depurado, causando acidose. Há risco de hipotermia e hiperfibrinólise. Repor cálcio, controlar K⁺ e glicemia."
+   },
+   {
+    "id": "transplantes_18",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Fígado",
+    "enunciado": "A síndrome pós-reperfusão em transplante hepático caracteriza-se por:",
+    "alternativas": {
+     "A": "Hipertensão sustentada e taquicardia.",
+     "B": "Hiperglicemia e hipernatremia.",
+     "C": "Hipotermia como único achado.",
+     "D": "Hipotensão, bradicardia, hipercalemia, acidose e aumento da pressão pulmonar logo após a reperfusão."
+    },
+    "resposta": "D",
+    "justificativa": "A liberação de solução fria, ácida e rica em potássio e de mediadores inflamatórios causa a síndrome (queda ≥ 30% da PAM nos primeiros 5 minutos). Prevenção: lavagem do enxerto, correção de K⁺ e Ca²⁺ e preparo de vasopressor/cálcio/adrenalina."
+   },
+   {
+    "id": "transplantes_19",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Fígado",
+    "enunciado": "Qual é o limite de pressão da artéria pulmonar na hipertensão portopulmonar que contraindica o transplante hepático?",
+    "alternativas": {
+     "A": "PAP média > 15 mmHg",
+     "B": "PAP média > 20 mmHg",
+     "C": "PAP média > 50 mmHg",
+     "D": "PAP média > 25 mmHg com tratamento"
+    },
+    "resposta": "C",
+    "justificativa": "Com PAPm entre 35 e 45–50 mmHg o risco é alto, mas pode haver transplante após tratamento com vasodilatadores pulmonares; acima de 50 mmHg o risco de falência do VD é inaceitável. O diagnóstico exige PAPm > 25 e RVP > 240 dina·s·cm⁻⁵."
+   },
+   {
+    "id": "transplantes_20",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Fígado",
+    "enunciado": "Quanto ao bloqueador neuromuscular de escolha em transplante hepático:",
+    "alternativas": {
+     "A": "Vecurônio, por ser metabolizado exclusivamente no fígado.",
+     "B": "Cisatracúrio ou atracúrio, por eliminação de Hofmann e hidrólise, independente de fígado e rim.",
+     "C": "Pancurônio, por eliminação renal exclusiva.",
+     "D": "Succinilcolina em dose alta contínua."
+    },
+    "resposta": "B",
+    "justificativa": "Atracúrio e cisatracúrio são eliminados de modo independente de órgãos. Rocurônio e vecurônio têm duração prolongada na insuficiência hepática; pancurônio tem eliminação renal e hepática prolongadas."
+   },
+   {
+    "id": "transplantes_21",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Fígado",
+    "enunciado": "Qual estratégia reduz o sangramento no transplante hepático?",
+    "alternativas": {
+     "A": "Infundir grandes volumes de cristaloides para elevar a PVC.",
+     "B": "Manter PVC baixa (cerca de 5 mmHg ou menos), restrição de fluidos e uso guiado de hemoderivados com TEG/ROTEM.",
+     "C": "Transfundir plasma para corrigir o INR.",
+     "D": "Evitar fibrinogênio mesmo com hipofibrinogenemia."
+    },
+    "resposta": "B",
+    "justificativa": "O INR não reflete bem o risco de sangramento em cirróticos; a hemostasia é reequilibrada. A PVC baixa reduz o ingurgitamento hepático. Hemoderivados guiados por viscoelastometria e fibrinogênio diminuem a transfusão."
+   },
+   {
+    "id": "transplantes_22",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Fígado",
+    "enunciado": "O que caracteriza a síndrome hepatopulmonar?",
+    "alternativas": {
+     "A": "Hipoxemia por vasodilatação intrapulmonar na hepatopatia, que piora em pé (ortodeoxia).",
+     "B": "Hipertensão pulmonar grave com RVP elevada.",
+     "C": "Edema pulmonar por insuficiência cardíaca esquerda.",
+     "D": "Derrame pleural unilateral por pneumonia."
+    },
+    "resposta": "A",
+    "justificativa": "A síndrome hepatopulmonar resulta de dilatação capilar pulmonar com desequilíbrio V/Q e shunt; platipneia e ortodeoxia são típicas. Diferente da hipertensão portopulmonar (aumento da RVP)."
+   },
+   {
+    "id": "transplantes_23",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Rim",
+    "enunciado": "Em um paciente em hemodiálise submetido a transplante renal, qual a medida pré-operatória mais importante?",
+    "alternativas": {
+     "A": "Liberar succinilcolina independentemente do potássio.",
+     "B": "Puncionar a fístula arteriovenosa para acesso.",
+     "C": "Evitar qualquer solução de reposição.",
+     "D": "Verificar o potássio (< 5,5 mEq/L) e dialisar se necessário antes da cirurgia."
+    },
+    "resposta": "D",
+    "justificativa": "A hipercalemia aumenta o risco de arritmia e contraindica succinilcolina. A fístula e o membro não devem ser puncionados nem usados para PA. O volume e a PA devem ser avaliados."
+   },
+   {
+    "id": "transplantes_24",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Rim",
+    "enunciado": "Durante o transplante renal, qual meta hemodinâmica favorece a função do enxerto?",
+    "alternativas": {
+     "A": "Permitir PAM de 50 mmHg para reduzir sangramento.",
+     "B": "Restringir fluidos agressivamente até o clampeamento.",
+     "C": "Manter PAM adequada e euvolemia, evitando hipotensão, com cristaloide balanceado.",
+     "D": "Usar sempre solução com potássio elevado."
+    },
+    "resposta": "C",
+    "justificativa": "A perfusão do enxerto depende da PAM e do volume intravascular. Cristaloides balanceados reduzem a acidose hiperclorêmica e a hipercalemia relativa em comparação com soro fisiológico. Manitol e furosemida são usados por muitos serviços."
+   },
+   {
+    "id": "transplantes_25",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Rim",
+    "enunciado": "Qual dos fármacos deve ser evitado em transplante renal ou em receptores com função renal limítrofe?",
+    "alternativas": {
+     "A": "Atracúrio e cisatracúrio",
+     "B": "Propofol",
+     "C": "AINEs e morfina",
+     "D": "Remifentanil"
+    },
+    "resposta": "C",
+    "justificativa": "AINEs reduzem o fluxo renal e causam nefrotoxicidade com tacrolimo. A morfina forma metabólitos ativos que se acumulam em IR. Atracúrio, cisatracúrio, propofol e remifentanil são seguros."
+   },
+   {
+    "id": "transplantes_26",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Coração",
+    "enunciado": "Em receptor de transplante cardíaco com bradicardia sintomática, qual conduta é correta?",
+    "alternativas": {
+     "A": "Administrar atropina 1 mg IV.",
+     "B": "Usar isoprenalina ou adrenalina; a atropina é ineficaz pela denervação vagal.",
+     "C": "Administrar neostigmina.",
+     "D": "Administrar esmolol."
+    },
+    "resposta": "B",
+    "justificativa": "O coração transplantado não tem inervação vagal ou simpática; a atropina não produz taquicardia. Respondem aos agentes que atuam diretamente no miocárdio (isoprenalina, adrenalina, dobutamina) e à estimulação por marca-passo."
+   },
+   {
+    "id": "transplantes_27",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Coração",
+    "enunciado": "Qual dos efeitos NÃO é esperado no coração transplantado denervado?",
+    "alternativas": {
+     "A": "Aumento reflexo da FC em resposta à hipotensão.",
+     "B": "FC de repouso mais alta (90–110 bpm).",
+     "C": "Dependência da pré-carga.",
+     "D": "Sem dor anginosa em isquemia (angina silenciosa)."
+    },
+    "resposta": "A",
+    "justificativa": "O coração denervado não aumenta a FC por reflexo barorreceptor; o aumento depende de catecolaminas circulantes e é mais lento. A FC de repouso é maior por perda do tônus vagal. A isquemia pode ser silenciosa."
+   },
+   {
+    "id": "transplantes_28",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Coração",
+    "enunciado": "No transplante cardíaco, a disfunção aguda do ventrículo direito do enxerto é tratada com:",
+    "alternativas": {
+     "A": "Aumento da PEEP e restrição de inotrópicos.",
+     "B": "Fenilefrina e hipercapnia permissiva.",
+     "C": "Betabloqueador intravenoso.",
+     "D": "Óxido nítrico inalado, milrinona, correção de hipoxemia/hipercapnia e, se necessário, ECMO."
+    },
+    "resposta": "D",
+    "justificativa": "A hipertensão pulmonar do receptor sobrecarrega o VD do doador. Vasodilatadores pulmonares seletivos, inodilatadores, otimização da ventilação, suporte de pressão coronariana e dispositivos mecânicos tratam a falência."
+   },
+   {
+    "id": "transplantes_29",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Pulmão",
+    "enunciado": "Qual medida é importante para reduzir a disfunção primária do enxerto no transplante pulmonar?",
+    "alternativas": {
+     "A": "Hiperóxia sustentada (FiO₂ 1,0) por 24 h.",
+     "B": "VC de 12 mL/kg.",
+     "C": "Infusão liberal de cristaloide.",
+     "D": "Ventilação protetora, FiO₂ mais baixa possível e restrição de fluidos."
+    },
+    "resposta": "D",
+    "justificativa": "A lesão de isquemia-reperfusão do enxerto aumenta a permeabilidade capilar; volume excessivo e FiO₂ alta agravam o edema. Recomenda-se FiO₂ mínima, ventilação protetora e balanço hídrico neutro/negativo, com uso de ECMO conforme necessário."
+   },
+   {
+    "id": "transplantes_30",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Imunossupressão",
+    "enunciado": "Qual é o esquema de manutenção imunossupressora mais comum em transplantes de órgãos sólidos?",
+    "alternativas": {
+     "A": "Penicilina + gentamicina",
+     "B": "Metformina + insulina",
+     "C": "Tacrolimo + micofenolato + corticoide",
+     "D": "Heparina + varfarina"
+    },
+    "resposta": "C",
+    "justificativa": "A manutenção utiliza inibidor de calcineurina (tacrolimo ou ciclosporina), antimetabólito (micofenolato) e corticoide. Indução com basiliximab ou timoglobulina. Todos devem ser mantidos no perioperatório, e seus efeitos adversos (nefrotoxicidade, neurotoxicidade, hiperglicemia) considerados."
+   },
+   {
+    "id": "transplantes_31",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Imunossupressão",
+    "enunciado": "Qual interação é relevante ao anestesiar um paciente que usa tacrolimo?",
+    "alternativas": {
+     "A": "Tacrolimo aumenta o efeito da succinilcolina de forma importante.",
+     "B": "Inibição/indução do CYP3A4 pode alterar os níveis do imunossupressor e a nefrotoxicidade é potencializada por AINEs.",
+     "C": "Tacrolimo não tem interações medicamentosas.",
+     "D": "Tacrolimo é antagonizado pelo propofol."
+    },
+    "resposta": "B",
+    "justificativa": "Tacrolimo e ciclosporina são metabolizados pelo CYP3A4, e inibidores (macrolídeos, azólicos, diltiazem) aumentam seus níveis. Nefrotoxicidade somada a AINEs e contraste. Cuidado com hipotensão e doses de corticoide em usuários crônicos."
+   },
+   {
+    "id": "transplantes_32",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Imunossupressão",
+    "enunciado": "Paciente transplantado renal há 3 anos, em uso crônico de prednisona, será submetido a cirurgia de médio porte. Qual cuidado é necessário?",
+    "alternativas": {
+     "A": "Considerar dose de estresse de corticoide e manter imunossupressores.",
+     "B": "Suspender todos os imunossupressores no dia da cirurgia.",
+     "C": "Evitar qualquer corticoide.",
+     "D": "Administrar AINE para analgesia."
+    },
+    "resposta": "A",
+    "justificativa": "O uso crônico de corticoide pode causar supressão do eixo adrenal. A suspensão dos imunossupressores aumenta o risco de rejeição. Evitar nefrotóxicos e manter a função renal."
+   },
+   {
+    "id": "transplantes_33",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Brasil",
+    "enunciado": "Qual é o órgão estadual responsável por receber a notificação de potenciais doadores e coordenar a captação e a distribuição de órgãos?",
+    "alternativas": {
+     "A": "CNCDO (Central de Notificação, Captação e Distribuição de Órgãos)",
+     "B": "CIHDOTT, que substitui a central estadual.",
+     "C": "Conselho Regional de Medicina",
+     "D": "ANVISA"
+    },
+    "resposta": "A",
+    "justificativa": "A CNCDO estadual gerencia a lista única, a notificação e a distribuição. A CIHDOTT é a comissão intra-hospitalar que identifica potenciais doadores e apoia a família. CRM e ANVISA não coordenam a captação."
+   },
+   {
+    "id": "transplantes_34",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Brasil",
+    "enunciado": "Quem pode ser doador vivo de órgão no Brasil, segundo a Lei 9.434/1997?",
+    "alternativas": {
+     "A": "Qualquer pessoa maior de idade, sem restrições.",
+     "B": "Somente parentes de 1º grau.",
+     "C": "Menores de idade com autorização dos pais.",
+     "D": "Cônjuge e parentes consanguíneos até o 4º grau; não parentes somente com autorização judicial."
+    },
+    "resposta": "D",
+    "justificativa": "A lei limita a doação intervivos a cônjuge e parentes até quarto grau; para não parentes é exigida autorização judicial, salvo medula óssea. A doação deve ser de órgão duplo ou parte regenerável sem comprometer a saúde do doador."
+   },
+   {
+    "id": "transplantes_35",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Brasil",
+    "enunciado": "O critério de alocação de fígado no Brasil para receptores adultos é baseado em:",
+    "alternativas": {
+     "A": "Tempo de fila apenas",
+     "B": "Idade do receptor",
+     "C": "MELD (Model for End-stage Liver Disease)",
+     "D": "Sexo do receptor"
+    },
+    "resposta": "C",
+    "justificativa": "Desde 2006 a lista de transplante hepático no Brasil usa o escore MELD (ou PELD em crianças), priorizando a gravidade. Para rins, usa-se compatibilidade HLA, tempo de espera e outros critérios."
+   },
+   {
+    "id": "transplantes_36",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Manutenção",
+    "enunciado": "Em doador de ME, uma das metas de reposição é glicemia entre:",
+    "alternativas": {
+     "A": "40 e 60 mg/dL",
+     "B": "140 e 180 mg/dL com insulina em infusão",
+     "C": "250 e 300 mg/dL",
+     "D": "≥ 400 mg/dL"
+    },
+    "resposta": "B",
+    "justificativa": "A hiperglicemia é frequente por resistência à insulina e perda de função endócrina; a hipoglicemia é igualmente prejudicial. A meta usual é 140–180 mg/dL, com infusão contínua de insulina."
+   },
+   {
+    "id": "transplantes_37",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Manutenção",
+    "enunciado": "Qual terapia hormonal é frequentemente usada na manutenção do doador em ME?",
+    "alternativas": {
+     "A": "Hormônio do crescimento em altas doses.",
+     "B": "Metilprednisolona (15 mg/kg), vasopressina e, em instáveis, tiroxina.",
+     "C": "Testosterona intravenosa.",
+     "D": "Estrogênio em infusão."
+    },
+    "resposta": "B",
+    "justificativa": "O protocolo brasileiro inclui metilprednisolona (reduz inflamação pós-ME) e vasopressina; a levotiroxina é usada em doadores cardíacos instáveis. A reposição hormonal é parte de pacotes de cuidados que melhoram o aproveitamento de órgãos."
+   },
+   {
+    "id": "transplantes_38",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Captação",
+    "enunciado": "Qual das soluções é usada para perfusão e preservação fria dos órgãos?",
+    "alternativas": {
+     "A": "Solução UW (University of Wisconsin), HTK ou Celsior",
+     "B": "Soro fisiológico a 37 °C",
+     "C": "Ringer lactato aquecido",
+     "D": "Glicose 5% em temperatura ambiente"
+    },
+    "resposta": "A",
+    "justificativa": "As soluções de preservação (UW, HTK, Celsior) são frias e hipertônicas/ricas em impermeantes, com baixo potássio ou composição adaptada, para reduzir o edema celular e a lesão de isquemia. Soluções isotônicas aquecidas não preservam o órgão."
+   },
+   {
+    "id": "transplantes_39",
+    "tema": "Transplantes e Doador",
+    "subtopico": "Anestesia",
+    "enunciado": "Qual dos itens abaixo é característico do coração denervado no pós-transplante tardio?",
+    "alternativas": {
+     "A": "Resposta imediata e total à atropina.",
+     "B": "Resposta imediata e total à neostigmina.",
+     "C": "Frequência de repouso lenta de 40 bpm.",
+     "D": "Reinervação parcial pode ocorrer em anos, mas a resposta a vagolíticos permanece limitada no início."
+    },
+    "resposta": "D",
+    "justificativa": "A reinervação simpática parcial pode aparecer após meses ou anos (cerca de 1 ano, variável); a vagal é rara. Por isso, não se deve contar com atropina; as drogas de ação direta são preferidas."
+   }
+  ]
  }
 ]

@@ -1,0 +1,361 @@
+<div class="screen" id="screen-nora">
+  <div class="top-bar" style="border-bottom:3px solid var(--blue)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--blue)">🚑 Fora do CC e Ambulatorial</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="nora-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('nora','sedacao',this)">SEDAÇÃO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('nora','locais',this)">LOCAIS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('nora','ambul',this)">AMBULATORIAL</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('nora','casos',this)">CONDUTAS</button>
+  </div>
+
+  <div class="tab-panel active" id="nora-sedacao">
+    <div class="page-wrap">
+
+    <div class="alert a-blue" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> níveis de sedação (ASA), capacidade de resgate, monitorização com capnografia e fármacos usuais. O anestesiologista deve estar preparado para resgatar um nível mais profundo que o planejado.</div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">01</span> Contínuo de sedação (ASA)
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Nível</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Resposta</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Via aérea / ventilação</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Circulação</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Mínima (ansiólise)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Normal a comandos verbais</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Não afetadas</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Não afetada</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Moderada</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Resposta proposital a comandos ou toque leve</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Via aérea pérvia; ventilação adequada</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Em geral mantida</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Profunda</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Resposta proposital após estímulo repetido ou doloroso</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Pode precisar de assistência; ventilação pode ser inadequada</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Em geral mantida</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Anestesia geral</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Sem resposta, mesmo com dor</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Frequentemente exige assistência</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Pode estar comprometida</td></tr>
+          </tbody>
+        </table></div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Resgate</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Quem sedacia deve ser capaz de resgatar o paciente de um nível mais profundo (suporte de via aérea e ventilação). A sedação profunda e a anestesia geral são atos médicos (Ato Médico).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Segurança da sedação
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Avaliação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">História (OSA, via aérea difícil, refluxo, alergias, uso de álcool/opioides), exame da via aérea, ASA. STOP-BANG para apneia do sono. Jejum conforme a ASA (sólidos 6–8 h; líquidos claros 2 h) e individualização no risco de aspiração.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Monitorização</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Oximetria, capnografia (padrão para sedação moderada/profunda), ECG e PA; avaliação do nível de consciência. Disponíveis: O₂, aspiração, ambu, via aérea, desfibrilador e fármacos de reversão.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cuidado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Mesmo a sedação "leve" pode causar obstrução. Os pacientes com OSA, obesidade e idosos têm janela terapêutica estreita. Aguardar o efeito entre doses.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">03</span> Fármacos usuais
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Fármaco</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Dose adulto</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Observações</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Midazolam</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">0,5–2 mg IV (0,02–0,05 mg/kg), repetir</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Ansiólise, amnésia; reversão: flumazenil 0,2 mg</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Propofol</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Bolus 0,5–1 mg/kg; infusão 25–100 mcg/kg/min</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Início/fim rápidos; sem analgesia; apneia, hipotensão</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Dexmedetomidina</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">0,5–1 mcg/kg em 10 min; 0,2–0,7 mcg/kg/h</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Respiração preservada; bradicardia/hipotensão; início lento</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Cetamina</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">0,25–0,5 mg/kg (sedação analgésica)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Preserva reflexos de via aérea e respiração; sialorreia; emergência psicomimética</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Fentanil</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">25–50 mcg IV</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Analgesia; sinergia com sedativos, apneia</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Remimazolam</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Dose titulada, benzodiazepínico de ação curta</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Metabolismo por esterases; reversível com flumazenil; disponibilidade no Brasil: conferir</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /nora-sedacao -->
+
+  <div class="tab-panel" id="nora-locais">
+    <div class="page-wrap">
+
+    <div class="alert a-blue" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> requisitos da ASA para locais remotos e as particularidades de cada cenário (endoscopia, radiologia, RM, cardiologia, ECT).</div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">01</span> Requisitos para locais remotos
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Padrões</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Os mesmos padrões do centro cirúrgico: fonte confiável de O₂ com reserva, aspiração, remoção de gases, aparelho de anestesia com checagem, monitores completos, energia elétrica de emergência, iluminação e espaço, acesso para ajuda, carrinho de emergência e telefone.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Riscos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Equipe pouco familiarizada, espaço restrito, acesso difícil ao paciente, pacientes graves, equipamento diferente. Preparar plano de transporte, via aérea e retirada de emergência.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pós-procedimento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">SRPA ou local equivalente, com a mesma qualidade e critério de alta.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Endoscopia digestiva e broncoscopia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Endoscopia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sedação com propofol é a mais usada; risco de aspiração e apneia; posição lateral ou semi-decúbito; capnografia. Em casos de risco (obstrução, sangramento, ASA IV, via aérea difícil, lesão volumosa), preferir anestesia geral com intubação.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">CPRE</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Posição prona/semiprona; intubação frequente, anestesia geral recomendada em pacientes de risco.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Broncoscopia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Compartilhamento da via aérea: TIVA com ventilação jato, máscara laríngea ou tubo rígido. Anestesia tópica com lidocaína (até 8,2 mg/kg em broncoscopia); atenção à toxicidade.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">03</span> Radiologia, TC e RM
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Contraste iodado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Reação leve: urticária; moderada: broncoespasmo/hipotensão leve; grave: anafilaxia. Tratamento da grave: adrenalina IM 0,3–0,5 mg (1 mg/mL) no adulto, O₂, volume. Pré-medicação em reação prévia moderada/grave: prednisona 50 mg 13, 7 e 1 h antes + difenidramina 50 mg 1 h antes (ACR).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Nefropatia e metformina</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O risco de nefropatia do contraste é baixo com TFG ≥ 45; hidratação em pacientes de risco. A metformina só precisa ser suspensa se TFG &lt; 30 ou lesão renal aguda (ACR).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">RM</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Zona IV (sala do magneto): objetos ferromagnéticos tornam-se projéteis. Equipamento MR Conditional, tubos extensores longos, cabos sem alças (queimadura por radiofrequência), proteção auditiva. Quench (ruptura do hélio): evacuar a sala. Marca-passos e implantes: checar compatibilidade.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sedação em RM</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Crianças e claustrofóbicos: propofol, dexmedetomidina ou anestesia geral com máscara laríngea. A via aérea fica longe do anestesiologista: monitorizar CO₂ à distância.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Proteção radiológica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Tempo, distância (lei do inverso do quadrado) e blindagem: avental de chumbo ≥ 0,5 mm, protetor de tireoide, dosímetro.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">04</span> Cardiologia e eletroconvulsoterapia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hemodinâmica e ablação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pacientes cardiopatas e graves. Ablação de FA: anestesia geral com intubação ou ventilação jato; atenção à pressão arterial e à heparina (ACT).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cardioversão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sedação breve com propofol ou etomidato; jejum e checagem de anticoagulação/ETE.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">ECT</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Objetivo: convulsão eficaz com controle hemodinâmico. Hipnótico: metoexital (padrão, quando disponível), propofol (reduz a duração), etomidato e cetamina (mantêm a convulsão); relaxamento com succinilcolina 0,5–1 mg/kg para atenuar movimentos; hiperventilação aumenta a duração; descarga simpática inicial (taquicardia e hipertensão), depois parassimpática (bradicardia). Cuidado em feocromocitoma, HIC e infarto recente.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Neuroradiologia intervencionista</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Anticoagulação com heparina; controle estrito da PA; imobilidade; AVC isquêmico: sedação consciente ou geral, manter PA conforme protocolo, evitar hipotensão.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /nora-locais -->
+
+  <div class="tab-panel" id="nora-ambul">
+    <div class="page-wrap">
+
+    <div class="alert a-blue" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> seleção de pacientes, técnica de recuperação rápida, critérios de alta (PADSS), situações que contraindicam alta no dia.</div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">01</span> Seleção de pacientes e de procedimentos
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Paciente</div>
+          <div class="dc" style="text-align:left;line-height:1.6">ASA I–II e ASA III estável e bem controlado. Cuidado com apneia do sono não tratada, obesidade extrema com comorbidades, cardiopatia instável, hipertermia maligna, dificuldade de acesso a serviço.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Critérios sociais</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Acompanhante adulto responsável nas primeiras 24 h, telefone, residência próxima, compreensão das instruções.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Procedimento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Baixa probabilidade de sangramento, dor controlável com analgesia oral, sem necessidade de monitorização especial; duração em geral &lt; 2–3 h.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Prematuros</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Ex-prematuros com idade pós-concepcional menor que 60 semanas têm risco de apneia pós-anestésica e costumam ser observados 12–24 h.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">02</span> Técnica anestésica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Princípios</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Agentes de ação curta (propofol, sevoflurano, desflurano, remifentanil), sugamadex em vez de neostigmina quando houver bloqueio profundo, ventilação protetora, profilaxia de náusea e vômito (Apfel) e normotermia.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Anestesia regional</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Reduz a dor e opioides; bloqueio de nervo periférico (cateter perineural em casa quando disponível). Raquianestesia curta: cloroprocaína 40–50 mg (quando disponível), bupivacaína em dose baixa com fentanil; prilocaína hiperbárica em alguns países.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Analgesia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Multimodal poupadora de opioide: paracetamol, AINE, dexametasona, infiltração local; opioides em menor duração. Gabapentinoides não são recomendados rotineiramente por sedação e tontura.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Prevenção de náusea e vômito</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dexametasona 4–8 mg + ondansetrona 4 mg; TIVA em pacientes de alto risco.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">03</span> Critérios de alta
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">PADSS (Post-Anesthetic Discharge Scoring System)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pontua sinais vitais, deambulação, náusea/vômito, dor e sangramento cirúrgico. Alta com ≥ 9 pontos (máximo 10) e acompanhante.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Itens não obrigatórios</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Ingerir líquidos e urinar não são condições obrigatórias de rotina (exceto em risco de retenção, como raquianestesia em procedimentos urológicos ou com história prévia).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Instruções</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Não dirigir, não operar máquinas nem tomar decisões legais por 24 h; evitar álcool; plano de analgesia; sinais de alerta (febre, sangramento, dor intensa, vômitos persistentes) e telefone de contato.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Admissão não planejada</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Causas: sangramento, dor, náusea/vômito, retenção urinária, hipotensão, intercorrência anestésica. Taxas aceitáveis em geral &lt; 1–2%.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /nora-ambul -->
+
+  <div class="tab-panel" id="nora-casos">
+    <div class="page-wrap">
+
+    <div class="alert a-blue" style="margin-bottom:12px"><strong>Treino de prova:</strong> perguntas frequentes sobre escolhas e cuidados.</div>
+
+    <div class="card">
+      <div class="card-header ch-blue">
+        <span class="card-num">01</span> Cenários
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Obeso com SAOS para colonoscopia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sedação com propofol exige capnografia e preparo para via aérea; considerar anestesia geral com via aérea protegida se o risco for alto; recuperação prolongada e cuidado com opioides.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Criança de 4 anos para RM</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sedação com dexmedetomidina intranasal 2–3 mcg/kg ou propofol; via aérea avaliada; monitorização com CO₂; jejum conforme idade; sala MR Conditional.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Contraste com reação prévia grave</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Evitar contraste se possível; pré-medicar (prednisona e anti-histamínico); ter adrenalina pronta; observar após a injeção.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">ECT em paciente com dentadura e DPOC</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Retirar a dentadura; pré-oxigenar; hiperventilar com cuidado; usar etomidato ou metoexital; aspiração disponível; atenção ao broncoespasmo.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Alta após raquianestesia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Exige recuperação do bloqueio motor, deambulação sem tontura e acompanhante; avaliar micção em risco de retenção.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>Sedação:</strong> moderada (propositada ao comando verbal/toque); profunda (estímulo repetido/doloroso); ao sedar, estar preparado para resgatar.</li>
+          <li><strong>Capnografia</strong> é o padrão para sedação moderada e profunda.</li>
+          <li><strong>Dexmedetomidina:</strong> preserva a respiração; bradicardia e hipotensão.</li>
+          <li><strong>Cetamina</strong> em sedação mantém reflexos de via aérea e ventilação; sialorreia e emergência psicomimética.</li>
+          <li><strong>Contraste:</strong> anafilaxia → adrenalina IM 0,3–0,5 mg; pré-medicar em reação prévia moderada/grave (prednisona 50 mg 13/7/1 h + difenidramina).</li>
+          <li><strong>Metformina</strong> só se TFG &lt; 30 ou LRA; risco de nefropatia por contraste baixo com TFG ≥ 45.</li>
+          <li><strong>RM:</strong> magneto sempre ligado; objetos ferromagnéticos; cabos sem alças; quench é emergência.</li>
+          <li><strong>ECT:</strong> metoexital é o padrão; propofol encurta convulsão; succinilcolina atenua movimentos; descarga simpática depois parassimpática.</li>
+          <li><strong>Ambulatorial:</strong> ASA I–II/III estável; ex-prematuro &lt; 60 semanas pós-concepcional: observar 12–24 h.</li>
+          <li><strong>PADSS ≥ 9</strong>; urinar e ingerir líquidos não são obrigatórios na alta.</li>
+          <li><strong>Proteção radiológica:</strong> tempo, distância (lei do inverso do quadrado) e blindagem.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li>A <strong>Resolução CFM 2.174/2017</strong> exige monitorização e as mesmas condições de segurança em qualquer local, inclusive remotos e ambulatoriais; a sedação profunda e a anestesia geral são atos médicos.</li>
+          <li>A <strong>ANVISA</strong> regula a estrutura física de serviços (RDC 50/2002) e de clínicas com procedimentos ambulatoriais; a <strong>Resolução CFM 1.886/2008</strong> traz normas mínimas para unidades de cirurgia ambulatorial. Conferir os textos vigentes.</li>
+          <li><strong>Metoexital e cloroprocaína espinhal</strong> podem não estar disponíveis; alternativas: etomidato, cetamina e propofol em dose reduzida; bupivacaína em dose baixa.</li>
+          <li>Muitos <strong>serviços de endoscopia e imagem</strong> no Brasil carecem de aparelho de anestesia completo e de monitorização de CO₂: avaliar a segurança antes de aceitar o caso.</li>
+          <li><strong>Remimazolam</strong> foi aprovado em alguns países; conferir a situação na ANVISA antes de citar na prática.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>American Society of Anesthesiologists. Practice Guidelines for Moderate Procedural Sedation and Analgesia 2018. Anesthesiology 2018;128:437–79.</li>
+          <li>American Society of Anesthesiologists. Statement on Nonoperating Room Anesthesia Services (2018, reafirmada).</li>
+          <li>Apfelbaum JL, Connis RT, Nickinovich DG, et al. Practice advisory for preanesthesia evaluation. Anesthesiology 2012;116:522–38.</li>
+          <li>American College of Radiology. ACR Manual on Contrast Media (versão vigente).</li>
+          <li>Chung F, Chan VW, Ong D. A post-anesthetic discharge scoring system for home readiness after ambulatory surgery. J Clin Anesth 1995;7:500–6.</li>
+          <li>Gan TJ, Belani KG, Bergese S, et al. Fourth consensus guidelines for the management of postoperative nausea and vomiting. Anesth Analg 2020;131:411–48.</li>
+          <li>Kellner CH, Obbels J, Sienaert P. When to consider electroconvulsive therapy (ECT). Acta Psychiatr Scand 2020;141:304–15.</li>
+          <li>Conselho Federal de Medicina. Resolução CFM nº 2.174/2017 e nº 1.886/2008.</li>
+          <li>Brasil. ANVISA. RDC nº 50/2002: regulamento técnico para planejamento, programação e avaliação de projetos físicos de estabelecimentos assistenciais de saúde.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /nora-casos -->
+</div>

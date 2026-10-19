@@ -1,0 +1,431 @@
+<div class="screen" id="screen-estatistica">
+  <div class="top-bar" style="border-bottom:3px solid var(--teal)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--teal)">📊 Estatística e MBE</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="estatistica-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('estat','diag',this)">DIAGNÓSTICO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('estat','estudos',this)">ESTUDOS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('estat','risco',this)">RISCO E NNT</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('estat','testes',this)">ESTATÍSTICA</button>
+  </div>
+
+  <div class="tab-panel active" id="estat-diag">
+    <div class="page-wrap">
+
+    <div class="alert a-teal" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> sensibilidade, especificidade, valores preditivos e razões de verossimilhança. VPP e VPN dependem da prevalência; sensibilidade e especificidade, não.</div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> Tabela 2×2 e fórmulas
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)"></th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Doença +</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Doença −</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Teste +</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">VP (a)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">FP (b)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Teste −</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">FN (c)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">VN (d)</td></tr>
+          </tbody>
+        </table></div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sensibilidade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VP / (VP + FN): proporção de doentes com teste positivo. Teste muito sensível, quando NEGATIVO, exclui a doença (regra SnNout).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Especificidade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VN / (VN + FP): proporção de sadios com teste negativo. Teste muito específico, quando POSITIVO, confirma a doença (regra SpPin).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">VPP</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VP / (VP + FP): probabilidade de doença se o teste for positivo. Aumenta com a prevalência.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">VPN</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VN / (VN + FN): probabilidade de ausência de doença se o teste for negativo. Diminui com a prevalência.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Razão de verossimilhança</div>
+          <div class="dc" style="text-align:left;line-height:1.6">LR+ = sensibilidade / (1 − especificidade); LR− = (1 − sensibilidade) / especificidade. Odds pós-teste = odds pré-teste × LR. LR+ &gt; 10 muda muito a probabilidade; LR− &lt; 0,1 também.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Acurácia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">(VP + VN) / total. Depende da prevalência; evite como única medida.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Exemplo resolvido
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal" style="margin-bottom:10px"><strong>Caso:</strong> 300 pacientes; 100 com doença. Teste positivo em 90 doentes e em 30 sadios.</div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Montagem</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VP = 90; FN = 10; FP = 30; VN = 170.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cálculos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sensibilidade = 90/100 = <strong>90%</strong>. Especificidade = 170/200 = <strong>85%</strong>. VPP = 90/120 = <strong>75%</strong>. VPN = 170/180 = <strong>94,4%</strong>. LR+ = 0,90/0,15 = <strong>6</strong>. LR− = 0,10/0,85 = <strong>0,12</strong>.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Prevalência muda tudo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Com o mesmo teste (S 90%, E 85%) e prevalência de 1%, o VPP cai para cerca de 6%.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Curva ROC e ponto de corte
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Curva ROC</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Gráfico de sensibilidade × (1 − especificidade) para vários pontos de corte. A área sob a curva (AUC) mede a capacidade discriminativa: 0,5 = acaso; 0,7–0,8 aceitável; 0,8–0,9 boa; &gt; 0,9 excelente.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ponto de corte</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Reduzir o corte aumenta a sensibilidade e diminui a especificidade (e vice-versa). Triagem prioriza sensibilidade; confirmação, especificidade.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Índice de Youden</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sensibilidade + especificidade − 1: corte que maximiza ambas.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Concordância</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Kappa (variáveis categóricas): &lt; 0,2 fraca; 0,6–0,8 boa; &gt; 0,8 excelente. Bland–Altman (variáveis contínuas, comparação de métodos). CCI para confiabilidade.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /estat-diag -->
+
+  <div class="tab-panel" id="estat-estudos">
+    <div class="page-wrap">
+
+    <div class="alert a-teal" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> qual desenho responde qual pergunta, vieses, níveis de evidência e relatórios (CONSORT, STROBE, PRISMA).</div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> Desenhos de estudo
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Desenho</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Medida</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Vantagem</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Limite</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">ECR</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">RR, RAR, NNT</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Controla confundidores (randomização)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Caro, amostra selecionada</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Coorte</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">RR, HR (incidência)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Estuda exposições raras e vários desfechos</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Confundimento, perdas</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Caso-controle</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">OR</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Doença rara, rápido e barato</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Viés de memória e seleção</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Transversal</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Prevalência, OR de prevalência</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Rápido</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Sem temporalidade</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Série/relato de caso</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Descrição</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Hipóteses</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Sem comparação</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Revisão sistemática / meta-análise</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Efeito combinado</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Maior precisão, resume evidência</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Heterogeneidade, viés de publicação</td></tr>
+          </tbody>
+        </table></div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hierarquia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Revisão sistemática de ECR &gt; ECR &gt; coorte &gt; caso-controle &gt; transversal &gt; série de casos &gt; opinião de especialista. O desenho certo depende da pergunta (diagnóstico, prognóstico, terapia, etiologia).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Vieses e validade
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Viés de seleção</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Grupos não comparáveis por critério de inclusão ou perdas diferenciais. Randomização e ocultação da alocação o reduzem.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Viés de aferição/informação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Medida diferente entre grupos (ex.: viés de memória em caso-controle). Cegamento reduz.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Confundimento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Variável associada à exposição e ao desfecho que distorce a associação. Controle: randomização, restrição, estratificação, ajuste multivariado.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Perdas (atrito)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Análise por intenção de tratar (ITT) preserva a randomização; por protocolo (PP) pode gerar vieses. Em ensaios de não inferioridade, mostrar ITT e PP.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Viés de publicação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Estudos positivos são mais publicados; avaliado por funil (funnel plot). Registro prévio (ClinicalTrials.gov, ReBEC) combate.</div>
+        </div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Validade interna e externa</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Interna: o resultado é verdadeiro para a amostra; externa: generalizável para outra população.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Relatórios e níveis de evidência
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">CONSORT / STROBE / PRISMA / STARD</div>
+          <div class="dc" style="text-align:left;line-height:1.6">CONSORT: ensaios clínicos; STROBE: observacionais; PRISMA: revisões sistemáticas; STARD: acurácia diagnóstica; CARE: relatos de caso; TRIPOD: modelos de predição.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">GRADE</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Classifica a certeza da evidência (alta, moderada, baixa, muito baixa) e a força da recomendação (forte ou condicional). ECR começa alto e coorte, baixo; rebaixa por risco de viés, inconsistência, imprecisão, evidência indireta e viés de publicação; sobe por grande efeito e dose-resposta.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">PICO</div>
+          <div class="dc" style="text-align:left;line-height:1.6">População, Intervenção, Comparador, Desfecho (outcomes): estrutura da pergunta clínica.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Desfechos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Substitutos (laboratoriais) × clínicos (mortalidade, complicações); compostos podem superestimar efeito se o componente mais frequente é o menos importante.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /estat-estudos -->
+
+  <div class="tab-panel" id="estat-risco">
+    <div class="page-wrap">
+
+    <div class="alert a-teal" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> RR, OR, RAR, RRR, NNT, HR e intervalo de confiança. Treine as contas.</div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> Medidas de efeito
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Risco absoluto</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Eventos / total no grupo. Ex.: 20/100 = 20%.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">RAR (redução absoluta do risco)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Risco no controle − risco no tratado. Ex.: 20% − 10% = 10 pontos percentuais.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">RR</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Risco no tratado / risco no controle. Ex.: 10/20 = 0,5.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">RRR</div>
+          <div class="dc" style="text-align:left;line-height:1.6">1 − RR = RAR / risco do controle. Ex.: 50%.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">NNT</div>
+          <div class="dc" style="text-align:left;line-height:1.6">1 / RAR. Ex.: 1/0,10 = 10. Arredonda-se para cima. NNH: número necessário para causar dano (1 / aumento absoluto do risco).</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">OR</div>
+          <div class="dc" style="text-align:left;line-height:1.6">(a/b) / (c/d). Aproxima o RR quando o evento é raro (&lt; 10%); superestima o efeito quando o evento é comum.</div>
+        </div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">HR</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Razão de riscos instantâneos (análise de sobrevida, Cox); &lt; 1 favorece o tratamento. Curvas de Kaplan–Meier comparadas pelo log-rank.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Intervalo de confiança e valor de p
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Significância</div>
+          <div class="dc" style="text-align:left;line-height:1.6">IC 95% de RR, OR ou HR que inclui 1 → não significativo (p &gt; 0,05). IC de uma diferença que inclui 0 → não significativo.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Valor de p</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Probabilidade de obter resultado igual ou mais extremo se a hipótese nula for verdadeira. NÃO é a probabilidade de a hipótese nula ser verdadeira, nem a magnitude do efeito.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Erros</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Tipo I (α): rejeitar a hipótese nula verdadeira (falso positivo), em geral 5%. Tipo II (β): não rejeitar nula falsa; poder = 1 − β, em geral 80–90%.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Significância estatística × clínica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Amostras grandes detectam efeitos minúsculos; amostras pequenas deixam de detectar efeitos reais (estudo sub-dimensionado).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tamanho da amostra</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Depende de α, poder, tamanho do efeito esperado e variabilidade. Menor efeito ou maior variabilidade exige mais pacientes.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Múltiplas comparações</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Aumentam o erro tipo I; usar correção (Bonferroni) ou análise pré-especificada.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Exemplo resolvido
+      </div>
+      <div class="card-body">
+        <div class="alert a-teal" style="margin-bottom:10px"><strong>Estudo:</strong> pneumonia ocorreu em 20 de 100 pacientes sem a medida e em 10 de 100 com ela.</div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Resposta</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Risco controle 20%; risco tratados 10%. RR = 0,5. RRR = 50%. RAR = 10%. <strong>NNT = 10</strong>.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">OR</div>
+          <div class="dc" style="text-align:left;line-height:1.6">(10/90) / (20/80) = 0,111 / 0,25 = 0,44: mais distante de 1 que o RR (0,5), pois o evento é comum.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /estat-risco -->
+
+  <div class="tab-panel" id="estat-testes">
+    <div class="page-wrap">
+
+    <div class="alert a-teal" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> escolha do teste: variável, distribuição, grupos independentes ou pareados.</div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">01</span> Tipo de variável e descrição
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Categóricas</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Nominal (sexo, tipo de bloqueio), ordinal (ASA, escala de dor, Aldrete). Descrever com frequências.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Numéricas</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Discretas (número de tentativas) e contínuas (peso, PA). Normal: média e desvio padrão. Assimétrica: mediana e intervalo interquartil.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Normalidade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Shapiro–Wilk ou Kolmogorov–Smirnov; avaliar histograma. Amostras pequenas ou assimétricas: testes não paramétricos.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Erro padrão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">EP = DP / √n: precisão da média. O IC 95% ≈ média ± 1,96 × EP.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">02</span> Escolha do teste
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Situação</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Paramétrico</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Não paramétrico</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">2 grupos independentes</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">t de Student</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Mann–Whitney</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">2 grupos pareados / antes e depois</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">t pareado</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Wilcoxon</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">≥ 3 grupos independentes</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">ANOVA</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Kruskal–Wallis</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">≥ 3 medidas repetidas</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">ANOVA de medidas repetidas</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Friedman</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Correlação</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Pearson</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Spearman</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Proporções (independentes)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Qui-quadrado (Fisher se esperado &lt; 5)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)"></td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Proporções pareadas</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">McNemar</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)"></td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Sobrevida</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Log-rank, Cox</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)"></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-teal">
+        <span class="card-num">03</span> Regressão e outros
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Regressão linear</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Desfecho contínuo; ajusta por confundidores.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Regressão logística</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Desfecho binário; gera OR ajustado.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Regressão de Cox</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Desfecho tempo até o evento; gera HR.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Não inferioridade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hipótese: a nova intervenção não é pior que a padrão por mais do que uma margem pré-definida. O limite superior do IC deve ficar abaixo da margem.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Heterogeneidade (meta-análise)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">I² &gt; 50% sugere heterogeneidade importante; modelo de efeitos aleatórios quando há heterogeneidade. O gráfico em floresta (forest plot) mostra o efeito de cada estudo e o combinado.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>SnNout / SpPin:</strong> teste sensível negativo exclui; teste específico positivo confirma.</li>
+          <li><strong>VPP</strong> sobe com a prevalência; <strong>VPN</strong> cai. Sensibilidade e especificidade não dependem da prevalência.</li>
+          <li><strong>LR+</strong> = sens/(1−esp); <strong>LR−</strong> = (1−sens)/esp. Odds pós = odds pré × LR.</li>
+          <li><strong>NNT = 1/RAR</strong>; RRR = 1 − RR; arredonda-se para cima.</li>
+          <li><strong>OR</strong> superestima o RR quando o evento é comum (&gt; 10%).</li>
+          <li><strong>IC 95%</strong> de RR/OR/HR que inclui 1 (ou de diferença que inclui 0) = não significativo.</li>
+          <li><strong>Valor de p</strong> não é a chance de a hipótese nula ser verdadeira.</li>
+          <li><strong>Erro tipo I</strong> = falso positivo (α 5%); <strong>tipo II</strong> = falso negativo; poder = 1 − β.</li>
+          <li><strong>ECR:</strong> randomização + ocultação da alocação + cegamento + análise por intenção de tratar.</li>
+          <li><strong>Coorte</strong> estima risco/incidência; <strong>caso-controle</strong> estima OR; <strong>transversal</strong> estima prevalência.</li>
+          <li><strong>Dois grupos independentes:</strong> t de Student (normal) ou Mann–Whitney. <strong>Pareados:</strong> t pareado ou Wilcoxon. <strong>Proporções:</strong> qui-quadrado ou Fisher.</li>
+          <li><strong>GRADE:</strong> ECR começa alto, observacional baixo; rebaixa por viés, inconsistência, imprecisão e viés de publicação.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>ReBEC</strong> (Registro Brasileiro de Ensaios Clínicos) e ClinicalTrials.gov registram ensaios clínicos; o registro prévio é exigido por periódicos que seguem o ICMJE.</li>
+          <li><strong>Resolução CNS 466/2012</strong> regula a pesquisa com seres humanos; <strong>CEP/CONEP</strong> avaliam os projetos via <strong>Plataforma Brasil</strong>; o <strong>TCLE</strong> é obrigatório (com exceções). A <strong>Resolução CNS 510/2016</strong> trata de ciências humanas e sociais.</li>
+          <li>Bases: <strong>LILACS</strong> e <strong>SciELO</strong> (América Latina), <strong>PubMed/MEDLINE</strong>, <strong>Cochrane</strong> (acesso pela CAPES/Portal de Periódicos); a <strong>BJAN</strong> (Brazilian Journal of Anesthesiology) é o periódico da SBA.</li>
+          <li>O <strong>TEA/TSA</strong> da SBA costuma trazer questões de cálculo (sensibilidade, NNT, RR) e interpretação de gráficos e IC.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>Guyatt G, Rennie D, Meade M, Cook D. Users' Guides to the Medical Literature: A Manual for Evidence-Based Clinical Practice, 3ª ed. McGraw-Hill; 2015.</li>
+          <li>Altman DG, Bland JM. Diagnostic tests 1: sensitivity and specificity. BMJ 1994;308:1552.</li>
+          <li>Altman DG, Bland JM. Diagnostic tests 2: predictive values. BMJ 1994;309:102.</li>
+          <li>Schulz KF, Altman DG, Moher D; CONSORT Group. CONSORT 2010 statement. BMJ 2010;340:c332.</li>
+          <li>von Elm E, Altman DG, Egger M, et al. The STROBE statement. Lancet 2007;370:1453–7.</li>
+          <li>Page MJ, McKenzie JE, Bossuyt PM, et al. The PRISMA 2020 statement. BMJ 2021;372:n71.</li>
+          <li>Guyatt GH, Oxman AD, Vist GE, et al. GRADE: an emerging consensus on rating quality of evidence and strength of recommendations. BMJ 2008;336:924–6.</li>
+          <li>Brasil. Conselho Nacional de Saúde. Resolução nº 466/2012: diretrizes e normas regulamentadoras de pesquisas envolvendo seres humanos.</li>
+          <li>Sedgwick P. Understanding type 1 and type 2 errors, and power. BMJ 2014;349:g4287.</li>
+          <li>Pocock SJ, Stone GW. The primary outcome fails — what next? N Engl J Med 2016;375:861–70.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /estat-testes -->
+</div>
