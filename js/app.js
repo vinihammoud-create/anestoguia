@@ -117,7 +117,8 @@ function calcPed() {
   document.getElementById('ped-midaz-v').textContent = (midazVO / 2).toFixed(1) + ' mL (2 mg/mL) · 30–60 min antes';
 
   // BNM
-  const suxDose = ctx === 'rsi' ? peso * 2 : peso * 1.5;
+  // 2 mg/kg só em <2 anos (neonato/lactente); acima, 1–1,5 mg/kg
+  const suxDose = (idade === 'neonato' || idade === 'lactente') ? peso * 2 : peso * 1.5;
   document.getElementById('ped-sux').textContent = suxDose.toFixed(0) + ' mg IV';
   document.getElementById('ped-sux-v').textContent = (suxDose / 20).toFixed(1) + ' mL (20 mg/mL)';
 
@@ -130,9 +131,9 @@ function calcPed() {
   document.getElementById('ped-adre').textContent = adrePCR.toFixed(2) + ' mg IV/IO';
   document.getElementById('ped-adre-v').textContent = (adrePCR / 0.1).toFixed(1) + ' mL (0,1 mg/mL dil) a cada 3–5 min';
 
-  const atrp = Math.max(Math.min(peso * 0.02, 0.5), 0.1);
+  const atrp = Math.min(peso * 0.02, 0.5); // PALS 2020: sem dose mínima
   document.getElementById('ped-atrp').textContent = atrp.toFixed(2) + ' mg IV';
-  document.getElementById('ped-atrp-v').textContent = (atrp / 0.5).toFixed(1) + ' mL (0,5 mg/mL) · min 0,1 mg';
+  document.getElementById('ped-atrp-v').textContent = (atrp / 0.5).toFixed(1) + ' mL (0,5 mg/mL) · máx 0,5 mg/dose';
 
   const adreIM = Math.min(peso * 0.01, 0.5);
   document.getElementById('ped-adre-im').textContent = adreIM.toFixed(2) + ' mg IM';
@@ -160,7 +161,7 @@ function calcPed() {
 
   const obs = {
     neonato: '🚨 <strong>Neonato:</strong> Hipotermia muito rápida · FiO₂ mínima · cuidado com O₂ excessivo · evitar propofol · morfina com cautela.',
-    lactente: '⚠ <strong>Lactente:</strong> Maior CAM · IOT com Miller · succinilcolina CI se miopatia suspeita · atenção à bradicardia.',
+    lactente: '⚠ <strong>Lactente:</strong> Maior CAM · IOT com Miller · succinilcolina só em emergência (aviso FDA) · atenção à bradicardia.',
     crianca: '✅ <strong>Criança:</strong> Parâmetros relativamente mais seguros · jejum 1h líquidos claros · MPA midazolam VO.',
     adolescente: '💡 <strong>Adolescente:</strong> Doses próximas ao adulto · atenção ao peso real vs ideal · PONV mais frequente que adulto.'
   };

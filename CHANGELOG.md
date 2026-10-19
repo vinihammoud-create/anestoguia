@@ -78,3 +78,15 @@
 - **HPP, ELA, PCR:** ácido tranexâmico com o efeito do atraso (WOMAN/CRASH-2), fibrinogênio >200, acretismo, PCR na gestante pela AHA 2025 (cesárea perimortem ≤5 min, ECPR).
 - **Prático:** dexametasona intratecal deixa de ser listada como "SOAP 2023" (não recomendada); técnica de LOR corrigida.
 - Tabela de farmacologia: vasopressina deixa de ser "contraindicada"; neostigmina; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
+
+## 3.1.0 — 2026-10-18 (fase D11 — Pediatria)
+- **Doses e fatos corrigidos:** CAM do sevoflurano com valores consistentes (6–12 meses 2,5%, 1–3 anos 2,6%; a tela dava 2,8% e 2,6% em lugares diferentes); manutenção "sevoflurano 1,5–2,5 CAM" → ~0,8–1,2 CAM; morfina em lactentes (glucuronidação **imatura** — o texto dizia "aumentada"); adrenalina no broncoespasmo pediátrico 0,01 mg/kg → 1 mcg/kg titulada (0,01 mg/kg é dose de PCR); succinilcolina no laringoespasmo 0,5–1 mg/kg (caso clínico usava 1,5 mg/kg).
+- **Jejum pediátrico pela ESAIC 2022 (6-4-3-1):** leite materno 3 h (estava 4 h), fórmula 4 h, líquidos claros 1 h — igual ao módulo Pré-operatório.
+- **Succinilcolina:** "contraindicada de rotina em <8 anos" era regra inexistente; o aviso da FDA vale para o uso eletivo de rotina em crianças; questão 2 reescrita.
+- **Atropina:** sem dose mínima de 0,1 mg (PALS 2020 abandonou; "bradicardia paradoxal" não confirmada), máx 0,5 mg/dose — módulo, calculadora e doses de emergência.
+- **Alergia a ovo/soja** deixa de ser contraindicação do propofol; PRIS descrita como "evitar sedação prolongada em UTI".
+- **Anatomia:** o "ponto mais estreito = cricoide" é apresentado com a ressalva da RM (Litman 2003); lâmina reta vs curva sem afirmação de superioridade; videolaringoscopia; cuff de baixa pressão apoiado no ensaio de Weiss 2009 (a citação "King 2023" não existia).
+- **Hipertermia maligna (MHAUS):** dantroleno até controle, sem água "quente", filtros de carvão em vez de trocar o aparelho, recrudescência ~20% (1 mg/kg a cada 4–6 h por ≥24 h), resfriar até 38 °C, amiodarona em vez de procainamida.
+- **IVAS:** conduta coerente (leve → prosseguir; fatores de risco → adiar 2–4 semanas); **endocardite:** profilaxia não indicada para CIV não corrigida; neonato: alvo de SpO₂ e hiperoxia corrigidos; TOT com cuff.
+- Questões com 4 alternativas (Cole, succinilcolina, CAM, agitação, SpO₂ do prematuro).
+- **Calculadora pediátrica:** succinilcolina 2 mg/kg só em <2 anos; atropina sem mínimo; texto de adrenalina IV/IM; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
