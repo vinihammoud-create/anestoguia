@@ -68,3 +68,13 @@
 - **Broncoespasmo:** tubo obstruído = pico ↑ com platô normal (tabela dizia platô ↑), salbutamol 8–10 jatos pelo TOT, aminofilina com papel limitado.
 - **Prático:** calculadora de emergência sem teto (adrenalina PCR 1,2 mg em 120 kg; atropina 1,6 mg em 80 kg) → adrenalina máx 1 mg, atropina 0,5 mg/dose na criança e 1 mg no adulto; doses pediátricas da aba Pediatria nunca eram calculadas (ids sem código) → agora calculadas; TOT com cuff como padrão; jejum ASA 2023 / ESAIC 2022; neostigmina pela ASA 2023.
 - Cartões "Pérolas de prova", "Como é no Brasil" e "Referências" (AHA 2025 partes 9–11, DAS 2025, ASRA, NAP6, MHAUS).
+
+## 3.1.0 — 2026-10-18 (fase D12 — Obstetrícia)
+- **Ocitocina:** bolus de "5–10 UI IV" (causa hipotensão e isquemia) → bolus de 1 UI lento + infusão titulada na cesárea (consenso internacional 2019); carbetocina como dose única; metilergometrina "nunca IV".
+- **Plaquetas e neuraxial:** limiar de 75.000 → ≥70.000 estável sem coagulopatia (consenso SOAP 2021), com conduta para 50.000–70.000; retirada do cateter e reavaliação em 6 h.
+- **Pré-eclâmpsia:** critérios pelo ACOG PB 222 (2020), não "ACOG 2023"; nifedipina pode ser usada com sulfato de magnésio; tabela de níveis de magnésio corrigida (8–10 perde reflexo; 12–14 paralisia respiratória; ≥25 PCR); labetalol "1 mg/kg antes da indução" → 10–20 mg titulado + remifentanil/alfentanil/lidocaína; magnésio por 24 h pós-parto (não 24–48 h).
+- **Raqui/cesárea:** noradrenalina com dose correta e como alternativa (a citação "SOAP 2023 — noradrenalina 1ª escolha" não existe; removida do módulo e do Prático); morfina intratecal até 150 mcg; CPPD pelo consenso 2023 (blood patch com alívio de ~60–70%, não ">90%"); hematoma epidural com plaquetas <70.000.
+- **Peridural:** teste de dose pelos critérios corretos (↑FC ≥10 bpm fora da contração); extensão para cesárea; categoria 1 (≤30 min) × categoria 2 (≤75 min — o caso dizia "categoria 2 em 30 min").
+- **HPP, ELA, PCR:** ácido tranexâmico com o efeito do atraso (WOMAN/CRASH-2), fibrinogênio >200, acretismo, PCR na gestante pela AHA 2025 (cesárea perimortem ≤5 min, ECPR).
+- **Prático:** dexametasona intratecal deixa de ser listada como "SOAP 2023" (não recomendada); técnica de LOR corrigida.
+- Tabela de farmacologia: vasopressina deixa de ser "contraindicada"; neostigmina; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".

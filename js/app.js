@@ -1292,10 +1292,10 @@ function calcRaqui() {
         <tr><td>Morfina IT</td><td class="vg">100–200 mcg</td><td>Padrão-ouro analgesia 24h</td></tr>
         <tr><td>Fentanil IT</td><td class="vg">20–25 mcg</td><td>Melhora qualidade do bloqueio</td></tr>
         <tr><td>Clonidina IT</td><td class="vg">15–45 mcg</td><td>Prolonga analgesia</td></tr>
-        <tr><td>Dexametasona IT</td><td class="vg">4 mg (off-label)</td><td>SOAP 2023</td></tr>
+        <tr><td>Dexametasona IT</td><td class="vg">Não recomendada</td><td>Off-label, sem segurança estabelecida no neuroeixo</td></tr>
       </tbody>
     </table>
-    ${proc === 'cesarea' ? '<div class="alert a-blue" style="margin-top:6px"><strong>Obs cesárea:</strong> Noradrenalina como 1ª escolha para hipotensão pós-raqui (SOAP 2023). Bolus 4-8 mcg IV ou infusão 0,05-0,1 mcg/kg/min.</div>' : ''}
+    ${proc === 'cesarea' ? '<div class="alert a-blue" style="margin-top:6px"><strong>Obs cesárea:</strong> Hipotensão pós-raqui: fenilefrina 1ª linha (50–100 mcg IV ou infusão 25–50 mcg/min); noradrenalina é alternativa (bolus 4–6 mcg IV ou ~0,05 mcg/kg/min) — Kinsella 2018.</div>' : ''}
   `;
 }
 
