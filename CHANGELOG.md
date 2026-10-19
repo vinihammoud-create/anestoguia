@@ -171,3 +171,16 @@
 - **Caso 3 (cesárea):** efedrina/fenilefrina contextualizadas após o parto; Trendelenburg acentuado desaconselhado; uterotônicos revisados.
 - **Questões:** 5 alternativas → 4 em todas.
 - **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
+
+## 3.1.0 — 2026-10-19 (fase D9 — Acesso vascular central)
+- **Questão 3 (pneumotórax) estava errada:** pedia a via de *menor* risco e dava a JI como correta, mas a femoral não tem risco de pneumotórax; reescrita para "maior risco" (subclávia).
+- **Teste de Allen:** estímulo de 8 s passou a 15 s e o gabarito reconhece o baixo valor preditivo do teste; revisão rápida corrigida.
+- **Ultrassom:** números "↓57% punção arterial / ↓78% hematoma" substituídos por dados verificados — Hind (BMJ 2003): falha da JI RR 0,14 e da 1ª tentativa RR 0,59; Cochrane 2015 (subclávia): punção arterial RR 0,21 e hematoma RR 0,26. Removida a recomendação atribuída à SBA.
+- **Infecção:** removido o "PICC tem a menor taxa de infecção"; incidências por sítio trocadas pelo achado do 3SITES (NEJM 2015: subclávia com menos infecção/trombose e mais PTX); removidos custo e mortalidade sem fonte; antissepsia sem "3 aplicações"; troca de equipo e de curativo conforme CDC; sem limite de 14 dias nem troca de sítio por tempo.
+- **Caso 4 (PICC em DRC com FAV):** a conduta recomendava PICC; passou a antibiótico VO (OVIVA) ou cateter tunelizado na JI direita, e PICC evitado em DRC.
+- **Caso 3 (ICSRC):** paciente em vasopressor passa a ter o cateter retirado; vancomicina com ataque e nível sérico.
+- **RCP:** acesso preferencial IV/IO (AHA); CVC femoral só como exceção; descompressão do PTX hipertensivo no 2º EIC LHC ou 5º EIC LAA (ATLS).
+- **Técnica:** profundidade do guia unificada em ~20 cm; subclávia: ponto na junção dos terços médio e medial; trombose do cateter com alteplase; CVC trombosado não precisa ser removido se funcionante.
+- **PVC:** 2–8 mmHg (3–11 cmH₂O); PPV deixa de ser "padrão ouro".
+- **Questões:** 5 alternativas → 4 em todas.
+- **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
