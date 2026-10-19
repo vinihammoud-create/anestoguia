@@ -111,3 +111,12 @@
 - **Opioides:** morfina IT 50–150 mcg, alta sem codeína/tramadol de rotina, hidromorfona (H3G), buprenorfina mantida no perioperatório, cetamina "fortemente recomendada" (não "obrigatória"); paracetamol sem "COX-3"; coxibes e CABG corrigidos; ranitidina retirada.
 - **Revisão rápida:** "fentanil 0,01 mg = 1 mcg" (falso) → 0,1 mg = 100 mcg.
 - Questões com 4 alternativas; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
+
+## 3.1.0 — 2026-10-19 (fase D9 — Volemia e Hemoterapia)
+- **SMART:** o módulo dava "OR 0,82 para MAKE30"; o OR ajustado foi 0,90 (14,3% × 15,4%); 0,82 é o OR do SALT-ED.
+- **Cristaloides:** "adrenalina IV → SF porque o Ca²⁺ do RL precipita adrenalina" era falso (o problema é RL com sangue e ceftriaxona em neonatos); "hipercalemia: evitar RL/Plasmalyte" também (K⁺ de 4–5 mEq/L não piora; o SF causa acidose e piora o K⁺).
+- **Transfusão (AABB 2023):** limiar 7 g/dL (7,5 em cirurgia cardíaca; 8 em ortopédica ou cardiopata); a frase "erro médico documentável" saiu.
+- **PROPPR:** 1:1:1 não reduziu a mortalidade global (menos morte por exsanguinação), ao contrário do que o módulo dizia.
+- **HES:** EMA recomendou a suspensão da comercialização em 2022 (o texto dizia "restringiu em 2018"); removido o "uso aceitável"; a citação "GUY Trial 2022" (inexistente) saiu; albumina na HRS-AKI com a dose atual (1 g/kg D1, depois 20–40 g/dia).
+- **Cell saver:** câncer deixou de ser contraindicação absoluta (filtro leucocitário). **Ácido tranexâmico:** convulsão com doses altas em cirurgia cardíaca.
+- Questões com 4 alternativas; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
