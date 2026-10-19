@@ -12066,5 +12066,2207 @@
     "justificativa": "A reinervação simpática parcial pode aparecer após meses ou anos (cerca de 1 ano, variável); a vagal é rara. Por isso, não se deve contar com atropina; as drogas de ação direta são preferidas."
    }
   ]
+ },
+ {
+  "id": "traumaqueim",
+  "titulo": "Trauma e Queimados",
+  "cor": "#EF4444",
+  "icone": "🔥",
+  "questoes": [
+   {
+    "id": "traumaqueim_01",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Choque",
+    "enunciado": "Paciente com trauma tem FC 130 bpm, PAS 85 mmHg, oligúria e ansiedade. Qual classe de choque hemorrágico e perda estimada?",
+    "alternativas": {
+     "A": "Classe III, 31–40% da volemia",
+     "B": "Classe I, menos de 15%",
+     "C": "Classe II, 15–30%",
+     "D": "Classe IV, mais de 40% com FC acima de 140"
+    },
+    "resposta": "A",
+    "justificativa": "Classe III: perda de 31–40%, taquicardia 120–140, hipotensão e oligúria. Na classe II há taquicardia sem hipotensão; na classe IV, FC > 140, hipotensão grave e rebaixamento do sensório. A classificação é um guia, e os pacientes variam."
+   },
+   {
+    "id": "traumaqueim_02",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Choque",
+    "enunciado": "Qual dos componentes completa a \"tríade letal\" do trauma?",
+    "alternativas": {
+     "A": "Hipertermia, alcalose e hipercoagulabilidade",
+     "B": "Hipoglicemia, hipercalemia e hipóxia",
+     "C": "Hipertensão, taquicardia e dor",
+     "D": "Hipotermia, acidose e coagulopatia"
+    },
+    "resposta": "D",
+    "justificativa": "A tríade letal (hipotermia, acidose metabólica e coagulopatia) retroalimenta-se e aumenta a mortalidade. Muitos autores acrescentam a hipocalcemia (diamante letal). Prevenir com aquecimento, hemoderivados em proporção, correção do cálcio e controle precoce do sangramento."
+   },
+   {
+    "id": "traumaqueim_03",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Choque",
+    "enunciado": "Em hipotensão permissiva no trauma penetrante, antes do controle cirúrgico do sangramento, qual a PAS-alvo habitual?",
+    "alternativas": {
+     "A": "120–140 mmHg",
+     "B": "60–70 mmHg",
+     "C": "80–90 mmHg",
+     "D": "100–110 mmHg em todos os casos"
+    },
+    "resposta": "C",
+    "justificativa": "A estratégia visa reduzir o sangramento por ruptura de coágulos e hemodiluição, mantendo perfusão aceitável. É contraindicada no TCE e na lesão medular (necessitam de PPC adequada), e usada com cuidado em idosos e hipertensos crônicos. Deve ser temporária."
+   },
+   {
+    "id": "traumaqueim_04",
+    "tema": "Trauma e Queimados",
+    "subtopico": "DCR",
+    "enunciado": "Qual é a proporção de hemoderivados recomendada na transfusão maciça pelo estudo PROPPR?",
+    "alternativas": {
+     "A": "3 : 1 : 1",
+     "B": "Concentrado de hemácias : plasma : plaquetas = 1 : 1 : 1",
+     "C": "1 : 2 : 2",
+     "D": "2 : 1 : 0"
+    },
+    "resposta": "B",
+    "justificativa": "O PROPPR (JAMA 2015) não mostrou diferença de mortalidade em 24 h e 30 dias entre 1:1:1 e 1:1:2, mas o grupo 1:1:1 teve mais hemostasia e menos morte por exsanguinação em 24 h. A ressuscitação equilibrada é a base da DCR."
+   },
+   {
+    "id": "traumaqueim_05",
+    "tema": "Trauma e Queimados",
+    "subtopico": "DCR",
+    "enunciado": "Qual é o esquema de ácido tranexâmico do estudo CRASH-2?",
+    "alternativas": {
+     "A": "2 g em bolus, iniciado em até 24 horas",
+     "B": "1 g IV em 10 minutos, seguido de 1 g em 8 horas, iniciado em até 3 horas do trauma",
+     "C": "500 mg a cada 6 horas por 5 dias",
+     "D": "10 mg/kg apenas após 6 horas do trauma"
+    },
+    "resposta": "B",
+    "justificativa": "O CRASH-2 mostrou redução da mortalidade por todas as causas e por sangramento, com benefício maior quando administrado em 1 hora; após 3 horas pode aumentar a mortalidade por sangramento. Eventos tromboembólicos não aumentaram."
+   },
+   {
+    "id": "traumaqueim_06",
+    "tema": "Trauma e Queimados",
+    "subtopico": "DCR",
+    "enunciado": "Em transfusão maciça, qual é a meta de cálcio ionizado a ser mantida?",
+    "alternativas": {
+     "A": "Acima de 1,1 mmol/L (cerca de 4,4 mg/dL)",
+     "B": "Abaixo de 0,5 mmol/L",
+     "C": "Acima de 2,5 mmol/L",
+     "D": "Não é necessário medir"
+    },
+    "resposta": "A",
+    "justificativa": "O citrato dos hemoderivados quela o cálcio. A hipocalcemia prejudica a coagulação e a contratilidade cardíaca e se associa à mortalidade. Reposição com cloreto ou gluconato de cálcio, guiada pela medida do Ca²⁺ iônico."
+   },
+   {
+    "id": "traumaqueim_07",
+    "tema": "Trauma e Queimados",
+    "subtopico": "DCR",
+    "enunciado": "Qual meta de fibrinogênio é recomendada na hemorragia traumática?",
+    "alternativas": {
+     "A": "Acima de 6 g/L",
+     "B": "Abaixo de 0,5 g/L",
+     "C": "Fibrinogênio não é relevante",
+     "D": "Acima de 1,5–2 g/L, com crioprecipitado ou concentrado de fibrinogênio"
+    },
+    "resposta": "D",
+    "justificativa": "O fibrinogênio é o primeiro fator a cair no trauma. Níveis abaixo de 1,5–2 g/L se associam a sangramento e mortalidade. As diretrizes europeias recomendam repor com concentrado de fibrinogênio ou crioprecipitado, guiado por viscoelastometria."
+   },
+   {
+    "id": "traumaqueim_08",
+    "tema": "Trauma e Queimados",
+    "subtopico": "DCR",
+    "enunciado": "Qual das condutas NÃO é recomendada na ressuscitação de controle de danos?",
+    "alternativas": {
+     "A": "Início precoce de hemoderivados em proporção equilibrada.",
+     "B": "Aquecimento ativo do paciente e dos fluidos.",
+     "C": "Infusão de grandes volumes de cristaloide para normalizar a PA antes do controle do sangramento.",
+     "D": "Uso precoce de ácido tranexâmico."
+    },
+    "resposta": "C",
+    "justificativa": "Grandes volumes de cristaloide diluem fatores de coagulação, pioram a acidose, a hipotermia e o edema. A DCR prioriza hemoderivados, hemostasia cirúrgica rápida, aquecimento, antifibrinolítico e correção do cálcio."
+   },
+   {
+    "id": "traumaqueim_09",
+    "tema": "Trauma e Queimados",
+    "subtopico": "TCE",
+    "enunciado": "Segundo as diretrizes da Brain Trauma Foundation (4ª edição), qual é a faixa recomendada de pressão de perfusão cerebral no TCE grave?",
+    "alternativas": {
+     "A": "30–40 mmHg",
+     "B": "90–100 mmHg",
+     "C": "60–70 mmHg",
+     "D": "> 120 mmHg"
+    },
+    "resposta": "C",
+    "justificativa": "A PPC-alvo é 60–70 mmHg, evitando tanto a hipoperfusão quanto a hiperperfusão (risco de SDRA). A PIC deve ser tratada quando > 22 mmHg e a PAS deve ficar ≥ 100–110 mmHg conforme a idade."
+   },
+   {
+    "id": "traumaqueim_10",
+    "tema": "Trauma e Queimados",
+    "subtopico": "TCE",
+    "enunciado": "Em um paciente com TCE grave e sinais clínicos de herniação, qual a estratégia ventilatória aceita como medida temporária?",
+    "alternativas": {
+     "A": "Hiperventilação prolongada (PaCO₂ 20–25 mmHg).",
+     "B": "Hiperventilação breve (PaCO₂ 30–35 mmHg) como ponte para tratamento definitivo",
+     "C": "Hipoventilação com hipercapnia permissiva.",
+     "D": "PaCO₂ de 60 mmHg para vasodilatar."
+    },
+    "resposta": "B",
+    "justificativa": "A hipocapnia reduz o fluxo sanguíneo cerebral e a PIC, mas pode causar isquemia. A hiperventilação profilática prolongada é desaconselhada; é medida de resgate temporária na herniação, com monitorização. Hipercapnia aumenta a PIC."
+   },
+   {
+    "id": "traumaqueim_11",
+    "tema": "Trauma e Queimados",
+    "subtopico": "TCE",
+    "enunciado": "Qual o impacto da hipotensão (PAS < 90 mmHg) e hipóxia em pacientes com TCE grave?",
+    "alternativas": {
+     "A": "Aumentam significativamente a mortalidade e a morbidade",
+     "B": "Não alteram o prognóstico.",
+     "C": "Reduzem a pressão intracraniana e melhoram o desfecho.",
+     "D": "São toleradas por 24 h sem consequências."
+    },
+    "resposta": "A",
+    "justificativa": "O insulto secundário (hipotensão, hipóxia, hipo/hipercapnia, hipertermia, hiperglicemia) agrava a lesão primária. A prevenção e a correção imediata desses fatores são o pilar do manejo."
+   },
+   {
+    "id": "traumaqueim_12",
+    "tema": "Trauma e Queimados",
+    "subtopico": "TRM",
+    "enunciado": "O choque neurogênico após lesão medular alta caracteriza-se por:",
+    "alternativas": {
+     "A": "Hipotensão com taquicardia por hipovolemia.",
+     "B": "Hipertensão com bradicardia.",
+     "C": "Hipertensão e taquicardia.",
+     "D": "Hipotensão com bradicardia e vasodilatação por perda do tônus simpático"
+    },
+    "resposta": "D",
+    "justificativa": "A lesão acima de T6 interrompe a inervação simpática: queda da RVS e do retorno venoso, hipotensão e bradicardia por predomínio vagal. O tratamento inclui volume cauteloso, vasopressor (noradrenalina) e atropina. Meta de PAM 85–90 mmHg por 7 dias para perfusão medular."
+   },
+   {
+    "id": "traumaqueim_13",
+    "tema": "Trauma e Queimados",
+    "subtopico": "TRM",
+    "enunciado": "Em lesão medular aguda, a succinilcolina:",
+    "alternativas": {
+     "A": "É contraindicada desde o primeiro minuto.",
+     "B": "Pode ser usada sem restrição durante meses.",
+     "C": "Reduz o risco de hipercalemia.",
+     "D": "Pode ser usada nas primeiras 24–48 horas e deve ser evitada depois, pelo risco de hipercalemia."
+    },
+    "resposta": "D",
+    "justificativa": "Após 48–72 h, ocorre proliferação de receptores extrajuncionais com risco de liberação massiva de potássio, que persiste por meses. Nos primeiros dias, o uso é considerado seguro. Rocurônio é alternativa para sequência rápida."
+   },
+   {
+    "id": "traumaqueim_14",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Trauma torácico",
+    "enunciado": "O diagnóstico de pneumotórax hipertensivo é:",
+    "alternativas": {
+     "A": "Radiológico, e exige tomografia.",
+     "B": "Laboratorial por gasometria.",
+     "C": "Clínico, e o tratamento (descompressão com agulha ou dreno) não deve aguardar imagem.",
+     "D": "Feito apenas após a drenagem."
+    },
+    "resposta": "C",
+    "justificativa": "Hipotensão, distensão jugular, desvio de traqueia, murmúrio ausente e hipoxemia sugerem o diagnóstico. A descompressão imediata (5º espaço intercostal, linha axilar anterior, ou 2º espaço) é salva-vidas; atrasar para imagem é perigoso."
+   },
+   {
+    "id": "traumaqueim_15",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Trauma torácico",
+    "enunciado": "Qual é a definição de hemotórax maciço?",
+    "alternativas": {
+     "A": "> 100 mL no primeiro drenado",
+     "B": "> 1500 mL de sangue drenado inicialmente ou > 200 mL/h em 2–4 horas",
+     "C": "> 300 mL em 24 horas",
+     "D": "Qualquer quantidade de sangue na pleura"
+    },
+    "resposta": "B",
+    "justificativa": "Hemotórax maciço indica toracotomia: drenagem inicial > 1500 mL ou débito persistente > 200 mL/h por 2–4 h, instabilidade hemodinâmica. Considerar autotransfusão."
+   },
+   {
+    "id": "traumaqueim_16",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Trauma torácico",
+    "enunciado": "A tríade de Beck no tamponamento cardíaco é composta por:",
+    "alternativas": {
+     "A": "Hipotensão, distensão de veias jugulares e abafamento de bulhas",
+     "B": "Hipertensão, bradicardia e dor torácica",
+     "C": "Dispneia, tosse e hemoptise",
+     "D": "Taquicardia, hipertermia e rigidez de nuca"
+    },
+    "resposta": "A",
+    "justificativa": "O tamponamento reduz o enchimento diastólico. A tríade de Beck está presente em minoria dos pacientes; o FAST (janela pericárdica) é o exame inicial. O tratamento é a drenagem (pericardiocentese ou janela/toracotomia)."
+   },
+   {
+    "id": "traumaqueim_17",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Via aérea",
+    "enunciado": "Em um paciente com trauma e suspeita de lesão de coluna cervical, durante a laringoscopia deve-se:",
+    "alternativas": {
+     "A": "Manter a estabilização manual em linha (MILS), preferindo videolaringoscopia",
+     "B": "Retirar o colar e hiperestender o pescoço.",
+     "C": "Evitar intubação a todo custo.",
+     "D": "Usar sempre intubação nasal às cegas."
+    },
+    "resposta": "A",
+    "justificativa": "A estabilização manual em linha (colar aberto anterior) reduz o movimento cervical; o videolaringoscópio melhora a visão. A prioridade é uma via aérea segura e oxigenação: o risco de lesão medular por laringoscopia é baixo quando bem feito."
+   },
+   {
+    "id": "traumaqueim_18",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Anestesia",
+    "enunciado": "Qual das opções é adequada para indução em sequência rápida em paciente com choque hemorrágico?",
+    "alternativas": {
+     "A": "Propofol 2–3 mg/kg em bolus.",
+     "B": "Tiopental 6 mg/kg.",
+     "C": "Midazolam 0,3 mg/kg isolado.",
+     "D": "Cetamina em dose reduzida (ou etomidato) com rocurônio 1,2 mg/kg e vasopressor pronto"
+    },
+    "resposta": "D",
+    "justificativa": "No choque, doses convencionais de hipnóticos causam colapso cardiovascular. Cetamina (0,5–1 mg/kg) e etomidato mantêm a estabilidade, e o rocurônio em dose alta tem início rápido. Antecipar hipotensão com vasopressor e volume."
+   },
+   {
+    "id": "traumaqueim_19",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Anestesia",
+    "enunciado": "Em gestante vítima de trauma, qual medida é importante?",
+    "alternativas": {
+     "A": "Posicionar em decúbito dorsal horizontal.",
+     "B": "Evitar hemoderivados.",
+     "C": "Posicionar com deslocamento uterino à esquerda e lembrar que os sinais de choque aparecem tarde, após perda de cerca de 30% do volume.",
+     "D": "Não monitorizar o feto."
+    },
+    "resposta": "C",
+    "justificativa": "A volemia aumentada mascara o choque; a compressão aortocava piora o retorno venoso. A mãe é prioridade: a estabilização materna garante o feto. Pensar em descolamento de placenta e ruptura uterina; considerar imunoglobulina anti-D."
+   },
+   {
+    "id": "traumaqueim_20",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Qual é a fórmula de Parkland para reposição volêmica no queimado?",
+    "alternativas": {
+     "A": "Soro glicosado 2 mL × peso × SCQ em 48 h",
+     "B": "Ringer lactato 4 mL × peso (kg) × % SCQ em 24 h, metade nas primeiras 8 h",
+     "C": "Albumina 1 g/kg em 24 h",
+     "D": "NaCl 0,45% 10 mL/kg/h"
+    },
+    "resposta": "B",
+    "justificativa": "Parkland: 4 mL/kg/%SCQ de Ringer lactato nas primeiras 24 horas contadas desde a queimadura, metade em 8 h e metade nas 16 h seguintes. A taxa deve ser ajustada pela diurese (0,5 mL/kg/h no adulto). A fórmula de Brooke modificada usa 2 mL/kg/%SCQ."
+   },
+   {
+    "id": "traumaqueim_21",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Homem de 80 kg com 40% de SCQ. Quanto de Ringer lactato, segundo Parkland, deve ser infundido nas primeiras 8 horas?",
+    "alternativas": {
+     "A": "3200 mL",
+     "B": "6400 mL",
+     "C": "12800 mL",
+     "D": "1600 mL"
+    },
+    "resposta": "B",
+    "justificativa": "Total em 24 h = 4 × 80 × 40 = 12.800 mL. Metade (6400 mL) nas primeiras 8 h desde a queimadura e a outra metade nas 16 h seguintes. Isso equivale a cerca de 800 mL/h nas primeiras 8 horas, e a infusão deve ser titulada pela diurese."
+   },
+   {
+    "id": "traumaqueim_22",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Qual é a meta de débito urinário na ressuscitação do grande queimado adulto?",
+    "alternativas": {
+     "A": "0,5 mL/kg/h",
+     "B": "0,05 mL/kg/h",
+     "C": "5 mL/kg/h",
+     "D": "10 mL/kg/h"
+    },
+    "resposta": "A",
+    "justificativa": "A diurese de 0,5 mL/kg/h (30–50 mL/h) indica perfusão adequada; em crianças pequenas, 1 mL/kg/h; em queimadura elétrica com mioglobinúria, ≥ 1–1,5 mL/kg/h. Excesso de volume (\"fluid creep\") causa edema, compartimental e SDRA."
+   },
+   {
+    "id": "traumaqueim_23",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Qual é a estimativa da área queimada pela regra dos 9 no adulto para o membro inferior completo?",
+    "alternativas": {
+     "A": "9%",
+     "B": "4,5%",
+     "C": "36%",
+     "D": "18%"
+    },
+    "resposta": "D",
+    "justificativa": "Regra dos 9: cabeça 9%, cada membro superior 9%, tronco anterior 18%, tronco posterior 18%, cada membro inferior 18% e genitais 1%. Em crianças, usar a tabela de Lund-Browder (cabeça proporcionalmente maior). A palma da mão do paciente equivale a ≈ 1%."
+   },
+   {
+    "id": "traumaqueim_24",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Qual dos sinais sugere lesão inalatória e indica considerar intubação precoce?",
+    "alternativas": {
+     "A": "Febre baixa isolada",
+     "B": "Queimadura isolada em perna",
+     "C": "Vibrissas chamuscadas, rouquidão, escarro carbonáceo e queimadura facial",
+     "D": "Dor torácica pleurítica"
+    },
+    "resposta": "C",
+    "justificativa": "A lesão inalatória causa edema progressivo da via aérea nas primeiras horas; esperar sinais graves pode tornar a intubação impossível. A decisão é clínica; a fibrobroncoscopia confirma e orienta. Em dúvida, intubar de forma precoce com tubo calibroso."
+   },
+   {
+    "id": "traumaqueim_25",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Em intoxicação por monóxido de carbono, a oximetria de pulso convencional:",
+    "alternativas": {
+     "A": "Subestima a saturação.",
+     "B": "Indica corretamente o nível de COHb.",
+     "C": "Pode mostrar SpO₂ normal, pois lê a carboxi-Hb como oxi-Hb",
+     "D": "Fica sempre abaixo de 80%."
+    },
+    "resposta": "C",
+    "justificativa": "A COHb absorve luz vermelha semelhante à oxi-Hb. É preciso dosar a COHb por co-oximetria. O tratamento é O₂ 100%, que reduz a meia-vida da COHb de ~4–5 h (ar) para ~60–90 min."
+   },
+   {
+    "id": "traumaqueim_26",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Qual é o antídoto recomendado em suspeita de intoxicação por cianeto em vítima de incêndio?",
+    "alternativas": {
+     "A": "Naloxona 2 mg IV",
+     "B": "Hidroxocobalamina 5 g IV (70 mg/kg em crianças)",
+     "C": "Flumazenil 0,2 mg IV",
+     "D": "Atropina 1 mg IV"
+    },
+    "resposta": "B",
+    "justificativa": "O cianeto inibe a citocromo-oxidase e causa acidose láctica grave. A hidroxocobalamina se liga ao cianeto formando cianocobalamina, que é excretada. Tiossulfato de sódio e nitritos são alternativas (nitritos podem piorar a metemoglobinemia em lesão por CO)."
+   },
+   {
+    "id": "traumaqueim_27",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Qual é o risco do uso de succinilcolina em grande queimado após alguns dias da lesão?",
+    "alternativas": {
+     "A": "Hipercalemia grave por proliferação de receptores extrajuncionais",
+     "B": "Hipocalemia grave",
+     "C": "Hipertermia maligna obrigatória",
+     "D": "Bloqueio prolongado por deficiência de pseudocolinesterase em todos os casos"
+    },
+    "resposta": "A",
+    "justificativa": "A partir de ~24–48 h e por vários meses até a cicatrização, a succinilcolina despolariza receptores extrajuncionais, liberando potássio em excesso, com risco de arritmias fatais. O rocurônio é a alternativa para sequência rápida."
+   },
+   {
+    "id": "traumaqueim_28",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Quanto à resposta aos bloqueadores neuromusculares não despolarizantes no queimado:",
+    "alternativas": {
+     "A": "Há sensibilidade aumentada com redução da dose.",
+     "B": "Não há alteração de resposta.",
+     "C": "A resposta só se altera nas primeiras 24 horas.",
+     "D": "Há resistência, e doses 2 a 5 vezes maiores podem ser necessárias; o pico de resistência ocorre em 1–2 semanas."
+    },
+    "resposta": "D",
+    "justificativa": "O aumento de receptores colinérgicos extrajuncionais e de proteína ligada (α1-glicoproteína ácida) reduz o efeito. Titular pelo TOF. O efeito pode durar meses após queimaduras grandes."
+   },
+   {
+    "id": "traumaqueim_29",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Qual dos cuidados é adequado na sala cirúrgica para o grande queimado?",
+    "alternativas": {
+     "A": "Manter a sala fria para reduzir o metabolismo.",
+     "B": "Evitar monitorização de temperatura.",
+     "C": "Usar sempre fluidos frios para reduzir edema.",
+     "D": "Aquecer a sala (28–32 °C), usar manta térmica e fluidos aquecidos"
+    },
+    "resposta": "D",
+    "justificativa": "A perda da barreira cutânea causa perda de calor e líquidos por evaporação; a hipotermia agrava coagulopatia e acidose. Na excisão precoce, o sangramento pode ser volumoso: usar TXA, epinefrina tumescente e hemoderivados."
+   },
+   {
+    "id": "traumaqueim_30",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Em queimadura elétrica de alta voltagem, qual a complicação que exige hidratação agressiva?",
+    "alternativas": {
+     "A": "Hipercalcemia grave",
+     "B": "Hiponatremia por SIADH",
+     "C": "Rabdomiólise com mioglobinúria",
+     "D": "Hipoglicemia reativa"
+    },
+    "resposta": "C",
+    "justificativa": "A lesão muscular profunda libera mioglobina e CK, com risco de lesão renal. Manter diurese ≥ 1–1,5 mL/kg/h, monitorizar CK, ECG e arritmias, avaliar síndrome compartimental e fasciotomia."
+   },
+   {
+    "id": "traumaqueim_31",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Qual é a principal indicação de escarotomia?",
+    "alternativas": {
+     "A": "Qualquer queimadura de 2º grau",
+     "B": "Queimadura circunferencial de extremidade, tórax ou pescoço com comprometimento da perfusão ou da ventilação",
+     "C": "Dor intensa isolada",
+     "D": "Queimadura de 1º grau extensa"
+    },
+    "resposta": "B",
+    "justificativa": "A escara inelástica comprime estruturas subjacentes com o edema, causando isquemia distal ou restrição ventilatória. A escarotomia libera a pressão. A síndrome compartimental abdominal também pode ocorrer por excesso de volume e exige descompressão."
+   },
+   {
+    "id": "traumaqueim_32",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "No grande queimado, a fase hiperdinâmica (após 48 horas) se caracteriza por:",
+    "alternativas": {
+     "A": "Aumento do débito cardíaco, do metabolismo e do clearance de muitas drogas",
+     "B": "Redução do metabolismo e do débito cardíaco",
+     "C": "Hipotermia fisiológica permanente",
+     "D": "Queda da temperatura corporal basal"
+    },
+    "resposta": "A",
+    "justificativa": "Após a fase de choque, o queimado apresenta hipermetabolismo, aumento do DC, febre central e catabolismo proteico. Isso altera a farmacocinética, com maior necessidade de sedativos, analgésicos e suporte nutricional."
+   },
+   {
+    "id": "traumaqueim_33",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Queimados",
+    "enunciado": "Qual das opções descreve a regra da palma na estimativa de SCQ?",
+    "alternativas": {
+     "A": "A palma da mão do paciente (incluindo dedos) corresponde a cerca de 1% da superfície corporal",
+     "B": "A palma da mão corresponde a 9%",
+     "C": "A palma da mão do examinador equivale a 5%",
+     "D": "A palma da mão equivale a 0,1%"
+    },
+    "resposta": "A",
+    "justificativa": "A palma do paciente com os dedos representa ≈ 1% de sua SCQ e é útil em queimaduras pequenas ou esparsas. Em queimaduras extensas, usa-se a regra dos 9 (adultos) ou Lund-Browder (crianças)."
+   },
+   {
+    "id": "traumaqueim_34",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Trauma",
+    "enunciado": "Qual o objetivo principal da REBOA (oclusão endovascular da aorta) no trauma?",
+    "alternativas": {
+     "A": "Tratar a hipertensão intracraniana",
+     "B": "Realizar angioplastia coronária",
+     "C": "Oxigenar o sangue",
+     "D": "Controlar temporariamente a hemorragia abaixo do balão e sustentar a perfusão proximal como ponte para a cirurgia"
+    },
+    "resposta": "D",
+    "justificativa": "A REBOA é indicada em hemorragia de tronco/pelve exsanguinante. Zona 1 (aorta torácica descendente) ou zona 3 (infrarrenal). Tempo de oclusão limitado pelo risco isquêmico. Não substitui hemostasia cirúrgica."
+   },
+   {
+    "id": "traumaqueim_35",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Trauma",
+    "enunciado": "Qual das opções descreve melhor a toracotomia de reanimação?",
+    "alternativas": {
+     "A": "Indicada em qualquer PCR traumática",
+     "B": "Contraindicada em trauma torácico penetrante",
+     "C": "Indicada em trauma penetrante torácico com PCR presenciada ou sinais de vida recentes",
+     "D": "Indicada somente em trauma cranioencefálico"
+    },
+    "resposta": "C",
+    "justificativa": "A taxa de sobrevida é maior em ferida cardíaca penetrante com PCR presenciada. Em trauma contuso ou sem sinais de vida, os resultados são ruins. Seus objetivos incluem aliviar tamponamento, controlar hemorragia cardíaca e clampear aorta."
+   },
+   {
+    "id": "traumaqueim_36",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Trauma",
+    "enunciado": "Na avaliação inicial do trauma (ATLS), a sequência correta (xABCDE) começa por:",
+    "alternativas": {
+     "A": "Exposição, depois via aérea",
+     "B": "Controle de hemorragia exsanguinante (x), seguida de vias aéreas com proteção cervical (A)",
+     "C": "Circulação, depois respiração",
+     "D": "Avaliação neurológica, depois via aérea"
+    },
+    "resposta": "B",
+    "justificativa": "O ATLS atual prioriza a hemorragia exsanguinante (x) antes de A (via aérea com estabilização da coluna cervical), B (respiração), C (circulação), D (déficit neurológico) e E (exposição/controle ambiental)."
+   },
+   {
+    "id": "traumaqueim_37",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Trauma",
+    "enunciado": "Em um idoso politraumatizado em uso de betabloqueador, qual a armadilha na avaliação do choque?",
+    "alternativas": {
+     "A": "A pressão arterial é sempre mais alta que o normal.",
+     "B": "A taquicardia pode estar ausente, mascarando a hipovolemia",
+     "C": "Não há risco de choque.",
+     "D": "A FC sempre excede 150 bpm."
+    },
+    "resposta": "B",
+    "justificativa": "Idosos têm reserva reduzida, são hipertensos crônicos (PA \"normal\" pode ser hipotensão relativa) e podem usar betabloqueadores ou ter marca-passo. Lactato, déficit de base e perfusão periférica são marcadores mais úteis."
+   },
+   {
+    "id": "traumaqueim_38",
+    "tema": "Trauma e Queimados",
+    "subtopico": "Trauma",
+    "enunciado": "O que é a \"síndrome compartimental abdominal\"?",
+    "alternativas": {
+     "A": "Hipertensão intra-abdominal sustentada (> 20 mmHg) com nova disfunção orgânica",
+     "B": "Dor abdominal sem alteração de pressão",
+     "C": "Pressão intra-abdominal de 5 mmHg com hipotensão",
+     "D": "Hérnia incisional assintomática"
+    },
+    "resposta": "A",
+    "justificativa": "Definida por pressão intra-abdominal > 20 mmHg com falência orgânica (oligúria, aumento de pressão de via aérea, hipotensão). Pode ocorrer por ressuscitação volêmica excessiva em trauma e queimados. Tratamento: descompressão e laparostomia."
+   }
+  ]
+ },
+ {
+  "id": "cardiaca",
+  "titulo": "Anestesia Cardíaca e CEC",
+  "cor": "#DC2626",
+  "icone": "❤️",
+  "questoes": [
+   {
+    "id": "cardiaca_01",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Pré-operatório",
+    "enunciado": "Qual das medicações deve ser suspensa 24 horas antes de cirurgia cardíaca com CEC, pelo risco de vasoplegia e hipotensão na indução?",
+    "alternativas": {
+     "A": "IECA/BRA",
+     "B": "Betabloqueador",
+     "C": "AAS",
+     "D": "Estatina"
+    },
+    "resposta": "A",
+    "justificativa": "IECA e BRA podem causar hipotensão refratária na indução e vasoplegia pós-CEC e costumam ser suspensos 24 h antes. Betabloqueadores e estatinas são mantidos (reduzem fibrilação atrial e eventos); o AAS é mantido em coronariopatas."
+   },
+   {
+    "id": "cardiaca_02",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Pré-operatório",
+    "enunciado": "Quantos dias antes de cirurgia cardíaca eletiva costuma-se suspender o clopidogrel?",
+    "alternativas": {
+     "A": "24 horas",
+     "B": "10 minutos",
+     "C": "30 dias",
+     "D": "5 dias"
+    },
+    "resposta": "D",
+    "justificativa": "Clopidogrel: 5 dias (prasugrel: 7; ticagrelor: 3–5), para restaurar a função plaquetária e reduzir sangramento. O AAS é mantido. Em urgência, usar plaquetas e antifibrinolíticos."
+   },
+   {
+    "id": "cardiaca_03",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Pré-operatório",
+    "enunciado": "Antes da cirurgia, o paciente usa inibidor de SGLT2. Qual é a orientação?",
+    "alternativas": {
+     "A": "Dobrar a dose na véspera",
+     "B": "Mantê-lo até a manhã da cirurgia sem restrição",
+     "C": "Suspender cerca de 3 dias antes pelo risco de cetoacidose euglicêmica",
+     "D": "Suspender 1 hora antes"
+    },
+    "resposta": "C",
+    "justificativa": "Os iSGLT2 podem causar cetoacidose euglicêmica no perioperatório (jejum, estresse, insulina reduzida). Recomenda-se suspender 3 dias antes (4 para ertugliflozina) e checar cetonas em sintomas."
+   },
+   {
+    "id": "cardiaca_04",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Valvopatias",
+    "enunciado": "Qual é a meta hemodinâmica ideal na estenose aórtica grave?",
+    "alternativas": {
+     "A": "Taquicardia e vasodilatação para reduzir a pós-carga",
+     "B": "Manter ritmo sinusal, frequência normal-baixa, pré-carga e pós-carga adequadas (evitar vasodilatação)",
+     "C": "Redução da pré-carga e bradicardia extrema",
+     "D": "Aumento da contratilidade com inotrópico em dose alta"
+    },
+    "resposta": "B",
+    "justificativa": "A estenose fixa o débito: taquicardia reduz o tempo de ejeção e de perfusão coronariana; vasodilatação reduz a pressão de perfusão coronariana, causando isquemia e colapso. Fenilefrina e noradrenalina sustentam a perfusão; perda do ritmo sinusal exige cardioversão."
+   },
+   {
+    "id": "cardiaca_05",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Valvopatias",
+    "enunciado": "Em paciente com insuficiência aórtica grave, qual meta é desejável?",
+    "alternativas": {
+     "A": "Bradicardia para aumentar a diástole",
+     "B": "FC em torno de 80–90 bpm e redução da pós-carga",
+     "C": "Aumento da resistência vascular sistêmica",
+     "D": "FC de 40–50 bpm"
+    },
+    "resposta": "B",
+    "justificativa": "Na insuficiência aórtica, a bradicardia prolonga a diástole e aumenta o volume regurgitante, e a elevação da pós-carga aumenta o refluxo. FC de 80–90 bpm e vasodilatação reduzem a regurgitação. Balão intra-aórtico é contraindicado."
+   },
+   {
+    "id": "cardiaca_06",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Valvopatias",
+    "enunciado": "Na estenose mitral grave, o que deve ser evitado?",
+    "alternativas": {
+     "A": "Taquicardia, que reduz o tempo de enchimento diastólico e aumenta o gradiente",
+     "B": "Bradicardia leve",
+     "C": "Manutenção do ritmo sinusal",
+     "D": "Controle da frequência com betabloqueador"
+    },
+    "resposta": "A",
+    "justificativa": "A estenose mitral limita o enchimento do VE; taquicardia encurta a diástole, eleva a pressão do átrio esquerdo e causa edema pulmonar. Manter a pré-carga, ritmo sinusal (cardioversão na FA com instabilidade) e evitar hipercapnia/hipóxia que elevam a pressão pulmonar."
+   },
+   {
+    "id": "cardiaca_07",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Valvopatias",
+    "enunciado": "Qual é a conduta na insuficiência mitral aguda grave com instabilidade?",
+    "alternativas": {
+     "A": "Aumentar a pós-carga com vasopressor isolado",
+     "B": "Bradicardia para aumentar o tempo de enchimento",
+     "C": "Restrição absoluta de volume",
+     "D": "Reduzir a pós-carga (vasodilatador), manter FC normal-alta e considerar balão intra-aórtico"
+    },
+    "resposta": "D",
+    "justificativa": "Pós-carga alta aumenta o refluxo mitral; vasodilatadores (nitroprussiato) e o BIA promovem o fluxo anterógrado. FC normal-alta evita aumento do volume regurgitante. Inotrópicos podem ser necessários."
+   },
+   {
+    "id": "cardiaca_08",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Valvopatias",
+    "enunciado": "Qual é a conduta ideal na cardiomiopatia hipertrófica obstrutiva (CMH) que desenvolve hipotensão na indução?",
+    "alternativas": {
+     "A": "Dobutamina em bolus",
+     "B": "Nitroglicerina para reduzir a pós-carga",
+     "C": "Expansão volêmica e fenilefrina, com redução de inotrópicos e taquicardia",
+     "D": "Isoproterenol"
+    },
+    "resposta": "C",
+    "justificativa": "A obstrução dinâmica da via de saída piora com hipovolemia, taquicardia, inotropismo e vasodilatação. O tratamento é volume, vasoconstritor puro (fenilefrina), betabloqueador e anestesia que preserve o ritmo sinusal. Inotrópicos e vasodilatadores agravam."
+   },
+   {
+    "id": "cardiaca_09",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Valvopatias",
+    "enunciado": "Qual é o manejo anestésico mais importante no tamponamento cardíaco antes da drenagem?",
+    "alternativas": {
+     "A": "Indução com propofol em dose alta e ventilação com pressão positiva elevada",
+     "B": "Reduzir a pré-carga com diurético",
+     "C": "Manter FC alta, pré-carga e resistência vascular; evitar vasodilatação e depressão miocárdica",
+     "D": "Bradicardia com betabloqueador"
+    },
+    "resposta": "C",
+    "justificativa": "O débito depende da frequência e da pré-carga. Indução com cetamina e baixas doses, expansão de volume, ventilação espontânea preservada até a drenagem. Pressão positiva reduz mais o retorno venoso."
+   },
+   {
+    "id": "cardiaca_10",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Qual é a dose usual de heparina para iniciar a circulação extracorpórea e o ACT-alvo?",
+    "alternativas": {
+     "A": "50 U/kg; ACT > 150 s",
+     "B": "300–400 U/kg IV; ACT acima de 400–480 s",
+     "C": "1000 U/kg; ACT > 1000 s",
+     "D": "5000 U fixos; ACT > 200 s"
+    },
+    "resposta": "B",
+    "justificativa": "A CEC exige anticoagulação plena, com 300–400 U/kg de heparina e ACT > 400–480 s antes de canular e iniciar. Doses suplementares conforme o ACT durante a CEC. A reversão é feita com protamina."
+   },
+   {
+    "id": "cardiaca_11",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Paciente com ACT de 250 s após 400 U/kg de heparina. A causa mais provável e a conduta são:",
+    "alternativas": {
+     "A": "Resistência à heparina por deficiência de antitrombina; administrar antitrombina ou plasma",
+     "B": "Hiperatividade da protamina; aumentar protamina",
+     "C": "Trombocitopenia por CEC; transfundir hemácias",
+     "D": "Excesso de heparina; reduzir a dose"
+    },
+    "resposta": "A",
+    "justificativa": "A heparina age ligando-se à antitrombina; níveis baixos (uso prévio de heparina, sepse, terapia com nitroglicerina) causam resistência. Tratamento: concentrado de antitrombina (50–100 UI/kg) ou plasma. Excluir erro de medida e HIT."
+   },
+   {
+    "id": "cardiaca_12",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Qual é a dose habitual de protamina para neutralizar a heparina e como deve ser administrada?",
+    "alternativas": {
+     "A": "10 mg/kg em bolus rápido",
+     "B": "1 mg por U de heparina",
+     "C": "100 mg em bolus único",
+     "D": "Cerca de 1 mg para cada 100 U de heparina, em infusão lenta de 5–10 minutos"
+    },
+    "resposta": "D",
+    "justificativa": "A infusão rápida causa vasodilatação e hipotensão (reação tipo I). Há reações anafiláticas (tipo II) e hipertensão pulmonar catastrófica (tipo III). Fatores de risco: insulina NPH, vasectomia, alergia a peixe e exposição prévia à protamina."
+   },
+   {
+    "id": "cardiaca_13",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "A reação tipo III à protamina caracteriza-se por:",
+    "alternativas": {
+     "A": "Apenas rash cutâneo",
+     "B": "Hipertensão sistêmica isolada",
+     "C": "Hipoglicemia grave",
+     "D": "Hipertensão pulmonar aguda com falência do ventrículo direito e hipotensão sistêmica"
+    },
+    "resposta": "D",
+    "justificativa": "A reação catastrófica (tipo III) resulta da liberação de tromboxano e vasoconstrição pulmonar, com aumento súbito da pressão pulmonar e colapso do VD. Tratar com suspensão da protamina, heparina para retorno à CEC, vasodilatadores pulmonares e suporte."
+   },
+   {
+    "id": "cardiaca_14",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Qual é o fluxo e a PAM habituais durante a CEC em adulto normotenso?",
+    "alternativas": {
+     "A": "Fluxo 0,5 L/min/m² e PAM 20 mmHg",
+     "B": "Fluxo 5 L/min/m² e PAM 120 mmHg",
+     "C": "Fluxo 2,2–2,5 L/min/m² e PAM 50–70 mmHg",
+     "D": "Fluxo 1 L/min e PAM 100 mmHg sempre"
+    },
+    "resposta": "C",
+    "justificativa": "O fluxo da CEC é de 2,2–2,5 L/min/m² (cerca de 50–60 mL/kg/min) e PAM 50–70 mmHg; metas mais altas em cerebrovasculares, hipertensos e idosos. O fluxo baixo prejudica a DO₂ e aumenta o risco de LRA."
+   },
+   {
+    "id": "cardiaca_15",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Qual é a DO₂ indexada mínima durante a CEC sugerida para reduzir o risco de LRA?",
+    "alternativas": {
+     "A": "Acima de 50 mL/min/m²",
+     "B": "Acima de aproximadamente 272 mL/min/m²",
+     "C": "Acima de 1000 mL/min/m²",
+     "D": "Não é relevante"
+    },
+    "resposta": "B",
+    "justificativa": "Ranucci e colaboradores mostraram que DO₂i abaixo de 272 mL/min/m² associa-se à LRA após cirurgia coronariana; o hematócrito baixo na CEC reduz a DO₂. A perfusão dirigida a metas inclui ajustar fluxo e hematócrito."
+   },
+   {
+    "id": "cardiaca_16",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Qual é a diferença entre as estratégias α-stat e pH-stat?",
+    "alternativas": {
+     "A": "α-stat não corrige gases pela temperatura e preserva a autorregulação; pH-stat adiciona CO₂ para manter o pH corrigido, aumentando o fluxo cerebral.",
+     "B": "α-stat acrescenta CO₂ para corrigir o pH pela temperatura.",
+     "C": "pH-stat é o padrão em adultos.",
+     "D": "As duas estratégias são idênticas."
+    },
+    "resposta": "A",
+    "justificativa": "No α-stat o pH não corrigido fica alcalino em hipotermia, mantendo a eletroneutralidade proteica e a autorregulação cerebral; é a estratégia padrão em adultos. O pH-stat aumenta o fluxo cerebral e pode favorecer o resfriamento homogêneo (útil em crianças/parada circulatória)."
+   },
+   {
+    "id": "cardiaca_17",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Qual é a taxa máxima de reaquecimento recomendada na CEC e o gradiente com o sangue?",
+    "alternativas": {
+     "A": "Até ~0,5 °C/min, com gradiente entre sangue e paciente < 10 °C",
+     "B": "5 °C/min",
+     "C": "10 °C/min com gradiente de 20 °C",
+     "D": "Reaquecimento instantâneo"
+    },
+    "resposta": "A",
+    "justificativa": "Reaquecimento rápido libera gases dissolvidos (bolhas) e causa hipertermia cerebral, associada a pior desfecho neurológico. Limitar a temperatura do sangue a ≤ 37 °C e o gradiente a < 10 °C."
+   },
+   {
+    "id": "cardiaca_18",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Qual das opções descreve a cardioplegia?",
+    "alternativas": {
+     "A": "Solução com baixo potássio para acelerar o coração",
+     "B": "Solução de glicose a 5% morna para uso intravenoso",
+     "C": "Infusão de adrenalina na raiz aórtica",
+     "D": "Solução rica em potássio (20–30 mEq/L), em geral fria, que provoca parada diastólica e reduz o consumo de O₂ miocárdico."
+    },
+    "resposta": "D",
+    "justificativa": "A despolarização sustentada pelo K⁺ elevado mantém o músculo cardíaco em diástole, com baixo consumo de O₂. Pode ser cristaloide ou sanguínea (4:1), fria ou morna, anterógrada ou retrógrada. A solução de del Nido é de dose única."
+   },
+   {
+    "id": "cardiaca_19",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Qual é a conduta na vasoplegia refratária após CEC com débito cardíaco normal?",
+    "alternativas": {
+     "A": "Betabloqueador intravenoso",
+     "B": "Nitroprussiato de sódio",
+     "C": "Noradrenalina e vasopressina, considerando azul de metileno 1–2 mg/kg",
+     "D": "Restrição absoluta de volume e nada mais"
+    },
+    "resposta": "C",
+    "justificativa": "A vasoplegia (baixa RVS) tem mecanismo ligado ao óxido nítrico e à deficiência de vasopressina. Vasopressina 0,03–0,04 U/min, noradrenalina e azul de metileno (inibe a guanilato ciclase) são usados. O azul de metileno interfere com oxímetros e é contraindicado com ISRS por risco de síndrome serotoninérgica."
+   },
+   {
+    "id": "cardiaca_20",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "CEC",
+    "enunciado": "Qual é o efeito esperado da CEC sobre a farmacocinética dos anestésicos?",
+    "alternativas": {
+     "A": "Todos os fármacos têm concentração aumentada",
+     "B": "Hemodiluição e sequestro no circuito reduzem a concentração livre; pode ser necessária dose adicional de hipnótico e relaxante",
+     "C": "Não há alteração farmacocinética",
+     "D": "Aumento da ligação a proteínas em todos os fármacos"
+    },
+    "resposta": "B",
+    "justificativa": "O volume de preenchimento do circuito diluiu o sangue, e há adsorção em superfícies. Hipotermia reduz o metabolismo. É preciso manter a profundidade anestésica (volátil no oxigenador ou propofol) e relaxamento para evitar tremores e consciência."
+   },
+   {
+    "id": "cardiaca_21",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Saída de CEC",
+    "enunciado": "Qual das condições NÃO precisa ser verificada antes do desmame da CEC?",
+    "alternativas": {
+     "A": "Temperatura central ≥ 36 °C",
+     "B": "Normalização da velocidade de hemossedimentação",
+     "C": "Potássio e cálcio ionizado adequados",
+     "D": "Ritmo cardíaco estável e ventilação restabelecida"
+    },
+    "resposta": "B",
+    "justificativa": "O desmame requer temperatura, ritmo, eletrólitos (K⁺ 4,5–5,5; Ca²⁺ > 1,1), Hb, gasometria, ventilação, ETE (ar e função) e fármacos preparados. A VHS não tem papel."
+   },
+   {
+    "id": "cardiaca_22",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Saída de CEC",
+    "enunciado": "Qual a vantagem do ETE na saída de CEC?",
+    "alternativas": {
+     "A": "Detectar ar nas câmaras, avaliar a função biventricular, as valvas e o resultado da cirurgia",
+     "B": "Medir o hematócrito",
+     "C": "Substituir o ECG",
+     "D": "Medir o ACT"
+    },
+    "resposta": "A",
+    "justificativa": "O ETE orienta a retirada de ar (reduz embolia coronária/cerebral), mostra disfunção de VD/VE, a competência de valvas reparadas ou trocadas, o deslocamento do septo e a necessidade de inotrópico ou suporte. Não substitui monitorização do ECG."
+   },
+   {
+    "id": "cardiaca_23",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Saída de CEC",
+    "enunciado": "Em um paciente com disfunção grave do VD após CEC e PAP alta, qual das medidas é adequada?",
+    "alternativas": {
+     "A": "Aumentar a PEEP e a hipercapnia permissiva",
+     "B": "Fenilefrina em bolus isolada",
+     "C": "Infusão de grande volume de cristaloide",
+     "D": "Óxido nítrico inalado, milrinona, evitar hipoxemia/hipercapnia e manter a PAM"
+    },
+    "resposta": "D",
+    "justificativa": "A pós-carga do VD aumenta com hipóxia, hipercapnia, acidose e PEEP excessiva. Vasodilatadores pulmonares inalados reduzem a RVP sem hipotensão sistêmica; a milrinona melhora a contratilidade; a PAM mantém a perfusão coronariana do VD."
+   },
+   {
+    "id": "cardiaca_24",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Saída de CEC",
+    "enunciado": "Quanto ao balão intra-aórtico (BIA), qual afirmação é correta?",
+    "alternativas": {
+     "A": "Insufla na sístole e desinsufla na diástole.",
+     "B": "É indicado na insuficiência aórtica grave.",
+     "C": "Insufla na diástole para aumentar a perfusão coronariana e desinsufla na sístole para reduzir a pós-carga.",
+     "D": "Aumenta a pós-carga do VE."
+    },
+    "resposta": "C",
+    "justificativa": "O BIA é posicionado na aorta descendente: sua insuflação diastólica aumenta a pressão diastólica (perfusão coronariana) e a desinsuflação sistólica reduz a pós-carga. Contraindicado na insuficiência aórtica significativa, na dissecção aórtica e na aorta com aneurisma."
+   },
+   {
+    "id": "cardiaca_25",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Saída de CEC",
+    "enunciado": "Qual é o principal mecanismo da síndrome de baixo débito pós-CEC?",
+    "alternativas": {
+     "A": "Excesso de hematócrito",
+     "B": "Hiperglicemia isolada",
+     "C": "Disfunção miocárdica por isquemia-reperfusão, atordoamento ou proteção inadequada, além de pré-carga baixa",
+     "D": "Excesso de vasodilatação por hipernatremia"
+    },
+    "resposta": "C",
+    "justificativa": "O baixo débito pode resultar de atordoamento miocárdico, hipovolemia, vasoplegia, tamponamento ou problema valvar. Investigar com ETE e tratar a causa; inotrópicos e BIA ajudam."
+   },
+   {
+    "id": "cardiaca_26",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Complicações",
+    "enunciado": "Em cirurgia cardíaca, o estudo TRICS III comparou estratégias transfusionais e concluiu que:",
+    "alternativas": {
+     "A": "A estratégia liberal reduziu a mortalidade pela metade.",
+     "B": "A transfusão restritiva (Hb < 7,5 g/dL) foi não inferior à liberal.",
+     "C": "A estratégia restritiva dobrou o risco de morte.",
+     "D": "Não houve diferença no número de transfusões."
+    },
+    "resposta": "B",
+    "justificativa": "O TRICS III incluiu 5243 pacientes e mostrou que um limiar de Hb de 7,5 g/dL não foi inferior ao de 8,5–9,5 g/dL para o desfecho composto de morte, IAM, AVC ou LRA com diálise. A individualização é necessária em instabilidade."
+   },
+   {
+    "id": "cardiaca_27",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Complicações",
+    "enunciado": "Qual é o efeito adverso mais relevante de altas doses de ácido tranexâmico em cirurgia cardíaca?",
+    "alternativas": {
+     "A": "Convulsões",
+     "B": "Hipoglicemia",
+     "C": "Hepatite fulminante",
+     "D": "Neutropenia"
+    },
+    "resposta": "A",
+    "justificativa": "Doses altas (> 50–100 mg/kg) se associam a convulsões pós-operatórias (inibição de receptores GABA-A e glicina). Doses menores têm eficácia semelhante em muitos cenários."
+   },
+   {
+    "id": "cardiaca_28",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Complicações",
+    "enunciado": "Segundo o estudo MYRIAD (NEJM 2019), em CABG:",
+    "alternativas": {
+     "A": "A TIVA dobrou a mortalidade.",
+     "B": "A anestesia volátil reduziu a mortalidade em 50%.",
+     "C": "O estudo não incluiu desfechos clínicos.",
+     "D": "Anestesia volátil não reduziu a mortalidade de 1 ano em comparação com a TIVA."
+    },
+    "resposta": "D",
+    "justificativa": "O MYRIAD randomizou 5400 pacientes e não encontrou diferença na mortalidade de 1 ano entre sevoflurano/isoflurano/desflurano e propofol. A escolha deve seguir outros critérios, como estabilidade e recuperação."
+   },
+   {
+    "id": "cardiaca_29",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Complicações",
+    "enunciado": "A fibrilação atrial pós-operatória ocorre em cerca de qual porcentagem dos pacientes submetidos a cirurgia cardíaca?",
+    "alternativas": {
+     "A": "0,1%",
+     "B": "1%",
+     "C": "90%",
+     "D": "30–40%"
+    },
+    "resposta": "D",
+    "justificativa": "A FA ocorre tipicamente no 2º–3º dia, aumenta o risco de AVC e o tempo de internação. Profilaxia: betabloqueador mantido e amiodarona; manter K⁺ > 4,5 e Mg²⁺ > 2 mg/dL."
+   },
+   {
+    "id": "cardiaca_30",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Complicações",
+    "enunciado": "Qual é o limiar de sangramento que justifica reabordagem cirúrgica em pós-operatório de cirurgia cardíaca?",
+    "alternativas": {
+     "A": "10 mL em 24 horas",
+     "B": "50 mL/h em 1 hora",
+     "C": "Drenagem de mais de 200–300 mL/h por 2–3 horas consecutivas, ou instabilidade com suspeita de tamponamento",
+     "D": "Qualquer drenagem de sangue"
+    },
+    "resposta": "C",
+    "justificativa": "Sangramento cirúrgico persistente (> 200 mL/h) ou súbito exige reabordagem; coagulopatia deve ser corrigida primeiro (protamina, plaquetas, fibrinogênio, TXA). Dreno obstruído com instabilidade sugere tamponamento."
+   },
+   {
+    "id": "cardiaca_31",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Complicações",
+    "enunciado": "Qual das medidas reduz o risco de lesão renal aguda em cirurgia cardíaca?",
+    "alternativas": {
+     "A": "Hemodiluição máxima na CEC",
+     "B": "Evitar hipotensão e hemodiluição excessiva na CEC, e nefrotóxicos",
+     "C": "Uso rotineiro de AINEs",
+     "D": "Hipotensão permissiva prolongada"
+    },
+    "resposta": "B",
+    "justificativa": "A LRA associa-se a baixa DO₂, hipotensão, hemólise e inflamação. Manter DO₂i adequada, PAM e evitar nefrotóxicos (AINEs, contraste, aminoglicosídeos) reduz o risco. Fármacos específicos de prevenção não demonstraram benefício."
+   },
+   {
+    "id": "cardiaca_32",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "ETE",
+    "enunciado": "Qual é a contraindicação absoluta para ecocardiografia transesofágica?",
+    "alternativas": {
+     "A": "Estenose ou perfuração esofágica",
+     "B": "Fibrilação atrial",
+     "C": "Hipertensão pulmonar",
+     "D": "Uso de betabloqueador"
+    },
+    "resposta": "A",
+    "justificativa": "Contraindicações absolutas: perfuração esofágica, estenose/estenose obstrutiva, tumor obstrutivo e divertículo importante, sangramento digestivo ativo. As relativas incluem varizes, cirurgia esofágica, coagulopatia e hérnia de hiato volumosa."
+   },
+   {
+    "id": "cardiaca_33",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "ETE",
+    "enunciado": "Qual é a janela de ETE mais usada para monitorização da função e do volume do VE durante a cirurgia?",
+    "alternativas": {
+     "A": "Transgástrica mesopapilar de eixo curto",
+     "B": "Mesoesofágica de duas câmaras com corte do VD",
+     "C": "Janela supraesternal",
+     "D": "Quatro câmaras subcostal"
+    },
+    "resposta": "A",
+    "justificativa": "A visão transgástrica mesopapilar de eixo curto mostra os três territórios coronarianos, a espessura e o enchimento do VE, útil para volume e isquemia. A mesoesofágica de quatro câmaras avalia as quatro cavidades e as válvulas AV."
+   },
+   {
+    "id": "cardiaca_34",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Aorta",
+    "enunciado": "Em dissecção aórtica aguda tipo A de Stanford, qual é o tratamento definitivo?",
+    "alternativas": {
+     "A": "Tratamento clínico exclusivo",
+     "B": "Esperar 6 semanas para operar",
+     "C": "Anticoagulação plena",
+     "D": "Cirurgia de emergência, com controle da PAM e da FC até a cirurgia (betabloqueador, nitroprussiato)"
+    },
+    "resposta": "D",
+    "justificativa": "A dissecção tipo A envolve a aorta ascendente: mortalidade de 1–2% por hora nas primeiras horas, e o tratamento é cirúrgico. Preparar: acesso, monitorização, redução da dP/dt com esmolol e vasodilatadores, atenção ao tamponamento e à insuficiência aórtica."
+   },
+   {
+    "id": "cardiaca_35",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Aorta",
+    "enunciado": "A parada circulatória hipotérmica profunda (DHCA) é realizada, em geral, a:",
+    "alternativas": {
+     "A": "34–36 °C",
+     "B": "28–30 °C",
+     "C": "18–20 °C (hipotermia profunda), com perfusão cerebral seletiva quando necessária",
+     "D": "10 °C sem proteção"
+    },
+    "resposta": "C",
+    "justificativa": "Em arco aórtico, a hipotermia profunda reduz o metabolismo cerebral; o tempo seguro é limitado (< 25–30 min sem perfusão); a perfusão anterógrada seletiva e a neuroproteção (EEG isoelétrico, hematócrito, glicemia) ampliam esse tempo."
+   },
+   {
+    "id": "cardiaca_36",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Fármacos",
+    "enunciado": "Qual a dose habitual de milrinona na saída de CEC?",
+    "alternativas": {
+     "A": "0,375–0,75 mg/kg/min",
+     "B": "0,375–0,75 mcg/kg/min, podendo ser precedida de bolus em estabilidade",
+     "C": "10–20 mcg/kg/min",
+     "D": "5 mg/kg em bolus"
+    },
+    "resposta": "B",
+    "justificativa": "A milrinona inibe a fosfodiesterase III, com efeito inodilatador, reduz a RVP e melhora o VD, mas pode causar hipotensão (associar vasopressor). Em insuficiência renal, ajustar a dose."
+   },
+   {
+    "id": "cardiaca_37",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Fármacos",
+    "enunciado": "Qual dose de vasopressina é usada na vasoplegia pós-CEC?",
+    "alternativas": {
+     "A": "3–4 U/min",
+     "B": "0,03–0,04 U/min",
+     "C": "30–40 U/min",
+     "D": "0,003 U/min"
+    },
+    "resposta": "B",
+    "justificativa": "A vasopressina em baixa dose restabelece o tônus vascular em vasodilatação com deficiência de ADH relativa. Doses mais altas aumentam o risco de isquemia mesentérica e cutânea."
+   },
+   {
+    "id": "cardiaca_38",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Fármacos",
+    "enunciado": "Qual das condições contraindica o uso de azul de metileno na vasoplegia?",
+    "alternativas": {
+     "A": "Uso concomitante de ISRS ou outros serotoninérgicos, e deficiência de G6PD",
+     "B": "Uso de heparina",
+     "C": "Hipotensão grave",
+     "D": "Fibrilação atrial"
+    },
+    "resposta": "A",
+    "justificativa": "O azul de metileno inibe a MAO-A, com risco de síndrome serotoninérgica com ISRS, e causa hemólise na deficiência de G6PD. Também interfere nas leituras de SpO₂ (queda transitória). A dose habitual é de 1–2 mg/kg em 20–30 min."
+   },
+   {
+    "id": "cardiaca_39",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Anestesia",
+    "enunciado": "Qual a técnica de indução mais apropriada em paciente com função ventricular gravemente deprimida?",
+    "alternativas": {
+     "A": "Propofol 3 mg/kg em bolus rápido",
+     "B": "Tiopental 7 mg/kg",
+     "C": "Benzodiazepínico em altas doses isolado",
+     "D": "Etomidato ou cetamina em dose titulada, opioide e vasopressor/inotrópico disponíveis"
+    },
+    "resposta": "D",
+    "justificativa": "Pacientes com FEVE baixa toleram mal a vasodilatação e a depressão miocárdica. Fármacos titulados, indução lenta, opioide em dose moderada e inotrópicos prontos mantêm o equilíbrio. Etomidato tem a melhor estabilidade hemodinâmica."
+   },
+   {
+    "id": "cardiaca_40",
+    "tema": "Anestesia Cardíaca e CEC",
+    "subtopico": "Anestesia",
+    "enunciado": "No CABG sem circulação extracorpórea (off-pump), qual alteração hemodinâmica é típica durante o posicionamento do coração para anastomose?",
+    "alternativas": {
+     "A": "Hipertensão por aumento do retorno venoso",
+     "B": "Bradicardia obrigatória",
+     "C": "Hipotensão por compressão do VD/obstrução do retorno venoso e distorção da valva mitral",
+     "D": "Nenhuma alteração hemodinâmica"
+    },
+    "resposta": "C",
+    "justificativa": "Ao luxar o coração, ocorre compressão do VD e dobra do átrio, reduzindo o débito. Estratégias: Trendelenburg, volume, vasopressor, estabilizadores, uso do ETE. A heparinização é menor (ACT 250–300 s)."
+   }
+  ]
+ },
+ {
+  "id": "toracica",
+  "titulo": "Torácica e Ventilação Monopulmonar",
+  "cor": "#06B6D4",
+  "icone": "🫁",
+  "questoes": [
+   {
+    "id": "toracica_01",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Avaliação",
+    "enunciado": "Um paciente tem VEF₁ de 2,0 L e será submetido a lobectomia inferior direita (5 dos 19 segmentos funcionantes). Qual é o VEF₁ previsto pós-operatório?",
+    "alternativas": {
+     "A": "Aproximadamente 1,47 L",
+     "B": "Aproximadamente 0,53 L",
+     "C": "Aproximadamente 1,0 L",
+     "D": "Aproximadamente 2,0 L"
+    },
+    "resposta": "A",
+    "justificativa": "ppo-VEF₁ = VEF₁ × (1 − nº de segmentos ressecados/19) = 2,0 × (1 − 5/19) = 2,0 × 0,737 ≈ 1,47 L. Para pneumonectomia ou áreas pouco funcionantes, a cintilografia de perfusão refina a estimativa."
+   },
+   {
+    "id": "toracica_02",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Avaliação",
+    "enunciado": "Qual valor de consumo máximo de O₂ (VO₂ pico) está associado a alto risco de complicações e mortalidade após ressecção pulmonar?",
+    "alternativas": {
+     "A": "Maior que 25 mL/kg/min",
+     "B": "Maior que 20 mL/kg/min",
+     "C": "Entre 18 e 22 mL/kg/min",
+     "D": "Menor que 10 mL/kg/min (ou < 35% do previsto)"
+    },
+    "resposta": "D",
+    "justificativa": "VO₂ pico > 20 mL/kg/min (ou > 75% do previsto) indica baixo risco; < 10 mL/kg/min (< 35%) indica alto risco e contraindica ressecções extensas. Valores intermediários exigem individualizar, considerando função pulmonar prevista."
+   },
+   {
+    "id": "toracica_03",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Avaliação",
+    "enunciado": "Qual é o tempo mínimo de cessação do tabagismo que reduz complicações pulmonares pós-operatórias, de acordo com a literatura?",
+    "alternativas": {
+     "A": "12 horas",
+     "B": "24 horas apenas",
+     "C": "Cerca de 4 a 8 semanas ou mais",
+     "D": "Não há benefício com qualquer tempo"
+    },
+    "resposta": "C",
+    "justificativa": "A cessação por ≥ 4–8 semanas diminui as complicações pulmonares e de ferida; períodos curtos reduzem o COHb e melhoram a oferta de O₂, mas não reduzem as complicações pulmonares. Não parar de fumar por receio de \"piorar\" é um mito."
+   },
+   {
+    "id": "toracica_04",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Via aérea",
+    "enunciado": "Qual é o tubo de duplo lúmen mais usado em cirurgia torácica geral?",
+    "alternativas": {
+     "A": "Tubo de duplo lúmen direito em todos os casos",
+     "B": "Tubo de duplo lúmen esquerdo",
+     "C": "Tubo traqueal único com cuff pediátrico",
+     "D": "Máscara laríngea"
+    },
+    "resposta": "B",
+    "justificativa": "O brônquio principal esquerdo é mais longo (~5 cm), permitindo posicionar o balonete brônquico sem obstruir o lobo superior. O TDL esquerdo é padrão, exceto quando há lesão no brônquio esquerdo ou pneumonectomia esquerda com campo comprometido."
+   },
+   {
+    "id": "toracica_05",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Via aérea",
+    "enunciado": "Qual é a principal desvantagem do tubo de duplo lúmen direito?",
+    "alternativas": {
+     "A": "Não permite ventilação monopulmonar",
+     "B": "O brônquio principal direito é curto e o orifício do lobo superior pode ser obstruído pelo balonete",
+     "C": "É sempre mais curto e instável que o esquerdo",
+     "D": "Não pode ser usado com fibroscopia"
+    },
+    "resposta": "B",
+    "justificativa": "O lobo superior direito sai a 1–2,5 cm da carina; o TDL direito tem uma fenestra no balonete brônquico para ventilar esse lobo, e o posicionamento é crítico (fibroscopia). Por isso, usa-se o esquerdo sempre que possível."
+   },
+   {
+    "id": "toracica_06",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Via aérea",
+    "enunciado": "Qual é o método padrão-ouro para confirmar a posição de um tubo de duplo lúmen?",
+    "alternativas": {
+     "A": "Fibroscopia",
+     "B": "Ausculta pulmonar isolada",
+     "C": "Capnografia isolada",
+     "D": "Radiografia de tórax em pé na sala"
+    },
+    "resposta": "A",
+    "justificativa": "A fibroscopia confirma a posição correta e deve ser repetida após o posicionamento lateral. A ausculta e a capnografia podem falhar em até 30–40% dos tubos mal posicionados."
+   },
+   {
+    "id": "toracica_07",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Via aérea",
+    "enunciado": "Em qual situação um bloqueador brônquico é preferível ao tubo de duplo lúmen?",
+    "alternativas": {
+     "A": "Hemoptise maciça com grande sangramento",
+     "B": "Obrigatoriamente em lobectomias de rotina",
+     "C": "Pacientes obesos com via aérea fácil",
+     "D": "Via aérea difícil, crianças pequenas ou paciente já intubado que precisa de isolamento"
+    },
+    "resposta": "D",
+    "justificativa": "O bloqueador é útil em via aérea difícil (uso através do tubo único), crianças (TDL muito grande), troca de tubo e UTI. O TDL permite aspiração, CPAP seletivo e colapso mais rápido, sendo preferível na hemoptise e na contaminação."
+   },
+   {
+    "id": "toracica_08",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Via aérea",
+    "enunciado": "Qual indicação absoluta de isolamento pulmonar?",
+    "alternativas": {
+     "A": "Lobectomia videoassistida simples",
+     "B": "Cirurgia de tireoide",
+     "C": "Hemoptise maciça ou contaminação por abscesso, para proteger o pulmão saudável",
+     "D": "Exploração do pescoço"
+    },
+    "resposta": "C",
+    "justificativa": "Indicações absolutas: prevenção de contaminação (abscesso, hemoptise, bronquiectasia), fístula broncopleural com grande fuga, lavagem broncoalveolar e ventilação diferencial. A maioria das cirurgias torácicas tem indicação relativa para exposição cirúrgica."
+   },
+   {
+    "id": "toracica_09",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Durante a ventilação monopulmonar em decúbito lateral, qual é a fração aproximada do débito cardíaco que atravessa o pulmão não ventilado (shunt)?",
+    "alternativas": {
+     "A": "0%",
+     "B": "50%",
+     "C": "20–25% após a vasoconstrição pulmonar hipóxica",
+     "D": "90%"
+    },
+    "resposta": "C",
+    "justificativa": "O shunt obrigatório pelo pulmão não ventilado é de 20–25%, e é limitado pela VPH e pelo efeito da gravidade (decúbito lateral). Por isso a PaO₂ costuma permanecer adequada com FiO₂ elevada, e a hipoxemia grave não é inevitável."
+   },
+   {
+    "id": "toracica_10",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Qual das medidas ou drogas INIBE a vasoconstrição pulmonar hipóxica?",
+    "alternativas": {
+     "A": "Propofol em infusão",
+     "B": "Nitroprussiato, nitroglicerina e óxido nítrico inalado em doses vasodilatadoras sistêmicas, bloqueadores de canal de cálcio",
+     "C": "Almitrina",
+     "D": "Fenilefrina em dose baixa"
+    },
+    "resposta": "B",
+    "justificativa": "Vasodilatadores sistêmicos inibem a VPH e aumentam o shunt. Os anestésicos voláteis inibem pouco em ≤ 1 CAM. Propofol não inibe. Almitrina potencializa; fenilefrina em baixa dose tem efeito discreto."
+   },
+   {
+    "id": "toracica_11",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Qual é o conjunto de parâmetros de ventilação protetora recomendado durante a OLV?",
+    "alternativas": {
+     "A": "VC 4–6 mL/kg de peso predito, PEEP 5 cmH₂O, platô < 25 cmH₂O, menor FiO₂ possível",
+     "B": "VC 10–12 mL/kg e PEEP zero",
+     "C": "VC 8 mL/kg e FiO₂ 1,0 obrigatória",
+     "D": "VC 12 mL/kg e PEEP 15"
+    },
+    "resposta": "A",
+    "justificativa": "A ventilação protetora com VC baixo e PEEP reduz lesão pulmonar e complicações pós-operatórias. O platô < 25 e driving pressure < 15 são alvos úteis. Hipercapnia permissiva é aceita; FiO₂ começa em 0,5–0,8 e é ajustada."
+   },
+   {
+    "id": "toracica_12",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Durante OLV a SpO₂ cai para 85%. Qual é a sequência inicial mais adequada?",
+    "alternativas": {
+     "A": "Aumentar o PEEP no pulmão operado e reduzir o VC",
+     "B": "Dobrar o volume de cristaloide imediatamente",
+     "C": "Iniciar vasodilatador para reduzir o shunt",
+     "D": "Aumentar a FiO₂ para 1,0 e checar a posição do tubo com fibroscopia"
+    },
+    "resposta": "D",
+    "justificativa": "A causa mais comum de hipoxemia é o mau posicionamento do tubo. Depois: CPAP 5–10 no pulmão não dependente, PEEP no pulmão dependente, recrutamento, reinsuflar intermitentemente e, na pneumonectomia, pinçar a artéria pulmonar. Vasodilatadores pioram a VPH."
+   },
+   {
+    "id": "toracica_13",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Qual intervenção é mais eficaz para melhorar a oxigenação durante OLV após confirmar o posicionamento do tubo?",
+    "alternativas": {
+     "A": "Hiperventilar o pulmão dependente",
+     "B": "Aumentar o platô para 40 cmH₂O",
+     "C": "Usar fenilefrina em bolus de 1 mg",
+     "D": "CPAP de 5–10 cmH₂O no pulmão não dependente (operado)"
+    },
+    "resposta": "D",
+    "justificativa": "O CPAP no pulmão colapsado (O₂ com pressão baixa) reduz o shunt, pois oxigena parte do pulmão, sem comprometer o campo cirúrgico em geral. O PEEP no pulmão dependente é complementar; hiperventilar e platô alto lesam o pulmão."
+   },
+   {
+    "id": "toracica_14",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Qual das estratégias NÃO é adequada na hipoxemia durante OLV?",
+    "alternativas": {
+     "A": "Reexpansão intermitente do pulmão operado",
+     "B": "Pinçamento precoce da artéria pulmonar na pneumonectomia",
+     "C": "Administrar vasodilatador para diminuir a pressão da artéria pulmonar",
+     "D": "Ventilação de dois pulmões temporária"
+    },
+    "resposta": "C",
+    "justificativa": "Vasodilatadores inibem a VPH e aumentam o shunt. A ventilação de dois pulmões e a reexpansão intermitente melhoram a oxigenação e podem ser necessárias; o pinçamento da artéria pulmonar elimina o shunt do pulmão excluído."
+   },
+   {
+    "id": "toracica_15",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Qual dos agentes anestésicos tem menor efeito sobre a VPH?",
+    "alternativas": {
+     "A": "Isoflurano em 2 CAM",
+     "B": "Propofol (TIVA)",
+     "C": "Nitroprussiato",
+     "D": "Nitroglicerina em doses altas"
+    },
+    "resposta": "B",
+    "justificativa": "O propofol não inibe a VPH. Os voláteis em ≤ 1 CAM têm efeito pequeno, e a oxigenação é similar em OLV entre TIVA e volátil. Vasodilatadores são os que mais inibem."
+   },
+   {
+    "id": "toracica_16",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Hipercapnia permissiva durante a OLV é aceita com valores de PaCO₂ de até:",
+    "alternativas": {
+     "A": "Cerca de 50–60 mmHg, desde que sem hipertensão pulmonar ou intracraniana",
+     "B": "20 mmHg",
+     "C": "100 mmHg",
+     "D": "Qualquer valor"
+    },
+    "resposta": "A",
+    "justificativa": "A hipercapnia moderada é tolerada para manter VC baixo e platô reduzido. Aumenta a RVP e o fluxo cerebral, sendo contraindicada em hipertensão intracraniana e hipertensão pulmonar grave."
+   },
+   {
+    "id": "toracica_17",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Analgesia",
+    "enunciado": "Qual técnica analgésica é considerada padrão-ouro após toracotomia?",
+    "alternativas": {
+     "A": "Epidural torácica (T4–T8) com anestésico local e opioide",
+     "B": "Opioide oral isolado",
+     "C": "Apenas AINE",
+     "D": "Bloqueio de plexo braquial"
+    },
+    "resposta": "A",
+    "justificativa": "A epidural torácica proporciona analgesia superior e reduz complicações pulmonares, mas causa hipotensão, retenção urinária e é limitada por anticoagulação. O bloqueio paravertebral oferece analgesia equivalente com menos efeitos adversos."
+   },
+   {
+    "id": "toracica_18",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Analgesia",
+    "enunciado": "Em comparação com a epidural torácica, o bloqueio paravertebral torácico:",
+    "alternativas": {
+     "A": "É menos eficaz e sempre mais arriscado",
+     "B": "Causa mais hipotensão",
+     "C": "Não é possível em toracotomia",
+     "D": "Tem eficácia analgésica semelhante, com menos hipotensão, náusea e retenção urinária"
+    },
+    "resposta": "D",
+    "justificativa": "Revisões sistemáticas mostram eficácia analgésica equivalente e menos efeitos adversos. É unilateral e útil quando a epidural é contraindicada. Os bloqueios de plano fascial (eretor da espinha, serrátil) são alternativas em VATS."
+   },
+   {
+    "id": "toracica_19",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Analgesia",
+    "enunciado": "Qual é a incidência aproximada de dor crônica pós-toracotomia?",
+    "alternativas": {
+     "A": "0,1%",
+     "B": "< 1%",
+     "C": "Até 50%",
+     "D": "95%"
+    },
+    "resposta": "C",
+    "justificativa": "A dor pós-toracotomia crônica (> 3 meses) é frequente e predominantemente neuropática (lesão intercostal). A analgesia regional, a técnica videoassistida e a minimização de afastamento costal reduzem a incidência."
+   },
+   {
+    "id": "toracica_20",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Fluidos",
+    "enunciado": "Qual é a estratégia de fluidos recomendada após pneumonectomia?",
+    "alternativas": {
+     "A": "Liberal para repor perdas de terceiro espaço",
+     "B": "Restritiva, com balanço neutro e < 20 mL/kg nas primeiras 24 horas",
+     "C": "Alta infusão de coloides",
+     "D": "Hiperidratação para manter diurese > 3 mL/kg/h"
+    },
+    "resposta": "B",
+    "justificativa": "O pulmão restante é vulnerável a edema pós-pneumonectomia e lesão pulmonar aguda. A restrição hídrica, a vasopressores se necessário para PAM, e a diurese de 0,5 mL/kg/h são aceitas."
+   },
+   {
+    "id": "toracica_21",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Pneumonectomia",
+    "enunciado": "Qual complicação deve ser lembrada após pneumonectomia direita?",
+    "alternativas": {
+     "A": "Hipertensão sistêmica refratária",
+     "B": "Herniação cardíaca e fístula broncopleural",
+     "C": "Bradicardia sinusal fixa",
+     "D": "Hipoglicemia grave"
+    },
+    "resposta": "B",
+    "justificativa": "O defeito pericárdico pode causar herniação cardíaca (colapso hemodinâmico súbito). A fístula broncopleural é complicação precoce ou tardia. A mortalidade é maior que na pneumonectomia esquerda."
+   },
+   {
+    "id": "toracica_22",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Mediastino",
+    "enunciado": "Durante a mediastinoscopia, onde monitorizar a pressão arterial e a SpO₂?",
+    "alternativas": {
+     "A": "No braço direito, para detectar compressão do tronco braquiocefálico",
+     "B": "No braço esquerdo, apenas",
+     "C": "Na perna",
+     "D": "Não é necessário monitorizar"
+    },
+    "resposta": "A",
+    "justificativa": "O mediastinoscópio pode comprimir a artéria inominada (braquiocefálica), reduzindo o fluxo na artéria subclávia direita e carótida direita. A perda do pulso ou da onda no braço direito alerta para hipoperfusão cerebral. Complicações: hemorragia, embolia gasosa, pneumotórax e lesão do nervo recorrente."
+   },
+   {
+    "id": "toracica_23",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Mediastino",
+    "enunciado": "Paciente com massa mediastinal anterior volumosa tem ortopneia e é candidato a biópsia. Qual é a conduta mais segura?",
+    "alternativas": {
+     "A": "Indução rápida com relaxante muscular e ventilação com pressão positiva",
+     "B": "Posição supina com relaxamento profundo",
+     "C": "Intubação sem vigilância e sem plano de resgate",
+     "D": "Preservar a ventilação espontânea, considerar anestesia local ou sedação leve, e preparar broncoscopia rígida e ECMO"
+    },
+    "resposta": "D",
+    "justificativa": "A anestesia geral e o relaxamento reduzem o volume pulmonar e podem causar colapso total da via aérea ou compressão dos grandes vasos. A ventilação espontânea, a posição semissentada ou lateral e a disponibilidade de resgate (broncoscópio rígido, ECMO) são pilares."
+   },
+   {
+    "id": "toracica_24",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Mediastino",
+    "enunciado": "Qual dos sintomas indica maior risco de colapso de via aérea em massa mediastinal anterior?",
+    "alternativas": {
+     "A": "Dor lombar leve",
+     "B": "Febre baixa",
+     "C": "Ortopneia, síncope em decúbito dorsal e estridor",
+     "D": "Cefaleia ocasional"
+    },
+    "resposta": "C",
+    "justificativa": "Sintomas posturais indicam compressão relevante da via aérea ou do coração/grandes vasos. A TC com compressão traqueal > 50% e a espirometria com pico de fluxo expiratório baixo aumentam o risco. Pacientes assintomáticos têm risco menor, mas não nulo."
+   },
+   {
+    "id": "toracica_25",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Hemoptise",
+    "enunciado": "Na hemoptise maciça, qual é a conduta inicial correta?",
+    "alternativas": {
+     "A": "Manter o paciente em decúbito dorsal e aguardar o sangramento cessar.",
+     "B": "Posicionar o pulmão sangrante para cima para facilitar a drenagem.",
+     "C": "Posicionar o pulmão sangrante para baixo, oxigenar e isolar o pulmão sangrante com TDL ou bloqueador brônquico.",
+     "D": "Administrar broncodilatador e observar sem isolamento."
+    },
+    "resposta": "C",
+    "justificativa": "O sangue inunda o pulmão sadio e causa asfixia: o pulmão sangrante deve ficar para baixo (decúbito lateral) até o isolamento pulmonar com tubo de duplo lúmen ou bloqueador brônquico. Em seguida, broncoscopia e embolização brônquica para controle definitivo. A morte ocorre por asfixia, não por exsanguinação."
+   },
+   {
+    "id": "toracica_26",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Esofagectomia",
+    "enunciado": "Qual é a principal preocupação hemodinâmica durante a mobilização do esôfago na esofagectomia transhiatal?",
+    "alternativas": {
+     "A": "Hipertensão por vasoconstrição",
+     "B": "Hipotensão por compressão do coração e dos grandes vasos",
+     "C": "Hipertermia maligna",
+     "D": "Hipoglicemia reativa"
+    },
+    "resposta": "B",
+    "justificativa": "A manipulação mediastinal comprime o átrio e o VD, reduzindo o retorno venoso. É necessário volume, vasopressor e comunicação com o cirurgião. A perfusão do conduto gástrico exige evitar vasoconstrição excessiva."
+   },
+   {
+    "id": "toracica_27",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Via aérea central",
+    "enunciado": "Na broncoscopia rígida com ventilação a jato, qual a técnica anestésica mais adequada?",
+    "alternativas": {
+     "A": "TIVA com relaxamento neuromuscular, pois a via aérea fica aberta e o volátil é perdido",
+     "B": "Indução inalatória e manutenção com volátil em altas concentrações",
+     "C": "Anestesia local isolada sem relaxante",
+     "D": "Raquianestesia alta"
+    },
+    "resposta": "A",
+    "justificativa": "O sistema aberto impede o uso do agente volátil de forma segura. TIVA (propofol, remifentanil) e relaxamento garantem imobilidade; atentar para barotrauma e hipercapnia com a ventilação a jato."
+   },
+   {
+    "id": "toracica_28",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Via aérea",
+    "enunciado": "O balonete brônquico do TDL esquerdo deve ser insuflado com:",
+    "alternativas": {
+     "A": "10–15 mL sempre",
+     "B": "Sem insuflar, para evitar lesão",
+     "C": "Com óxido nítrico",
+     "D": "O menor volume que vede (cerca de 1–2 mL), com pressão baixa"
+    },
+    "resposta": "D",
+    "justificativa": "A hiperinsuflação do balonete brônquico pode lesar ou romper o brônquio, e o N₂O difunde para o balonete e aumenta a pressão. O volume é de ~1–3 mL e a pressão é checada. Insuflar para isolamento e reconfirmar com fibroscopia."
+   },
+   {
+    "id": "toracica_29",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Por que a hiperventilação excessiva pode piorar a oxigenação em OLV?",
+    "alternativas": {
+     "A": "A hipocapnia aumenta a VPH.",
+     "B": "Não tem relação com a oxigenação.",
+     "C": "Aumenta o shunt apenas por hipotermia.",
+     "D": "A hipocapnia/alcalose reduz a vasoconstrição pulmonar hipóxica e pode aumentar a pressão intratorácica"
+    },
+    "resposta": "D",
+    "justificativa": "A alcalose respiratória reduz a VPH, e o aumento do volume corrente piora o shunt e a lesão pulmonar. A hipercapnia moderada, ao contrário, aumenta a RVP no pulmão hipoventilado, mas aumenta o fluxo para o pulmão dependente."
+   },
+   {
+    "id": "toracica_30",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Pneumonectomia",
+    "enunciado": "Qual é a principal causa de insuficiência cardíaca direita aguda após pneumonectomia?",
+    "alternativas": {
+     "A": "Redução da pós-carga do VD",
+     "B": "Excesso de hematócrito",
+     "C": "Aumento da pós-carga do VD pela redução do leito vascular pulmonar",
+     "D": "Hipercalemia isolada"
+    },
+    "resposta": "C",
+    "justificativa": "A remoção do pulmão reduz o leito vascular e aumenta a RVP; hipóxia, hipercapnia e acidose agravam. O manejo inclui restrição hídrica, vasodilatadores pulmonares, inotrópicos e correção de arritmias."
+   },
+   {
+    "id": "toracica_31",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "ERAS",
+    "enunciado": "Qual das opções faz parte das recomendações ERAS/ESTS para cirurgia pulmonar?",
+    "alternativas": {
+     "A": "Jejum prolongado e restrição de analgesia",
+     "B": "Analgesia multimodal com regional, ventilação protetora, fluidos restritivos e retirada precoce de drenos",
+     "C": "Hidratação liberal e repouso absoluto",
+     "D": "Evitar fisioterapia respiratória"
+    },
+    "resposta": "B",
+    "justificativa": "ERAS pulmonar inclui cessação do tabagismo, mobilização precoce, analgesia regional, ventilação protetora, restrição de fluidos, controle de náusea e retirada precoce de drenos, com menor tempo de internação."
+   },
+   {
+    "id": "toracica_32",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Avaliação",
+    "enunciado": "Quais testes compõem a avaliação funcional preferida de pacientes com ppo-VEF₁ ou ppo-DLCO < 30–40%?",
+    "alternativas": {
+     "A": "Teste cardiopulmonar de exercício (VO₂ pico) ou provas de esforço como shuttle walk e escada",
+     "B": "Somente radiografia de tórax",
+     "C": "Apenas hemograma",
+     "D": "Glicemia de jejum"
+    },
+    "resposta": "A",
+    "justificativa": "O VO₂ pico quantifica a reserva cardiopulmonar. Alternativas: shuttle walk (< 400 m de risco), subida de escadas (< 22 m). Os testes estratificam o risco e orientam o tipo de cirurgia (lobectomia, segmentectomia, tratamento não cirúrgico)."
+   },
+   {
+    "id": "toracica_33",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Via aérea",
+    "enunciado": "Em qual situação a intubação com TDL pode ser difícil e exige estratégia especial?",
+    "alternativas": {
+     "A": "Via aérea difícil prevista: usar videolaringoscopia ou intubar com tubo único e trocar por trocador ou usar bloqueador",
+     "B": "Quando o paciente está em jejum",
+     "C": "Quando a SpO₂ é de 99%",
+     "D": "Em lobectomia eletiva de rotina em via aérea fácil"
+    },
+    "resposta": "A",
+    "justificativa": "O TDL é rígido e calibroso. Em via aérea difícil, a estratégia segura é garantir ventilação com tubo único, e então usar bloqueador ou trocador de tubo com videolaringoscópio, sem perder a oxigenação."
+   },
+   {
+    "id": "toracica_34",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "Qual fator se associa a maior risco de hipoxemia durante a OLV?",
+    "alternativas": {
+     "A": "Cirurgia do pulmão esquerdo e DPOC grave com auto-PEEP.",
+     "B": "Decúbito lateral e FiO₂ de 1,0.",
+     "C": "Pulmão operado com pouca perfusão na cintilografia.",
+     "D": "Cirurgia do pulmão direito e baixa PaO₂ durante a ventilação de dois pulmões."
+    },
+    "resposta": "D",
+    "justificativa": "O pulmão direito recebe cerca de 55% do fluxo, e sua exclusão gera mais shunt. Baixa PaO₂ na ventilação de dois pulmões, posição supina e espirometria normal (sem auto-PEEP) também aumentam o risco. Pulmão operado pouco perfundido, DPOC com auto-PEEP e decúbito lateral são fatores protetores."
+   },
+   {
+    "id": "toracica_35",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "OLV",
+    "enunciado": "No decúbito lateral com ventilação de dois pulmões e relaxamento, qual pulmão recebe mais perfusão e qual é mais complacente?",
+    "alternativas": {
+     "A": "O superior recebe mais perfusão e é menos complacente",
+     "B": "Ambos são iguais",
+     "C": "O pulmão dependente (inferior) recebe mais perfusão; o pulmão não dependente (superior) é mais complacente",
+     "D": "O pulmão superior recebe toda a perfusão"
+    },
+    "resposta": "C",
+    "justificativa": "A gravidade direciona o fluxo ao pulmão inferior; a CRF do pulmão inferior cai pela compressão (abdômen, mediastino), e o pulmão superior fica mais complacente e recebe mais ventilação: disparidade V/Q. A OLV aumenta ainda mais essa disparidade."
+   },
+   {
+    "id": "toracica_36",
+    "tema": "Torácica e Ventilação Monopulmonar",
+    "subtopico": "Mediastino",
+    "enunciado": "Qual é o principal risco de embolia gasosa durante mediastinoscopia?",
+    "alternativas": {
+     "A": "Hipertensão pulmonar",
+     "B": "Pressão negativa nas veias mediastinais em respiração espontânea e posição elevada",
+     "C": "Uso de N₂O somente",
+     "D": "Hipotermia"
+    },
+    "resposta": "B",
+    "justificativa": "Cabeceira elevada, ventilação espontânea e pressão intratorácica negativa aspiram ar através de veias abertas. A ventilação controlada com pressão positiva, o preenchimento vascular e a vigilância reduzem o risco. Em suspeita, inundar o campo, posição lateral esquerda com cabeça para baixo e aspirar."
+   }
+  ]
+ },
+ {
+  "id": "neuroanestesia",
+  "titulo": "Neuroanestesia",
+  "cor": "#8B5CF6",
+  "icone": "🧠",
+  "questoes": [
+   {
+    "id": "neuroanestesia_01",
+    "tema": "Neuroanestesia",
+    "subtopico": "Fisiologia",
+    "enunciado": "Qual é a variação aproximada do fluxo sanguíneo cerebral por mmHg de PaCO₂ entre 20 e 80 mmHg?",
+    "alternativas": {
+     "A": "Cerca de 1–2 mL/100 g/min (≈ 4%) por mmHg",
+     "B": "Cerca de 20 mL/100 g/min por mmHg",
+     "C": "Sem variação",
+     "D": "Cerca de 0,01 mL/100 g/min por mmHg"
+    },
+    "resposta": "A",
+    "justificativa": "O CO₂ é o regulador mais potente do CBF: o fluxo muda ~4% por mmHg em normotermia; a hipocapnia causa vasoconstrição e reduz a PIC, e a hipercapnia causa vasodilatação. O efeito se atenua em horas por compensação do bicarbonato liquórico."
+   },
+   {
+    "id": "neuroanestesia_02",
+    "tema": "Neuroanestesia",
+    "subtopico": "Fisiologia",
+    "enunciado": "Qual é a faixa de PAM em que a autorregulação cerebral mantém o CBF constante em um adulto normotenso?",
+    "alternativas": {
+     "A": "20–40 mmHg",
+     "B": "150–250 mmHg",
+     "C": "0–50 mmHg",
+     "D": "Aproximadamente 60–150 mmHg"
+    },
+    "resposta": "D",
+    "justificativa": "Entre cerca de 60 e 150 mmHg o fluxo é constante pelas alterações do tônus arteriolar. Em hipertensos crônicos a curva se desvia para a direita (limite inferior mais alto). Em lesão cerebral, hipercapnia grave e > 1 CAM de volátil, a autorregulação se perde."
+   },
+   {
+    "id": "neuroanestesia_03",
+    "tema": "Neuroanestesia",
+    "subtopico": "Fisiologia",
+    "enunciado": "Qual é o efeito de uma queda de 1 °C na temperatura cerebral sobre o CMRO₂?",
+    "alternativas": {
+     "A": "Aumento de 20%",
+     "B": "Redução de 50%",
+     "C": "Redução de cerca de 6–7%",
+     "D": "Nenhuma alteração"
+    },
+    "resposta": "C",
+    "justificativa": "A taxa metabólica cerebral diminui de 6–7% por °C, e a hipertermia aumenta o consumo de O₂ e agrava a lesão isquêmica. A hipotermia moderada tem benefício incerto em desfecho clínico em várias condições."
+   },
+   {
+    "id": "neuroanestesia_04",
+    "tema": "Neuroanestesia",
+    "subtopico": "Anestésicos",
+    "enunciado": "Qual dos agentes aumenta o fluxo sanguíneo cerebral e o CMRO₂ e deve ser evitado em neurocirurgia com HIC?",
+    "alternativas": {
+     "A": "Propofol",
+     "B": "Óxido nitroso",
+     "C": "Tiopental",
+     "D": "Etomidato"
+    },
+    "resposta": "B",
+    "justificativa": "O N₂O é estimulante cerebral: aumenta o CBF, o CMRO₂ e a PIC, além de poder expandir pneumoencéfalo. Propofol, tiopental e etomidato reduzem o CMRO₂ e o CBF (acoplados)."
+   },
+   {
+    "id": "neuroanestesia_05",
+    "tema": "Neuroanestesia",
+    "subtopico": "Anestésicos",
+    "enunciado": "Qual é o efeito dos anestésicos voláteis em doses acima de 1 CAM sobre a circulação cerebral?",
+    "alternativas": {
+     "A": "Redução do CBF e preservação total da autorregulação",
+     "B": "Vasodilatação, aumento do CBF e perda da autorregulação",
+     "C": "Sem qualquer efeito",
+     "D": "Aumento do CMRO₂ proporcional ao CBF"
+    },
+    "resposta": "B",
+    "justificativa": "Os voláteis reduzem o CMRO₂ e ao mesmo tempo dilatam os vasos cerebrais (desacoplamento dose-dependente). Em ≤ 1 CAM o efeito é discreto, e sevoflurano é o mais favorável; o desflurano e o isoflurano têm maior efeito vasodilatador."
+   },
+   {
+    "id": "neuroanestesia_06",
+    "tema": "Neuroanestesia",
+    "subtopico": "Anestésicos",
+    "enunciado": "Em relação à cetamina na neuroanestesia:",
+    "alternativas": {
+     "A": "Em pacientes ventilados e sedados, não aumenta a PIC de forma relevante e pode ser usada quando necessário.",
+     "B": "É sempre contraindicada na lesão cerebral.",
+     "C": "Reduz o CMRO₂ em 60%.",
+     "D": "Causa vasoconstrição cerebral intensa."
+    },
+    "resposta": "A",
+    "justificativa": "O dogma de que a cetamina aumenta a PIC derivou de estudos em pacientes não ventilados; quando se mantém a normocapnia, o efeito sobre a PIC é pequeno. Ela pode ser usada em hipotensão ou na indução em instabilidade hemodinâmica."
+   },
+   {
+    "id": "neuroanestesia_07",
+    "tema": "Neuroanestesia",
+    "subtopico": "PIC",
+    "enunciado": "Qual é a faixa de PPC recomendada pelas diretrizes da BTF para TCE grave?",
+    "alternativas": {
+     "A": "< 40 mmHg",
+     "B": "90–100 mmHg",
+     "C": "> 120 mmHg",
+     "D": "60–70 mmHg"
+    },
+    "resposta": "D",
+    "justificativa": "PPC = PAM − PIC; o alvo de 60–70 mmHg equilibra o risco de isquemia (baixa PPC) e de SDRA (alta PPC com vasopressores). A PIC deve ser tratada acima de 22 mmHg."
+   },
+   {
+    "id": "neuroanestesia_08",
+    "tema": "Neuroanestesia",
+    "subtopico": "PIC",
+    "enunciado": "Qual é a tríade clássica de Cushing, sinal tardio de hipertensão intracraniana grave com risco de herniação?",
+    "alternativas": {
+     "A": "Hipotensão, taquicardia e taquipneia",
+     "B": "Febre, rigidez de nuca e cefaleia",
+     "C": "Hipertensão arterial, bradicardia e respiração irregular",
+     "D": "Hipoglicemia, sudorese e tremor"
+    },
+    "resposta": "C",
+    "justificativa": "A tríade de Cushing é um reflexo tardio de isquemia do tronco com HIC grave e iminência de herniação. O tratamento é imediato: medidas de redução da PIC, hiperventilação transitória, osmoterapia e descompressão."
+   },
+   {
+    "id": "neuroanestesia_09",
+    "tema": "Neuroanestesia",
+    "subtopico": "PIC",
+    "enunciado": "Qual é o efeito esperado do manitol 0,25–1 g/kg na PIC?",
+    "alternativas": {
+     "A": "Aumento da PIC",
+     "B": "Nenhum efeito",
+     "C": "Redução da PIC por efeito osmótico (e por redução da viscosidade com melhora do fluxo)",
+     "D": "Redução apenas após 24 horas"
+    },
+    "resposta": "C",
+    "justificativa": "O manitol retira água do parênquima com BHE intacta e reduz a viscosidade sanguínea, com vasoconstrição reflexa. O pico ocorre em 15–30 min. Evitar se osmolaridade > 320 mOsm/L e hipovolemia grave; pode causar hipotensão e hipernatremia."
+   },
+   {
+    "id": "neuroanestesia_10",
+    "tema": "Neuroanestesia",
+    "subtopico": "PIC",
+    "enunciado": "Qual das soluções é preferida para reposição volêmica em paciente com TCE?",
+    "alternativas": {
+     "A": "Glicose 5% em água",
+     "B": "Cristaloide isotônico (SF 0,9% ou balanceado)",
+     "C": "Ringer lactato diluído em água (hipotônico)",
+     "D": "Albumina a 4% em grande volume"
+    },
+    "resposta": "B",
+    "justificativa": "Soluções hipotônicas e glicosadas aumentam o edema cerebral. O estudo SAFE-TBI mostrou maior mortalidade com albumina em pacientes com TCE grave. Cristaloides isotônicos são a escolha."
+   },
+   {
+    "id": "neuroanestesia_11",
+    "tema": "Neuroanestesia",
+    "subtopico": "PIC",
+    "enunciado": "Qual das medidas NÃO reduz a PIC?",
+    "alternativas": {
+     "A": "Colocar a cabeça em posição de Trendelenburg",
+     "B": "Elevar a cabeceira a 30°",
+     "C": "Hiperventilação transitória",
+     "D": "Drenagem de LCR"
+    },
+    "resposta": "A",
+    "justificativa": "O Trendelenburg dificulta a drenagem venosa e aumenta a PIC. Cabeceira elevada (30°), cabeça neutra, hiperventilação transitória, osmoterapia, sedação e drenagem de LCR reduzem a pressão."
+   },
+   {
+    "id": "neuroanestesia_12",
+    "tema": "Neuroanestesia",
+    "subtopico": "Craniotomia",
+    "enunciado": "Em craniotomia eletiva, qual técnica anestésica favorece o relaxamento cerebral?",
+    "alternativas": {
+     "A": "Sevoflurano em 2,5 CAM com N₂O",
+     "B": "Hipercapnia permissiva",
+     "C": "Posição de Trendelenburg para melhorar a perfusão",
+     "D": "TIVA com propofol, ventilação normo/hipocápnica leve e cabeceira elevada"
+    },
+    "resposta": "D",
+    "justificativa": "O propofol reduz CBF e PIC; evitar N₂O e altas doses de volátil; a hipocapnia leve (30–35 mmHg) reduz o volume sanguíneo. Manitol/salina hipertônica e drenagem de LCR podem ser adicionados."
+   },
+   {
+    "id": "neuroanestesia_13",
+    "tema": "Neuroanestesia",
+    "subtopico": "Craniotomia",
+    "enunciado": "Qual é a conduta para atenuar a resposta hemodinâmica à fixação do pino craniano (Mayfield)?",
+    "alternativas": {
+     "A": "Nenhuma medida, pois o paciente está sob anestesia",
+     "B": "Administrar succinilcolina",
+     "C": "Reduzir a ventilação-minuto",
+     "D": "Bloqueio de escalpo ou bolus de opioide/propofol antes da fixação"
+    },
+    "resposta": "D",
+    "justificativa": "A fixação craniana é intensamente dolorosa, causando hipertensão e taquicardia e aumento da PIC. O bloqueio dos nervos do escalpo, o aprofundamento da hipnose ou o bolus de remifentanil/fentanil previnem essa resposta."
+   },
+   {
+    "id": "neuroanestesia_14",
+    "tema": "Neuroanestesia",
+    "subtopico": "Craniotomia",
+    "enunciado": "Qual é o monitor mais sensível para detecção de embolia aérea venosa em posição sentada?",
+    "alternativas": {
+     "A": "Capnógrafo",
+     "B": "Oxímetro de pulso",
+     "C": "Doppler precordial",
+     "D": "Pressão arterial invasiva"
+    },
+    "resposta": "C",
+    "justificativa": "O Doppler precordial detecta mínimas quantidades de ar (0,25 mL). O ETE também é muito sensível e é o único que detecta ar nas câmaras e FOP. Queda do ETCO₂ e hipotensão aparecem em embolias maiores."
+   },
+   {
+    "id": "neuroanestesia_15",
+    "tema": "Neuroanestesia",
+    "subtopico": "Craniotomia",
+    "enunciado": "Qual é a conduta imediata ao detectar embolia aérea venosa grave durante craniotomia?",
+    "alternativas": {
+     "A": "Aumentar a concentração de N₂O",
+     "B": "Avisar o cirurgião, inundar o campo, comprimir as jugulares, posicionar em decúbito lateral esquerdo e aspirar ar pelo cateter central, com O₂ a 100%",
+     "C": "Elevar a cabeça e manter a PEEP em 20",
+     "D": "Aguardar a resolução espontânea"
+    },
+    "resposta": "B",
+    "justificativa": "O N₂O expande as bolhas e deve ser suspenso. A manobra de Durant (decúbito lateral esquerdo com Trendelenburg) mantém o ar no ápice do VD. Aspirar pelo cateter de átrio direito e dar suporte hemodinâmico. O valor da PEEP é controverso e pode favorecer embolia paradoxal."
+   },
+   {
+    "id": "neuroanestesia_16",
+    "tema": "Neuroanestesia",
+    "subtopico": "Craniotomia",
+    "enunciado": "Antes de uma cirurgia de fossa posterior em posição sentada, qual avaliação é recomendada?",
+    "alternativas": {
+     "A": "Pesquisa de forame oval patente com ecocardiograma e bolhas",
+     "B": "Eletroencefalograma de rotina",
+     "C": "Teste de esforço obrigatório",
+     "D": "Polissonografia"
+    },
+    "resposta": "A",
+    "justificativa": "O FOP aumenta o risco de embolia paradoxal (AVC) pela passagem de ar do átrio direito ao esquerdo. É contraindicação relativa à posição sentada. O ETE com injeção de solução salina agitada é o teste diagnóstico."
+   },
+   {
+    "id": "neuroanestesia_17",
+    "tema": "Neuroanestesia",
+    "subtopico": "Craniotomia",
+    "enunciado": "Em craniotomia acordado, qual técnica é frequentemente utilizada?",
+    "alternativas": {
+     "A": "Dormindo-acordado-dormindo, com bloqueio de escalpo, propofol, remifentanil e/ou dexmedetomidina",
+     "B": "Anestesia geral com bloqueio neuromuscular durante todo o caso",
+     "C": "Apenas raquianestesia",
+     "D": "Sedação profunda com ventilação controlada durante o mapeamento"
+    },
+    "resposta": "A",
+    "justificativa": "O paciente deve cooperar durante o mapeamento cortical (fala e função motora). Bloqueio de escalpo, infusões tituláveis e vias aéreas suplementares (máscara laríngea ou nasofaríngea) são usadas. A convulsão é tratada com irrigação de soro frio, propofol ou benzodiazepínico."
+   },
+   {
+    "id": "neuroanestesia_18",
+    "tema": "Neuroanestesia",
+    "subtopico": "Neuromonitorização",
+    "enunciado": "Para monitorização com potenciais evocados motores (PEM) intraoperatórios, qual é o regime anestésico mais adequado?",
+    "alternativas": {
+     "A": "Sevoflurano 2 CAM com N₂O e relaxamento profundo",
+     "B": "Anestesia só com bloqueio neuromuscular",
+     "C": "Dose alta de volátil com succinilcolina em infusão",
+     "D": "TIVA (propofol e opioide), sem bloqueador neuromuscular ou com infusão titulada, e sem N₂O ou volátil em doses altas"
+    },
+    "resposta": "D",
+    "justificativa": "Os PEM são muito sensíveis a voláteis e a bloqueadores neuromusculares. Os PESS são mais robustos, mas também são atenuados por voláteis > 0,5 CAM e N₂O. Estabilidade de temperatura e PA ajuda a manter os sinais."
+   },
+   {
+    "id": "neuroanestesia_19",
+    "tema": "Neuroanestesia",
+    "subtopico": "Neuromonitorização",
+    "enunciado": "Qual alteração nos potenciais evocados somatossensitivos é considerada significativa para alerta?",
+    "alternativas": {
+     "A": "Redução da amplitude de 5%",
+     "B": "Aumento de 2% da latência",
+     "C": "Redução da amplitude maior que 50% ou aumento de latência maior que 10%",
+     "D": "Nenhuma alteração é significativa"
+    },
+    "resposta": "C",
+    "justificativa": "Essas variações são critérios comuns de alerta. Antes de atribuir à cirurgia, afastar causas anestésicas e fisiológicas (aprofundamento da anestesia, hipotermia, hipotensão, hipoxemia, falha técnica)."
+   },
+   {
+    "id": "neuroanestesia_20",
+    "tema": "Neuroanestesia",
+    "subtopico": "Hipófise",
+    "enunciado": "Após cirurgia transesfenoidal para adenoma hipofisário, o paciente apresenta diurese de 400 mL/h, urina diluída e Na⁺ 152 mEq/L. Qual o diagnóstico e o tratamento?",
+    "alternativas": {
+     "A": "SIADH; restrição hídrica",
+     "B": "Diabetes insípido central; desmopressina (1–2 mcg IV) e reposição de água livre",
+     "C": "Insuficiência renal aguda; furosemida",
+     "D": "Hiperaldosteronismo; espironolactona"
+    },
+    "resposta": "B",
+    "justificativa": "A lesão da neuro-hipófise ou da haste reduz o ADH, causando poliúria diluída e hipernatremia. A desmopressina e a reposição guiada por Na⁺ e diurese tratam. Lembrar do risco de insuficiência adrenal e da síndrome trifásica."
+   },
+   {
+    "id": "neuroanestesia_21",
+    "tema": "Neuroanestesia",
+    "subtopico": "Hipófise",
+    "enunciado": "Qual é o principal problema da via aérea em pacientes com acromegalia?",
+    "alternativas": {
+     "A": "Microstomia congênita isolada",
+     "B": "Macroglossia, prognatismo e estreitamento glótico, com intubação difícil",
+     "C": "Agenesia de epiglote",
+     "D": "Laringomalácia"
+    },
+    "resposta": "B",
+    "justificativa": "A acromegalia causa hipertrofia de tecidos moles da língua, da faringe e das cordas vocais. Considerar videolaringoscopia e fibroscopia, tubo menor e preparo para via aérea difícil; avaliar função cardíaca e diabetes."
+   },
+   {
+    "id": "neuroanestesia_22",
+    "tema": "Neuroanestesia",
+    "subtopico": "Aneurisma",
+    "enunciado": "Qual é a pressão transmural de um aneurisma cerebral?",
+    "alternativas": {
+     "A": "PAM − PIC",
+     "B": "PAM + PIC",
+     "C": "PIC − PVC",
+     "D": "PAS − PAD"
+    },
+    "resposta": "A",
+    "justificativa": "A pressão transmural determina o estresse na parede do aneurisma: reduzir a PIC (drenagem de LCR, manitol) antes de abrir a dura aumenta a pressão transmural e o risco de ruptura, por isso a PA deve ser controlada."
+   },
+   {
+    "id": "neuroanestesia_23",
+    "tema": "Neuroanestesia",
+    "subtopico": "Aneurisma",
+    "enunciado": "Qual medicamento reduz o desfecho desfavorável após hemorragia subaracnoide por aneurisma?",
+    "alternativas": {
+     "A": "Atenolol 100 mg",
+     "B": "Dexametasona 40 mg/dia",
+     "C": "Enoxaparina em dose plena na admissão",
+     "D": "Nimodipina 60 mg VO a cada 4 horas"
+    },
+    "resposta": "D",
+    "justificativa": "A nimodipina (bloqueador de canais de cálcio) melhora o desfecho, provavelmente por neuroproteção, mais do que por reduzir o vasoespasmo angiográfico. Pode causar hipotensão (dividir doses). A heparina é evitada antes do tratamento do aneurisma."
+   },
+   {
+    "id": "neuroanestesia_24",
+    "tema": "Neuroanestesia",
+    "subtopico": "Aneurisma",
+    "enunciado": "Em qual período após a hemorragia subaracnoide o vasoespasmo sintomático costuma ocorrer?",
+    "alternativas": {
+     "A": "Nas primeiras 2 horas",
+     "B": "Após 3 meses",
+     "C": "Entre o 4º e o 14º dia",
+     "D": "Apenas no 1º dia"
+    },
+    "resposta": "C",
+    "justificativa": "O vasoespasmo tem pico entre os dias 7–10 e se estende de 4 a 14 dias. Causa isquemia cerebral tardia. O tratamento: nimodipina, euvolemia, indução de hipertensão guiada por equipe, tratamento endovascular (angioplastia/vasodilatadores intra-arteriais)."
+   },
+   {
+    "id": "neuroanestesia_25",
+    "tema": "Neuroanestesia",
+    "subtopico": "Aneurisma",
+    "enunciado": "Qual alteração é frequente em pacientes com HSA aguda?",
+    "alternativas": {
+     "A": "Hipertermia maligna",
+     "B": "Hipernatremia com poliúria isolada",
+     "C": "Alterações no ECG (T invertida, QT longo) e hiponatremia por perda cerebral de sal",
+     "D": "Hipoglicemia grave"
+    },
+    "resposta": "C",
+    "justificativa": "A HSA causa liberação de catecolaminas e disfunção cardíaca (cardiomiopatia de estresse), arritmias e alterações do ECG. A hiponatremia é comum (SIADH ou síndrome de perda cerebral de sal); tratar com NaCl, não com restrição hídrica, pelo risco de vasoespasmo."
+   },
+   {
+    "id": "neuroanestesia_26",
+    "tema": "Neuroanestesia",
+    "subtopico": "Aneurisma",
+    "enunciado": "Qual é a manobra utilizada para obter controle proximal temporário do sangramento em aneurisma com ruptura durante a clipagem?",
+    "alternativas": {
+     "A": "Hipertensão induzida de 250 mmHg",
+     "B": "Parada cardíaca induzida (adenosina) ou estimulação ventricular rápida, em casos selecionados",
+     "C": "Infusão de heparina",
+     "D": "Hiperventilação a 10 mmHg de PaCO₂"
+    },
+    "resposta": "B",
+    "justificativa": "A adenosina em bolus (ou estimulação rápida) causa assistolia/hipotensão breve, reduzindo a pressão no aneurisma. Exige preparo, equipe e monitoração, e é uma estratégia de resgate. A clipagem temporária é outra opção."
+   },
+   {
+    "id": "neuroanestesia_27",
+    "tema": "Neuroanestesia",
+    "subtopico": "Neurointervenção",
+    "enunciado": "Qual é a meta de PA recomendada pela AHA/ASA antes da trombectomia no AVC isquêmico (sem trombólise)?",
+    "alternativas": {
+     "A": "Abaixo de 185/110 mmHg, e após a reperfusão abaixo de 180/105 mmHg",
+     "B": "Abaixo de 100/60 mmHg",
+     "C": "Acima de 220/120 mmHg",
+     "D": "Não há metas"
+    },
+    "resposta": "A",
+    "justificativa": "A PA deve ser controlada para evitar transformação hemorrágica após reperfusão, mas evitando hipotensão (queda da perfusão da penumbra). Anestesia geral ou sedação consciente são aceitas; o importante é evitar atraso."
+   },
+   {
+    "id": "neuroanestesia_28",
+    "tema": "Neuroanestesia",
+    "subtopico": "Neurointervenção",
+    "enunciado": "Quanto às técnicas anestésicas na trombectomia, os estudos SIESTA, ANSTROKE e GOLIATH sugerem:",
+    "alternativas": {
+     "A": "A anestesia geral é sempre inferior.",
+     "B": "A sedação é sempre inferior.",
+     "C": "Nenhum estudo foi realizado.",
+     "D": "Anestesia geral controlada não é pior (ou é melhor) que a sedação consciente em desfechos neurológicos"
+    },
+    "resposta": "D",
+    "justificativa": "Ensaios randomizados recentes mostraram que, com controle de PA e das vias aéreas, a anestesia geral é segura e pode melhorar a imobilidade e as condições técnicas. Evitar hipotensão e atrasos é mais importante que a técnica."
+   },
+   {
+    "id": "neuroanestesia_29",
+    "tema": "Neuroanestesia",
+    "subtopico": "Hemorragia",
+    "enunciado": "Em hemorragia intracerebral espontânea, a redução da PAS para cerca de 140 mmHg:",
+    "alternativas": {
+     "A": "É contraindicada em todos os casos.",
+     "B": "Deve ser feita para < 90 mmHg imediatamente.",
+     "C": "Não tem relação com o hematoma.",
+     "D": "É segura e pode reduzir a expansão do hematoma (estudos INTERACT)"
+    },
+    "resposta": "D",
+    "justificativa": "Estudos INTERACT mostraram segurança da redução intensiva da PAS e tendência a melhor desfecho funcional. Evitar quedas > 70 mmHg e hipotensão. Reverter anticoagulação e acompanhar a PIC."
+   },
+   {
+    "id": "neuroanestesia_30",
+    "tema": "Neuroanestesia",
+    "subtopico": "Posição",
+    "enunciado": "Em cirurgia de coluna em posição prona, qual a causa de perda visual perioperatória mais temida?",
+    "alternativas": {
+     "A": "Glaucoma agudo",
+     "B": "Catarata",
+     "C": "Neuropatia óptica isquêmica",
+     "D": "Hemorragia vítrea espontânea"
+    },
+    "resposta": "C",
+    "justificativa": "Fatores: tempo longo, perdas sanguíneas, hipotensão, anemia e edema facial. Medidas: cabeça neutra e olhos livres de pressão, manutenção da PA e hematócrito, evitar hipervolemia e checar o olho frequentemente."
+   },
+   {
+    "id": "neuroanestesia_31",
+    "tema": "Neuroanestesia",
+    "subtopico": "Posição",
+    "enunciado": "A compressão abdominal em posição prona aumenta:",
+    "alternativas": {
+     "A": "A pressão negativa intratorácica",
+     "B": "O sangramento, por aumento da pressão venosa epidural",
+     "C": "A capacidade residual funcional",
+     "D": "O retorno venoso pelo sistema cava inferior"
+    },
+    "resposta": "B",
+    "justificativa": "Compressão do abdome aumenta a pressão intra-abdominal e a pressão do plexo venoso vertebral (Batson), aumentando o sangramento. Usar coxins que deixem o abdome livre, e monitorizar pressão de via aérea."
+   },
+   {
+    "id": "neuroanestesia_32",
+    "tema": "Neuroanestesia",
+    "subtopico": "Fossa posterior",
+    "enunciado": "Durante manipulação do tronco cerebral em cirurgia de fossa posterior, qual alteração hemodinâmica é frequente?",
+    "alternativas": {
+     "A": "Bradicardia, hipertensão e arritmias",
+     "B": "Hipotensão com taquicardia",
+     "C": "Febre",
+     "D": "Hiperglicemia isolada"
+    },
+    "resposta": "A",
+    "justificativa": "A estimulação de núcleos do tronco (vago, trigêmeo) causa respostas autonômicas. É importante informar o cirurgião para suspender a manipulação. A atropina trata bradicardia sintomática."
+   },
+   {
+    "id": "neuroanestesia_33",
+    "tema": "Neuroanestesia",
+    "subtopico": "Pediátrica",
+    "enunciado": "Qual é o cuidado no manejo anestésico de uma criança com mielomeningocele?",
+    "alternativas": {
+     "A": "Evitar látex, posicionar para não comprimir a lesão e manter normotermia e acesso venoso",
+     "B": "Posição supina sobre a lesão",
+     "C": "Uso liberal de látex",
+     "D": "Evitar monitorização"
+    },
+    "resposta": "A",
+    "justificativa": "A alta exposição a látex predispõe à alergia; a lesão deve ser protegida; há risco de hipotermia e perda de líquidos. A intubação é feita com coxins para a lesão ou em decúbito lateral."
+   },
+   {
+    "id": "neuroanestesia_34",
+    "tema": "Neuroanestesia",
+    "subtopico": "HIC",
+    "enunciado": "Qual é a faixa de sódio sérico usada como meta na terapia hiperosmolar para controle da PIC?",
+    "alternativas": {
+     "A": "120–125 mEq/L",
+     "B": "170–180 mEq/L",
+     "C": "Qualquer valor é aceitável",
+     "D": "Em geral 145–155 mEq/L, evitando oscilações bruscas"
+    },
+    "resposta": "D",
+    "justificativa": "A salina hipertônica reduz a PIC por efeito osmótico. A hiponatremia aumenta o edema cerebral, e a hipernatremia grave (> 160) e as variações rápidas do sódio estão associadas a danos (desmielinização osmótica). A osmolaridade-alvo do manitol é < 320 mOsm/L."
+   },
+   {
+    "id": "neuroanestesia_35",
+    "tema": "Neuroanestesia",
+    "subtopico": "Glicemia",
+    "enunciado": "Qual a meta de glicemia em neurocirurgia e TCE?",
+    "alternativas": {
+     "A": "Acima de 300 mg/dL",
+     "B": "Abaixo de 60 mg/dL",
+     "C": "Evitar hiperglicemia e hipoglicemia; em geral 140–180 mg/dL",
+     "D": "Não é necessário controlar"
+    },
+    "resposta": "C",
+    "justificativa": "A hiperglicemia agrava a lesão isquêmica e o edema cerebral; o controle estrito com insulina aumenta a hipoglicemia e o prejuízo metabólico. A meta é moderada, 140–180 mg/dL, evitando soluções glicosadas no intraoperatório."
+   },
+   {
+    "id": "neuroanestesia_36",
+    "tema": "Neuroanestesia",
+    "subtopico": "Posição",
+    "enunciado": "Em posição sentada, qual é a complicação associada à flexão extrema do pescoço?",
+    "alternativas": {
+     "A": "Hipoglicemia",
+     "B": "Edema de língua e via aérea, e lesão medular cervical (quadriplegia)",
+     "C": "Bradicardia sinusal fixa",
+     "D": "Aumento da diurese"
+    },
+    "resposta": "B",
+    "justificativa": "A flexão excessiva comprime a via aérea (tubo) e as veias do pescoço, aumenta a PIC e pode lesar a medula cervical. Deixar dois dedos de espaço entre o queixo e o esterno e checar a posição."
+   },
+   {
+    "id": "neuroanestesia_37",
+    "tema": "Neuroanestesia",
+    "subtopico": "TCE",
+    "enunciado": "Em paciente com TCE grave, qual é a conduta ventilatória inicial recomendada?",
+    "alternativas": {
+     "A": "Hiperventilação profilática com PaCO₂ de 25 mmHg",
+     "B": "Normocapnia (PaCO₂ 35–40 mmHg) e evitar hipoxemia",
+     "C": "Hipercapnia permissiva",
+     "D": "Hipoventilação para reduzir o consumo de O₂"
+    },
+    "resposta": "B",
+    "justificativa": "A hiperventilação profilática reduz o CBF a níveis isquêmicos; a hipercapnia aumenta a PIC. A hiperventilação é medida temporária na herniação. A hipóxia e a hipotensão são os principais insultos secundários."
+   },
+   {
+    "id": "neuroanestesia_38",
+    "tema": "Neuroanestesia",
+    "subtopico": "Epilepsia",
+    "enunciado": "Em cirurgia de epilepsia com eletrocorticografia (ECoG), qual agente é preferível evitar antes do registro?",
+    "alternativas": {
+     "A": "Benzodiazepínicos e doses altas de volátil, pois suprimem a atividade epileptiforme",
+     "B": "Dexmedetomidina em baixa dose, sob qualquer circunstância",
+     "C": "Remifentanil em dose baixa",
+     "D": "Soro fisiológico"
+    },
+    "resposta": "A",
+    "justificativa": "Benzodiazepínicos e altas doses de voláteis suprimem espículas; propofol em doses altas também. Opioides em baixas doses e dexmedetomidina têm efeito mínimo. Alguns agentes (etomidato, metoexital) ativam o foco para mapeamento."
+   },
+   {
+    "id": "neuroanestesia_39",
+    "tema": "Neuroanestesia",
+    "subtopico": "Manitol",
+    "enunciado": "Qual é a principal limitação do uso repetido de manitol?",
+    "alternativas": {
+     "A": "Hipoglicemia e hipotermia",
+     "B": "Alcalose respiratória",
+     "C": "Hipercalcemia",
+     "D": "Hiperosmolaridade, hipovolemia, insuficiência renal e hipotensão"
+    },
+    "resposta": "D",
+    "justificativa": "O manitol é diurético osmótico: pode causar depleção de volume e hipotensão, acúmulo (rebote na PIC se a BHE estiver lesada) e lesão renal em osmolaridade > 320. A salina hipertônica é alternativa em hipotensão."
+   },
+   {
+    "id": "neuroanestesia_40",
+    "tema": "Neuroanestesia",
+    "subtopico": "Craniotomia",
+    "enunciado": "Qual é a preocupação principal durante a extubação após craniotomia?",
+    "alternativas": {
+     "A": "Aumentar o volume corrente ao máximo",
+     "B": "Deixar o paciente sem analgesia",
+     "C": "Evitar tosse, hipertensão e dessaturação, que aumentam a PIC e o risco de sangramento",
+     "D": "Realizar extubação com laringoespasmo para testar reflexos"
+    },
+    "resposta": "C",
+    "justificativa": "A tosse e o esforço elevam a PIC e a PA. Técnicas: remifentanil em baixa dose, lidocaína IV, dexmedetomidina; PA controlada, analgesia adequada e avaliação neurológica imediata."
+   },
+   {
+    "id": "neuroanestesia_41",
+    "tema": "Neuroanestesia",
+    "subtopico": "Coluna",
+    "enunciado": "No tratamento de sangramento em cirurgias extensas de coluna, o ácido tranexâmico:",
+    "alternativas": {
+     "A": "Aumenta o sangramento",
+     "B": "Não tem efeito",
+     "C": "Reduz a perda sanguínea e a necessidade de transfusão",
+     "D": "É contraindicado em qualquer cirurgia ortopédica"
+    },
+    "resposta": "C",
+    "justificativa": "Revisões mostram redução significativa do sangramento e da transfusão sem aumento claro de eventos tromboembólicos. Cuidado com doses altas (convulsões) e insuficiência renal."
+   }
+  ]
  }
 ]

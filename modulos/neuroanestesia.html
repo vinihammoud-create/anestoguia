@@ -1,0 +1,324 @@
+<div class="screen" id="screen-neuroanestesia">
+  <div class="top-bar" style="border-bottom:3px solid var(--violet)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--violet)">🧠 Neuroanestesia</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="neuroanestesia-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('neu','fisio',this)">FISIOLOGIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('neu','cirurgia',this)">CRANIOTOMIA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('neu','vascular',this)">VASCULAR</button>
+  </div>
+
+  <div class="tab-panel active" id="neu-fisio">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> CBF, autorregulação, efeito do CO₂ e dos anestésicos sobre o CBF e o CMRO₂, PIC e PPC.</div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">01</span> Valores e determinantes
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">CBF e CMRO₂</div>
+          <div class="dc" style="text-align:left;line-height:1.6">CBF ≈ 50 mL/100 g/min (substância cinzenta ~80, branca ~20); CMRO₂ ≈ 3,5 mL/100 g/min. O cérebro é ~2% do peso e usa ~20% do O₂ corporal.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Autorregulação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">CBF constante com PAM entre ~60 e 150 mmHg; curva desviada à direita em hipertensos crônicos. Perdida na lesão cerebral, hipercapnia grave e doses altas de volátil (&gt; 1 CAM).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">CO₂</div>
+          <div class="dc" style="text-align:left;line-height:1.6">CBF varia 1–2 mL/100 g/min (≈ 4%) por mmHg de PaCO₂ entre 20 e 80 mmHg. Hipocapnia reduz CBF e PIC; hipercapnia aumenta. O efeito dura horas (adaptação por bicarbonato).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">O₂</div>
+          <div class="dc" style="text-align:left;line-height:1.6">PaO₂ &lt; 50 mmHg aumenta marcadamente o CBF; hiperóxia reduz o CBF levemente.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Temperatura</div>
+          <div class="dc" style="text-align:left;line-height:1.6">CMRO₂ cai ~6–7% por °C; hipertermia aumenta o metabolismo e a lesão isquêmica; hipotermia moderada traz proteção limitada na isquemia.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Acoplamento fluxo–metabolismo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O CBF acompanha o CMRO₂. Anestésicos intravenosos reduzem ambos; os voláteis reduzem o CMRO₂, mas dilatam os vasos (desacoplamento dose-dependente).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">02</span> Efeitos dos anestésicos
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Agente</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">CMRO₂</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">CBF</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">PIC</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Propofol, tiopental, etomidato</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↓↓</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↓↓</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↓</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Voláteis (sevo, iso, des)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↓</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑ (&gt; 1 CAM)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑ (dose-dependente)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">N₂O</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Cetamina</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↔/↑ (↔ se ventilado)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑/↔</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑/↔</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Opioides</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↔/↓</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↔/↓</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↔</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Dexmedetomidina</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↓ leve</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↓</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↔/↓</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Bloqueadores neuromusculares</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↔</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↔</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↔ (succinilcolina: leve ↑ por fasciculações)</td></tr>
+          </tbody>
+        </table></div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Resumo prático</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Para reduzir a PIC: TIVA com propofol, normocapnia/hipocapnia leve, evitar N₂O e altas doses de volátil, manter PAM e PPC.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">03</span> PIC, Monro–Kellie e HIC
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">PIC normal e limite</div>
+          <div class="dc" style="text-align:left;line-height:1.6">PIC normal 5–15 mmHg no adulto; tratar acima de 20–22 mmHg (BTF 4ª ed.). PPC = PAM − PIC, alvo 60–70 mmHg.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Monro–Kellie</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cérebro, sangue e LCR ocupam volume fixo: aumento de um componente é compensado por redução dos outros até um limite, depois a PIC sobe de forma exponencial.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tríade de Cushing</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hipertensão, bradicardia e respiração irregular: sinal tardio de herniação.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tratamento escalonado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cabeceira 30° e cabeça neutra, sedação/analgesia, normocapnia (hiperventilação só como ponte), manitol 0,25–1 g/kg ou salina hipertônica (3%: 2–5 mL/kg), drenagem de LCR, coma barbitúrico e craniectomia descompressiva. Evitar hiponatremia, hiperglicemia e hipertermia.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fluidos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Isotônicos (SF 0,9% ou cristaloide balanceado); evitar soluções hipotônicas e glicosadas. Albumina foi associada a pior desfecho no TCE (SAFE-TBI).</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /neu-fisio -->
+
+  <div class="tab-panel" id="neu-cirurgia">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> técnica anestésica, resposta à laringoscopia e ao pino craniano, posição sentada, embolia aérea, craniotomia acordado e neuromonitorização.</div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">01</span> Conduta geral
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Indução e laringoscopia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Evitar hipertensão e tosse: propofol/tiopental, opioide (fentanil/remifentanil) e relaxante; atenuar a resposta ao pino de Mayfield e à incisão (bloqueio de escalpo, bolus de propofol/opioide).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Manutenção</div>
+          <div class="dc" style="text-align:left;line-height:1.6">TIVA (propofol + remifentanil) ou volátil em ≤ 1 CAM; ambos aceitáveis. TIVA oferece melhor relaxamento cerebral e permite neuromonitorização; evitar N₂O.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ventilação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">PaCO₂ 35–40 mmHg (30–35 se for necessário relaxamento cerebral); PEEP moderada (5); cabeceira elevada; evitar compressão das jugulares (flexão extrema do pescoço).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Relaxamento cerebral</div>
+          <div class="dc" style="text-align:left;line-height:1.6">TIVA, hiperventilação leve, manitol (0,5–1 g/kg), salina hipertônica, drenagem de LCR, posição.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Emergência</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Extubação suave (sem tosse), PA controlada, remifentanil/dexmedetomidina/lidocaína; avaliação neurológica imediata; tratar hipertensão e dor.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">02</span> Posição sentada e embolia aérea venosa (EAV)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Riscos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Embolia aérea venosa (ar nas veias do diploe/seios durais acima do coração), hipotensão, pneumoencéfalo, macroglossia/edema de via aérea (flexão cervical), quadriplegia (flexão extrema).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Detecção</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Doppler precordial (mais sensível; "som de roda de moinho"), ETE (padrão-ouro para ar), queda abrupta do ETCO₂, hipotensão, arritmias, aumento de PAP. Rastrear FOP antes (ETE com bolhas) pelo risco de embolia paradoxal.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Conduta na EAV</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Avisar o cirurgião, inundar o campo e ocluir os pontos de entrada, compressão jugular, posicionar (lateral esquerda com Trendelenburg — manobra de Durant), aspirar o ar pelo cateter central, ventilar com O₂ a 100% (suspender N₂O), vasopressores e suporte; PEEP é controversa.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">03</span> Craniotomia acordado e neuromonitorização
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Craniotomia acordado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Mapeamento de áreas eloquentes (linguagem e motoras). Técnica "dormindo-acordado-dormindo": bloqueio de escalpo, propofol/remifentanil e dexmedetomidina; despertar no mapeamento; conter convulsão (gelo frio no córtex, propofol, benzodiazepínico).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Potenciais evocados</div>
+          <div class="dc" style="text-align:left;line-height:1.6">PESS e PEM: preferir TIVA; voláteis abaixo de 0,5 CAM; sem N₂O; evitar bloqueio neuromuscular (PEM) ou usar infusão titulada; manter temperatura e PA estáveis. Queda &gt; 50% da amplitude ou aumento de latência &gt; 10% é sinal de alerta.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">EEG/BIS e ECoG</div>
+          <div class="dc" style="text-align:left;line-height:1.6">EEG para profundidade e isquemia; em cirurgia de epilepsia, evitar benzodiazepínicos e doses altas de voláteis antes da ECoG (suprimem espículas).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hipófise</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Diabetes insípido pós-operatório (poliúria, hipernatremia): desmopressina 1–2 mcg IV; acromegalia: via aérea difícil (macroglossia).</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /neu-cirurgia -->
+
+  <div class="tab-panel" id="neu-vascular">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> hemorragia subaracnoide, aneurisma, vasoespasmo, clipagem e neurointervenção.</div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">01</span> Hemorragia subaracnoide e aneurisma
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Escalas</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hunt-Hess e WFNS (clínica); Fisher modificada (TC: risco de vasoespasmo). Comorbidades: alterações no ECG (inversão de T, QT longo), disfunção ventricular (cardiomiopatia de estresse), hiponatremia (perda cerebral de sal), hipovolemia.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pressão transmural</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pressão transmural do aneurisma = PAM − PIC. A indução e a laringoscopia devem evitar hipertensão (risco de ressangramento), mas a queda excessiva da PA reduz a PPC. Reduzir a PIC com drenagem lenta.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Durante a clipagem</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Normocapnia, normovolemia, normotermia; clipagem temporária exige PAM adequada; proteção cerebral farmacológica sem evidência robusta; para controle de sangramento, parada cardíaca induzida com adenosina ou estimulação rápida em casos selecionados.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Vasoespasmo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pico entre os dias 4–14. Nimodipina 60 mg VO a cada 4 h (reduz o desfecho desfavorável; pode causar hipotensão); manter euvolemia e PA suficiente; tratamento endovascular em vasoespasmo sintomático refratário.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Estado hemodinâmico</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Evitar hipovolemia e hiponatremia; "hipertensão induzida" no vasoespasmo guiada por equipe.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">02</span> Neurorradiologia intervencionista e AVC
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Anestesia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Imobilidade, controle estrito da PA, anticoagulação com heparina (ACT 250–300 s), ar e contraste. Preparar protamina; atenção a ruptura do aneurisma durante a embolização.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Trombectomia no AVC isquêmico</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sedação consciente ou anestesia geral: estudos recentes (SIESTA, ANSTROKE, GOLIATH) mostraram que o geral controlado é similar ou melhor; a conduta deve evitar atraso e hipotensão. PA &lt; 185/110 antes e &lt; 180/105 após a reperfusão; manter PAM adequada.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hemorragia intracerebral</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Reduzir a PAS para ~140 mmHg (INTERACT); reverter anticoagulantes; vigiar a PIC.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">03</span> Outros
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fossa posterior</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Manipulação do tronco: bradicardia, hipertensão e arritmias; comunicar com o cirurgião; posição prona/lateral com compressão de vias aéreas.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cirurgia de coluna</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Posição prona: lesão do nervo óptico (perda visual perioperatória), compressão abdominal (↑ sangramento), olhos livres; TXA reduz sangramento; neuromonitorização; intubação cervical com cuidado.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Neuroanestesia pediátrica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Craniossinostose (sangramento volumoso); mielomeningocele (prone, alergia a látex); hidrocefalia; PIC elevada com letargia e vômito.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>CBF</strong> ≈ 50 mL/100 g/min; <strong>autorregulação</strong> PAM 60–150 mmHg; <strong>CO₂</strong>: 1–2 mL/100 g/min por mmHg.</li>
+          <li><strong>Voláteis</strong> vasodilatam (acima de 1 CAM, perda de autorregulação); <strong>propofol</strong> reduz CBF, CMRO₂ e PIC; <strong>N₂O</strong> aumenta CBF e PIC.</li>
+          <li><strong>PPC</strong> = PAM − PIC (60–70 mmHg); tratar PIC &gt; 22 mmHg; <strong>tríade de Cushing</strong> é tardia.</li>
+          <li><strong>HIC:</strong> cabeceira 30°, manitol 0,25–1 g/kg, salina 3%, hiperventilação só como ponte.</li>
+          <li><strong>Evitar glicose e soluções hipotônicas</strong> em neurocirurgia; albumina é prejudicial no TCE (SAFE-TBI).</li>
+          <li><strong>Posição sentada:</strong> EAV; Doppler precordial é o mais sensível; ETE detecta FOP; Durant (decúbito lateral esquerdo e Trendelenburg).</li>
+          <li><strong>PESS/PEM:</strong> TIVA, volátil &lt; 0,5 CAM, sem N₂O; evitar BNM em PEM.</li>
+          <li><strong>Craniotomia acordado:</strong> bloqueio de escalpo, dexmedetomidina/propofol/remifentanil; convulsão: gelo no córtex.</li>
+          <li><strong>Aneurisma:</strong> pressão transmural = PAM − PIC; nimodipina 60 mg VO a cada 4 h; vasoespasmo dias 4–14.</li>
+          <li><strong>Hipófise:</strong> diabetes insípido; desmopressina; acromegalia = via aérea difícil.</li>
+          <li><strong>Trombectomia:</strong> geral controlado e sedação são comparáveis; evitar hipotensão.</li>
+          <li><strong>Prono:</strong> perda visual perioperatória por isquemia do nervo óptico.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>TIVA com propofol/remifentanil</strong> (inclusive TCI) é a técnica corrente em neurocirurgia nos centros de referência; <strong>monitorização neurofisiológica</strong> e <strong>ECoG</strong> estão restritas a poucos serviços.</li>
+          <li><strong>Nimodipina, manitol, salina hipertônica e levetiracetam</strong> são acessíveis; <strong>desmopressina</strong> nasal/IV, em geral, também.</li>
+          <li><strong>Neurointervenção e trombectomia</strong> concentram-se em centros de AVC credenciados (Ministério da Saúde); o tempo até reperfusão é crítico.</li>
+          <li><strong>Posição sentada</strong> é pouco usada: prefira posição lateral/park-bench ou supina quando o cirurgião aceitar.</li>
+          <li>O <strong>TEA/TSA</strong> cobra fisiologia cerebral, efeito dos anestésicos, HIC, EAV e aneurisma.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>Carney N, Totten AM, O'Reilly C, et al. Guidelines for the management of severe traumatic brain injury, 4th edition. Neurosurgery 2017;80:6–15.</li>
+          <li>Hemphill JC 3rd, Greenberg SM, Anderson CS, et al. Guidelines for the management of spontaneous intracerebral hemorrhage. Stroke 2015;46:2032–60.</li>
+          <li>Connolly ES Jr, Rabinstein AA, Carhuapoma JR, et al. Guidelines for the management of aneurysmal subarachnoid hemorrhage. Stroke 2012;43:1711–37.</li>
+          <li>Powers WJ, Rabinstein AA, Ackerson T, et al. Guidelines for the early management of patients with acute ischemic stroke: 2019 update. Stroke 2019;50:e344–418.</li>
+          <li>The SAFE Study Investigators. Saline or albumin for fluid resuscitation in patients with traumatic brain injury. N Engl J Med 2007;357:874–84.</li>
+          <li>Cottrell JE, Patel P. Cottrell and Patel Neuroanesthesia, 6ª ed. Philadelphia: Elsevier; 2017.</li>
+          <li>Schönenberger S, Uhlmann L, Hacke W, et al. Effect of conscious sedation vs general anesthesia on early neurological improvement among patients with ischemic stroke undergoing endovascular thrombectomy (SIESTA). JAMA 2016;316:1986–96.</li>
+          <li>Löwhagen Hendén P, Rentzos A, Karlsson JE, et al. General anesthesia versus conscious sedation for endovascular treatment of acute ischemic stroke: the AnStroke trial. Stroke 2017;48:1601–7.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /neu-vascular -->
+</div>

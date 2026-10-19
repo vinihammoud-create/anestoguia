@@ -2,7 +2,7 @@
    • HTML/JSON/JS/CSS: network-first (atualiza sempre que houver rede; cache como fallback offline)
    • imagens/fontes: cache-first
    A versão abaixo é trocada pelo tools/bump-sw.js a cada publicação. */
-const VERSION = '3.1.0-202610190200';
+const VERSION = '3.1.0-202610190211';
 const CACHE = 'anestoguia-' + VERSION;
 const PRECACHE = ['./', './index.html', './manifest.json', './css/app.css', './js/store.js', './js/calc.js', './js/app.js', './js/router.js', './js/treino.js', './fonts/inter-latin.woff2', './fonts/jetbrains-mono-latin.woff2', './icon-192.png', './icon-512.png'];
 

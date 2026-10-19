@@ -1,0 +1,342 @@
+<div class="screen" id="screen-cardiaca">
+  <div class="top-bar" style="border-bottom:3px solid var(--red)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--red)">❤️ Anestesia Cardíaca e CEC</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="cardiaca-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('card','pre',this)">PRÉ-OP</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('card','cec',this)">CEC</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('card','saida',this)">SAÍDA DE CEC</button>
+  </div>
+
+  <div class="tab-panel active" id="card-pre">
+    <div class="page-wrap">
+
+    <div class="alert a-red" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> quais fármacos suspender, monitorização e a conduta hemodinâmica em cada lesão valvar.</div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> Fármacos no pré-operatório
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Fármaco</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Conduta</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">AAS</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Clopidogrel</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Suspender 5 dias; prasugrel 7 dias; ticagrelor 3–5 dias</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Varfarina</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Suspender ~5 dias; INR &lt; 1,5 (ponte conforme risco)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">DOACs</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Suspender 48–72 h, conforme a função renal</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">IECA/BRA</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Suspender 24 h antes (vasoplegia e hipotensão na indução)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Betabloqueador</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter (reduz fibrilação atrial pós-operatória)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Estatina</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Amiodarona</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter; risco de vasoplegia, bradicardia e disfunção pulmonar</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">iSGLT2</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Suspender 3 dias (cetoacidose euglicêmica)</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Monitorização
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pressão arterial invasiva</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Antes da indução. Radial é a mais usada; em cirurgia de arco aórtico, monitorizar os dois braços ou usar a artéria femoral. A radial pode subestimar a PAM logo após a CEC (gradiente radial-aórtico).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">CVC e artéria pulmonar</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Veia jugular interna; cateter de Swan em disfunção ventricular importante, hipertensão pulmonar e pós-operatório complexo. PVC e pressões pulmonares ajudam a guiar vasopressores e inotrópicos.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">ETE e NIRS</div>
+          <div class="dc" style="text-align:left;line-height:1.6">ETE: função ventricular, valvas, ar, deslocamento aórtico; contraindicada em estenose ou perfuração esofágica. NIRS (rSO₂) alerta para má perfusão cerebral; queda de 20% do basal pede intervenção.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Temperatura e ACT</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Temperatura nasofaríngea/esofágica e vesical/retal (diferença reflete gradientes); ACT para heparinização e neutralização.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">EEG/BIS</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Útil em parada circulatória hipotérmica (silêncio elétrico) e para reduzir o risco de memória intraoperatória.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">03</span> Metas hemodinâmicas por lesão
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Lesão</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">FC</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Pré-carga</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Pós-carga</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Contratilidade</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Estenose aórtica</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Normal-baixa (sinusal)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter/↑</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter (evitar ↓)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Insuficiência aórtica</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Alta (80–90)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter/↑</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↓</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Estenose mitral</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Baixa (evitar taquicardia)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Insuficiência mitral</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Normal-alta</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↓</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Cardiomiopatia hipertrófica obstrutiva</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Baixa</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑ (evitar hipovolemia)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑ (fenilefrina)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↓ (evitar inotrópicos)</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">Tamponamento</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Alta</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">↑</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Manter</td></tr>
+          </tbody>
+        </table></div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Lembrete</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Estenoses (aórtica e mitral): evitar taquicardia e perda do ritmo sinusal; regurgitações: evitar bradicardia e aumento de pós-carga. Na estenose aórtica, usar vasopressor (fenilefrina/noradrenalina) para manter a perfusão coronariana.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /card-pre -->
+
+  <div class="tab-panel" id="card-cec">
+    <div class="page-wrap">
+
+    <div class="alert a-red" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> heparina, protamina, parâmetros de perfusão, cardioplegia e fisiologia da circulação extracorpórea.</div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> Anticoagulação e reversão
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Heparina</div>
+          <div class="dc" style="text-align:left;line-height:1.6">300–400 U/kg IV central; ACT &gt; 400–480 s para iniciar a CEC. Resistência à heparina (antitrombina baixa): concentrado de antitrombina ou plasma.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">HIT</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Trombocitopenia induzida por heparina: evitar heparina; usar bivalirudina (ou adiar a cirurgia se possível).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Protamina</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Dose de ~1 mg por 100 U de heparina (ou conforme titulação), infusão lenta (5–10 min). Reações: tipo I (vasodilatação e hipotensão por infusão rápida), tipo II (anafilática), tipo III (hipertensão pulmonar catastrófica, falência de VD). Fatores de risco: insulina NPH, vasectomia, alergia a peixe, exposição prévia.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Alvo pós-protamina</div>
+          <div class="dc" style="text-align:left;line-height:1.6">ACT próximo do basal; tratar sangramento com TEG/ROTEM; TXA reduz sangramento (doses altas associam-se a convulsões).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Parâmetros da CEC
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fluxo e pressão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Fluxo 2,2–2,5 L/min/m² (adulto normotérmico); PAM 50–70 mmHg durante a CEC. Pressões mais altas em pacientes com doença cerebrovascular, hipertensos e idosos.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hemodiluição</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hematócrito mínimo durante a CEC ≈ 21–24%. A DO₂ indexada deve ser &gt; 272 mL/min/m² para evitar lesão renal. Hemodiluição excessiva e baixa DO₂ se associam à LRA.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Temperatura</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hipotermia leve a moderada (28–34 °C) é comum; reaquecimento lento (≤ 0,5 °C/min, gradiente &lt; 10 °C) para evitar bolhas e hipertermia cerebral (≤ 37 °C).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">α-stat × pH-stat</div>
+          <div class="dc" style="text-align:left;line-height:1.6">α-stat: sem correção de gases pela temperatura (padrão em adultos, mantém autorregulação cerebral). pH-stat: adiciona CO₂ para corrigir pelo temperatura (maior fluxo cerebral); usado em crianças e parada circulatória.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Anestesia na CEC</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Manter hipnose (propofol ou volátil no oxigenador), analgesia e relaxamento (a CEC aumenta o volume de distribuição e diminui a concentração dos fármacos); não esquecer vasodilatadores se PAM alta.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">03</span> Cardioplegia e proteção miocárdica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Princípio</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Parada diastólica por hiperpotassemia (K⁺ 20–30 mEq/L na solução) reduz o consumo de O₂. Fria (4–10 °C), cristaloide ou sanguínea (4:1); del Nido (cardioplegia de dose única, ~1:4 com sangue); anterógrada e retrógrada.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pinçamento aórtico</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O coração fica isquêmico durante o pinçamento; reperfusão pode causar arritmias e disfunção; a calcemia e a glicemia devem ser controladas.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Lesão por isquemia-reperfusão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Radicais livres, cálcio intracelular, inflamação sistêmica (SIRS) e embolia gasosa/partículas.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Vasoplegia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Definição</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hipotensão com débito cardíaco normal ou alto e baixa resistência vascular após a CEC; fatores: IECA/BRA, amiodarona, tempo longo de CEC, disfunção ventricular.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tratamento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Noradrenalina e vasopressina (0,03–0,04 U/min); azul de metileno 1–2 mg/kg (inibe a guanilato ciclase; pode interferir com oxímetros e causar serotoninérgica com ISRS); hidroxocobalamina em casos refratários.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /card-cec -->
+
+  <div class="tab-panel" id="card-saida">
+    <div class="page-wrap">
+
+    <div class="alert a-red" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> checklist de saída de CEC, suporte hemodinâmico e complicações do pós-operatório.</div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> Checklist para desmame da CEC
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Temperatura e ritmo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Temperatura central ≥ 36–37 °C; ritmo sinusal ou estimulado (marca-passo epicárdico); desfibrilação se FV.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Laboratório</div>
+          <div class="dc" style="text-align:left;line-height:1.6">K⁺ 4,5–5,5 mEq/L, Ca²⁺ iônico &gt; 1,1 mmol/L, Mg²⁺, Hb adequada, gasometria normal, glicemia 140–180 mg/dL.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ventilação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Reexpansão pulmonar sob visão, aspiração de secreções, FiO₂ 1,0, PEEP; ventilar antes de tirar da CEC.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">ETE</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Excluir ar nas câmaras e avaliar função biventricular, válvulas, deslocamento do septo e fluxo na ponte.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fármacos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Preparar vasopressor e inotrópico antes: adrenalina 0,02–0,1 mcg/kg/min, dobutamina 2–10 mcg/kg/min, milrinona 0,375–0,75 mcg/kg/min, vasopressina, noradrenalina, nitroglicerina; óxido nítrico inalado para VD.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Suporte circulatório
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Balão intra-aórtico (BIA)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Insufla na diástole (aumenta a pressão de perfusão coronariana) e desinsufla na sístole (reduz a pós-carga). Contraindicações: insuficiência aórtica significativa, dissecção aórtica; arritmias atrapalham o sincronismo.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">ECMO</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VA para falência cardíaca/circulatória; VV para falência respiratória. Exige anticoagulação e cuidado com hemorragia e embolia.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Disfunção do VD</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pressão pulmonar alta: óxido nítrico, milrinona, evitar hipoxemia/hipercapnia/acidose, manter PAM, PEEP baixa.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">03</span> Complicações pós-operatórias
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sangramento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Causas: heparina residual, coagulopatia da CEC, plaquetas, cirurgia. Conduta: protamina adicional se ACT alta, plaquetas/fibrinogênio/PCC e TXA; reabordagem se &gt; 200–300 mL/h por 2–3 h.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fibrilação atrial</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Ocorre em 30–40% dos casos; profilaxia com betabloqueador e amiodarona; controlar eletrólitos.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Neurológico</div>
+          <div class="dc" style="text-align:left;line-height:1.6">AVC (aterosclerose da aorta, êmbolos), delirium e disfunção cognitiva; evitar hipotensão, hiperglicemia e hipertermia; ecografia epiaórtica quando indicado.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Renal</div>
+          <div class="dc" style="text-align:left;line-height:1.6">LRA em 20–30% dos pacientes; evitar hipotensão, hemodiluição excessiva e nefrotóxicos; DO₂ adequada na CEC.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Transfusão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">TRICS III: estratégia restritiva (gatilho Hb &lt; 7,5 g/dL) foi não inferior à liberal em cirurgia cardíaca.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Anestésicos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">MYRIAD (NEJM 2019): em CABG, anestesia volátil não superou a TIVA na mortalidade de 1 ano. Escolha por perfil do paciente e recuperação rápida (fast-track).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>Heparina</strong> 300–400 U/kg e ACT &gt; 400–480 s; <strong>protamina</strong> ~1 mg/100 U, lenta; reação tipo III = hipertensão pulmonar catastrófica.</li>
+          <li><strong>Clopidogrel</strong> 5 dias, <strong>ticagrelor</strong> 3–5 dias, <strong>prasugrel</strong> 7 dias; <strong>IECA/BRA</strong> 24 h; <strong>AAS</strong> mantém.</li>
+          <li><strong>Estenose aórtica:</strong> FC normal-baixa, manter pós-carga (vasopressor) e pré-carga; <strong>insuficiência aórtica:</strong> FC alta e pós-carga baixa.</li>
+          <li><strong>Estenose mitral:</strong> evitar taquicardia; <strong>insuficiência mitral:</strong> reduzir pós-carga.</li>
+          <li><strong>Cardiomiopatia hipertrófica:</strong> volume, fenilefrina, betabloqueador; evitar inotrópicos e vasodilatadores.</li>
+          <li><strong>CEC:</strong> fluxo 2,2–2,5 L/min/m², PAM 50–70, Hct ≥ 21–24%, DO₂i &gt; 272 mL/min/m².</li>
+          <li><strong>α-stat</strong> é a estratégia padrão no adulto; <strong>pH-stat</strong> em crianças e parada circulatória hipotérmica.</li>
+          <li><strong>Cardioplegia:</strong> K⁺ 20–30 mEq/L, fria; del Nido dose única.</li>
+          <li><strong>Vasoplegia pós-CEC:</strong> noradrenalina, vasopressina, azul de metileno 1–2 mg/kg.</li>
+          <li><strong>BIA:</strong> insufla na diástole; contraindicado na insuficiência aórtica e dissecção.</li>
+          <li><strong>TRICS III:</strong> Hb &lt; 7,5 g/dL como gatilho restritivo em cirurgia cardíaca.</li>
+          <li><strong>Coração transplantado</strong> não responde à atropina.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li>A maior parte das <strong>cirurgias cardíacas</strong> (revascularização e valvas) é feita pelo SUS em centros de referência; verifique os recursos do seu serviço (ETE, ECMO, balão, ROTEM).</li>
+          <li><strong>Heparina, protamina e TXA</strong> estão amplamente disponíveis; <strong>concentrado de fibrinogênio/PCC</strong> e <strong>TEG/ROTEM</strong> variam conforme o serviço.</li>
+          <li><strong>Levosimendan, azul de metileno e hidroxocobalamina</strong> têm disponibilidade restrita; use o que o hospital oferece.</li>
+          <li>Em cirurgia cardíaca pediátrica, <strong>hipotermia profunda e parada circulatória</strong> são concentradas em centros especializados.</li>
+          <li>As <strong>diretrizes da SBC</strong> (Sociedade Brasileira de Cardiologia) e a <strong>SBA</strong> são consultadas para pré-operatório cardíaco; o TEA/TSA costuma cobrar CEC, valvas e ETE.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>Hillis LD, Smith PK, Anderson JL, et al. 2011 ACCF/AHA guideline for coronary artery bypass graft surgery. Circulation 2011;124:e652–735.</li>
+          <li>Neumann FJ, Sousa-Uva M, Ahlsson A, et al. 2018 ESC/EACTS guidelines on myocardial revascularization. Eur Heart J 2019;40:87–165.</li>
+          <li>Mazer CD, Whitlock RP, Fergusson DA, et al. Restrictive or liberal red-cell transfusion for cardiac surgery (TRICS III). N Engl J Med 2017;377:2133–44.</li>
+          <li>Landoni G, Lomivorotov VV, Nigro Neto C, et al. Volatile anesthetics versus total intravenous anesthesia for cardiac surgery (MYRIAD). N Engl J Med 2019;380:1214–25.</li>
+          <li>Ranucci M, Romitti F, Isgrò G, et al. Oxygen delivery during cardiopulmonary bypass and acute renal failure after coronary operations. Ann Thorac Surg 2005;80:2213–20.</li>
+          <li>Kaplan JA, Augoustides JG, Manecke GR, et al. Kaplan's Cardiac Anesthesia, 7ª ed. Philadelphia: Elsevier; 2017.</li>
+          <li>Hensley FA, Martin DE, Gravlee GP. A Practical Approach to Cardiac Anesthesia, 5ª ed. Philadelphia: Lippincott Williams &amp; Wilkins; 2013.</li>
+          <li>Hahn RT, Abraham T, Adams MS, et al. Guidelines for performing a comprehensive transesophageal echocardiographic examination (ASE/SCA). J Am Soc Echocardiogr 2013;26:921–64.</li>
+          <li>Sociedade Brasileira de Cardiologia. Diretriz de avaliação perioperatória cardiovascular, atualização vigente.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /card-saida -->
+</div>

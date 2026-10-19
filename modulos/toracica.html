@@ -1,0 +1,343 @@
+<div class="screen" id="screen-toracica">
+  <div class="top-bar" style="border-bottom:3px solid var(--cyan)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--cyan)">🫁 Torácica e Ventilação Monopulmonar</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="toracica-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('tor','avaliacao',this)">AVALIAÇÃO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('tor','tdl',this)">VIA AÉREA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('tor','olv',this)">OLV</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('tor','casos',this)">CIRURGIAS</button>
+  </div>
+
+  <div class="tab-panel active" id="tor-avaliacao">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> cálculo do VEF₁ e da DLCO previstos pós-operatórios, limites de risco e testes de exercício.</div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Função pulmonar previsto pós-ressecção (ppo)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fórmula</div>
+          <div class="dc" style="text-align:left;line-height:1.6">ppo-VEF₁ = VEF₁ pré-operatório × (1 − % do pulmão funcionante ressecado). Pela contagem de segmentos: 19 segmentos pulmonares (direito 10: superior 3, médio 2, inferior 5; esquerdo 9: superior 5, inferior 4). Cada segmento funcionante ressecado remove ≈ 5,3%.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Exemplo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VEF₁ de 2,0 L e lobectomia inferior direita (5 segmentos funcionantes): 2,0 × (1 − 5/19) = 2,0 × 0,737 ≈ 1,47 L. Em pneumonectomia, usar a cintilografia de perfusão.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Algoritmos (ACCP 2013; ERS/ESTS 2009)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">ppo-VEF₁ e ppo-DLCO &gt; 60%: risco baixo. Se qualquer um &lt; 30–40%: testes de exercício. VO₂ pico &gt; 20 mL/kg/min: baixo risco; &lt; 10 mL/kg/min (ou &lt; 35% do previsto): alto risco; entre 10 e 20: individualizar.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Teste de caminhada</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Shuttle walk &lt; 400 m ou subida de escadas &lt; 22 m (cerca de 5 lances) indica risco aumentado, e &lt; 12 m (3 lances) sugere alto risco; nesses casos, fazer teste cardiopulmonar de exercício.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Otimização e riscos
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tabagismo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cessação ≥ 4–8 semanas reduz complicações pulmonares; mesmo períodos curtos reduzem COHb e secreções. Otimizar DPOC (broncodilatadores, antibióticos em exacerbação), fisioterapia.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Complicações</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Atelectasia, pneumonia, fístula broncopleural, arritmias (FA 20–30% após pneumonectomia), insuficiência respiratória, lesão pulmonar aguda, herniação cardíaca.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cardiopulmonar</div>
+          <div class="dc" style="text-align:left;line-height:1.6">ECG, ecocardiograma em suspeita de hipertensão pulmonar; avaliar função do VD; estratificação cardíaca conforme risco (ESC/ACC).</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tor-avaliacao -->
+
+  <div class="tab-panel" id="tor-tdl">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> tubo de duplo lúmen (esquerdo × direito), bloqueadores, confirmação por fibroscopia e indicações.</div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Indicações de isolamento pulmonar
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Absolutas</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Prevenção de contaminação (abscesso, hemoptise maciça, bronquiectasias) e fístula broncopleural com grande fuga; lavagem broncoalveolar; ventilação diferencial.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Relativas</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cirurgia torácica (lobectomia, pneumonectomia, esofagectomia, cirurgia da aorta torácica, coluna torácica anterior), toracoscopia; exposição cirúrgica.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Tubo de duplo lúmen (TDL)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tamanhos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Mulheres: 35–37 Fr; homens: 39–41 Fr (ajuste por altura e largura da traqueia). Brônquio esquerdo é mais longo (~5 cm), por isso o TDL esquerdo é o padrão.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">TDL direito</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Brônquio principal direito curto (1–2,5 cm): o orifício do balonete de ventilação do lobo superior direito precisa estar alinhado. Indicado em lesão do brônquio esquerdo ou pneumonectomia esquerda (quando o esquerdo atrapalha o campo).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Posicionamento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Inserção às cegas e confirmação com fibroscopia (padrão-ouro): carina visível, balonete brônquico azul logo abaixo da carina (TDL esquerdo), e o pulmão superior direito visível pelo lúmen traqueal. Reconfirmar após posição lateral.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Complicações</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Lesão de traqueia/brônquio (calibre grande, hiperinsuflação do balonete brônquico, óxido nitroso), mal posicionamento e hipoxemia.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">03</span> Bloqueadores brônquicos e tubos especiais
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Bloqueadores</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Arndt, Cohen, EZ-Blocker. Úteis em via aérea difícil, crianças, intubação já realizada e UTI. Demoram mais a colapsar o pulmão, são menos eficientes para aspiração e deslocam com facilidade.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Univent</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Tubo com bloqueador embutido; adequado em adultos pequenos e quando a via aérea é difícil.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Troca de tubo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Em via aérea difícil, usar videolaringoscópio e trocador de tubo; considerar bloqueador no tubo único.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tor-tdl -->
+
+  <div class="tab-panel" id="tor-olv">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> fisiologia da ventilação monopulmonar, vasoconstrição pulmonar hipóxica, ventilação protetora e manejo da hipoxemia.</div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Fisiologia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Posição lateral</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O pulmão dependente recebe mais perfusão (gravidade); com anestesia e relaxante a CRF cai; o pulmão não dependente é mais complacente; o shunt aumenta com OLV (o pulmão não ventilado mantém ~20–25% do débito cardíaco após VPH).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Vasoconstrição pulmonar hipóxica (VPH)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Reduz o fluxo para áreas não ventiladas. É inibida por vasodilatadores (nitroprussiato, nitroglicerina, bloqueadores de canal de cálcio), óxido nítrico, hipocapnia grave e anestésicos voláteis em altas doses (&gt; 1 CAM). O propofol não inibe a VPH.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Shunt e oxigenação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Shunt de 20–30% durante OLV. PaO₂ costuma permanecer &gt; 150 mmHg com FiO₂ 1,0. Fatores que favorecem a hipoxemia: DPOC, pulmão direito operado, posição supina, PaO₂ baixa na ventilação de dois pulmões.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Ventilação protetora em OLV
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Parâmetros</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VC 4–6 mL/kg de peso predito; PEEP 5 cmH₂O (individualizada); pressão de platô &lt; 25 cmH₂O; driving pressure &lt; 15 cmH₂O; menor FiO₂ para SpO₂ &gt; 92–94% (comece com 0,5–0,8); frequência para PaCO₂ 40–50 (hipercapnia permissiva é aceitável).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Manobras de recrutamento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Usar com cautela; combinar com PEEP; evitam atelectasia do pulmão dependente.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">03</span> Hipoxemia durante a OLV
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sequência</div>
+          <div class="dc" style="text-align:left;line-height:1.6">1) FiO₂ 1,0; 2) checar a posição do tubo com fibroscopia (causa mais comum); 3) CPAP 5–10 cmH₂O no pulmão não dependente (ou insuflação com O₂); 4) recrutamento e PEEP 5–10 no pulmão dependente; 5) ventilação intermitente do pulmão superior; 6) pinçamento precoce da artéria pulmonar na pneumonectomia; 7) retornar à ventilação de dois pulmões se persistir.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Prevenção</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Evitar hipovolemia, vasodilatadores que inibem a VPH; manter débito cardíaco normal; evitar hiperventilação excessiva (alcalose reduz a VPH).</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hipercapnia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Aumenta a RVP e o fluxo cerebral; permissiva até PaCO₂ ~ 50–60 mmHg em pacientes sem hipertensão intracraniana ou pulmonar.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">04</span> Analgesia e fluidos
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Epidural torácica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Padrão-ouro para dor após toracotomia (T4–T8); risco de hipotensão e bloqueio simpático; cuidado com anticoagulantes.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Paravertebral e fáscias</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Paravertebral torácico: analgesia comparável à epidural com menos hipotensão e retenção urinária. Plano eretor da espinha e serrátil anterior: alternativas em VATS.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fluidos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Restritivos: balanço neutro; evitar &gt; 20 mL/kg nas primeiras 24 h (edema pulmonar pós-pneumonectomia, SDRA). Em pneumonectomia, volume de transfusão e cristaloide menor que 1–1,5 L/d.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Dor crônica pós-toracotomia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Acomete até 50% (neuropática); analgesia regional e VATS reduzem.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tor-olv -->
+
+  <div class="tab-panel" id="tor-casos">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> particularidades de pneumonectomia, mediastino e via aérea central.</div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Pneumonectomia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Particularidades</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sobrecarga do VD, risco de arritmias, edema pulmonar pós-pneumonectomia (fluidos), herniação cardíaca pelo defeito pericárdico, fístula broncopleural. A pneumonectomia direita tem maior mortalidade.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Conduta</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Restrição hídrica, analgesia regional, evitar hipoxemia e hipercapnia que elevam a PAP, evitar extubação tardia.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Mediastinoscopia e massas mediastinais
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Mediastinoscopia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Compressão do tronco braquiocefálico (artéria inominada) pelo mediastinoscópio: perda do pulso e do sinal de SpO₂ no braço direito (monitorizar no braço direito). Complicações: hemorragia, embolia gasosa, pneumotórax, lesão do nervo laríngeo recorrente, parada por reflexo vagal.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Massa mediastinal anterior</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Risco de colapso de via aérea ou vascular com anestesia geral e relaxantes. Avaliar sintomas (ortopneia, síncope em decúbito) e TC. Preservar a ventilação espontânea, considerar anestesia local/sedação leve, posição semissentada, broncoscópio rígido disponível e ECMO femoral em casos de alto risco; se necessário, decúbito lateral/ prono para aliviar compressão.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">03</span> Via aérea central, hemoptise e esofagectomia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Broncoscopia rígida e ventilação a jato</div>
+          <div class="dc" style="text-align:left;line-height:1.6">TIVA com bloqueio neuromuscular; ventilação a jato de alta frequência; risco de barotrauma e hipercapnia; vigilância cirúrgica compartilhada.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hemoptise maciça</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hemoptise &gt; 200–600 mL/24 h; posicionar o pulmão sangrante para baixo; isolamento pulmonar (TDL ou bloqueador) e controle do sangramento; embolização brônquica.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Esofagectomia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">OLV, risco de aspiração, perda hídrica; hipotensão por compressão do coração ao mobilizar o esôfago; perfusão do conduto gástrico: evitar vasopressores em excesso; analgesia epidural.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>ppo-VEF₁</strong> = VEF₁ × (1 − segmentos ressecados/19). Abaixo de 30–40% do previsto, fazer teste de exercício; <strong>VO₂ pico &lt; 10 mL/kg/min</strong> = alto risco.</li>
+          <li><strong>TDL esquerdo</strong> é o padrão; <strong>TDL direito</strong> no caso de lesão ou pneumonectomia esquerda; confirmar por <strong>fibroscopia</strong> sempre.</li>
+          <li><strong>Bloqueador brônquico</strong> em via aérea difícil e crianças; demora mais para colapsar o pulmão.</li>
+          <li><strong>OLV:</strong> VC 4–6 mL/kg, PEEP 5, platô &lt; 25, driving pressure &lt; 15, menor FiO₂.</li>
+          <li><strong>VPH</strong> é inibida por vasodilatadores, NO, hipocapnia e voláteis &gt; 1 CAM; <strong>propofol não inibe</strong>.</li>
+          <li><strong>Hipoxemia em OLV:</strong> FiO₂ 1,0 → fibroscopia → CPAP no pulmão superior → PEEP no inferior → reinsuflar → pinçar a artéria pulmonar.</li>
+          <li><strong>Epidural torácica</strong> é padrão-ouro; <strong>paravertebral</strong> tem eficácia semelhante com menos hipotensão.</li>
+          <li><strong>Pneumonectomia:</strong> restrição hídrica (edema pós-pneumonectomia), disfunção do VD, herniação cardíaca.</li>
+          <li><strong>Mediastinoscopia:</strong> monitorizar PA/SpO₂ no braço direito (compressão da inominada).</li>
+          <li><strong>Massa mediastinal anterior:</strong> manter ventilação espontânea; evitar relaxantes; ECMO/broncoscopia rígida em stand-by.</li>
+          <li><strong>Hemoptise maciça:</strong> pulmão sangrante para baixo + isolamento pulmonar.</li>
+          <li><strong>Tabagismo:</strong> cessar ≥ 4–8 semanas reduz complicações.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>Tubos de duplo lúmen</strong> e <strong>bloqueadores</strong> estão disponíveis em serviços de cirurgia torácica; verifique tamanhos e o <strong>fibroscópio</strong> (adulto e pediátrico) antes do caso.</li>
+          <li><strong>Cirurgia torácica videoassistida (VATS)</strong> é padrão em centros de referência; cirurgia robótica é restrita.</li>
+          <li><strong>Dispositivos de ventilação a jato</strong>, <strong>broncoscópios rígidos</strong> e <strong>ECMO</strong> concentram-se em hospitais universitários e centros de câncer (INCA e outros).</li>
+          <li><strong>Cirurgia torácica</strong> no SUS é realizada em centros regionais; o <strong>TEA/TSA</strong> costuma cobrir OLV, TDL, hipoxemia e anestesia no mediastino.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>Brunelli A, Kim AW, Berger KI, Addrizzo-Harris DJ. Physiologic evaluation of the patient with lung cancer being considered for resectional surgery: diagnosis and management of lung cancer, 3rd ed: ACCP evidence-based clinical practice guidelines. Chest 2013;143(5 Suppl):e166S–90S.</li>
+          <li>Brunelli A, Charloux A, Bolliger CT, et al. ERS/ESTS clinical guidelines on fitness for radical therapy in lung cancer patients (surgery and chemo-radiotherapy). Eur Respir J 2009;34:17–41.</li>
+          <li>Slinger P, Campos JH. Anesthesia for thoracic surgery. In: Gropper MA (ed.), Miller's Anesthesia, 10ª ed. Philadelphia: Elsevier; 2025.</li>
+          <li>Campos JH, Feider A. Hypoxia during one-lung ventilation: a review and update. J Cardiothorac Vasc Anesth 2018;32:2330–8.</li>
+          <li>Şentürk M, Slinger P, Cohen E. Intraoperative mechanical ventilation strategies for one-lung ventilation. Best Pract Res Clin Anaesthesiol 2015;29:357–69.</li>
+          <li>Batchelor TJP, Rasburn NJ, Abdelnour-Berchtold E, et al. Guidelines for enhanced recovery after lung surgery: ERAS Society and ESTS. Eur J Cardiothorac Surg 2019;55:91–115.</li>
+          <li>Blank RS, Colquhoun DA, Durieux ME, et al. Management of one-lung ventilation: impact of tidal volume on complications after thoracic surgery. Anesthesiology 2016;124:1286–95.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /tor-casos -->
+</div>

@@ -1,0 +1,297 @@
+<div class="screen" id="screen-traumaqueim">
+  <div class="top-bar" style="border-bottom:3px solid var(--red)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--red)">🔥 Trauma e Queimados</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="traumaqueim-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('tq','trauma',this)">TRAUMA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('tq','queim',this)">QUEIMADOS</button>
+  </div>
+
+  <div class="tab-panel active" id="tq-trauma">
+    <div class="page-wrap">
+
+    <div class="alert a-red" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> classes de choque, ressuscitação de controle de danos (DCR), ácido tranexâmico, hipotensão permissiva e as exceções (TCE).</div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> Choque hemorrágico (ATLS 10ª ed.)
+      </div>
+      <div class="card-body">
+        <div class="tbl-wrap"><table class="tbl" style="width:100%;font-size:12px;border-collapse:collapse">
+          <thead><tr style="background:rgba(0,207,193,.15);color:var(--cyan)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Classe</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Perda</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">FC</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">PA</th><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">Conduta</th></tr></thead>
+          <tbody style="color:rgba(255,255,255,.85)">
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">I</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">&lt; 15% (&lt; 750 mL)</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Normal</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Normal</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Observação</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">II</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">15–30%</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">100–120</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Normal/↓ PAD</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Cristaloide; sangue se piora</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">III</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">31–40%</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">120–140</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">PAS ↓, oligúria</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Hemoderivados</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:700">IV</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">&gt; 40%</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">&gt; 140</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Hipotensão grave, letargia</td><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.06)">Transfusão maciça e cirurgia</td></tr>
+          </tbody>
+        </table></div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Tríade letal</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Hipotermia, acidose e coagulopatia; hipocalcemia é o quarto componente ("diamante da morte"). Prevenir aquecendo, repondo cálcio e evitando diluição.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hipotensão permissiva</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Antes do controle do sangramento: PAS alvo 80–90 mmHg (PAM 50–60) em trauma penetrante/sem TCE. Contraindicada no TCE, lesão medular e em idosos.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Ressuscitação de controle de danos
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hemoderivados</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Proporção equilibrada concentrado de hemácias:plasma:plaquetas em 1:1:1 (PROPPR, JAMA 2015: mesma mortalidade em 24 h, menos mortes por sangramento no grupo 1:1:1). Início precoce; evitar grandes volumes de cristaloide.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ácido tranexâmico</div>
+          <div class="dc" style="text-align:left;line-height:1.6">CRASH-2: 1 g IV em 10 min + 1 g em 8 h, iniciado em até 3 h do trauma (redução de mortalidade; benefício maior se &lt; 1 h; risco se &gt; 3 h).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cálcio</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Manter Ca²⁺ iônico &gt; 1,1 mmol/L (≈ 4,4 mg/dL): cloreto ou gluconato de cálcio a cada ~4 unidades.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fibrinogênio</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Meta &gt; 1,5–2 g/L: crioprecipitado ou concentrado de fibrinogênio; guiar por TEG/ROTEM quando disponível.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Aquecimento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sala aquecida, fluidos aquecidos de alto fluxo, manta térmica; temperatura &gt; 36 °C.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">REBOA e toracotomia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">REBOA (oclusão aórtica endovascular) como ponte; toracotomia de reanimação em trauma penetrante torácico com PCR presenciada (sinais de vida recentes).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">03</span> Lesões específicas
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Trauma cranioencefálico (BTF 4ª ed.)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">PAS ≥ 100 mmHg (50–69 anos), ≥ 110 mmHg (15–49 e &gt; 70 anos); tratar PIC &gt; 22 mmHg; PPC 60–70 mmHg; evitar hipóxia e hipotensão (dobram a mortalidade); hiperventilação (PaCO₂ 30–35) só temporária em herniação; sedação, cabeceira 30°; soro hipertônico ou manitol.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Trauma raquimedular</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Choque neurogênico (hipotensão + bradicardia, por perda simpática); PAM 85–90 mmHg por 7 dias; imobilização; succinilcolina pode ser usada nas primeiras 24–48 h, depois evitar.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Trauma torácico</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pneumotórax hipertensivo (diagnóstico clínico, descompressão imediata), hemotórax maciço (&gt; 1500 mL inicial ou &gt; 200 mL/h), tamponamento (tríade de Beck), contusão pulmonar (evitar excesso de fluidos).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Trauma abdominal</div>
+          <div class="dc" style="text-align:left;line-height:1.6">FAST positivo + instabilidade = laparotomia; hemoperitônio e lesões retroperitoneais; pressão intra-abdominal elevada (síndrome compartimental).</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Via aérea e coluna cervical</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Manter estabilização manual em linha (MILS) na laringoscopia; videolaringoscópio; via aérea cirúrgica se falha. Fratura de face e trauma de laringe: plano B pronto.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Anestesia no trauma
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Indução</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Estômago cheio presumido: sequência rápida com cetamina (0,5–1 mg/kg) ou etomidato em doses reduzidas; rocurônio 1,2 mg/kg; ter vasopressor pronto.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Manutenção</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Evitar altas doses de agentes inalatórios no choque; opioide e amnésico em dose menor; relaxamento; monitorização invasiva sem atrasar a cirurgia.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Gestante e idoso</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Gestante: deslocamento uterino à esquerda; sinais de choque tardios (perda de 30% de volume); idoso: reserva baixa, uso de anticoagulantes/betabloqueadores mascara a resposta.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /tq-trauma -->
+
+  <div class="tab-panel" id="tq-queim">
+    <div class="page-wrap">
+
+    <div class="alert a-red" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> avaliação da área queimada, reposição volêmica (Parkland), lesão inalatória e intoxicações (CO, cianeto), e succinilcolina.</div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">01</span> Avaliação
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Profundidade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">1º grau: epiderme (eritema, sem bolha). 2º superficial: bolhas, dolorosa. 2º profundo: menos dolorosa, branca/rósea. 3º: espessura total, indolor, coriácea. 4º: músculo/osso.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Superfície corporal queimada (SCQ)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Regra dos 9 no adulto (cabeça 9; membro superior 9 cada; tronco anterior 18 e posterior 18; membro inferior 18 cada; genitais 1). Lund-Browder para crianças. Palma da mão do paciente ≈ 1% SCQ. Não contar 1º grau.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Critérios de encaminhamento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">2º/3º graus &gt; 10% SCQ, 3º grau de qualquer extensão, face, mãos, pés, genitais, articulações, lesão inalatória, elétrica, química, comorbidades, crianças.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">02</span> Reposição volêmica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fórmula de Parkland</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Ringer lactato 4 mL × peso (kg) × % SCQ nas primeiras 24 h; metade nas primeiras 8 h (contadas desde a queimadura) e metade nas 16 h seguintes. A fórmula de Brooke modificada usa 2 mL/kg/%SCQ.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Meta</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Diurese 0,5 mL/kg/h (adulto) e 1 mL/kg/h (criança); titular a infusão pela diurese e pela PAM. Evitar excesso ("fluid creep"): edema, compartimental abdominal, SDRA.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Crianças</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Parkland + manutenção com glicose em lactentes (risco de hipoglicemia).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Coloide</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Albumina após 8–12 h em grandes queimados com grande necessidade de volume pode reduzir o volume de cristaloide.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Eletricidade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Rabdomiólise e mioglobinúria: manter diurese ≥ 1–1,5 mL/kg/h; arritmias; ECG e CK.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">03</span> Lesão inalatória e intoxicações
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sinais de lesão inalatória</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Queimadura em face, vibrissas chamuscadas, rouquidão, estridor, escarro carbonáceo, história de espaço fechado. Intubar precocemente (edema evolui em horas); fibrobroncoscopia confirma.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Monóxido de carbono</div>
+          <div class="dc" style="text-align:left;line-height:1.6">SpO₂ falsamente normal (oximetria lê COHb como oxi-Hb). Dosar COHb. O₂ 100% reduz a meia-vida da COHb de ~4–5 h (ar) para ~60–90 min; câmara hiperbárica em casos selecionados (grávidas, déficit neurológico, COHb muito alta).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cianeto</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Suspeitar se acidose láctica grave (lactato &gt; 8–10 mmol/L), instabilidade hemodinâmica ou alteração neurológica. Tratamento: hidroxocobalamina 5 g IV (70 mg/kg em crianças) e O₂ 100%.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ventilação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">VC 6 mL/kg; evitar barotrauma; broncoscopia para toalete; nebulização com heparina e acetilcisteína conforme protocolo.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-red">
+        <span class="card-num">04</span> Farmacologia e anestesia
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Succinilcolina</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Contraindicada de ~24–48 h após a queimadura até a cicatrização (meses), pelo risco de hipercalemia grave por receptores extrajuncionais. Antes disso é segura.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Relaxantes não despolarizantes</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Resistência (aumento de receptores colinérgicos): doses 2 a 5 vezes maiores; pico em 1–2 semanas. Rocurônio é útil; titular pelo TOF.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hipnóticos e opioides</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Fase hiperdinâmica (após 48 h): aumento de clearance e necessidade de opioides e sedativos; cetamina e opioides para dor; evitar hipotensão no choque inicial. Albumina baixa aumenta fração livre.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Perda de calor e sangramento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Aquecer a sala (28–32 °C), manta térmica, fluidos aquecidos. Excisão precoce (&lt; 72 h) com sangramento volumoso: TXA, epinefrina tumescente, hemoderivados disponíveis.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Acesso e monitorização</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Acesso venoso por pele queimada se necessário; ECG/eletrodos com adesivos ruins; oximetria em orelha; manguito em local seguro; via aérea com contraturas (via aérea difícil em sequelas).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>Choque hemorrágico:</strong> classe III = 31–40% (FC 120–140, PAS ↓); classe IV &gt; 40%.</li>
+          <li><strong>Tríade letal:</strong> hipotermia, acidose e coagulopatia (+ hipocalcemia).</li>
+          <li><strong>DCR:</strong> hemoderivados 1:1:1, TXA em até 3 h (CRASH-2: 1 g em 10 min + 1 g em 8 h), cálcio e fibrinogênio, aquecimento; evitar cristaloide.</li>
+          <li><strong>Hipotensão permissiva</strong> (PAS 80–90): não em TCE, lesão medular ou idoso.</li>
+          <li><strong>TCE (BTF):</strong> PAS ≥ 100–110, PPC 60–70, tratar PIC &gt; 22; hiperventilação só em herniação.</li>
+          <li><strong>Choque neurogênico:</strong> hipotensão + bradicardia; PAM 85–90 mmHg por 7 dias.</li>
+          <li><strong>Parkland:</strong> 4 mL × kg × %SCQ de Ringer lactato; metade em 8 h, metade em 16 h; diurese 0,5 mL/kg/h.</li>
+          <li><strong>Lesão inalatória:</strong> intubação precoce; CO falseia a oximetria; cianeto: hidroxocobalamina 5 g.</li>
+          <li><strong>CO:</strong> meia-vida da COHb ~4–5 h em ar; ~60–90 min com O₂ 100%.</li>
+          <li><strong>Succinilcolina</strong> contraindicada de ~24–48 h até a cicatrização do queimado; <strong>não despolarizantes:</strong> resistência (2 a 5×).</li>
+          <li><strong>Regra dos 9</strong> no adulto; Lund-Browder em crianças; palma da mão ≈ 1%.</li>
+          <li><strong>Eletricidade:</strong> rabdomiólise, arritmias; manter diurese ≥ 1–1,5 mL/kg/h.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>Atendimento pré-hospitalar</strong> (SAMU 192, bombeiros) e a rede de urgência definem a ressuscitação precoce; o <strong>ATLS</strong> é o curso de referência do Colégio Brasileiro de Cirurgiões.</li>
+          <li><strong>TXA</strong> está disponível em hospitais públicos; confira o protocolo de <strong>transfusão maciça</strong> do seu hospital: a proporção e a disponibilidade de plaquetas e plasma variam.</li>
+          <li><strong>Sangue total</strong> e <strong>TEG/ROTEM</strong> ainda não estão disponíveis na maioria dos serviços; usar INR, fibrinogênio, Hb, cálcio e temperatura como guias.</li>
+          <li><strong>Centros de queimados</strong> concentram-se em poucas capitais; o encaminhamento precoce segue os critérios da ABA/Sociedade Brasileira de Queimaduras.</li>
+          <li><strong>Hidroxocobalamina</strong> (Cyanokit) tem disponibilidade restrita; confirme com o centro de toxicologia da sua região.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>American College of Surgeons. Advanced Trauma Life Support (ATLS), 10ª ed., 2018.</li>
+          <li>CRASH-2 Trial Collaborators. Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients with significant haemorrhage. Lancet 2010;376:23–32.</li>
+          <li>Holcomb JB, Tilley BC, Baraniuk S, et al. Transfusion of plasma, platelets, and red blood cells in a 1:1:1 vs a 1:1:2 ratio (PROPPR). JAMA 2015;313:471–82.</li>
+          <li>Carney N, Totten AM, O'Reilly C, et al. Guidelines for the management of severe traumatic brain injury, 4th edition. Neurosurgery 2017;80:6–15.</li>
+          <li>Spahn DR, Bouillon B, Cerny V, et al. The European guideline on management of major bleeding and coagulopathy following trauma, 6th edition. Crit Care 2023;27:80.</li>
+          <li>Walters BC, Hadley MN, Hurlbert RJ, et al. Guidelines for the management of acute cervical spine and spinal cord injuries: 2013 update. Neurosurgery 2013;60(Suppl 1):82–91.</li>
+          <li>American Burn Association. Advanced Burn Life Support (ABLS) Provider Manual.</li>
+          <li>Martyn JA, Richtsfeld M. Succinylcholine-induced hyperkalemia in acquired pathologic states: etiologic factors and molecular mechanisms. Anesthesiology 2006;104:158–69.</li>
+          <li>Lawson-Smith P, Jansen EC, Hyldegaard O. Cyanide intoxication as part of smoke inhalation. Scand J Trauma Resusc Emerg Med 2011;19:14.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /tq-queim -->
+</div>

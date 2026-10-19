@@ -270,3 +270,12 @@
 - **Transplantes e Doador** (novo): morte encefálica (CFM 2.173/2017), fisiologia e manutenção do doador, captação, transplante hepático, renal, cardíaco e pulmonar, imunossupressão, anestesia no transplantado e SNT. 39 questões.
 ### Treino
 - Banco de questões: 689 → 850 (21 temas), gabaritos balanceados.
+
+## 3.2.0 — 2026-10-19 (fase D14 — módulos novos, parte 3)
+### Estudos
+- **Trauma e Queimados** (novo): classes de choque (ATLS), tríade letal, hipotensão permissiva, DCR (1:1:1, TXA, cálcio, fibrinogênio), TCE (BTF 4ª ed.), choque neurogênico, trauma torácico, regra dos 9, Parkland, lesão inalatória, CO e cianeto, succinilcolina e não despolarizantes no queimado. 38 questões.
+- **Anestesia Cardíaca e CEC** (novo): fármacos no pré-operatório, monitorização, metas hemodinâmicas por lesão valvar, heparina/protamina, parâmetros da CEC, cardioplegia, vasoplegia, saída de CEC, BIA, ECMO e complicações (TRICS III, MYRIAD). 40 questões.
+- **Torácica e Ventilação Monopulmonar** (novo): VEF₁ previsto pós-operatório e VO₂ pico, tubo de duplo lúmen e bloqueadores, fisiologia da OLV e VPH, ventilação protetora, hipoxemia, analgesia, pneumonectomia, mediastino e hemoptise. 36 questões.
+- **Neuroanestesia** (novo): CBF/CMRO₂ e efeito dos anestésicos, PIC e PPC, HIC, craniotomia, posição sentada e embolia aérea, craniotomia acordado, neuromonitorização, hipófise, HSA/aneurisma, trombectomia. 41 questões.
+### Treino
+- Banco de questões: 850 → 1005 (25 temas), com gabaritos balanceados (25% por letra).
