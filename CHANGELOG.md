@@ -147,7 +147,7 @@
 - **TOF/reversão (ASA 2023):** neostigmina 30–50 mcg/kg só com TOF 4/4; tabela dos níveis de bloqueio refeita; lidocaína IV ≤1,5 mg/kg/h; CAM do idoso 25–30%; "WFSA/ESA 2022 — 250 km de carro" removido (não verificável); "escopolamina transdérmica" removida do antiemético (não comercializada).
 - Questões com 4 alternativas; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
 
-## 3.1.0 — 2026-10-19 (fase D7 — Intubação orotraqueal)
+## 3.1.0 — 2026-10-19 (fase D13a — Intubação orotraqueal)
 - **Pressão de cricoide:** removido o "consenso 2024" não verificável; incluído o ensaio IRIS (JAMA Surg 2019, n=3.472: aspiração 0,6% × 0,5%, não inferioridade não demonstrada, Cormack 3–4 em 10% × 5%). Retirados "sem efeitos adversos" e "adotada no Brasil e UK". RSI: cricoide opcional.
 - **Via aérea:** Mallampati (Cochrane 2018: sens ~51%, esp ~87%); THRIVE (Patel 2015: mediana 14 min, variável; apneia segura ~6–8 min sem HFNO); cuff em todas as idades inclusive crianças (Weiss 2009); cricotireotomia por cânula/jato rebaixada a 2ª linha (DAS 2015: bisturi–bougie–tubo); sugamadex 16 mg/kg não deve atrasar o acesso cervical.
 - **Laringoespasmo:** Larson sem a explicação do nervo frênico (mecanismo incerto); succinilcolina 0,1–0,5 mg/kg (crianças 0,5–1 mg/kg); removido "70% dos casos".
@@ -158,7 +158,7 @@
 - **Questões:** 5 alternativas → 4 em todas as questões; "sugammadex" → "sugamadex".
 - **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências com DOI.
 
-## 3.1.0 — 2026-10-19 (fase D8 — SRPA)
+## 3.1.0 — 2026-10-19 (fase D13b — SRPA)
 - **Requisitos CFM 2.174/2017:** removida a "proporção 1 enfermeiro:2 pacientes" (não consta na resolução); alta sob responsabilidade do anestesiologista.
 - **Fast-track:** critério "BIS >80" substituído pelo escore de White (≥12/14, sem item zerado).
 - **Aldrete:** descrição da pressão arterial corrigida (0 = variação >50%; 1 = 20–49%; 2 = ±20%).
@@ -172,7 +172,7 @@
 - **Questões:** 5 alternativas → 4 em todas.
 - **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
 
-## 3.1.0 — 2026-10-19 (fase D9 — Acesso vascular central)
+## 3.1.0 — 2026-10-19 (fase D13c — Acesso vascular central)
 - **Questão 3 (pneumotórax) estava errada:** pedia a via de *menor* risco e dava a JI como correta, mas a femoral não tem risco de pneumotórax; reescrita para "maior risco" (subclávia).
 - **Teste de Allen:** estímulo de 8 s passou a 15 s e o gabarito reconhece o baixo valor preditivo do teste; revisão rápida corrigida.
 - **Ultrassom:** números "↓57% punção arterial / ↓78% hematoma" substituídos por dados verificados — Hind (BMJ 2003): falha da JI RR 0,14 e da 1ª tentativa RR 0,59; Cochrane 2015 (subclávia): punção arterial RR 0,21 e hematoma RR 0,26. Removida a recomendação atribuída à SBA.
