@@ -540,7 +540,7 @@
           <div class="dr dr-r"><div class="dn"><strong>Rocurônio</strong><small>IOT</small></div><div class="dc"><span class="dv" id="pd-roc">— mg</span><span class="dd">0,6 mg/kg IV</span></div></div>
           <div class="dr dr-r"><div class="dn"><strong>Succinilcolina</strong><small>RSI pediátrico</small></div><div class="dc"><span class="dv" id="pd-sux">— mg</span><span class="dd">2 mg/kg IV</span></div></div>
           <div class="dr dr-r"><div class="dn"><strong>Atropina</strong><small>Bradicardia</small></div><div class="dc"><span class="dv" id="pd-atro">— mg</span><span class="dd">0,02 mg/kg (máx 0,5 mg/dose)</span></div></div>
-          <div class="dr dr-r"><div class="dn"><strong>Adrenalina PCR</strong><small>Parada</small></div><div class="dc"><span class="dv" id="pd-epi">— mg</span><span class="dd">0,01 mg/kg (máx 1mg)</span></div></div>
+          <div class="dr dr-r"><div class="dn"><strong>Adrenalina PCR</strong><small>Parada</small></div><div class="dc"><span class="dv" id="pd-epi">— mg</span><span class="dd">adulto 0,2 mg (repetir até 1 mg); criança 0,01 mg/kg</span></div></div>
           <div class="dr dr-g"><div class="dn"><strong>Sugamadex</strong><small>Reversão</small></div><div class="dc"><span class="dv" id="pd-sug">— mg</span><span class="dd">2–4 mg/kg IV</span></div></div>
           <div class="sh sh-blue">Jejum pediátrico (ESAIC 2022)</div>
 <div class="tbl-wrap">
@@ -833,7 +833,7 @@
         <div class="dr dr-g"><div class="dn"><strong>Naloxona</strong><small>Antagonista op.</small></div><div class="dc"><span class="dv" id="e-nal">— mcg</span><span class="dd">1–4 mcg/kg</span></div></div>
         <div class="dr dr-g"><div class="dn"><strong>Flumazenil</strong><small>Antag. BZD</small></div><div class="dc"><span class="dv" id="e-flu">— mg</span><span class="dd">0,01 mg/kg (máx 1mg)</span></div></div>
         <div class="dr dr-b"><div class="dn"><strong>Intralipid 20%</strong><small>LAST</small></div><div class="dc"><span class="dv" id="e-lipa">— mL</span><span class="dd">1,5 mL/kg bolus</span></div></div>
-        <div class="dr dr-r"><div class="dn"><strong>Ácido Tranexâmico</strong><small>Hemostasia</small></div><div class="dc"><span class="dv" id="e-atxa">— mg</span><span class="dd">15 mg/kg IV</span></div></div>
+        <div class="dr dr-r"><div class="dn"><strong>Ácido Tranexâmico</strong><small>Hemostasia</small></div><div class="dc"><span class="dv" id="e-atxa">— mg</span><span class="dd">15 mg/kg IV (adulto: 1 g)</span></div></div>
         <div class="dr dr-r"><div class="dn"><strong>Bicarbonato 8,4%</strong><small>Acidose grave</small></div><div class="dc"><span class="dv" id="e-bic">— mEq</span><span class="dd">1–2 mEq/kg IV</span></div></div>
       </div></div>
     </div>
@@ -870,7 +870,7 @@
         <div id="inf-prep" class="alert a-blue" style="display:none"></div>
         <div class="g2">
           <div class="field"><label>Dose alvo (mcg/kg/min)</label><input type="number" step="0.01" id="inf-dose" placeholder="0.1" oninput="calcInfusion()" inputmode="decimal" min="0.01" max="100"/></div>
-          <div class="field"><label>Concentração (mcg/mL)</label><input type="number" step="0.1" id="inf-conc" placeholder="16" oninput="calcInfusion()" inputmode="decimal" min="0.1" max="1000"/></div>
+          <div class="field"><label>Concentração (mcg/mL)</label><input type="number" step="0.1" id="inf-conc" placeholder="16" oninput="calcInfusion()" inputmode="decimal" min="0.1" max="20000"/></div>
         </div>
         <div class="inf-result" id="inf-result" style="display:none">
           <div class="inf-result-value" id="inf-vel">—</div>
@@ -882,7 +882,7 @@
         <div class="sh sh-teal">Modo inverso: velocidade → dose</div>
         <div class="g2">
           <div class="field"><label>Velocidade (mL/h)</label><input type="number" step="0.1" id="inf-vel-inv" placeholder="10" oninput="calcInfInverse()" inputmode="decimal" min="0.1" max="999"/></div>
-          <div class="field"><label>Concentração (mcg/mL)</label><input type="number" step="0.1" id="inf-conc-inv" placeholder="16" oninput="calcInfInverse()" inputmode="decimal" min="0.1" max="1000"/></div>
+          <div class="field"><label>Concentração (mcg/mL)</label><input type="number" step="0.1" id="inf-conc-inv" placeholder="16" oninput="calcInfInverse()" inputmode="decimal" min="0.1" max="20000"/></div>
         </div>
         <div id="inf-dose-result" class="formula-box" style="display:none"></div>
       </div></div>
@@ -1183,9 +1183,9 @@
     <div id="v-param" class="tab-panel active">
       <div class="card"><div class="card-header ch-blue"><div class="card-num">▣</div>PARÂMETROS INICIAIS — VENTILAÇÃO PROTETORA</div>
         <div class="card-body">
-          <div class="vm-gauge"><div class="vm-gauge-label">PARÂMETROS ATIVOS</div>
+          <div class="g2"><div class="field"><label>Altura (cm)</label><input type="number" id="vm-alt" placeholder="170" oninput="updateVMCalc()" inputmode="decimal" min="100" max="230"/></div><div class="field"><label>Sexo</label><select id="vm-sex" onchange="updateVMCalc()"><option value="m">Masculino</option><option value="f">Feminino</option></select></div></div><div class="vm-gauge"><div class="vm-gauge-label">PARÂMETROS ATIVOS</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-              <div class="result-box"><div class="result-label">VC</div><div class="result-value" id="vm-vc">— mL</div><div style="font-size:11px;color:rgba(255,255,255,.3)">6–8 mL/kg PI</div></div>
+              <div class="result-box"><div class="result-label">VC</div><div class="result-value" id="vm-vc">— mL</div><div style="font-size:11px;color:rgba(255,255,255,.3)" id="vm-vc-sub">6–8 mL/kg do peso predito (informe a altura)</div></div>
               <div class="result-box"><div class="result-label">PEEP</div><div class="result-value gold">5–8</div><div style="font-size:11px;color:rgba(255,255,255,.3)">cmH₂O</div></div>
               <div class="result-box"><div class="result-label">FR</div><div class="result-value">12–16</div><div style="font-size:11px;color:rgba(255,255,255,.3)">irpm</div></div>
               <div class="result-box"><div class="result-label">I:E</div><div class="result-value">1:2</div><div style="font-size:11px;color:rgba(255,255,255,.3)">relação</div></div>
@@ -1642,7 +1642,7 @@
         <div id="adv-inf-info" class="alert a-blue" style="display:none"></div>
         <div class="g2">
           <div class="field"><label>Peso (kg)</label><input type="number" id="adv-inf-peso" placeholder="70" oninput="advCalcInf()" inputmode="decimal" min="1" max="300"/></div>
-          <div class="field"><label>Concentração (mcg/mL)</label><input type="number" step="0.1" id="adv-inf-conc" placeholder="16" oninput="advCalcInf()" inputmode="decimal" min="0.01" max="9999"/></div>
+          <div class="field"><label>Concentração (mcg/mL)</label><input type="number" step="0.1" id="adv-inf-conc" placeholder="16" oninput="advCalcInf()" inputmode="decimal" min="0.01" max="20000"/></div>
         </div>
         <div class="field"><label>Dose alvo (mcg/kg/min)</label><input type="number" step="0.01" id="adv-inf-dose" placeholder="0.1" oninput="advCalcInf()" inputmode="decimal" min="0.01" max="999"/></div>
         <div id="adv-inf-result" style="margin-top:8px"></div>

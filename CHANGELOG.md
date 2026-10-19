@@ -223,3 +223,12 @@
 - **Gasometria:** faixas de P/F corrigidas (Berlin: ≤100 grave, ≤200 moderada, ≤300 leve; P/F isolado não define SDRA); aviso para pH normal com distúrbio compensado/misto.
 - **Doses por peso:** adrenalina de PCR e atropina passam a dose fixa no adulto; efedrina 0,05–0,15 mg/kg; rocurônio RSI 1,0–1,2 mg/kg; neostigmina limitada a 5 mg; noradrenalina em mcg/min; sugamadex 16 mg/kg incluído; coluna de unidades mostra a unidade do valor calculado.
 - **Textos:** Schnider "mais preciso em obesos" removido (menos preciso com IMC >35); MABL com ressalva; limites de potássio; cartão "Uso seguro" e referências.
+
+## 3.1.0 — 2026-10-19 (fase D13h — Calculadoras do Prático)
+**Correções de segurança em `js/app.js`:**
+- **Bomba de infusão (aba Calculadoras e Calc. avançadas):** as chaves da lista de drogas não batiam com as opções do formulário, então adrenalina, dexmedetomidina, propofol, cetamina, nitroglicerina e nitroprussiato **não calculavam nada**; além disso, propofol (mg/kg/h) saía ~17× abaixo e dexmedetomidina (mcg/kg/h) ~60× acima do correto por usar a fórmula de mcg/kg/min. Reescrito com conversão de unidades por droga, concentração e rótulo de dose preenchidos ao escolher a droga, aviso de dose acima da faixa usual e aviso quando o peso não foi informado (usava 70 kg em silêncio). Testes em `tools/test-infusao.js`.
+- **Volume corrente (Ventilação):** era 7 mL/kg do peso **real**; agora calcula 6–8 mL/kg do peso predito (campos de altura e sexo).
+- **Doses por peso:** remifentanil com unidade correta (mcg/min); flumazenil 0,2 mg no adulto; ácido tranexâmico limitado a 1 g; sufentanil 0,3 mcg/kg.
+- **Gasometria avançada:** delta-delta usa o AG corrigido pela albumina e a faixa 0,4–0,8 (acidose mista); P/F identificado como "faixa de SDRA" com a ressalva de Berlin; pH normal com PaCO₂ e HCO₃⁻ altos deixa de ser "acidose respiratória compensada" sem ressalvas.
+- **Raqui:** morfina IT 50–150 mcg (cesárea 50–100), conforme o módulo revisado.
+- **Textos:** Cockcroft-Gault com ressalva (estágio de DRC pela TFG estimada); fluidos intraoperatórios marcados como esquema clássico.

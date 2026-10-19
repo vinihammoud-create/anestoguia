@@ -345,8 +345,8 @@ function calcAll() {
   // Opioides
   const fentM = perfilAtual === 'idoso' ? 0.5 : 1.0;
   setTxt('c-fent-ind', fmtR(2 * fentM, 5 * fentM, 'mcg', p));
-  setTxt('c-suf', fmt(p * 0.4 * fentM, 'mcg', 1));
-  setTxt('c-remi', fmtR(0.1, 0.5, 'mcg/h', p));
+  setTxt('c-suf', fmt(p * 0.3 * fentM, 'mcg', 1));
+  setTxt('c-remi', fmtR(0.1, 0.5, 'mcg/min', p));
   setTxt('c-alfa', fmtR(10, 20, 'mcg', p));
   setTxt('c-morf-srpa', fmt(p * 0.05 * fentM, 'mg', 2));
   setTxt('c-tram', fmtR(1, 2, 'mg', p));
@@ -393,9 +393,9 @@ function calcAll() {
   setTxt('e-prop', fmt(p * 0.5, 'mg'));
   setTxt('e-amio', '300 mg IV');
   setTxt('e-nal', fmtR(1, 4, 'mcg', p));
-  setTxt('e-flu', fmt(Math.min(1, p * 0.01), 'mg', 2));
+  setTxt('e-flu', fmt(p >= 40 ? 0.2 : p * 0.01, 'mg', 2));
   setTxt('e-lipa', fmt(p * 1.5, 'mL', 1));
-  setTxt('e-atxa', fmt(p * 15, 'mg'));
+  setTxt('e-atxa', fmt(Math.min(1000, p * 15), 'mg'));
   setTxt('e-bic', fmtR(1, 2, 'mEq', p));
 
   // Anestésicos Locais dose máxima
@@ -415,10 +415,13 @@ function calcAll() {
    9. VM CALCULADORA
    ══════════════════════════════════════════ */
 function updateVMCalc() {
-  const p = pesoGlobal;
-  if (!p) return;
-  const vc = Math.round(p * 7);
-  setTxt('vm-vc', vc + ' mL (7 mL/kg)');
+  // VC pelo peso predito (ARDSNet), nunca pelo peso real
+  const alt = parseFloat((document.getElementById('vm-alt') || {}).value);
+  const sexEl = document.getElementById('vm-sex');
+  if (!alt || alt < 100 || alt > 230) { setTxt('vm-vc', '— mL'); return; }
+  const pbw = (sexEl && sexEl.value === 'f' ? 45.5 : 50) + 0.91 * (alt - 152.4);
+  setTxt('vm-vc', Math.round(pbw * 6) + '–' + Math.round(pbw * 8) + ' mL');
+  setTxt('vm-vc-sub', '6–8 mL/kg × peso predito ' + pbw.toFixed(1) + ' kg');
 }
 
 function updateRegionalDoses() {
@@ -863,26 +866,62 @@ function calcPesos() {
 }
 
 // --- 14b. Infusão em Bomba ---
-const infDrugs = {
-  nora: { name: 'Noradrenalina', prep: '4mg/250mL ou 8mg/250mL', conc16: 16, conc32: 32, unit: 'mcg/kg/min', range: '0,05–0,5' },
-  dopa: { name: 'Dopamina', prep: '250mg/250mL', conc: 1000, unit: 'mcg/kg/min', range: '2–20' },
-  dobu: { name: 'Dobutamina', prep: '250mg/250mL', conc: 1000, unit: 'mcg/kg/min', range: '2–20' },
-  nitro: { name: 'Nitroglicerina', prep: '50mg/250mL', conc: 200, unit: 'mcg/min', range: '5–200' },
-  remi: { name: 'Remifentanil', prep: '2mg/40mL', conc: 50, unit: 'mcg/kg/min', range: '0,05–0,5' },
-  prop: { name: 'Propofol 1%', prep: '200mg/20mL', conc: 10000, unit: 'mg/kg/h', range: '4–12' },
-  dex: { name: 'Dexmedetomidina', prep: '200mcg/50mL', conc: 4, unit: 'mcg/kg/h', range: '0,2–0,7' }
+// Conversão da unidade de dose para mcg/min (por kg, quando perKg)
+const INF_UNITS = {
+  'mcg/kg/min': { perKg: true,  toMcgMin: d => d },
+  'mcg/kg/h':   { perKg: true,  toMcgMin: d => d / 60 },
+  'mg/kg/h':    { perKg: true,  toMcgMin: d => d * 1000 / 60 }
 };
+const infDrugs = {
+  nora:  { name: 'Noradrenalina',   prep: '4 mg/250 mL = 16 mcg/mL',       conc: 16,    unit: 'mcg/kg/min', range: '0,05–0,5',  hi: 1 },
+  adre:  { name: 'Adrenalina',      prep: '4 mg/250 mL = 16 mcg/mL',       conc: 16,    unit: 'mcg/kg/min', range: '0,02–0,3',  hi: 0.5 },
+  dopa:  { name: 'Dopamina',        prep: '250 mg/250 mL = 1000 mcg/mL',   conc: 1000,  unit: 'mcg/kg/min', range: '2–20',      hi: 20 },
+  dobu:  { name: 'Dobutamina',      prep: '250 mg/250 mL = 1000 mcg/mL',   conc: 1000,  unit: 'mcg/kg/min', range: '2–20',      hi: 20 },
+  dexm:  { name: 'Dexmedetomidina', prep: '200 mcg/50 mL = 4 mcg/mL',      conc: 4,     unit: 'mcg/kg/h',   range: '0,2–0,7',   hi: 1.5 },
+  propo: { name: 'Propofol 1%',     prep: '10 mg/mL = 10000 mcg/mL',       conc: 10000, unit: 'mg/kg/h',    range: '4–12 (sedação 1,5–4,5)', hi: 12 },
+  remi:  { name: 'Remifentanil',    prep: '2 mg/40 mL = 50 mcg/mL',        conc: 50,    unit: 'mcg/kg/min', range: '0,05–0,5',  hi: 1 },
+  keta:  { name: 'Cetamina',        prep: '500 mg/50 mL = 10 mg/mL = 10000 mcg/mL', conc: 10000, unit: 'mg/kg/h', range: '0,5–2', hi: 2 },
+  ntg:   { name: 'Nitroglicerina',  prep: '50 mg/250 mL = 200 mcg/mL',     conc: 200,   unit: 'mcg/kg/min', range: '0,25–5',    hi: 5 },
+  ntp:   { name: 'Nitroprussiato',  prep: '50 mg/250 mL = 200 mcg/mL',     conc: 200,   unit: 'mcg/kg/min', range: '0,3–5 (até 10 por poucos minutos)', hi: 10 }
+};
+
+// mL/h para uma dose (na unidade da droga), concentração (mcg/mL) e peso (kg)
+function infVelocidade(drug, dose, conc, peso) {
+  const u = INF_UNITS[drug.unit];
+  const mcgMin = u.toMcgMin(dose) * peso;
+  return { mcgMin, vel: mcgMin * 60 / conc };
+}
+// dose (na unidade da droga) para uma velocidade (mL/h)
+function infDose(drug, vel, conc, peso) {
+  const u = INF_UNITS[drug.unit];
+  const mcgMin = vel * conc / 60;
+  return { mcgMin, dose: (mcgMin / peso) / u.toMcgMin(1) };
+}
+function infRotuloDose(inputId, drug) {
+  const el = document.getElementById(inputId);
+  const lab = el && el.closest('.field') && el.closest('.field').querySelector('label');
+  if (lab) lab.textContent = drug ? 'Dose alvo (' + drug.unit + ')' : 'Dose alvo';
+}
 
 function updateInfDrug() {
   const sel = document.getElementById('inf-droga').value;
   const drug = infDrugs[sel];
   const prep = document.getElementById('inf-prep');
   const info = document.getElementById('inf-formula');
-  if (drug && prep) {
-    prep.textContent = drug.prep;
-    if (info) info.textContent = drug.name + ': ' + drug.range + ' ' + drug.unit;
+  if (drug) {
+    if (prep) { prep.textContent = 'Preparo padrão: ' + drug.prep; prep.style.display = 'block'; }
+    if (info) { info.textContent = drug.name + ': faixa usual ' + drug.range + ' ' + drug.unit; info.style.display = 'block'; }
+    infRotuloDose('inf-dose', drug);
+    const c1 = document.getElementById('inf-conc'), c2 = document.getElementById('inf-conc-inv');
+    if (c1) c1.value = drug.conc;
+    if (c2) c2.value = drug.conc;
+  } else {
+    if (prep) prep.style.display = 'none';
+    if (info) info.style.display = 'none';
+    infRotuloDose('inf-dose', null);
   }
   calcInfusion();
+  calcInfInverse();
 }
 
 function calcInfusion() {
@@ -891,48 +930,24 @@ function calcInfusion() {
   if (!drug) return;
   const conc = parseFloat(document.getElementById('inf-conc').value);
   const dose = parseFloat(document.getElementById('inf-dose').value);
-  const peso = pesoGlobal || parseFloat(document.getElementById('inf-vel').value) || 0;
+  const peso = pesoGlobal || 70;
   const res = document.getElementById('inf-result');
-  const doseRes = document.getElementById('inf-dose-result');
 
   if (!conc || !dose) {
-    if (res) res.innerHTML = '';
+    if (res) { res.innerHTML = ''; res.style.display = 'none'; }
     return;
   }
-
-  // Calculate velocity: dose × weight × 60 / concentration
-  let vel = 0;
-  if (drug.unit.includes('kg')) {
-    vel = (dose * (pesoGlobal || 70) * 60) / conc;
-  } else {
-    vel = (dose * 60) / conc;
-  }
-
+  const r = infVelocidade(drug, dose, conc, peso);
   if (res) {
-    let formula = '';
-    if (drug.unit.includes('kg')) {
-      formula = `${dose} ${drug.unit} × ${pesoGlobal || 70} kg × 60 ÷ ${conc} mcg/mL`;
-    } else {
-      formula = `${dose} ${drug.unit} × 60 ÷ ${conc} mcg/mL`;
-    }
+    res.style.display = 'block';
     res.innerHTML = `
       <div class="formula-box">
         <div class="formula-label">Velocidade de Infusão</div>
-        <div class="formula-eq">${formula} = <strong>${vel.toFixed(1)} mL/h</strong></div>
+        <div class="formula-eq">${dose} ${drug.unit} × ${peso} kg = ${r.mcgMin.toFixed(1)} mcg/min → × 60 ÷ ${conc} mcg/mL = <strong>${r.vel.toFixed(1)} mL/h</strong></div>
       </div>
+      ${pesoGlobal ? '' : '<div class="alert a-orange" style="margin-top:6px">⚠ Peso não informado: usando 70 kg. Informe o peso do paciente.</div>'}
+      ${dose > drug.hi ? '<div class="alert a-red" style="margin-top:6px">⚠ Dose acima da faixa usual (' + drug.range + ' ' + drug.unit + '). Confirme a unidade e a diluição.</div>' : ''}
     `;
-  }
-
-  var _drugConc = {nora:16,adre:16,dopa:1000,dobu:1000,dexm:4,remi:50,ntg:200,ntp:200};
-  var _wrapEl = document.getElementById('inf-mlh-wrap');
-  var _mlhEl = document.getElementById('inf-mlh');
-  if (_drugConc[drug] && p && !isNaN(dose)) {
-    var _mult = (drug === 'dexm') ? 1 : 60;
-    var _mlh = (dose * p * _mult) / _drugConc[drug];
-    if (_mlhEl) _mlhEl.textContent = _mlh.toFixed(1) + ' ml/h';
-    if (_wrapEl) _wrapEl.style.display = 'block';
-  } else {
-    if (_wrapEl) _wrapEl.style.display = 'none';
   }
 }
 
@@ -944,21 +959,15 @@ function calcInfInverse() {
   const vel = parseFloat(document.getElementById('inf-vel-inv').value);
   const res = document.getElementById('inf-dose-result');
 
-  if (!conc || !vel) { if (res) res.innerHTML = ''; return; }
-
-  let dose = 0;
-  if (drug.unit.includes('kg')) {
-    dose = (vel * conc) / ((pesoGlobal || 70) * 60);
-  } else {
-    dose = (vel * conc) / 60;
-  }
-
+  if (!conc || !vel) { if (res) { res.innerHTML = ''; res.style.display = 'none'; } return; }
+  const peso = pesoGlobal || 70;
+  const r = infDose(drug, vel, conc, peso);
   if (res) {
+    res.style.display = 'block';
     res.innerHTML = `
-      <div class="formula-box">
-        <div class="formula-label">Dose Atual</div>
-        <div class="formula-eq">${vel} mL/h × ${conc} mcg/mL ÷ (${pesoGlobal || 70} kg × 60) = <strong>${dose.toFixed(3)} ${drug.unit}</strong></div>
-      </div>
+      <div class="formula-label">Dose Atual</div>
+      <div class="formula-eq">${vel} mL/h × ${conc} mcg/mL ÷ 60 = ${r.mcgMin.toFixed(1)} mcg/min ÷ ${peso} kg = <strong>${r.dose.toFixed(3)} ${drug.unit}</strong></div>
+      ${pesoGlobal ? '' : '<div style="color:var(--gold);margin-top:4px">⚠ Peso não informado: usando 70 kg.</div>'}
     `;
   }
 }
@@ -969,10 +978,14 @@ function advInfDrug() {
   if (!sel) return;
   const drug = infDrugs[sel.value];
   const info = document.getElementById('adv-inf-info');
-  if (drug && info) {
-    info.textContent = drug.name + ': ' + drug.range + ' ' + drug.unit + ' | Preparo: ' + drug.prep;
-  }
+  if (drug) {
+    if (info) { info.textContent = drug.name + ': faixa usual ' + drug.range + ' ' + drug.unit + ' | Preparo: ' + drug.prep; info.style.display = 'block'; }
+    infRotuloDose('adv-inf-dose', drug);
+    const c = document.getElementById('adv-inf-conc');
+    if (c) c.value = drug.conc;
+  } else if (info) { info.style.display = 'none'; }
   advCalcInf();
+  advCalcInfInv();
 }
 
 function advCalcInf() {
@@ -986,21 +999,13 @@ function advCalcInf() {
   const res = document.getElementById('adv-inf-result');
   if (!conc || !dose || !res) return;
 
-  let vel = 0;
-  if (drug.unit.includes('kg')) {
-    vel = (dose * peso * 60) / conc;
-  } else {
-    vel = (dose * 60) / conc;
-  }
-  let formula = drug.unit.includes('kg')
-    ? `${dose} × ${peso} kg × 60 ÷ ${conc} mcg/mL`
-    : `${dose} × 60 ÷ ${conc} mcg/mL`;
-
+  const r = infVelocidade(drug, dose, conc, peso);
   res.innerHTML = `
     <div class="formula-box">
       <div class="formula-label">Velocidade de Infusão</div>
-      <div class="formula-eq">${formula} = <strong>${vel.toFixed(1)} mL/h</strong></div>
+      <div class="formula-eq">${dose} ${drug.unit} × ${peso} kg = ${r.mcgMin.toFixed(1)} mcg/min → × 60 ÷ ${conc} mcg/mL = <strong>${r.vel.toFixed(1)} mL/h</strong></div>
     </div>
+    ${dose > drug.hi ? '<div class="alert a-red" style="margin-top:6px">⚠ Dose acima da faixa usual (' + drug.range + ' ' + drug.unit + '). Confirme a unidade e a diluição.</div>' : ''}
   `;
 }
 
@@ -1015,17 +1020,15 @@ function advCalcInfInv() {
   const res = document.getElementById('adv-inf-inv-result');
   if (!conc || !vel || !res) return;
 
-  let dose = drug.unit.includes('kg')
-    ? (vel * conc) / (peso * 60)
-    : (vel * conc) / 60;
-
+  const r = infDose(drug, vel, conc, peso);
   res.innerHTML = `
     <div class="formula-box">
       <div class="formula-label">Dose Atual</div>
-      <div class="formula-eq">${vel} mL/h × ${conc} ÷ (${peso} × 60) = <strong>${dose.toFixed(3)} ${drug.unit}</strong></div>
+      <div class="formula-eq">${vel} mL/h × ${conc} mcg/mL ÷ 60 = ${r.mcgMin.toFixed(1)} mcg/min ÷ ${peso} kg = <strong>${r.dose.toFixed(3)} ${drug.unit}</strong></div>
     </div>
   `;
 }
+
 
 // --- 14c. Gasometria Avançada ---
 function calcGasoAdv() {
@@ -1065,7 +1068,7 @@ function calcGasoAdv() {
     else if (hco3 > 26) primary = 'Alcalose METABÓLICA';
     else primary = 'Distúrbio misto';
   } else {
-    if (co2 > 45 && hco3 > 26) primary = 'Acidose resp. compensada';
+    if (co2 > 45 && hco3 > 26) primary = 'Acidose resp. crônica compensada ou alcalose metabólica compensada';
     else if (co2 < 35 && hco3 < 22) primary = 'Alcalose resp. compensada';
     else primary = 'Gasometria normal';
   }
@@ -1095,16 +1098,16 @@ function calcGasoAdv() {
       </div>`;
     }
     // Delta-delta
-    if (ag > 12 && hco3 < 24) {
-      const dd = (ag - 12) / (24 - hco3);
+    if (agCorr > 12 && hco3 < 24) {
+      const dd = (agCorr - 12) / (24 - hco3);
       let ddInterp = '';
-      if (dd < 0.4) ddInterp = 'AG elevado + acidose hiperclorêmica';
-      else if (dd <= 1) ddInterp = 'Acidose metabólica AG elevado pura';
-      else if (dd <= 2) ddInterp = 'AM AG elevado + possível componente misto';
-      else ddInterp = 'AM AG elevado + alcalose metabólica concomitante';
+      if (dd < 0.4) ddInterp = 'acidose hiperclorêmica (AG normal) predominante';
+      else if (dd < 0.8) ddInterp = 'acidose mista: AG elevado + hiperclorêmica';
+      else if (dd <= 2) ddInterp = 'acidose metabólica de AG elevado (pura)';
+      else ddInterp = 'AG elevado + alcalose metabólica concomitante (ou acidose respiratória crônica)';
       html += `<div class="formula-box">
         <div class="formula-label">Delta-Delta (ΔΔ)</div>
-        <div class="formula-eq">(${ag.toFixed(0)} − 12) ÷ (24 − ${hco3}) = <strong>${dd.toFixed(2)}</strong> → ${ddInterp}</div>
+        <div class="formula-eq">(${agCorr.toFixed(0)} − 12) ÷ (24 − ${hco3}) = <strong>${dd.toFixed(2)}</strong> → ${ddInterp}</div>
       </div>`;
     }
   }
@@ -1139,10 +1142,10 @@ function calcGasoAdv() {
   // 6. P/F Ratio
   if (po2 && fio2) {
     const pf = po2 / (fio2 / 100);
-    let pfClass = pf > 300 ? 'NORMAL' : pf > 200 ? 'ARDS LEVE' : pf > 100 ? 'ARDS MODERADO' : 'ARDS GRAVE';
+    let pfClass = pf > 300 ? 'NORMAL' : pf > 200 ? 'faixa de SDRA LEVE' : pf > 100 ? 'faixa de SDRA MODERADA' : 'faixa de SDRA GRAVE';
     let pfColor = pf > 300 ? 'a-green' : pf > 200 ? 'a-orange' : 'a-red';
     html += `<div class="formula-box">
-      <div class="formula-label">Relação P/F</div>
+      <div class="formula-label">Relação P/F (isolada, não define SDRA: Berlin exige início agudo, imagem e PEEP ≥5)</div>
       <div class="formula-eq">${po2} ÷ (${fio2}/100) = <strong>${Math.round(pf)}</strong> → <span class="tag ${pf>300?'tg':pf>200?'ty':'tr'}">${pfClass}</span></div>
     </div>`;
   }
@@ -1210,6 +1213,7 @@ function calcFluidos() {
         <tr><td><strong>3ª hora</strong></td><td class="vg"><strong>${h3} mL</strong></td><td>Manutenção ${manut.toFixed(0)} + 25% déficit ${Math.round(deficit*0.25)} + perdas ${surgLoss.toFixed(0)}</td></tr>
       </tbody>
     </table>
+    <div style="font-size:11px;color:var(--gold);margin-top:8px;line-height:1.6">⚠ Esquema clássico de referência. Hoje se prefere reposição individualizada: o déficit de jejum não precisa ser reposto por inteiro e o ritmo é guiado por PA, diurese, lactato e variáveis dinâmicas (PPV/SVV).</div>
   `;
   res.innerHTML = html;
 }
@@ -1249,6 +1253,7 @@ function calcClearance() {
       <strong>${stage}</strong><br>
       ${crcl < 60 ? '⚠️ Ajustar doses de drogas de eliminação renal (antibióticos, BNM, opioides)' : '✅ Sem necessidade de ajuste renal de rotina'}
     </div>
+    <div style="font-size:11px;color:var(--muted);margin-top:6px">Cockcroft-Gault estima o clearance para ajuste de dose; o estágio de DRC é definido pela TFG estimada (CKD-EPI) e por albuminúria. Em obesos, usar peso ajustado.</div>
   `;
 }
 
@@ -1290,7 +1295,7 @@ function calcRaqui() {
     <table class="pt" style="margin-top:8px">
       <thead><tr><th>Adjuvante IT</th><th>Dose</th><th>Evidência</th></tr></thead>
       <tbody>
-        <tr><td>Morfina IT</td><td class="vg">100–200 mcg</td><td>Padrão-ouro analgesia 24h</td></tr>
+        <tr><td>Morfina IT</td><td class="vg">50–150 mcg (cesárea: 50–100)</td><td>Analgesia por 18–24 h; vigiar depressão respiratória tardia</td></tr>
         <tr><td>Fentanil IT</td><td class="vg">20–25 mcg</td><td>Melhora qualidade do bloqueio</td></tr>
         <tr><td>Clonidina IT</td><td class="vg">15–45 mcg</td><td>Prolonga analgesia</td></tr>
         <tr><td>Dexametasona IT</td><td class="vg">Não recomendada</td><td>Off-label, sem segurança estabelecida no neuroeixo</td></tr>
