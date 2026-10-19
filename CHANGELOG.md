@@ -316,3 +316,11 @@
 - Após responder no Treino, e na revisão do simulado, aparece o bloco "Por que as outras estão erradas".
 ### Qualidade
 - `tools/check.js` valida `comentarios`: só letras erradas, 3 entradas por questão, mínimo de 20 caracteres.
+
+## 3.3.0 — 2026-10-19 (publicação aberta)
+### Offline
+- O service worker agora baixa na instalação os 29 módulos, o banco de questões e as figuras (antes só o que já tinha sido aberto ficava disponível offline). Lista `OFFLINE_EXTRA` regerada pelo `tools/bump-sw.js`.
+- Novo `tools/test-offline.js` (corta a rede e confere módulos, figuras, Treino e emergência), incluído no `test-all.js`.
+### Documentação
+- README reescrito para o público: instalação (Android, iPhone, computador), uso offline, funções, vantagens, perguntas frequentes e capturas de tela (`docs/screenshots/`).
+- Licença CC BY-NC 4.0 (`LICENSE`).

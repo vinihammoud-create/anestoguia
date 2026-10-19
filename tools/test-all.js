@@ -26,6 +26,7 @@ function passo(nome, arq, saidaOk) {
   passo('fumaça no navegador (tools/smoke.js)', 'smoke.js', /smoke OK/);
   passo('Treino (tools/test-treino.js)', 'test-treino.js', /passaram/);
   passo('Plantão (tools/test-plantao.js)', 'test-plantao.js', /passaram/);
+  passo('uso offline (tools/test-offline.js)', 'test-offline.js', /tudo certo/);
   if (srv) srv.kill();
   const falhas = resultados.filter(r => !r[1]).length;
   console.log(falhas ? `\n${falhas} verificação(ões) falharam` : '\ntudo certo: pode publicar (node tools/bump-sw.js, commit e push)');
