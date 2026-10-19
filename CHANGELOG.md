@@ -184,3 +184,13 @@
 - **PVC:** 2–8 mmHg (3–11 cmH₂O); PPV deixa de ser "padrão ouro".
 - **Questões:** 5 alternativas → 4 em todas.
 - **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
+
+## 3.1.0 — 2026-10-19 (fase D13d — Fisiologia aplicada)
+- **Halogenados:** FC na tabela deixa de ser "↓" (isoflurano/desflurano podem causar taquicardia); texto truncado sobre contratilidade reescrito.
+- **ECG:** derivações V5 ~75%, DII+V5 ~80% e DII+V4+V5 ~96% (London 1988); antes constava "DII+V5 ~95%".
+- **Driving pressure:** alvo "<13" trocado por ≤15 e o menor possível (Amato 2015, SDRA); recrutamento só seletivo (PROVHILO).
+- **CSHT:** valores do fentanil corrigidos (~300 min após 8 h; a simulação de Hughes 1992 vai de 1 a 306 min); números de sufentanil/alfentanil sem fonte substituídos por classificação qualitativa; sinergia propofol–remifentanil sem percentuais inventados.
+- **Rim:** removida a alegação de que isoflurano/desflurano preservam melhor o fluxo renal; limites de fluxo do sevoflurano conforme a bula; sugamadex em IRA grave: a bula não recomenda.
+- **Neuro:** PIC >20–22 (BTF 4ª ed.); autorregulação 50–150 como limites clássicos; hipotermia para PIC desfavorável (Eurotherm3235); hipotermia a 28 °C ~50–60%.
+- **Casos:** shunt do caso 1 recalculado (≈44%); dopamina (SOAP II: mais arritmias); vasopressina e hidrocortisona nos limiares da SSC 2021; propofol TCI de Marsh com alvo plasmático; halogenados "evitar" (MEP exige TIVA).
+- **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
