@@ -1,0 +1,411 @@
+<div class="screen" id="screen-etica">
+  <div class="top-bar" style="border-bottom:3px solid var(--violet)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--violet)">⚖️ Ética, CFM e Segurança</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="etica-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('etic','legis',this)">LEGISLAÇÃO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('etic','consent',this)">CONSENTIMENTO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('etic','seg',this)">SEGURANÇA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('etic','casos',this)">CONDUTAS</button>
+  </div>
+
+  <div class="tab-panel active" id="etic-legis">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> o que a Resolução CFM 2.174/2017 exige no ato anestésico, o que o Código de Ética Médica diz sobre consentimento e sigilo e quem responde por quê. Confira sempre o texto vigente no portal do CFM.</div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">01</span> Resolução CFM 2.174/2017 — ato anestésico
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Avaliação pré-anestésica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Obrigatória, em consulta presencial antes do procedimento; em urgência pode ser imediata. Registro em ficha com identificação, antecedentes, exame físico, exames, ASA, plano e consentimento.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ficha de anestesia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Registro contínuo das drogas, doses, horários, eventos, sinais vitais e intercorrências. Faz parte do prontuário e deve ser legível e assinada.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Monitorização mínima</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Contínua: oxigenação (oximetria), ventilação (capnografia quando indicado, incluindo intubação e sedação profunda), circulação (ECG contínuo e pressão arterial não invasiva) e temperatura quando houver risco. Em anestesia geral o aparelho precisa de alarmes e analisador de O₂.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Presença do anestesiologista</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Permanece junto ao paciente durante todo o ato, não podendo se ausentar da sala sem substituto habilitado. A resolução também define as condições mínimas da sala e da RPA.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Recuperação pós-anestésica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Todo paciente vai para uma SRPA com monitorização e equipe treinada. A alta da SRPA é prerrogativa do anestesiologista, com ficha de RPA preenchida.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Cuidado com a fonte</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A resolução vigente é a 2.174/2017 (publicada em 2018), que substituiu a 1.802/2006. Há atualizações e notas técnicas; leia o texto do CFM antes de responder a uma questão de prova que cite o artigo.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">02</span> Código de Ética Médica (Res. CFM 2.217/2018)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Princípios</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Autonomia, beneficência, não maleficência, justiça. O médico responde por dano por ação ou omissão caracterizável como imperícia, imprudência ou negligência (art. 1º).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Consentimento</div>
+          <div class="dc" style="text-align:left;line-height:1.6">É vedado realizar procedimento sem o consentimento do paciente ou do responsável após esclarecimento, salvo em risco iminente de morte (art. 22) e é vedado desrespeitar a decisão livre sobre práticas diagnósticas e terapêuticas, salvo em iminente risco de morte (art. 31).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sigilo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sigilo sobre o que o paciente revela, mesmo após a morte (art. 73), com exceção de motivo justo, dever legal ou autorização escrita do paciente.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Prontuário</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Elaborar prontuário legível e preservar o sigilo (art. 87). A guarda mínima é de 20 anos a partir do último registro (Lei 13.787/2018), com regras próprias para digital.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ato Médico (Lei 12.842/2013)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Entre os atos privativos do médico estão a sedação profunda, os bloqueios anestésicos e a anestesia geral.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Responsabilidade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Na maioria dos casos de anestesia, a obrigação é de meio (diligência), e a responsabilidade do profissional liberal exige culpa (CDC, art. 14, § 4º). A conduta do anestesiologista é avaliada individualmente; a do hospital é objetiva, por falha no serviço.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">03</span> Direitos e limites do anestesiologista
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Condições de trabalho</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O médico não é obrigado a realizar anestesia sem as condições mínimas de segurança (equipamento, monitorização, equipe, RPA). Recusar com justificativa registrada, comunicar ao diretor técnico e à comissão de ética.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fadiga e carga de trabalho</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Plantões longos aumentam o risco de erro; o médico deve registrar e comunicar situações inseguras ao diretor técnico, e pedir revezamento ou substituição quando a fadiga comprometer a segurança.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Substituição</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O anestesiologista deve ser substituído por colega habilitado em casos de ausência necessária; o paciente nunca fica sob anestesia sem responsável.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sedação por não anestesista</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A sedação profunda e a anestesia geral são atos do médico; o anestesiologista pode negar-se a fornecer cobertura anestésica em local sem condições.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /etic-legis -->
+
+  <div class="tab-panel" id="etic-consent">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> quem pode consentir, quando a recusa deve ser respeitada (Testemunhas de Jeová), diretivas antecipadas de vontade e ordens de não ressuscitar no perioperatório.</div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">01</span> Consentimento informado
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Elementos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Capacidade do paciente; informação adequada (técnica, riscos relevantes, alternativas, o que fazer se recusar); voluntariedade; registro em prontuário. O termo assinado não substitui a conversa.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Anestesia e consentimento separado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O consentimento para a cirurgia não cobre a anestesia: o anestesiologista obtém o seu. Explique riscos comuns (náuseas, dor de garganta, cefaleia pós-punção) e graves raros (aspiração, lesão nervosa, hematoma peridural, reação alérgica).</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Emergência</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Risco iminente de morte sem possibilidade de obter consentimento: o médico age para preservar a vida (exceção prevista no Código de Ética). Registrar a justificativa.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Menores e incapazes</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Menor de 16 anos é absolutamente incapaz e o responsável legal decide; entre 16 e 18 anos a capacidade é relativa. Em ambos, busque o assentimento do adolescente e o seu envolvimento. Se os pais recusam tratamento essencial e o risco é grave, acionar o comitê de ética, o diretor técnico e o Ministério Público.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pacientes sem capacidade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O consentimento é do representante legal ou da família próxima, seguindo as diretivas antecipadas se houver; a decisão deve ser pelos melhores interesses do paciente.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">02</span> Testemunhas de Jeová e recusa terapêutica
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Princípio</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O adulto capaz e informado pode recusar transfusão; a recusa deve ser respeitada e documentada (Resolução CFM 2.232/2019 trata da recusa terapêutica). Em urgência com risco iminente de morte, siga o protocolo da instituição e consulte o jurídico e a comissão de ética.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">O que é inaceitável e o que é opcional</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sangue total, hemácias, plaquetas, plasma e leucócitos costumam ser recusados. Albumina, concentrados de fatores, fibrinogênio, crioprecipitado e técnicas como recuperação intraoperatória de sangue em circuito contínuo são decisões individuais: pergunte item a item.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Preparo</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Otimizar a Hb no pré-operatório (ferro, eritropoetina), reduzir flebotomias, usar TXA, hemostasia cuidadosa, hipotensão controlada, normovolemia, recuperação de sangue e técnica anestésica que reduza perdas.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Menores</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pais não podem recusar transfusão necessária para salvar a vida do filho: o médico trata e comunica a autoridade competente (a vida da criança prevalece).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">03</span> Diretivas e fim de vida
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Diretivas antecipadas de vontade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Resolução CFM 1.995/2012: o paciente pode registrar antecipadamente quais cuidados aceita se perder a capacidade; o médico as leva em consideração, desde que não contrariem o Código de Ética.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ordem de não ressuscitar no perioperatório</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Não se suspende automaticamente. A diretriz ética recomenda "reconsideração obrigatória": discutir com paciente/família os objetivos e definir, caso a caso, quais intervenções ficam suspensas ou mantidas (por exemplo, intubação e massagem), de forma documentada.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Doação de órgãos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A doação depende da autorização familiar (Lei 10.211/2001). O diagnóstico de morte encefálica segue a Resolução CFM 2.173/2017; a equipe de transplante e a que declara a morte são distintas.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Futilidade e cuidados paliativos</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cirurgia paliativa exige discussão de metas; evitar procedimentos desproporcionais (distanásia), sem abandonar o paciente.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /etic-consent -->
+
+  <div class="tab-panel" id="etic-seg">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> lista de verificação da OMS, queijo suíço, medicações, antibioticoprofilaxia no tempo certo e cultura de segurança.</div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">01</span> Lista de verificação de cirurgia segura (OMS)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sign in (antes da indução)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Identidade, sítio, procedimento e consentimento; sítio marcado; checagem do aparelho e da medicação; oxímetro funcionando; alergias; via aérea difícil/risco de aspiração; risco de perda sanguínea &gt; 500 mL (7 mL/kg em crianças) e acesso/reserva.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Time out (antes da incisão)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Equipe se apresenta pelo nome e função; confirmação em voz alta do paciente, sítio, procedimento; antibiótico administrado nos últimos 60 min; eventos críticos previstos (cirurgião, anestesia, enfermagem); esterilização; imagens disponíveis.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sign out (antes de sair da sala)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Confirmar nome do procedimento, contagem de instrumentais, compressas e agulhas, rotulagem de peças, problemas com equipamento e plano de recuperação.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Evidência</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Haynes et al. (NEJM 2009): complicações caíram de 11,0% para 7,0% e mortalidade de 1,5% para 0,8%. A adesão e o diálogo real, não o preenchimento mecânico, é o que muda o desfecho.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">02</span> Cultura de segurança
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Modelo do queijo suíço (Reason)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Falhas ativas (erros de quem está na ponta) atravessam furos de defesas e se alinham a falhas latentes (sistema, treinamento, equipamento). A solução é fortalecer camadas, não punir indivíduos.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Evento sentinela / "never event"</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cirurgia em lado/paciente errado, corpo estranho retido, falha de gás medicinal, morte inesperada. Notificar, analisar causa-raiz e comunicar ao paciente (divulgação).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Gestão de recursos de crise (CRM)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Liderança clara, comunicação em alça fechada, uso de listas cognitivas, pedido precoce de ajuda, redistribuição de tarefas e briefing/debriefing.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Comunicação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">SBAR para passar o caso: situação, antecedentes, avaliação, recomendação. Passagem de plantão estruturada; checklists de emergência (HM, LAST, anafilaxia).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Programas no Brasil</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Programa Nacional de Segurança do Paciente (Portaria MS 529/2013); RDC ANVISA 36/2013 exige Núcleos de Segurança do Paciente. A Declaração de Helsinki sobre Segurança do Paciente em Anestesiologia (2010) é referência internacional.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">03</span> Medicações e infecção
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Seringas</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Rotular toda seringa e usar cores padronizadas (ISO 26825): opioides azul, hipnóticos amarelo, relaxantes musculares vermelho, vasopressores violeta, anticolinérgicos verde, anestésicos locais cinza. Rotular pelo nome, concentração e hora.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Medicamentos de alta vigilância</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Opioides, relaxantes musculares, heparina, potássio concentrado, insulina, vasopressores: dupla checagem, concentrações padronizadas, ampolas separadas e armazenamento seguro.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Antibioticoprofilaxia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cefazolina 2 g IV (3 g se ≥ 120 kg) em até 60 min antes da incisão (vancomicina/fluoroquinolona 120 min); repetir após duas meias-vidas (cefazolina: 4 h) ou perda &gt; 1500 mL. Parar em 24 h.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Higiene das mãos e assepsia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cinco momentos da OMS; técnica asséptica para cateteres e bloqueios; frascos multidose com data; descartar seringas contaminadas; nunca reutilizar seringa em outro paciente, mesmo com agulha trocada.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Normotermia, glicemia e outros</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Manter temperatura &gt; 36 °C, glicemia 140–180 mg/dL, profilaxia de tromboembolismo conforme risco e posicionamento seguro (lesão nervosa, olho).</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /etic-seg -->
+
+  <div class="tab-panel" id="etic-casos">
+    <div class="page-wrap">
+
+    <div class="alert a-violet" style="margin-bottom:12px"><strong>Treino de prova:</strong> cenários frequentes com a conduta mais defensável.</div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">01</span> Paciente nega transfusão e sangra
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Adulto capaz, recusa documentada</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Continuar o tratamento sem sangue: TXA, controle cirúrgico, recuperação de sangue (se aceito), manter normovolemia, ventilar com O₂ alto e pedir ajuda ao banco de sangue "bloodless". Anotar tudo.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sem documentação e inconsciente</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Não há recusa válida conhecida; em perigo iminente de morte, trate conforme o padrão e discuta depois com a família e o comitê. Procure cartão (Diretivas) com o paciente.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">02</span> Erro de medicação (ex.: troca de seringa)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Conduta</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Tratar o paciente primeiro; pedir ajuda; manter registro; comunicar à equipe e ao paciente/família (divulgação honesta); notificar no sistema e participar da análise de causa-raiz.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Prevenção</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Rotular, usar cores, ler a ampola duas vezes, não deixar seringas sem rótulo, separar medicações de alto risco.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">03</span> Pressão para anestesiar sem condições
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Conduta</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Explicar o risco, propor o adiamento e, se não houver mudança, registrar por escrito e comunicar ao diretor técnico e ao CRM. A segurança do paciente tem prioridade sobre a produtividade.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-violet">
+        <span class="card-num">04</span> Menor de idade com pais ausentes
+      </div>
+      <div class="card-body">
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Conduta</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Se urgência, trate para preservar a vida e registre o motivo. Se eletivo, adie até obter o consentimento do responsável legal. Envolver o paciente adolescente no assentimento.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>CFM 2.174/2017:</strong> consulta pré-anestésica antes do ato (em urgência, imediatamente antes), ficha de anestesia, ficha de RPA, monitorização contínua e presença do anestesiologista.</li>
+          <li><strong>Consentimento da anestesia</strong> é do anestesiologista, separado do consentimento cirúrgico; a exceção é o risco iminente de morte.</li>
+          <li><strong>Menores:</strong> menor de 16 anos é absolutamente incapaz; 16–18 anos, relativamente incapaz. Pais não recusam transfusão que salve a vida do filho.</li>
+          <li><strong>Testemunhas de Jeová:</strong> o adulto capaz pode recusar sangue; produtos e técnicas são decididos item a item. Documentar e preparar.</li>
+          <li><strong>Lista de verificação da OMS:</strong> sign in, time out, sign out; mortalidade 1,5% → 0,8% (Haynes, 2009).</li>
+          <li><strong>Queijo suíço (Reason):</strong> falhas ativas + latentes; o foco é o sistema, não o culpado.</li>
+          <li><strong>Antibiótico:</strong> em até 60 min antes da incisão (cefazolina 2 g; 3 g se ≥ 120 kg), repetir em 4 h ou perda &gt; 1500 mL.</li>
+          <li><strong>Prontuário:</strong> guarda mínima de 20 anos (Lei 13.787/2018). <strong>Sigilo</strong> persiste após a morte (art. 73).</li>
+          <li><strong>Ato Médico (Lei 12.842/2013):</strong> sedação profunda, bloqueios anestésicos e anestesia geral são privativos do médico.</li>
+          <li><strong>Evento sentinela:</strong> notificar, analisar causa-raiz e informar o paciente.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>Leis e resoluções</strong> são brasileiras: CFM 2.174/2017, 2.217/2018 (Código de Ética), 2.232/2019 (recusa terapêutica), 1.995/2012 (diretivas), 2.173/2017 (morte encefálica), Lei 12.842/2013 (Ato Médico), Lei 13.787/2018 (prontuário).</li>
+          <li><strong>RDC ANVISA 36/2013</strong> e a <strong>Portaria MS 529/2013</strong> criam o Núcleo e o Programa Nacional de Segurança do Paciente; o hospital deve notificar eventos adversos ao NOTIVISA.</li>
+          <li>A <strong>SBA</strong> publica parâmetros mínimos de segurança e o <strong>Título Superior em Anestesiologia (TSA)</strong> e o <strong>TEA</strong> cobram esse conteúdo.</li>
+          <li><strong>Responsabilidade civil:</strong> o hospital responde objetivamente; o médico, por culpa. Seguro de responsabilidade civil e registro completo da ficha protegem o profissional.</li>
+          <li>O <strong>CRM</strong> de cada estado fiscaliza: denúncias de condições inadequadas podem ser enviadas à Comissão de Ética Médica da instituição e ao CRM.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>Conselho Federal de Medicina. Resolução CFM nº 2.174/2017: dispõe sobre a prática do ato anestésico. DOU de 27/02/2018.</li>
+          <li>Conselho Federal de Medicina. Resolução CFM nº 2.217/2018: Código de Ética Médica (modificada pela Res. 2.222/2018).</li>
+          <li>Conselho Federal de Medicina. Resolução CFM nº 2.232/2019: recusa terapêutica por pacientes e objeção de consciência na relação médico-paciente.</li>
+          <li>Conselho Federal de Medicina. Resolução CFM nº 1.995/2012: diretivas antecipadas de vontade.</li>
+          <li>Conselho Federal de Medicina. Resolução CFM nº 2.173/2017: critérios do diagnóstico de morte encefálica.</li>
+          <li>Brasil. Lei 12.842/2013 (Ato Médico); Lei 13.787/2018 (prontuário); Lei 10.211/2001 (doação de órgãos).</li>
+          <li>Haynes AB, Weiser TG, Berry WR, et al. A surgical safety checklist to reduce morbidity and mortality in a global population. N Engl J Med 2009;360:491–9.</li>
+          <li>Reason J. Human error: models and management. BMJ 2000;320:768–70.</li>
+          <li>World Health Organization. WHO Surgical Safety Checklist and Implementation Manual, 2009.</li>
+          <li>Mellin-Olsen J, Staender S, Whitaker DK, Smith AF. The Helsinki Declaration on Patient Safety in Anaesthesiology. Eur J Anaesthesiol 2010;27:592–7.</li>
+          <li>Brasil. Ministério da Saúde. Portaria nº 529/2013 (Programa Nacional de Segurança do Paciente); ANVISA RDC nº 36/2013.</li>
+          <li>American Society of Anesthesiologists. Ethical Guidelines for the Anesthesia Care of Patients with Do-Not-Resuscitate Orders or Other Directives that Limit Treatment (2018).</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /etic-casos -->
+</div>

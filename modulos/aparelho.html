@@ -1,0 +1,478 @@
+<div class="screen" id="screen-aparelho">
+  <div class="top-bar" style="border-bottom:3px solid var(--cyan)">
+    <button class="back-btn" onclick="goToLauncher()">← Home</button>
+    <span class="top-title" style="color:var(--cyan)">⚙️ Aparelho e Física</span>
+  
+    <button class="back-btn" onclick="goTo('home')">&#8592; M&#243;dulos</button>
+  </div>
+
+  <div class="tab-bar" role="tablist" id="aparelho-tabbar">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('apar','maquina',this)">APARELHO</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('apar','vapor',this)">VAPORIZADORES</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('apar','fisica',this)">FÍSICA</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('apar','seguranca',this)">SEGURANÇA</button>
+  </div>
+
+  <div class="tab-panel active" id="apar-maquina">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> a prova cobra o caminho do gás (alta, intermediária e baixa pressão), os sistemas de segurança do O₂ e do N₂O, o vaporizador e o circuito circular. Saber onde cada falha acontece define a conduta.</div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Sistemas de pressão do aparelho
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Alta pressão (cilindros)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Do cilindro ao regulador de primeira etapa. O₂ cheio ≈ 2000–2200 psig (~15 MPa); regulado para ~40–45 psig. Só é usado se a rede (pipeline) falhar: o cilindro de reserva fica fechado até a checagem e é reaberto em emergência.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pressão intermediária</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Rede de gases (pipeline ~50–55 psig, ~4 bar), reguladores, válvula de falha de O₂ (fail-safe), alarme de O₂, descarga rápida (flush de O₂, 35–75 L/min) e entrada dos fluxômetros. A descarga rápida desvia dos vaporizadores.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Baixa pressão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Após os fluxômetros: vaporizadores, válvula de saída de gás fresco e saída comum. É o setor mais exposto a vazamentos; o teste de vazamento de baixa pressão (pressão negativa com bulbo de sucção) é feito antes do 1º caso.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fail-safe e proporção</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A válvula fail-safe interrompe ou reduz N₂O e outros gases quando a pressão de O₂ cai (~20–30 psig). O sistema de proporção (ORC/Link-25) mantém FiO₂ mínima no gás fresco (≈ 21–25%). Eles não impedem hipóxia se houver gás errado no tubo de O₂ ou falha a jusante: o analisador de O₂ é a garantia.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Gases e cilindros
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Código de cores (Brasil)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Oxigênio: verde. Ar comprimido medicinal: amarelo. Óxido nitroso: azul. Conferir a ABNT NBR 12176/11725 do serviço; a cor nunca substitui a leitura do rótulo.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pin Index (PISS)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pinos do yoke impedem montar cilindro errado: O₂ = 2-5; N₂O = 3-5; ar = 1-5. Vale para cilindros pequenos (A–E).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">DISS e NIST</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Conexões da rede: DISS (diâmetro e rosca específicos) impede ligar mangueira no gás errado.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">O₂ no cilindro</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Gás comprimido: a pressão cai em proporção ao conteúdo (cilindro E ≈ 660 L a ~2000 psig). Autonomia (min) = (psig × 0,3) / fluxo (L/min) para cilindro E.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">N₂O no cilindro</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Líquido sob pressão (~745 psig a 20 °C), constante enquanto houver líquido (até ~75% consumido); só então cai. A pressão NÃO indica conteúdo: pesar o cilindro. Cilindro E ≈ 1590 L.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Efeito Joule–Thomson</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A expansão rápida do gás o resfria; cilindro de N₂O pode congelar o regulador com fluxos altos.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">03</span> Circuito circular e absorvedor de CO₂
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Componentes</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Válvulas unidirecionais inspiratória e expiratória, absorvedor, entrada de gás fresco, válvula APL, balão e ventilador. A válvula unidirecional presa causa reinalação e aumento de CO₂ inspirado.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Absorvedores</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cal sodada (NaOH ~4%, KOH ~1%, Ca(OH)₂ ~80%, água 14–19%). Baralyme (Ba(OH)₂) foi retirado do mercado. Absorvedores de Ca(OH)₂ puro/LiOH (Amsorb, Litholyme) quase não produzem CO ou composto A.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Indicador de saturação</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Violeta de etila: muda de branco para violeta; a cor pode reverter com repouso. Trocar pelo aumento do CO₂ inspirado, não só pela cor.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Composto A e CO</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sevoflurano + absorvente seco/quente + baixo fluxo → composto A (nefrotóxico em ratos; sem dano em humanos; bula atual: fluxo ≥ 1 L/min). Desflurano, isoflurano e enflurano em absorvente seco (KOH/NaOH) geram monóxido de carbono; desflurano é o maior produtor. Prevenção: desligar o fluxo ao fim do dia e trocar o absorvente seco.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fluxo de gás fresco</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Alto fluxo: concentração do vaporizador ≈ inspirada. Baixo fluxo: poupa agente e calor, exige analisador de gás e O₂, e aumenta a constante de tempo do circuito. Fluxo mínimo é o que repõe o consumo (O₂ ≈ 3–4 mL/kg/min + anestésico).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">04</span> Circuitos de Mapleson
+      </div>
+      <div class="card-body">
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">A (Magill)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Melhor para ventilação espontânea (FGF ≈ ventilação-minuto); pior para ventilação controlada. Válvula APL junto ao paciente.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">D (Bain)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Melhor para ventilação controlada (FGF ≈ 1,5–2× VM). Tubo interno de gás fresco dentro do ramo expiratório; desconexão do tubo interno → grande espaço morto.</div>
+        </div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">E e F (T de Ayre, Jackson-Rees)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sem válvulas; crianças pequenas. O balão de reservatório (Jackson-Rees, F) permite assistir a ventilação. FGF ≈ 2–3× VM.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Eficiência</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Espontânea: A &gt; D, E, F &gt; B, C. Controlada: D, E, F &gt; B, C &gt; A.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /apar-maquina -->
+
+  <div class="tab-panel" id="apar-vapor">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> fórmula de pressão de vapor, concentração = Pvapor/Pbarométrica × (FGF no vaporizador / FGF total) e diferença do Tec 6 para altitude.</div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Vaporizador de bypass variável
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Princípio</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Fluxo dividido em dois: bypass e câmara de vaporização. A fração saturada que passa pela câmara é somada ao bypass; o dial define a razão.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Concentração</div>
+          <div class="dc" style="text-align:left;line-height:1.6">O gás que passa pela câmara sai saturado: fluxo de vapor = fluxo na câmara × Pvapor / (Pbarométrica − Pvapor). A concentração de saída é esse fluxo de vapor dividido pelo fluxo total. Quanto maior a Pvapor e menor a pressão barométrica, mais vapor por litro de gás que passa pela câmara.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Específico e compensado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cada agente exige seu vaporizador (enchimento por sistema chaveado). Compensação de temperatura por tira bimetálica ou válvula; uso fora de uma faixa de fluxo (muito baixo ou muito alto) altera a saída.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pressões de vapor a 20 °C (mmHg)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Desflurano 664; halotano 243; isoflurano 238; enflurano 172; sevoflurano 157. A Pvapor moderada de sevoflurano, isoflurano e halotano permite o vaporizador de bypass comum; a do desflurano, quase igual à pressão atmosférica na sala quente, exige o Tec 6.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Efeito do enchimento errado</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sevoflurano em vaporizador de isoflurano → concentração menor que a marcada (Pvapor menor). Isoflurano em vaporizador de sevoflurano → concentração maior que a marcada. Esvaziar, ventilar a câmara e medir a concentração real.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Tec 6 (desflurano) e altitude
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Por que é diferente</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Ponto de ebulição do desflurano = 23,5 °C (próximo da temperatura ambiente). O Tec 6 aquece o agente a 39 °C e pressuriza a câmara a ≈ 1500 mmHg (2 atm). Circuito de dois fluxos: o dial controla a razão de resistências entre o gás fresco e o vapor.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Altitude/pressão baixa</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Bypass variável: o dial mantém a PRESSÃO PARCIAL do agente; a % de saída sobe, o efeito clínico fica igual. Tec 6: mantém a % marcada, mas a pressão parcial cai → efeito menor; ajustar o dial para cima (cálculo: dial × P₀/P).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Hiperbaria</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Câmara hiperbárica: o inverso. No bypass variável a % de saída cai, mas a pressão parcial (efeito) é a do dial; no Tec 6 a % se mantém e a pressão parcial sobe, com risco de aprofundar além do desejado.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">CAM e solubilidade</div>
+          <div class="dc" style="text-align:left;line-height:1.6">CAM (%, 40 anos, O₂): halotano 0,75; isoflurano 1,17; sevoflurano 1,8–2,0; desflurano 6,0; N₂O 104. Coeficiente sangue:gás: desflurano 0,42; sevoflurano 0,65; isoflurano 1,4; halotano 2,4; N₂O 0,47. Quanto menor o coeficiente, mais rápidas a indução e a recuperação.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">03</span> Ventiladores do aparelho
+      </div>
+      <div class="card-body">
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fole ascendente (em pé)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sobe na expiração. Desconexão do circuito → o fole não volta e o alarme dispara. Mais seguro que o descendente.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fole descendente (pendurado)</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cai por gravidade; pode "encher" com ar mesmo desconectado, mascarando a desconexão. Pouco usado.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Compensação de gás fresco</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Ventiladores sem desacoplamento do gás fresco entregam VC maior em fluxos altos (gás fresco soma). Nos modernos há desacoplamento.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Válvulas</div>
+          <div class="dc" style="text-align:left;line-height:1.6">APL (liberação de sobrepressão, em manual 30–70 cmH₂O) e válvula de sobrepressão do ventilador. Em ventilação manual o APL define PEEP/pressão; fechado demais → barotrauma.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ventilador de pistão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pistão elétrico: dispensa gás motor (O₂ ou ar), entrega o volume com boa precisão e permite desacoplar o gás fresco.</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /apar-vapor -->
+
+  <div class="tab-panel" id="apar-fisica">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> leis dos gases, Poiseuille, Reynolds, Venturi, Laplace e a física da oximetria, capnografia e da segurança elétrica.</div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Leis dos gases
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Boyle</div>
+          <div class="dc" style="text-align:left;line-height:1.6">P × V = constante (T constante). Pressão aumenta, volume diminui (por isso o balonete e o ar nas cavidades expandem em altitude).</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Charles / Gay-Lussac</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Charles: V/T constante (P constante). Gay-Lussac: P/T constante (V constante); cilindro aquecido aumenta a pressão.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Gás ideal</div>
+          <div class="dc" style="text-align:left;line-height:1.6">PV = nRT. 1 mol de gás ocupa 22,4 L (CNTP).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Dalton</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A pressão total é a soma das pressões parciais. FiO₂ 0,21 × 760 mmHg = 160 mmHg; em altitude a FiO₂ é a mesma, mas PiO₂ cai.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Henry</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A quantidade de gás dissolvido é proporcional à pressão parcial e à solubilidade (hiperóxia, narcose).</div>
+        </div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Graham / Fick</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Difusão de um gás ∝ 1/√(massa molar) (Graham). Fick: o fluxo de difusão é proporcional à área e ao gradiente, e inversamente à espessura.</div>
+        </div>
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Temperatura crítica</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Acima dela o gás não liquefaz por pressão: O₂ −118 °C (sempre gás); N₂O 36,5 °C (líquido no cilindro). Entonox (50% N₂O + 50% O₂) pode se separar abaixo de −6 °C (efeito Poynting).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Fluxo e hemodinâmica física
+      </div>
+      <div class="card-body">
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Poiseuille</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Fluxo laminar: Q = π r⁴ ΔP / (8 η L). Raio dobrado → fluxo ×16. Cateter curto e calibroso para volume rápido; o cateter central longo tem fluxo menor que um periférico curto de mesmo calibre.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Reynolds</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Re = ρ v d / η. &lt; 2000 laminar; &gt; 4000 turbulento. Heliox (baixa densidade) reduz a turbulência na obstrução alta de vias aéreas.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Bernoulli e Venturi</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Energia constante: velocidade ↑ → pressão ↓. Venturi (máscara de O₂, nebulizador, ejetor de oxigênio) arrasta ar. Efeito Coandă: fluxo adere à parede e desvia (bifurcações, fluxômetro de bola).</div>
+        </div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Laplace</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Cilindro: T = P × r. Esfera: P = 2T/r. Alvéolos menores colapsam sem surfactante; ventrículo dilatado exige mais tensão. Aneurisma cresce: maior tensão na parede.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fluxômetros</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Tubo cônico com bóia: fluxo laminar em baixa e turbulento em alta; calibrados para um gás (viscosidade e densidade). Diâmetro cônico ↑ para cima.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">03</span> Oximetria, capnografia e gasometria
+      </div>
+      <div class="card-body">
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Oximetria de pulso</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Lei de Beer–Lambert; dois comprimentos de onda: 660 nm (vermelho) e 940 nm (infravermelho). O sinal pulsátil ignora o tecido. Carboxi-Hb lê como oxi-Hb (SpO₂ falsamente normal); meta-Hb leva a leitura a ≈ 85%; azul de metileno derruba transitoriamente; esmalte e luz ambiente interferem pouco.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Capnografia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Absorção de infravermelho (~4,26 µm). Fluxo principal (mainstream) ou lateral (sidestream, 50–250 mL/min). N₂O causa leitura falsamente alta por alargamento de colisão se não compensado. PetCO₂ &lt; PaCO₂ em 2–5 mmHg normalmente; o gradiente aumenta com espaço morto (TEP, hipovolemia).</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Gasometria</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Eletrodo de Clark (PO₂), Severinghaus (PCO₂) e eletrodo de pH. A amostra em seringa com bolha de ar altera PO₂ e PCO₂; o metabolismo dos leucócitos reduz PO₂ em leucocitose extrema (pseudo-hipoxemia).</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pressão arterial invasiva</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sistema subamortecido superestima a PAS; superamortecido subestima a PAS. O ideal é frequência natural alta (&gt; 10–12 Hz) e coeficiente de amortecimento em torno de 0,64–0,7. "Zerar" no nível da aurícula direita (nível do coração); cabeça elevada: zerar no meato acústico (PPC cerebral).</div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /page-wrap -->
+  </div><!-- /apar-fisica -->
+
+  <div class="tab-panel" id="apar-seguranca">
+    <div class="page-wrap">
+
+    <div class="alert a-cyan" style="margin-bottom:12px"><strong>Ponto-chave TEA/TSA:</strong> checagem diária do aparelho, falhas de gás, choque elétrico (macro e microchoque), incêndio e ressonância.</div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">01</span> Checagem do aparelho (inclui FDA/ASA)
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Equipamento de emergência</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Ventilação manual de reserva (Ambu) com O₂, equipamento de via aérea, acesso IV e drogas de emergência: confirmados antes de todo caso.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Alimentação de gás</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Pressão da rede 50–55 psig; cilindro de reserva com ≥ 1000 psig e fechado; analisador de O₂ calibrado (21% e 100%); alarmes de O₂ ajustados.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sistema de baixa pressão</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Teste de vazamento com bulbo de sucção ou teste de pressão negativa/positiva do fabricante; vaporizadores abertos, bem encaixados e cheios.</div>
+        </div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Sistema respiratório</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Circuito e absorvedor; teste de pressão com oclusão da peça Y a 30 cmH₂O (vazamento aceitável abaixo do limite do fabricante, em geral ≤ 200–300 mL/min); válvulas unidirecionais inspiratória e expiratória funcionantes; ventilador testado.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Alarmes e monitores</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Alarme de baixa pressão/desconexão, apneia, O₂ baixo, agente anestésico, CO₂; ECG, SpO₂, PANI e temperatura funcionando antes da indução.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Quando repetir</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Checagem completa uma vez ao dia; checar circuito, absorvedor e vaporizador a cada caso e após troca de componentes.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">02</span> Falhas e incidentes
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Fornecimento errado de gás</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Se o analisador de O₂ cair com a rede aberta: desconectar da rede, abrir o cilindro de O₂, ventilar manualmente com O₂ a 100% por Ambu. A contaminação da rede (N₂O no lugar de O₂) leva à hipóxia sem alarme de pressão.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Falha de energia</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A maioria dos aparelhos mantém bateria de ≥ 30 min; ventilar manualmente; luz e aspiração de reserva.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Desconexão/obstrução</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Desconexão: queda de pressão/volume e CO₂ nulo. Obstrução do circuito ou do tubo: pico de pressão alto e CO₂ ausente ou em platô prolongado.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Preparo para suscetível à HM</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Retirar os vaporizadores, trocar circuito e absorvedor e lavar o aparelho com O₂ a 10 L/min pelo tempo que o fabricante indicar (de 90 s a 10 min ou mais, conforme o modelo). Alternativa: filtros de carvão ativado nas vias inspiratória e expiratória (MHAUS).</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Pressão de pico alta</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Verificar tubo (dobra, secreção, intubação seletiva), broncoespasmo, pneumotórax, balão do APL fechado, falha da válvula de segurança.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ch-cyan">
+        <span class="card-num">03</span> Segurança elétrica, incêndio e ressonância
+      </div>
+      <div class="card-body">
+        <div class="dr dr-r" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Macrochoque e microchoque</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Macrochoque: corrente na pele; limiar de percepção ~1 mA; de "soltar" ~10–16 mA; fibrilação ventricular ≥ 100 mA. Microchoque: corrente direta no coração (cateteres, marca-passo): ≥ 100 µA (0,1 mA) já pode causar FV.</div>
+        </div>
+        <div class="dr dr-g" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Proteção</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Sistema de energia isolado + monitor de isolamento de linha (LIM): alarma a 2–5 mA de corrente de fuga. O disjuntor diferencial (DR/GFCI) desliga com ≥ 5 mA em circuito aterrado.</div>
+        </div>
+        <div class="dr dr-b" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Eletrocautério</div>
+          <div class="dc" style="text-align:left;line-height:1.6">A placa de retorno deve cobrir grande área, longe de próteses e marca-passo; modo bipolar mais seguro em portadores de marca-passo; corrente de retorno alternativa aumenta o risco de queimadura.</div>
+        </div>
+        <div class="dr dr-t" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Incêndio na sala</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Tríade: oxidante (O₂ e N₂O), combustível (campo, tubo, álcool) e ignição (cautério, laser). Em fogo na via aérea: interromper gás, retirar o tubo, soltar o circuito, irrigar com soro e ventilar com ar.</div>
+        </div>
+        <div class="dr dr-y" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Laser</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Tubo aprovado para laser (metal ou revestido), balonete com azul de metileno e soro, FiO₂ &lt; 30% e evitar N₂O; proteger olhos do paciente e equipe.</div>
+        </div>
+        <div class="dr dr-v" style="display:block">
+          <div class="dn" style="font-weight:700;color:var(--text);margin-bottom:3px">Ressonância magnética</div>
+          <div class="dc" style="text-align:left;line-height:1.6">Campo estático (1,5–3 T) sempre ligado: objetos ferromagnéticos viram projéteis. Equipamentos "MR Conditional". Marca-passo convencional e implantes sem autorização são contraindicações; aquecimento por radiofrequência em cabos e eletrodos; ruído de até 100 dB exige protetor auricular.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-gold">
+        <span class="card-num">🎯</span> Pérolas de prova — TEA/TSA
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li><strong>Fail-safe de O₂</strong> corta N₂O/ar quando a pressão de O₂ cai; <strong>não impede</strong> hipóxia se o tubo de O₂ contiver outro gás. Só o analisador de O₂ garante.</li>
+          <li><strong>N₂O no cilindro</strong> é líquido: pressão constante até ~75% consumido, então cai rápido; pesar para saber o conteúdo.</li>
+          <li><strong>PISS:</strong> O₂ 2-5; N₂O 3-5; ar 1-5. DISS e NIST evitam conexão errada na rede.</li>
+          <li><strong>Vaporizador de bypass variável</strong> mantém a pressão parcial constante em altitude; o <strong>Tec 6</strong> mantém a % marcada, portanto o efeito cai: aumentar o dial.</li>
+          <li>Pressões de vapor (20 °C): desflurano 664, halotano 243, isoflurano 238, sevoflurano 157 mmHg.</li>
+          <li><strong>Enchimento errado:</strong> sevoflurano em vaporizador de isoflurano → entrega MENOS; isoflurano em vaporizador de sevoflurano → entrega MAIS.</li>
+          <li><strong>Mapleson:</strong> A é melhor em espontânea; D (Bain) é melhor em controlada; F = Jackson-Rees.</li>
+          <li><strong>Absorvedor seco</strong> + desflurano → monóxido de carbono; sevoflurano + fluxo baixo + absorvente seco → composto A.</li>
+          <li><strong>Oximetria:</strong> 660 e 940 nm; carboxi-Hb lê como oxi-Hb; meta-Hb leva a ~85%.</li>
+          <li><strong>Poiseuille:</strong> fluxo ∝ r⁴/L. <strong>Reynolds:</strong> &gt; 2000 turbulento (clínico); heliox reduz turbulência.</li>
+          <li><strong>Microchoque:</strong> ≥ 100 µA no coração; <strong>LIM</strong> alarma a 2–5 mA.</li>
+          <li><strong>Fogo na via aérea:</strong> parar gases, retirar o tubo, soltar o circuito, irrigar com soro.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-green">
+        <span class="card-num">🇧🇷</span> Como é no Brasil
+      </div>
+      <div class="card-body">
+        <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+          <li>Os aparelhos mais comuns no Brasil (Dräger, GE, Mindray, Takaoka e outros) variam em fole, desacoplamento do gás fresco e modos ventilatórios: <strong>ler o manual e a checagem do fabricante</strong> do seu serviço.</li>
+          <li><strong>Cal sodada</strong> nacional e importada coexistem; conferir a data e o indicador. Absorventes sem NaOH/KOH reduzem CO e composto A, mas nem todos os serviços têm.</li>
+          <li><strong>Sevoflurano</strong> é o halogenado de uso corrente; <strong>desflurano</strong> é restrito a poucos serviços (custo, Tec 6). O halotano saiu do mercado.</li>
+          <li><strong>Gases medicinais:</strong> cores e rótulos seguem a ABNT; conferir o selo do cilindro e a validade do teste hidrostático.</li>
+          <li>Muitos serviços ainda não têm <strong>analisador de agentes</strong> no aparelho; nesse caso, ajustar por clínica (BIS, sinais) e evitar baixo fluxo prolongado.</li>
+          <li>A <strong>Resolução CFM 2.174/2017</strong> exige monitorização mínima (oximetria, capnografia, PANI, ECG) em todo ato anestésico.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-header ch-blue">
+        <span class="card-num">📚</span> Referências
+      </div>
+      <div class="card-body">
+        <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+          <li>Dorsch JA, Dorsch SE. Understanding Anesthesia Equipment, 5ª ed. Philadelphia: Lippincott Williams &amp; Wilkins; 2008.</li>
+          <li>Ehrenwerth J, Eisenkraft JB, Berry JM. Anesthesia Equipment: Principles and Applications, 3ª ed. Philadelphia: Elsevier; 2020.</li>
+          <li>American Society of Anesthesiologists. Recommendations for Pre-Anesthesia Checkout Procedures (2008, atualizações). ASA Committee on Equipment and Facilities.</li>
+          <li>Wolff M, et al. Anesthesia machine and breathing system: safety. Em: Miller's Anesthesia, 10ª ed. Philadelphia: Elsevier; 2025.</li>
+          <li>Conselho Federal de Medicina. Resolução CFM nº 2.174/2017: prática do ato anestésico. Diário Oficial da União, 2018.</li>
+          <li>Associação Brasileira de Normas Técnicas. ABNT NBR 12176 e NBR 11725: cilindros e identificação de gases medicinais.</li>
+          <li>Mapleson WW. The elimination of rebreathing in various semi-closed anaesthetic systems. Br J Anaesth 1954;26:323–32.</li>
+          <li>MHAUS. Preparation of anesthesia workstations to anesthetize MH-susceptible patients. Malignant Hyperthermia Association of the United States.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footnote">Revisado em outubro de 2026</div>
+
+    </div><!-- /page-wrap -->
+  
+  <div style="padding:16px 12px 4px;text-align:center">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.8px">VINICIUS HAMMOUD</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
+  </div>
+  <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+  </div><!-- /apar-seguranca -->
+</div>

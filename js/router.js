@@ -4,7 +4,7 @@
    • módulos de estudo carregados sob demanda de modulos/<id>.html
    ══════════════════════════════════════════════════════════════ */
 var APP_VERSION = '3.1.0';
-var MODULOS = ['preop','farma','vm','monit','anesgeral','iot','vad','raqui','analgesia','volemia','avc','ped','srpa','crises','pocus','calc-clinica','obstetricia','fisiologia','cirurgias-esp'];
+var MODULOS = ['preop','farma','vm','monit','anesgeral','iot','vad','raqui','analgesia','volemia','avc','ped','srpa','crises','pocus','calc-clinica','obstetricia','fisiologia','cirurgias-esp','aparelho','etica'];
 var _modCache = {};
 
 function parseHash() { return location.hash.replace(/^#\/?/, '').split('/').filter(Boolean); }

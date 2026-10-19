@@ -253,3 +253,11 @@
   - Metformina (suspender no dia da cirurgia), MINS, KDIGO, paracetamol (sem "COX-3") e outras em SRPA/pré-operatório.
 ### Treino
 - Distribuição dos gabaritos corrigida: antes B 51%, D 13%, A 14%, C 22%; agora A/B/C/D = 150 cada (25%). As alternativas de 157 questões foram reordenadas de forma determinística, com as letras citadas nas justificativas remapeadas. 12 questões cujas alternativas se referenciam entre si ("ambas", "todas") não foram reordenadas.
+
+## 3.2.0 — 2026-10-19 (fase D14 — módulos novos, parte 1)
+### Estudos
+- **Aparelho e Física** (novo): sistemas de pressão, gases e cilindros (PISS, fail-safe, N₂O líquido), vaporizadores (bypass variável × Tec 6, altitude, enchimento errado), circuito circular e absorvedor, Mapleson, ventilador, leis dos gases, Poiseuille, Reynolds, Laplace, oximetria/capnografia, segurança elétrica, incêndio, ressonância e checagem do aparelho. 45 questões.
+- **Ética, CFM e Segurança** (novo): Resolução CFM 2.174/2017, Código de Ética, Ato Médico, consentimento, menores, Testemunhas de Jeová, diretivas antecipadas, doação, lista de verificação da OMS, queijo suíço, medicações, antibioticoprofilaxia e condutas. 44 questões.
+- Cada módulo tem "Pérolas de prova — TEA/TSA", "Como é no Brasil" e referências.
+### Treino
+- Banco de questões: 600 → 689 (17 temas), com gabaritos balanceados.

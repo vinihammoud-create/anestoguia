@@ -8518,5 +8518,1267 @@
     "justificativa": "Em farmacodinâmica: (1) IT = DL50/DE50 — quanto MAIOR o IT, mais seguro (maior margem entre dose efetiva e letal); (2) Efeito teto: os agonistas μ puros (morfina, fentanil) não têm teto clínico para analgesia nem para depressão respiratória (ambas dose-dependentes); a buprenorfina, agonista parcial, tem teto para depressão respiratória (e para analgesia em doses altas); (3) A interação propofol-opioide (ex: propofol + remifentanil ou fentanil) é classicamente supraditiva — a análise isobolográfica mostra que doses subclínicas de cada fármaco combinadas produzem efeito hipnótico/anestésico superior à soma — este é o racional da anestesia balanceada e da TIVA combinada; (4) EC50 é a concentração que produz 50% do efeito MÁXIMO (não 100%) — para 50% da população OU 50% do Emax individual; (5) O antagonismo competitivo é REVERSÍVEL — concentrações suficientemente altas do agonista deslocam o antagonista (ex: morfina desloca naloxona em superdose)."
    }
   ]
+ },
+ {
+  "id": "aparelho",
+  "titulo": "Aparelho e Física",
+  "cor": "#0891B2",
+  "icone": "⚙️",
+  "questoes": [
+   {
+    "id": "aparelho_01",
+    "tema": "Aparelho e Física",
+    "subtopico": "Gases",
+    "enunciado": "Em relação ao cilindro de óxido nitroso (N₂O) de um aparelho de anestesia, assinale a afirmativa correta.",
+    "alternativas": {
+     "A": "A pressão permanece constante (~745 psig a 20 °C) enquanto houver N₂O líquido; por isso o conteúdo deve ser estimado pelo peso do cilindro.",
+     "B": "A pressão cai de forma linear com o consumo, como no cilindro de oxigênio, e indica o conteúdo restante.",
+     "C": "O N₂O é um gás permanente a 20 °C, pois sua temperatura crítica é inferior a −100 °C.",
+     "D": "O cilindro armazena N₂O a ~2000 psig e a leitura do manômetro corresponde ao percentual restante."
+    },
+    "resposta": "A",
+    "justificativa": "O N₂O tem temperatura crítica de 36,5 °C e, a 20 °C, fica liquefeito dentro do cilindro. A pressão que o manômetro mostra é a pressão de vapor do líquido (~745 psig), que se mantém constante até cerca de 75% do conteúdo ser consumido. Só quando o líquido acaba a pressão cai rapidamente. Para saber quanto resta é preciso pesar o cilindro. No oxigênio, gás permanente, a pressão cai de forma proporcional ao conteúdo."
+   },
+   {
+    "id": "aparelho_02",
+    "tema": "Aparelho e Física",
+    "subtopico": "Gases",
+    "enunciado": "Um cilindro E de oxigênio (≈ 0,3 L/psig) marca 1500 psig. Com fluxo de 5 L/min, qual é a autonomia aproximada?",
+    "alternativas": {
+     "A": "30 minutos",
+     "B": "150 minutos",
+     "C": "300 minutos",
+     "D": "90 minutos"
+    },
+    "resposta": "D",
+    "justificativa": "O conteúdo é pressão × fator do cilindro: 1500 × 0,3 = 450 L. A 5 L/min, 450 / 5 = 90 minutos. A regra vale para o cilindro E de oxigênio (gás comprimido), em que a pressão é proporcional ao volume. Não se aplica ao N₂O, que está liquefeito."
+   },
+   {
+    "id": "aparelho_03",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança",
+    "enunciado": "O sistema de índice de pinos (Pin Index Safety System) tem a finalidade de:",
+    "alternativas": {
+     "A": "Impedir a conexão da mangueira da rede de gás ao aparelho de outro gás.",
+     "B": "Garantir uma FiO₂ mínima no gás fresco.",
+     "C": "Impedir que um cilindro de gás seja conectado ao yoke de outro gás.",
+     "D": "Interromper o fluxo de N₂O quando cai a pressão de O₂."
+    },
+    "resposta": "C",
+    "justificativa": "O PISS é um sistema de pinos no yoke e furos no cilindro que torna a conexão específica por gás (O₂ = 2-5, N₂O = 3-5, ar = 1-5). Ele protege a ligação de cilindros pequenos. A ligação da rede de gás usa o DISS ou conexões de rosca específicas. A FiO₂ mínima é garantida pelo sistema de proporção, e o corte do N₂O por falta de O₂ é feito pela válvula fail-safe."
+   },
+   {
+    "id": "aparelho_04",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança",
+    "enunciado": "A válvula fail-safe do aparelho de anestesia:",
+    "alternativas": {
+     "A": "Garante que o gás misturado no tubo de O₂ seja sempre oxigênio.",
+     "B": "Reduz ou interrompe o fluxo de N₂O e de outros gases quando a pressão de O₂ cai abaixo de um limite.",
+     "C": "Mantém a FiO₂ do gás fresco acima de 50% em qualquer fluxo.",
+     "D": "Impede o uso do aparelho quando o vaporizador está vazio."
+    },
+    "resposta": "B",
+    "justificativa": "A válvula fail-safe é acionada pela queda da pressão de O₂ (cerca de 20–30 psig) e corta o N₂O e outros gases, evitando misturas hipóxicas por falta de oxigênio. Ela não detecta o gás errado dentro da tubulação de O₂: nesse caso a pressão está normal e só o analisador de oxigênio acusa a hipóxia. A proporção mínima de O₂ cabe ao sistema de proporção (ORC)."
+   },
+   {
+    "id": "aparelho_05",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança",
+    "enunciado": "Durante uma anestesia, o analisador de oxigênio do circuito mostra FiO₂ de 15% com fluxo de O₂ marcado em 2 L/min e pressão da rede normal. A melhor conduta imediata é:",
+    "alternativas": {
+     "A": "Aumentar o fluxo de O₂ do fluxômetro e aguardar a FiO₂ subir.",
+     "B": "Desconectar o paciente do aparelho, ventilar manualmente com ar ambiente/ambu com O₂ de cilindro independente e investigar contaminação da rede.",
+     "C": "Trocar o absorvedor de CO₂ e manter a ventilação pelo aparelho.",
+     "D": "Confiar na oximetria e manter o caso até a SpO₂ cair abaixo de 90%."
+    },
+    "resposta": "B",
+    "justificativa": "Pressão normal com FiO₂ baixa sugere que o gás da rede não é oxigênio (contaminação ou conexão trocada). Aumentar o fluxo não corrige. A conduta é ventilar o paciente com uma fonte independente (ambu com cilindro de O₂ ou ar ambiente), desligar a rede, abrir o cilindro de reserva do aparelho e avisar a engenharia clínica. Esperar a SpO₂ cair atrasa o tratamento."
+   },
+   {
+    "id": "aparelho_06",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança",
+    "enunciado": "Qual é a faixa aproximada de pressão do oxigênio na rede (pipeline) de um centro cirúrgico?",
+    "alternativas": {
+     "A": "50–55 psig (≈ 4 bar)",
+     "B": "14–16 psig",
+     "C": "100–150 psig",
+     "D": "2000 psig"
+    },
+    "resposta": "A",
+    "justificativa": "A pressão da rede é de 50–55 psig (cerca de 4 bar). O regulador de segunda etapa do aparelho reduz a pressão para cerca de 14–16 psig. 2000 psig é a pressão do cilindro de O₂ cheio."
+   },
+   {
+    "id": "aparelho_07",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança",
+    "enunciado": "A descarga rápida de oxigênio (flush) do aparelho fornece cerca de 35–75 L/min e:",
+    "alternativas": {
+     "A": "Passa pelos vaporizadores e sobe a concentração de halogenado.",
+     "B": "É regulada pela válvula APL e não excede 10 L/min.",
+     "C": "Só funciona se o fluxômetro de O₂ estiver aberto.",
+     "D": "Não passa pelos vaporizadores, portanto não aumenta a concentração do agente volátil e pode diluí-lo."
+    },
+    "resposta": "D",
+    "justificativa": "O O₂ do flush vem direto da rede, desviando fluxômetros e vaporizadores. Assim não adiciona anestésico e dilui a mistura. Em ventilação com pressão, o flush pode causar barotrauma, e o gás fresco do flush soma ao volume no circuito."
+   },
+   {
+    "id": "aparelho_08",
+    "tema": "Aparelho e Física",
+    "subtopico": "Vaporizadores",
+    "enunciado": "Em relação à pressão de vapor a 20 °C, qual é a ordem decrescente correta?",
+    "alternativas": {
+     "A": "Sevoflurano > isoflurano > halotano > desflurano",
+     "B": "Isoflurano > desflurano > sevoflurano > halotano",
+     "C": "Desflurano > halotano > isoflurano > sevoflurano",
+     "D": "Desflurano > sevoflurano > halotano > isoflurano"
+    },
+    "resposta": "C",
+    "justificativa": "Pressões de vapor a 20 °C: desflurano 664 mmHg, halotano 243, isoflurano 238 e sevoflurano 157. O desflurano ferve a 23,5 °C, razão para o vaporizador aquecido e pressurizado (Tec 6)."
+   },
+   {
+    "id": "aparelho_09",
+    "tema": "Aparelho e Física",
+    "subtopico": "Vaporizadores",
+    "enunciado": "Por que o desflurano exige um vaporizador especial (tipo Tec 6)?",
+    "alternativas": {
+     "A": "Ele é muito pouco volátil e precisa ser aquecido para evaporar.",
+     "B": "É inflamável e o vaporizador contém um antioxidante.",
+     "C": "Seu ponto de ebulição (23,5 °C) é próximo da temperatura ambiente; o vaporizador aquece o agente a 39 °C e o mantém a ~2 atm.",
+     "D": "Tem coeficiente de partição sangue:gás elevado (2,4), o que exige fluxo controlado."
+    },
+    "resposta": "C",
+    "justificativa": "O desflurano é o agente mais volátil (Pvapor 664 mmHg) e ferve a 23,5 °C; com a temperatura ambiente variável, a evaporação seria instável em um vaporizador de bypass comum. O Tec 6 aquece e pressuriza a câmara, trabalhando como um sistema dual de fluxo. O coeficiente sangue:gás do desflurano é 0,42, o mais baixo entre os halogenados."
+   },
+   {
+    "id": "aparelho_10",
+    "tema": "Aparelho e Física",
+    "subtopico": "Vaporizadores",
+    "enunciado": "Em altitude elevada (pressão barométrica reduzida), a concentração (%) de saída em um vaporizador de bypass variável e em um Tec 6 comporta-se, respectivamente, de que forma?",
+    "alternativas": {
+     "A": "Ambos mantêm a % e o efeito inalterados.",
+     "B": "Bypass variável: % de saída aumenta, mas a pressão parcial (efeito) é a do dial; Tec 6: % se mantém e a pressão parcial cai, exigindo ajuste do dial.",
+     "C": "Bypass variável: a pressão parcial cai e o efeito diminui; Tec 6: a pressão parcial se mantém.",
+     "D": "Ambos entregam menos anestésico e é preciso sempre aumentar o dial."
+    },
+    "resposta": "B",
+    "justificativa": "No vaporizador de bypass variável a saída é uma fração do vapor saturado, e a pressão parcial entregue corresponde ao ajuste do dial; a % de saída sobe com a queda da pressão barométrica, mas o efeito clínico é o mesmo. No Tec 6 a % é mantida, de modo que a pressão parcial cai e o efeito diminui: aumenta-se o dial pela razão P₀/P."
+   },
+   {
+    "id": "aparelho_11",
+    "tema": "Aparelho e Física",
+    "subtopico": "Vaporizadores",
+    "enunciado": "Um vaporizador de isoflurano foi erroneamente preenchido com sevoflurano. O que acontece?",
+    "alternativas": {
+     "A": "A concentração entregue é menor que a marcada, porque a pressão de vapor do sevoflurano é menor.",
+     "B": "A concentração entregue é maior que a marcada, porque o sevoflurano é mais potente.",
+     "C": "A concentração entregue é igual à marcada, pois a calibração é por fluxo.",
+     "D": "O vaporizador não entrega anestésico, pois o encaixe é específico."
+    },
+    "resposta": "A",
+    "justificativa": "O vaporizador está calibrado para a pressão de vapor do isoflurano (238 mmHg). O sevoflurano evapora menos (157 mmHg), logo sai menos vapor que o marcado. O inverso (isoflurano no vaporizador de sevoflurano) entrega concentração maior. A medida correta é esvaziar, ventilar a câmara, descartar o agente e medir."
+   },
+   {
+    "id": "aparelho_12",
+    "tema": "Aparelho e Física",
+    "subtopico": "Vaporizadores",
+    "enunciado": "Qual é a CAM aproximada do sevoflurano em um adulto de 40 anos em oxigênio?",
+    "alternativas": {
+     "A": "0,75%",
+     "B": "6%",
+     "C": "104%",
+     "D": "2%"
+    },
+    "resposta": "D",
+    "justificativa": "CAM (adulto de 40 anos, O₂): sevoflurano 1,8–2,0%; isoflurano 1,15–1,2%; desflurano 6%; halotano 0,75%; N₂O 104%. A CAM diminui ~6% por década após os 40 anos."
+   },
+   {
+    "id": "aparelho_13",
+    "tema": "Aparelho e Física",
+    "subtopico": "Vaporizadores",
+    "enunciado": "Qual das opções reduz a velocidade de indução com um agente inalatório?",
+    "alternativas": {
+     "A": "Coeficiente de partição sangue:gás baixo.",
+     "B": "Aumento do fluxo de gás fresco e da ventilação alveolar.",
+     "C": "Baixa solubilidade do agente nos tecidos e no sangue.",
+     "D": "Coeficiente de partição sangue:gás elevado (alta solubilidade)."
+    },
+    "resposta": "D",
+    "justificativa": "Agentes muito solúveis no sangue (halotano, isoflurano) são captados em grande quantidade e levam mais tempo para elevar a pressão parcial alveolar e cerebral. O baixo coeficiente (desflurano 0,42, N₂O 0,47, sevoflurano 0,65) acelera a indução. Maior ventilação e maior fluxo de gás fresco aceleram a indução; maior débito cardíaco retarda (mais captação)."
+   },
+   {
+    "id": "aparelho_14",
+    "tema": "Aparelho e Física",
+    "subtopico": "Absorvedor",
+    "enunciado": "Quais substâncias podem ser produzidas por halogenados em contato com absorvedor de CO₂ seco?",
+    "alternativas": {
+     "A": "Monóxido de carbono com sevoflurano e composto A com desflurano.",
+     "B": "Apenas dióxido de carbono em quantidade excessiva.",
+     "C": "Monóxido de carbono (sobretudo com desflurano) e composto A com sevoflurano em fluxo baixo.",
+     "D": "Compostos fluoretados, que reagem apenas com halotano."
+    },
+    "resposta": "C",
+    "justificativa": "Absorvedores com NaOH/KOH dessecados degradam os halogenados em monóxido de carbono (desflurano > enflurano > isoflurano; sevoflurano muito pouco). O sevoflurano forma composto A, nefrotóxico em ratos, sem dano comprovado em humanos; a bula recomenda fluxo ≥ 1 L/min. Absorventes sem hidróxido forte (Ca(OH)₂ puro/LiOH) reduzem ambos."
+   },
+   {
+    "id": "aparelho_15",
+    "tema": "Aparelho e Física",
+    "subtopico": "Absorvedor",
+    "enunciado": "O indicador de saturação do absorvedor (violeta de etila) muda de:",
+    "alternativas": {
+     "A": "Violeta para branco; a cor é permanente.",
+     "B": "Branco para violeta; a cor pode reverter com o repouso e, por isso, o CO₂ inspirado é o melhor sinal de esgotamento.",
+     "C": "Verde para amarelo, indicando alcalinização do absorvedor.",
+     "D": "Rosa para incolor, apenas quando houver aquecimento."
+    },
+    "resposta": "B",
+    "justificativa": "O violeta de etila torna-se violeta quando o pH cai (CO₂ absorvido). Após o repouso o absorvedor \"regenera\" e a cor pode voltar a ficar branca. Por isso a capnografia com CO₂ inspirado > 0 é o indicador mais confiável de esgotamento."
+   },
+   {
+    "id": "aparelho_16",
+    "tema": "Aparelho e Física",
+    "subtopico": "Circuitos",
+    "enunciado": "Qual circuito de Mapleson é o mais eficiente para ventilação espontânea?",
+    "alternativas": {
+     "A": "Mapleson A (Magill)",
+     "B": "Mapleson D (Bain)",
+     "C": "Mapleson C (Waters)",
+     "D": "Mapleson B"
+    },
+    "resposta": "A",
+    "justificativa": "No circuito A a válvula APL fica junto ao paciente: na expiração, o gás exalado passa pela válvula depois do espaço morto, permitindo FGF próximo da ventilação-minuto (~70–100 mL/kg/min). Em ventilação controlada, o circuito A é o menos eficiente e o D, E e F são os melhores."
+   },
+   {
+    "id": "aparelho_17",
+    "tema": "Aparelho e Física",
+    "subtopico": "Circuitos",
+    "enunciado": "O circuito de Bain é uma variante coaxial de qual circuito de Mapleson?",
+    "alternativas": {
+     "A": "D",
+     "B": "A",
+     "C": "B",
+     "D": "F"
+    },
+    "resposta": "A",
+    "justificativa": "O Bain é o Mapleson D coaxial: o tubo interno traz gás fresco dentro do ramo expiratório. Em ventilação controlada, o FGF necessário é de cerca de 1,5–2 vezes a ventilação-minuto (70 mL/kg/min). Se o tubo interno se solta ou rompe, forma-se um grande espaço morto e ocorre reinalação."
+   },
+   {
+    "id": "aparelho_18",
+    "tema": "Aparelho e Física",
+    "subtopico": "Circuitos",
+    "enunciado": "A peça em T de Ayre com balão (Jackson-Rees) corresponde a qual circuito de Mapleson?",
+    "alternativas": {
+     "A": "A",
+     "B": "C",
+     "C": "B",
+     "D": "F"
+    },
+    "resposta": "D",
+    "justificativa": "A peça em T de Ayre é o Mapleson E (sem válvulas e sem balão); a adição do balão-reservatório é o Mapleson F (Jackson-Rees). É usado em crianças pequenas e exige FGF de ~2–3 vezes a ventilação-minuto."
+   },
+   {
+    "id": "aparelho_19",
+    "tema": "Aparelho e Física",
+    "subtopico": "Circuitos",
+    "enunciado": "Em baixo fluxo de gás fresco, qual é o principal inconveniente do circuito circular?",
+    "alternativas": {
+     "A": "Aumenta a perda de calor e de umidade do paciente.",
+     "B": "Aumenta o consumo de agente inalatório.",
+     "C": "A concentração do vaporizador não corresponde à inspirada, pelo longo tempo de equilíbrio; é preciso monitorar O₂ e agente.",
+     "D": "Impede o uso de ventilação controlada."
+    },
+    "resposta": "C",
+    "justificativa": "Quando o fluxo é baixo, a constante de tempo do circuito é longa; a mudança na concentração do vaporizador demora a se refletir no circuito, e a mistura pode ser hipóxica se o fluxo de O₂ for menor que o consumo. O baixo fluxo poupa calor, umidade e agente, o que é uma vantagem."
+   },
+   {
+    "id": "aparelho_20",
+    "tema": "Aparelho e Física",
+    "subtopico": "Ventilador",
+    "enunciado": "Em relação ao fole do ventilador do aparelho de anestesia:",
+    "alternativas": {
+     "A": "O fole descendente é mais seguro, pois colapsa por gravidade na desconexão.",
+     "B": "O fole ascendente não reenche em uma desconexão do circuito, o que aciona o alarme.",
+     "C": "O fole ascendente enche por gravidade mesmo desconectado.",
+     "D": "O tipo do fole não influencia a detecção de desconexão."
+    },
+    "resposta": "B",
+    "justificativa": "O fole ascendente sobe na expiração e fica parado quando há desconexão; o alarme de baixa pressão e o volume ausente denunciam o problema. O fole descendente pode ser puxado para baixo por gravidade e \"encher\" com ar da sala, mascarando a desconexão."
+   },
+   {
+    "id": "aparelho_21",
+    "tema": "Aparelho e Física",
+    "subtopico": "Ventilador",
+    "enunciado": "A válvula APL do aparelho de anestesia:",
+    "alternativas": {
+     "A": "É necessária para a ventilação com o ventilador mecânico, sempre fechada.",
+     "B": "É a válvula de escape do circuito para ventilação manual/espontânea; deve estar aberta na ventilação espontânea e pode causar barotrauma se mal ajustada.",
+     "C": "Controla o fluxo de gás fresco ao paciente.",
+     "D": "Regula a FiO₂ na linha."
+    },
+    "resposta": "B",
+    "justificativa": "A APL limita a pressão no circuito durante a ventilação manual (30–70 cmH₂O). Em ventilação espontânea fica aberta; no ventilador mecânico o circuito é isolado dela. Fechada em excesso, provoca hiperpressão e barotrauma."
+   },
+   {
+    "id": "aparelho_22",
+    "tema": "Aparelho e Física",
+    "subtopico": "Física",
+    "enunciado": "Segundo a lei de Poiseuille, o que acontece com o fluxo laminar se o raio do tubo dobra e os demais fatores se mantêm?",
+    "alternativas": {
+     "A": "O fluxo aumenta 16 vezes.",
+     "B": "O fluxo dobra.",
+     "C": "O fluxo aumenta 4 vezes.",
+     "D": "O fluxo diminui pela metade."
+    },
+    "resposta": "A",
+    "justificativa": "Q = π r⁴ ΔP / (8 η L): o fluxo depende da quarta potência do raio. Por isso um cateter periférico calibroso e curto infunde muito mais rápido do que um cateter central longo e fino."
+   },
+   {
+    "id": "aparelho_23",
+    "tema": "Aparelho e Física",
+    "subtopico": "Física",
+    "enunciado": "O número de Reynolds indica que o fluxo é predominantemente turbulento quando:",
+    "alternativas": {
+     "A": "É inferior a 100.",
+     "B": "Depende apenas da viscosidade do gás.",
+     "C": "Está abaixo de 2000.",
+     "D": "Excede aproximadamente 2000–4000, favorecido por densidade alta, velocidade alta e diâmetro grande."
+    },
+    "resposta": "D",
+    "justificativa": "Re = ρ·v·d / η. Valores abaixo de ~2000 indicam fluxo laminar e acima de ~4000, turbulento. O heliox (baixa densidade) reduz a turbulência e o trabalho respiratório na obstrução alta das vias aéreas."
+   },
+   {
+    "id": "aparelho_24",
+    "tema": "Aparelho e Física",
+    "subtopico": "Física",
+    "enunciado": "A lei de Laplace aplicada a uma esfera afirma que:",
+    "alternativas": {
+     "A": "P = T / r² e depende do volume.",
+     "B": "P = 4T·r e aumenta com o raio.",
+     "C": "P = 2T / r: a pressão necessária para manter a esfera aberta é maior em raios menores.",
+     "D": "A pressão independe do raio."
+    },
+    "resposta": "C",
+    "justificativa": "Para uma esfera, P = 2T/r. Alvéolos menores teriam colapso maior sem surfactante (que reduz a tensão superficial). Em cilindros, T = P × r; a parede de um aneurisma sofre mais tensão quando seu raio aumenta."
+   },
+   {
+    "id": "aparelho_25",
+    "tema": "Aparelho e Física",
+    "subtopico": "Física",
+    "enunciado": "A mistura 50% N₂O/50% O₂ (Entonox) pode se separar em temperaturas inferiores a quais valores?",
+    "alternativas": {
+     "A": "36,5 °C",
+     "B": "−118 °C",
+     "C": "−6 °C (efeito Poynting)",
+     "D": "20 °C"
+    },
+    "resposta": "C",
+    "justificativa": "Em baixas temperaturas, o N₂O liquefaz no cilindro e o O₂ fica na fase gasosa (efeito Poynting), o que pode levar à entrega de mistura hipóxica ao final do cilindro. Por isso se aquece/inverte o cilindro antes de usar. 36,5 °C é a temperatura crítica do N₂O e −118 °C a do oxigênio."
+   },
+   {
+    "id": "aparelho_26",
+    "tema": "Aparelho e Física",
+    "subtopico": "Física",
+    "enunciado": "O efeito Joule–Thomson explica por que:",
+    "alternativas": {
+     "A": "O balonete do tubo se expande em altitude.",
+     "B": "O cilindro de N₂O e seu regulador esfriam com fluxos altos pela expansão do gás.",
+     "C": "O fluxômetro de bola sobe com o aumento do fluxo.",
+     "D": "O vaporizador compensa a temperatura da câmara."
+    },
+    "resposta": "B",
+    "justificativa": "A expansão rápida de um gás sem trocar calor causa resfriamento (Joule–Thomson). No N₂O líquido a vaporização absorve calor e pode congelar a válvula. A abertura brusca do cilindro de O₂, ao contrário, aquece o gás por compressão adiabática e pode causar ignição."
+   },
+   {
+    "id": "aparelho_27",
+    "tema": "Aparelho e Física",
+    "subtopico": "Física",
+    "enunciado": "O efeito Venturi é utilizado em qual dispositivo?",
+    "alternativas": {
+     "A": "Máscara de Venturi para O₂ e sistemas de aspiração/ejetores",
+     "B": "Válvula de PEEP de mola",
+     "C": "Oxímetro de pulso",
+     "D": "Capnógrafo de fluxo lateral"
+    },
+    "resposta": "A",
+    "justificativa": "No efeito Venturi a velocidade aumenta no estreitamento e a pressão cai, arrastando ar ambiente para o jato de O₂ (máscara de Venturi, nebulizadores e ejetores de sucção). Oxímetros usam a lei de Beer–Lambert e os capnógrafos usam absorção de infravermelho."
+   },
+   {
+    "id": "aparelho_28",
+    "tema": "Aparelho e Física",
+    "subtopico": "Monitores",
+    "enunciado": "Quais são os comprimentos de onda usados na oximetria de pulso convencional?",
+    "alternativas": {
+     "A": "450 nm e 1100 nm",
+     "B": "532 nm e 808 nm",
+     "C": "1064 nm e 2940 nm",
+     "D": "660 nm (vermelho) e 940 nm (infravermelho)"
+    },
+    "resposta": "D",
+    "justificativa": "A oxi-Hb absorve mais infravermelho (940 nm) e a desoxi-Hb mais luz vermelha (660 nm). A razão das absorbâncias pulsáteis é convertida em SpO₂ por curva empírica calibrada em voluntários. Valores como 532 nm e 1064 nm correspondem a lasers."
+   },
+   {
+    "id": "aparelho_29",
+    "tema": "Aparelho e Física",
+    "subtopico": "Monitores",
+    "enunciado": "Na intoxicação por monóxido de carbono, a oximetria de pulso convencional:",
+    "alternativas": {
+     "A": "Subestima a saturação, pois a carboxi-Hb absorve luz vermelha.",
+     "B": "Mostra 85% independentemente do nível de COHb.",
+     "C": "Fica inalterada porque o CO não interfere na luz.",
+     "D": "Superestima a saturação de oxigênio porque a carboxi-Hb é lida como oxi-Hb."
+    },
+    "resposta": "D",
+    "justificativa": "Com apenas dois comprimentos de onda, a carboxi-Hb absorve luz vermelha como a oxi-Hb e o aparelho confunde as duas; a SpO₂ parece normal, enquanto o conteúdo arterial de O₂ está reduzido. A metemoglobina tende a levar a leitura para ~85%. Só a co-oximetria mede a COHb."
+   },
+   {
+    "id": "aparelho_30",
+    "tema": "Aparelho e Física",
+    "subtopico": "Monitores",
+    "enunciado": "Qual condição pode causar leitura falsamente elevada de CO₂ expirado em capnógrafo de infravermelho não compensado?",
+    "alternativas": {
+     "A": "Hiperventilação.",
+     "B": "Hipotermia.",
+     "C": "Presença de N₂O no gás (alargamento de colisão).",
+     "D": "Fluxo de amostragem de 50 mL/min."
+    },
+    "resposta": "C",
+    "justificativa": "O espectro de absorção do CO₂ (4,26 µm) é alargado por N₂O e O₂ em alta concentração (colisão), provocando erro; os equipamentos modernos corrigem automaticamente. O gradiente PaCO₂–PetCO₂ normal é de 2–5 mmHg."
+   },
+   {
+    "id": "aparelho_31",
+    "tema": "Aparelho e Física",
+    "subtopico": "Monitores",
+    "enunciado": "Em relação ao sistema de monitorização de pressão arterial invasiva, um sistema subamortecido:",
+    "alternativas": {
+     "A": "Subestima a pressão sistólica",
+     "B": "Superestima a pressão sistólica e subestima a diastólica",
+     "C": "Não altera as pressões",
+     "D": "Mostra pressão média falsamente alta, mas sistólica normal"
+    },
+    "resposta": "B",
+    "justificativa": "O subamortecimento causa oscilação (overshoot): o pico sistólico fica maior e o vale diastólico menor, mas a pressão média é pouco afetada. Em sistemas superamortecidos a onda é achatada e a PAS é subestimada. O teste de lavagem rápida (fast flush) avalia a frequência natural e o amortecimento."
+   },
+   {
+    "id": "aparelho_32",
+    "tema": "Aparelho e Física",
+    "subtopico": "Monitores",
+    "enunciado": "Ao zerar um transdutor de pressão arterial invasiva em paciente com a cabeça elevada 30° durante cirurgia, o ponto de referência recomendado para estimar a pressão de perfusão cerebral é:",
+    "alternativas": {
+     "A": "O meato acústico externo (nível do polígono de Willis)",
+     "B": "A linha axilar média",
+     "C": "A fúrcula esternal",
+     "D": "O ponto do transdutor, independente da posição"
+    },
+    "resposta": "A",
+    "justificativa": "O transdutor deve estar no nível do ponto em que se quer conhecer a pressão. Para o cérebro, é o meato acústico externo; zerar no coração superestima a PPC em posição sentada (cada 10 cm = ~7,4 mmHg)."
+   },
+   {
+    "id": "aparelho_33",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança elétrica",
+    "enunciado": "Qual é a corrente aproximada capaz de causar fibrilação ventricular em microchoque (corrente direta no coração)?",
+    "alternativas": {
+     "A": "100 µA (0,1 mA)",
+     "B": "100 mA",
+     "C": "1 A",
+     "D": "5 mA"
+    },
+    "resposta": "A",
+    "justificativa": "Microchoque: corrente aplicada diretamente ao miocárdio (cateter central, eletrodo epicárdico). 100 µA já pode induzir FV. Em macrochoque (corrente passando pela pele) a FV exige ≥ 100 mA, com limiar de percepção de ~1 mA e de soltar a mão de 10–16 mA."
+   },
+   {
+    "id": "aparelho_34",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança elétrica",
+    "enunciado": "O monitor de isolamento de linha (LIM) do centro cirúrgico dispara o alarme quando:",
+    "alternativas": {
+     "A": "A tensão da rede cai abaixo de 110 V.",
+     "B": "Há corrente de 100 µA no coração do paciente.",
+     "C": "O disjuntor desarma por sobrecarga.",
+     "D": "A corrente de fuga para o terra atinge cerca de 2–5 mA, indicando perda do isolamento."
+    },
+    "resposta": "D",
+    "justificativa": "O sistema de energia isolada não tem referência de terra, de modo que o primeiro defeito não causa choque. O LIM monitora a corrente de fuga potencial e alarma a ~2–5 mA; o equipamento continua funcionando, mas passa a ser um sistema aterrado, e o próximo defeito pode causar choque. Ele não mede microchoque."
+   },
+   {
+    "id": "aparelho_35",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança elétrica",
+    "enunciado": "Qual medida reduz o risco de queimadura pelo eletrocautério monopolar?",
+    "alternativas": {
+     "A": "Posicionar a placa sobre proeminências ósseas e pelos para melhor condutividade.",
+     "B": "Utilizar o menor eletrodo de retorno disponível.",
+     "C": "Fixar a placa de retorno em área muscular, limpa, seca e próxima do campo, longe de implantes metálicos.",
+     "D": "Colocar o paciente em contato com a mesa metálica."
+    },
+    "resposta": "C",
+    "justificativa": "A placa deve ter grande área de contato (menos densidade de corrente), em tecido bem perfundido e sem pelos, cicatrizes ou implantes. A trajetória da corrente deve evitar o tórax em portadores de marca-passo. Contato do paciente com partes metálicas aterradas cria um caminho alternativo de queimadura."
+   },
+   {
+    "id": "aparelho_36",
+    "tema": "Aparelho e Física",
+    "subtopico": "Incêndio",
+    "enunciado": "Durante cirurgia de via aérea com laser, ocorre incêndio no tubo traqueal. A primeira conduta é:",
+    "alternativas": {
+     "A": "Aumentar o fluxo de O₂ para apagar a chama.",
+     "B": "Interromper o fluxo de gases, desconectar o circuito e remover o tubo.",
+     "C": "Manter ventilação e reintubar após a chama cessar.",
+     "D": "Aplicar sucção ao tubo e continuar a cirurgia."
+    },
+    "resposta": "B",
+    "justificativa": "A conduta no fogo na via aérea é suspender os gases (oxidante), desconectar o circuito, retirar o tubo e irrigar a via aérea com soro. Em seguida, ventila-se por máscara com O₂ (preferencialmente ar) e faz-se avaliação com broncoscopia. Reduzir a FiO₂ abaixo de 30% e evitar N₂O são medidas preventivas."
+   },
+   {
+    "id": "aparelho_37",
+    "tema": "Aparelho e Física",
+    "subtopico": "Incêndio",
+    "enunciado": "Em cirurgia com laser de via aérea, qual das medidas de prevenção é correta?",
+    "alternativas": {
+     "A": "Usar tubo de PVC convencional e FiO₂ 100%.",
+     "B": "Usar tubo apropriado ao laser, balonete com soro e azul de metileno, FiO₂ < 30% e evitar N₂O.",
+     "C": "Manter N₂O para reduzir a FiO₂.",
+     "D": "Usar balonete cheio de ar para maior vedação."
+    },
+    "resposta": "B",
+    "justificativa": "O PVC, o silicone e a borracha queimam com laser. O balonete cheio de soro corado com azul de metileno denuncia perfuração e absorve calor. O N₂O sustenta combustão; a FiO₂ deve ser a menor possível (< 30%) com mistura de ar e O₂."
+   },
+   {
+    "id": "aparelho_38",
+    "tema": "Aparelho e Física",
+    "subtopico": "Ressonância",
+    "enunciado": "Assinale a afirmativa correta sobre anestesia na ressonância magnética.",
+    "alternativas": {
+     "A": "O campo magnético está sempre ativo; todo material deve ser compatível (MR Conditional/Safe) e a monitorização exige cabos específicos.",
+     "B": "O campo magnético só é relevante quando o exame está em andamento.",
+     "C": "Qualquer aparelho de anestesia convencional pode ser usado na sala de exame.",
+     "D": "Marca-passo convencional é liberado se programado em modo assíncrono."
+    },
+    "resposta": "A",
+    "justificativa": "O ímã supercondutor permanece ligado o tempo todo. Objetos ferromagnéticos (cilindros de aço, laringoscópios) tornam-se projéteis. É preciso usar equipamento compatível, evitar loops de cabo (queimadura por radiofrequência) e proteger a audição (ruído de até 100 dB). Marca-passo convencional é contraindicado, salvo se compatível e reprogramado por equipe especializada."
+   },
+   {
+    "id": "aparelho_39",
+    "tema": "Aparelho e Física",
+    "subtopico": "Checagem",
+    "enunciado": "Qual das opções faz parte da checagem diária do aparelho de anestesia?",
+    "alternativas": {
+     "A": "Deixar o cilindro de O₂ de reserva aberto durante o caso.",
+     "B": "Testar apenas o ventilador, sem checar o circuito.",
+     "C": "Dispensar a checagem se outro anestesiologista usou o aparelho no dia anterior.",
+     "D": "Verificar o cilindro de O₂ de reserva (pressão ≥ ~1000 psig), calibrar o analisador de O₂ e testar vazamentos de baixa pressão e do circuito."
+    },
+    "resposta": "D",
+    "justificativa": "A checagem inclui equipamento de reserva (ambu), rede de gás, cilindro de reserva fechado e com pressão adequada, analisador de O₂, sistema de baixa pressão, circuito, absorvedor, ventilador, vaporizadores, alarmes e monitores. O cilindro de reserva é mantido fechado para evitar esgotamento sem perceber caso a rede falhe."
+   },
+   {
+    "id": "aparelho_40",
+    "tema": "Aparelho e Física",
+    "subtopico": "Checagem",
+    "enunciado": "O teste de vazamento do circuito respiratório com a peça Y ocluída e pressurização a 30 cmH₂O avalia:",
+    "alternativas": {
+     "A": "A pressão da rede de gases.",
+     "B": "A calibração do capnógrafo.",
+     "C": "O sistema de baixa pressão e o circuito (vazamentos de mangueiras, absorvedor e conexões).",
+     "D": "A eficiência do absorvedor de CO₂."
+    },
+    "resposta": "C",
+    "justificativa": "O teste de pressão positiva com a peça Y ocluída detecta perdas no circuito de ventilação, no absorvedor e nas conexões. Para a parte a montante dos fluxômetros (vaporizadores, saída de gás fresco), usa-se também o teste de baixa pressão do fabricante. A calibração do capnógrafo e o teste do absorvedor são feitos de outra forma."
+   },
+   {
+    "id": "aparelho_41",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança",
+    "enunciado": "Em uma desconexão do circuito respiratório durante ventilação mecânica, qual o primeiro sinal?",
+    "alternativas": {
+     "A": "Aumento súbito do pico de pressão.",
+     "B": "Aumento do CO₂ expirado.",
+     "C": "Queda do CO₂ expirado a zero e da pressão de via aérea, com alarme de baixa pressão/volume.",
+     "D": "Taquicardia e elevação da SpO₂."
+    },
+    "resposta": "C",
+    "justificativa": "A desconexão causa perda de pressão e volume expirado, queda do traçado do capnógrafo e alarme do ventilador. Aumento do pico de pressão indica obstrução ou broncoespasmo. A SpO₂ cai de forma tardia, por isso a capnografia é o monitor mais precoce."
+   },
+   {
+    "id": "aparelho_42",
+    "tema": "Aparelho e Física",
+    "subtopico": "Segurança",
+    "enunciado": "Qual dos itens abaixo é uma limitação do sistema de proporção de O₂ (ORC) e da válvula fail-safe?",
+    "alternativas": {
+     "A": "Falham sempre que há queda de pressão na rede.",
+     "B": "Não detectam gás errado (por exemplo N₂ ou N₂O) em tubulação de oxigênio, pois a pressão se mantém.",
+     "C": "Só funcionam em fluxos altos.",
+     "D": "Impedem o uso do N₂O em qualquer situação."
+    },
+    "resposta": "B",
+    "justificativa": "Esses sistemas controlam pressão e proporção de fluxo, não o conteúdo do gás. Uma tubulação contaminada com outro gás mantém pressão normal e passa pelo ORC. O analisador de O₂ (FiO₂) é o monitor que detecta a contaminação. Por isso a FiO₂ deve ser monitorada continuamente."
+   },
+   {
+    "id": "aparelho_43",
+    "tema": "Aparelho e Física",
+    "subtopico": "Hipertermia maligna",
+    "enunciado": "Antes de anestesiar um paciente suscetível à hipertermia maligna, o aparelho de anestesia deve ser preparado por:",
+    "alternativas": {
+     "A": "Remoção dos vaporizadores, troca do circuito e do absorvedor e lavagem com O₂ em alto fluxo, ou uso de filtros de carvão ativado.",
+     "B": "Apenas troca do absorvedor de CO₂.",
+     "C": "Manter o vaporizador de desflurano desligado.",
+     "D": "Trocar somente a máscara facial."
+    },
+    "resposta": "A",
+    "justificativa": "Os gases halogenados residuais no aparelho podem desencadear a crise. A MHAUS recomenda remover ou lacrar vaporizadores, trocar circuito e absorvedor e lavar com O₂ a 10 L/min por tempo suficiente (depende do modelo) ou instalar filtros de carvão ativado nos ramos inspiratório e expiratório. Usar TIVA e agentes seguros (propofol, cetamina, opioides, bloqueadores neuromusculares não despolarizantes)."
+   },
+   {
+    "id": "aparelho_44",
+    "tema": "Aparelho e Física",
+    "subtopico": "Capnografia",
+    "enunciado": "A queda súbita do ETCO₂ para valores próximos de zero com ventilação mantida e queda de pressão arterial sugere:",
+    "alternativas": {
+     "A": "Hipertermia maligna",
+     "B": "Broncoespasmo grave",
+     "C": "Hipoventilação por dose excessiva de opioide",
+     "D": "Embolia pulmonar maciça ou parada cardíaca"
+    },
+    "resposta": "D",
+    "justificativa": "A queda abrupta do ETCO₂ com ventilação mantida indica perda de perfusão pulmonar (embolia maciça, parada cardíaca, hipotensão extrema) ou desconexão/extubação. Na hipertermia maligna o ETCO₂ sobe; no broncoespasmo o traçado tem formato de \"barbatana de tubarão\"; na hipoventilação o ETCO₂ aumenta."
+   },
+   {
+    "id": "aparelho_45",
+    "tema": "Aparelho e Física",
+    "subtopico": "Bombas",
+    "enunciado": "Em relação aos modelos de infusão alvo-controlada (TCI), qual deles utiliza massa magra e é o mais usado para propofol em adultos?",
+    "alternativas": {
+     "A": "Marsh",
+     "B": "Minto",
+     "C": "Kataria",
+     "D": "Schnider"
+    },
+    "resposta": "D",
+    "justificativa": "O modelo de Schnider usa peso magro (LBM), altura, peso e idade e é aplicado ao alvo de efeito (Ce). O modelo de Marsh usa o peso total e atinge alvo plasmático (Cp). Minto é o modelo do remifentanil e o de Kataria é pediátrico. Eleveld é um modelo geral mais recente."
+   }
+  ]
+ },
+ {
+  "id": "etica",
+  "titulo": "Ética, CFM e Segurança",
+  "cor": "#8B5CF6",
+  "icone": "⚖️",
+  "questoes": [
+   {
+    "id": "etica_01",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Resolução CFM 2.174",
+    "enunciado": "Segundo a Resolução CFM 2.174/2017, a avaliação pré-anestésica:",
+    "alternativas": {
+     "A": "É obrigatória, deve ser feita antes do procedimento e, em urgência, pode ser realizada imediatamente antes da anestesia.",
+     "B": "Pode ser dispensada em cirurgias de pequeno porte.",
+     "C": "Deve ser feita por telefone na véspera, sem exame físico.",
+     "D": "É de responsabilidade do cirurgião e anexada ao prontuário."
+    },
+    "resposta": "A",
+    "justificativa": "A avaliação pré-anestésica é ato do anestesiologista, presencial, com exame físico e registro em ficha própria. Em urgência é admitida imediatamente antes do procedimento. Ela não depende do porte da cirurgia e não pode ser delegada ao cirurgião."
+   },
+   {
+    "id": "etica_02",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Resolução CFM 2.174",
+    "enunciado": "Quais documentos o anestesiologista deve preencher no ato anestésico, conforme a Resolução CFM vigente?",
+    "alternativas": {
+     "A": "Apenas a ficha de anestesia, pois a avaliação e a RPA são registradas pela enfermagem.",
+     "B": "Somente o termo de consentimento do cirurgião.",
+     "C": "Apenas a ficha de recuperação pós-anestésica, ao final do dia.",
+     "D": "Ficha de avaliação pré-anestésica, ficha de anestesia e ficha de recuperação pós-anestésica."
+    },
+    "resposta": "D",
+    "justificativa": "A resolução exige os três registros: avaliação pré-anestésica, ficha de anestesia (com intercorrências) e ficha de RPA. Todos fazem parte do prontuário e precisam ser legíveis, datados e assinados."
+   },
+   {
+    "id": "etica_03",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Resolução CFM 2.174",
+    "enunciado": "Qual das monitorizações abaixo é considerada mínima para qualquer anestesia segundo o CFM?",
+    "alternativas": {
+     "A": "Apenas pressão arterial e frequência cardíaca por palpação.",
+     "B": "Pressão arterial invasiva em todos os casos.",
+     "C": "Oximetria de pulso, ECG contínuo e pressão arterial não invasiva, com capnografia na anestesia geral com via aérea instrumentada.",
+     "D": "Apenas oximetria, dispensando ECG em procedimentos curtos."
+    },
+    "resposta": "C",
+    "justificativa": "O CFM exige monitorização contínua da oxigenação, da ventilação e da circulação: oximetria, capnografia (nos casos com via aérea instrumentada ou sedação profunda), ECG contínuo e PANI. Pressão arterial invasiva depende do caso. A dispensa por procedimento curto não é permitida."
+   },
+   {
+    "id": "etica_04",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Resolução CFM 2.174",
+    "enunciado": "Em relação à alta da sala de recuperação pós-anestésica (SRPA), assinale a correta.",
+    "alternativas": {
+     "A": "É decidida pelo cirurgião, independentemente do anestesiologista.",
+     "B": "É responsabilidade do anestesiologista, registrada em ficha de RPA.",
+     "C": "É decidida pela enfermagem com base no tempo de permanência.",
+     "D": "Pode ser dada por telefone sem avaliação do paciente."
+    },
+    "resposta": "B",
+    "justificativa": "O anestesiologista responde pela recuperação até que o paciente tenha condições de alta, utilizando escores (Aldrete-Kroulik) e o seu julgamento. A decisão não é só do tempo, do cirurgião ou da enfermagem."
+   },
+   {
+    "id": "etica_05",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Código de Ética",
+    "enunciado": "De acordo com o Código de Ética Médica, o médico pode realizar procedimento sem o consentimento do paciente ou do representante legal quando:",
+    "alternativas": {
+     "A": "O paciente é idoso.",
+     "B": "Há iminente risco de morte.",
+     "C": "Os familiares estão ausentes.",
+     "D": "O procedimento é considerado simples."
+    },
+    "resposta": "B",
+    "justificativa": "O Código (arts. 22 e 31) veda tratar sem consentimento após esclarecimento, salvo em risco iminente de morte. Idade, ausência de familiares ou simplicidade do procedimento não dispensam o consentimento."
+   },
+   {
+    "id": "etica_06",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Código de Ética",
+    "enunciado": "Quanto ao sigilo médico, assinale a afirmativa correta.",
+    "alternativas": {
+     "A": "O sigilo persiste após a morte do paciente, com exceções por justa causa, dever legal ou autorização escrita.",
+     "B": "O sigilo termina com o óbito do paciente.",
+     "C": "O sigilo vale apenas para pacientes de convênio.",
+     "D": "O sigilo não se aplica ao colega de equipe."
+    },
+    "resposta": "A",
+    "justificativa": "O art. 73 do Código de Ética mantém o sigilo mesmo após a morte. As exceções são motivo justo, dever legal e autorização expressa do paciente. O compartilhamento com a equipe que cuida do paciente é limitado ao necessário."
+   },
+   {
+    "id": "etica_07",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Prontuário",
+    "enunciado": "Qual é o prazo mínimo de guarda do prontuário do paciente em suporte de papel ou digital, conforme a Lei 13.787/2018?",
+    "alternativas": {
+     "A": "5 anos",
+     "B": "10 anos após a alta",
+     "C": "30 anos da data de nascimento",
+     "D": "20 anos a partir do último registro"
+    },
+    "resposta": "D",
+    "justificativa": "O prazo mínimo é de 20 anos a partir do último registro, podendo ser digitalizado conforme os requisitos legais. A ficha anestésica integra o prontuário e compartilha esse prazo."
+   },
+   {
+    "id": "etica_08",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Ato Médico",
+    "enunciado": "Segundo a Lei 12.842/2013 (Ato Médico), qual das atividades é privativa do médico?",
+    "alternativas": {
+     "A": "Anestesia local por infiltração em qualquer contexto.",
+     "B": "Administração de medicamentos por via intravenosa.",
+     "C": "Sedação profunda, bloqueios anestésicos e anestesia geral.",
+     "D": "Monitorização do paciente na SRPA."
+    },
+    "resposta": "C",
+    "justificativa": "A lei inclui entre os atos privativos do médico a sedação profunda, os bloqueios anestésicos e a anestesia geral. A administração de medicamentos e a monitorização podem ser realizadas pela equipe de enfermagem sob supervisão."
+   },
+   {
+    "id": "etica_09",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Responsabilidade",
+    "enunciado": "Em geral, a obrigação do anestesiologista perante o paciente é considerada:",
+    "alternativas": {
+     "A": "De resultado, e o médico responde sempre que houver complicação.",
+     "B": "Isenta de responsabilidade se o paciente assinou o consentimento.",
+     "C": "De meio, exigindo diligência e boa técnica, e a responsabilidade do profissional liberal depende de culpa.",
+     "D": "Da instituição, e o profissional nunca responde individualmente."
+    },
+    "resposta": "C",
+    "justificativa": "A medicina é obrigação de meio, e o CDC (art. 14 §4º) exige a verificação de culpa para o profissional liberal. O consentimento não isenta de responsabilidade por imperícia, imprudência ou negligência. O hospital responde objetivamente pelas falhas do serviço, mas isso não elimina a responsabilidade do médico."
+   },
+   {
+    "id": "etica_10",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Responsabilidade",
+    "enunciado": "Qual alternativa descreve corretamente os conceitos de imperícia, imprudência e negligência?",
+    "alternativas": {
+     "A": "Imperícia: omissão de cuidado; imprudência: falta de técnica; negligência: ação precipitada.",
+     "B": "Imperícia: falta de habilidade técnica; imprudência: ação precipitada ou arriscada; negligência: omissão de cuidado devido.",
+     "C": "Imperícia: ação precipitada; imprudência: omissão; negligência: falta de técnica.",
+     "D": "Os três conceitos são sinônimos para fins éticos."
+    },
+    "resposta": "B",
+    "justificativa": "O art. 1º do Código de Ética enumera as três formas de culpa. A imperícia diz respeito à habilidade técnica insuficiente, a imprudência é agir sem a cautela necessária e a negligência é deixar de fazer o que era devido."
+   },
+   {
+    "id": "etica_11",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Consentimento",
+    "enunciado": "Em relação ao consentimento para anestesia:",
+    "alternativas": {
+     "A": "O anestesiologista deve obter o seu próprio consentimento, separado do cirúrgico, com explicação de riscos e alternativas.",
+     "B": "O consentimento do cirurgião cobre automaticamente a anestesia.",
+     "C": "É dispensável quando o paciente está jejum e monitorizado.",
+     "D": "Basta uma assinatura no balcão de admissão, sem conversa."
+    },
+    "resposta": "A",
+    "justificativa": "A anestesia tem riscos e alternativas próprios. A conversa, adaptada ao paciente, é parte do consentimento; o termo assinado apenas a documenta. O consentimento do cirurgião não substitui o do anestesiologista."
+   },
+   {
+    "id": "etica_12",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Consentimento",
+    "enunciado": "Uma adolescente de 15 anos, acompanhada da mãe, será submetida a cirurgia eletiva. Quem concede o consentimento?",
+    "alternativas": {
+     "A": "Somente a adolescente, por ter mais de 14 anos.",
+     "B": "O cirurgião, em nome do paciente.",
+     "C": "Nenhum consentimento é necessário em procedimento eletivo simples.",
+     "D": "A mãe, como representante legal, com o assentimento da adolescente."
+    },
+    "resposta": "D",
+    "justificativa": "Menores de 16 anos são absolutamente incapazes pelo Código Civil e o responsável legal consente. O assentimento do adolescente deve ser buscado e respeitado, e a sua participação é boa prática ética."
+   },
+   {
+    "id": "etica_13",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Consentimento",
+    "enunciado": "Uma criança de 6 anos com hemorragia grave será transfundida, mas os pais, Testemunhas de Jeová, recusam. Qual é a conduta?",
+    "alternativas": {
+     "A": "Respeitar a recusa dos pais e não transfundir.",
+     "B": "Aguardar a decisão da própria criança.",
+     "C": "Esperar o fim da cirurgia para decidir.",
+     "D": "Transfundir para salvar a vida da criança, registrar o motivo e comunicar a instituição e a autoridade competente."
+    },
+    "resposta": "D",
+    "justificativa": "Os pais ou responsáveis não têm autonomia para impor recusa que ponha em risco a vida do filho. Em emergência, o médico deve preservar a vida da criança, documentar e comunicar a diretoria técnica, o comitê de ética e, se necessário, o Ministério Público."
+   },
+   {
+    "id": "etica_14",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Recusa terapêutica",
+    "enunciado": "Um adulto capaz, Testemunha de Jeová, assina documento recusando hemotransfusão em cirurgia eletiva. A conduta mais adequada é:",
+    "alternativas": {
+     "A": "Realizar a transfusão se houver perda grande, pois a vida prevalece sobre a autonomia.",
+     "B": "Recusar-se a anestesiar o paciente por razões de consciência, sem encaminhá-lo.",
+     "C": "Respeitar a recusa, documentar, discutir quais produtos e técnicas ele aceita e preparar estratégias para reduzir a perda sanguínea.",
+     "D": "Anestesiar sem informar a equipe cirúrgica sobre a recusa."
+    },
+    "resposta": "C",
+    "justificativa": "O adulto capaz e informado pode recusar tratamento em eletiva. O papel do anestesiologista é planejar o caso com a equipe: otimizar a Hb, usar TXA, recuperação de sangue (se aceita), hemostasia e hipotensão controlada. A objeção de consciência do médico exige encaminhamento a outro colega sem abandonar o paciente."
+   },
+   {
+    "id": "etica_15",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Recusa terapêutica",
+    "enunciado": "Qual produto costuma ser uma decisão individual (não uniformemente recusado) entre Testemunhas de Jeová?",
+    "alternativas": {
+     "A": "Concentrado de hemácias",
+     "B": "Albumina, concentrados de fatores e recuperação intraoperatória de sangue em circuito contínuo",
+     "C": "Concentrado de plaquetas",
+     "D": "Sangue total"
+    },
+    "resposta": "B",
+    "justificativa": "Hemácias, plaquetas, plasma, leucócitos e sangue total são recusados pela doutrina; frações e técnicas como albumina, fibrinogênio, crioprecipitado, fatores e a recuperação de sangue em circuito contínuo são decisões individuais. Pergunte a cada paciente item a item."
+   },
+   {
+    "id": "etica_16",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Diretivas",
+    "enunciado": "A Resolução CFM 1.995/2012 trata de:",
+    "alternativas": {
+     "A": "Diretivas antecipadas de vontade do paciente.",
+     "B": "Critérios de morte encefálica.",
+     "C": "Regras de prática do ato anestésico.",
+     "D": "Recusa terapêutica por Testemunhas de Jeová."
+    },
+    "resposta": "A",
+    "justificativa": "A 1.995/2012 regula as diretivas antecipadas de vontade, em que o paciente registra seus desejos sobre cuidados quando perder a capacidade. Morte encefálica: 2.173/2017; ato anestésico: 2.174/2017; recusa terapêutica: 2.232/2019."
+   },
+   {
+    "id": "etica_17",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Diretivas",
+    "enunciado": "Em paciente com ordem de não ressuscitar que será operado, a conduta recomendada é:",
+    "alternativas": {
+     "A": "Reconsideração obrigatória: discutir com o paciente ou responsável os objetivos e definir, de forma documentada, quais intervenções serão mantidas ou suspensas no perioperatório.",
+     "B": "Suspender automaticamente a ordem durante a anestesia.",
+     "C": "Manter a ordem integralmente, sem discutir, inclusive para eventos reversíveis da anestesia.",
+     "D": "Ignorar a ordem, pois o paciente está sob cuidados do anestesiologista."
+    },
+    "resposta": "A",
+    "justificativa": "A anestesia pode causar eventos reversíveis (hipotensão, bradicardia) cujo tratamento envolve procedimentos que a ordem proibiria. Recomenda-se discutir e definir caso a caso, respeitando as metas do paciente. A suspensão automática ou a manutenção cega são condutas inadequadas."
+   },
+   {
+    "id": "etica_18",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Doação de órgãos",
+    "enunciado": "Segundo a legislação brasileira (Lei 10.211/2001), a doação de órgãos de doador falecido depende de:",
+    "alternativas": {
+     "A": "Do registro no documento de identidade, que dispensa a autorização da família.",
+     "B": "Da decisão do médico assistente.",
+     "C": "Da decisão do hospital onde ocorreu a morte.",
+     "D": "Autorização do cônjuge ou parente de até segundo grau, após o diagnóstico de morte encefálica."
+    },
+    "resposta": "D",
+    "justificativa": "Desde 2001 a doação depende de autorização da família, independentemente da vontade manifestada em vida. O diagnóstico de morte encefálica segue a Resolução CFM 2.173/2017 e a equipe que o declara não pertence à equipe de transplante."
+   },
+   {
+    "id": "etica_19",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Lista de verificação",
+    "enunciado": "Em que momento da lista de verificação de cirurgia segura da OMS se confirma que o antibiótico profilático foi administrado nos últimos 60 minutos?",
+    "alternativas": {
+     "A": "Sign in (antes da indução)",
+     "B": "Sign out (antes de sair da sala)",
+     "C": "Time out (antes da incisão)",
+     "D": "Na admissão do paciente na SRPA"
+    },
+    "resposta": "C",
+    "justificativa": "O time out acontece antes da incisão: equipe se apresenta, confirma paciente, sítio e procedimento, profilaxia antibiótica nos últimos 60 minutos, eventos críticos e disponibilidade de imagens. O sign in ocorre antes da indução e o sign out antes de o paciente deixar a sala."
+   },
+   {
+    "id": "etica_20",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Lista de verificação",
+    "enunciado": "No sign in da lista de cirurgia segura (antes da indução), qual item deve ser verificado?",
+    "alternativas": {
+     "A": "Contagem de compressas e instrumentais.",
+     "B": "Via aérea difícil ou risco de aspiração e risco de perda sanguínea maior que 500 mL (7 mL/kg em crianças).",
+     "C": "Rotulagem das peças cirúrgicas.",
+     "D": "Apresentação de todos os membros da equipe pelo nome e função."
+    },
+    "resposta": "B",
+    "justificativa": "O sign in confere identidade, sítio, consentimento, marcação, aparelho, oxímetro, alergias, via aérea difícil/aspiração e risco de sangramento. A contagem de compressas e a rotulagem de peças ficam para o sign out. A apresentação da equipe é parte do time out."
+   },
+   {
+    "id": "etica_21",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Lista de verificação",
+    "enunciado": "No estudo de Haynes et al. (NEJM 2009) sobre a lista de verificação da OMS, observou-se:",
+    "alternativas": {
+     "A": "Redução da mortalidade de 10% para 1%.",
+     "B": "Redução das complicações de 11% para 7% e da mortalidade de 1,5% para 0,8%.",
+     "C": "Nenhum efeito sobre complicações, apenas sobre a satisfação.",
+     "D": "Aumento de complicações por maior tempo cirúrgico."
+    },
+    "resposta": "B",
+    "justificativa": "Em oito hospitais de diferentes países, a adoção da lista associou-se à queda de complicações (11,0% para 7,0%) e de mortalidade hospitalar (1,5% para 0,8%). O efeito depende de implementação real e comunicação, não só do preenchimento."
+   },
+   {
+    "id": "etica_22",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Cultura de segurança",
+    "enunciado": "O modelo do queijo suíço de Reason sugere que:",
+    "alternativas": {
+     "A": "Os acidentes resultam do alinhamento de falhas ativas e latentes através de várias camadas de defesa.",
+     "B": "A maioria dos erros se deve à incompetência individual.",
+     "C": "Basta punir o profissional responsável para evitar recorrências.",
+     "D": "Os erros são aleatórios e inevitáveis."
+    },
+    "resposta": "A",
+    "justificativa": "Segundo Reason, as barreiras têm furos (falhas latentes do sistema) e falhas ativas de quem está na ponta atravessam esses furos. A prevenção é fortalecer as camadas e corrigir condições latentes, além de aprender com o evento, sem foco punitivo."
+   },
+   {
+    "id": "etica_23",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Cultura de segurança",
+    "enunciado": "Qual é um exemplo de evento sentinela (\"never event\") em anestesia e cirurgia?",
+    "alternativas": {
+     "A": "Náusea e vômito pós-operatório",
+     "B": "Hipotensão tratada com vasopressor",
+     "C": "Dor de garganta após intubação",
+     "D": "Cirurgia no lado errado ou no paciente errado"
+    },
+    "resposta": "D",
+    "justificativa": "Eventos sentinela são ocorrências graves e evitáveis, como cirurgia em local/paciente errado, corpo estranho retido, erro grave de medicação ou de gás medicinal. As outras opções são eventos adversos comuns, que geram acompanhamento, mas não são \"never events\"."
+   },
+   {
+    "id": "etica_24",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Cultura de segurança",
+    "enunciado": "Qual a melhor conduta diante de um evento adverso grave com o paciente?",
+    "alternativas": {
+     "A": "Omitir o evento para evitar processos.",
+     "B": "Alterar a ficha para tornar o registro coerente.",
+     "C": "Tratar o paciente, pedir ajuda, registrar fielmente, informar o paciente/família com honestidade e notificar para análise de causa-raiz.",
+     "D": "Aguardar o paciente perguntar e só então informar."
+    },
+    "resposta": "C",
+    "justificativa": "A divulgação honesta, o registro fiel e a notificação são deveres éticos e favorecem a aprendizagem. Alterar prontuário é infração ética e legal. Omitir o evento prejudica a confiança e a prevenção."
+   },
+   {
+    "id": "etica_25",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Medicações",
+    "enunciado": "Conforme o padrão ISO 26825 de cores de seringas, qual a cor destinada aos relaxantes musculares?",
+    "alternativas": {
+     "A": "Azul",
+     "B": "Amarelo",
+     "C": "Vermelho",
+     "D": "Violeta"
+    },
+    "resposta": "C",
+    "justificativa": "Padrão: opioides azul, hipnóticos/indutores amarelo, relaxantes musculares vermelho, vasopressores violeta, anticolinérgicos verde, anestésicos locais cinza. Rótulo com nome, concentração e hora é obrigatório mesmo com cor."
+   },
+   {
+    "id": "etica_26",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Medicações",
+    "enunciado": "Qual das seguintes medidas reduz erros com medicamentos de alta vigilância?",
+    "alternativas": {
+     "A": "Manter ampolas misturadas para ganho de tempo.",
+     "B": "Dupla checagem independente, concentrações padronizadas e armazenamento separado.",
+     "C": "Dispensar a leitura do rótulo em fármacos de uso frequente.",
+     "D": "Preparar seringas sem rótulo se forem usadas em seguida."
+    },
+    "resposta": "B",
+    "justificativa": "Medicamentos como opioides, relaxantes musculares, potássio concentrado, heparina e insulina exigem dupla checagem, padronização e segregação. A rotulagem e a leitura do rótulo previnem trocas, mesmo em fármacos familiares."
+   },
+   {
+    "id": "etica_27",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Antibioticoprofilaxia",
+    "enunciado": "Qual a dose e o momento de cefazolina para profilaxia em adulto de 130 kg?",
+    "alternativas": {
+     "A": "3 g IV, até 60 minutos antes da incisão",
+     "B": "1 g IV, 12 horas antes da cirurgia",
+     "C": "2 g IV, após o fechamento da pele",
+     "D": "2 g IV, 3 horas antes da incisão"
+    },
+    "resposta": "A",
+    "justificativa": "A dose de cefazolina é de 2 g, aumentada para 3 g em pacientes com peso ≥ 120 kg, em até 60 minutos antes da incisão. Repetir após duas meias-vidas (cerca de 4 h) ou perda sanguínea > 1500 mL. Após o fechamento ou muito antes, o benefício cai."
+   },
+   {
+    "id": "etica_28",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Antibioticoprofilaxia",
+    "enunciado": "Para quais antibióticos o início da infusão pode ocorrer até 120 minutos antes da incisão?",
+    "alternativas": {
+     "A": "Cefazolina e cefuroxima",
+     "B": "Penicilina G",
+     "C": "Gentamicina em dose única",
+     "D": "Vancomicina e fluoroquinolonas"
+    },
+    "resposta": "D",
+    "justificativa": "Vancomicina e fluoroquinolonas exigem infusão lenta e podem ser iniciadas até 120 min antes. Beta-lactâmicos (cefazolina) devem ser dados em até 60 min. A profilaxia, em geral, não ultrapassa 24 h."
+   },
+   {
+    "id": "etica_29",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "Qual é a finalidade do SBAR na comunicação em saúde?",
+    "alternativas": {
+     "A": "Padronizar o preenchimento da ficha de anestesia.",
+     "B": "Calcular o risco de complicação respiratória.",
+     "C": "Monitorizar o balanço hídrico.",
+     "D": "Estruturar a transmissão de informação: situação, antecedentes, avaliação e recomendação."
+    },
+    "resposta": "D",
+    "justificativa": "SBAR (Situation, Background, Assessment, Recommendation) facilita passagens de plantão e chamadas de ajuda, reduzindo falhas de comunicação. Não é escore de risco nem ficha de registro."
+   },
+   {
+    "id": "etica_30",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "Em gerenciamento de crises (CRM) em sala cirúrgica, qual atitude é correta?",
+    "alternativas": {
+     "A": "Cada profissional age de forma independente para ganhar tempo.",
+     "B": "Evitar dar ordens diretas para não ofender a equipe.",
+     "C": "Designar um líder, usar comunicação em alça fechada e pedir ajuda precocemente.",
+     "D": "Retardar o pedido de ajuda até esgotar as opções do plantonista."
+    },
+    "resposta": "C",
+    "justificativa": "CRM envolve liderança, comunicação em alça fechada (ordem, repetição e confirmação), distribuição de tarefas, uso de listas cognitivas e acionamento precoce de ajuda. A hesitação em pedir ajuda é um fator contribuinte frequente de dano."
+   },
+   {
+    "id": "etica_31",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "Em relação à segurança do paciente no Brasil, qual norma criou os Núcleos de Segurança do Paciente nos serviços de saúde?",
+    "alternativas": {
+     "A": "Resolução CFM 2.174/2017",
+     "B": "RDC ANVISA 36/2013",
+     "C": "Lei 12.842/2013",
+     "D": "Portaria 1.995/2012"
+    },
+    "resposta": "B",
+    "justificativa": "A RDC 36/2013 institui ações de segurança do paciente e a obrigatoriedade dos Núcleos de Segurança nos serviços. A Portaria MS 529/2013 criou o Programa Nacional de Segurança do Paciente. As outras opções tratam de ato anestésico, ato médico e diretivas antecipadas."
+   },
+   {
+    "id": "etica_32",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "A Declaração de Helsinki sobre Segurança do Paciente em Anestesiologia (2010) recomenda que:",
+    "alternativas": {
+     "A": "Todos os pacientes sejam monitorizados com oximetria de pulso e, na anestesia geral, capnografia, e que haja protocolos como a lista de verificação.",
+     "B": "O uso da capnografia seja opcional em anestesia geral.",
+     "C": "O anestesiologista seja substituído por enfermeiros em procedimentos simples.",
+     "D": "A anestesia seja feita sem monitorização em locais remotos."
+    },
+    "resposta": "A",
+    "justificativa": "A declaração, lançada pela European Board of Anaesthesiology e pela European Society of Anaesthesiology e adotada por sociedades de vários países, recomenda monitorização com oximetria e capnografia e o uso de listas de verificação e protocolos para via aérea e outras situações críticas. Ela afirma o papel do médico anestesiologista na segurança."
+   },
+   {
+    "id": "etica_33",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Ética",
+    "enunciado": "Quais são os quatro princípios clássicos da bioética de Beauchamp e Childress?",
+    "alternativas": {
+     "A": "Autonomia, beneficência, não maleficência e justiça.",
+     "B": "Autonomia, lealdade, justiça e prudência.",
+     "C": "Veracidade, fidelidade, sigilo e justiça.",
+     "D": "Beneficência, equidade, sigilo e responsabilidade."
+    },
+    "resposta": "A",
+    "justificativa": "O principialismo propõe autonomia (respeito à decisão do paciente), beneficência (fazer o bem), não maleficência (não causar dano) e justiça (distribuição equitativa). Veracidade e sigilo são regras derivadas."
+   },
+   {
+    "id": "etica_34",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Ética",
+    "enunciado": "Um anestesiologista recusa-se a realizar anestesia sem monitor de CO₂ porque o serviço não o possui. Qual é a conduta mais adequada?",
+    "alternativas": {
+     "A": "Realizar a anestesia mesmo assim e anotar apenas na ficha.",
+     "B": "Abandonar o paciente na sala sem comunicar.",
+     "C": "Anestesiar com sedação leve e sem comunicar ninguém.",
+     "D": "Registrar a recusa por escrito, justificá-la e comunicar ao diretor técnico e à comissão de ética, propondo adiamento ou transferência."
+    },
+    "resposta": "D",
+    "justificativa": "O médico tem direito de recusar-se a trabalhar sem condições mínimas de segurança, desde que justifique e registre, além de comunicar à direção e aos órgãos de classe. Nunca deve abandonar o paciente em urgência: organiza a transferência ou o atendimento possível."
+   },
+   {
+    "id": "etica_35",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Ética",
+    "enunciado": "A respeito da fadiga e da carga de trabalho do anestesiologista, assinale a opção correta.",
+    "alternativas": {
+     "A": "A fadiga não tem relação com o risco de erro.",
+     "B": "Anestesiar com sono é uma questão pessoal e não deve ser comunicada.",
+     "C": "Fadiga aumenta o risco de erro; o profissional deve comunicar a situação e pedir substituição quando comprometer a segurança.",
+     "D": "O médico não pode solicitar revezamento durante o plantão."
+    },
+    "resposta": "C",
+    "justificativa": "Estudos mostram redução de desempenho com privação de sono e jornadas longas. O profissional é responsável por avaliar a própria capacidade e deve buscar revezamento. A instituição tem o dever de organizar escalas seguras."
+   },
+   {
+    "id": "etica_36",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "Qual é a conduta correta quanto ao reuso de seringas e frascos em anestesia?",
+    "alternativas": {
+     "A": "Reutilizar a seringa se trocar a agulha.",
+     "B": "Nunca reutilizar a seringa em outro paciente, mesmo com troca de agulha; frascos multidose com data de abertura e descarte conforme norma.",
+     "C": "Usar o mesmo frasco de propofol para vários pacientes durante todo o plantão.",
+     "D": "Aspirar propofol de um frasco aberto na véspera para economizar."
+    },
+    "resposta": "B",
+    "justificativa": "O contato da seringa com sangue e secreções pode contaminar o frasco. Surtos de hepatite C e infecções bacterianas foram descritos com reutilização de seringas e frascos. O propofol favorece crescimento bacteriano e deve ser descartado em 6 h (frasco aberto) ou 12 h (se transferido)."
+   },
+   {
+    "id": "etica_37",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Consentimento",
+    "enunciado": "Um paciente com plena capacidade se recusa a receber anestesia geral e exige raquianestesia, havendo indicação técnica da geral. O que fazer?",
+    "alternativas": {
+     "A": "Realizar a anestesia geral contra a vontade do paciente.",
+     "B": "Explicar riscos e alternativas, respeitar a escolha se for razoável e segura, ou propor outra anestesia aceitável; se não for possível, adiar a cirurgia.",
+     "C": "Impor a técnica, pois o médico decide.",
+     "D": "Registrar apenas que o paciente é difícil e seguir com a geral."
+    },
+    "resposta": "B",
+    "justificativa": "A autonomia garante ao paciente a escolha entre alternativas razoáveis. O anestesiologista não é obrigado a realizar técnica que considere insegura, mas não pode impor outra. Em eletivas, adiamento e segunda opinião são alternativas."
+   },
+   {
+    "id": "etica_38",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "Qual dos fatores abaixo é considerado uma falha latente (do sistema) segundo a teoria de Reason?",
+    "alternativas": {
+     "A": "Escala de plantão que leva a longas jornadas e ausência de checagem padronizada de equipamento.",
+     "B": "Dose digitada errada pelo profissional naquele momento.",
+     "C": "Esquecimento de abrir o cilindro de oxigênio durante o caso.",
+     "D": "Troca de ampolas por distração do médico."
+    },
+    "resposta": "A",
+    "justificativa": "Falhas latentes são condições do sistema que ficam dormentes (escalas, treinamento, rotulagem, aquisição de equipamentos). Os erros cometidos na ponta, no momento do evento, são falhas ativas."
+   },
+   {
+    "id": "etica_39",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "Em paciente com alergia à penicilina (reação não grave) que vai receber cefazolina, assinale a opção mais adequada.",
+    "alternativas": {
+     "A": "A cefazolina é sempre contraindicada em qualquer alergia à penicilina.",
+     "B": "Dar o antibiótico depois da incisão para evitar reação.",
+     "C": "Substituir sempre por gentamicina isolada.",
+     "D": "A cefazolina costuma ser segura, pois a reatividade cruzada com penicilinas é baixa; avaliar o histórico."
+    },
+    "resposta": "D",
+    "justificativa": "A cefazolina tem cadeia lateral diferente da das penicilinas e a reatividade cruzada é muito baixa (< 1%). Em reação grave (anafilaxia) documentada, escolher alternativa (clindamicina ou vancomicina). A profilaxia deve ser feita antes da incisão."
+   },
+   {
+    "id": "etica_40",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "Em relação à marcação do sítio cirúrgico, o procedimento correto é:",
+    "alternativas": {
+     "A": "Marcar apenas após a indução, para evitar desconforto.",
+     "B": "Marcar com o paciente sedado, para agilizar.",
+     "C": "Marcar o local de forma legível, preferencialmente pelo cirurgião com o paciente acordado, e verificar na lista antes da incisão.",
+     "D": "Dispensar a marcação em cirurgias laterais pequenas."
+    },
+    "resposta": "C",
+    "justificativa": "A marcação em estruturas pares (lado, nível) previne cirurgia no local errado. Deve ser feita antes da indução, pelo cirurgião, com participação do paciente, e ser visível no campo. A verificação ocorre no sign in e no time out."
+   },
+   {
+    "id": "etica_41",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Responsabilidade",
+    "enunciado": "Em caso de dano ao paciente na sala cirúrgica, o hospital responde:",
+    "alternativas": {
+     "A": "Apenas se houver culpa do médico comprovada.",
+     "B": "Nunca, pois o médico é autônomo.",
+     "C": "De forma objetiva por falhas no serviço, sem prejuízo da responsabilidade do médico, que depende da comprovação de culpa.",
+     "D": "Somente quando o paciente tiver plano de saúde."
+    },
+    "resposta": "C",
+    "justificativa": "Pelo CDC, o hospital responde objetivamente por falhas do serviço (estrutura, equipamento, equipe de apoio). O profissional liberal responde mediante verificação de culpa. As responsabilidades podem coexistir."
+   },
+   {
+    "id": "etica_42",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Ética",
+    "enunciado": "Qual é a conduta ética quando um colega apresenta sinais de comprometimento por uso de substâncias durante o plantão?",
+    "alternativas": {
+     "A": "Ignorar, por solidariedade profissional.",
+     "B": "Proteger o paciente retirando o colega do atendimento e comunicar à chefia/comissão responsável, buscando apoio e tratamento.",
+     "C": "Ajudar o colega a esconder o problema.",
+     "D": "Comunicar apenas aos pacientes."
+    },
+    "resposta": "B",
+    "justificativa": "O compromisso é com a segurança do paciente. Anestesiologistas têm risco aumentado de abuso de opioides e outros agentes; a conduta é retirar do atendimento, comunicar de modo discreto e encaminhar para tratamento, e não encobrir."
+   },
+   {
+    "id": "etica_43",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "Antes da indução, a checagem do aparelho de anestesia deve ser feita:",
+    "alternativas": {
+     "A": "Antes de cada caso ou período, conforme o checklist, incluindo analisador de O₂, vazamentos, absorvedor, vaporizadores e alarmes.",
+     "B": "Apenas ao instalar o aparelho no hospital.",
+     "C": "Somente quando o técnico da empresa solicitar.",
+     "D": "Uma vez por semana, no início do plantão de segunda-feira."
+    },
+    "resposta": "A",
+    "justificativa": "Parte da checagem é diária e parte antes de cada caso (circuito, absorvedor, alarmes, vaporizadores), conforme a ASA/FDA e orientação do fabricante. É um item de segurança, e não manutenção do fornecedor."
+   },
+   {
+    "id": "etica_44",
+    "tema": "Ética, CFM e Segurança",
+    "subtopico": "Segurança",
+    "enunciado": "Na divulgação de um erro ao paciente, qual das atitudes é recomendada?",
+    "alternativas": {
+     "A": "Dar informações vagas para não assustar.",
+     "B": "Atribuir a culpa a outro membro da equipe.",
+     "C": "Esperar ordem judicial para informar.",
+     "D": "Comunicar de forma honesta, empática, com fatos conhecidos, o que será feito e quem é o contato, evitando especulação e culpa."
+    },
+    "resposta": "D",
+    "justificativa": "A divulgação transparente melhora a confiança, é dever ético e reduz litígios. Deve ser realizada por profissional treinado, com apoio institucional, descrevendo fatos, desculpas e medidas."
+   }
+  ]
  }
 ]

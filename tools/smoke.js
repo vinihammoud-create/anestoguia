@@ -14,6 +14,8 @@ const ROTAS = [
   { hash: '#/e/preop/jejum', ativo: 'screen-preop', aba: 'preop-jejum' },
   { hash: '#/e/calc-clinica', ativo: 'screen-calc-clinica' },
   { hash: '#/e/cirurgias-esp', ativo: 'screen-cirurgias-esp' },
+  { hash: '#/e/etica', ativo: 'screen-etica' },
+  { hash: '#/e/aparelho', ativo: 'screen-aparelho' },
   { hash: '#/t', ativo: 'screen-treino', eval: "document.querySelectorAll('#tr-temas-grid .tr-tema-card').length" },
 ];
 const getJson = url => new Promise((ok, no) => http.get(url, r => { let d = ''; r.on('data', c => d += c); r.on('end', () => ok(JSON.parse(d))); }).on('error', no));
