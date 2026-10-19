@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="g2" style="margin-top:10px">
-            <div><div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">BOLUS Ce 4 mcg/mL (≈ Cp×V1)</div><div id="tci-bolus" style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--cyan)"></div></div>
+            <div><div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">BOLUS INICIAL p/ Cp 4 mcg/mL (Cp × V1)</div><div id="tci-bolus" style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--cyan)"></div></div>
             <div><div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">EQUILÍBRIO Ce/Cp</div><div id="tci-ke0" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--cyan)"></div></div>
           </div>
           <div style="margin-top:12px">
@@ -66,7 +66,7 @@
               <tr style="background:rgba(255,255,255,.06)">
                 <th style="padding:6px 8px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.5)">Fase</th>
                 <th style="padding:6px 8px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.5)">Ce-alvo</th>
-                <th style="padding:6px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.5)">Infusão aprox.</th>
+                <th style="padding:6px 8px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.5)">Infusão BET estimada</th>
               </tr>
               <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
                 <td style="padding:6px 8px;color:rgba(255,255,255,.7)">Indução</td>
@@ -90,10 +90,10 @@
         <div class="algo-box algo-g" style="margin-top:8px">
           <div class="algo-title">Notas Clínicas — Modelo Schnider</div>
           <ul style="font-size:11px;line-height:1.8;margin:4px 0 0 16px">
-            <li>Mais preciso em obesos e idosos (usa LBM ao invés do peso total)</li>
-            <li>Idosos: Ce-alvo reduzido em 30-40% — iniciar com 2-3 mcg/mL</li>
+            <li>Modelo validado em adultos de peso habitual; menos preciso em obesos (IMC >35) e crianças — o modelo de Eleveld é uma alternativa atualizada</li>
+            <li>Idosos: Ce-alvo menor (p. ex., iniciar com 2-3 mcg/mL) e titular devagar pela resposta clínica/BIS</li>
             <li>BIS alvo intraoperatório: 40-60 — ajustar Ce conforme BIS</li>
-            <li>Combinar com Remifentanil TCI: Ce-alvo 3-6 ng/mL na indução</li>
+            <li>Combinar com remifentanil TCI (Minto): Ce-alvo 3-6 ng/mL na indução. As infusões da tabela são estimativas didáticas (método BET, alvo plasmático); a bomba TCI calcula em tempo real e mira o sítio de efeito (Ce).</li>
           </ul>
         </div>
       </div>
@@ -143,8 +143,8 @@
         <div class="field">
           <label>Tipo de cirurgia</label>
           <select id="vol-cirurgia" onchange="calcVol()">
-            <option value="0">Superficial / laparoscopia (1 mL/kg/h)</option>
-            <option value="2">Médio porte / ortopedia (2-4 mL/kg/h)</option>
+            <option value="1">Superficial / laparoscopia (1 mL/kg/h)</option>
+            <option value="3">Médio porte / ortopedia (2-4 mL/kg/h)</option>
             <option value="6">Grande porte / abdominal (4-8 mL/kg/h)</option>
           </select>
         </div>
@@ -198,7 +198,7 @@
               <div id="mabl-vsang" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--cyan)"></div>
             </div>
             <div>
-              <div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">MABL (Ht alvo 25%)</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-bottom:4px">MABL (Ht alvo 25%; volemia ~70 mL/kg — a transfusão é guiada por Hb e clínica, não só pelo MABL)</div>
               <div id="mabl-val" style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--gold)"></div>
             </div>
           </div>
@@ -256,7 +256,7 @@
         </div>
         <div class="algo-box algo-r" style="margin-top:8px">
           <div class="algo-title">⚠ Limite de correção</div>
-          Não corrigir mais que 8-10 mEq/L em 24h — risco de mielinólise pontina central. Emergência (convulsão): 2 mEq/L/h na 1ª hora.
+          Limite: ≤10 mEq/L nas primeiras 24 h (≤8 mEq/L se risco alto: alcoolismo, desnutrição, hepatopatia, hipocalemia) — risco de mielinólise osmótica. Sintomas graves (convulsão, coma): NaCl 3% 100-150 mL em 10 min, repetir até 2-3 vezes, meta de ↑4-6 mEq/L. Checar o Na⁺ a cada 2-4 h.
         </div>
       </div>
     </div>
@@ -283,7 +283,7 @@
         </div>
         <div class="algo-box algo-r" style="margin-top:8px">
           <div class="algo-title">⚠ Taxa máxima de infusão</div>
-          Via periférica: máx 10 mEq/h · Via central: máx 20-40 mEq/h · NUNCA bolus IV direto — PCR!
+          Via periférica: máx 10 mEq/h (diluído, ≤40 mEq/L) · Via central: 20 mEq/h (até 40 mEq/h em UTI, com ECG contínuo) · NUNCA bolus IV direto — PCR!
         </div>
       </div>
     </div>
@@ -345,6 +345,39 @@
     <span style="font-size:11px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace"> · Anestesiologista</span>
   </div>
   <div class="footnote" style="padding:4px 12px 20px">AnestoGuia <span class="app-version"></span> · uso educacional</div>
+
+<div class="page-wrap">
+  <div class="card">
+    <div class="card-hdr" style="background:var(--gold)">
+      <span class="card-title">⚠ Uso seguro das calculadoras</span>
+    </div>
+    <div class="card-body">
+      <ul style="font-size:12.5px;line-height:1.8;margin:0;padding-left:18px">
+        <li>São ferramentas de apoio ao raciocínio, não substituem protocolo local, bula nem julgamento clínico. Sempre conferir a conta antes de preparar a droga.</li>
+        <li><strong>TCI</strong>: o alvo da bomba é o sítio de efeito (Ce); os valores de infusão aqui são estimativas do método BET para um alvo plasmático.</li>
+        <li><strong>Sódio</strong>: o cálculo assume ACT = 0,5 × peso e não vê perdas; a taxa é meta de 24 h, e o Na⁺ deve ser medido a cada 2-4 h.</li>
+        <li><strong>Potássio</strong>: regra prática de 10 mEq ≈ 0,1 mEq/L; repor em etapas e rechecar. KCl 19,1% tem 2,5 mEq/mL (ampola de 10 mL = 25 mEq).</li>
+        <li><strong>Doses por peso</strong>: em adultos, adrenalina de PCR e atropina são doses fixas; noradrenalina é mostrada em mcg/min.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-hdr" style="background:var(--blue)">
+      <span class="card-title">📚 Referências</span>
+    </div>
+    <div class="card-body">
+      <ol style="font-size:11.5px;line-height:1.7;margin:0;padding-left:18px;color:var(--text-secondary)">
+        <li>Schnider TW, Minto CF, Gambus PL, et al. The influence of method of administration and covariates on the pharmacokinetics of propofol in adult volunteers. Anesthesiology 1998;88:1170–82.</li>
+        <li>Minto CF, Schnider TW, Egan TD, et al. Influence of age and gender on the pharmacokinetics and pharmacodynamics of remifentanil. Anesthesiology 1997;86:10–23.</li>
+        <li>Adrogué HJ, Madias NE. Hyponatremia. N Engl J Med 2000;342:1581–9.</li>
+        <li>Spasovski G, Vanholder R, Allolio B, et al. Clinical practice guideline on diagnosis and treatment of hyponatraemia. Eur J Endocrinol 2014;170:G1–47.</li>
+        <li>Verbalis JG, Goldsmith SR, Greenberg A, et al. Diagnosis, evaluation, and treatment of hyponatremia: expert panel recommendations. Am J Med 2013;126:S1–42.</li>
+        <li>ARDS Definition Task Force. Acute respiratory distress syndrome: the Berlin definition. JAMA 2012;307:2526–33.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="footnote">Revisado em outubro de 2026</div>
+</div>
 </div><!-- /calcc-peso -->
 
 

@@ -213,3 +213,13 @@
 - **Bariátrica:** "VAD em 15–20%" removido; PEEP individualizada e recrutamento seletivo (PROBESE); gabapentinoides com cautela.
 - **Ortografia:** "Ketamina" → "Cetamina".
 - **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
+
+## 3.1.0 — 2026-10-19 (fase D13g — Calculadoras clínicas)
+**Correções de segurança no código (`js/calc.js`):**
+- **Potássio:** o número de ampolas estava 2,5× maior que o correto (dividia por 10 em vez de 25) e o déficit usava peso fixo de 70 kg × 0,4; agora: estimativa de 10 mEq ≈ 0,1 mEq/L, KCl 19,1% = 2,5 mEq/mL (ampola de 10 mL = 25 mEq), reposição em etapas de ~40 mEq com nova dosagem, limites de taxa e alerta para K⁺ <2,5.
+- **Sódio:** a solução NaCl 0,45% (77 mEq/L) era usada com valor absoluto e parecia "corrigir" a hiponatremia, embora reduza o Na⁺; agora é bloqueada. Passa a usar Adrogué–Madias, limita a meta de 24 h a +8 mEq/L e avisa quando a meta total é maior; texto de emergência atualizado (NaCl 3% 100–150 mL em 10 min).
+- **Reposição volêmica:** a opção "superficial" caía no valor padrão de 2 mL/kg/h (o `0` era tratado como vazio); valores corrigidos (1, 3, 6). Terceira hora do esquema de Furman passa a incluir ¼ do déficit; aviso de que o esquema é clássico e a reposição atual é individualizada.
+- **TCI:** infusão calculada por BET (Kruger–Thiemer) em vez do fator arbitrário de +40%; legendas esclarecem Cp × Ce.
+- **Gasometria:** faixas de P/F corrigidas (Berlin: ≤100 grave, ≤200 moderada, ≤300 leve; P/F isolado não define SDRA); aviso para pH normal com distúrbio compensado/misto.
+- **Doses por peso:** adrenalina de PCR e atropina passam a dose fixa no adulto; efedrina 0,05–0,15 mg/kg; rocurônio RSI 1,0–1,2 mg/kg; neostigmina limitada a 5 mg; noradrenalina em mcg/min; sugamadex 16 mg/kg incluído; coluna de unidades mostra a unidade do valor calculado.
+- **Textos:** Schnider "mais preciso em obesos" removido (menos preciso com IMC >35); MABL com ressalva; limites de potássio; cartão "Uso seguro" e referências.
