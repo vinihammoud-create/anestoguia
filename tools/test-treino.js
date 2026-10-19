@@ -26,7 +26,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
   const ok = (cond, msg) => { if (!cond) falhas++; console.log((cond ? '✔ ' : '✖ ') + msg); };
 
   await send('Page.navigate', { url: BASE + '#/t' }); await sleep(1500);
-  await ev("localStorage.clear()"); await send('Page.navigate', { url: BASE + '#/t' }); await send('Page.reload'); await sleep(1800);
+  await ev("localStorage.clear()"); await send('Page.navigate', { url: BASE + '#/t' }); await sleep(600); await send('Page.reload'); await sleep(2000);
   const cards = await ev("document.querySelectorAll('#tr-temas-grid .tr-tema-card').length");
   ok(cards >= 28, 'home do Treino lista simulado, aleatório e todos os temas (' + cards + ' cartões)');
   const nTemas = await ev('TR_TEMAS.length'), nQ = await ev('tr_todas().length');
@@ -34,7 +34,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
   ok(nQ >= 1000, 'banco com 1000 questões ou mais');
 
   // rota direta para um tema
-  await send('Page.navigate', { url: BASE + '#/t/farma' }); await send('Page.reload'); await sleep(2000);
+  await send('Page.navigate', { url: BASE + '#/t/farma' }); await sleep(600); await send('Page.reload'); await sleep(2500);
   ok(await ev("document.getElementById('tr-tela-questao').classList.contains('tr-ativa') && document.getElementById('tr-enunciado').textContent.length > 30"), 'rota #/t/farma abre a primeira questão do tema');
 
   // resposta errada entra na revisão; certa não
