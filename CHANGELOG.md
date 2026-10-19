@@ -232,3 +232,14 @@
 - **Gasometria avançada:** delta-delta usa o AG corrigido pela albumina e a faixa 0,4–0,8 (acidose mista); P/F identificado como "faixa de SDRA" com a ressalva de Berlin; pH normal com PaCO₂ e HCO₃⁻ altos deixa de ser "acidose respiratória compensada" sem ressalvas.
 - **Raqui:** morfina IT 50–150 mcg (cesárea 50–100), conforme o módulo revisado.
 - **Textos:** Cockcroft-Gault com ressalva (estágio de DRC pela TFG estimada); fluidos intraoperatórios marcados como esquema clássico.
+
+## 3.1.0 — 2026-10-19 (fase D13i — Conteúdo do Prático)
+- **Erro introduzido e corrigido na fase anterior:** o texto do flumazenil tinha ido parar no cartão de adrenalina pediátrica; restaurado.
+- **GLP-1:** "suspender 1–2 semanas" substituído por conduta individualizada (ASA 2023 + consenso multissociedades 2024: dieta líquida 24 h e/ou POCUS gástrico).
+- **Cricóide:** "Sellick 10 N" → opcional (IRIS 2019).
+- **Bupivacaína:** máximo unificado em 2 mg/kg (150 mg) sem adrenalina nos três cartões (era 2, 2,5 e 2,5).
+- **Morfina IT:** 50–150 mcg; cetamina IM 4–6 mg/kg; isoflurano sem "metabolismo fluoretado 2–5%" (é ~0,2%); sevoflurano conforme a bula (<1 L/min); lidocaína IV ≤1,5 mg/kg/h; gabapentina como uso seletivo; dexametasona IV comparável à perineural.
+- **Referências removidas por não verificadas:** "PROVE 2024", "5th PONV Consensus 2025" (→ SAMBA 2020), "CAS 2025", "ESAIC 2023" para sugamadex/fenilefrina (→ ASA 2023/Kinsella 2018), "prehab reduz 30%".
+- **SDRA:** bloqueio neuromuscular passa a "individualizar" (ACURASYS × ROSE).
+- **SRPA/Regional:** adrenalina no broncoespasmo 10–50 mcg IV (não 0,1–0,3 mg IM); succinilcolina 0,1–0,5 mg/kg; dose-teste epidural ≥10–15 bpm; agulha pencil-point preferível; metoclopramida de resgate com eficácia fraca.
+- **Ortografia:** "sugammadex" → "sugamadex" em todo o app e no banco de questões.

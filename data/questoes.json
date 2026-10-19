@@ -157,7 +157,7 @@
      "D": "Cisatracúrio está contraindicado por ser metabolizado pela colinesterase plasmática"
     },
     "resposta": "B",
-    "justificativa": "A succinilcolina está absolutamente contraindicada a partir de 24-48 horas após queimadura extensa (>20% SC), trauma muscular grave, denervação, imobilização prolongada e outras condições que causam upregulation de receptores nicotínicos extrajuncionais. Nesses receptores imaturos, a succinilcolina causa liberação maciça de potássio, podendo elevar o K+ sérico em 5-10 mEq/L e precipitar fibrilação ventricular. Esta contraindicação persiste por até 1-2 anos após o evento. O rocurônio é a alternativa segura para ISR neste contexto, com reversão por sugammadex. (Miller 9ª ed.; SBA 2025; Martyn et al., Anesthesiology 2006)"
+    "justificativa": "A succinilcolina está absolutamente contraindicada a partir de 24-48 horas após queimadura extensa (>20% SC), trauma muscular grave, denervação, imobilização prolongada e outras condições que causam upregulation de receptores nicotínicos extrajuncionais. Nesses receptores imaturos, a succinilcolina causa liberação maciça de potássio, podendo elevar o K+ sérico em 5-10 mEq/L e precipitar fibrilação ventricular. Esta contraindicação persiste por até 1-2 anos após o evento. O rocurônio é a alternativa segura para ISR neste contexto, com reversão por sugamadex. (Miller 9ª ed.; SBA 2025; Martyn et al., Anesthesiology 2006)"
    },
    {
     "id": "farma_12",
@@ -177,7 +177,7 @@
     "id": "farma_13",
     "tema": "Farmacologia Anestésica",
     "subtopico": "",
-    "enunciado": "Paciente recebeu rocurônio 1,2 mg/kg para ISR. Ao fim da cirurgia, o TOF (Train-of-Four) mostra 0 respostas. Qual é a dose correta de sugammadex para reversão?",
+    "enunciado": "Paciente recebeu rocurônio 1,2 mg/kg para ISR. Ao fim da cirurgia, o TOF (Train-of-Four) mostra 0 respostas. Qual é a dose correta de sugamadex para reversão?",
     "alternativas": {
      "A": "2 mg/kg IV",
      "B": "4 mg/kg IV",
@@ -185,7 +185,7 @@
      "D": "0,5 mg/kg IV + neostigmina 2,5 mg IV"
     },
     "resposta": "C",
-    "justificativa": "O sugammadex é uma ciclodextrina modificada que encapsula (encapsulamento esteroidal) especificamente o rocurônio e vecurônio, revertendo o bloqueio neuromuscular. As doses são escalonadas conforme a profundidade do bloqueio: 2 mg/kg para TOF count ≥2 (reversão de bloqueio moderado), 4 mg/kg para PTC (Post-Tetanic Count) 1-2 (bloqueio profundo) e 16 mg/kg para reversão imediata após dose de intubação (1,2 mg/kg de rocurônio), quando TOF = 0 e PTC = 0. Neste caso, TOF 0 após ISR com rocurônio 1,2 mg/kg indica bloqueio profundo e a dose é 16 mg/kg. A neostigmina não é eficaz neste grau de bloqueio e não deve ser combinada com sugammadex. (SAESP 10ª ed.; Bom et al., Br J Anaesth 2014)"
+    "justificativa": "O sugamadex é uma ciclodextrina modificada que encapsula (encapsulamento esteroidal) especificamente o rocurônio e vecurônio, revertendo o bloqueio neuromuscular. As doses são escalonadas conforme a profundidade do bloqueio: 2 mg/kg para TOF count ≥2 (reversão de bloqueio moderado), 4 mg/kg para PTC (Post-Tetanic Count) 1-2 (bloqueio profundo) e 16 mg/kg para reversão imediata após dose de intubação (1,2 mg/kg de rocurônio), quando TOF = 0 e PTC = 0. Neste caso, TOF 0 após ISR com rocurônio 1,2 mg/kg indica bloqueio profundo e a dose é 16 mg/kg. A neostigmina não é eficaz neste grau de bloqueio e não deve ser combinada com sugamadex. (SAESP 10ª ed.; Bom et al., Br J Anaesth 2014)"
    },
    {
     "id": "farma_14",
@@ -348,12 +348,12 @@
     "enunciado": "Ao final de cirurgia abdominal de 3 horas, paciente recebeu vecurônio (0,1 mg/kg). A monitorização neuromuscular mostra TOF ratio 0,4. Qual a melhor conduta para reversão?",
     "alternativas": {
      "A": "Neostigmina 0,05 mg/kg + glicopirrolato 0,01 mg/kg, pois TOF>0,25 permite reversão colinesterásica",
-     "B": "Sugammadex 2 mg/kg IV, pois vecurônio é aminoesteroide e há bloqueio moderado (TOF 0,1-0,9)",
+     "B": "Sugamadex 2 mg/kg IV, pois vecurônio é aminoesteroide e há bloqueio moderado (TOF 0,1-0,9)",
      "C": "Aguardar recuperação espontânea até TOF>0,7 antes de qualquer reversão",
      "D": "Neostigmina 0,07 mg/kg + atropina 0,02 mg/kg, dose máxima para bloqueio profundo"
     },
     "resposta": "B",
-    "justificativa": "O sugammadex é a reversão de escolha para bloqueadores neuromusculares aminoesteroídeos (vecurônio, rocurônio). Com TOF ratio 0,4 (bloqueio moderado, definido como TOF 0,1-0,9), a dose recomendada é 2 mg/kg IV, com recuperação para TOF≥0,9 em 2-3 minutos. A neostigmina tem eficácia limitada e imprevisível com bloqueio moderado (necessita TOF≥0,25 para reverter adequadamente), e sua associação com muscarínicos é obrigatória. O sugammadex encapsula seletivamente moléculas de vecurônio/rocurônio por mecanismo de inclusão, sem efeitos colinérgicos. Para bloqueio profundo (TOF=0), a dose é 16 mg/kg. Referências: Naguib M, Anesthesiology 2007; Sugammadex, SAESP 2022."
+    "justificativa": "O sugamadex é a reversão de escolha para bloqueadores neuromusculares aminoesteroídeos (vecurônio, rocurônio). Com TOF ratio 0,4 (bloqueio moderado, definido como TOF 0,1-0,9), a dose recomendada é 2 mg/kg IV, com recuperação para TOF≥0,9 em 2-3 minutos. A neostigmina tem eficácia limitada e imprevisível com bloqueio moderado (necessita TOF≥0,25 para reverter adequadamente), e sua associação com muscarínicos é obrigatória. O sugamadex encapsula seletivamente moléculas de vecurônio/rocurônio por mecanismo de inclusão, sem efeitos colinérgicos. Para bloqueio profundo (TOF=0), a dose é 16 mg/kg. Referências: Naguib M, Anesthesiology 2007; Sugamadex, SAESP 2022."
    },
    {
     "id": "farma_26",
@@ -362,12 +362,12 @@
     "enunciado": "Paciente com insuficiência hepática grave (Child-Pugh C) e renal (creatinina 4,5 mg/dL) necessita de bloqueio neuromuscular para cirurgia de emergência. Qual o bloqueador neuromuscular mais seguro neste contexto?",
     "alternativas": {
      "A": "Cisatracúrio, por ser eliminado por degradação de Hofmann independente de órgãos",
-     "B": "Rocurônio, por ter maior margem de segurança e reversão garantida com sugammadex",
+     "B": "Rocurônio, por ter maior margem de segurança e reversão garantida com sugamadex",
      "C": "Vecurônio, por ser aminoesteroide com metabolismo hepático previsível",
      "D": "Pancurônio, por ser eliminado predominantemente por via renal"
     },
     "resposta": "A",
-    "justificativa": "O cisatracúrio sofre degradação de Hofmann — processo físico-químico espontâneo dependente de pH e temperatura fisiológicos, sem necessidade de função hepática ou renal. Isso o torna o bloqueador de escolha em pacientes com falência de múltiplos órgãos. Produz laudanosina como metabólito, mas em quantidades muito menores que o atracúrio (1/3), sem relevância clínica em humanos. Vecurônio e rocurônio dependem de excreção biliar/hepática; pancurônio é 80% renal. Apesar do rocurônio poder ser revertido com sugammadex, seu acúmulo em hepatopatas prolonga imprevisível bloqueio. Referências: Miller's Anesthesia, 9ª ed., Cap. 29; Naguib M, Lien CA, Anesthesiology 2010."
+    "justificativa": "O cisatracúrio sofre degradação de Hofmann — processo físico-químico espontâneo dependente de pH e temperatura fisiológicos, sem necessidade de função hepática ou renal. Isso o torna o bloqueador de escolha em pacientes com falência de múltiplos órgãos. Produz laudanosina como metabólito, mas em quantidades muito menores que o atracúrio (1/3), sem relevância clínica em humanos. Vecurônio e rocurônio dependem de excreção biliar/hepática; pancurônio é 80% renal. Apesar do rocurônio poder ser revertido com sugamadex, seu acúmulo em hepatopatas prolonga imprevisível bloqueio. Referências: Miller's Anesthesia, 9ª ed., Cap. 29; Naguib M, Lien CA, Anesthesiology 2010."
    },
    {
     "id": "farma_27",
@@ -3188,7 +3188,7 @@
     "enunciado": "Na monitorização neuromuscular, o TOF-Watch (aceleromiografia) apresenta limitação importante comparado à mecanomiografia (padrão-ouro). Essa limitação é:",
     "alternativas": {
      "A": "A relação T4/T1 (TOFR) obtida por aceleromiografia sem calibração pode superestimar a recuperação, com valores > 1,0 (normalização necessária), subestimando bloqueio residual",
-     "B": "A aceleromiografia não pode ser usada para guiar reversão com neostigmina ou sugammadex",
+     "B": "A aceleromiografia não pode ser usada para guiar reversão com neostigmina ou sugamadex",
      "C": "O TOF-Watch mede apenas frequência de estimulação, sem avaliação da amplitude das respostas",
      "D": "Não detecta bloqueio neuromuscular profundo (PTC = 0)"
     },
@@ -3389,7 +3389,7 @@
      "D": "TOFR > 1,0 — indica overdose de relaxante e necessidade de urgência na reversão"
     },
     "resposta": "C",
-    "justificativa": "O TOF padrão (quatro estímulos a 2Hz) é insensível em bloqueio profundo/intenso quando T1-T4 = 0. A contagem pós-tetânica (PTC) utiliza um estímulo tetânico de 50Hz por 5 seg → pausa de 3 seg → estímulos únicos (1Hz) contados. O número de respostas PTC correlaciona-se inversamente com a profundidade: PTC 0 = bloqueio intenso; PTC 1-8 = bloqueio profundo (sugammadex 4 mg/kg indicado); PTC >8 → primeiro T1 do TOF reaparece em minutos. Em cirurgias laparoscópicas, coluna, oftálmicas e de via aérea difícil, o bloqueio profundo pode melhorar as condições cirúrgicas. Referências: Fuchs-Buder et al., Acta Anaesthesiol Scand, 2007; Naguib et al., Anesth Analg, 2007."
+    "justificativa": "O TOF padrão (quatro estímulos a 2Hz) é insensível em bloqueio profundo/intenso quando T1-T4 = 0. A contagem pós-tetânica (PTC) utiliza um estímulo tetânico de 50Hz por 5 seg → pausa de 3 seg → estímulos únicos (1Hz) contados. O número de respostas PTC correlaciona-se inversamente com a profundidade: PTC 0 = bloqueio intenso; PTC 1-8 = bloqueio profundo (sugamadex 4 mg/kg indicado); PTC >8 → primeiro T1 do TOF reaparece em minutos. Em cirurgias laparoscópicas, coluna, oftálmicas e de via aérea difícil, o bloqueio profundo pode melhorar as condições cirúrgicas. Referências: Fuchs-Buder et al., Acta Anaesthesiol Scand, 2007; Naguib et al., Anesth Analg, 2007."
    },
    {
     "id": "monit_40",
@@ -5941,7 +5941,7 @@
     "id": "crises_19",
     "tema": "Gestão de Crises",
     "subtopico": "",
-    "enunciado": "Qual das seguintes situações NÃO é indicação para uso de sugammadex em cenário de emergência de via aérea?",
+    "enunciado": "Qual das seguintes situações NÃO é indicação para uso de sugamadex em cenário de emergência de via aérea?",
     "alternativas": {
      "A": "Reversão de bloqueio profundo por rocurônio em situação de CICO quando o bloqueio neuromuscular foi a causa da dificuldade de ventilação.",
      "B": "Reversão de bloqueio por vecurônio em paciente com falência de extubação.",
@@ -5949,7 +5949,7 @@
      "D": "Reversão de bloqueio residual por rocurônio no pós-operatório."
     },
     "resposta": "C",
-    "justificativa": "Sugammadex é uma ciclodextrina modificada que encapsula especificamente rocurônio e vecurônio (aminoesteroides) — NÃO tem ação sobre succinilcolina (agente depolarizante) nem sobre BNM benzilisoquinolínicos (atracúrio, cisatracúrio). Em CICO após succinilcolina, sugammadex é ineficaz — a recuperação depende da atividade da pseudocolinesterase plasmática (metabolismo espontâneo). Em CICO após rocurônio 1,2 mg/kg: sugammadex 16 mg/kg IV reverte o bloqueio em ~3 minutos, podendo ser estratégia de resgate ('can't intubate, give sugammadex'). Referência: Frerk C et al., Br J Anaesth 2015; Bhavani SS, Anesth Analg 2015."
+    "justificativa": "Sugamadex é uma ciclodextrina modificada que encapsula especificamente rocurônio e vecurônio (aminoesteroides) — NÃO tem ação sobre succinilcolina (agente depolarizante) nem sobre BNM benzilisoquinolínicos (atracúrio, cisatracúrio). Em CICO após succinilcolina, sugamadex é ineficaz — a recuperação depende da atividade da pseudocolinesterase plasmática (metabolismo espontâneo). Em CICO após rocurônio 1,2 mg/kg: sugamadex 16 mg/kg IV reverte o bloqueio em ~3 minutos, podendo ser estratégia de resgate ('can't intubate, give sugamadex'). Referência: Frerk C et al., Br J Anaesth 2015; Bhavani SS, Anesth Analg 2015."
    },
    {
     "id": "crises_20",
@@ -7625,7 +7625,7 @@
      "D": "Incidência de 5–10% — neostigmina profilática em todos os pacientes elimina o problema"
     },
     "resposta": "B",
-    "justificativa": "Estudos com monitorização quantitativa (Murphy et al., JAMA 2008; Naguib et al.) mostram BNMR em 30–60% dos pacientes chegando à SRPA sem monitorização rotineira. O TOF (Train of Four) ratio <0,9 (medido por aceleromiografia — AMG) é a definição atual de BNMR clinicamente relevante: associado a disfunção faríngea, microaspiração e hipoxemia. A sustentação cefálica por 5s pode estar presente com TOF ratio tão baixo quanto 0,6. A reversão com neostigmina não garante TOF ≥0,9 se profundo bloqueio; sugammadex é mais eficaz para reverter bloqueio profundo por rocurônio/vecurônio. Referência: Murphy GS et al. — Anesthesiology 2008; Naguib M et al. — Anesth Analg 2010."
+    "justificativa": "Estudos com monitorização quantitativa (Murphy et al., JAMA 2008; Naguib et al.) mostram BNMR em 30–60% dos pacientes chegando à SRPA sem monitorização rotineira. O TOF (Train of Four) ratio <0,9 (medido por aceleromiografia — AMG) é a definição atual de BNMR clinicamente relevante: associado a disfunção faríngea, microaspiração e hipoxemia. A sustentação cefálica por 5s pode estar presente com TOF ratio tão baixo quanto 0,6. A reversão com neostigmina não garante TOF ≥0,9 se profundo bloqueio; sugamadex é mais eficaz para reverter bloqueio profundo por rocurônio/vecurônio. Referência: Murphy GS et al. — Anesthesiology 2008; Naguib M et al. — Anesth Analg 2010."
    },
    {
     "id": "srpa_18",
@@ -7807,7 +7807,7 @@
      "D": "A pneumonia pós-operatória não é influenciada pela técnica anestésica ou pela posição do paciente no pós-operatório."
     },
     "resposta": "B",
-    "justificativa": "A ventilação protetora intraoperatória é estratégia evidenciada para redução de complicações pulmonares pós-operatórias (CPP): VC 6-8 mL/kg peso predito ideal (não peso real), PEEP individualizada (5-8 cmH2O), pressão de platô <30 cmH2O, driving pressure <15 cmH2O. Meta-análises demonstram redução de CPP, ARDS, infecção pulmonar e mortalidade. A fisioterapia pré-operatória em DPOC e alto risco reduz CPP em 50% (evidências). BNMR aumenta o risco de CPP — antagonização completa com sugammadex ou neostigmina é essencial. Extubação precoce e mobilização precoce reduzem atelectasias e pneumonia. Posição semi-sentada reduz aspiração e pneumonia associada à ventilação."
+    "justificativa": "A ventilação protetora intraoperatória é estratégia evidenciada para redução de complicações pulmonares pós-operatórias (CPP): VC 6-8 mL/kg peso predito ideal (não peso real), PEEP individualizada (5-8 cmH2O), pressão de platô <30 cmH2O, driving pressure <15 cmH2O. Meta-análises demonstram redução de CPP, ARDS, infecção pulmonar e mortalidade. A fisioterapia pré-operatória em DPOC e alto risco reduz CPP em 50% (evidências). BNMR aumenta o risco de CPP — antagonização completa com sugamadex ou neostigmina é essencial. Extubação precoce e mobilização precoce reduzem atelectasias e pneumonia. Posição semi-sentada reduz aspiração e pneumonia associada à ventilação."
    },
    {
     "id": "srpa_31",
