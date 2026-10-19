@@ -157,3 +157,17 @@
 - **Casos:** IOT esofágica sem a instrução contraditória de "manter o tubo"; limite de 3 tentativas + 1 (DAS); cricoide opcional no caso 2.
 - **Questões:** 5 alternativas → 4 em todas as questões; "sugammadex" → "sugamadex".
 - **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências com DOI.
+
+## 3.1.0 — 2026-10-19 (fase D8 — SRPA)
+- **Requisitos CFM 2.174/2017:** removida a "proporção 1 enfermeiro:2 pacientes" (não consta na resolução); alta sob responsabilidade do anestesiologista.
+- **Fast-track:** critério "BIS >80" substituído pelo escore de White (≥12/14, sem item zerado).
+- **Aldrete:** descrição da pressão arterial corrigida (0 = variação >50%; 1 = 20–49%; 2 = ±20%).
+- **Alta:** micção e ingestão VO deixam de ser exigências universais (apenas pacientes de risco).
+- **Laringoespasmo:** CPAP sem "20–30 cmH₂O"; Larson sem a explicação pelo glossofaríngeo; succinilcolina 0,1–0,5 mg/kg.
+- **Broncoespasmo/anafilaxia:** adrenalina SC removida (10–50 mcg IV); anti-histamínico/corticoide como adjuvantes.
+- **NVPO:** prometazina 6,25–12,5 mg IV; ondansetrona e dexametasona não repetidas em <6 h (SAMBA 2020); alerta de QT do droperidol.
+- **Bloqueio residual:** neostigmina só em bloqueio superficial; sugamadex 4 mg/kg para bloqueio profundo (PTC 1–2).
+- **Delirium:** removida a atribuição "ESAIC 2024: haloperidol não reduz DPO" (não verificada); HELP com dados de Inouye 1999 (15% → 9,9%); raqui × anestesia geral (RAGA) e BIS/EEG (ENGAGES) sem benefício em delirium.
+- **Caso 3 (cesárea):** efedrina/fenilefrina contextualizadas após o parto; Trendelenburg acentuado desaconselhado; uterotônicos revisados.
+- **Questões:** 5 alternativas → 4 em todas.
+- **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências.
