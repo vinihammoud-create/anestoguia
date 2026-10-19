@@ -34,7 +34,7 @@ ok(/P\/F 140 \(faixa de SDRA moderada\)/.test(txt('gas-diagnostico')), 'Gasometr
 set('calcc-peso-input', 70); calcDosesRapidas();
 const linhas = els['calcc-doses-tbody'].innerHTML.match(/<tr>[\s\S]*?<\/tr>/g).map(r => r.replace(/<[^>]+>/g, '|').replace(/\s+/g, ' '));
 const achar = n => linhas.find(l => l.includes(n)) || '';
-ok(/\| 1 \|/.test(achar('Adrenalina (PCR)')), 'Doses: adrenalina de PCR = 1 mg no adulto');
+ok(/\|1\|/.test(achar('Adrenalina (PCR)')), 'Doses: adrenalina de PCR = 1 mg no adulto');
 ok(/0\.5–1/.test(achar('Atropina')), 'Doses: atropina 0,5–1 mg no adulto');
 ok(/mcg\/min/.test(achar('Noradrenalina')), 'Doses: noradrenalina em mcg/min');
 ok(/1–1\.2 mg\/kg/.test(achar('Rocurônio (RSI)')), 'Doses: rocurônio RSI 1,0–1,2 mg/kg');
