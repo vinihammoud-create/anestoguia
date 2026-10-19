@@ -137,3 +137,12 @@
 - **VCI:** valores de pressão atrial direita pela ASE 2015 (corte 2,1 cm); **MRA:** a manobra de "40–45 cmH₂O por 30–40 s" foi trocada pelo incremento gradual com platô 30–35 cmH₂O; peso predito (ARDSNet) no lugar do "PIB — peso ideal pelo body surface"; FiO₂ 0,3–0,5.
 - **Oximetria:** metaHb tende a ~85% (a revisão rápida dizia "falsamente normal"); hipotensão pela PAM <65 mmHg; GDT sem o "30–50%" não sustentado; Resolução CFM 2.174/2017 sem a "atualização de 2021" não verificável.
 - Questões com 4 alternativas; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
+
+## 3.1.0 — 2026-10-19 (fase D6 — Anestesia geral e sedação)
+- **TCI:** a questão 1 afirmava que o Schnider é o "mais preciso em obesos"; a fórmula de James (massa magra) falha em IMC >35. Reescrita em torno do modelo de Eleveld (BJA 2018), e o texto sobre Marsh/Schnider/Eleveld foi corrigido em três pontos.
+- **MYRIAD:** o módulo descrevia "10.000+ pacientes em cirurgia oncológica, Lancet 2019"; é o ensaio de Landoni (NEJM 2019), 5.400 pacientes de cirurgia cardíaca, mortalidade em 1 ano 2,8% × 3,0%.
+- **Midazolam VO** adulto 7,5 mg (o módulo dava 0,02–0,05 mg/kg com máx 7,5 mg e, na revisão, 7,5–15 mg); gabapentinoides e "ERAS Forte" suavizados (I-PROMOTE, Verret 2020).
+- **BIS:** "mandatório na TIVA" e "risco 10× maior" não têm fonte — passam a "fortemente recomendado com BNM" (NAP5); awareness 1:1.000 (busca ativa) e ~1:19.000 (NAP5).
+- **Propofol em sedação:** 25–75 mcg/kg/min; cetamina e PIC (só sem ventilação controlada); TIVA em laser de via aérea (não "sem risco de incêndio com halogenados": o risco é O₂/N₂O); pulmão único sem claim de eliminação heterogênea.
+- **TOF/reversão (ASA 2023):** neostigmina 30–50 mcg/kg só com TOF 4/4; tabela dos níveis de bloqueio refeita; lidocaína IV ≤1,5 mg/kg/h; CAM do idoso 25–30%; "WFSA/ESA 2022 — 250 km de carro" removido (não verificável); "escopolamina transdérmica" removida do antiemético (não comercializada).
+- Questões com 4 alternativas; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
