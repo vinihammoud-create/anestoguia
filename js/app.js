@@ -271,7 +271,7 @@ function setPerfil(p, btn) {
     adulto: null,
     ped: '👶 Pediátrico: doses ajustadas para criança. Verifique sempre peso real.',
     idoso: '👴 Idoso (≥70a): doses reduzidas 30–50%. Start low, go slow.',
-    obeso: '🏋️ Obeso: hipnóticos/opioides pelo peso magro; sugammadex pelo peso real.'
+    obeso: '🏋️ Obeso: hipnóticos/opioides pelo peso magro; sugamadex pelo peso real.'
   };
   if (notas[p]) {
     note.style.display = 'block';
@@ -375,8 +375,18 @@ function calcAll() {
   setTxt('c-mg', fmtR(30, 50, 'mg', p));
 
   // Emergência
-  setTxt('e-epi', fmt(p * 0.01, 'mg', 3));
-  setTxt('e-atro', fmt(Math.max(0.1, p * 0.02), 'mg', 2));
+  // PCR: 0,01 mg/kg com teto de 1 mg (adulto = 1 mg); atropina: 0,02 mg/kg até 0,5 mg/dose na criança, 1 mg no adulto
+  setTxt('e-epi', fmt(Math.min(1, p * 0.01), 'mg', 2));
+  setTxt('e-atro', fmt(p >= 40 ? 1 : Math.min(0.5, p * 0.02), 'mg', 2));
+
+  // Doses pediátricas (aba Especiais › Pediatria)
+  setTxt('pd-prop', fmtR(2.5, 3.5, 'mg', p));
+  setTxt('pd-fent', fmtR(1, 3, 'mcg', p));
+  setTxt('pd-roc', fmt(p * 0.6, 'mg'));
+  setTxt('pd-sux', fmt(p * 2, 'mg'));
+  setTxt('pd-atro', fmt(Math.min(0.5, p * 0.02), 'mg', 2));
+  setTxt('pd-epi', fmt(Math.min(1, p * 0.01), 'mg', 2));
+  setTxt('pd-sug', fmtR(2, 4, 'mg', p));
   setTxt('e-dant', fmt(p * 2.5, 'mg'));
   setTxt('e-sux', fmtR(0.1, 0.5, 'mg', p));
   setTxt('e-prop', fmt(p * 0.5, 'mg'));
@@ -840,7 +850,7 @@ function calcPesos() {
           <tr><td>Succinilcolina</td><td>Peso Real</td><td class="vg">${real} kg</td></tr>
           <tr><td>Rocurônio</td><td>IBW</td><td class="vg">${ibwSafe.toFixed(0)} kg</td></tr>
           <tr><td>Opioides</td><td>IBW</td><td class="vg">${ibwSafe.toFixed(0)} kg</td></tr>
-          <tr><td>Sugammadex</td><td>Peso Real</td><td class="vg">${real} kg</td></tr>
+          <tr><td>Sugamadex</td><td>Peso Real</td><td class="vg">${real} kg</td></tr>
           <tr><td>BZD</td><td>LBW</td><td class="vg">${lbw.toFixed(0)} kg</td></tr>
           <tr><td>VC (ventilação)</td><td>IBW</td><td class="vg">${ibwSafe.toFixed(0)} kg</td></tr>
           <tr><td>Cetamina TIVA</td><td>LBW</td><td class="vg">${lbw.toFixed(0)} kg</td></tr>
@@ -1300,11 +1310,11 @@ function calcTOF() {
   const p = pesoGlobal || 70;
 
   const tofData = {
-    '0': { desc: '0/4 respostas — Bloqueio profundo', action: 'Sugammadex 16 mg/kg = ' + fmt(p*16,'mg'), color: 'a-red' },
-    '1': { desc: '1-2/4 respostas — Bloqueio intenso', action: 'Sugammadex 4 mg/kg = ' + fmt(p*4,'mg'), color: 'a-orange' },
-    '2': { desc: '1-2/4 respostas — Bloqueio intenso', action: 'Sugammadex 4 mg/kg = ' + fmt(p*4,'mg'), color: 'a-orange' },
-    '3': { desc: '3/4 respostas — Bloqueio moderado', action: 'Sugammadex 2 mg/kg = ' + fmt(p*2,'mg'), color: 'a-orange' },
-    '4': { desc: '4/4 sem fade — Recuperação parcial', action: 'Sugammadex 2 mg/kg = ' + fmt(p*2,'mg') + ' OU Neostigmina ' + fmtR(0.04,0.07,'mg',p), color: 'a-blue' },
+    '0': { desc: '0/4 respostas — Bloqueio profundo', action: 'Sugamadex 16 mg/kg = ' + fmt(p*16,'mg'), color: 'a-red' },
+    '1': { desc: '1-2/4 respostas — Bloqueio intenso', action: 'Sugamadex 4 mg/kg = ' + fmt(p*4,'mg'), color: 'a-orange' },
+    '2': { desc: '1-2/4 respostas — Bloqueio intenso', action: 'Sugamadex 4 mg/kg = ' + fmt(p*4,'mg'), color: 'a-orange' },
+    '3': { desc: '3/4 respostas — Bloqueio moderado', action: 'Sugamadex 2 mg/kg = ' + fmt(p*2,'mg'), color: 'a-orange' },
+    '4': { desc: '4/4 sem fade — Recuperação parcial', action: 'Sugamadex 2 mg/kg = ' + fmt(p*2,'mg') + ' OU Neostigmina ' + fmtR(0.04,0.07,'mg',p), color: 'a-blue' },
     'ratio': { desc: 'TOF ratio ≥0,9 — Recuperação adequada', action: '✅ Extubação segura. Sem necessidade de reversão.', color: 'a-green' }
   };
 
@@ -1428,7 +1438,7 @@ const searchIndex = [
   {termo:'propofol dose indução bolus',tela:'p-calc',tab:'c-inducao',tabPrefix:'c',tabId:'inducao',desc:'Propofol — Calculadora'},
   {termo:'rocurônio bloqueador neuromuscular BNM',tela:'p-calc',tab:'c-bnm',tabPrefix:'c',tabId:'bnm',desc:'BNM — Calculadora'},
   {termo:'succinilcolina suxametônio despolarizante',tela:'p-calc',tab:'c-bnm',tabPrefix:'c',tabId:'bnm',desc:'Succinilcolina'},
-  {termo:'sugammadex reversão reversor',tela:'p-calc',tab:'c-bnm',tabPrefix:'c',tabId:'bnm',desc:'Sugammadex — Reversão BNM'},
+  {termo:'sugamadex reversão reversor',tela:'p-calc',tab:'c-bnm',tabPrefix:'c',tabId:'bnm',desc:'Sugamadex — Reversão BNM'},
   {termo:'fentanil sufentanil alfentanil remifentanil opioide',tela:'p-calc',tab:'c-opio',tabPrefix:'c',tabId:'opio',desc:'Opioides — Calculadora'},
   {termo:'morfina tramadol petidina analgesia',tela:'p-calc',tab:'c-opio',tabPrefix:'c',tabId:'opio',desc:'Opioides Analgesia'},
   {termo:'efedrina fenilefrina noradrenalina vasopressor',tela:'p-calc',tab:'c-vaso',tabPrefix:'c',tabId:'vaso',desc:'Vasopressores'},

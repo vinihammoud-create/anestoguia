@@ -57,3 +57,14 @@
   - LAST: o bloqueio do caso é ilioinguinal, não femoral.
   - Reversão: classificação de profundidade do bloqueio pela ASA 2023.
 - Cartões "Pérolas de prova", "Como é no Brasil" e "Referências" (16 fontes).
+
+## 3.1.0 — 2026-10-18 (fase D10 — Crises)
+- **Segurança de doses (anafilaxia):** adrenalina IV no grau II era "0,01 mg/kg (máx 0,5 mg)" e no grau III/IV "0,1–1 mg IV bolus"; agora 10–20 mcg (grau II), 50–100 mcg (grau III), 1 mg só na PCR, infusão após ≥3 bolus. O mesmo erro foi corrigido no Prático ("epinefrina 0,1 mg IV") e no broncoespasmo ("adrenalina 0,1–0,3 mg SC/IV" → 5–10 mcg IV titulados).
+- **Hipertermia maligna (MHAUS):** dantroleno até controle (não "máx 10 mg/kg"), filtros de carvão ativado em vez de trocar o aparelho, sem bloqueador de canal de cálcio, resfriar até 38 °C, recrudescência ~20% com dantroleno 1 mg/kg a cada 4–6 h, CEDHIMA/UNIFESP.
+- **Anafilaxia (NAP6):** agentes mais comuns, cristaloide 20 mL/kg, corticoide como 2ª linha (não previne reação bifásica), resgate com vasopressina/glucagon/ECMO, critério de triptase.
+- **LAST (checklist ASRA 2020):** bupivacaína 2,5/3 mg/kg, evitar lidocaína como antiarrítmico, tempos de monitorização, prevenção com ultrassom.
+- **VAD emergência (DAS 2025):** plano C correto (máscara com bloqueio pleno), eFONA bisturi-bougie-tubo com giro de 90° e técnica para membrana impalpável, cânula com jato não é 1ª escolha, 3+1 tentativas.
+- **PCR (AHA 2025):** 5H/5T, RCP em prona e na gestante, metas de EtCO₂/diastólica, adrenalina após o 2º choque, amiodarona ou lidocaína, desfibrilação sequencial dupla, metas pós-PCR. "AHA 2020" removido de todo o app.
+- **Broncoespasmo:** tubo obstruído = pico ↑ com platô normal (tabela dizia platô ↑), salbutamol 8–10 jatos pelo TOT, aminofilina com papel limitado.
+- **Prático:** calculadora de emergência sem teto (adrenalina PCR 1,2 mg em 120 kg; atropina 1,6 mg em 80 kg) → adrenalina máx 1 mg, atropina 0,5 mg/dose na criança e 1 mg no adulto; doses pediátricas da aba Pediatria nunca eram calculadas (ids sem código) → agora calculadas; TOT com cuff como padrão; jejum ASA 2023 / ESAIC 2022; neostigmina pela ASA 2023.
+- Cartões "Pérolas de prova", "Como é no Brasil" e "Referências" (AHA 2025 partes 9–11, DAS 2025, ASRA, NAP6, MHAUS).
