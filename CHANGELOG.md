@@ -90,3 +90,13 @@
 - **IVAS:** conduta coerente (leve → prosseguir; fatores de risco → adiar 2–4 semanas); **endocardite:** profilaxia não indicada para CIV não corrigida; neonato: alvo de SpO₂ e hiperoxia corrigidos; TOT com cuff.
 - Questões com 4 alternativas (Cole, succinilcolina, CAM, agitação, SpO₂ do prematuro).
 - **Calculadora pediátrica:** succinilcolina 2 mg/kg só em <2 anos; atropina sem mínimo; texto de adrenalina IV/IM; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
+
+## 3.1.0 — 2026-10-18 (fase D7 — Raquianestesia e Peridural)
+- **Anticoagulação (ASRA 2018/2025):** o intervalo "HBPM → próxima dose = 4 h" estava errado (a 1ª dose profilática vem ≥12 h após a punção; a terapêutica ≥24 h; 4 h só após retirar o cateter); rivaroxabana/apixabana 48–72 h → 72 h; dabigatrana 72–96 h → 72–120 h; clopidogrel/ticagrelor 5–7 dias; plaquetas ≥70.000 estáveis (SOAP 2021). A explicação da questão 4 repetia o erro da dose seguinte. A "ASRA 2022" citada não existe.
+- **Neuroaxe:** bloqueio simpático 2–6 dermátomos acima do sensitivo (era "2"); risco de lesão permanente ~1–2/100.000 (NAP3; o módulo trazia "<4:10.000" e "<1:50.000" em lugares diferentes); lidocaína 5% hiperbárica (TNS e cauda equina); estenose aórtica (técnica titulada/CSE aceita); o ultrassom como alternativa à palpação do espaço.
+- **Morfina intratecal:** 50–150 mcg (era "100–200"), sem conservante, vigilância horária por 12 h; "não dar opioide sistêmico" virou cautela com sedativos.
+- **CPPD pelo consenso 2023:** blood patch com alívio de ~60–70% (o módulo dizia 70–90%), indicação na cefaleia persistente moderada/grave (idealmente >24 h), alternativas por bloqueio de nervo.
+- **Emergências:** naloxona titulada (40–100 mcg, não 100–400 mcg), adrenalina 10–100 mcg no bloqueio total, emulsão lipídica em 2–3 min.
+- **Peridural:** teste de dose (↑FC ≥10 bpm), LOR com ar ou soro, plaquetas ≥70.000 na torácica, morfina peridural 1–3 mg.
+- Questões com 4 alternativas; correção de erros de digitação ("cesaréa", "painé", "prunído", "orificio", "tracção").
+- Cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
