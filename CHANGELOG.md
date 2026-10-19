@@ -146,3 +146,14 @@
 - **Propofol em sedação:** 25–75 mcg/kg/min; cetamina e PIC (só sem ventilação controlada); TIVA em laser de via aérea (não "sem risco de incêndio com halogenados": o risco é O₂/N₂O); pulmão único sem claim de eliminação heterogênea.
 - **TOF/reversão (ASA 2023):** neostigmina 30–50 mcg/kg só com TOF 4/4; tabela dos níveis de bloqueio refeita; lidocaína IV ≤1,5 mg/kg/h; CAM do idoso 25–30%; "WFSA/ESA 2022 — 250 km de carro" removido (não verificável); "escopolamina transdérmica" removida do antiemético (não comercializada).
 - Questões com 4 alternativas; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
+
+## 3.1.0 — 2026-10-19 (fase D7 — Intubação orotraqueal)
+- **Pressão de cricoide:** removido o "consenso 2024" não verificável; incluído o ensaio IRIS (JAMA Surg 2019, n=3.472: aspiração 0,6% × 0,5%, não inferioridade não demonstrada, Cormack 3–4 em 10% × 5%). Retirados "sem efeitos adversos" e "adotada no Brasil e UK". RSI: cricoide opcional.
+- **Via aérea:** Mallampati (Cochrane 2018: sens ~51%, esp ~87%); THRIVE (Patel 2015: mediana 14 min, variável; apneia segura ~6–8 min sem HFNO); cuff em todas as idades inclusive crianças (Weiss 2009); cricotireotomia por cânula/jato rebaixada a 2ª linha (DAS 2015: bisturi–bougie–tubo); sugamadex 16 mg/kg não deve atrasar o acesso cervical.
+- **Laringoespasmo:** Larson sem a explicação do nervo frênico (mecanismo incerto); succinilcolina 0,1–0,5 mg/kg (crianças 0,5–1 mg/kg); removido "70% dos casos".
+- **Broncoespasmo:** adrenalina SC 0,3 mg trocada por 10–20 mcg IV tituladas; aminofilina como recurso raro.
+- **Aspiração:** posição de cabeça baixa; corticoide/antibiótico sem benefício comprovado; critério de Roberts-Shirley marcado como questionado.
+- **Ventilação protetora:** fórmula do peso predito corrigida na revisão rápida (ARDSNet) e na questão 4 (175 cm → 70,6 kg → 420–565 mL); ΔP <15; "LAS VEGAS trial" (descrito de forma incorreta) trocado por IMPROVE; meta-análise de Serpa Neto 2015 (8,7% × 14,7%; RR 0,64); recrutamento de rotina desaconselhado (PROVHILO).
+- **Casos:** IOT esofágica sem a instrução contraditória de "manter o tubo"; limite de 3 tentativas + 1 (DAS); cricoide opcional no caso 2.
+- **Questões:** 5 alternativas → 4 em todas as questões; "sugammadex" → "sugamadex".
+- **Novos cartões:** Pérolas TEA/TSA, Como é no Brasil e Referências com DOI.
