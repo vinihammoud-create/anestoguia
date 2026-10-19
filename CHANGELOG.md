@@ -243,3 +243,13 @@
 - **SDRA:** bloqueio neuromuscular passa a "individualizar" (ACURASYS × ROSE).
 - **SRPA/Regional:** adrenalina no broncoespasmo 10–50 mcg IV (não 0,1–0,3 mg IM); succinilcolina 0,1–0,5 mg/kg; dose-teste epidural ≥10–15 bpm; agulha pencil-point preferível; metoclopramida de resgate com eficácia fraca.
 - **Ortografia:** "sugammadex" → "sugamadex" em todo o app e no banco de questões.
+
+## 3.1.0 — 2026-10-19 (fase E — Banco de questões: revisão e rebalanceamento)
+### Conteúdo
+- Revisão das 600 questões do banco (enunciado, alternativas, gabarito e justificativa). Correções principais:
+  - Gabaritos inconsistentes com a justificativa (`farma_14`, `raqui_31`, `pediatrica_27`, `monit_05`, `monit_24`) e enunciados invertidos (`farma_40`, `vm_32`).
+  - Sugamadex 16 mg/kg para reversão imediata (`farma_13`), lidocaína tópica DAS 2020 (`vad_19`), metadona com QTc >500 ms (`farma_22`), diâmetro do tubo pediátrico (`vad_iot_22`), MACA, bloqueio neuromuscular profundo, BAG-RECALL, PROPPR e outras.
+  - Fisiologia: PPC coronariana (`fisiologia_23`), gasometria mista com valores incompatíveis (`fisiologia_30`), reflexo de Hering-Breuer (`fisiologia_07`), CAM circadiana em humanos (evidência limitada, `fisiologia_37`), efeito teto dos opioides (`fisiologia_40`).
+  - Metformina (suspender no dia da cirurgia), MINS, KDIGO, paracetamol (sem "COX-3") e outras em SRPA/pré-operatório.
+### Treino
+- Distribuição dos gabaritos corrigida: antes B 51%, D 13%, A 14%, C 22%; agora A/B/C/D = 150 cada (25%). As alternativas de 157 questões foram reordenadas de forma determinística, com as letras citadas nas justificativas remapeadas. 12 questões cujas alternativas se referenciam entre si ("ambas", "todas") não foram reordenadas.
