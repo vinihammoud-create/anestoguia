@@ -225,11 +225,19 @@ function tr_responder(letra) {
   var st = tr_stats(); tr_registrar(st, q, letra === correta, tr_temaAtual.id); tr_salvarStats(st);
   document.getElementById('tr-questao-acertos').textContent = '✓ ' + tr_acertos + ' acerto' + (tr_acertos !== 1 ? 's' : '');
   var j = document.getElementById('tr-justificativa');
-  j.innerHTML = '<div class="tr-justificativa-label">' + (letra === correta ? '✅ Correto' : '❌ Incorreto — gabarito ' + correta) + ' · 💡 Justificativa</div><div>' + tr_esc(q.justificativa) + '</div>' + tr_linkModulo(q);
+  j.innerHTML = '<div class="tr-justificativa-label">' + (letra === correta ? '✅ Correto' : '❌ Incorreto — gabarito ' + correta) + ' · 💡 Justificativa</div><div>' + tr_esc(q.justificativa) + '</div>' + tr_comentarios(q) + tr_linkModulo(q);
   j.style.display = 'block';
   var btn = document.getElementById('tr-btn-proxima');
   btn.textContent = (tr_indiceAtual >= tr_questoes.length - 1) ? 'VER RESULTADO →' : 'PRÓXIMA →';
   btn.style.display = 'block';
+}
+
+function tr_comentarios(q) {
+  if (!q.comentarios) return '';
+  var h = ['A', 'B', 'C', 'D'].filter(function (L) { return L !== q.resposta && q.comentarios[L]; }).map(function (L) {
+    return '<div class="tr-coment"><b>' + L + '</b> ' + tr_esc(q.comentarios[L]) + '</div>';
+  }).join('');
+  return h ? '<div class="tr-coment-titulo">Por que as outras estão erradas</div>' + h : '';
 }
 
 function tr_proxima() {
@@ -389,7 +397,7 @@ function tr_simMostrarResultado(n, acertos, tempo, porTema, erradas) {
     erradas.forEach(function (e) {
       html += '<details class="tr-erro-item"><summary><span class="tr-erro-item-num">Questão ' + (e.i + 1) + ' · você: ' + (e.r || 'em branco') + ' · gabarito ' + e.q.resposta + '</span><br><span class="tr-erro-item-text">' + tr_esc(e.q.enunciado) + '</span></summary>' +
         '<div class="tr-erro-item-resp">' + e.q.resposta + ') ' + tr_esc(e.q.alternativas[e.q.resposta]) + '</div>' +
-        '<div class="tr-sim-just">' + tr_esc(e.q.justificativa) + '</div>' + tr_linkModulo(e.q) + '</details>';
+        '<div class="tr-sim-just">' + tr_esc(e.q.justificativa) + '</div>' + tr_comentarios(e.q) + tr_linkModulo(e.q) + '</details>';
     });
     html += '</div>';
   }

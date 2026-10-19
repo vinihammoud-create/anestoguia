@@ -309,3 +309,10 @@
 - Em ~86% das questões a alternativa correta era a mais longa, o que permitia acertar sem saber o conteúdo. 799 questões tiveram as alternativas reescritas: respostas corretas muito longas foram encurtadas e os distratores ganharam detalhes plausíveis, porém falsos. O gabarito (letra) de nenhuma questão mudou.
 - Resultado: nenhuma questão tem mais a correta 40% maior que o maior distrator (antes, 187 tinham); a correta continua sendo a mais longa em ~65% por margem pequena, a ser reduzida em revisões futuras.
 - Corrigida a justificativa de `vad_iot_37` (broncoscopia rígida pediátrica: manutenção com TIVA, não com volátil) e a de `farma_36`.
+
+## 3.3.0 — 2026-10-19 (fase E1 — "Por que as outras estão erradas")
+### Treino
+- Novo campo opcional `comentarios` nas questões (uma explicação curta para cada alternativa errada). As 1073 questões têm o campo.
+- Após responder no Treino, e na revisão do simulado, aparece o bloco "Por que as outras estão erradas".
+### Qualidade
+- `tools/check.js` valida `comentarios`: só letras erradas, 3 entradas por questão, mínimo de 20 caracteres.

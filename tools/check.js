@@ -95,6 +95,7 @@ if (temas) {
       if (!modules[q.modulo || t.modulo]) err(`${q.id}: módulo inexistente "${q.modulo || t.modulo}"`);
       if (!['conceito', 'caso clínico', 'cálculo', 'negativa'].includes(q.tipo)) err(`${q.id}: tipo inválido "${q.tipo}"`);
       const alt4 = Object.values(q.alternativas || {}); if (new Set(alt4).size !== alt4.length) err(`${q.id}: alternativas repetidas`);
+      if (q.comentarios) { for (const L of Object.keys(q.comentarios)) { if (L === q.resposta || !'ABCD'.includes(L)) err(`${q.id}: comentário em letra inválida ${L}`); else if (!q.comentarios[L] || q.comentarios[L].length < 20) err(`${q.id}: comentário ${L} curto`); } if (Object.keys(q.comentarios).length !== 3) err(`${q.id}: comentários devem cobrir as 3 erradas`); }
       dist[q.resposta] = (dist[q.resposta] || 0) + 1;
     }
   }
