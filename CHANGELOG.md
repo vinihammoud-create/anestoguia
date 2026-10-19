@@ -293,3 +293,13 @@
 - `tools/check.js` passou a validar módulo, tipo e alternativas repetidas; novo `tools/test-treino.js` (25 verificações no navegador).
 ### Correções
 - **Treino no celular:** o estilo do cartão do enunciado e dos botões de alternativa estava dentro de um `@media (min-width: 600px)` e só valia em telas largas; em telas de celular as alternativas apareciam sem estilo. Corrigido.
+
+## 3.3.0 — 2026-10-19 (fase F — ferramentas de plantão)
+### Prático
+- **Tela Emergência** (`#/p/emerg`, botão URGÊNCIA na barra inferior): 10 cartões em tela cheia com passos de ação e doses calculadas pelo peso do paciente (PCR adulto, PCR pediátrica, hipertermia maligna, LAST, anafilaxia, broncoespasmo, laringoespasmo, via aérea difícil/CICO, hipotensão refratária e bradicardia); cada cartão tem rota própria (`#/p/emerg/<cartão>`).
+- **Checklist** de cirurgia segura (pré-indução, time out e sign out) com toque por item, salvo no aparelho.
+- **Cronômetros:** PCR (tempo total, aviso a cada 2 min para trocar o compressor, lembrete de adrenalina aos 3 e 5 min, contagem de choques e doses, mantém a tela ligada e sobrevive ao recarregamento), apneia/pré-oxigenação e torniquete (alerta aos 90 min).
+- **Pediatria:** peso estimado por idade, tubo (com e sem cuff), profundidade, lâmina, máscara laríngea, manutenção 4-2-1, fluidos, hemácias, doses de indução e analgesia, raqui e caudal por peso; tabela de raqui por procedimento no adulto.
+- **Favoritos:** botão ★ em qualquer tela, módulo, aba ou cartão; os favoritos aparecem no início e no Prático.
+### Qualidade
+- Novo `tools/test-plantao.js` (36 verificações no navegador: cartões, doses por peso, cronômetros, checklist, pediatria e favoritos).

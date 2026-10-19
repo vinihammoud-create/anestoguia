@@ -28,6 +28,7 @@
       <div style="width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);margin:14px auto 0"></div>
     </div>
 
+    <div id="fav-launcher" class="fav-bloco" style="display:none;width:100%;max-width:380px"></div>
     <!-- Três botões principais -->
     <div style="display:flex;flex-direction:column;gap:12px;width:100%;max-width:380px">
 
@@ -46,7 +47,7 @@
         <div style="font-size:32px;flex-shrink:0">📚</div>
         <div style="flex:1">
           <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:#A78BFF;letter-spacing:.06em;margin-bottom:3px">ESTUDOS</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">19 Módulos · Casos Clínicos · Revisão Rápida</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">29 Módulos · Casos Clínicos · Revisão Rápida</div>
         </div>
         <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A78BFF;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:5px;padding:3px 8px;letter-spacing:.05em;white-space:nowrap">TEA/TSA</div>
       </div>
@@ -56,7 +57,7 @@
         <div style="font-size:32px;flex-shrink:0">🎯</div>
         <div style="flex:1">
           <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:#FF6B7A;letter-spacing:.06em;margin-bottom:3px">TREINO</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">Questões comentadas · Simulado por tema</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">Questões comentadas · Simulado · Revisão de erros</div>
         </div>
         <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#FF6B7A;background:rgba(255,71,87,.1);border:1px solid rgba(255,71,87,.2);border-radius:5px;padding:3px 8px;letter-spacing:.05em;white-space:nowrap">QUESTÕES</div>
       </div>
@@ -82,7 +83,14 @@
     <input id="globalSearch" type="search" placeholder="Buscar: propofol, LAST, raqui, Apfel…" autocomplete="off" oninput="searchGlobal(this.value)" aria-label="Buscar no modo prático" style="width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:var(--text);font-size:16px;font-family:'Inter',sans-serif"/>
     <div id="searchResults" class="search-results" style="display:none;position:absolute;left:12px;right:12px;top:100%;z-index:50;background:var(--raised);border:1px solid rgba(255,255,255,.1);border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.4)"></div>
   </div>
+  <div id="fav-pratico" class="fav-bloco" style="display:none;padding:0 12px"></div>
   <div class="home-grid">
+    <div class="home-card" style="background:linear-gradient(135deg,#991B1B,#EF4444);grid-column:1/-1" onclick="goTo('p-emerg')">
+      <div class="home-card-inner" style="flex-direction:row;align-items:center;min-height:auto">
+        <div class="home-card-icon">🆘</div>
+        <div><div class="home-card-title">EMERGÊNCIA</div><div class="home-card-sub">PCR · HM · LAST · anafilaxia · via aérea · cronômetros · pediatria</div></div>
+      </div>
+    </div>
     <div class="home-card" style="background:linear-gradient(135deg,#D4580A,#E87040)" onclick="goTo('p-plantao')">
       <div class="home-card-inner"><div class="home-card-icon">🚨</div><div class="home-card-title">PLANTÃO ANESTÉSICO</div><div class="home-card-sub">Fases 1–5 · Crises · SRPA</div></div>
     </div>
@@ -2301,6 +2309,58 @@
   <div style="text-align:center;padding:2px 12px 24px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.5px">Desenvolvido por <span style="color:rgba(56,182,224,.7);font-weight:600">Vinicius Hammoud</span> · R1 Anestesiologia</div>
 </div>
 
+<div id="screen-p-emerg" class="screen">
+  <div class="topbar" style="border-bottom:3px solid var(--red, #EF4444)">
+    <div><div class="topbar-brand">EMERGÊNCIA
+    <button class="back-btn" style="color:var(--cyan);margin-right:4px" onclick="goTo('p-home')">← Menu</button>
+  </div><div class="topbar-sub">Cartões em tela cheia · checklist · cronômetros · pediatria</div></div>
+    <button class="back-btn" onclick="goToLauncher()">← Início</button>
+  </div>
+  <div class="tab-bar" role="tablist">
+    <button role="tab" class="tab-btn active" aria-selected="true" onclick="showTab('em','cartoes',this)">CARTÕES</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('em','checklist',this)">CHECKLIST</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('em','timers',this)">CRONÔMETROS</button>
+    <button role="tab" class="tab-btn" aria-selected="false" onclick="showTab('em','pedi',this)">PEDIATRIA</button>
+  </div>
+  <div class="page-wrap">
+    <div id="em-cartoes" class="tab-panel active">
+      <div class="alert a-red" style="margin-bottom:12px"><strong>Um toque abre o cartão.</strong> As doses usam o peso informado no app (ou no próprio cartão). Material educacional: siga o protocolo da sua instituição.</div>
+      <div class="em-lista" id="em-lista"></div>
+    </div>
+    <div id="em-checklist" class="tab-panel">
+      <div class="alert a-cyan" style="margin-bottom:12px">Checklist de cirurgia segura (OMS/SBA) adaptado à anestesia. Toque em cada item; o estado fica salvo até você limpar a lista.</div>
+      <div id="em-checks"></div>
+    </div>
+    <div id="em-timers" class="tab-panel">
+      <div class="card"><div class="card-header ch-red"><span class="card-num">⏱</span> Cronômetro de PCR</div><div class="card-body" id="em-pcr"></div></div>
+      <div class="card"><div class="card-header ch-cyan"><span class="card-num">⏱</span> Apneia e pré-oxigenação</div><div class="card-body" id="em-sw-po"></div></div>
+      <div class="card"><div class="card-header ch-orange"><span class="card-num">⏱</span> Torniquete</div><div class="card-body" id="em-sw-tq"></div></div>
+    </div>
+    <div id="em-pedi" class="tab-panel">
+      <div class="card"><div class="card-header ch-pink"><span class="card-num">🧒</span> Pediatria: tubo, lâmina, fluidos e doses</div><div class="card-body">
+        <div class="em-pedi-in">
+          <label>Idade (anos)<input id="em-pedi-anos" type="number" inputmode="decimal" min="0" max="17" step="1" oninput="em_pediRender()"></label>
+          <label>Meses<input id="em-pedi-meses" type="number" inputmode="numeric" min="0" max="11" step="1" oninput="em_pediRender()"></label>
+          <label>Peso (kg)<input id="em-pedi-peso" type="number" inputmode="decimal" min="1" max="100" step="0.1" oninput="em_pediRender()" placeholder="vazio = estima"></label>
+        </div>
+        <p class="em-nota">Sem peso, estima: 0–12 meses = meses/2 + 4; 1–5 anos = 2 × idade + 8; 6–12 anos = 3 × idade + 7. Prefira o peso real.</p>
+        <div id="em-pedi-out"></div>
+      </div></div>
+      <div class="card"><div class="card-header ch-blue"><span class="card-num">💉</span> Raqui e peridural no adulto, por procedimento</div><div class="card-body">
+        <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Procedimento</th><th>Bupivacaína hiperbárica 0,5%</th><th>Adjuvante</th></tr></thead><tbody>
+          <tr><td>Cesárea</td><td>10–12 mg (2–2,4 mL)</td><td>fentanil 10–25 mcg ± morfina 50–100 mcg</td></tr>
+          <tr><td>Hérnia, membros inferiores, quadril</td><td>10–15 mg (2–3 mL)</td><td>fentanil 10–25 mcg opcional</td></tr>
+          <tr><td>Urológica (RTU)</td><td>10–15 mg</td><td>bloqueio até T10</td></tr>
+          <tr><td>Períneo e anal (sela, sentado)</td><td>5–7,5 mg (1–1,5 mL)</td><td>—</td></tr>
+          <tr><td>Idoso ou frágil</td><td>reduzir 25–30% (7,5–10 mg)</td><td>—</td></tr>
+          <tr><td>Analgesia de parto (raqui-peridural)</td><td>2,5 mg</td><td>fentanil 15–25 mcg</td></tr>
+        </tbody></table></div>
+        <p class="em-nota" style="margin-top:10px"><strong>Peridural lombar:</strong> cerca de 1–1,5 mL por segmento a bloquear (bupivacaína 0,5% ou ropivacaína 0,75% para cirurgia; 0,1–0,2% para analgesia), em doses fracionadas após dose-teste. Reduzir em gestantes, idosos e obesos. Material educacional.</p>
+      </div></div>
+    </div>
+  </div>
+</div>
+
 <div class="screen" id="screen-treino">
 
 <!-- TELA HOME -->
@@ -2409,6 +2469,7 @@
   <button data-mode="p" onclick="enterMode('pratico')"><span class="ic">⚡</span>PRÁTICO</button>
   <button data-mode="e" onclick="enterMode('estudos')"><span class="ic">📚</span>ESTUDOS</button>
   <button data-mode="t" onclick="enterMode('treino')"><span class="ic">🎯</span>TREINO</button>
+  <button data-mode="emerg" class="nav-emerg" onclick="navigate('p/emerg')"><span class="ic">🆘</span>URGÊNCIA</button>
 </nav>
 
 <!-- Módulos de estudo são carregados sob demanda aqui (modulos/<id>.html) -->
@@ -2417,6 +2478,7 @@
 <div id="mod-loading" role="status" aria-live="polite" style="display:none;position:fixed;inset:0;z-index:900;background:rgba(8,12,20,.85);align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--cyan);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em">
   <div class="spinner" aria-hidden="true"></div>CARREGANDO MÓDULO…
 </div>
+<div id="em-overlay" class="em-overlay" style="display:none" role="dialog" aria-modal="true" aria-label="Cartão de emergência"></div>
 <div id="app-toast" role="alert" style="display:none;position:fixed;left:12px;right:12px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:950;background:var(--raised);color:var(--text);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:12px 14px;font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.5)"></div>
 <div id="sw-update" style="display:none;position:fixed;left:12px;right:12px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:960;background:var(--raised);border:1px solid rgba(0,212,255,.35);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--text);box-shadow:0 8px 24px rgba(0,0,0,.5);display:none;align-items:center;gap:10px">
   <span style="flex:1">Nova versão do AnestoGuia disponível.</span>
@@ -2428,6 +2490,7 @@
 <script src="js/app.js"></script>
 <script src="js/router.js"></script>
 <script src="js/treino.js"></script>
+<script src="js/plantao.js"></script>
 <script>
 /* Service worker + aviso de atualização */
 var _swWaiting = null, _swUpdating = false;

@@ -2,9 +2,9 @@
    • HTML/JSON/JS/CSS: network-first (atualiza sempre que houver rede; cache como fallback offline)
    • imagens/fontes: cache-first
    A versão abaixo é trocada pelo tools/bump-sw.js a cada publicação. */
-const VERSION = '3.3.0-202610190226';
+const VERSION = '3.3.0-202610190236';
 const CACHE = 'anestoguia-' + VERSION;
-const PRECACHE = ['./', './index.html', './manifest.json', './css/app.css', './js/store.js', './js/calc.js', './js/app.js', './js/router.js', './js/treino.js', './fonts/inter-latin.woff2', './fonts/jetbrains-mono-latin.woff2', './icon-192.png', './icon-512.png'];
+const PRECACHE = ['./', './index.html', './manifest.json', './css/app.css', './js/store.js', './js/calc.js', './js/app.js', './js/router.js', './js/treino.js', './js/plantao.js', './fonts/inter-latin.woff2', './fonts/jetbrains-mono-latin.woff2', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(PRECACHE)).then(() => self.skipWaiting()));

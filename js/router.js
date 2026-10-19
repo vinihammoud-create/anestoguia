@@ -67,7 +67,10 @@ function render() {
   var ready = (seg[0] === 'e' && seg[1]) ? ensureModule(seg[1]) : Promise.resolve(true);
   ready.then(function (ok) {
     var el = activateScreen(ok ? id : 'screen-home');
-    updateNav(seg[0] || 'launcher');
+    updateNav(seg[0] === 'p' && seg[1] === 'emerg' ? 'emerg' : (seg[0] || 'launcher'));
+    if (typeof favInjetar === 'function') favInjetar();
+    if (typeof em_desenharCartao === 'function') em_desenharCartao();
+    if (id === 'screen-p-emerg' && typeof em_aoAbrir === 'function') em_aoAbrir();
     if (seg[2] && ok) activateTab(el, seg[2]);
     if (id === 'screen-treino' && typeof showTreinoHome === 'function') showTreinoHome(seg[1]);
   });
@@ -101,6 +104,7 @@ function showTab(prefix, id, btn, silent) {
     var seg = parseHash();
     if (seg.length >= 2) history.replaceState(null, '', '#/' + seg[0] + '/' + seg[1] + '/' + id);
   }
+  if (typeof favAtualizar === 'function') favAtualizar();
   window.scrollTo(0, 0);
 }
 

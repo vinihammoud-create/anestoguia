@@ -24,6 +24,9 @@ const ROTAS = [
   { hash: '#/e/estatistica', ativo: 'screen-estatistica' },
   { hash: '#/e/etica', ativo: 'screen-etica' },
   { hash: '#/e/aparelho', ativo: 'screen-aparelho' },
+  { hash: '#/p/emerg', ativo: 'screen-p-emerg', eval: "document.querySelectorAll('#em-lista .em-card-btn').length" },
+  { hash: '#/p/emerg/pcr', ativo: 'screen-p-emerg', eval: "document.querySelectorAll('#em-overlay .em-passos li').length" },
+  { hash: '#/p/emerg/pedi', ativo: 'screen-p-emerg', aba: 'em-pedi' },
   { hash: '#/t', ativo: 'screen-treino', eval: "document.querySelectorAll('#tr-temas-grid .tr-tema-card').length" },
 ];
 const getJson = url => new Promise((ok, no) => http.get(url, r => { let d = ''; r.on('data', c => d += c); r.on('end', () => ok(JSON.parse(d))); }).on('error', no));
