@@ -129,3 +129,11 @@
 - **Pneumotórax:** descompressão no 5º EIC na linha axilar anterior (ATLS 10) ou 2º EIC; **broncoespasmo:** cetamina 0,5–1 mg/kg e adrenalina 5–20 mcg; **FiO₂ 0,8 e infecção:** OMS 2016 recomendou, mas ensaios posteriores não confirmaram.
 - **Questão 6** sobre obesidade fundamentava a resposta em "auto-PEEP frequente em obesa" (sem base); foi reescrita em torno do volume corrente pelo peso predito.
 - Cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
+
+## 3.1.0 — 2026-10-19 (fase D5 — Monitorização)
+- **Reversão do BNM (ASA 2023):** a tabela dizia "neostigmina com TOF count 4" e "dose máxima 0,07 mg/kg"; agora só com TOF 4/4 e TOFR ≥0,4, 30–50 mcg/kg + antimuscarínico (glicopirrolato não é vendido no Brasil). A questão 3 (cisatracúrio com 2 respostas) concluía "usar neostigmina agora"; foi refeita (sugamadex não reverte cisatracúrio, neostigmina é ineficaz até TOFR ≥0,4).
+- **Cálculo:** "16 mg/kg = ~2 ampolas" estava errado (1.120 mg ≈ 5,6 ampolas de 200 mg).
+- **Awareness:** incidência com as fontes corretas (~1:1.000 com busca ativa; NAP5 ~1:19.000 espontâneos, 1:8.600 com BNM); BIS e cetamina; BALANCED (Lancet 2019) e BAG-RECALL nas pérolas.
+- **VCI:** valores de pressão atrial direita pela ASE 2015 (corte 2,1 cm); **MRA:** a manobra de "40–45 cmH₂O por 30–40 s" foi trocada pelo incremento gradual com platô 30–35 cmH₂O; peso predito (ARDSNet) no lugar do "PIB — peso ideal pelo body surface"; FiO₂ 0,3–0,5.
+- **Oximetria:** metaHb tende a ~85% (a revisão rápida dizia "falsamente normal"); hipotensão pela PAM <65 mmHg; GDT sem o "30–50%" não sustentado; Resolução CFM 2.174/2017 sem a "atualização de 2021" não verificável.
+- Questões com 4 alternativas; cartões "Pérolas de prova", "Como é no Brasil" e "Referências".
